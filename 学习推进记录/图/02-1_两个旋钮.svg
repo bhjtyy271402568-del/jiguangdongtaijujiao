@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 320" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, WenQuanYi Zen Hei, sans-serif"><rect x="0" y="0" width="820" height="320" fill="#ffffff"/>
+    <line x1="20" y1="150" x2="800" y2="150" stroke="#d8dee7" stroke-dasharray="4 5"></line>
+    <polygon id="kIn" fill="#f6b3b4" points="24,106 300,106 300,194 24,194"></polygon>
+    <polygon id="kConv" fill="#e5383b" opacity=".7" points="300,106 300,194 500,150"></polygon>
+    <polygon id="kAfter" fill="#e5383b" opacity=".2" points="500,150 806,217.3 806,82.7"></polygon>
+    <ellipse id="kLens" cx="300" cy="150" ry="72" fill="#dcecf8" stroke="#2b7bb9" stroke-width="2" rx="9.0"></ellipse>
+    <circle id="kF" r="6" fill="#facc15" stroke="#b45309" stroke-width="2" cy="150" cx="500"></circle>
+    <text x="30" y="84" font-size="16" font-weight="700" fill="#7c3aed">旋钮 A：光进来时有多“散”</text>
+    <text x="300" y="36" font-size="16" font-weight="700" fill="#0e8a8a" text-anchor="middle">旋钮 B：镜片有多“强”</text>
+    <g id="kDim">
+      <line y1="268" y2="268" x1="300" stroke="#151a23" stroke-width="1.5" x2="500"></line>
+      <line y1="258" y2="278" x1="300" x2="300" stroke="#151a23" stroke-width="1.5"></line>
+      <line id="kDimEnd" y1="258" y2="278" stroke="#151a23" stroke-width="1.5" x1="500" x2="500"></line>
+      <text id="kDimT" y="298" font-size="16" text-anchor="middle" fill="#151a23" font-weight="700" x="400">焦点离镜片 163 mm</text>
+    </g>
+    <line id="kRef" y1="214" y2="232" stroke="#5d6676" stroke-width="2" x1="500" x2="500"></line>
+    <text id="kRefT" y="250" font-size="12" text-anchor="middle" fill="#5d6676" x="500">标准焦点</text>
+  </svg>
