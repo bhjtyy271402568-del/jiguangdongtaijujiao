@@ -1,0 +1,413 @@
+<title>值得学的六个结构</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@700;900&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* 布局：与第 01、02 课相同的“实验台”纵向课程；第 09 课：从 54 份资料里挑出的六个值得学的结构（会动的示意图） */
+:root{
+  --bg:#f4f6f9; --surface:#ffffff; --fg:#151a23; --muted:#5d6676; --line:#d8dee7;
+  --beam:#e5383b; --beam-soft:#f6b3b4; --glass:#2b7bb9; --glass-fill:#dcecf8;
+  --ok:#17914f; --bad:#d23c3c; --proj2:#e0701c; --card:#2c5fd6; --card-fill:#e2eafc;
+  --metal:#7b8697; --work:#d7d3cf; --work-line:#8a817a; --band:#17914f22;
+  --knobA:#7c3aed; --knobB:#0e8a8a;
+  --f-body:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --f-display:"Noto Serif SC","Songti SC",serif;
+  --f-num:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1218; --surface:#171c25; --fg:#e7ebf1; --muted:#9aa4b4; --line:#2b3240;
+  --beam:#ff5c60; --beam-soft:#7a2a2d; --glass:#6db5ee; --glass-fill:#1c3448;
+  --ok:#3fd082; --bad:#ff6b6b; --proj2:#ff9a4a; --card:#82a6ff; --card-fill:#1d2a4a;
+  --metal:#8c97a8; --work:#3a3633; --work-line:#7d746c; --band:#3fd08226;
+  --knobA:#b08cff; --knobB:#4fd1c5; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1218; --surface:#171c25; --fg:#e7ebf1; --muted:#9aa4b4; --line:#2b3240;
+  --beam:#ff5c60; --beam-soft:#7a2a2d; --glass:#6db5ee; --glass-fill:#1c3448;
+  --ok:#3fd082; --bad:#ff6b6b; --proj2:#ff9a4a; --card:#82a6ff; --card-fill:#1d2a4a;
+  --metal:#8c97a8; --work:#3a3633; --work-line:#7d746c; --band:#3fd08226;
+  --knobA:#b08cff; --knobB:#4fd1c5; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:15px;line-height:1.65}
+.wrap{max-width:900px;margin:0 auto;padding-block:28px 56px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:flex;flex-direction:column;gap:28px}
+header{display:flex;flex-direction:column;gap:6px}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--muted)}
+h1{font-family:var(--f-display);font-weight:900;font-size:clamp(28px,5vw,40px);margin:0;line-height:1.2;text-wrap:balance}
+h1 .red{color:var(--beam)}
+.lede{color:var(--muted);margin:0;max-width:60ch}
+section{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:14px;min-width:0}
+h2{font-family:var(--f-display);font-size:21px;margin:0;display:flex;gap:10px;align-items:baseline;text-wrap:balance}
+h2 .n{font-family:var(--f-num);font-size:13px;color:var(--beam)}
+.try{font-size:13px;color:var(--muted);margin:0}
+.try b{color:var(--fg);font-weight:500}
+.stage{overflow-x:auto;border-radius:10px;background:var(--bg)}
+.stage svg{display:block;width:100%;height:auto}
+.controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px 20px}
+.ctl{display:flex;flex-direction:column;gap:4px;min-width:0}
+.ctl label{font-size:13px;display:flex;justify-content:space-between;gap:8px}
+.ctl label span{font-family:var(--f-num);color:var(--muted);font-size:12px}
+input[type=range]{width:100%;accent-color:var(--beam)}
+.ctl.a input{accent-color:var(--knobA)} .ctl.b input{accent-color:var(--knobB)}
+.ctl.a label{color:var(--knobA)} .ctl.b label{color:var(--knobB)}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+button{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--surface);color:var(--fg);
+  border-radius:999px;padding:6px 14px;cursor:pointer}
+button:hover{border-color:var(--muted)}
+button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--card);outline-offset:2px}
+button[aria-pressed=true]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.readout{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.cell{border-top:2px solid var(--line);padding-top:6px;min-width:0}
+.cell .k{font-size:12px;color:var(--muted)}
+.cell .v{font-family:var(--f-num);font-size:20px;font-variant-numeric:tabular-nums}
+.chip{display:inline-block;font-size:13px;font-weight:500;padding:2px 10px;border-radius:999px}
+.chip.ok{background:var(--band);color:var(--ok)}
+.chip.bad{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+.chip.a{background:color-mix(in srgb,var(--knobA) 15%,transparent);color:var(--knobA)}
+.chip.b{background:color-mix(in srgb,var(--knobB) 15%,transparent);color:var(--knobB)}
+.note{font-size:12px;color:var(--muted);margin:0}
+.facts{display:grid;grid-template-columns:7.5em 1fr;gap:4px 14px;font-size:14px;margin:0}
+.facts dt{color:var(--muted)} .facts dd{margin:0;min-width:0}
+.cap{font-size:15px;margin:0;font-weight:500}
+.verdicts{display:flex;flex-wrap:wrap;gap:8px}
+.verdicts .chip{font-weight:400}
+.quiz{display:flex;flex-direction:column;gap:16px}
+.q p{margin:0 0 6px;font-weight:500}
+.q .fb{font-size:14px;margin-top:6px;min-height:1.6em}
+.q button.right{border-color:var(--ok);color:var(--ok)}
+.q button.wrong{border-color:var(--bad);color:var(--bad)}
+footer{font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+footer b{color:var(--fg)}
+svg text{font-family:var(--f-body)}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+.lv{font-size:12px;font-weight:700;padding:1px 8px;border-radius:999px;margin-left:6px}
+.lv.e{background:var(--band);color:var(--ok)} .lv.m{background:color-mix(in srgb,var(--proj2) 18%,transparent);color:var(--proj2)} .lv.h{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+.info{border-left:3px solid var(--card);padding:8px 12px;background:var(--card-fill);border-radius:0 8px 8px 0;min-height:64px}
+.info b{display:inline} .info p{margin:4px 0 0;font-size:14px}
+.part{cursor:pointer;transition:transform .6s ease}
+.part:hover > :first-child,.part.sel > :first-child{filter:drop-shadow(0 0 4px var(--card))}
+@media (prefers-reduced-motion: reduce){.part{transition:none}}
+</style>
+<style>
+.q-big{font-family:var(--f-display);font-size:clamp(20px,3.6vw,26px);font-weight:900;margin:0;text-wrap:balance}
+.cap-box{display:flex;gap:12px;align-items:flex-start;background:var(--card-fill);border-radius:10px;padding:12px 14px;min-height:72px}
+.cap-box .no{font-family:var(--f-num);font-size:13px;color:var(--card);white-space:nowrap;padding-top:3px}
+.cap-box p{margin:0;font-size:16px;line-height:1.6}
+.cap-box b{color:var(--beam)}
+.stepbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.dots{display:flex;gap:6px;margin-left:4px}
+.dots i{width:9px;height:9px;border-radius:50%;background:var(--line);display:block}
+.dots i.on{background:var(--card)}
+.free{border-top:1px dashed var(--line);padding-top:12px;display:flex;flex-direction:column;gap:10px}
+.free .t{font-size:13px;color:var(--muted)}
+.big-next{background:var(--card);color:#fff;border-color:var(--card);font-weight:700}
+.concl{font-size:15px;font-weight:700;color:var(--ok);margin:0}
+</style>
+<div class="wrap">
+<header>
+  <div class="eyebrow">激光扫描系统入门 · 第 09 课</div>
+  <h1>54 份资料里，<span class="red">六个</span>值得学的结构</h1>
+  <p class="lede">专利附图线条太多，不好懂。这里把我和 Codex 都认为值得学的 6 个结构，重新画成<b>会动的简化图</b>。每个都点“下一步”看它怎么工作，最后看对我们有什么用。</p>
+</header>
+<section aria-labelledby="s1">
+  <p class="q-big" id="s1">问题 1：丝杆和导轨，各管什么？</p>
+  <p class="note" style="margin-top:-6px">来源：R010 自动调焦装置（权利要求 4）</p>
+  <div class="stage"><svg id="svg1" data-export="09-1_丝杆传动链" viewBox="0 0 840 320" role="img" aria-label="问题 1：丝杆和导轨，各管什么？"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n1"></span><p id="c1"></p></div>
+  <div class="stepbar"><button id="p1">← 上一步</button><button id="x1" class="big-next">下一步 →</button><span class="dots" id="d1"></span></div>
+  <div class="free"><span class="t">自己玩：</span><div class="ctl"><label for="f1">电机转了几圈<span id="f1V"></span></label><input id="f1" type="range" min="0" max="40" step="1" value="10"></div></div>
+  <p class="concl">记住一句：丝杆只管推，导轨负责扛侧向力。我们 v0.3 也是这样分工的。</p>
+</section>
+<section aria-labelledby="s2">
+  <p class="q-big" id="s2">问题 2：为什么要把镜片都装在同一块底座上？</p>
+  <p class="note" style="margin-top:-6px">来源：R004 思特（底座 26）、R009（底座 22）</p>
+  <div class="stage"><svg id="svg2" data-export="09-2_共同底座" viewBox="0 0 840 320" role="img" aria-label="问题 2：为什么要把镜片都装在同一块底座上？"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n2"></span><p id="c2"></p></div>
+  <div class="stepbar"><button id="p2">← 上一步</button><button id="x2" class="big-next">下一步 →</button><span class="dots" id="d2"></span></div>
+  <div class="free"><span class="t">自己玩：</span><div class="ctl"><label for="f2">壳体变形（夸张画）<span id="f2V"></span></label><input id="f2" type="range" min="0" max="1" step="0.01" value="1"></div><div class="row"><button id="f2a">各装各的</button><button id="f2b">同一块底座</button></div></div>
+  <p class="concl">记住一句：各装各的，壳体一变形两片镜就错开；装在同一块底座上，要动一起动，相对位置不变。</p>
+</section>
+<section aria-labelledby="s3">
+  <p class="q-big" id="s3">问题 3：回差是什么？别人怎么消掉它？</p>
+  <p class="note" style="margin-top:-6px">来源：R054（权利要求 4、5：曲柄 + 两条交叉弹簧钢带；调幅模块 = 步进 + 丝杆）</p>
+  <div class="stage"><svg id="svg3" data-export="09-3_回差与钢带" viewBox="0 0 840 320" role="img" aria-label="问题 3：回差是什么？别人怎么消掉它？"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n3"></span><p id="c3"></p></div>
+  <div class="stepbar"><button id="p3">← 上一步</button><button id="x3" class="big-next">下一步 →</button><span class="dots" id="d3"></span></div>
+  <div class="free"><span class="t">自己玩：</span><div class="row"><button id="f3a">理想</button><button id="f3b">有缝的丝杆</button><button id="f3c">交叉钢带</button></div></div>
+  <p class="concl">记住一句：有缝就有回差，一换方向先空走一段。消缝的办法：预紧（钢带 / 预紧螺母），或者每次都从同一个方向走到目标。</p>
+</section>
+<section aria-labelledby="s4">
+  <p class="q-big" id="s4">问题 4：运输的时候，滑座会怎样？</p>
+  <p class="note" style="margin-top:-6px">来源：R031 Aerotech AGV3D 手册第 32 页（Shipping Clamp）</p>
+  <div class="stage"><svg id="svg4" data-export="09-4_运输锁" viewBox="0 0 840 320" role="img" aria-label="问题 4：运输的时候，滑座会怎样？"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n4"></span><p id="c4"></p></div>
+  <div class="stepbar"><button id="p4">← 上一步</button><button id="x4" class="big-next">下一步 →</button><span class="dots" id="d4"></span></div>
+  <div class="free"><span class="t">自己玩：</span><div class="row"><button id="f4a">颠簸</button><button id="f4b">运输锁</button></div></div>
+  <p class="concl">记住一句：会动的东西运输时要锁住；锁块要醒目，开机前必须拆。</p>
+</section>
+<section aria-labelledby="s5">
+  <p class="q-big" id="s5">问题 5：拆保护窗的时候，窗片为什么会掉？</p>
+  <p class="note" style="margin-top:-6px">来源：R031 AGV3D 手册第 53 页（警告：拆下框后窗片和 O 圈是松的）</p>
+  <div class="stage"><svg id="svg5" data-export="09-5_保护窗保持" viewBox="0 0 840 320" role="img" aria-label="问题 5：拆保护窗的时候，窗片为什么会掉？"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n5"></span><p id="c5"></p></div>
+  <div class="stepbar"><button id="p5">← 上一步</button><button id="x5" class="big-next">下一步 →</button><span class="dots" id="d5"></span></div>
+  <div class="free"><span class="t">自己玩：</span><div class="row"><button id="f5a">拆 / 装</button><button id="f5b">旧做法</button><button id="f5c">窗座 + 定位销</button></div></div>
+  <p class="concl">记住一句：把窗片、压圈、O 圈先装进一个小窗座，整体拆装；再加定位销，装回去位置不变。</p>
+</section>
+<section aria-labelledby="s6">
+  <p class="q-big" id="s6">问题 6：怎么知道镜片真的到位了？线又怎么走？</p>
+  <p class="note" style="margin-top:-6px">来源：S015 Renishaw ATOM DX（标尺 + 读数头）、R002 FIG. 2C（移动镜座上带线缆）</p>
+  <div class="stage"><svg id="svg6" data-export="09-6_位置反馈与线缆" viewBox="0 0 840 320" role="img" aria-label="问题 6：怎么知道镜片真的到位了？线又怎么走？"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n6"></span><p id="c6"></p></div>
+  <div class="stepbar"><button id="p6">← 上一步</button><button id="x6" class="big-next">下一步 →</button><span class="dots" id="d6"></span></div>
+  <div class="free"><span class="t">自己玩：</span><div class="row"><button id="f6a">读数头装在滑座上</button><button id="f6b">标尺装在滑座上</button></div></div>
+  <p class="concl">记住一句：用直线标尺直接量镜片位置；把标尺装在动的滑座上、读数头固定，动的部分就没有线。</p>
+</section>
+<section aria-labelledby="s7">
+  <h2 id="s7"><span class="n">✓</span>小测</h2>
+  <div class="quiz" id="quiz"></div>
+</section>
+<footer>
+  <div><b>本课对项目的推进（v0.4 结构改动建议）：</b></div>
+  <div>· 已经做对的：丝杆推 + 导轨扛（问题 1）、Z 轴底座共同基准（问题 2）、预紧螺母（问题 3）</div>
+  <div>· 要加的：<b>运输锁</b>（问题 4）、<b>保护窗独立窗座 + 定位销</b>（问题 5）、<b>直线标尺预留位：标尺在滑座、读数头固定</b>（问题 6）</div>
+  <div>· 先不改：钢带预紧、两级运动，等样机实测回差再说（问题 3）</div>
+</footer>
+</div>
+<script>
+
+const $=id=>document.getElementById(id);
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const T=(x,y,t,s=14,c='var(--fg)',a='middle',w=400)=>`<text x="${x}" y="${y}" font-size="${s}" fill="${c}" text-anchor="${a}" font-weight="${w}">${t}</text>`;
+/* 通用：分步 + 补间动画 */
+function stepper(k,steps,state,draw){
+  let i=0,anim=0;
+  const dots=$('d'+k);dots.innerHTML=steps.map(()=>'<i></i>').join('');
+  function go(n,instant){i=Math.max(0,Math.min(steps.length-1,n));const to={...state,...steps[i].s},from={...state},t0=performance.now(),dur=(reduce||instant)?0:700;
+    cancelAnimationFrame(anim);
+    const tick=now=>{const p=dur?Math.min(1,(now-t0)/dur):1,e=p<.5?2*p*p:1-(-2*p+2)**2/2;
+      for(const key in to){if(typeof to[key]==='number')state[key]=from[key]+(to[key]-from[key])*e;else state[key]=to[key];}
+      draw();if(p<1)anim=requestAnimationFrame(tick);};
+    if(!dur){for(const key in to)state[key]=to[key];draw();}else anim=requestAnimationFrame(tick);
+    $('c'+k).innerHTML=steps[i].t;$('n'+k).textContent=`第 ${i+1} / ${steps.length} 步`;
+    dots.querySelectorAll('i').forEach((d,j)=>d.classList.toggle('on',j<=i));
+    $('p'+k).disabled=i===0;$('x'+k).textContent=i===steps.length-1?'从头再看 ↺':'下一步 →';}
+  $('p'+k).onclick=()=>go(i-1);$('x'+k).onclick=()=>go(i===steps.length-1?0:i+1);
+  go(0,true);return {go,n:steps.length};
+}
+
+const R=(x,y,w,h,f,s='none',sw=0,rx=3,extra='')=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${rx}" fill="${f}" stroke="${s}" stroke-width="${sw}" ${extra}/>`;
+const lens=(x,y,ry=20)=>`<ellipse cx="${x}" cy="${y}" rx="6" ry="${ry}" fill="var(--glass-fill)" stroke="var(--glass)" stroke-width="2"/>`;
+const arrow=(x1,y1,x2,y2,c,w=3)=>{const a=Math.atan2(y2-y1,x2-x1),h=10;return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${c}" stroke-width="${w}"/><polygon points="${x2},${y2} ${x2-h*Math.cos(a-0.45)},${y2-h*Math.sin(a-0.45)} ${x2-h*Math.cos(a+0.45)},${y2-h*Math.sin(a+0.45)}" fill="${c}"/>`;};
+let TT=0;const ANIM=[];(function loop(){TT+=0.016;ANIM.forEach(f=>f(TT));requestAnimationFrame(loop);})();
+
+/* ===== 1 丝杆传动链 ===== */
+const s1={rot:0,move:0,load:0,norail:0,turns:10,free:0};
+let ph1=0;
+function draw1(){
+  let g=R(20,262,800,14,'var(--metal)')+T(420,302,'底座',12,'var(--muted)');
+  const px=s1.free?230+s1.turns*9.75:(s1.move?425+180*Math.sin(TT*0.7):425);
+  const phase=s1.move||s1.free?px/9.75:ph1;
+  g+=R(40,170,70,60,'#1d2330')+T(75,160,'电机',13,'var(--fg)','middle',700);
+  if(s1.rot||s1.move)g+=T(75,206,'⟳',26,'#facc15','middle',700);
+  g+=R(110,190,40,20,'#9aa3ad')+T(130,184,'联轴器',11,'var(--muted)');
+  g+=R(150,180,20,82,'var(--proj2)')+R(690,180,20,82,'var(--proj2)')+T(160,176,'轴承座',11,'var(--proj2)')+T(700,176,'轴承座',11,'var(--proj2)');
+  const sag=s1.norail&&s1.load?22:0;
+  g+=`<path d="M150,200 Q420,${200+sag*2} 710,200" stroke="#c9cdd3" stroke-width="12" fill="none"/>`;
+  for(let x=160+((phase*10)%10+10)%10;x<700;x+=10){const yy=200+sag*2*4*((x-150)/560)*(1-(x-150)/560);g+=`<line x1="${x}" y1="${yy-6}" x2="${x+5}" y2="${yy+6}" stroke="#7b8697" stroke-width="1.5"/>`;}
+  g+=T(420,232-(s1.norail?0:0),'丝杆（转一圈走 1 mm）',12,'var(--muted)');
+  if(!s1.norail)g+=R(200,244,480,18,'var(--metal)')+T(690,258,'导轨',12,'var(--fg)','start',700);
+  const cy=s1.norail?0:0, sy=s1.norail&&s1.load?200+sag*2*4*((px-150)/560)*(1-(px-150)/560)-200:0;
+  g+=R(px-25,186+sy,50,30,'#d4a72c','#8a6d1d',1.5)+T(px,206+sy,'螺母',11,'#3a2a00','middle',700);
+  if(!s1.norail)g+=R(px-34,226,68,18,'#55606e')+R(px-5,214,10,14,'#55606e');
+  const tilt=s1.norail&&s1.load?14:0;
+  g+=`<g transform="rotate(${tilt} ${px+30} ${200+sy})">`+R(px+24,120+sy,8,104,'#6b7686')+lens(px+28,110+sy,22)+'</g>'+T(px+28,80+sy,'镜片',12,'var(--fg)','middle',700);
+  if(s1.move||s1.free)g+=arrow(px+40,170,px+90,170,'var(--card)')+T(px+96,174,'推',13,'var(--card)','start',700);
+  if(s1.load){g+=arrow(px+30,30,px+30,72,'var(--bad)')+T(px+40,40,'侧向力（重量、碰撞）',12,'var(--bad)','start',700);
+    if(!s1.norail)g+=arrow(px,290,px,248,'var(--ok)')+T(px+10,300,'导轨扛住',12,'var(--ok)','start',700);
+    else g+=T(220,50,'没有导轨：丝杆被压弯，镜片歪了 ✗',14,'var(--bad)','middle',700);}
+  if(s1.free)g+=T(420,30,`转了 ${s1.turns} 圈 → 镜片走了 ${s1.turns} mm`,15,'var(--ok)','middle',700);
+  $('svg1').innerHTML=g;$('f1V').textContent=s1.turns+' 圈';
+}
+ANIM.push(t=>{if(s1.rot&&!s1.move&&!s1.free)ph1=t*3;if(s1.rot||s1.move)draw1();});
+const st1=stepper(1,[
+ {t:'<b>电机</b>经过<b>联轴器</b>带着<b>丝杆</b>转。丝杆两头各有一个<b>轴承座</b>托着（R010 的 312）。',s:{rot:1,move:0,load:0,norail:0,free:0}},
+ {t:'丝杆一转，<b>螺母</b>就沿着丝杆走：转一圈走一个导程（我们是 1 mm）。螺母连着滑座，滑座带着镜片走。',s:{rot:1,move:1,load:0,norail:0,free:0}},
+ {t:'如果有<b>侧向的力</b>（镜片的重量、被碰一下）呢？<b>导轨扛住</b>，丝杆只负责沿轴向推，不受弯。',s:{rot:0,move:0,load:1,norail:0,free:0}},
+ {t:'如果<b>没有导轨</b>、全靠丝杆撑着：丝杆被压弯，镜片也歪了。所以 R010 和我们都是<b>丝杆推、导轨扛</b>，各管一件事。',s:{rot:0,move:0,load:1,norail:1,free:0}}
+],s1,draw1);
+$('f1').addEventListener('input',()=>{s1.turns=+$('f1').value;s1.free=1;s1.rot=0;s1.move=0;s1.load=0;s1.norail=0;draw1();});
+
+/* ===== 2 共同底座 ===== */
+const s2={def:0,common:0};
+function draw2(){
+  const d=s2.def*14, fy=x=>250+d*Math.sin(Math.PI*(x-40)/760);
+  let g=`<path d="M40,${fy(40)} ${Array.from({length:39},(_,i)=>{const x=40+i*20;return `L${x},${fy(x)}`}).join(' ')} L800,${fy(800)} L800,${fy(800)+14} L40,${fy(40)+14} Z" fill="var(--metal)"/>`+T(420,300,'壳体底板（受热、拧螺丝都会让它微微变形）',12,'var(--muted)');
+  let y1,y2;
+  if(!s2.common){y1=fy(220)-100;y2=fy(560)-100;
+    g+=R(200,y1+20,40,fy(220)-y1-20,'#6b7686')+R(530,y2+40,60,fy(560)-y2-40,'#6b7686');
+    g+=T(220,fy(220)+30,'支架 A',11,'var(--muted)')+T(560,fy(560)+30,'支架 B',11,'var(--muted)');}
+  else{const yb=fy(390);y1=yb-114;y2=yb-114;
+    g+=R(180,yb-14,440,14,'var(--proj2)')+T(400,yb-20,'同一块 Z 轴底座（中间一点固定）',12,'var(--proj2)','middle',700)+R(380,yb,20,fy(390)-yb+1,'var(--proj2)');
+    g+=R(205,y1+20,30,yb-14-y1-20,'#6b7686')+R(540,y2+40,40,yb-14-y2-40,'#6b7686');}
+  // 光束
+  const mis=(y1-y2);const ang=Math.atan(mis/340)*1.6;
+  g+=`<polygon points="20,${y1-3} 214,${y1-3} 554,${y2-16} 554,${y2+16} 214,${y1+3} 20,${y1+3}" fill="var(--beam)" opacity=".3"/>`;
+  g+=`<polygon points="566,${y2-16} ${820},${y2-16+260*Math.tan(ang)} ${820},${y2+16+260*Math.tan(ang)} 566,${y2+16}" fill="var(--beam)" opacity=".3"/>`;
+  g+=`<line x1="566" y1="${y2}" x2="820" y2="${y2}" stroke="var(--muted)" stroke-dasharray="5 4"/>`;
+  g+=lens(220,y1,18)+lens(560,y2,40)+T(220,y1-26,'动镜',12,'var(--fg)','middle',700)+T(560,y2-48,'物镜',12,'var(--fg)','middle',700);
+  const um=Math.abs(mis)/14*20, off=um*1e-3/150*50000;
+  g+=T(700,40,um<0.5?'两片镜对齐 ✓':`两片镜错开约 ${um.toFixed(0)} μm（夸张画）`,14,um<0.5?'var(--ok)':'var(--bad)','middle',700);
+  if(um>=0.5)g+=T(700,62,`→ 50 m 外偏约 ${off.toFixed(1)} mm`,13,'var(--bad)','middle',700);
+  $('svg2').innerHTML=g;$('f2V').textContent=s2.def>0.01?'有':'无';
+  $('f2a').setAttribute('aria-pressed',!s2.common);$('f2b').setAttribute('aria-pressed',!!s2.common);
+}
+const st2=stepper(2,[
+ {t:'动镜和物镜对在一条线上，光直直地出去。',s:{def:0,common:0}},
+ {t:'如果两片镜<b>各装在自己的支架上</b>，壳体底板一变形（受热、拧螺丝），两片镜就<b>不在一条线上</b>了，出射光歪掉。到 50 m 外会被放大。',s:{def:1,common:0}},
+ {t:'R004、R009 的做法：导轨、滑座、动镜座、物镜筒都装在<b>同一块底座</b>上。壳体变形时，底座整体跟着动，<b>两片镜的相对位置不变</b>，光还是直的。',s:{def:1,common:1}},
+ {t:'我们 v0.3 的 <b>Z 轴底座</b>就是这么做的 ✓。再进一步：底座用<b>三点支撑</b>装到壳体上，壳体怎么弯都不传给它。',s:{def:1,common:1}}
+],s2,draw2);
+$('f2').addEventListener('input',()=>{s2.def=+$('f2').value;draw2();});
+$('f2a').onclick=()=>{s2.common=0;draw2();};$('f2b').onclick=()=>{s2.common=1;draw2();};
+
+/* ===== 3 回差与钢带 ===== */
+const s3={mode:'ideal',show:1};let xa3=420,prevc=0;
+const BL=50;
+function draw3(){
+  const c=420+260*Math.sin(TT*1.1);
+  if(s3.mode==='screw'){if(c-xa3>BL/2)xa3=c-BL/2;if(xa3-c>BL/2)xa3=c+BL/2;}else xa3=c;
+  const dead=s3.mode==='screw'&&Math.abs(c-xa3)<BL/2-1;
+  let g=`<line x1="120" y1="60" x2="720" y2="60" stroke="var(--line)" stroke-width="4"/>`+T(110,64,'位置',12,'var(--muted)','end');
+  g+=`<polygon points="${c-9},36 ${c+9},36 ${c},52" fill="var(--card)"/>`+T(c,30,'指令',12,'var(--card)','middle',700);
+  g+=`<circle cx="${xa3}" cy="60" r="9" fill="#facc15" stroke="#b45309" stroke-width="2"/>`+T(xa3,90,'镜片实际',12,'#b45309','middle',700);
+  if(s3.mode==='ideal'){g+=T(420,200,'理想情况：指令到哪，镜片就到哪',16,'var(--ok)','middle',700);}
+  if(s3.mode==='screw'){
+    g+=R(120,220,600,14,'#c9cdd3');for(let x=124;x<716;x+=10)g+=`<line x1="${x}" y1="220" x2="${x+5}" y2="234" stroke="#7b8697"/>`;
+    g+=R(xa3-40,204,80,46,'#d4a72c','#8a6d1d',1.5)+T(xa3,232,'螺母',12,'#3a2a00','middle',700);
+    // 放大镜：牙和缝
+    const gx=640,gy=150;g+=`<circle cx="${gx}" cy="${gy}" r="52" fill="var(--surface)" stroke="var(--fg)" stroke-width="2"/>`+T(gx,gy-60,'放大看',11,'var(--muted)');
+    const contact=c>xa3?1:-1, tooth=gx+(dead?0:contact*12);
+    g+=`<polygon points="${tooth-14},${gy+30} ${tooth},${gy+4} ${tooth+14},${gy+30}" fill="#9aa3ad"/>`+T(gx,gy+46,'丝杆牙',10,'var(--muted)');
+    g+=`<polygon points="${gx-40},${gy-30} ${gx-26},${gy-4} ${gx-12},${gy-30}" fill="#d4a72c"/><polygon points="${gx+12},${gy-30} ${gx+26},${gy-4} ${gx+40},${gy-30}" fill="#d4a72c"/>`+T(gx,gy-36,'螺母牙',10,'#8a6d1d');
+    if(dead)g+=T(420,150,'一换方向：先空走一段，镜片不动（死区）✗',15,'var(--bad)','middle',700);
+    else g+=T(420,150,'有缝：同一方向走时正常',14,'var(--muted)','middle',700);}
+  if(s3.mode==='band'||s3.mode==='two'){
+    const two=s3.mode==='two';const base=two?420+120*Math.sign(Math.sin(TT*0.25)):420;
+    if(two)g+=R(140,262,560,10,'var(--metal)')+R(base-110,232,220,30,'var(--surface)','var(--proj2)',2)+T(base,288,'调幅模块：丝杆慢慢把整个快轴搬到大概位置（粗）',12,'var(--proj2)','middle',700);
+    const cx=base,cy=two?205:230,ang=(c-420)/50;
+    g+=`<circle cx="${cx}" cy="${cy}" r="26" fill="#9aa3ad" stroke="#55606e" stroke-width="2"/><line x1="${cx}" y1="${cy}" x2="${cx+24*Math.cos(ang)}" y2="${cy+24*Math.sin(ang)}" stroke="#1d2330" stroke-width="4"/>`;
+    const sx=two?base+(c-420)*0.25:c, sy=two?150:150;
+    g+=R(sx-40,sy-16,80,32,'var(--card-fill)','var(--card)',2)+T(sx,sy+5,'滑块',12,'var(--card)','middle',700);
+    g+=`<line x1="${cx-26}" y1="${cy}" x2="${sx+40}" y2="${sy+16}" stroke="var(--glass)" stroke-width="3"/><line x1="${cx+26}" y1="${cy}" x2="${sx-40}" y2="${sy+16}" stroke="var(--glass)" stroke-width="3"/>`;
+    g+=T(cx+40,cy+6,two?'快轴（细）':'曲柄',12,'var(--fg)','start',700)+T(Math.min(sx,cx)-60,(cy+sy)/2,'两条钢带交叉拉紧',12,'var(--glass)','end',700);
+    if(!two)g+=T(420,290,'两个方向都绷紧，没有缝：一换方向马上跟上 ✓',14,'var(--ok)','middle',700);}
+  $('svg3').innerHTML=g;
+  ['f3a','f3b','f3c'].forEach((k,i)=>$(k).setAttribute('aria-pressed',['ideal','screw','band'][i]===s3.mode));
+}
+ANIM.push(()=>draw3());
+const st3=stepper(3,[
+ {t:'蓝色三角是<b>指令</b>（控制卡让镜片去的地方），黄点是<b>镜片实际位置</b>。理想情况下两者一直重合。',s:{mode:'ideal'}},
+ {t:'普通丝杆和螺母之间有一点<b>缝</b>（看右边放大图）。同一方向走没事，可一<b>换方向</b>，丝杆要先把缝走完才推得动螺母：这段时间镜片不动，叫<b>回差</b>。',s:{mode:'screw'}},
+ {t:'R054 的快速轴：一个<b>曲柄</b>两边各绕一条<b>弹簧钢带</b>，交叉拉住滑块。两个方向都是绷紧的，<b>没有缝</b>，一换方向马上跟上。',s:{mode:'band'}},
+ {t:'R054 还有<b>两级运动</b>：慢的丝杆（调幅模块）把整个快轴搬到大概位置，快轴再做小范围精调。<b>我们暂时不需要</b>：先用预紧螺母或单向趋近，等样机实测回差再说。',s:{mode:'two'}}
+],s3,draw3);
+$('f3a').onclick=()=>{s3.mode='ideal';};$('f3b').onclick=()=>{s3.mode='screw';};$('f3c').onclick=()=>{s3.mode='band';};
+
+/* ===== 4 运输锁 ===== */
+const s4={shake:0,lock:0,hole:0};let v4=0,x4=430,hit4=0;
+function draw4(){
+  const ox=s4.shake?5*Math.sin(TT*40):0;
+  if(s4.shake&&!s4.lock){v4+=Math.sin(TT*9)*0.9;v4*=0.96;x4+=v4;if(x4<300){x4=300;v4=-v4*0.6;hit4=TT;}if(x4>560){x4=560;v4=-v4*0.6;hit4=TT;}}
+  else if(s4.lock){x4=340;v4=0;}else{x4+= (430-x4)*0.05;}
+  let g=`<g transform="translate(${ox},0)">`+R(80,60,680,210,'none','var(--fg)',2,8)+T(90,52,'壳体',12,'var(--muted)','start');
+  g+=R(100,240,640,14,'var(--metal)')+R(240,226,380,14,'#9aa3ad')+T(630,236,'导轨',11,'var(--fg)','start');
+  g+=R(255,206,10,20,'#55606e')+R(595,206,10,20,'#55606e');
+  g+=R(x4-40,202,80,24,'#55606e')+R(x4-4,140,8,62,'#6b7686')+lens(x4,130,20);
+  if(TT-hit4<0.15&&!s4.lock)g+=T(x4<430?262:598,196,'💥',22,'var(--bad)');
+  if(s4.lock)g+=R(268,196,32,44,'#e5383b','#8a1c1d',2)+`<circle cx="284" cy="204" r="3" fill="#1d2330"/><circle cx="284" cy="230" r="3" fill="#1d2330"/>`+T(284,186,'运输锁',12,'var(--bad)','middle',700);
+  if(s4.hole)g+=`<circle cx="284" cy="60" r="10" fill="var(--bg)" stroke="var(--bad)" stroke-width="2"/>`+T(300,48,'上盖检修孔：不开盖就能拆',12,'var(--bad)','start',700)+`<line x1="284" y1="72" x2="284" y2="190" stroke="var(--bad)" stroke-dasharray="4 4"/>`;
+  g+='</g>';
+  g+=T(420,300,s4.shake?(s4.lock?'颠簸中：滑座被锁住，不动 ✓':'颠簸中：滑座来回撞两头 ✗'):'静止',14,s4.shake?(s4.lock?'var(--ok)':'var(--bad)'):'var(--muted)','middle',700);
+  $('svg4').innerHTML=g;$('f4a').setAttribute('aria-pressed',!!s4.shake);$('f4b').setAttribute('aria-pressed',!!s4.lock);
+}
+ANIM.push(()=>draw4());
+const st4=stepper(4,[
+ {t:'装好的调焦头里，滑座（带着动镜）是可以在导轨上<b>自由滑</b>的。',s:{shake:0,lock:0,hole:0}},
+ {t:'运输时一颠簸，滑座就来回<b>撞两头</b>：可能撞坏导轨、光电开关，镜片也可能松。',s:{shake:1,lock:0,hole:0}},
+ {t:'AGV3D 的做法：加一个<b>红色运输夹</b>，两颗螺钉把移动件锁在固定位置。再怎么颠也不动。',s:{shake:1,lock:1,hole:0}},
+ {t:'到现场<b>开机前必须拆掉</b>（所以做成显眼的红色）。我们再改进一点：在上盖对应位置开个<b>检修孔</b>，不开盖就能拆。',s:{shake:0,lock:1,hole:1}}
+],s4,draw4);
+$('f4a').onclick=()=>{s4.shake=s4.shake?0:1;};$('f4b').onclick=()=>{s4.lock=s4.lock?0:1;};
+
+/* ===== 5 保护窗 ===== */
+const s5={open:0,cell:0,pin:0};let o5=0;
+function draw5(){
+  o5+=(s5.open-o5)*0.08;const dx=o5*200;
+  let g=R(360,30,40,270,'var(--metal)')+T(380,22,'壳体侧壁',12,'var(--muted)');
+  g+=`<rect x="355" y="110" width="50" height="110" fill="var(--bg)"/>`+T(250,170,'壳体内部',12,'var(--muted)','middle')+T(700,24,'外面 →',12,'var(--muted)','end');
+  // 窗框
+  g+=`<g transform="translate(${dx},0)">`+`<path d="M400,90 L440,90 L440,112 L416,112 L416,218 L440,218 L440,240 L400,240 Z" fill="#3a4250"/>`+T(440,82,'窗框',12,'var(--fg)','middle',700);
+  g+=R(392,96,30,6,'#1d2330')+R(392,228,30,6,'#1d2330');
+  if(s5.pin)g+=R(394,124,14,6,'var(--ok)')+R(394,200,14,6,'var(--ok)');
+  if(s5.cell)g+=`<path d="M404,104 L416,104 L416,226 L404,226 Z" fill="var(--proj2)" opacity=".6"/>`+T(470,250,'小窗座（窗片 + 压圈 + O 圈一起）',12,'var(--proj2)','start',700);
+  g+='</g>';
+  // 窗片 + O 圈
+  let wx=402+(s5.cell?dx:0),wy=0,rot=0;
+  if(!s5.cell&&o5>0.05){wy=o5*o5*160;rot=o5*30;}
+  g+=`<g transform="translate(${wx-402},${wy}) rotate(${rot} 408 165)">`+R(404,114,8,102,'var(--glass-fill)','var(--glass)',2,2)+`<circle cx="402" cy="116" r="4" fill="#111"/><circle cx="402" cy="214" r="4" fill="#111"/>`+'</g>';
+  g+=T(408+(s5.cell?dx:0)-60,165+wy,'窗片',12,'var(--glass)','end',700);
+  if(!s5.cell&&o5>0.6)g+=T(560,300,'窗片和 O 圈掉了 ✗',16,'var(--bad)','middle',700);
+  if(s5.cell&&o5>0.6)g+=T(560,300,'整体取下，不会掉 ✓',16,'var(--ok)','middle',700);
+  if(s5.pin&&o5<0.1)g+=T(620,170,'定位销对准：装回去位置不变 ✓',15,'var(--ok)','middle',700);
+  $('svg5').innerHTML=g;$('f5b').setAttribute('aria-pressed',!s5.cell);$('f5c').setAttribute('aria-pressed',!!s5.cell);
+}
+ANIM.push(()=>draw5());
+const st5=stepper(5,[
+ {t:'侧面截面：<b>窗片</b>（蓝）装在<b>窗框</b>里，靠 <b>O 圈</b>密封，窗框用螺钉固定在侧壁上。',s:{open:0,cell:0,pin:0}},
+ {t:'AGV3D 手册的警告：拧掉螺钉、取下窗框以后，<b>窗片和 O 圈是松的</b>，会掉下来（可能摔坏、沾灰）。',s:{open:1,cell:0,pin:0}},
+ {t:'改进：先把窗片、压圈、O 圈装进一个<b>小窗座</b>，整体拆装。取下来时它们是一个整体，<b>不会掉</b>。',s:{open:1,cell:1,pin:0}},
+ {t:'再加两颗<b>定位销</b>（绿色）：装回去时位置和原来一样，不用重新对光。',s:{open:0,cell:1,pin:1}}
+],s5,draw5);
+$('f5a').onclick=()=>{s5.open=s5.open?0:1;};$('f5b').onclick=()=>{s5.cell=0;s5.pin=0;};$('f5c').onclick=()=>{s5.cell=1;s5.pin=1;};
+
+/* ===== 6 位置反馈与线缆 ===== */
+const s6={lost:0,scale:0,mode:'A',bends:0};let px6=420,dir6=1,last6=420;
+function draw6(){
+  px6=420+170*Math.sin(TT*0.9);const d=Math.sign(px6-last6);if(d&&d!==dir6&&s6.scale&&s6.mode==='A')s6.bends++;if(d)dir6=d;last6=px6;
+  let g=R(100,262,640,12,'var(--metal)')+R(160,236,520,12,'#9aa3ad')+T(690,246,'导轨',11,'var(--fg)','start');
+  const lag=s6.lost?40:0, xa=px6-lag;
+  if(s6.lost){g+=`<g opacity=".35">`+R(px6-40,212,80,24,'#55606e')+lens(px6,130,20)+'</g>'+T(px6,96,'控制卡以为在这',12,'var(--card)','middle',700);}
+  g+=R(xa-40,212,80,24,'#55606e')+R(xa-4,150,8,62,'#6b7686')+lens(xa,130,20)+T(xa,96+(s6.lost?-18:0),s6.lost?'实际在这（丢步了）':'镜片',12,s6.lost?'var(--bad)':'var(--fg)','middle',700);
+  if(s6.scale){
+    if(s6.mode==='A'){g+=R(160,250,520,6,'url(#stripe6)');
+      g+=R(xa-12,240,24,10,'#1d2330')+T(xa+16,258,'读数头（动）',11,'var(--fg)','start');
+      g+=`<path d="M${xa},240 C${xa},170 ${(xa+120)/2},40 120,60" fill="none" stroke="var(--proj2)" stroke-width="3"/>`+R(104,52,24,16,'var(--proj2)')+T(116,46,'接线',11,'var(--proj2)');
+      g+=T(560,40,`线缆来回弯了 ${s6.bends} 次`,14,'var(--bad)','middle',700)+T(560,60,'弯多了会断，还会拉扯滑座 ✗',12,'var(--bad)','middle');}
+    else{g+=R(xa-40,236,80,6,'url(#stripe6)');
+      g+=R(408,244,24,12,'#1d2330')+T(436,252,'读数头（固定）',11,'var(--fg)','start');
+      g+=`<path d="M420,256 L420,290 L120,290 L120,68" fill="none" stroke="var(--proj2)" stroke-width="3"/>`+R(104,52,24,16,'var(--proj2)');
+      g+=T(560,40,'标尺跟着滑座走，读数头不动',14,'var(--ok)','middle',700)+T(560,60,'动的部分没有线 ✓',12,'var(--ok)','middle');}}
+  g=`<defs><pattern id="stripe6" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="3" height="6" fill="#1d2330"/><rect x="3" width="3" height="6" fill="#d8dee7"/></pattern></defs>`+g;
+  $('svg6').innerHTML=g;$('f6a').setAttribute('aria-pressed',s6.mode==='A');$('f6b').setAttribute('aria-pressed',s6.mode==='B');
+}
+ANIM.push(()=>draw6());
+const st6=stepper(6,[
+ {t:'步进电机是开环的：控制卡只知道“发了多少步”。如果<b>丢步</b>或者有回差，镜片实际位置和控制卡以为的不一样，它<b>自己不知道</b>。',s:{lost:1,scale:0,mode:'A'}},
+ {t:'办法：加一根<b>直线标尺</b>（黑白条纹）和一个<b>读数头</b>，直接量镜片走到了哪（S015 Renishaw ATOM DX 就是这种）。',s:{lost:0,scale:1,mode:'A',bends:0}},
+ {t:'问题：读数头要接线。如果读数头装在<b>动的滑座</b>上，线就跟着来回弯（R002 镜座上的冷却件也是这个问题），弯多了会断，还会拉扯滑座。',s:{lost:0,scale:1,mode:'A'}},
+ {t:'反过来装：<b>标尺贴在滑座上跟着走，读数头固定</b>不动。读数头照样能读，但<b>动的部分没有任何线</b> ✓。v0.4 先把这个位置留出来。',s:{lost:0,scale:1,mode:'B'}}
+],s6,draw6);
+$('f6a').onclick=()=>{s6.mode='A';s6.scale=1;s6.lost=0;};$('f6b').onclick=()=>{s6.mode='B';s6.scale=1;s6.lost=0;};
+
+window.__beforeExport=()=>{st1.go(2,true);st2.go(2,true);st3.go(2,true);st4.go(3,true);st5.go(2,true);st6.go(3,true);};
+const QS=[
+ {q:'镜片被碰了一下（侧向力），谁来扛？',o:['丝杆','导轨'],a:1,e:['丝杆只管沿轴向推，被侧向压会弯。','对。丝杆推、导轨扛。']},
+ {q:'为什么动镜和物镜要装在同一块底座上？',o:['好看','壳体变形时两片镜一起动，不会错开'],a:1,e:['不是为了好看。','对。错开 1 μm，50 m 外就偏 0.33 mm。']},
+ {q:'回差是什么时候出现的？',o:['一直走同一个方向时','换方向的时候'],a:1,e:['同一方向时缝已经被“压”在一边，没事。','对。换方向时要先走完那段缝。']},
+ {q:'直线标尺怎么装，动的部分才没有线？',o:['读数头装在滑座上','标尺装在滑座上、读数头固定'],a:1,e:['那样线会跟着来回弯。','对。']}
+];
+$('quiz').innerHTML=QS.map((q,i)=>`<div class="q" data-i="${i}"><p>Q${i+1}. ${q.q}</p><div class="row">${q.o.map((o,j)=>`<button data-j="${j}">${o}</button>`).join('')}</div><div class="fb" aria-live="polite"></div></div>`).join('');
+document.querySelectorAll('.q button').forEach(b=>b.onclick=()=>{const qd=b.closest('.q'),q=QS[+qd.dataset.i],j=+b.dataset.j;
+  qd.querySelectorAll('button').forEach(x=>x.classList.remove('right','wrong'));b.classList.add(j===q.a?'right':'wrong');
+  qd.querySelector('.fb').textContent=(j===q.a?'✓ ':'✗ ')+q.e[j];});
+</script>
