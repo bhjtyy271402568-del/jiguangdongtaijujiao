@@ -1,0 +1,279 @@
+<title>移动透镜拆开看</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@700;900&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* 布局：与第 01、02 课相同的“实验台”纵向课程；本课是加餐：把移动透镜拆开看 */
+:root{
+  --bg:#f4f6f9; --surface:#ffffff; --fg:#151a23; --muted:#5d6676; --line:#d8dee7;
+  --beam:#e5383b; --beam-soft:#f6b3b4; --glass:#2b7bb9; --glass-fill:#dcecf8;
+  --ok:#17914f; --bad:#d23c3c; --proj2:#e0701c; --card:#2c5fd6; --card-fill:#e2eafc;
+  --metal:#7b8697; --work:#d7d3cf; --work-line:#8a817a; --band:#17914f22;
+  --knobA:#7c3aed; --knobB:#0e8a8a;
+  --f-body:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --f-display:"Noto Serif SC","Songti SC",serif;
+  --f-num:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1218; --surface:#171c25; --fg:#e7ebf1; --muted:#9aa4b4; --line:#2b3240;
+  --beam:#ff5c60; --beam-soft:#7a2a2d; --glass:#6db5ee; --glass-fill:#1c3448;
+  --ok:#3fd082; --bad:#ff6b6b; --proj2:#ff9a4a; --card:#82a6ff; --card-fill:#1d2a4a;
+  --metal:#8c97a8; --work:#3a3633; --work-line:#7d746c; --band:#3fd08226;
+  --knobA:#b08cff; --knobB:#4fd1c5; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1218; --surface:#171c25; --fg:#e7ebf1; --muted:#9aa4b4; --line:#2b3240;
+  --beam:#ff5c60; --beam-soft:#7a2a2d; --glass:#6db5ee; --glass-fill:#1c3448;
+  --ok:#3fd082; --bad:#ff6b6b; --proj2:#ff9a4a; --card:#82a6ff; --card-fill:#1d2a4a;
+  --metal:#8c97a8; --work:#3a3633; --work-line:#7d746c; --band:#3fd08226;
+  --knobA:#b08cff; --knobB:#4fd1c5; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:15px;line-height:1.65}
+.wrap{max-width:900px;margin:0 auto;padding-block:28px 56px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:flex;flex-direction:column;gap:28px}
+header{display:flex;flex-direction:column;gap:6px}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--muted)}
+h1{font-family:var(--f-display);font-weight:900;font-size:clamp(28px,5vw,40px);margin:0;line-height:1.2;text-wrap:balance}
+h1 .red{color:var(--beam)}
+.lede{color:var(--muted);margin:0;max-width:60ch}
+section{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:14px;min-width:0}
+h2{font-family:var(--f-display);font-size:21px;margin:0;display:flex;gap:10px;align-items:baseline;text-wrap:balance}
+h2 .n{font-family:var(--f-num);font-size:13px;color:var(--beam)}
+.try{font-size:13px;color:var(--muted);margin:0}
+.try b{color:var(--fg);font-weight:500}
+.stage{overflow-x:auto;border-radius:10px;background:var(--bg)}
+.stage svg{display:block;width:100%;height:auto}
+.controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px 20px}
+.ctl{display:flex;flex-direction:column;gap:4px;min-width:0}
+.ctl label{font-size:13px;display:flex;justify-content:space-between;gap:8px}
+.ctl label span{font-family:var(--f-num);color:var(--muted);font-size:12px}
+input[type=range]{width:100%;accent-color:var(--beam)}
+.ctl.a input{accent-color:var(--knobA)} .ctl.b input{accent-color:var(--knobB)}
+.ctl.a label{color:var(--knobA)} .ctl.b label{color:var(--knobB)}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+button{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--surface);color:var(--fg);
+  border-radius:999px;padding:6px 14px;cursor:pointer}
+button:hover{border-color:var(--muted)}
+button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--card);outline-offset:2px}
+button[aria-pressed=true]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.readout{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.cell{border-top:2px solid var(--line);padding-top:6px;min-width:0}
+.cell .k{font-size:12px;color:var(--muted)}
+.cell .v{font-family:var(--f-num);font-size:20px;font-variant-numeric:tabular-nums}
+.chip{display:inline-block;font-size:13px;font-weight:500;padding:2px 10px;border-radius:999px}
+.chip.ok{background:var(--band);color:var(--ok)}
+.chip.bad{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+.chip.a{background:color-mix(in srgb,var(--knobA) 15%,transparent);color:var(--knobA)}
+.chip.b{background:color-mix(in srgb,var(--knobB) 15%,transparent);color:var(--knobB)}
+.note{font-size:12px;color:var(--muted);margin:0}
+.facts{display:grid;grid-template-columns:7.5em 1fr;gap:4px 14px;font-size:14px;margin:0}
+.facts dt{color:var(--muted)} .facts dd{margin:0;min-width:0}
+.cap{font-size:15px;margin:0;font-weight:500}
+.verdicts{display:flex;flex-wrap:wrap;gap:8px}
+.verdicts .chip{font-weight:400}
+.quiz{display:flex;flex-direction:column;gap:16px}
+.q p{margin:0 0 6px;font-weight:500}
+.q .fb{font-size:14px;margin-top:6px;min-height:1.6em}
+.q button.right{border-color:var(--ok);color:var(--ok)}
+.q button.wrong{border-color:var(--bad);color:var(--bad)}
+footer{font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+footer b{color:var(--fg)}
+svg text{font-family:var(--f-body)}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+.lv{font-size:12px;font-weight:700;padding:1px 8px;border-radius:999px;margin-left:6px}
+.lv.e{background:var(--band);color:var(--ok)} .lv.m{background:color-mix(in srgb,var(--proj2) 18%,transparent);color:var(--proj2)} .lv.h{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+.info{border-left:3px solid var(--card);padding:8px 12px;background:var(--card-fill);border-radius:0 8px 8px 0;min-height:64px}
+.info b{display:inline} .info p{margin:4px 0 0;font-size:14px}
+.part{cursor:pointer;transition:transform .6s ease}
+.part:hover > :first-child,.part.sel > :first-child{filter:drop-shadow(0 0 4px var(--card))}
+@media (prefers-reduced-motion: reduce){.part{transition:none}}
+</style>
+<div class="wrap">
+<header>
+  <div class="eyebrow">激光扫描系统入门 · 第 02 课 · 加餐</div>
+  <h1>移动透镜，<span class="red">拆开</span>看</h1>
+  <p class="lede">你觉得移动透镜最简单，这个判断是对的：它原理最直观，市面上能买到，也有人做过量产。不过“简单”不等于“容易做好”。这一课把它拆开，看看难点藏在哪里。</p>
+</header>
+
+<section aria-labelledby="s1">
+  <h2 id="s1"><span class="n">01</span>里面有什么</h2>
+  <p class="try"><b>试一试：</b>点任意零件，看它是做什么的、能不能直接买；点“拆开”看零件分层。</p>
+  <div class="row"><button id="bPlay" aria-pressed="true">❚❚ 暂停</button><button id="bExp" aria-pressed="false">拆开</button></div>
+  <div class="stage">
+  <svg id="svgP" data-export="02b-1_移动透镜拆开看" viewBox="0 0 820 350" role="img" aria-label="移动透镜调焦模块结构">
+    <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="var(--muted)"/></marker></defs>
+    <line x1="10" y1="100" x2="810" y2="100" stroke="var(--line)" stroke-dasharray="4 5"/>
+    <polygon id="pIn" fill="var(--beam-soft)"/><polygon id="pDiv" fill="var(--beam-soft)"/><polygon id="pConv" fill="var(--beam)" opacity=".75"/>
+    <circle id="pF" r="6" cy="100" fill="#facc15" stroke="#b45309" stroke-width="2"/>
+    <g id="wires">
+      <path d="M650,306 L624,306" stroke="var(--muted)" stroke-width="2" marker-end="url(#ar)"/>
+      <path d="M470,300 C420,300 360,250 334,206" fill="none" stroke="var(--proj2)" stroke-width="2" marker-end="url(#ar)"/>
+      <text x="392" y="290" font-size="12" fill="var(--proj2)">电流</text>
+      <path d="M318,228 C420,228 520,240 530,278" fill="none" stroke="var(--knobB)" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ar)"/>
+      <text x="420" y="222" font-size="12" fill="var(--knobB)">位置反馈</text>
+    </g>
+    <g class="part" data-k="rail" tabindex="0" data-ex="0,30"><rect x="200" y="156" width="240" height="12" rx="3" fill="var(--metal)"/><text x="192" y="166" font-size="13" text-anchor="end" fill="var(--fg)">导轨</text></g>
+    <g class="part" data-k="enc" tabindex="0" data-ex="0,64">
+      <rect x="200" y="238" width="240" height="6" fill="var(--muted)"/>
+      <g id="ticks"></g>
+      <g id="cHead"><rect x="285" y="222" width="30" height="13" rx="2" fill="var(--fg)"/></g>
+      <text x="192" y="246" font-size="13" text-anchor="end" fill="var(--fg)">光栅尺</text></g>
+    <g class="part" data-k="motor" tabindex="0" data-ex="70,30">
+      <rect x="352" y="172" width="70" height="34" rx="4" fill="var(--metal)" opacity=".7"/>
+      <g id="cCoil"><rect x="318" y="178" width="30" height="22" rx="3" fill="#c27c3a"/></g>
+      <text x="387" y="224" font-size="13" text-anchor="middle" fill="var(--fg)">音圈电机</text></g>
+    <g class="part" data-k="carriage" tabindex="0" data-ex="0,0"><g id="cCar"><rect x="268" y="66" width="64" height="86" rx="8" fill="none" stroke="var(--metal)" stroke-width="4"/></g><text id="carT" x="300" y="58" font-size="13" text-anchor="middle" fill="var(--fg)">镜座（小车）</text></g>
+    <g class="part" data-k="lens" tabindex="0" data-ex="0,0"><g id="cLens"><ellipse cx="300" cy="100" rx="6" ry="22" fill="var(--glass-fill)" stroke="var(--glass)" stroke-width="2"/></g></g>
+    <g class="part" data-k="flens" tabindex="0" data-ex="0,0"><ellipse cx="560" cy="100" rx="9" ry="42" fill="var(--glass-fill)" stroke="var(--glass)" stroke-width="2"/><text x="560" y="160" font-size="13" text-anchor="middle" fill="var(--fg)">定镜</text></g>
+    <g class="part" data-k="drv" tabindex="0" data-ex="0,0"><rect x="470" y="280" width="152" height="52" rx="8" fill="var(--surface)" stroke="var(--proj2)" stroke-width="2"/><text x="546" y="311" font-size="14" text-anchor="middle" fill="var(--fg)">伺服驱动器</text></g>
+    <g class="part" data-k="card" tabindex="0" data-ex="0,0"><rect x="652" y="280" width="152" height="52" rx="8" fill="var(--card-fill)" stroke="var(--card)" stroke-width="2"/><text x="728" y="311" font-size="14" text-anchor="middle" fill="var(--card)" font-weight="700">控制卡（项目①）</text></g>
+  </svg>
+  </div>
+  <div class="info" id="info" aria-live="polite"><b>点一下图里的零件</b><p>每个零件都标了“能直接买”还是“要自己啃”。</p></div>
+</section>
+
+<section aria-labelledby="s2">
+  <h2 id="s2"><span class="n">02</span>杠杆效应：小动作，大效果，误差也一起放大</h2>
+  <p class="try"><b>试一试：</b>拖“焦移倍率”，看镜片走一点点，焦点会走多远；再拖“镜片误差”，看焦点误差会不会超出焦深。</p>
+  <div class="stage">
+  <svg id="svgL" data-export="02b-2_杠杆放大" viewBox="0 0 820 240" role="img" aria-label="焦移倍率放大镜片移动和误差">
+    <text x="20" y="66" font-size="14" fill="var(--knobA)" font-weight="700">镜片走</text>
+    <rect x="90" y="50" height="22" rx="4" id="bLens" fill="var(--knobA)"/><text id="tLens" y="66" font-size="14" fill="var(--fg)" font-family="JetBrains Mono,monospace"></text>
+    <text x="20" y="126" font-size="14" fill="var(--beam)" font-weight="700">焦点走</text>
+    <rect x="90" y="110" height="22" rx="4" id="bFoc" fill="var(--beam)"/><text id="tFoc" y="126" font-size="14" fill="var(--fg)" font-family="JetBrains Mono,monospace"></text>
+    <line x1="20" y1="160" x2="800" y2="160" stroke="var(--line)"/>
+    <text x="20" y="186" font-size="13" fill="var(--muted)">焦点误差 vs 焦深预算（±335 μm，第 01 课算过）</text>
+    <rect x="90" y="198" width="670" height="18" rx="4" fill="var(--band)" stroke="var(--ok)"/>
+    <rect id="bErr" x="90" y="198" height="18" rx="4"/>
+    <text x="770" y="212" font-size="12" fill="var(--ok)">335 μm</text>
+  </svg>
+  </div>
+  <div class="controls">
+    <div class="ctl"><label for="lM">镜片移动<span id="lMV"></span></label><input id="lM" type="range" min="0.05" max="1" step="0.01" value="0.5"></div>
+    <div class="ctl"><label for="lR">焦移倍率（光学设计决定）<span id="lRV"></span></label><input id="lR" type="range" min="4" max="20" step="0.1" value="17.1"></div>
+    <div class="ctl"><label for="lE">镜片位置误差<span id="lEV"></span></label><input id="lE" type="range" min="0.1" max="20" step="0.1" value="0.5"></div>
+  </div>
+  <div class="readout">
+    <div class="cell"><div class="k">焦点误差</div><div class="v" id="rE"></div></div>
+    <div class="cell"><div class="k">占焦深预算</div><div class="v" id="rP"></div></div>
+    <div class="cell"><div class="k">状态</div><div class="v"><span id="rC" class="chip ok"></span></div></div>
+  </div>
+  <p class="note">17.1 倍和 0.5 μm 都来自 SCANLAB 规格书里的示例配置（R030），折算出约 8.55 μm。这只是单项误差，还没算光学、温度、动态带来的误差。</p>
+</section>
+
+<section aria-labelledby="s3">
+  <h2 id="s3"><span class="n">03</span>跟不跟得上：镜片总会慢半拍</h2>
+  <p class="try"><b>试一试：</b>把扫描速度拉高，看红线（实际焦点）怎么落后于表面；再打开“提前发指令”。</p>
+  <div class="row"><button id="tComp" aria-pressed="false">控制卡提前发 Z 指令：关</button></div>
+  <div class="stage">
+  <svg id="svgT" data-export="02b-3_跟不跟得上" viewBox="0 0 820 250" role="img" aria-label="跟随延迟造成焦点落后于表面">
+    <path id="tErr" fill="var(--bad)" opacity=".18"/>
+    <path id="tSurf" fill="none" stroke="var(--work-line)" stroke-width="4"/>
+    <path id="tFoc" fill="none" stroke="var(--beam)" stroke-width="2.5" stroke-dasharray="7 5"/>
+    <text x="40" y="30" font-size="13" fill="var(--work-line)" font-weight="700">━ 工件表面（波纹 ±2 mm、周期 40 mm，举例）</text>
+    <text x="40" y="50" font-size="13" fill="var(--beam)" font-weight="700">┅ 实际焦点</text>
+    <text x="780" y="236" font-size="13" text-anchor="end" fill="var(--muted)">扫描方向 →</text>
+  </svg>
+  </div>
+  <div class="controls">
+    <div class="ctl"><label for="tV">扫描速度<span id="tVV"></span></label><input id="tV" type="range" min="100" max="3000" step="50" value="2000"></div>
+    <div class="ctl"><label for="tD">模块跟随延迟<span id="tDV"></span></label><input id="tD" type="range" min="0" max="2" step="0.05" value="0.7"></div>
+  </div>
+  <div class="readout">
+    <div class="cell"><div class="k">Z 需要的最高速度</div><div class="v" id="tR1"></div></div>
+    <div class="cell"><div class="k">延迟造成的最大离焦</div><div class="v" id="tR2"></div></div>
+    <div class="cell"><div class="k">状态</div><div class="v"><span id="tC" class="chip ok"></span></div></div>
+  </div>
+  <p class="note">0.7 ms 是 Scanner Optics VCM F1 标的跟随误差（R038）。补偿后剩 0.05 ms 是假设值，需要实测。同样的道理在你资料的验证清单里也推导过：Z 速度 = 坡度 × 扫描速度。</p>
+</section>
+
+<section aria-labelledby="s4">
+  <h2 id="s4"><span class="n">04</span>小测</h2>
+  <div class="quiz" id="quiz"></div>
+</section>
+
+<footer>
+  <div><b>本课对项目的推进：</b></div>
+  <div>· 确认：<b>主力 Z 模块走移动透镜路线</b>。成熟、能买到，也能一步步自研。</div>
+  <div>· 分清两类工作。能直接买的：导轨、音圈电机、光栅尺。要自己啃的：光学设计（和场镜一起配）、伺服调参、标定。</div>
+  <div>· 新需求：控制卡要能<b>提前发 Z 指令</b>（延迟补偿，毫秒级，可调），写进系统规格。</div>
+  <div><b>下一课：</b>焦点与光斑。光斑能做到多小？焦深由什么决定？</div>
+</footer>
+</div>
+
+<script>
+const $=id=>document.getElementById(id);
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const P=a=>a.map(p=>p.map(v=>+v.toFixed(1)).join(',')).join(' ');
+const set=(id,pts)=>$(id).setAttribute('points',P(pts));
+
+/* ① 拆开看 */
+const INFO={
+ lens:['动镜','m','被推着前后走的那片镜片。越轻，就能动得越快。它的参数要和场镜一起设计。'],
+ carriage:['镜座（小车）','m','托着动镜的小架子。要轻，又要硬，否则一加速就会晃。'],
+ rail:['交叉滚柱导轨','e','让小车只能走直线，不晃不歪。THK、IKO 都有现成型号（S016、S017）。'],
+ motor:['音圈电机','e','线圈一通电就产生推力，没有齿轮，没有回差，响应快。Akribis 等厂家有现成型号（S018）。'],
+ enc:['光栅尺 + 读数头','e','实时测出小车在哪，精度能到亚微米。Renishaw ATOM DX 这类可以直接买（S015）。'],
+ flens:['定镜','m','固定不动，和动镜一起决定焦移倍率（看第 02 张图）。'],
+ drv:['伺服驱动器','h','不停比较“该在哪”和“实际在哪”，调整电流去补差距。让它又快又稳不抖，靠调参，这是难点。'],
+ card:['控制卡（项目①）','m','只发“焦点要到哪”，还要提前发出，把镜片慢半拍补回来（看第 03 张图）。']};
+const LV={e:'能直接买',m:'要设计',h:'难点'};
+document.querySelectorAll('.part').forEach(g=>{const show=()=>{document.querySelectorAll('.part.sel').forEach(x=>x.classList.remove('sel'));g.classList.add('sel');
+  const [t,l,p]=INFO[g.dataset.k];$('info').innerHTML=`<b>${t}</b><span class="lv ${l}">${LV[l]}</span><p>${p}</p>`;};
+  g.addEventListener('click',show);g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();show();}});});
+(function(){let s='';for(let x=200;x<=440;x+=8)s+=`<line x1="${x}" x2="${x}" y1="238" y2="${x%40===0?248:244}" stroke="var(--muted)"/>`;$('ticks').innerHTML=s;})();
+let exploded=false;
+$('bExp').onclick=()=>{exploded=!exploded;$('bExp').setAttribute('aria-pressed',exploded);$('bExp').textContent=exploded?'合上':'拆开';
+  document.querySelectorAll('.part').forEach(g=>{const [x,y]=g.dataset.ex.split(',').map(Number);g.style.transform=exploded?`translate(${x}px,${y}px)`:'';});
+  $('wires').setAttribute('opacity',exploded?0.15:1);};
+function drawP(dx){
+  ['cLens','cCar','cCoil','cHead'].forEach(id=>$(id).setAttribute('transform',`translate(${dx.toFixed(1)},0)`));
+  $('carT').setAttribute('x',300+dx);
+  const L=300+dx,h2=10+(560-L)*0.1,fx=700-dx*2;
+  set('pIn',[[14,90],[L,90],[L,110],[14,110]]);set('pDiv',[[L,90],[560,100-h2],[560,100+h2],[L,110]]);
+  set('pConv',[[560,100-h2],[560,100+h2],[fx,100]]);$('pF').setAttribute('cx',fx);}
+let playing=!reduce,t=0.6,last=0;
+function loop(ts){if(playing){if(last)t+=(ts-last)/1000;drawP(28*Math.sin(1.4*t));}last=ts;requestAnimationFrame(loop);}
+const setPlay=()=>{$('bPlay').setAttribute('aria-pressed',playing);$('bPlay').textContent=playing?'❚❚ 暂停':'▶ 播放';};
+$('bPlay').onclick=()=>{playing=!playing;setPlay();};setPlay();drawP(28*Math.sin(1.4*t));requestAnimationFrame(loop);
+
+/* ② 杠杆 */
+function drawL(){
+  const m=+$('lM').value,r=+$('lR').value,e=+$('lE').value,PX=34;
+  const fm=m*r,fe=e*r,pct=fe/335*100,ok=pct<=100;
+  $('bLens').setAttribute('width',m*PX);$('tLens').setAttribute('x',98+m*PX);$('tLens').textContent=m.toFixed(2)+' mm';
+  const w=Math.min(fm*PX,640);$('bFoc').setAttribute('width',w);$('tFoc').setAttribute('x',98+w);$('tFoc').textContent=fm.toFixed(1)+' mm'+(fm*PX>640?' →':'');
+  const be=$('bErr');be.setAttribute('width',Math.min(fe*2,670));be.setAttribute('fill',ok?'var(--ok)':'var(--bad)');
+  $('lMV').textContent=m.toFixed(2)+' mm';$('lRV').textContent='× '+r.toFixed(1);$('lEV').textContent=e.toFixed(1)+' μm';
+  $('rE').textContent=fe.toFixed(1)+' μm';$('rP').textContent=pct.toFixed(0)+'%';
+  const c=$('rC');c.className='chip '+(pct<30?'ok':ok?'a':'bad');c.textContent=pct<30?'轻松 ✓':ok?'吃掉不少预算':'超出焦深 ✗';}
+['lM','lR','lE'].forEach(id=>$(id).addEventListener('input',drawL));drawL();
+
+/* ③ 跟随延迟 */
+const A=2,LAM=40,X=x=>40+x*12.2,Y=z=>140-z*25,h=x=>A*Math.sin(2*Math.PI*x/LAM);
+let comp=false;
+$('tComp').onclick=()=>{comp=!comp;$('tComp').setAttribute('aria-pressed',comp);$('tComp').textContent='控制卡提前发 Z 指令：'+(comp?'开':'关');drawT();};
+function drawT(){
+  const v=+$('tV').value,d=+$('tD').value,te=comp?Math.min(d,0.05):d,s=v*te/1000;
+  let a='',b='',back=[];
+  for(let x=0;x<=60;x+=0.25){a+=(a?'L':'M')+X(x).toFixed(1)+','+Y(h(x)).toFixed(1);const f=h(x-s);b+=(b?'L':'M')+X(x).toFixed(1)+','+Y(f).toFixed(1);back.unshift(X(x).toFixed(1)+','+Y(f).toFixed(1));}
+  $('tSurf').setAttribute('d',a);$('tFoc').setAttribute('d',b);$('tErr').setAttribute('d',a+'L'+back.join('L')+'Z');
+  const vz=A*2*Math.PI/LAM*v,err=2*A*Math.abs(Math.sin(Math.PI*s/LAM)),ok=err<=0.335;
+  $('tVV').textContent=v+' mm/s';$('tDV').textContent=d.toFixed(2)+' ms'+(comp?'（补偿后 '+te.toFixed(2)+'）':'');
+  $('tR1').textContent=vz.toFixed(0)+' mm/s';$('tR2').textContent=err.toFixed(2)+' mm';
+  const c=$('tC');c.className='chip '+(ok?'ok':'bad');c.textContent=ok?'在焦深内 ✓':'超出焦深 ✗';}
+['tV','tD'].forEach(id=>$(id).addEventListener('input',drawT));drawT();
+
+/* 小测 */
+const QS=[
+ {q:'移动透镜最大的优点是？',o:['最快','成熟、有现成产品可以买','完全没有运动部件'],a:1,
+  e:['它不是最快的。全息、TAG 都比它快好几个数量级。','对。原理直观，商品化也最成熟。','没有运动部件的是液体透镜，移动透镜恰恰要靠电机推。']},
+ {q:'镜片误差 0.5 μm，焦移倍率 17.1，焦点误差大约是多少？',o:['0.5 μm','约 8.6 μm','171 μm'],a:1,
+  e:['误差也会被倍率放大，不会保持原样。','对。0.5 × 17.1 ≈ 8.6 μm。','算多了，是 0.5 × 17.1。']},
+ {q:'模块总是慢 0.7 ms，最好的办法是？',o:['把扫描速度降到很慢','让控制卡提前 0.7 ms 发出 Z 指令','加大激光功率'],a:1,
+  e:['也行，但白白浪费了速度。','对。延迟是可以测出来的，测出来就能提前补偿。这是控制卡（FPGA）的活。','功率和对焦无关。']}
+];
+$('quiz').innerHTML=QS.map((q,i)=>`<div class="q" data-i="${i}"><p>Q${i+1}. ${q.q}</p><div class="row">${q.o.map((o,j)=>`<button data-j="${j}">${o}</button>`).join('')}</div><div class="fb" aria-live="polite"></div></div>`).join('');
+document.querySelectorAll('.q button').forEach(b=>b.onclick=()=>{const qd=b.closest('.q'),q=QS[+qd.dataset.i],j=+b.dataset.j;
+  qd.querySelectorAll('button').forEach(x=>x.classList.remove('right','wrong'));b.classList.add(j===q.a?'right':'wrong');
+  qd.querySelector('.fb').textContent=(j===q.a?'✓ ':'✗ ')+q.e[j];});
+</script>
