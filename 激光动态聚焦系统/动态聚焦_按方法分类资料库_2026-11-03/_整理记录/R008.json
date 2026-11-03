@@ -1,0 +1,49 @@
+{
+  "url": "https://patents.google.com/patent/CN111181117A/zh",
+  "category": "09_艾思兰及相邻应用",
+  "origins": [
+    "Gemini输出.txt",
+    "苏州艾思兰_动态聚焦资料\\来源清单.csv"
+  ],
+  "context": "原文提到的专利号，补全公开文本入口；标题及相关性待与原件核对",
+  "id": "R008",
+  "files": [
+    {
+      "path": "09_艾思兰及相邻应用\\R008_CN111181117A - 一种一字激光除冰装置 _        - Google Patents.html",
+      "type": "HTML",
+      "bytes": 87142,
+      "sha256": "58638300359c25d958820c545b67181e6b455ecd181305e81111e42e0e530eae",
+      "url": "https://patents.google.com/patent/CN111181117A/zh",
+      "title": "CN111181117A - 一种一字激光除冰装置 \n        - Google Patents",
+      "text_chars": 13224
+    },
+    {
+      "path": "09_艾思兰及相邻应用\\R008_CN111181117A - 一种一字激光除冰装置 - Google Patents.pdf",
+      "type": "PDF",
+      "pages": 6,
+      "bytes": 393904,
+      "sha256": "ba9d4162f7fd537f1f5875ec18d78d3dc96d2831f5c375e2b32f23c34294f6b7",
+      "url": "https://patentimages.storage.googleapis.com/c5/08/e3/73dd912396c371/CN111181117A.pdf",
+      "text_chars": 5919,
+      "title": "",
+      "preview": "(19)中华人民共和国国家知识产权局\n(12)发明专利申请\n(10)申请公布号 \n(43)申请公布日 \n(21)申请号 202010098927.9\n(22)申请日 2020.02.18\n(71)申请人 苏州艾思兰光电有限公司\n地址 215000 江苏省苏州市工业园区金芳\n路18号东坊创智园地C栋2楼\n(72)发明人 何舟　周倩　周健　\n(74)专利代理机构 苏州衡创知识产权代理事务\n所(普通合伙) 32329\n代理人 张芹\n(51)Int.Cl.\nH02G 7/16(2006.01)\nB08B 7/00(2006.01)\n \n(54)发明名称\n一种一字激光除冰装置\n(57)摘要\n本发明公开了一种一字激光除冰装置， 包括\n支架和底座， 其特征在于， 支架的顶端固定安装\n有电动转台， 电动转台的顶端固定安装有激光出\n射头， 激光出射头的背面固定安装有控制器。 该\n种一字激光除冰装置， 通过在支架上设置激光出\n射头以及通过控制器来控制激光出射头， 使得激\n光出射头射出水平一字型光斑， 从而完成除冰的\n效果， 采用该种方式可以远程、“地对空”进行作\n业， 除冰过程无需接触， 过程安全， 取代",
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://patents.google.com/patent/CN111181117A/zh",
+      "http": 200,
+      "final_url": "https://patents.google.com/patent/CN111181117A/zh",
+      "result": "网页"
+    },
+    {
+      "url": "https://patentimages.storage.googleapis.com/c5/08/e3/73dd912396c371/CN111181117A.pdf",
+      "http": 200,
+      "final_url": "https://patentimages.storage.googleapis.com/c5/08/e3/73dd912396c371/CN111181117A.pdf",
+      "result": "有效PDF"
+    }
+  ],
+  "title": "CN111181117A - 一种一字激光除冰装置 - Google Patents",
+  "status": "PDF已下载"
+}

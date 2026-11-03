@@ -1,0 +1,89 @@
+﻿02_反射式与三振镜调焦
+
+R018 | Galvanometer driven optical system for laser dynamic focusing_2023
+状态：全文已由用户补齐 → U002
+来源：https://pubmed.ncbi.nlm.nih.gov/36607001/
+
+
+R019 | Galvanometer driven optical system for laser dynamic focusing_2023_ResearchGate
+状态：全文已由用户补齐 → U002
+来源：https://www.researchgate.net/publication/366318787_Galvanometer_driven_optical_system_for_laser_dynamic_focusing
+
+
+R020 | Extending the 3D scanning range of reflective dynamic focusing device-based laser scanners
+状态：全文已由用户补齐 → U001
+来源：https://opg.optica.org/ol/abstract.cfm?uri=ol-48-24-6496
+文件：02_反射式与三振镜调焦\R020_Extending the 3D scanning range of reflective dynamic focusing device-based laser scanners.html
+
+R021 | Optical design and analysis of a high-speed triple galvanometer laser 3D scanning system_2025
+状态：全文已由用户补齐 → U004
+来源：https://www.sciencedirect.com/science/article/pii/S0030399224010661
+
+
+R044 | CN112068309B - 一种含双抛物面镜动态聚焦模块的三维扫描系统 - Google Patents
+状态：PDF已下载
+来源：https://patents.google.com/patent/CN112068309B/zh
+文件：02_反射式与三振镜调焦\R044_CN112068309B - 一种含双抛物面镜动态聚焦模块的三维扫描系统 _        - Google Patents.html
+文件：02_反射式与三振镜调焦\R044_CN112068309B - 一种含双抛物面镜动态聚焦模块的三维扫描系统 - Google Patents.pdf
+
+R045 | CN222506659U - 一种光学动态聚焦模组及三维扫描系统 - Google Patents
+状态：PDF已下载
+来源：https://patents.google.com/patent/CN222506659U/zh
+文件：02_反射式与三振镜调焦\R045_CN222506659U - 一种光学动态聚焦模组及三维扫描系统 _        - Google Patents.html
+文件：02_反射式与三振镜调焦\R045_CN222506659U - 一种光学动态聚焦模组及三维扫描系统 - Google Patents.pdf
+
+R057 | 反射式扫描范围扩展_旧版失效入口
+状态：全文已由用户补齐 → U001
+来源：https://www.osa-opn.org/home/optics_letters/abstract.cfm?uri=ol-48-24-6496
+
+
+S002 | 三振镜光学设计_SSRN预印本_2024
+状态：全文已由用户补齐 → U004
+来源：https://papers.ssrn.com/sol3/Delivery.cfm/23961627-8231-4cfa-adf1-3947f632d984-MECA.pdf?abstractid=4733403&mirid=1
+
+
+S003 | 振镜驱动动态聚焦_2023_出版社PDF入口
+状态：全文已由用户补齐 → U002
+来源：https://opg.optica.org/oe/viewmedia.cfm?seq=0&uri=oe-31-1-673
+
+
+S005 | 反射式扫描范围扩展_2023_出版社PDF入口
+状态：全文已由用户补齐 → U001
+来源：https://opg.optica.org/ol/viewmedia.cfm?uri=ol-48-24-6496&seq=0
+
+
+S006 | 三振镜曲面加工_2025_10.1364_OE.557541
+状态：全文已由用户补齐 → U005
+来源：https://opg.optica.org/oe/abstract.cfm?uri=oe-33-6-14314
+
+
+S007 | 三振镜曲面加工_2025_出版社PDF入口
+状态：全文已由用户补齐 → U005
+来源：https://opg.optica.org/oe/viewmedia.cfm?uri=oe-33-6-14314&seq=0
+
+
+A004 | 反射式动态聚焦_ResearchGate公开PDF入口
+状态：全文已由用户补齐 → U002
+来源：https://www.researchgate.net/publication/366318787_Galvanometer_driven_optical_system_for_laser_dynamic_focusing/links/65e2e82dadf2362b636352aa/Galvanometer-driven-optical-system-for-laser-dynamic-focusing.pdf
+
+
+U001 | 2023_反射式动态聚焦_非球面校正与扫描范围扩展
+状态：PDF已下载
+来源：https://doi.org/10.1364/OL.509656
+文件：02_反射式与三振镜调焦\U001_2023_反射式动态聚焦_非球面校正与扫描范围扩展.pdf
+
+U002 | 2023_清华_振镜驱动反射式动态聚焦
+状态：PDF已下载
+来源：https://doi.org/10.1364/OE.476921
+文件：02_反射式与三振镜调焦\U002_2023_清华_振镜驱动反射式动态聚焦.pdf
+
+U004 | 2025_高速三振镜三维扫描系统_光学设计与分析
+状态：PDF已下载
+来源：https://doi.org/10.1016/j.optlastec.2024.111608
+文件：02_反射式与三振镜调焦\U004_2025_高速三振镜三维扫描系统_光学设计与分析.pdf
+
+U005 | 2025_高速三振镜三维扫描系统_曲面加工
+状态：PDF已下载
+来源：https://doi.org/10.1364/OE.557541
+文件：02_反射式与三振镜调焦\U005_2025_高速三振镜三维扫描系统_曲面加工.pdf
+

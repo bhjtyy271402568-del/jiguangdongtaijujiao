@@ -1,0 +1,37 @@
+{
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12029447/",
+  "category": "05_MEMS与全息调焦",
+  "origins": [
+    "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+    "用户粘贴_激光动态聚焦深度调研.txt"
+  ],
+  "context": "\n- 原始入口：https://pmc.ncbi.nlm.nih.gov/articles/PMC12029447/",
+  "id": "R027",
+  "files": [
+    {
+      "path": "05_MEMS与全息调焦\\R027_MEMS Varifocal Optical Elements for Focus Control - PMC.html",
+      "type": "HTML",
+      "bytes": 477629,
+      "sha256": "b180009998b98855edf7506b46062301bdca13d215d61ea3d0c20a09f4099211",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12029447/",
+      "title": "MEMS Varifocal Optical Elements for Focus Control - PMC",
+      "text_chars": 154071
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12029447/",
+      "http": 200,
+      "final_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12029447/",
+      "result": "网页"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12029447/pdf/micromachines-16-00482.pdf",
+      "http": 200,
+      "final_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12029447/pdf/micromachines-16-00482.pdf",
+      "error": "验证/错误页面或正文过短: Checking your browser - reCAPTCHA"
+    }
+  ],
+  "title": "MEMS Varifocal Optical Elements for Focus Control - PMC",
+  "status": "论文全文HTML已保存_未取得PDF"
+}

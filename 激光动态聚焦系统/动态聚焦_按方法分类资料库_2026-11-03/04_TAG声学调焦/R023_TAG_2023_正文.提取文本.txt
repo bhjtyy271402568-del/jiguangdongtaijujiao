@@ -1,0 +1,1323 @@
+Du et al. Light: Science & Applications          (2023) 12:274 Ofﬁcial journal of the CIOMP 2047-7538
+https://doi.org/10.1038/s41377-023-01303-2 www.nature.com/lsa
+ARTICLE Open Access
+Single-lens dynamicz-scanning for simultaneous in
+situ position detection and laser processing focus
+control
+Xiaohan Du1,2, Camilo Florian3,4 and Craig B. Arnold 1,4✉
+Abstract
+Existing auto-focusing methods in laser processing typically include two independent modules, one for surface
+detection and another for z-axis adjustment. The latter is mostly implemented by mechanical z stage motion, which is
+up to three orders of magnitude slower than the lateral processing speed. To alleviate this processing bottleneck, we
+developed a single-lens approach, using only one high-speed z-scanning optical element, to accomplish both in situ
+surface detection and focus control quasi-simultaneously in a dual-beam setup. The probing beam scans the surface
+along the z-axis continuously, and its re ﬂection is detected by a set of confocal optics. Based on the temporal response
+of the detected signal, we have developed and experimentally demonstrated a dynamic surface detection method at
+140– 350 kHz, with a controlled detection range, high repeatability, and minimum linearity error of 1.10%. Sequentially,
+by synchronizing at a corresponding oscillation phase of the z-scanning lens, the fabrication beam is directed to the
+probed z position for precise focus alignment. Overall, our approach provides instantaneous surface tracking by
+collecting position information and executing focal control both at 140 – 350 kHz, which signi ﬁcantly accelerates the
+axial alignment process and offers great potential for enhancing the speed of advanced manufacturing processes in
+three-dimensional space.
+Introduction
+The ability to deliver energy ef ﬁciently to designated
+locations is critical in laser processing, especially for high
+spatial resolution systems with a tightly focused beam, a
+small focal voxel, and a narrow depth of ﬁeld (DOF).
+Effective focus alignment with synchronous feeding dur-
+ing laser processing can bene ﬁt the precision and quality
+of laser micro-machining 1,2. The precise alignment of the
+workpiece’s surface towards the laser focus requires
+knowing the exact positions of both the focus ( zf ) and the
+workpiece ( zs). While focus alignment is straightforward
+for ﬂat surfaces, working with non- ﬂat surfaces is more
+challenging as it requires the alignment between zf and
+varying zs during fast lateral translations. Traditionally,
+the surface topography of the non- ﬂat surface can be
+found by ex-situ methods prior to fabrication, such as
+using interferometry or confocal microscopy. Afterward, a
+programmed xyz stage is used to follow the pre-measured
+topology. In this way, the non- ﬂat surface is always
+maintained within the range of the narrow DOF. How-
+ever, the described method is both time- and labor-
+intensive, as it involves complex operating procedures and
+coordination of multiple instruments 3. Moreover, the ex-
+situ surface characterization and the axial re-alignment
+always result in repositioning errors and extended pro-
+cessing times 4.
+The dif ﬁculty of axial re-alignment has led to the
+development of auto-focusing in laser processing of
+materials. Traditional auto-focusing techniques consist of
+two independent modules: ‘detection and movement ’, i.e.,
+ﬁrst, in situ and non-destructive detection of zs; second, z
+movement by physically moving either the sample or the
+© The Author(s) 2023
+Open AccessThis article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution andreproduction
+in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a lin kt ot h eC r e a t i v eCommons license,and indicate if
+changes were made. The images or other third party material in this article are included in the article’s Creative Commons license, unless indicatedotherwise in a credit line to the material. If
+material is not included in the article’s Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain
+permission directly from the copyright holder. To view a copy of this license, visithttp://creativecommons.org/licenses/by/4.0/.
+Correspondence: Craig B. Arnold ( cbarnold@princeton.edu)
+1Department of Mechanical and Aerospace Engineering, Princeton University,
+Princeton, NJ 08544, USA
+2Department of Systems Engineering, City University of Hong Kong, Hong
+Kong, China
+Full list of author information is available at the end of the article
+1234567890():,;1234567890():,;
+1234567890():,;
+1234567890():,;
+
+focusing lens. For the ﬁrst ‘detection’ module, various
+research and development works have successfully
+achieved in situ surface metrology in optical applications
+such as automatic microscopy 5, two-photon polymeriza-
+tion6, mechanical turning7, and laser machining, including
+direct writing 8,9, welding 10, cutting 11 and bending 12.
+While other mechanical, resistance-, and capacitance-
+based methods exist, the majority of surface detection
+methods are based on the optical detection of back-
+reﬂected light. The focus error or defocusing ( zs /C0 zf )i s
+determined from the position (triangulation) 5, intensity13,
+beam size 14,15, astigmatism 16,17 of a re ﬂected probing
+beam, or chromatic aberrations 10,11, nonlinear harmo-
+nics18 of process-generated light. Other back-re ﬂected
+detection methods also adopt differential optical
+paths19,20, interferometry 21,22, diffractive beam sam-
+plers23, spatial light modulators 24, dynamic mechanical
+scanning3,25,26, digital image correlation 12, or commercial
+displacement sensors7,9. However, most optical metrology
+with automatic focus alignment still requires the
+mechanical motion of a z stage attached to the sam-
+ple6,14,18,19,22 or the focusing lens 3,8,10,23– 25 as the second
+‘movement’ module in its feedback loop. Even with the
+advance of the fast mechanical stages and scanning galvo-
+mirrors, adjusting z position can be up to three orders of
+magnitude slower than the lateral speed of adjusting x and
+y27 due to mechanical acceleration/deceleration. Thus, the
+process of surface detection and the further re-alignment
+between zf and zs is greatly slowed down by mechanical
+movements.
+One way to retrieve the focus quickly after position
+detection is to incorporate axial varifocal optics 27, such as
+deformable mirrors 24,28, electrical tunable lenses 29 or
+liquid crystal devices 30– 32, manipulating the focal position
+and bypassing delays in acceleration/deceleration from
+any mechanical motion. However, the response rate of the
+above varifocal optics is limited to 1 kHz. An ultrafast
+varifocal lens with a response time on the order of one
+microsecond, such as a tunable acoustic gradient of
+refractive index (TAG) lens, is a strong candidate for
+ultrafast focus sensing and control. The TAG lens 33,34 is a
+liquid z-scanning lens operating at 0.1 – 1 MHz, and has
+been used in multiple imaging 35– 40 and machining 4,41– 43
+applications.
+Probing beam
+(cw, 532 nm)
+Fabrication beam
+(fs, 800 nm)
+beam (signal)
+1
+0.8
+A to G A to G
+A to G
+0.6
+0.4
+0.2
+0
+0
+A BC DEF G
+0.2 0.4
+Normalized signal
+0.6 0.8 1
+zA zB zC zD zE zF zG
+–0.3–0.5 –0.1 0.1 0.3
+t/T
+t/T
+/g39tA/T
+/g39tA/T
+0.5
+z0
+z0 + ztag
+z0 – ztag
+TAG controller
+Computer
+=(/g39t)
+Scope
+TAG
+Dynamic z-scanning:
+z(t) = z0 + ztag cos(2/g83t /T )
+OBJ
+t
+z
+z
+XY stage
+probed surface position by measuring /g39t
+triggered focal position at the matching φ
+Pinhole
+(RF in)
+PD
+(PD
+signal)
+OBJ
+2
+OBJ
+1
+TAG
+ab
+c
+(sync out: TTL at φ)
+(φ)
+zs (/g39t)
+zs (/g39t) zf (φ)
+zf (t) = z0 + ztagcos(2/g83t/T)
+zf (φ)
+Fig. 1 Conﬁguration and principles of the dynamic focusing system. a Schematic diagram of the dual-beam setup, with the probing beam path
+in green and the fabrication beam path in red. The inset plots the oscillating focal position in z due to the oscillating optical power of the TAG lens.
+The continuous z-scanning of the probing beam detects the surface position zs by measuring Δt from the photodiode (PD) signal, which
+corresponds to a matching phase ϕ of the fabrication beam such that zsðΔtÞ¼ zf ðϕÞ. The fabrication beam is triggered at zf ðϕÞ for precise
+alignment between the surface and the focus. b Plot of one period of focus scanning zf ðtÞ and the surface position zs at multiple locations (A to G)
+within the scanning range. c Normalized photodiode signal for locations A to G, showing double peaks. The peak-to-peak time interval is acquired
+as Δt
+Du et al. Light: Science & Applications          (2023) 12:274 Page 2 of 13
+
+Leveraging the ultrafast variable focus of the TAG Lens, we
+rethink the ‘detection and movement ’ strategy and use a
+single lens as an all-in-one tool to integrate both ‘detection’
+and ‘movement’ simultaneously. Weﬁrst propose a dynamic
+surface position searching approach based on continuous z
+-scanning of the TAG lens, in which we relate the temporal
+response of the probing beam’sr eﬂected intensity to surface
+location. Then we effectively direct the fabrication beam to
+the designated positions by triggering the fabrication laser at
+the corresponding phase of the TAG lens based on the
+probed surface position without any mechanical movement
+in z. Theoretically, the time between surface detection, focus
+retrieval, andﬁring of the fabrication laser pulse is within two
+periods of z-scanning at 140– 350 kHz, which surpasses any
+mechanically based re-focusing system.
+Results
+Setup and principles
+A dual laser beam setup is adopted to implement both
+position detection and focus control by a z-scanning lens.
+Figure 1a shows the schematic of the designed optical
+system, consisting of two beam paths, one for probing
+marked in green, and the other for fabrication marked in
+red. Unlike a conventional laser processing setup with a
+ﬁxed focus at z0, the focal position of the probing beam zf
+continuously oscillates as a function of time t with the
+inclusion of the TAG lens, as plotted in the inset. The
+reﬂected beam passing through the pinhole is detected by
+a biased photodiode (PD). The proposed surface detection
+method is based upon the temporal response of the
+detected re ﬂected light intensity through confocal optics.
+The varifocal TAG lens shapes the probing beam to a
+periodic scanning focal spot in z, as described by,
+zf tðÞ¼ z0 þ ztag cosð2πf tag tÞ¼ z0 þ ztag cos 2πt
+T
+/C18/C19
+ð1Þ
+where z0 and ztag are the average and the amplitude of the
+focus oscillation. f tag and T are the scanning frequency
+and the period, which vary around 141 kHz and 7 µs for
+most experiments in this study. The maximum frequency
+goes up to 350.8 kHz. For any surface located at zs within
+the oscillation range of zf ðtÞ, it theoretically aligns with
+scanning laser focus twice per period at t1 and t2 such that,
+zf t1ðÞ ¼ zf t2ðÞ ¼ zs
+t1;2 ¼ ± T
+2π cos/C0 1 zs /C0 z0
+ztag
+/C16/C17 ð2Þ
+The alignment betweenzs and zf corresponds to a peak in
+the detected PD signal. Therefore, two peaks in the detected
+s i g n a lw o u l db eo b s e r v e da tb o t ht1 and t2 per scanning
+period. Figure 1b plots one period of z-scanning and several
+surfaces located at different locations (A to G) within the
+scanning range. Figure 1c plots the corresponding nor-
+malized PD signals for locations A to G from an experiment
+numbered as A1. Each surface intersects twice with zf ðtÞ.
+For example, the recognized double peaks for location A
+(red) correspond to the condition of zf tðÞ¼ zA.T h e o r e t i -
+cally, the photodiode signal can also be calculated by a
+simpliﬁed ray transfer matrix model, as detailed in Fig. s1 in
+the supplementary information. We denote the peak-to-
+peak time interval Δt a st h ed i f f e r e n c eb e t w e e nt1 and t2.
+Δt ¼ t1 /C0 t2 ¼ T
+π cos/C0 1 zs /C0 z0
+ztag
+/C18/C19
+ð3Þ
+Therefore, a one-to-one mapping can be established
+between the time interval Δt and the surface position zs,
+as
+zsðΔtÞ¼ z0 þ ztag cos π Δt
+T
+/C18/C19
+ð4Þ
+Equation 4 is the key foundation of our detection
+method because it describes a linear relation between the
+surface position zs and measured cos ðπΔt=T Þ from the
+PD signal, which can be exploited for building a linear
+position sensor. The slope ztag and intercept z0 are both
+determined by the parameters of the varifocal TAG lens.
+Based on the mechanics of the TAG lens, the z-scanning
+amplitude ztag is linearly proportional to the driving vol-
+tage V tag of the radio frequency (RF) signal from the TAG
+controller34,44, and the z-scanning period T is determined
+by the driving frequency f tag of the RF signal.
+The measured surface position is then converted to a
+matching phase ϕ of the TAG lens such that zsðΔtÞ¼
+zf ðϕÞ and then communicated to the fabrication compo-
+nent of the optical system, as indicated in red in Fig. 1a.
+The TAG controller sends a synchronized transistor-
+transistor logic (TTL) signal at the matching phase ϕ to
+trigger the fabrication laser. Due to the dispersion of the
+TAG lens media and the difference in optical path, the
+two constants z0 and ztag generally have different values
+for the two laser beams, as denoted by z0;1, ztag;1, z0;2 and
+ztag;2 for the probing beam and the fabrication beam. The
+four constants need to be calibrated a priori. Equaling zs
+and zf requires the matching phase ϕ satisfying the fol-
+lowing condition,
+cosðϕÞ¼ ztag;1
+ztag;2
+cos π Δt
+T
+/C18/C19
+þ z0;1 /C0 z0;2
+ztag;2
+ð5Þ
+Equation 5 is a transfer function relating the triggering
+phase ϕ to the measured Δt from the photodiode signal.
+As a result, the synchronized fabrication beam can pre-
+cisely modify the probed surface without physically
+Du et al. Light: Science & Applications          (2023) 12:274 Page 3 of 13
+
+moving neither the positioning stage nor the optics. In a
+simpliﬁed case where the two beams have the same beam
+path and similar wavelength, the two sets of constants are
+approximately the same, therefore we can ﬁnd,
+ϕ ¼ π Δt
+T ð6Þ
+In situ position detection
+Characterization of the in situ position detection method
+Multiple calibration experiments of the probing part of
+the setup are conducted to characterize the linear rela-
+tionship as described in Eq. 4. We take the inverse of the
+laser propagation direction as the positive z direction. A
+silicon wafer is positioned on a mechanical z stage, which
+moves up towards the beam by a step size of 0.5 µm with
+OBJ1 ¼ 40 ´ (NA ¼ 0.65). Details of all calibration
+experiments are included in Table s1 in the supplemen-
+tary information. In Fig. 2a, we plot the measured
+cosðπΔt=T Þ and the recorded z stage position zs of three
+calibration experiments with different scanning ampli-
+tudes ( ztag ). The total detection range, 2 ztag , is linearly
+proportional to the input voltage of the TAG lens V tag .
+Red is for the calibration experiment A7 with V tag ¼ 9V ,
+blue is for the calibration experiment A1 with V tag ¼
+15 V, and green is for the calibration experiment A9 with
+V tag ¼ 18 V. Based on Eq. 4, a linear ﬁtd e ﬁnes the cali-
+brated surface position z0
+s, with the ﬁtted intercept as z0
+and the slope as ztag . The ﬁtted scanning range for driving
+voltage of 9 V, 15 V, and 18 V is 7.40 µm, 11.98 µm, and
+13.47 µm, respectively. Figure 2b displays two periods of
+the normalized signal for three different z locations (z1, z2
+and z3) with different driving voltages.
+To evaluate the accuracy and repeatability of the
+developed method under different alignment and driving
+conditions, we calculate the error between the calibrated
+position z0
+s and the real position zs by δz ¼ z0
+s /C0 zs.I n
+Fig. 2c, we plot the distribution of δz from the six repeated
+calibration experiments (A1-A6) with the same driving
+voltage V tag ¼ 15 V) in a box and whisker chart. The
+accuracy of surface sensing is the maximum of errors (
+max δzjj ). We de ﬁne the linearity error ϵ as the ratio of
+accuracy to the total z-scanning range, ϵ ¼ max δzjj
+2ztag
+.T h e
+linearity error ranges from 1.24% to 1.95% in Table s1.
+Variations in the tabulated z0, ztag , accuracy, and linearity
+error are possibly caused by alignment error and ﬂuctua-
+tion of TAG lens power under liquid resonance 34. Based
+on experiments A1-A6, the average detection range (2 ztag )
+with V tag ¼ 15 V is 23.50 µm, with an average accuracy of
+0.35 µm and an average linearity error of 1.49%.
+1
+ab
+c
+1
+0.8
+Normalized signal
+0.6
+0.6
+0.4
+0.2
+0
+–0.2
+δz (/g80m)
+coscos(/g83t t /g18T)
+–0.4
+–0.6
+A1 A2 A3 A4 A5 A6
+maximum
+minimum
+mean
+data +
+outlier
+median
+3rd quartile
+1st quartile
+0.4
+0.2
+0
+0
+Vtag = 9V Vtag = 15V Vtag = 18V
+1
+t/T t/T t/T
+2 0
+z1 z2 z3
+12 012
+z1 z2 z3
+R2 = 0.9994
+R2 = 0.9994
+R2 = 0.9982
+0.5
+0
+–0.5
+–1
+2.434 2.441 2.448
+zs (mm)
+Vtag = 9V (calibration A7):
+Vtag = 15V (calibration A1):
+Vtag = 18V (calibration A9):
+2.455
+fit: z0 = 2.4482 mm, ztag = 7.40 /g80m
+fit: z0 = 2.4482 mm, ztag = 11.98 /g80m
+fit: z0 = 2.4481 mm, ztag = 13.47 /g80m
+measured cos(/g83Δt/T )
+measured cos(/g83Δt/T )
+measured cos(/g83Δt/T )
+2.462
+Δ
+Fig. 2 Plot of the measured cos ðπΔt=TÞ versus the real surface position zs for OBJ1 ¼ 40 ´ . A linear ﬁtd eﬁnes the calibrated surface position
+z′
+s, with the ﬁtted intercept as z0 and the slope as ztag. Red is for the calibration experiment A7 with Vtag ¼ 9 V, blue is for the calibration experiment
+A1 with Vtag ¼ 15 V, and green is for the calibration experiment A9 with Vtag ¼ 18 V. R2 of the linear regression is listed. b Normalized signal of the
+photodiode at location z1, z2, and z3 for the three calibration experiments with different driving voltages. c Box and whisker chart of the errors
+δz ¼ z′
+s /C0 zs for calibration experiments with OBJ1 ¼ 40 ´ and Vtag ¼ 15 V (A1-A6)
+Du et al. Light: Science & Applications          (2023) 12:274 Page 4 of 13
+
+The z-scanning range of the focus depends on the
+optical power of both the TAG lens and the objective
+lens. It can be approximated as ztag /C25 f 2
+0 opjj (from
+Eq. (4) of ref. 44), where f 0 is the focal length of the
+objective lens, and opjj represents the amplitude of the
+oscillating optical power of the TAG lens. As opjj is
+linearly related to the driving voltage V tag , the scanning
+range ztag is linearly proportional to V tag and f 2
+0.B y
+increasing f 0 and utilizing a lower magni ﬁcation lens
+(OBJ1), our method can be adapted for a larger detec-
+tion range. Table s2 in the supplementary information
+lists the conducted ten calibration experiments with
+OBJ1 ¼ 4 ´ (NA ¼ 0.15), where we perform similar
+analyses as in Table s1. As OBJ1 is changed from 40 ´ to
+4 ´ , the average detection range (2 ztag )w i t hV tag ¼ 15 V
+is extended from 23.5 µm to 1.39 mm, with an average
+accuracy of 0.026 mm and an average linearity error of
+1.87%. In addition, in calibration experiment B10 in
+Table s2, we operate the TAG lens at a relatively higher
+frequency of 350.8 kHz. By changing the driving con-
+ditions (frequency or amplitude) of the TAG lens and
+the optical power of the pairing objective lens, we
+demonstrate that the TAG lens scanning approach is
+adaptable to measurements of various length scales
+while keeping the same level of percent error.
+Finally, we compare the TAG lens scanning method
+with other dynamic scanni ng methods for surface
+detection, such as mechanic al oscillation of a pinhole
+or a lens, or resonance of a microelectromechanical
+systems (MEMS) deformable mirror. Table 1 lists the
+response rate, detection range, accuracy (i.e., max-
+imum of errors), and linearity error of some reported
+studies. The results for the TAG lens scanning method
+in this work are highlighted in bold. Representative
+calibration experiments A6 and B6 are given in Table 1,
+with additional data given in Tables s1 and s2 for
+V tag ¼ 15 V. The dynamic z-scanning achieved by the
+T A Gl e n si sag r e a ts u b s t i t u t ef o ra n ym e c h a n i c a l
+oscillation of either a pinhole, a lens, or a deformable
+mirror, because it substantial ly accelerates the surface
+detection process with a m uch higher response rate
+while maintaining the percen t error, and is adjustable
+in its detection range.
+Proﬁle measurement of a step surface
+Experimentally, we demonstrate a pro ﬁle measurement
+of a non- ﬂat, step surface, constructed by adhering two Si
+wafers of 500 µm thickness with a thin layer of optical
+glue with unknown thickness. The sample is positioned
+randomly at z ¼ 2.2 mm for the low surface. OBJ1 is
+selected to be 4 ´ to cover the entire step height in the
+detection range of zf ðtÞ. The sample is positioned on a
+stage and moves only in the x direction from 0 to 10 mm.
+Three sets of experiments are conducted to measure the
+line proﬁle of the sample under two calibration conditions
+(B1 and B2, listed in Table s2). Using the ﬁtted parameters
+from the calibration experiments in Fig. 3a, the measured
+line pro ﬁle by the TAG z-scanning is compared with an
+ex-situ reference measurement taken by a laser confocal
+microscope (Olympus Lext OLS4000), as shown in
+Fig. 3b. After zeroing the z location of the bottom surface,
+the measured pro ﬁles by TAG scanning and confocal
+microscope are consistent, as shown in Fig. 3c. Taking the
+measured zs from x ¼ 5.5 mm to x ¼ 10 mm, the average
+height of step h is 0.572 mm with a standard deviation of
+9.57 µm by the TAG lens scanning method (experiment i),
+versus 0.564 mm with a standard deviation of 9.71 µm by
+the confocal microscopy. Figure 3d plots the normalized
+photodiode signal for experiment i at the low surface ( x ¼
+0 mm) and the high surface ( x ¼ 10 mm). The time
+interval Δt is measured as 0.64 T and 0.4 T , respectively.
+Synchronous focus control
+In principle, the liquid resonance of the TAG lens
+continuously oscillates its lens power, resulting in a con-
+tinuous scanning focal position zf tðÞ . Alternatively, the
+focal position can be selected discretely by synchronizing
+a pulsed laser with a single phase ϕ of the TAG lens, as
+recently reported in 44.
+zf ðϕÞ¼ z0 þ ztag cosðϕÞð 7Þ
+Table 1 Comparison of optical surface detection methods by dynamic z-scanning
+Working principle Response rate (Hz) Detection range Accuracy ( max δzjj ) Linearity error ϵ (%)
+TAG lens scanning, with 40 (this work, from A6) 140k 24.26 µm 0.30 µm 1.24%
+TAG lens scanning, with 4 (this work, from B6) 140k 1.33 mm 0.015 mm 1.10%
+Mechanical oscillation of a pinhole 25 100 20 µm 0.5 µm 2.50%
+Mechanical oscillationof a lens (from Fig. 2b of ref. 26) 50 3 mm 0.25 mm 8.33%
+Resonance of a MEMS deformable mirror 28 7k 310 µm 4.4 µm 1.20%
+Du et al. Light: Science & Applications          (2023) 12:274 Page 5 of 13
+
+The pulsed laser is triggered by a TTL pulse elevated at
+the selected single phase ϕ. The width of the triggering
+pulse is denoted by δt . δt is critical in determining both
+the repetition rate of synchronized pulses and the accu-
+racy of focus control. The repetition rate of the syn-
+chronized pulse f sync can be calculated by
+f sync ¼ f laser /C1 f tag /C1 δt , where f laser is the laser ’s internal
+repetition rate. In this work, δt ¼ 1 µs, f laser ¼ kHz,
+f tag ¼ 140.1 kHz, and f sync ¼ 140.1 Hz. The frequency
+reduction from 1 kHz to 140.1 Hz indicates that only 14%
+of the internal pulses are triggered in the synchronization
+mode. Hence, the synchronization method is more pow-
+erful when the fabrication laser has a compatible or higher
+response rate than the TAG lens.
+We deﬁne the focus control accuracy as the axial width
+of the focal position when triggered at a speci ﬁc phase ϕ.
+This accuracy can be estimated by multiplying the axial
+scanning speed with the width δt of the triggering pulse 44.
+The axial scanning speed reaches its minimum at 0° and
+180°, while it is maximized at 90°. Consequently, the axial
+width is also maximized at 90°. To illustrate this, we
+characterize zf ðϕÞ triggered at various phases ϕ from 0°to
+180° (Fig. s4a, supplementary information). By performing
+a least-square ﬁt based on Eq. 7, we obtain ztag ¼/C0
+0.53 mm and z0 ¼ f 0/C0 0.27 mm, with f 0 being the focal
+length of the objective lens. To account for uncertainty
+from the triggering pulse width δt , we plot an envelope of
+zf ðϕÞ in Fig. s4a, adding a ± πf tag δt term to its phase. The
+accuracy of synchronous focus control is then de ﬁned as
+the axial width of this envelope at 90°. For ztag ¼/C0
+0.53 mm, the maximum axial width at ϕ ¼ 90° is ±
+0.22 mm, considering δt ¼ 1 µs.
+Based on the measured zs by the probing beam, a
+matching phase ϕ which satis ﬁes zs ¼ zf ðϕÞ can be
+calculated to trigger the fabrication beam, as described in
+Eq. 5. In this way, the fabrication beam can effectively
+modify the surface based on the in situ measurement from
+the probing beam while neither the positioning stage nor
+any optical elements are physically moved in z in a single
+lateral scanning.
+Comparison of three focusing strategies
+We showcase the effectiveness of synchronous focus
+control for processing non- ﬂat surfaces by comparing
+various focusing strategies. These strategies involve only
+one lateral scanning in the x direction, with no motion in
+the z direction. For example, Fig. 4 plots the surface
+position zsðxÞ of a step surface (dashed red line, with its
+measured cos(/g83Δt/T )
+measured cos(/g83Δt/T )
+fit: z0 = 2.187 mm, ztag = 0.719 mm
+fit: z0 = 2.173 mm, ztag = 0.730 mm
+calibration B1, Vtag = 15 V:
+calibration B2, Vtag = 15 V:
+1
+b
+c
+d
+a
+0.5
+0.6
+0.5
+0.4
+0.3
+0.2
+0.1
+0
+600
+480
+360
+240
+120
+z (/g80m)
+0
+0
+3D microscopy
+3D microscopy of a step surface
+experiment ii w/ B1
+experiment i at x = 0 mm experiment i at x = 10 mm
+experiment iii w/ B2
+experiment i w/ B1
+2 4 6
+x (mm)
+81 0
+–0.1
+1.50 1.85 2.20 2.55 2.90
+–0.5
+–1
+0
+zs (mm)
+zs (mm)Normalized signal
+1
+0.8
+0.64 0.64 0.4 0.4
+0.6
+0.4
+0.2
+0
+1
+0.8
+0.6
+0.4
+0.2
+0
+01
+t/T
+2 01
+t/T
+2
+coscos(/g83t t /g18T)
+Δ
+Fig. 3 Pro ﬁle measurement of a step surface. a Calibrated surface position z′
+s with the ﬁtted intercept ( z0) and slope ( ztag) for OBJ1 ¼ 4 ´ and
+Vtag ¼ 15 V. Red for the calibration experiment B1, and blue for the calibration experiment B2. b 3D microscopy of the step surface obtained from a
+laser confocal microscope. c Measured proﬁle of the step surface with three repeated experiments (i and ii with calibration B1, iii with calibration B2).
+The dash line plots a reference pro ﬁle taken by the 3D microscope. d Normalized photodiode signal for experiment i at the low surface ( x ¼ 0 mm)
+and the high surface ( x ¼ 10 mm). The time interval Δt is measured as 0.64 T and 0.4 T , respectively
+Du et al. Light: Science & Applications          (2023) 12:274 Page 6 of 13
+
+low and high surfaces located at zs1 and zs2) and the focal
+position zf ðxÞ of the laser pulses (solid black line) for
+three focusing strategies, namely: (i) ﬁxed focus without
+the TAG lens, (ii) continuous z-scanning focus without
+synchronization between the laser and the TAG lens, and
+(iii) synchronized pulses focusing at detected surface z
+positions. We aim to evaluate the relative amount of
+focused and defocused pulses out of the same number of
+total pulses deposited on the step surface. In this context,
+the term ‘defocused’ refers to cases when the pulse is
+focused either above or below the target surface, instead
+of on the target surface as intended. Each subplot in Fig. 4
+shows 16 deposited pulses represented by markers, with
+defocused pulses shown as yellow circles, and focused
+pulses at zs1 and zs2 shown as blue triangles and green
+diamonds, respectively.
+We assume that surface modi ﬁcation can only occur if it
+is located in the close vicinity of the focus. Using the ﬁrst
+strategy, where the laser focus remains ﬁxed and is aligned
+with either zs1 or zs2,o n l yo n es u r f a c ec a nb em o d iﬁed.
+Alternatively, if we adopt a continuous z-scanning focus,
+both surfaces can be modi ﬁed as long as all surfaces are
+positioned within the scanning range of zf . However, the
+absence of surface detection and pulse synchronization
+results in many continuous scanning pulses not focusing on
+the surface, thereby becoming ineffective. For example, in
+Fig. 4 (ii), we plot an oscillating focus pattern with eight
+pulses per period, and set z0 þ ztag ¼ zs1 and z0 ¼ zs2.T h e
+periodicity of the pulses is created by sampling the con-
+tinuous z-scanning focus operating at a frequency of f tag
+with a laser pulsing at an internal frequency of f laser.T h e
+mismatch between the two frequencies would generate an
+oscillating focus pattern. Only the one pulse at zf ð0/C14 Þ and
+the two pulses at zf ð90/C14 Þ and zf ð270/C14 Þ are focused per
+period, while the remaining pulses are defocused and thus
+do not modify the sample. In this work, we propose the
+third strategy of using synchronized pulses that are only
+executed when the scanning zf aligns with the detected
+surface zs.A ss h o w ni nF i g .4 (iii), both surfaces are mod-
+iﬁed within one lateral translation, and more importantly,
+all the deposit pulses are effectively focused. Consequently,
+synchronous focus control proves to be more ef ﬁcient in
+delivering entirely focused pulses to non- ﬂat surfaces.
+Laser marking on a step surface
+We apply the three focusing strategies discussed earlier
+and compare their processing o utputs on a Si step surface.
+Figure 5a demonstrates the laser marking process on a
+sample with a step height h ¼ 0.572 mm. We denote the
+low and high surfaces as Surface 1 and 2, with their z
+positions at zs1 and zs2 ¼ zs1 þ h, respectively. In all
+experiments, the laser energy is 5 µJ /pulse. All marking
+lines are processed with a unif orm linear translation speed
+of Vx in the x direction. Similar to the analysis in Fig. 4,w e
+compare the focusing strategies by evaluating the number
+of focused and defocused pulses on both surfaces, repre-
+sented by orange and yellow triangles in schematics. Figure
+5b provides zoom-in views of the selective marking lines A-
+D, displaying the percentages of focused pulses relative to
+all the deposited pulses on Surface 1 and 2. The scale bars in
+Fig. 5a and b are 100 µm and 30 µm, respectively.
+In Fig. 5a (i), we draw 20 marking lines across the step.
+The laser focus is ﬁxed at zf ¼ f 0 when in absence of the
+TAG lens. The fabrication laser is pulsed at f laser ¼ 1 kHz,
+and Vx is set at 0.4 mm/s. The pulse separation is dx ¼
+0.4 µm between adjacent pulses along x and dy ¼ 0.1 mm
+between adjacent lines along y. Between two adjacent
+lines, the sample also moves upward in the positive z
+direction by dz ¼ 0.1 mm using a motorized z stage. Only
+three of the 20 marking lines modify each surface when
+the surface is located in the close vicinity of f 0. Line A in
+Fig. 5b corresponds to the case when all pulses (100%) are
+focused on Surface 2 but none (0%) on Surface 1, where
+zs2 ¼ f 0 and zs1 ¼ f 0 /C0 h. Similarly, Line B only modi ﬁes
+Surface 1 (100%) but not Surface 2 (0%), where zs1 ¼ f 0
+Fixed focus at zs2
+Continuous z-scanning focus
+z
+Synchronized pulses at detected z
+Fixed focus at zs1
+(i)
+(ii)
+(iii)
+zs2
+zs1
+x
+step surface zs(x)
+laser focus zf (x)
+defocused pulses
+focused pulses at zs1
+focused pulses at zs2
+zs2
+zs1
+zs2
+zs1
+zs2
+zs1
+Fig. 4 Example of various focusing strategies for laser marking
+on a step surface with only one lateral translation in x and no
+motion in z. Each subplot shows the same number ( ¼16) of pulses.
+The step surface pro ﬁle zsðxÞ is in a dashed red line with its low and
+high surface located at zs1 and zs2, and the solid black line plots the
+laser focal position as a function of x. Deposited pulses are
+represented by markers, with defocused pulses in yellow circles,
+focused pulses at zs1 and zs2 in blue triangles and green diamonds,
+respectively
+Du et al. Light: Science & Applications          (2023) 12:274 Page 7 of 13
+
+and zs2 ¼ f 0 þ h. The separated z locations of the marking
+lines on Surface 1 and 2 suggest that a z-axis adjustment
+of the sample is needed to realign towards the ﬁxed focus
+when translating from Surface 1 to 2, as the Rayleigh
+range of the beam ( < 200 µm) is smaller than the step
+height. This experiment represents conventional laser
+processing without axial detection or focus control,
+echoing the challenges of re-alignment as discussed in the
+introduction of this article.
+Figure 5a (ii) and (iii) demonstrate two marking lines with
+continuous z-scanning focus (Line C) and synchronized
+focus control (Line D). Surface 1 is placed at zs1 ¼ z0 þ ztag
+for both Line C and D to replicate the scenario in Fig. 4.I n
+synchronous focus control, the laser focal positions are
+designed to align with the surface z positions, ensuring that
+zf ðϕ1Þ¼ zs1 and zf ðϕ2Þ¼ zs2 ¼ zf ðϕ1Þþ h.H e r e ,t h e
+position of Surface 1, zs1 ¼ z0 þ ztag, corresponds to a
+triggering phase ϕ1 ¼ 0/C14 .U s i n gztag ¼/C0 0.53 mm and h ¼
+0.572 mm, the calculated triggering phase for Surface 2 is
+ϕ2 ¼ cos/C0 1ðztag cos ϕ1ðÞ þ h
+ztag
+Þ¼ 94/C14 /C25 90/C14 .T h e r e f o r e ,f o rL i n e
+D, when the laser is translated from Surface 1 and 2, we
+switch the triggering phase of the fabrication beam from 0°
+to 90°. It can be observed that both strategies (ii) and (iii)
+can mark both Surface 1 and 2 without any mechanical
+motion in z and within only one lateral translation.
+To facilitate a clear comparison between continuous z
+-scanning and synchronous focus control, we have set the
+Focused pulse
+Defocused pulse
+Moving
+up by dz
+between
+lines
+Line
+A
+Line
+B
+Line
+C
+Line
+D
+Line D:
+Line C:
+Line B:
+Line A:Surface 2
+h
+Surface 1
+a
+Top view
+zs2 = zs1 + h
+Surface 1 Surface 2
+(ii) Continuous z-scanning focus:
+(iii) Synchronized pulses at detected zs:
+(i) Fixed focus at fo:
+φ1 = 0/g113 φ2 = 90/g113
+Surface 2, 67 % focused pulses
+Surface 1, 66 % focused pulses
+Surface 2, 20 % focused pulses
+Surface 1, 10 % focused pulses
+Surface 2, 0 % focused pulses
+Surface 1, 100 % focused pulses
+Surface 1, 0 % focused pulses
+Surface 2, 100 % focused pulses
+flaser = 1000 Hz, Vx = 3 mm/s, dx = 3 /g80m
+fsync = 140.1 Hz, Vx = 0.4 mm/s, dx = 3 /g80m
+flaser = 1000 Hz, Vx = 0.4 mm/s, dx = 0.4 /g80m
+flaser = 1000 Hz, Vx = 0.4 mm/s, dx = 0.4 /g80m
+Zoom-in views of Line A-D:
+b
+x
+y
+z
+zs2
+zs1
+dzdy
+dx
+fo
+fo – h fo
+fo + h
+zs2zs1
+zs1 = fo – h
+zs2 = fo
+zs2 = fo + h
+zs1 = fo
+zs1 = zf (0/g113)
+zs2 = zf (90/g113 || 270/g113)
+zs1 = zf (0/g113)
+zs2 = zf (90/g113)
+zf (t)
+Fig. 5 Comparison of ﬁxed focus, continuous z-scanning focus, and synchronous focus. a Laser marking on a step surface with various
+focusing strategies. b Zoom-in views of the selective marking lines A-D show the percentages of focused pulses over all the deposited pulses on
+Surface 1 and 2. Focused and defocused pulses are represented by orange and yellow triangles in schematics. The scale bars in a and b are 100 µm
+and 30 µm, respectively
+Du et al. Light: Science & Applications          (2023) 12:274 Page 8 of 13
+
+pulse separation dx to 3 µm for both Line C and D. Note
+that this particular value of dx was chosen solely for the
+purpose of ensuring an equal number of pulses are phy-
+sically deposited on each line. The linear translation speed
+Vx is set to 3 mm/s and 0.4 mm/s due to the difference in
+repetition rate at f laser and f sync for Line C and D. Con-
+sidering the image width of 320 µm along the x direction
+in Fig. 5b, a total of 320/3 /C25 106 pulses are deposited on
+each surface. The number of ablated spots is measured by
+taking central line pro ﬁles along x. For Line C, only 10%
+(11 pulses) and 20% (21 pulses) of the total 106 pulses are
+well focused on Surface 1 and 2. As explained in Fig. 4, the
+ratio of focused pulses is attributable to the periodicity of
+the generated focus pattern. Since the z-scanning fre-
+quency is f tag ¼ 140.1 kHz and the laser frequency is
+f laser ¼ 1 kHz, the frequency ratio f tag =f laser creates an
+oscillating focus pattern with ten pulses per period 42.
+Within each ten-pulse period, only the one pulse at zf ð0/C14 Þ
+and the two pulses at zf ð90/C14 Þ or zf ð270/C14 Þ are focused on
+Surface 1 and 2. As a comparison, for Line D, 66% (70
+pulses) and 67% (72 pulses) of the total deposited pulses
+are identi ﬁed on Surface 1 and 2, respectively. The
+missing pulses ( /C25 30%) are solely due to the uncertainty
+of the triggering signal. Several reference experiments
+depicted in Fig. s5 of the supplementary information are
+conducted to count the number of triggered pulses by the
+TAG lens controller in the absence of the TAG lens in the
+beam path, reporting a similar missing pulse percentage of
+30%. Ideally, all synchronized pulses can be focused onto
+the measured surface without any mechanical adjustment
+in z if a more accurate triggering signal is applied.
+The comparison of the ratio of focused pulses above
+suggests that surface detection and focus control by syn-
+chronization provide more precise control by reducing the
+defocused pulses in the continuous z-scanning. This leads
+to two major advantages. First, the processing speed can
+greatly increase by wisely ﬁring pulses only at the probed
+surface position. This aspect is particularly relevant for a
+pulsed laser with a higher repetition rate than the scanning
+frequency of the TAG lens. Second, the lateral resolution
+of laser modi ﬁcation is conserved in the synchronized
+method but may vary in the continuous z-scanning
+method. In Fig. 5, low pulse energy is adopted, so all
+defocused pulses are below the ablation threshold. In
+reality, however, the defocused pulse energy can be higher
+than the ablation threshold, leading to ablation with larger
+areas and shallower depth than focused pulses. Such an
+enlarged ablation area is detrimental to lateral resolu-
+tion41. Conversely, the enlarged ablation area in con-
+tinuous z-scanning bene ﬁts certain applications thriving
+for removing more material. For instance, continuous z
+-scanning has been adopted in laser micro-machining for
+milling more materials4,42 and drilling deeper holes 45 on a
+ﬂat subtract compared to ﬁxed-focus machining.
+Simultaneous position detection and focus control for
+auto-focusing
+Furthermore, we explore the potential of this technique
+for auto-focusing and focus control, which requires the
+simultaneous implementation of in situ position detection
+and laser refocusing during lateral translation. This auto-
+focusing process necessitates coordination between mul-
+tiple hardware and software components. To demonstrate
+this concept, we ﬁrst implement real-time detection and
+subsequently integrate the function of synchronous focus
+control for auto-focusing.
+Supplementary videos (V1 and V2) provide real-time
+demonstrations of the automatic position detection cap-
+abilities of our setup. In the ﬁrst video (V1), we showcase
+the detection of periodic back-and-forth movements of
+the z stage, which is programmed to move at a speed of
+0.02 mm/s between z ¼ 0 and z ¼ 0.2 mm. We perform
+real-time measurements of the moving z stage with two
+different rates of acceleration and deceleration, 0.002 mm/
+s2 and 0.1 mm/s 2. Both experiments begin with z ¼
+0.2 mm and go through two cycles of motion. As the
+programmed z motion is terminated manually, the stage
+stops at z ¼ 0.2 mm and z ¼ 0.17 mm, respectively.
+The second video (V2) displays real-time position
+detection of a step surface as we linearly translate along
+the x direction, after zeroing the stage at the bottom
+surface. The x stage translates from 0 mm to /C0 7.5 mm
+with a speed of 0.1 mm/s. The step surface we use here is
+the same sample studied in Fig. 3 and Fig. 5. Note that in
+video V2, we use a higher TAG lens frequency ( f tag ¼
+350.8 kHz) than in other experiments reported in this
+paper. Therefore, the oscilloscope displays more than one
+period of oscillation within its acquisition time of 10 µs.
+The corresponding calibration condition is labeled as B10
+in Table s2. To further illustrate, we include a screenshot
+of the ﬁnal measured surface position against time at the
+end of each measurement in Fig. 6a. The plot shows the
+detection performance throughout the process.
+We further implement real-time in situ position
+detection and simultaneous focus adjustment as a
+demonstrator for auto-focusing on a two-step surface (see
+supplementary video V3). The two-step surface is con-
+structed by adhering three pieces of silicon wafers toge-
+ther. The objective lens used in the dual-laser beam path
+is a 10 ´ objective lens. In the video (V3), immediately
+after turning on the probing beam, we conduct a local
+calibration experiment by mechanically shifting the z
+stage in increments of 0.05 mm and acquiring real-time
+signals from the oscilloscope. A calibration curve similar
+to those in Fig. 2 is obtained, yielding two ﬁtting para-
+meters: z0;1 ¼ 1.51 mm and ztag;1 ¼/C0 0.38 mm. The sub-
+script 1 here denotes the axial scanning parameters for the
+probing beam. Subsequently, we turn on the fabrication
+beam and characterize its axial scanning parameters
+Du et al. Light: Science & Applications          (2023) 12:274 Page 9 of 13
+
+following the method described in Section 2.3. The two
+parameters for the fabrication beam are z0;2 ¼ 1.45 mm
+and ztag;2 ¼/C0 0.45 mm, where subscript 2 refers to the
+fabrication beam parameters. Based on these two sets of
+calibrated parameters from the probing and fabrication
+beams, we can calculate the matching phase, ϕ, in real-
+time according to the transfer equation in Eq. 5. We then
+input the matching phase into the TAG lens controller
+software to trigger the fabrication beam and focus it on
+the probed surface position. The TAG controller can
+output three channels of TTL signals at the same time. In
+the video (V3), we use channel 1 (CH1) and channel 2
+(CH2) to trigger the oscilloscope and the fabrication laser,
+respectively. Due to the limitation in software
+engineering, the calculated matching phase is manually
+input to channel 2 of the TAG controller. However, future
+integration of the detection software with the TAG con-
+troller software should automate the input step com-
+pletely. Figure 6b exhibits the surface position and
+matching phase during the auto-focusing laser marking of
+the two-step surface. The three surfaces are denoted as A,
+B, and C. A 3D microscopy of the two-step surface
+showing the laser marking line across all three surfaces is
+also included in Fig. 6b, indicating auto-focusing laser
+processing without any z stage motion. In the video (V3),
+we observe process-generated plasma using a laser pulse
+energy of 5 µJ. Throughout the laser fabrication, we
+monitor the detected signal in real-time and ﬁnd that the
+Real-time position detection (supplementary video V1 and V2)a
+b In-situ detection and focusing (auto-focusing) of a two-step surface (supplementary video V3)
+0.3
+z (mm)
+0.2
+0.1
+0
+–0.1
+0 2 04 06 0
+time (s) time (s) time (s)
+C
+80 100 120 0 20 40 60 80 100 120 0 20 40 60 80 100
+0.3 0.8
+0.6
+0.4
+0.2
+0
+–0.2
+z (mm)
+z (mm)
+0.2
+0.1
+0
+–0.1
+z acceleration = /g114 0.002 mm/s2 z acceleration = /g114 0.1 mm/s2
+Back and forth motion of the z stage (V1), z speed = 0.02 mm/s Detection of a step surface (V2)
+x stage translational speed = 0.1 mm/s
+Surface Position zs
+Matching Phase φ
+A
+B
+C
+0
+1.8
+20 40 60 80 100 120
+0
+0
+20 40 60 80 100 120
+time (s)
+time (s)
+Laser marking directionx stage translational speed = 0.2 m
+m/s
+zs = 1.69 mm zs = 1.47 mm zs = 1.30 mm
+φ = 122/g113 φ = 92/g113 φ = 70/g113
+1584
+384.5
+1188
+792
+396
+14416
+10812
+7208
+3604
+0
+769
+z
+x
+B A
+1.6
+1.4
+1.2
+150
+100
+50
+zs (mm)θ (/g113)
+Fig. 6 Simultaneous position detection and focus control for auto-focusing. a Real-time detected surface position against time at the end of
+each measurement in supplementary videos V1 and V2. b Surface position and matching phase during the auto-focusing laser marking of a two-step
+surface in supplementary video V3. The three surfaces are labeled by A, B, and C. A 3D microscopy of the two-step surface showing the laser marking
+line on all three surfaces indicates auto-focusing without any z stage motion. The total marking length shown in the 3D microscope image is
+14416 µm
+Du et al. Light: Science & Applications          (2023) 12:274 Page 10 of 13
+
+plasma interference is insigni ﬁcant and negligible. How-
+ever, under high laser ﬂuence irradiation, process-
+generated plasma may cause strong interference in the
+detected signal. To minimize plasma interference, one can
+employ time-gated detection by synchronizing the pho-
+todetector to measure the signal at speci ﬁc delays after the
+fabrication laser pulse and plasma generation. Another
+option is to utilize polarization or spectral ﬁltering, which
+allows selective detection of only certain polarized or
+wavelength components of the signal and effectively
+suppresses the components corresponding to the plasma
+emission. Moreover, additional signal processing techni-
+ques, such as background subtraction or deconvolution
+analysis, can be used to separate the desired peaks from
+the plasma interference.
+Our real-time demonstrator achieves a response rate
+exceeding 1 Hz. However, this is signi ﬁcantly limited by
+the current hardware and software implementation we
+used. Ideally, the position data collection and focal control
+could be completed within a single scanning period of the
+TAG lens, enabling our method to instantaneously track
+surface topology without mechanical movement within
+two periods of z-scanning. For instance, when operating
+the TAG lens at a frequency range of 140 – 350 kHz, the
+auto-focusing system could potentially reach a maximum
+response rate between 70 and 175 kHz.
+Discussion
+This article discusses the signi ﬁcance and challenges
+associated with axial focus alignment in laser processing.
+Instead of employing separate modules for surface
+detection and mechanical z-axis movements, we propose
+a novel solution using a single z-scanning lens to elim-
+inate slow axial mechanical motions. Our work represents
+the ﬁrst single-lens dynamic surface searching approach
+based on the continuous z-scanning of a TAG lens,
+enabling simultaneous in situ surface detection and focus
+control.
+Our approach adopts an ultrafast varifocal TAG lens in
+a dual laser beam setup, consisting of a probing beam and
+a fabrication beam. The probing beam is shaped by the
+TAG lens and scans continuously along the z-axis, and its
+reﬂection is detected by a set of confocal optics. We relate
+the temporal response of the re ﬂected intensity to the
+probed surface location. Multiple calibrations of the sur-
+face detection method are conducted, showing con-
+trollable detection ranges and high repeatability. The
+constructed z-scanning detection method has a minimum
+linearity error of 1.24% with an accuracy of 0.3 µm for a 40
+´ objective lens, and a minimum linearity error of 1.10%
+with an accuracy of 15 µm for a 4 ´ objective lens. We
+then experimentally demonstrate surface pro ﬁle mea-
+surement of a non- ﬂat step surface. Based on the probed
+surface position of the step surface, we direct the
+fabrication beam to the designated positions by synchro-
+nizing the fabrication laser at a speci ﬁc phase of the TAG
+lens. We adopt synchronized pulses at the probed loca-
+tions instead of continuous z-scanning pulses, which
+effectively reduces defocused laser pulses, and conse-
+quently increases the processing speed and preserves the
+lateral resolution. In addition, we explore the potential of
+this technique for auto-focusing with a homemade real-
+time detection and focusing system. Since the collected
+position information and the executed focal control are
+both at 140 – 350 kHz, our method is designed to instan-
+taneously follow the surface topology without any
+mechanical movement within two scanning periods of the
+TAG lens at 70 – 175 kHz. The results presented pave the
+way to new methods of material processing for non- ﬂat
+surfaces or 3D applications through simultaneous auto-
+focusing and focus control.
+Materials and methods
+We have brie ﬂy described the methods and the princi-
+ples of our setup in the Section “Setup and principles ”.
+Figure 1a shows the schematic of the designed optical
+system, consisting of two beam paths, one for probing
+marked in green, and the other for fabrication marked in
+red. The probing laser beam is a low-power continuous
+wave (cw) green laser at 532 nm (Verdi, Coherent). We
+design the probing beam path following the principles of
+confocal optics. The probing laser ﬁrst passes through a
+varifocal TAG lens (TLHP, Mitutoyo) and an objective
+lens (OBJ1). The TAG lens is a liquid lens based on pie-
+zoelectricity and liquid resonance, and is powered by a
+radio frequency (RF) signal from the TAG controller 33,34.
+The acoustic standing wave inside the lens creates an
+oscillating gradient of refractive index so that the TAG
+lens oscillates between a converging and diverging
+gradient-index (GRIN) lens of /C25 ± 0.5 diopter at a
+resonance frequency of 140 kHz 44. The liquid nature of
+the lens enables high transmittance in the visible and
+near-infrared range. Unlike a conventional laser proces-
+sing setup with a ﬁxed focus at z0, the focal position of the
+probing beam zf continuously oscillates as a function of
+time t with the inclusion of the TAG lens, as plotted in the
+inset of Fig. 1a. The probe beam is re ﬂected from the
+surface of the workpiece and is directed back to the
+objective lens (OBJ1). A second objective lens (OBJ2 ¼ 10
+´ ,N A ¼ 0.25) is used to refocus the re ﬂected beam after
+passing through the beam splitter. A homemade pinhole
+with a diameter of 30 µm is placed at the focus of OBJ2 to
+ﬁlter out-of-focus light. The pinhole is prepared by fem-
+tosecond laser ablation of a copper foil. The re ﬂected
+beam passing through the pinhole is detected by a biased
+photodiode (PD, Thorlabs). The photodiode signal is ﬁrst
+measured by an oscilloscope (Scope, Tektronix), and then
+transferred in real-time to the computer for processing.
+Du et al. Light: Science & Applications          (2023) 12:274 Page 11 of 13
+
+Based on the temporal response of the detected PD signal,
+we can calculate the surface position zs for the probed site
+according to Eq. 4. The fabrication laser is a femtosecond
+laser at 800 nm (Solstice Ace, Spectra-Physics, 1 kHz).
+The fabrication beam path is similar to the setup for
+multiple-focal laser processing of transparent materials in
+our previous work 44.
+The real-time demonstrators in Video V1, V2 and V3
+consist of an oscilloscope, a programmable mechanical
+stage and a computer running Matlab and the TAG lens
+controller software. After the probing beam is turned on,
+the photodiode signal is ﬁrst acquired by the oscilloscope.
+The length of acquired waveforms is 1000 points, with an
+acquisition time of 10 µs in V1 and V2, and 20 µs in V3.
+The oscilloscope is triggered on the falling edge of a TTL
+signal sent from channel 1 of the TAG controller. The
+acquired waveform is then transferred to Matlab using the
+Instrument Control Toolbox via the Virtual Instrument
+Standard Architecture (VISA) interface. The signal pro-
+cessing includes (1) noise ﬁltering by the lowpass function
+with a passband frequency of 2 f tag , and (2) peak detection
+by the ﬁndpeaks function. We can then obtain the time
+interval from the identi ﬁed double peaks, and subse-
+quently calculate the surface position and the matching
+phase based on the calibrated z0 and ztag .
+In our experiments, non- ﬂat surfaces are created by
+sticking silicon wafers together. The step surface in Figs.
+3, 5, and 6a is constructed by adhering two silicon wafers
+of 500 µm thickness with a thin layer of optical glue. The
+two-step surface in Fig. 6b is constructed by adhering two
+pieces of silicon wafers of 200 µm thickness to a silicon
+wafer of 500 µm thickness with a thin layer of optical glue.
+Optical images in Figs. 3, 5 and 6 are taken with a laser
+confocal microscope (Olympus LEXT OLS4000).
+Acknowledgements
+We acknowledge the funding from Princeton University (Eric and Wendy
+Schmidt Fund, DG5709). C.F. acknowledges the funding from European
+Commission (Marie Curie Fellowship IF, FOCUSIS, Grant Agreement 844977).
+We acknowledge the support from Mitutoyo Corporation. X.D. acknowledges
+Jie Liu and Dr. Jie Qi for helpful discussions.
+Author details
+1Department of Mechanical and Aerospace Engineering, Princeton University,
+Princeton, NJ 08544, USA. 2Department of Systems Engineering, City University
+of Hong Kong, Hong Kong, China. 3Institut für Werkstofftechnik, Universität
+Kassel, 34125 Kassel, Germany. 4Princeton Materials Institute, Princeton
+University, Princeton, NJ 08544, USA
+Author contributions
+X.D., C.F., and C.B.A. conceived the study. X.D. and C.F. designed and
+implemented the optical setup. X.D. performed the experiments, simulation,
+and image and video visualization. C.B.A. supervised the project. All authors
+participated in the discussion of results and wrote the manuscript.
+Data availability
+The authors declare that the data supporting the ﬁndings of this study are
+available within the paper and its supplementary information ﬁles. Additional
+data are available from the corresponding author upon request.
+Conﬂict of interest
+The authors declare no competing interests.
+Supplementary information The online version contains supplementary
+material available at https://doi.org/10.1038/s41377-023-01303-2.
+Received: 22 June 2023 Revised: 2 October 2023 Accepted: 9 October 2023
+References
+1. Lin, Z., Ji, L. & Wang, W. Precision machining of single crystal diamond cutting
+tool via picosecond laser irradiation. Int. J. Refractory Met. Hard Mater. 114,
+106226 (2023).
+2. Lin, Z. et al. Microsphere femtosecond laser sub-50 nm structuring in far ﬁeld
+via non-linear absorption.Opto-Electron. Adv.6, 230029– 1( 2 0 2 3 ) .
+3 . H o a n g ,L .P . ,N g u y e n ,P .T . ,C u cN g u y e n ,T .K . ,V u ,T .T .&C a o ,X .B .S t u d yo nr e a l -
+time z-scanning of multiple-pulse laser ablation of metal applied in roll-
+printed electronics.Optical Mater. Express11, 509 (2021).
+4 . C h e n ,T . - H . ,F a r d e l ,R .&A r n o l d ,C .B. Ultrafast z-scanning for high-efﬁciency
+laser micro-machining.Light Sci. Appl. 7, 17181 (2018).
+5. Neumann, B., Dämon, A., Hogenkamp, D., Beckmann, E. & Kollmann, J. A laser-
+autofocus for automatic microscopy and metrology. Sens. Actuators 17,
+267– 272 (1989).
+6 . J u n g ,B .J .e ta l .A u t o f o c u s i n gm e t h o du s i n gﬂuorescence detection for precise
+two-photon nanofabrication.Opt. Express 19, 22659 (2011).
+7. Zou, X., Zhao, X., Li, G., Li, Z. & Sun, T. Non-contact on-machine measurement
+using a chromatic confocal probe for an ultra-precision turning machine.Int. J.
+Adv. Manuf. Technol. 90,2 1 6 3– 2172 (2016).
+8. Rhee, H. G., Kim, D. I. & Lee, Y. W. Realization and performance evaluation of
+high speed autofocusing for direct laser lithography. Rev. Sci. Instrum. 80,
+073103 (2009).
+9. Kim, Y. G., Rhee, H. G. & Ghim, Y. S. Real-time method for fabricating 3D
+diffractive optical elements on curved surfaces using direct laser lithography.
+Int. J. Adv. Manuf. Technol. 114,1 4 9 7– 1504 (2021).
+10. Hand, D. P. et al. Optical focus control system for laser welding and direct
+casting. Opt. Lasers Eng. 34,4 1 5– 427 (2000).
+11. Peters, C., Hand, D. P., Jones, J. D. C., Fox, M. D. T. & French, P. Applications of
+optical sensing for laser cutting and drilling. Appl. Opt. 41,4 9 8 8– 4995 (2002).
+12. Fidder, H., Admiraal, J. P. J., Ocelík, V . & De Hosson, J. T. M. In situ digital image
+correlation observations of laser forming.Metals 10, 17 (2019).
+13. Armbruster, O., Naghilou, A., Pöhl, H. & Kautek, W. In-situ and non-destructive
+focus determination device for hig h-precision laser applications. J. Opt. 18,
+095401 (2016).
+1 4 . C a o ,B .X . ,H o a n g ,P .L . ,A h n ,S . ,K i m ,J .O .&N o h ,J .H i g h - p r e c i s i o nd e t e c t i o no f
+focal position on a curved surface for laser processing.Precis. Eng.50,2 0 4– 210
+(2017).
+15. Keaveney, J. Automated translating beam pro ﬁler for in situ laser beam spot-
+size and focal position measurements.Rev. Sci. Instrum. 89, 35114 (2018).
+16. Zhou, Z. et al. Development of the fast astigmatic auto-focus microscope
+system. M e a s .S c i .T e c h n o l .20, 045902 (2009).
+17. Bai, Z. & Wei, J. Focusing error detection based on astigmatic method with a
+double cylindrical lens group.Opt. Laser Technol. 106, 145– 151 (2018).
+18. Alexeev, I., Strauss, J., Gröschl, A., Cvecek, K. & Schmidt, M. Laser focus posi-
+tioning method with submicrometer accuracy.Appl. Opt. 52,4 1 5– 421 (2013).
+1 9 . L e e ,C .H .&W a n g ,J .N o n i n t e r f e r o m e t r ic differential confocal microscopy with
+2-nm depth resolution.Opt. Commun. 135,2 3 3– 237 (1997).
+20. Tan, J. & Wang, F. Theoretical analysis and property study of optical focus
+detection based on differential confocal microscopy. M e a s .S c i .T e c h n o l .13,
+1289 (2002).
+21. Jung, H. W., Park, H. M. & Joo, K.-N. Dual low coherence scanning inter-
+ferometry for rapid large step height and thickness measurements. Opt.
+Express 24, 28625– 28632 (2016).
+22. Raele, M. P., De Pretto, L. R., de Rossi, W., Vieira, N. D. & Samad, R. E. Focus
+tracking system for femtosecond laser machining using low coherence
+interferometry.Sci. Rep. 9,1 – 8 (2019).
+23. Cao, B. X. et al. Real-time laser focusing system for high-precision micro-
+machining using diffractive beam sampler and advanced image sensor.Opt.
+Lasers Eng. 107,1 3– 20 (2018).
+Du et al. Light: Science & Applications          (2023) 12:274 Page 12 of 13
+
+24. Wright, A. J. et al. Dynamic closed-l oop system for focus tracking using a
+spatial light modulator and a deformable membrane mirror.Opt. Express 14,
+222– 228 (2006).
+25. Luo, J., Liang, Y. & Yang, G. Dynamic scan detection of focal spot on nonplanar
+surfaces: theoretical analysis and realization.Optical Eng. 50, 073601 (2011).
+26. Cao, B. X. et al. Automatic real-time focus control system for laser processing
+using dynamic focusing optical system.Opt. Express 25,2 8 4 2 7– 28441 (2017).
+2 7 . K a n g ,S .Y . ,D u o c a s t e l l a ,M .&A r n o l d ,C. B. Variable optical elements for fast
+focus control. Nat. Photonics 14,5 3 3– 542 (2020).
+28. Nakazawa, K. et al. Confocal laser displacement sensor using a micro-
+machined varifocal mirror.Appl. Opt. 56, 6911 (2017).
+29. Zhang, F., Yao, Y., Qu, X., Zhang, T. & Pei, B. Dual-beam laser autofocusing
+system based on liquid lens. Opt. Laser Technol. 88, 198– 204 (2017).
+3 0 . K i m ,C . - S . ,K i m ,W . ,L e e ,K .&Y o o ,H .H i g h - s p e e dc o l o rt h r e e - d i m e n s i o n a l
+measurement based on parallel confocal detection with a focus tunable lens.
+Opt. Express 27,2 8 4 6 6– 28479 (2019).
+31. Xiong, J. & Wu, S. T. Planar liquid crystal polarization optics for augmented
+reality and virtual reality: from fundamentals to applications. eLight 1,1 – 20
+(2021).
+32. Ni, Y. et al. Computational spectropolarimetry with a tunable liquid crystal
+metasurface.eLight 2,1 – 10 (2022).
+33. McLeod, E., Hopkins, A. B. & Arnold, C. B. Multiscale Bessel beams generated by
+a tunable acoustic gradient index of refraction lens.Opt. Lett. 31, 3155– 3157
+(2006).
+34. McLeod, E. & Arnold, C. B. Mechanics and refractive power optimization of
+tunable acoustic gradient lenses.J. Appl. Phys. 102, 033104 (2007).
+3 5 . D u o c a s t e l l a ,M . ,V i c i d o m i n i ,G .&D i a spro, A. Simultaneous multiplane confocal
+microscopy using acous tic tunable lenses. Opt. Express 22, 19293 – 19301
+(2014).
+3 6 . T h e r i a u l t ,C . ,A r n o l d ,C .B .&D u o c a s t e l la, M. Three-dimensional particle tracking
+via tunable color-encoded multiplexing.Opt. Lett. 41,8 6 3– 866 (2016).
+37. Chen, T. H., Ault, J. T., Stone, H. A. & Arnold, C. B. High-speed axial-scanning
+wide-ﬁeld microscopy for volumetric particle tracking velocimetry.Exp. Fluids
+58,1 – 7 (2017).
+3 8 . O k u ,H . ,Y a m a t o ,K . ,Y a s u t o m i ,K . ,K a w a h i t o ,S .&T a n a k a ,Y .Q u a s i - s i m u l t a n e o u s
+multi-focus imaging using a lock-in pixel image sensor and TAG lens. Opt.
+Express 28, 19152– 19162 (2020).
+39. Arai, K. & Oku, H. A 100 volume/s light-sheet microscope applied to 3D
+motion measurement of freely swimming cells. In 3D Image Acquisition and
+Display: Technology, Perception and Applications, 3F3A-5F3A (Optica Publishing
+Group, 2022).
+40. Hsu, C. W. et al. In vivo 3D imaging in drosophila brain using rapid dual-
+resonant volumetric multiphoton microscopy with deep restoration. In Bio-
+medical Spectroscopy, Microscopy, and imaging II, PC121440W (SPIE, 2022).
+4 1 . D u o c a s t e l l a ,M .&A r n o l d ,C .B .E n h a n c e dd e p t ho fﬁeld laser processing using
+an ultra-high-speed axial scanner.Appl. Phys. Lett. 102, 263107 (2013).
+42. Du, X., Kang, S. & Arnold, C. B. Optimization of ultrafast axial scanning para-
+meters for ef ﬁcient pulsed laser micro-machining. J. Mater. Process. Technol.
+288, 116850 (2020).
+4 3 . D u ,X . ,F l o r i a n ,C .&A r n o l d ,C .B .P a r a m e t r i cs t u d yo fm u l t i - f o c a ll a s e rp r o c e s s i n g
+using an ultrafast tunable acoustic lens. InLaser Applications in Microelectronic
+and Optoelectronic Manufacturing (LAMOM) XXVII , vol. 11988, 94 – 98 (SPIE,
+2022).
+4 4 . D u ,X . ,F l o r i a n ,C .&A r n o l d ,C .B .M u l t i - f o c a ll a s e rp r o c e s s i n gi nt r a n s p a r e n t
+materials using an ultrafast tunable acoustic lens. Opt. Lett. 47,1 6 3 4– 1637
+(2022).
+45. Wu, H., Zou, P., Cao, J. & Ehmann, K. F. Vibrating-lens-assisted laser drilling. J.
+Manuf. Process.55,3 8 9– 398 (2020).
+Du et al. Light: Science & Applications          (2023) 12:274 Page 13 of 13

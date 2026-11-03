@@ -1,0 +1,877 @@
+Research Article
+Vol. 31, No. 1 / 2 Jan 2023 / Optics Express
+673
+Galvanometer driven optical system for laser
+dynamic focusing
+LIANG YU,1,2,3 KUAI YANG,1,2,3 AND ZHEN ZHANG1,2,*
+1State Key Laboratory of Tribology & Institute of Manufacturing Engineering, Department of Mechanical
+Engineering, Tsinghua University, Beijing 100084, China
+2Beijing Key Laboratory of Precision/Ultra-Precision Manufacturing Equipments and Control, Tsinghua
+University, Beijing 100084, China
+3These authors contributed equally to this work
+*zzhang@tsinghua.edu.cn
+Abstract: This paper proposes a novel dynamic focusing module driven by galvanometers
+to position the laser focus with high speed and high precision. Thanks to the extremely high
+repeatability and the fast response time of galvanometers, the repeatability of the laser focus
+positioning is far less than the Rayleigh length of the beam and its response time is around 600
+µs. An important feature of the proposed module lies in that it can be further integrated to an
+XY galvo scanner to realize a 3-axis laser scanning system. Due to the same galvanometers
+of the dynamic focus module and the XY scanner, the laser focus could be positioned in a
+simultaneous, rapid and precise manner in all three axes. Various simulation and experimental
+results demonstrate the feasibility and performance of the proposed dynamic focus module and
+the processing capability of the 3-axis scanning system with the proposed module.
+© 2022 Optica Publishing Group under the terms of the Optica Open Access Publishing Agreement
+1.
+Introduction
+The laser scanning technology is essential in wide applications such as imaging, material
+processing, 3D printing, etc. Among these applications, it is desirable to position the laser focus
+along three axes in a high-speed, high-precision and simultaneous manner [1–3], commonly
+utilizing a 3-axis scanning system composed of an XY scanner and a focus-variable module
+[4]. The speed and precision of focus positioning are the key factors affecting the throughput
+and quality in imaging and material processing, and these factors depend on the performance
+of the XY scanner and the focus-variable module. It is noticed that galvanometers in the XY
+scanner are able to rotate the reflection mirrors with high precision and high frequency, then
+the challenge of achieving a high-performance 3-axis scanner mainly lies in the focus-variable
+system. Conventional methods of focus-control are mainly based on the mechanical movement
+of optical elements, and the focusing frequency is limited due to the relatively large inertia of
+lenses and accessories.
+Recently, high-speed focus variable optical elements and enhanced adaptive optical technologies
+have emerged to meet the demand from industrial and scientific communities [3]. With new
+materials used in tunable focus lenses, liquid crystal-based lenses [5–8] and electro-optic lenses
+[9–13] can be utilized to change focal length with high speed of several hundred kHz. They,
+however, tend to be polarization dependent and require high driving voltage. With new principles
+to manipulate lens shapes, tunable lenses, based on electro-wetting [14–16], dielectro-wetting
+[17,18] or shape-changeable liquid [19–25], are capable of varying the focus with high speed,
+while it is difficult to control the curvature of the surface of the liquid lenses in a precision manner
+[26]. Micro-electromechanical systems (MEMs) such as curvature-variable mirror membranes
+[27,28] and metasurface lenses [29–31] adjust the focus by means of their deformation, while the
+limited refocusing response time based on these techniques is relatively slow, usually around
+10 ms. Tunable acoustic gradient index (TAG) lens [32–34], driven by acoustic waves generated
+#476921
+https://doi.org/10.1364/OE.476921
+Journal © 2023
+Received 3 Oct 2022; revised 23 Nov 2022; accepted 13 Dec 2022; published 23 Dec 2022
+
+
+Research Article
+Vol. 31, No. 1 / 2 Jan 2023 / Optics Express
+674
+by cylindrical piezoelectric ceramics, can oscillate the focus rapidly with response time less than
+1 µs. By converting the linear position of the focus along the optical axis into rotary motion,
+some optical designs [4,35,36] are utilized to shifting the focus. Specifically, Ref. [4] produces a
+micro-mirror array for random-access focusing at a response rate of 8.75 kHz with a relatively
+complicated iterative design process. And Ref. [35] designs a device to achieve dynamic focusing
+with rapid response time less than 1 ms but should utilize complicated components such as SLM
+(Spatial Light Modulator) at high cost.
+Motivated by the high dynamic performance of galvanometers, here we propose a novel optical
+design for continuous and fast dynamic focusing module. In specific, two parabolic reflectors and
+two galvanometers are utilized as shown in Fig. 1(a). The working principle is as follows, with
+the rotation of the galvanometers, the divergence of the exit beam varies, and hence dynamic
+focusing is achieved. As the proposed system are comprised of two galvanometers and two
+parabolic mirrors, the corresponding dynamic focusing module can be rearranged with high
+flexibility to realize different refocusing ranges. Moreover, as shown in Fig. 1(b), the proposed
+dynamic focusing module is easy to be integrated with an XY galvanometer to form a 3-axis laser
+scanning system, and it is feasible to manipulate the laser focus with a high-speed, high-precision
+and synchronized manner thanks to the four identical galvanometers with the same dynamic
+performance.
+Fig. 1. A conceptual design of a galvanometer driven dynamic focusing system.
+The rest of this paper is organized as follows: Section 2 introduces an optical design of
+the dynamic focusing module and analyzes its features. In Section 3, various experiments are
+conducted to validate the zooming function of the proposed module and its feasibility in 3-axis
+scanning, followed by conclusions in Section 4.
+2.
+Optical design
+2.1.
+Novel design of galvanometer driven dynamic focusing module
+The proposed optical design of the dynamic focus module is shown in the Fig. 2(a), which is
+mainly composed of two identical concave parabolic reflectors and plane reflectors. Specifically,
+two concave parabolic reflectors have parallel axes of symmetry, and the center of the rotating
+reflectors A and B coincide with the focal point of the concave parabolic reflectors A and B,
+respectively. The incident beam is collimated, and the incident point on the parabolic mirror
+A varies according to the rotation of the reflector A. Because different incident points result
+different focal lengths, the reflector A and the parabolic mirror A can achieve the variation of
+the beam divergence, thereby realizing the variation of the focal point along the axial direction.
+
+
+Research Article
+Vol. 31, No. 1 / 2 Jan 2023 / Optics Express
+675
+Note that the optical axis of the laser beam emitted from the parabolic mirror A is not fixed, so it
+cannot be directly used.
+lfocus
+Rotatable Reflector A
+Concave Parobolic Mirror A
+d
+f
+w
+ș
+ș
+Concave Parobolic Mirror B
+Rotatable Reflector B
+Beam Focus Shifting
+(a)
+(b)
+Different
+Rotation Angles
+Fig. 2. The principle of the proposed optical design: (a) design parameters of the optical
+setup; (b) illustration of the beam focus positioning.
+To solve the above problem, we adopt the reflector B and the parabolic mirror B according to
+the feature of parabolic mirrors. It is known that the parabolic mirrors focus the ray parallel to
+the axis at the focal point, and reflect the ray from the focal point as the ray parallel to the axis.
+Therefore, after passing through the parabolic mirror B and the plane mirror B, the beam can exit
+along a fixed optical axis. Then dynamic focusing is realized without changing the outgoing
+optical axis. Moreover, the parabolic mirrors are coaxially placed to simplify the calculation of
+the rotation angles.
+And to achieve fast motion and synchronize with an XY scanner, the galvanometers with
+digital servo control are utilized to drive the reflectors at high frequency (>1 kHz) and with
+high repeatability (<2 µrad), which enables extremely high-speed and high-precision focus
+positioning.
+2.2.
+Analysis of variable focusing
+As shown in the Fig. 2(a), parameters d and f are the key to the zooming range and working
+length of the proposed focus variable module, where f is the parabolic mirror focal length, and d
+is the distance between two rotatable reflectors.
+To demonstrate its dynamic zooming feature, we apply numeric analysis method based on ray
+tracing strategy since the theoretical optical model of the proposed design is very complicated.
+Specifically, as shown in the Fig. 2(b), the parameters are set as follows: the parabolic mirror
+focal length f is 50.8 mm; the distance d between reflectors is 30 mm; the entrance aperture w is
+5.5 mm; and the rotating angle θ of the rotatable reflectors is set from 30◦to 40◦. It is observed
+from Fig. 2(b) that different rotating angles θ correspond to different positions of the laser beam
+focus.
+Furthermore, to analyze how the two parameters affect the dynamic focusing features of the
+proposed optical design, the focus shifting range and working focal length with different f and
+d are calculated. The set parameters of calculation are as follows, the input rotation angle of
+the rotatable reflectors θ is set as 30◦and 40◦, and the incident beam aperture w is 5.5 mm,
+and the focal length of parabolic mirrors f and the distance d between reflectors are set from
+30 mm to 80 mm, respectively. Two methods are utilized to analyze the focus position of the
+proposed optical system, by which are ray tracing based on geometrical optics and wavefront
+propagation based on physical optics. The simulation is conducted based on the commercial
+
+
+Research Article
+Vol. 31, No. 1 / 2 Jan 2023 / Optics Express
+676
+software package ZEMAX. The simulation model is shown in Fig. 3, and the simulation results
+of energy distribution under different design parameters are obtained by the physical optics
+propagation of the Gaussian beam.
+Fig. 3. Simulation model of the proposed optical design.
+The relationship between the focal length lfocus and the two parameters is shown in Fig. 4(a)
+and Fig. 4(b), it is observed that the lfocus increases as f increases or d decreases. And Fig. 4(c)
+shows the relationship between the focus zooming range ∆lfocus and the two parameters, the
+∆lfocus increases as f increases or d decreases.
+Fig. 4. Results of the theoretical analysis: (a) variations of lfocus with f and d (θ = 30◦); (b)
+variations of lfocus with f and d (θ = 40◦); (c) variations of ∆lfocus with f and d (θ varies
+from 30◦to 40◦)
+With the above numeric calculation results, an interpolation method is applied to select the
+appropriate parameters and the varying range of the rotating angle θ towards different refocusing
+requirements. It means a dynamic focusing module with different working length and focus
+zooming range could be conveniently designed, by choosing the parabolic mirrors with different
+focal length f and by adjusting the distance d between the two galvanometers.
+2.3.
+Application to 3-axis scanning
+To improve the beam focus shape and to adapt the aperture of output laser beam, a lens group
+is integrated in the proposed optical design as shown in Fig. 5. The lens group functions as
+beam expansion and focusing, and the simulation results show an improved beam focus shape
+compared with the focus shape in Fig. 3 (right).
+For the application of 3-axis laser scanning, the proposed dynamic focusing module is adopted
+with an XY galvanometer scanner as shown in the Fig. 6(a). And the further simulation results
+
+
+Research Article
+Vol. 31, No. 1 / 2 Jan 2023 / Optics Express
+677
+Rotatable Reflector B
+Parobolic Mirror A
+Parobolic Mirror B
+Rotatable Reflector A
+Incident Beam
+Lens Group
+(a)
+(b)
+(c)
+Fig. 5. Simulation of dynamic focusing module with a lens group: (a) the overall simulation
+model; (b) parts in the simulation model; (c) simulation results of irradiance distribution at
+the focus position (physics optical propagation of Gaussian beam).
+are shown in the Fig. 6(b), which indicate that the laser focus is positioned in three dimensions
+by varying the rotating angles of four plane reflectors.
+(a)
+(b)
+Mirror X 
+Mirror Y 
+Lens Group
+Beam Focus
+Incident Beam
+Fig. 6. Schematic of a 3-axis laser scanning system based on the proposed dynamic focusing
+system: (a) optical design for 3-axis laser scanning; (b) the simulation result of 3-axis
+scanning.
+The relationship between the position of laser focus and rotating angles is shown in Fig. 7. It
+is noted that the distance between the center points of two mirrors could be decreased by tilting
+the rotation axis of mirror X, and the required size of mirror Y could be reduced.
+The mirror X rotating angle θx and mirror Y rotating angle θy can be derived as
+θx = 1
+2 arctan
+(︄
+x
+e +
+√︁
+d2 + y2
+)︄
+,
+(1)
+
+
+Research Article
+Vol. 31, No. 1 / 2 Jan 2023 / Optics Express
+678
+d
+x
+y
+y
+2θx'
+2θx'
+S1'
+x
+S3'
+z
+e'
+θtilt
+Mirror Y
+Mirror X
+Incident Beam
+θtilt = 0
+θx ≠ 0
+θx = 0
+Without tilting
+Rotation Axis Y
+Rotation Axis X
+S2'
+S2
+d
+y
+e
+y
+2θx
+2θx
+x
+S3
+z
+2θy
+2θx
+2θx
+S1
+Mirror Y
+Mirror X
+Incident Beam
+Rotation Axis Y
+Rotation Axis X
+2θx'
+2θy'
+2θx'
+2θx
+θy = 0
+θy ≠ 0
+θtilt = 0
+θx ≠ 0
+θx = 0
+θy = 0
+θy ≠ 0
+(b)
+(a)
+2
+r
+θ
+r
+m
+m
+Fig. 7. Schematic of the relationship between the scanning point and mirror angles: (a)
+before tilting the rotation axis of mirror X; (b) after tilting the rotation axis of mirror X.
+θy = 1
+2 arctan
+(︂y
+d
+)︂
+,
+(2)
+where (x, y, d) are the coordinates of laser focus position, and e is the distance between the center
+points of two mirrors, which is affected by the tilting angle θtilt of mirror X.
+Moreover, the proposed dynamic focusing module is able to change the working length l(θz).
+And the desired working length l(θz) can be obtained as
+l (θz) = e + m + r
+= e + m +
+x
+√︁
+d2 + y2
+e +
+√︁
+d2 + y2 ,
+(3)
+where θz is the rotating angle of mirrors within the proposed dynamic focus module, and r is the
+working length of the scanning system, and m is the distance between the incident aperture and
+mirror X. Then θz can be determined from the focus position coordinates of the desired scanning
+trajectory through (3).
+3.
+Experimental study
+3.1.
+Experiment setup
+As shown in Fig. 8(c), the proposed dynamic focusing module is prototyped. The collimated
+incident beam is 405 nm continuous laser with the diameter of 5.5 mm, passing through two
+parabolic mirror (ϕ50.8×54.45 mm EFL 30◦OAP Protected Aluminum Mirror) and two rotation
+mirrors driven by self-developed galvanometers with the incident aperture of 20 mm. Reflected
+by above mirrors, the beam passes through the lens group consisting of lens A (fA = −15 mm),
+lens B (fB = 100 mm) and lens C (fC = 200 mm).
+The experiment setup shown in Fig. 8(a) and Fig. 8(b) is utilized to demonstrate the dynamic
+focusing performance. The setup consists of the prototype of the proposed dynamic focusing
+module, a laser source (405 nm, diode laser, continuous wave), a laser interferometer (Attocube
+IDS3010), a beam profiling camera (Spiricon SP620, Ophir), a vertical lift stage and a host
+computer.
+The beam profiling camera, the vertical lift stage and the laser interferometer
+
+
+Research Article
+Vol. 31, No. 1 / 2 Jan 2023 / Optics Express
+679
+Computer
+Diode Laser
+Dynamic Focusing Module
+Beam Profiling Camera
+Vertical Lift Stage
+Interferometer
+(a)
+Incident 
+beam
+(c)
+Exit beam
+Galvanometer
+Off-Axis 
+Parabolic 
+Mirror
+Incident
+Beam
+Exit Beam
+                                                       (c)
+Galvanometer
+Parabolic
+Mirror
+XY galvanometer
+Dynamic 
+Focusing 
+Module
+Diode Laser
+r
+XY galvanome
+met
+met
+mete
+mete
+ete
+mete
+meteter
+er
+eter
+meter
+meter
+meter
+me
+me
+meter
+meter
+e
+meter
+mete
+m
+Dynam
+Dynam
+Dynam
+Dynam
+nam
+nam
+nam
+a
+nam
+am
+nam
+nam
+am
+am
+amicicicic
+Focus
+Focus
+us
+us
+us
+us
+us
+us
+us
+us
+Foc
+Foc
+ocus
+us
+us
+F
+us
+u ing
+ing
+ing
+ing
+ing 
+in
+i g
+in
+i g
+Modu
+Mod
+Mo
+Modu
+du
+dul
+dul
+du
+odu
+dul
+dul
+ul
+du
+du
+d
+odu
+M du
+du e
+XY Galvanometer
+Dynamic 
+Focusing 
+Module
+(b)
+Beam Profiling Camera
+Dynamic Focus Setup
+Off-Axis 
+Parabolic 
+Mirror A
+Galvanometer B
+Off-Axis 
+Parabolic 
+Mirror B
+Galvanometer A
+Lenses Group
+Beam Profiling Camera
+Dynamic Focus Setup
+Off-Axis 
+Parabolic 
+Mirror A
+Galvanometer B
+Off-Axis 
+Parabolic 
+Mirror B
+Galvanometer A
+Lenses Group
+(b)
+Galva
+Ga ano
+no
+no
+nome
+me
+metetet
+ome
+m ter
+er B
+er B
+Galva
+Ga ano
+no
+nome
+metetet
+om ter B
+er B
+Galva
+Ga
+Galva
+alva
+vano
+no
+nomet
+met
+nomet
+m ter
+er A
+er A
+er A
+er A
+er A
+Galva
+Galva
+lva
+vano
+nomet
+met
+nom ter
+er A
+er A
+er A
+er A
+er A
+(b)
+(b)
+(b)
+(b)
+(b)
+(b)
+(b)
+(b)
+Beam Profiling Camera
+Dynamic Focus Setup
+Off-Axis 
+Parabolic 
+Mirror A
+Galvanometer B
+Off-Axis 
+Parabolic 
+Mirror B
+Galvanometer A
+Lens Group
+(b)
+(d)
+Lens A
+Lens B
+Lens C
+Fig. 8. (a) the first experiment setup demonstrating the dynamic focusing performance; (b)
+schematic of the first experimental setup; (c) prototype of dynamic focusing module; (d) the
+second experiment setup for 3-axis laser scanning.
+are adopted to measure the irradiance distribution and position variation of the laser focus.
+Furthermore, the dynamic focusing module is assembled with a self-developed XY scanning
+head to achieve a 3-axis scanning system as shown in Fig. 8(d).
+3.2.
+Experiments on dynamic focusing features
+With the above setup, we conduct numerous experiments to demonstrate the focus zooming
+features and processing capability of the proposed optical system. With the given angles of the
+galvanometers in the dynamic focusing module, the beam profiler measures the relative irradiance
+distribution of the beam transverse profile at certain frame rate. Meanwhile, the camera is moved
+along the vertical direction of the focused beam with the stage. And the laser interferometer is
+utilized to measure the relative displacement of the beam profile camera.
+The measurement results are shown in Fig. 9(m), in which θb is the rotating angle of the laser
+beam and ∆lfocus is the relative change of focus position. It is observed that ∆lfocus has good
+linearity with θb, which is consistent with the analytical result. Figure 9 also shows the irradiance
+distribution of the laser beam at the focus, indicating that the focused beam spot keeps a relative
+constant shape in different positions along optical axis and the geometric aberrations in the
+system have negligible effect on beam quality.
+
+
+Research Article
+Vol. 31, No. 1 / 2 Jan 2023 / Optics Express
+680
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+ b (°)
+0
+50
+100
+ ¨l focus (mm)
+Simulation Results by POP
+Experimental Results
+(m)
+Fig. 9. Experimental results of the focus measurement: (a, b, c and d) the axial irradiance
+distributions at the beam focus with different rotation angles; (e, f, g and h) the lateral
+irradiance distributions in the respective focal plane with different rotation angles; (i, j, k and
+l) the corresponding isometric view of the irradiance distributions with different rotation
+angles; (m) the comparison between the simulation results and experimental ones of the
+focus position.
+3.3.
+Experiments on laser scanning with dynamic focusing module
+Laser scanning experiments are carried out with the scanning system in Fig. 8(d) and the details
+are as follows. With the given angles of galvanometers in the dynamic focusing module, the
+system scans a circular trajectory on the plane as shown in Fig. 10 (left). After lifting the system
+by a certain height, an unclear circular trajectory is scanned on the same plane due to the laser
+defocusing. Then, with focus control of the laser beam by the dynamic focusing module, the
+scanning system realized a circular trajectory which is consistent with the trajectory before lifting.
+Moreover, a series of lithography processing experiments are conducted with resin coated
+substrates. The manufactured result is shown in Fig. 10 (right), and it is observed that the
+processing result keeps a relative constant line width.
+3.4.
+Experiments on the dynamic performance of galvanometers
+To demonstrate the dynamic performance of the galvanometers in the proposed dynamic focusing
+module, we conduct various of experiments to measure the step response time and repeatability
+(root-mean-square value). The references consist of a step signal with amplitude of 3.5 mrad
+(1% of full scale) and a series of ramp signals from 32 mrad to different positions and back to
+32 mrad. The experimental results are shown in Fig. 11, the step response time is 600 µs and the
+repeatability is 0.4 µrad.
+
+
+Research Article
+Vol. 31, No. 1 / 2 Jan 2023 / Optics Express
+681
+Without dynamic 
+focusing control
+With dynamic
+focusing control
+×5
+×20
+Different positions
+Fig. 10. (left) experimental demonstration of the zooming feature; (right) the lithography
+processing result.
+0
+0.5
+1
+1.5
+2
+2.5
+3
+3.5
+4
+4.5
+ time (s)
+0
+10
+20
+30
+40
+50
+60
+70
+Rotating angle  (mrad)
+Reference signal
+repeatibility test 1
+repeatibility test 2
+repeatibility test 3
+repeatibility test 4
+repeatibility test 5
+0
+0.005
+0.01
+0.015
+ time (s)
+0
+1
+2
+3
+4
+Rotating angle  (mrad)
+Experimental Results
+Reference signal
+Settling to -1/1000 of full scale
+Settling to 1/1000 of full scale
+0
+0.5
+1
+1.5
+10-3
+0
+2
+4
+0.6ms
+0.3
+0.32
+0.34
+0.36
+0.38
+0.4
+0.42
+0.44
+0.46
+0.48
+0.5
+0
+0.5
+1
+10-3
+1.3
+1.32
+1.34
+1.36
+1.38
+1.4
+1.42
+1.44
+1.46
+1.48
+1.5
+0
+0.5
+1
+10-3
+4.3
+4.32
+4.34
+4.36
+4.38
+4.4
+4.42
+4.44
+4.46
+4.48
+4.5
+0
+0.5
+1
+10-3
+3.3
+3.32
+3.34
+3.36
+3.38
+3.4
+3.42
+3.44
+3.46
+3.48
+3.5
+0
+0.5
+1
+10-3
+2.3
+2.32
+2.34
+2.36
+2.38
+2.4
+2.42
+2.44
+2.46
+2.48
+2.5
+0
+0.5
+1
+10-3
+(a)
+(b)
+Fig. 11. Experimental results of the dynamic performance of the galvanometers: (a) results
+of the step response experiment; (b) results of the repeatability experiment.
+Due to the linearity between the focus shifting range and beam rotating angle as shown in
+Fig. 9, the repeatability εf of focus positioning can be obtained by
+εf = 360◦· ∆lfocus
+π · ∆θb
+εg,
+(4)
+where ∆θb is the variation of the rotating angle of beam (8◦), and ∆lfocus is the relative focus
+shifting range (81.71 mm) and εg is the repeatability of the galvanometers (0.4 µrad). So the
+repeatability of focusing positioning (468 nm) is far less than the range of the Rayleigh length,
+and focus positioning in the range of 2.04 mm (equal to the rotation range of 3.5 mrad) can be
+reached within 600 µs.
+4.
+Conclusions
+A novel design of laser dynamic focusing module driven by galvanometers is proposed and
+prototyped, and various experiments are conducted to validate its feasibility and dynamic
+performance. The simulation and experimental results show that the proposed system is able to
+achieve high-speed and high-precision laser focus-positioning with a response time of 600 µs and
+a repeatability (468 nm) far less than the Rayleigh Length of focusing beam. Moreover, thanks
+to the same galvanometers in the dynamic focusing module and the XY scanner, the proposed
+system could achieve 3-axis laser scanning with a high-speed, high-precision and simultaneous
+manner in all three dimensions. In comparison with conventional focus-control methods, the
+
+
+Research Article
+Vol. 31, No. 1 / 2 Jan 2023 / Optics Express
+682
+proposed dynamic focusing module offers an effective and convenient approach to achieve a
+high-performance 3-axis laser scanning system.
+Funding. National Natural Science Foundation of China (51875313, 52275564); State Key Laboratory of Tribology
+in Advanced Equipment (SKLT2021D14).
+Acknowledgments. The authors would like to acknowledge the financial support from the National Natural Science
+Foundation of China under Grant (51875313, 52275564), and the State Key Laboratory of Tribology in Advanced
+Equipment under Grant (SKLT2021D14).
+Disclosures. Competing interests: L.Y. and Z.Z. applied for a patent related to this work in China (no. 202010936660.6).
+Data availability. Data underlying the results presented in this paper are not publicly available at this time but may
+be obtained from the authors upon reasonable request.
+References
+1.
+T.-H. Chen, R. Fardel, and C. B. Arnold, “Ultrafast z-scanning for high-efficiency laser micro-machining,” Light:
+Sci. Appl. 7(4), 17181 (2018).
+2.
+V. Emiliani, A. E. Cohen, K. Deisseroth, and M. Häusser, “All-optical interrogation of neural circuits,” J. Neurosci.
+35(41), 13917–13926 (2015).
+3.
+S. Kang, M. Duocastella, and C. B. Arnold, “Variable optical elements for fast focus control,” Nat. Photonics 14(9),
+533–542 (2020).
+4.
+N. T. Ersumo, C. Yalcin, N. Antipa, N. Pégard, L. Waller, D. Lopez, and R. Muller, “Design framework for high-speed
+3D scanning tools and development of an axial focusing micromirror-based array,” in MOEMS and Miniaturized
+Systems XIX, vol. 11293 W. Piyawattanametha, Y.-H. Park, and H. Zappe, eds., International Society for Optics and
+Photonics (SPIE, 2020), p. 1129303.
+5.
+H. S. Chen, Y. H. Lin, A. K. Srivastava, V. G. Chigrinov, C. M. Chang, and Y. J. Wang, “A large bistable negative
+lens by integrating a polarization switch with a passively anisotropic focusing element,” Opt. Express 22(11),
+13138–13145 (2014).
+6.
+S. U. Kim, J. H. Na, C. Kim, and S. D. Lee, “Design and fabrication of liquid crystal-based lenses,” Liq. Cryst. 44,
+2121–2132 (2017).
+7.
+M. B. Kumar, D. Kang, J. Jung, H. Park, J. Hahn, M. Choi, J.-H. Bae, H. Kim, and J. Park, “Compact vari-focal
+augmented reality display based on ultrathin, polarization-insensitive, and adaptive liquid crystal lens,” Opt. Lasers
+Eng. 128, 106006 (2020).
+8.
+Y. Ma, A. M. W. Tam, X. T. Gan, L. Y. Shi, A. K. Srivastava, V. G. Chigrinov, H. S. Kwok, and J. L. Zhao, “Fast
+switching ferroelectric liquid crystal pancharatnam-berry lens,” Opt. Express 27(7), 10079–10086 (2019).
+9.
+T. Imai, S. Yagi, S. Toyoda, J. Miyazu, K. Naganuma, S. Kawamura, M. Sasaura, and K. Fujiura, “Fast response
+varifocal lenses using kta1-xnbxo3 crystals and a simulation method with electrostrictive calculations,” Appl. Opt.
+51(10), 1532–1539 (2012).
+10. T. Inagaki, T. Imai, J. Miyazu, and J. Kobayashi, “Polarization independent varifocal lens using ktn crystals,” Opt.
+Lett. 38(15), 2673–2675 (2013).
+11. S. Kawamura, T. Imai, J. Miyazu, T. Sakamoto, and J. Kobayashi, “2.5-fold increase in lens power of a KTN varifocal
+lens by employing an octagonal structure,” Appl. Opt. 54(13), 4197–4201 (2015).
+12. S. Takashi and F. Hiroyoshi, “Lead-lanthanum zirconate-titanate (PLZT) electrooptic variable focal-length lens with
+stripe electrodes,” Jpn. J. Appl. Phys. 31(9S), 3196–3200 (1992).
+13. M. B. Kumar, D. Kang, M. A. Adeshina, S. Kim, T. Kim, and J. Park, “Electro-optic diffractive multifocal lens with
+electrically reconfigurable multifocal planes,” Opt. Lasers Eng. 139, 106459 (2021).
+14. D. Shin, C. Kim, G. Koo, and Y. H. Won, “Depth plane adaptive integral imaging system using a vari-focal liquid
+lens array for realizing augmented reality,” Opt. Express 28(4), 5602–5616 (2020).
+15. C. Hao, Y. Liu, X. Chen, Y. He, Q. Li, K. Li, and Z. Wang, “Electrowetting on liquid-infused film (ewolf): Complete
+reversibility and controlled droplet oscillation suppression for fast optical imaging,” Sci. Rep. 4(1), 6846 (2015).
+16. J. Lee, Y. Park, and S. K. Chung, “Multifunctional liquid lens for variable focus and aperture,” Sens. Actuators, A
+287, 177–184 (2019).
+17. B. Jin, H. Ren, and W. kit Choi, “Dielectric liquid lens with chevron-patterned electrode,” Opt. Express 25(26),
+32411–32419 (2017).
+18. Y. Lu, H. Tu, Y. Xu, and H. Jiang, “Tunable dielectric liquid lens on flexible substrate,” Appl. Phys. Lett. 103(26),
+261113 (2013).
+19. H. Cheng, S. Xu, Y. Liu, S. Levi, and S. Wu, “Adaptive mechanical-wetting lens actuated by ferrofluids,” Opt.
+Commun. 284(8), 2118–2121 (2011).
+20. L. Dong, A. K. Agarwal, D. J. Beebe, and H. Jiang, “Adaptive liquid microlenses activated by stimuli-responsive
+hydrogels,” Nature 442(7102), 551–554 (2006).
+21. Y. Fuh, W. Huang, Y. Lee, and S. Lee, “An oscillation-free actuation of fluidic lens for optical beam control,” Appl.
+Phys. Lett. 101(7), 071901 (2012).
+22. H. Oku and M. Ishikawa, “High-speed liquid lens with 2 ms response and 80.3 nm root-mean-square wavefront
+error,” Appl. Phys. Lett. 94(22), 221108 (2009).
+
+
+Research Article
+Vol. 31, No. 1 / 2 Jan 2023 / Optics Express
+683
+23. R. Patra, S. Agarwal, S. Kondaraju, and S. S. Bahga, “Membrane-less variable focus liquid lens with manual
+actuation,” Opt. Commun. 389, 74–78 (2017).
+24. W. Xiao and S. Hardt, “An adaptive liquid microlens driven by a ferrofluidic transducer,” J. Micromech. Microeng.
+20(5), 055032 (2010).
+25. Z. Jian, Z. Tong, Y. Ma, M. Wang, S. Jia, and X. Chen, “Laser beam modulation with a fast focus tunable lens for
+speckle reduction in laser projection displays,” Opt. Lasers Eng. 126, 105918 (2020).
+26. Y. Cheng, J. Cao, and Q. Hao, “Optical beam steering using liquid-based devices,” Opt. Lasers Eng. 146, 106700
+(2021).
+27. J. Kim, J. Lee, and Y. H. Won, “Method to reduce the aberration of a polygonal aperture focus-tunable lens array for
+high fill factor,” Opt. Lett. 44(10), 2554–2557 (2019).
+28. J. Cao, Z. Hou, Z. Tian, J. Hua, Y. Zhang, and Q. Chen, “Bioinspired zoom compound eyes enable variable-focus
+imaging,” ACS Appl. Mater. Interfaces 12(9), 10107–10117 (2020).
+29. M. D. Aiello, A. S. Backer, A. J. Sapon, J. Smits, J. D. Perreault, P. Llull, and V. M. Acosta, “Achromatic varifocal
+metalens for the visible spectrum,” ACS Photonics 6(10), 2432–2440 (2019).
+30. H. Ee and R. Agarwal, “Tunable metasurface and flat optical zoom lens on a stretchable substrate,” Nano Lett. 16(4),
+2818–2823 (2016).
+31. A. She, S. Zhang, S. Shian, D. R. Clarke, and F. Capasso, “Adaptive metalenses with simultaneous electrical control
+of focal length, astigmatism, and shift,” Sci. Adv. 4(2), eaap9957 (2018).
+32. K. A. Higginson, M. A. Costolo, and E. A. Rietman, “Adaptive geometric optics derived from nonlinear acoustic
+effects,” Appl. Phys. Lett. 84(6), 843–845 (2004).
+33. E. McLeod, A. B. Hopkins, and C. B. Arnold, “Multiscale bessel beams generated by a tunable acoustic gradient
+index of refraction lens,” Opt. Lett. 31(21), 3155–3157 (2006).
+34. X. Du, C. Florian, and C. B. Arnold, “Multi-focal laser processing in transparent materials using an ultrafast tunable
+acoustic lens,” Opt. Lett. 47(7), 1634–1637 (2022).
+35. M. Bawart, A. Jesacher, P. Zelger, S. Bernet, and M. Ritsch-Marte, “Modified alvarez lens for high-speed focusing,”
+Opt. Express 25(24), 29847–29855 (2017).
+36. P. Boucher, N. Barré, O. Pinel, G. Labroille, and N. Treps, “Continuous axial scanning of a gaussian beam via beam
+steering,” Opt. Express 25(19), 23060–23069 (2017).

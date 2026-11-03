@@ -1,0 +1,48 @@
+{
+  "url": "https://patents.google.com/patent/CN114054972A/zh",
+  "category": "01_移动透镜式与匹配光学",
+  "origins": [
+    "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md"
+  ],
+  "context": "原文提到的专利号，补全公开文本入口；标题及相关性待与原件核对",
+  "id": "R064",
+  "files": [
+    {
+      "path": "01_移动透镜式与匹配光学\\R064_CN114054972A - 一种动态聚焦激光切割方法与装置 _        - Google Patents.html",
+      "type": "HTML",
+      "bytes": 131909,
+      "sha256": "383cb429dd551040c00d6e7952d03dac385d6aa4dce5f7515722fce9964547b5",
+      "url": "https://patents.google.com/patent/CN114054972A/zh",
+      "title": "CN114054972A - 一种动态聚焦激光切割方法与装置 \n        - Google Patents",
+      "text_chars": 18620
+    },
+    {
+      "path": "01_移动透镜式与匹配光学\\R064_CN114054972A - 一种动态聚焦激光切割方法与装置 - Google Patents.pdf",
+      "type": "PDF",
+      "pages": 13,
+      "bytes": 676980,
+      "sha256": "b6635b29d029290d3e7f7056dff326f9b8128b253b89538e08ecb53d0b2d2e43",
+      "url": "https://patentimages.storage.googleapis.com/d5/8f/8a/05deb6bcb9d1dc/CN114054972A.pdf",
+      "text_chars": 9362,
+      "title": "",
+      "preview": "(19)中华人民共和国国家知识产权局\n(12)发明专利申请\n(10)申请公布号  \n(43)申请公布日 \n(21)申请号  202011492509.4\n(22)申请日 2020.12.17\n(71)申请人  帝尔激光科技 （无锡） 有限公司\n地址  214000  江苏省无锡市锡山区锡山经\n济技术开发区凤威路2号\n(72)发明人  程晓伟　李志刚　朱凡　陆红艳　\n张松　朱俊　\n(74)专利代理机构  湖北武汉永嘉专利代理有限\n公司  42102\n代理人  王丹\n(51)Int.Cl.\nB23K 26/38(2014.01)\nB23K 26/046(2014.01)\n \n(54)发明名称\n一种动态聚焦激光切割方法与装置\n(57)摘要\n本发明提供一种动态聚焦激光切割方法与\n装置， 采用一个激光， 调整所述激光的发散角， 或\n者调整待加工产品表面与激光加工模组的相对\n距离， 使得激光聚焦后在待加工产品表面形成第\n一光斑或第二光斑， 采用第一光斑扫描预定切割\n线上的至少2个点， 形成诱导切割槽； 采用第二光\n斑沿预定切割线进行扫描， 形成热应力， 使待加\n工产品沿预定切割线断裂； 预定切割线",
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://patents.google.com/patent/CN114054972A/zh",
+      "http": 200,
+      "final_url": "https://patents.google.com/patent/CN114054972A/zh",
+      "result": "网页"
+    },
+    {
+      "url": "https://patentimages.storage.googleapis.com/d5/8f/8a/05deb6bcb9d1dc/CN114054972A.pdf",
+      "http": 200,
+      "final_url": "https://patentimages.storage.googleapis.com/d5/8f/8a/05deb6bcb9d1dc/CN114054972A.pdf",
+      "result": "有效PDF"
+    }
+  ],
+  "title": "CN114054972A - 一种动态聚焦激光切割方法与装置 - Google Patents",
+  "status": "PDF已下载"
+}

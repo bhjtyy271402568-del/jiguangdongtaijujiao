@@ -1,0 +1,26 @@
+{
+  "url": "https://link.springer.com/article/10.1007/s44258-025-00067-1",
+  "category": "04_TAG声学调焦",
+  "origins": [
+    "激光动态聚焦_来源索引与验证清单_2026-11-03.md"
+  ],
+  "context": "\n- 原始入口：https://link.springer.com/article/10.1007/s44258-025-00067-1",
+  "id": "R028",
+  "files": [],
+  "attempts": [
+    {
+      "url": "https://link.springer.com/article/10.1007/s44258-025-00067-1",
+      "http": 200,
+      "final_url": "https://link.springer.com/article/10.1007/s44258-025-00067-1",
+      "result": "网页"
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s44258-025-00067-1",
+      "error": "终检排除：Client Challenge"
+    }
+  ],
+  "title": "Localized dynamic lensing via collinear light-sound interactions_2026",
+  "status": "全文已由用户补齐 → U007",
+  "resolved_by": "U007",
+  "resolution_note": "此前网络获取未完成；现已由用户提供正式版全文补齐。保留历史请求记录。"
+}

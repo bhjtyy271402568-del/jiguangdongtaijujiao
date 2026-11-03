@@ -1,0 +1,50 @@
+{
+  "url": "https://patents.google.com/patent/CN222866943U/zh",
+  "category": "01_移动透镜式与匹配光学",
+  "origins": [
+    "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+    "用户粘贴_激光动态聚焦深度调研.txt",
+    "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md"
+  ],
+  "context": "\n- 原始入口：https://patents.google.com/patent/CN222866943U/zh",
+  "id": "R046",
+  "files": [
+    {
+      "path": "01_移动透镜式与匹配光学\\R046_CN222866943U - 一种动态聚焦光学系统 _        - Google Patents.html",
+      "type": "HTML",
+      "bytes": 49428,
+      "sha256": "df22bc97e2212361e4765d5f8a79eedd9b398e5446c86ccd7f26119e55b8f294",
+      "url": "https://patents.google.com/patent/CN222866943U/zh",
+      "title": "CN222866943U - 一种动态聚焦光学系统 \n        - Google Patents",
+      "text_chars": 7404
+    },
+    {
+      "path": "01_移动透镜式与匹配光学\\R046_CN222866943U - 一种动态聚焦光学系统 - Google Patents.pdf",
+      "type": "PDF",
+      "pages": 5,
+      "bytes": 363700,
+      "sha256": "9d9ae0bdc17fc60b8674b43fe02f811604e4d7d5b11a70d7e9d628767789a3bc",
+      "url": "https://patentimages.storage.googleapis.com/a3/0f/51/d8fdeed8947d7d/CN222866943U.pdf",
+      "text_chars": 3808,
+      "title": "",
+      "preview": "(19)国家知识产权局\n(12)实用新型专利\n(10)授权公告号 \n(45)授权公告日 \n(21)申请号 202422385342.1\n(22)申请日 2024.09.29\n(73)专利权人 苏州卡门哈斯激光技术有限责任\n公司\n地址 215000 江苏省苏州市中国(江苏)自\n由贸易试验区苏州片区苏州工业园区\n苏虹西路155号\n(72)发明人 张春艳　段奇　杨晓亮　徐海建　\n(74)专利代理机构 重庆天成卓越专利代理事务\n所(普通合伙) 50240\n专利代理师 谭小容\n(51)Int.Cl.\nG02B 7/10(2021.01)\nG02B 26/10(2006.01)\nG02B 27/09(2006.01)\n \n(54)实用新型名称\n一种动态聚焦光学系统\n(57)摘要\n本实用新型公开了一种动态聚焦光学系统 ，\n包括振镜模块及场镜模块， 还包括动态扩束 模\n块，动态扩束模块包括可驱动透镜和固定透镜，\n可驱动透镜和固定透镜均设于入射光线的光路\n上，可驱动透镜位于固定透镜的前方 ，且可驱动\n透镜能沿入射光线的光路前后移动，固定透镜固\n定不动，当可驱动透镜受驱后移时 ，入射光线发\n散，场镜模块聚",
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://patents.google.com/patent/CN222866943U/zh",
+      "http": 200,
+      "final_url": "https://patents.google.com/patent/CN222866943U/zh",
+      "result": "网页"
+    },
+    {
+      "url": "https://patentimages.storage.googleapis.com/a3/0f/51/d8fdeed8947d7d/CN222866943U.pdf",
+      "http": 200,
+      "final_url": "https://patentimages.storage.googleapis.com/a3/0f/51/d8fdeed8947d7d/CN222866943U.pdf",
+      "result": "有效PDF"
+    }
+  ],
+  "title": "CN222866943U - 一种动态聚焦光学系统 - Google Patents",
+  "status": "PDF已下载"
+}

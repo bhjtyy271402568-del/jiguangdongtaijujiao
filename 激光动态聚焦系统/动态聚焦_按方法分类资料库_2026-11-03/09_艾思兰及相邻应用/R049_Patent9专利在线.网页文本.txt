@@ -1,0 +1,277 @@
+来源：https://www.patent9.com/search.aspx?c=Inventor&k=Zhou+He&t=fmzl
+采集日期：2026-11-03
+
+Patent9专利在线
+Patent9 专利在线
+高级搜索 ▼
+申请号或专利号
+公开号
+专利名称
+专利摘要
+申请人
+发明人
+全部专利
+发明专利
+实用新型专利
+外观设计专利
+高级搜索 - 多字段组合检索
++ 增加条件
+查询语句：
+（请输入搜索条件）
+普通搜索
+当前查询到
+3332
+条专利与查询词 "
+Zhou He
+"相关，搜索用时0.0625231秒!
+排序方式：
+按相关度排序
+按申请日升序↑
+按申请日降序↓
+按公开日升序↑
+按公开日降序↓
+发明专利：
+1759
+实用新型:
+1429
+外观设计:
+144
+共
+1759
+条，当前第
+1-10
+条
+下一页
+最后一页
+返回搜索页
+1：
+[发明]
+【中文】一种骨科用腿部恢复自由训练装置
+【EN】Shank resumes free trainer for orthopedics
+申请号：
+201911292088.8
+公开号：CN110935139A  主分类号：A63B23/04
+申请人：
+【中文】何舟【EN】He Zhou
+申请日:2019.12.16  公开日：2020.03.31
+发明人：
+【中文】何舟【EN】He Zhou
+摘要：【中文】本发明涉及骨科辅助设备技术领域，且公开了一种骨科用腿部恢复自由训练装置，包括底座，所述第一转柱的外侧设置有第一金属球，第二转柱的外部设置有第二金属球，第一调节板连接有第一导向筒，第一导向筒的左侧连接有第一导向杆，第二导向杆的下部连接有第二导向筒，支架连接有大齿轮，大齿轮的外侧设置有金属片组，大齿轮连接有小齿轮。通过连通第三驱动装置和第四驱动装置分别与第二金属片组和第一金属片组的电路，第一金属球和第二金属球分别在第二金属片组和第一金属片组的偏移角度不同，从而使得不正常肢体移动的角度与正常肢体移动的角度相同，这一结构解决了现有的腿部恢复训练装置不能自由选择训练轨迹的问题。【EN】The invention relates to the technical field of orthopedic auxiliary equipment and discloses a leg recovery free training device for orthopedics, which comprises a base, wherein a first metal ball is arranged on the outer side of a first rotary column, a second metal ball is arranged on the outer side of a second rotary column, a first adjusting plate is connected with a first guide cylinder, the left side of the first guide cylinder is connected with a first guide rod, the lower part of the second guide rod is connected with a second guide cylinder, a bracket is connected with a large gear, a metal sheet group is arranged on the outer side of the large gear, and the large gear is connected with a small gear. Through the circuit communicated with the third driving device and the fourth driving device and the second metal sheet group and the first metal sheet group respectively, the offset angles of the first metal balls and the second metal balls in the second metal sheet group and the first metal sheet group are different, so that the angle of movement of abnormal limbs is the same as the angle of movement of normal limbs, and the problem that the conventional leg recovery training device cannot freely select a training track is solved by the structure.
+详细信息
+下载全文
+2：
+[发明]
+【中文】一种腰间盘突出患者的新型牵引设备
+【EN】Novel traction equipment for patient with lumbar disc herniation
+申请号：
+201911292587.7
+公开号：CN110960393A  主分类号：A61H1/00
+申请人：
+【中文】何舟【EN】He Zhou
+申请日:2020.02.25  公开日：2020.04.07
+发明人：
+【中文】何舟【EN】He Zhou
+摘要：【中文】本发明公开一种腰间盘突出患者的新型牵引设备，包括支架，所述支架的顶部固定连接有上身支撑块，所述上身支撑块的顶部穿插设置有腋托支杆，所述支架的顶部穿插设置有齿轮，所述齿轮的顶部啮合连接诶有牵引板，所述齿轮的内部设置有绕线圈，所述阻挡板的内部设置有限位斜杆，所述阻挡板的上方设置有十字杆，所述按压块的内部设置有凸轮，所述凸轮的表面转动连接有承接杆，所述按压板的顶部固定连接有按摩弹簧，所述阻挡板的右侧设置有压力杆，所述压力杆的上方设置有夹脚板。该腰间盘突出患者的新型牵引设备，通过按压块与阻挡板的配合使用，从而达到了在牵引时根据牵引力大小而控制腰椎按摩力度，防止伤害腰椎的效果。【EN】The invention discloses novel traction equipment for patients with lumbar disc herniation, which comprises a support, wherein the top of the support is fixedly connected with an upper body supporting block, the top of the upper body supporting block is provided with an armpit supporting rod in an inserting manner, the top of the support is provided with a gear in an inserting manner, the top of the gear is meshed and connected with a traction plate, a winding coil is arranged inside the gear, a limiting inclined rod is arranged inside a blocking plate, a cross rod is arranged above the blocking plate, a cam is arranged inside a pressing block, the surface of the cam is rotatably connected with a bearing rod, the top of the pressing plate is fixedly connected with a massage spring, the right side of the blocking plate is provided with a pressure rod, and a foot clamping plate is arranged above the pressure rod. This novel traction equipment of lumbar disc herniation patient uses through the cooperation of pressing the piece and the barrier plate to reached and controlled the lumbar vertebrae massage dynamics according to traction force size when pulling, prevented the effect of injury lumbar vertebrae.
+详细信息
+下载全文
+3：
+[发明]
+【中文】一种定距追踪激光清洗设备
+【EN】Laser cleaning equipment is tracked to distance
+申请号：
+201911323872.0
+公开号：CN110976436A  主分类号：B08B7/00
+申请人：
+【中文】苏州艾思兰光电有限公司【EN】SUZHOU USILAND OPTOELECTRONIC Co.,Ltd.
+申请日:2019.12.20  公开日：2020.04.10
+发明人：
+【中文】何舟
+;
+周倩
+;
+周健【EN】He Zhou
+;
+Zhou Qian
+;
+Zhou Jian
+摘要：【中文】本发明公开了一种定距追踪激光清洗设备，涉及激光清洗技术领域，所述激光清洗设备包括三轴平台、激光器、清洗头、吸尘器、激光测距仪，控制器，所述激光器通过光纤与清洗头连接。所述清洗头固定在三轴平台的Z轴滑块上，所述吸尘器通过波纹管固定在清洗头的吸尘口上；所述激光测距仪与清洗头同高固定在三轴平台的Z轴滑块上，所述控制器通过通信线与三轴平台相连。本发明可以解决工件表面是曲面的激光清洗问题。提供一种搭载激光清洗头的三轴平台，可以带动激光清洗头在Z轴上，根据工件曲面高低变化而上下浮动调节，实现曲面工件的自动化激光清洗。【EN】The invention discloses distance tracking laser cleaning equipment, and relates to the technical field of laser cleaning. The cleaning head is fixed on a Z-axis sliding block of the three-axis platform, and the dust collector is fixed on a dust collection port of the cleaning head through a corrugated pipe; the laser range finder and the cleaning head are fixed on a Z-axis sliding block of the three-axis platform at the same height, and the controller is connected with the three-axis platform through a communication line. The invention can solve the problem of laser cleaning of the curved surface of the workpiece. The three-axis platform can drive the laser cleaning head to float up and down on a Z axis according to the height change of the curved surface of a workpiece, and automatic laser cleaning of the curved surface workpiece is achieved.
+详细信息
+下载全文
+4：
+[发明]
+【中文】一种基于机器视觉的主动激光驱鸟器
+【EN】Initiative laser drives bird ware based on machine vision
+申请号：
+201911323871.6
+公开号：CN111011353A  主分类号：A01M29/10
+申请人：
+【中文】苏州艾思兰光电有限公司【EN】SUZHOU USILAND OPTOELECTRONIC Co.,Ltd.
+申请日:2019.12.20  公开日：2020.04.17
+发明人：
+【中文】何舟
+;
+周倩
+;
+周健【EN】He Zhou
+;
+Zhou Qian
+;
+Zhou Jian
+摘要：【中文】本发明公开了一种基于机器视觉的主动激光驱鸟器，包括底座、第一调节机构、第二调节机构和驱鸟组件，第一调节机构包括支撑箱、第一电机和连接轴，第二调节机构包括支撑座、转轴、连接座和第二电机，驱鸟组件包括可见光相机、激光器和嵌入式鸟类识别系统，可见光相机用于拍摄视线范围内的图像，嵌入式鸟类识别系统根据图像识别出鸟类位置并发给激光器打鸟的信号。本发明通过第一电机带动连接轴转动能够使支撑箱水平方向旋转，通过第二电机带动转轴和连接座转动，通过连接座的转动能够调节壳体的角度，从而使壳体能够进行多角度的调节，进而提高该驱鸟器的作业区，从而提高驱鸟效果。【EN】The invention discloses an active laser bird dispeller based on machine vision, which comprises a base, a first adjusting mechanism, a second adjusting mechanism and a bird dispelling component, wherein the first adjusting mechanism comprises a supporting box, a first motor and a connecting shaft, the second adjusting mechanism comprises a supporting seat, a rotating shaft, a connecting seat and a second motor, the bird dispelling component comprises a visible light camera, a laser and an embedded bird recognition system, the visible light camera is used for shooting images in a sight range, and the embedded bird recognition system recognizes the position of birds according to the images and sends a bird beating signal to the laser. According to the bird repeller, the first motor drives the connecting shaft to rotate, so that the supporting box can rotate in the horizontal direction, the second motor drives the rotating shaft and the connecting seat to rotate, and the angle of the shell can be adjusted through the rotation of the connecting seat, so that the shell can be adjusted at multiple angles, the operation area of the bird repeller is further improved, and the bird repelling effect is further improved.
+详细信息
+下载全文
+5：
+[发明]
+【中文】一种轮胎模具自动化激光清洗机
+【EN】Automatic laser cleaning machine for tire molds
+申请号：
+202010098928.3
+公开号：CN111215397A  主分类号：B08B7/00
+申请人：
+【中文】苏州艾思兰光电有限公司【EN】SUZHOU USILAND OPTOELECTRONIC Co.,Ltd.
+申请日:2020.02.18  公开日：2020.06.02
+发明人：
+【中文】何舟
+;
+周倩
+;
+周健【EN】He Zhou
+;
+Zhou Qian
+;
+Zhou Jian
+摘要：【中文】本发明公开了一种轮胎模具自动化激光清洗机，包括框架和导轨,框架内设置有导轨，导轨固定安装在框架内的底部，且导轨的一侧穿出框架，导轨上传动连接有移动平台，框架内设置有机器人，六轴机器人上设置有用于清洗轮胎的清洗头，清洗头包括第一安装件和第一管道，第一安装件固定安装在机器人的底端，第一管道设置在第一安装件上，第一管道与第一安装件的中部穿插固定。本发明利用移动平台实现轮胎的进出和中心位置矫正，降低了劳动强度，提高了清洗效率；本发明通过清洗头对轮胎进行清洗，降低了清洗成本；本发明轮胎模具清洗机自动化集成度高，工作只需一人操作即可，节省人员，提升效率，提高加工质量。【EN】The invention discloses an automatic laser cleaning machine for a tire mold, which comprises a frame and a guide rail, wherein the guide rail is arranged in the frame, the guide rail is fixedly arranged at the bottom in the frame, one side of the guide rail penetrates out of the frame, a moving platform is connected onto the guide rail in a transmission manner, a robot is arranged in the frame, a cleaning head for cleaning a tire is arranged on a six-axis robot, the cleaning head comprises a first mounting piece and a first pipeline, the first mounting piece is fixedly arranged at the bottom end of the robot, the first pipeline is arranged on the first mounting piece, and the first pipeline and the middle part of the first mounting piece are fixedly inserted and penetrated. The invention realizes the in-and-out and center position correction of the tire by utilizing the mobile platform, thereby reducing the labor intensity and improving the cleaning efficiency; the tire is cleaned by the cleaning head, so that the cleaning cost is reduced; the tire mold cleaning machine disclosed by the invention is high in automation integration level, only one person is needed for working, personnel are saved, the efficiency is improved, and the processing quality is improved.
+详细信息
+下载全文
+6：
+[发明]
+【中文】一种一字激光除冰装置
+【EN】Line laser defroster
+申请号：
+202010098927.9
+公开号：CN111181117A  主分类号：H02G7/16
+申请人：
+【中文】苏州艾思兰光电有限公司【EN】SUZHOU USILAND OPTOELECTRONIC Co.,Ltd.
+申请日:2020.02.18  公开日：2020.05.19
+发明人：
+【中文】何舟
+;
+周倩
+;
+周健【EN】He Zhou
+;
+Zhou Qian
+;
+Zhou Jian
+摘要：【中文】本发明公开了一种一字激光除冰装置，包括支架和底座，其特征在于，支架的顶端固定安装有电动转台，电动转台的顶端固定安装有激光出射头，激光出射头的背面固定安装有控制器。该种一字激光除冰装置，通过在支架上设置激光出射头以及通过控制器来控制激光出射头，使得激光出射头射出水平一字型光斑，从而完成除冰的效果，采用该种方式可以远程、“地对空”进行作业，除冰过程无需接触，过程安全，取代了机械除冰等需要接触式操作的方式；同时可带电作业，减少断电带来的经济损失，由于智能化特性强，采用相机进行识别与反馈线缆或塔架等及其覆冰覆雪，有利于促进与完善除冰工作的执行。【EN】The invention discloses a line laser deicing device which comprises a support and a base and is characterized in that an electric rotary table is fixedly installed at the top end of the support, a laser emitting head is fixedly installed at the top end of the electric rotary table, and a controller is fixedly installed on the back face of the laser emitting head. According to the in-line laser deicing device, the laser emitting head is arranged on the support and is controlled by the controller, so that the laser emitting head emits horizontal in-line light spots, and the deicing effect is achieved; meanwhile, live working can be carried out, economic loss caused by power failure is reduced, and due to the fact that the intelligent characteristic is strong, a camera is adopted to recognize and feed back cables or towers and the like and the icing and snow covering of the cables or towers are beneficial to promoting and perfecting the execution of deicing work.
+详细信息
+下载全文
+7：
+[发明]
+【中文】一种激光除障仪
+【EN】Laser obstacle removing instrument
+申请号：
+202010098925.X
+公开号：CN111130015A  主分类号：H02G1/02
+申请人：
+【中文】苏州艾思兰光电有限公司【EN】SUZHOU USILAND OPTOELECTRONIC Co.,Ltd.
+申请日:2020.02.18  公开日：2020.05.08
+发明人：
+【中文】何舟
+;
+周倩
+;
+周健【EN】He Zhou
+;
+Zhou Qian
+;
+Zhou Jian
+摘要：【中文】本发明公开了一种激光除障仪，包括光纤激光器、控制云台、三脚架、瞄准控制器、电池组、电源线、激光发射器和无线遥控，光纤激光器通过光纤与激光发射器连接，电池组通过电源线与光纤激光器连接，激光发射器通过快装板固定在控制云台上。本发明激光除障仪，可以远程、“地对空”进行作业，除冰过程无需接触，过程安全，取代了登高梯，人工攀爬等需要接触式操作的方式，且可带电作业，减少断电带来的经济损失，采用光纤激光器，电光转换效率高、整机的耗电功率低，集成化程度高，采用目标显示、方向控制与激光控制集成一体的遥控键盘进行瞄准、云台方向调节、激光功率调节和出光控制，极大的降低了的操作人员的工作安全风险。【EN】The invention discloses a laser obstacle removing instrument which comprises a fiber laser, a control holder, a tripod, an aiming controller, a battery pack, a power line, a laser transmitter and a wireless remote controller, wherein the fiber laser is connected with the laser transmitter through an optical fiber, the battery pack is connected with the fiber laser through the power line, and the laser transmitter is fixed on the control holder through a quick-mounting plate. The laser obstacle removing instrument can be used for remotely operating in a ground-to-air mode, does not need to contact in the deicing process, is safe in process, replaces modes of contact operation such as climbing stairs and manual climbing, can be used for live working, reduces economic loss caused by power failure, is high in electro-optical conversion efficiency, low in power consumption of the whole machine and high in integration degree by adopting the optical fiber laser, aims, adjusts the direction of a holder, adjusts the laser power and controls light emission by adopting a remote control keyboard integrating target display, direction control and laser control, and greatly reduces the work safety risk of operators.
+详细信息
+下载全文
+8：
+[发明]
+【中文】一种移动式大型瓜果分级清洁设备及其使用方法
+【EN】Movable large-scale melon and fruit grading and cleaning equipment and using method thereof
+申请号：
+201911163207.X
+公开号：CN110946296A  主分类号：A23N12/06
+申请人：
+【中文】深圳市顺盛农业科技发展有限公司【EN】Shenzhen Shunsheng Agricultural Technology Development Co., Ltd.
+申请日:2019.11.25  公开日：2020.04.03
+发明人：
+【中文】贺文俪
+;
+贺亮
+;
+周涛【EN】He Wenli
+;
+He Liang
+;
+Zhou Tao
+摘要：【中文】本发明公开了一种移动式大型瓜果分级清洁设备及其使用方法，包括工作架，所述工作架的内侧壁上固定连接有清洁桶，所述清洁桶的上端口转动连接有转动杆，所述转动杆的圆周侧壁上固定连接有多个第一清洁毛，所述工作架上固定连接有用于驱动转动杆转动的驱动机构；所述工作架的内侧壁上固定连接有弧形板，所述弧形板的两侧分别设置有第一转筒和第二转筒，所述第一转筒和第二转筒的圆周侧壁上均固定连接有多个第二清洁毛，所述第一转筒的两端均转动连接在工作架的内侧壁上，所述工作架上固定连接有用于驱动第二转筒转动连接的第一伺服电机，本发明实现了对瓜果的清洗，同时便于对清洗后瓜果的吹干。【EN】The invention discloses a movable large-scale melon and fruit grading cleaning device and a using method thereof, and the movable large-scale melon and fruit grading cleaning device comprises a working frame, wherein a cleaning barrel is fixedly connected to the inner side wall of the working frame, the upper port of the cleaning barrel is rotatably connected with a rotating rod, a plurality of first cleaning bristles are fixedly connected to the circumferential side wall of the rotating rod, and a driving mechanism for driving the rotating rod to rotate is fixedly connected to the working frame; the melon and fruit cleaning machine is characterized in that an arc-shaped plate is fixedly connected to the inner side wall of the working frame, a first rotary drum and a second rotary drum are respectively arranged on two sides of the arc-shaped plate, a plurality of second cleaning hairs are fixedly connected to the circumferential side walls of the first rotary drum and the second rotary drum, two ends of the first rotary drum are rotatably connected to the inner side wall of the working frame, and a first servo motor for driving the second rotary drum to rotatably connect is fixedly connected to the working frame.
+详细信息
+下载全文
+9：
+[发明]
+【中文】一种减少创口面积的钢板螺钉内固定术设备
+【EN】Reduce steel sheet screw internal fixation art equipment of wound area
+申请号：
+201911292081.6
+公开号：CN110974381A  主分类号：A61B17/68
+申请人：
+【中文】何舟【EN】He Zhou
+申请日:2019.12.16  公开日：2020.04.10
+发明人：
+【中文】何舟
+;
+周芳【EN】He Zhou
+;
+Zhou Fang
+摘要：【中文】本发明涉及骨外科钢板螺钉固定技术领域，且公开了一种减少创口面积的钢板螺钉内固定术设备，包括螺杆，所述螺杆的两端均活动连接有推杆，推杆远离螺杆的一端活动连接有滑块，滑块的背部固定连接有弹性刀，弹性刀的表面活动连接有导轨，所述螺杆的内部活动连接有弹簧杆，弹簧杆的表面活动连接有爪钩，爪钩的内部活动连接有啮合轮。弹性刀被挤压会产生轻微形变，且此形变范围刚好覆盖消毒件，故其内部的盐水袋会被弹性刀划开，另一部分从导流管流向爪钩内部的液流槽中，后被因螺杆挤压的弹簧杆从爪钩与切口表面的一端流出，且此过程中发生在由螺杆与推杆构成的密封空间中，从而达到了在密封空间中对患者的伤口进行处理消费的效果。【EN】The invention relates to the technical field of bone surgery steel plate screw fixation, and discloses steel plate screw internal fixation equipment for reducing wound area. The elastic knife is slightly deformed when being extruded, and the deformation range just covers the disinfection piece, so that the saline bag in the elastic knife can be cut open, the other part of the saline bag flows into a liquid flow groove in the claw hook from the flow guide pipe, then the saline bag flows out from one end of the claw hook and the cut surface due to the spring rod extruded by the screw rod, and the saline bag in the process flows out from the sealed space formed by the screw rod and the push rod, so that the effect of treating and consuming the wound of a patient in the sealed space is achieved.
+详细信息
+下载全文
+10：
+[发明]
+【中文】一种和胃解毒胶囊在制备镇痛药物、促胃排空药物或促肠道运动药物方面的应用
+【EN】Application of capsule for harmonizing stomach and detoxifying in preparation of analgesic, gastric emptying-promoting or intestinal tract movement-promoting medicines
+申请号：
+202010212868.3
+公开号：CN111202781A  主分类号：A61K36/752
+申请人：
+【中文】湖南新汇制药股份有限公司【EN】Hunan Xinhui Pharmaceutical Co.,Ltd.
+申请日:2020.03.24  公开日：2020.05.29
+发明人：
+【中文】何述金
+;
+周代俊
+;
+何承东【EN】He Shujin
+;
+Zhou Daijun
+;
+He Chengdong
+摘要：【中文】本发明涉及一种和胃解毒胶囊在制备镇痛药物、促胃排空药物或促肠道运动药物方面的应用，通过实验发现，和胃解毒胶囊对冰醋酸所致小鼠扭体反应具有明显的抑制作用，并且能够促进胃排空与肠推进；相较于阳性对照药参莲胶囊，中剂量的和胃解毒胶囊(6g生药/kg，相当于剂量1.26g/kg)药效作用优于剂量为2.34g/kg参莲胶囊。【EN】The invention relates to an application of a capsule for harmonizing stomach and detoxifying in the preparation of analgesic drugs, drugs for promoting gastric emptying or drugs for promoting intestinal tract movement, and experiments show that the capsule for harmonizing stomach and detoxifying has an obvious inhibiting effect on mouse writhing reaction caused by glacial acetic acid and can promote gastric emptying and intestinal propulsion; compared with the positive control medicine, the Shenlian capsule has better drug effect (6g crude drug/kg, equivalent to 1.26g/kg) than the Shenlian capsule with 2.34 g/kg.
+详细信息
+下载全文
+共
+1759
+条，当前第
+1-10
+条
+下一页
+最后一页
+返回搜索页
+Patent9 专利在线
+快捷、高效的中国专利搜索、分析和下载平台。数据库涵盖自1985年至今的全部中国专利，支持发明专利、实用新型专利、外观设计专利的检索与下载。
+快捷入口
+专利搜索
+最新公布
+检索技巧
+相关链接
+关于我们
+使用帮助
+联系方式
+Copyright ©
+Patent9专利在线
+. All Rights Reserved.

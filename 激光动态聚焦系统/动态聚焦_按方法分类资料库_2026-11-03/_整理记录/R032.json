@@ -1,0 +1,35 @@
+{
+  "url": "https://www.aerotech.com/wp-content/uploads/2021/12/AGV3D-7.pdf",
+  "category": "01_移动透镜式与匹配光学",
+  "origins": [
+    "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+    "苏州艾思兰_动态聚焦资料\\设备自研方案与选型表.md"
+  ],
+  "context": "\n- 核查范围与注意事项：直驱聚焦机构；Z精度0.5 μm、重复性0.15 μm是聚焦机构位置指标。不同版本的供电与预热条件不宜混用。手册：https://www.aerotech.com/wp-content/uploads/2021/12/AGV3D-7.pdf",
+  "id": "R032",
+  "files": [
+    {
+      "path": "01_移动透镜式与匹配光学\\R031_Aerotech_AGV3D_产品页与安装使用手册.pdf",
+      "type": "PDF",
+      "pages": 60,
+      "bytes": 1883064,
+      "sha256": "1953b1e0c0ff049a3d28916ca64c7fff7d4602b682bc97458cf740ee611bc373",
+      "url": "https://www.aerotech.com/wp-content/uploads/2021/12/AGV3D-7.pdf",
+      "text_chars": 63659,
+      "title": "My Document",
+      "preview": "Revision2.01\nAGV3D Three-Axis Laser Scan Head\nHARDWARE MANUAL\n\nGLOBAL TECHNICAL SUPPORT\nGotothe GlobalTechnicalSupportPortal forinformationandsupportaboutyour\nAerotech,Inc.products.Thewebsitesuppliessoftware,productmanuals,Helpfiles,\ntrainingschedules,andPC-to-PCremotetechnicalsupport.Ifnecessary,youcan\ncompleteProductReturn(RMA)formsandgetinformationaboutrepairsandspare\norreplacementparts.Togethelpimmediately,contactaserviceofficeoryoursales\nrepresentative.Includeyourcustomerordernumberinyourem",
+      "validation": "PDF签名、逐页解析、首末页渲染通过",
+      "duplicate": true
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://www.aerotech.com/wp-content/uploads/2021/12/AGV3D-7.pdf",
+      "http": 200,
+      "final_url": "https://www.aerotech.com/wp-content/uploads/2021/12/AGV3D-7.pdf",
+      "result": "有效PDF"
+    }
+  ],
+  "status": "PDF已下载",
+  "title": "Aerotech_AGV3D_安装使用手册"
+}

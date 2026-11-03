@@ -1,0 +1,51 @@
+{
+  "url": "https://patents.google.com/patent/US20240393604A1/en",
+  "category": "06_可变发散角激光源",
+  "origins": [
+    "Gemini输出.txt",
+    "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+    "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md",
+    "苏州艾思兰_动态聚焦资料\\来源清单.csv"
+  ],
+  "context": "原文提到的专利号，补全公开文本入口；标题及相关性待与原件核对",
+  "id": "R013",
+  "files": [
+    {
+      "path": "06_可变发散角激光源\\R013_US20240393604A1 - Variable divergence laser for dynamic focus adjustment _      - Google Patents.html",
+      "type": "HTML",
+      "bytes": 285898,
+      "sha256": "388b06103c86696dcc7ff9ded3f0d42260c1049e50b04eb16fd5973bd0c24d63",
+      "url": "https://patents.google.com/patent/US20240393604A1/en",
+      "title": "US20240393604A1 - Variable divergence laser for dynamic focus adjustment \n      - Google Patents",
+      "text_chars": 94923
+    },
+    {
+      "path": "06_可变发散角激光源\\R013_US20240393604A1 - Variable divergence laser for dynamic focus adjustment - Google Patents.pdf",
+      "type": "PDF",
+      "pages": 20,
+      "bytes": 1954142,
+      "sha256": "0eaf57735141ff3e4da8ca83021b94b987cc95c232527286f7c497c43e7d4846",
+      "url": "https://patentimages.storage.googleapis.com/07/93/2a/802f8f80534a22/US20240393604A1.pdf",
+      "text_chars": 38,
+      "title": "US020240393604A120241128",
+      "preview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://patents.google.com/patent/US20240393604A1/en",
+      "http": 200,
+      "final_url": "https://patents.google.com/patent/US20240393604A1/en",
+      "result": "网页"
+    },
+    {
+      "url": "https://patentimages.storage.googleapis.com/07/93/2a/802f8f80534a22/US20240393604A1.pdf",
+      "http": 200,
+      "final_url": "https://patentimages.storage.googleapis.com/07/93/2a/802f8f80534a22/US20240393604A1.pdf",
+      "result": "有效PDF"
+    }
+  ],
+  "title": "US20240393604A1 - Variable divergence laser for dynamic focus adjustment - Google Patents",
+  "status": "PDF已下载"
+}

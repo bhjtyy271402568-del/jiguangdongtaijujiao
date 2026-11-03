@@ -1,0 +1,49 @@
+{
+  "url": "https://patents.google.com/patent/CN104191089A/zh",
+  "category": "01_移动透镜式与匹配光学",
+  "origins": [
+    "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md",
+    "苏州艾思兰_动态聚焦资料\\来源清单.csv"
+  ],
+  "context": "\n   [Google Patents](https://patents.google.com/patent/CN104191089A/en)",
+  "id": "R053",
+  "files": [
+    {
+      "path": "01_移动透镜式与匹配光学\\R053_CN104191089A - 基于激光器输出光束的三维动态聚焦标刻系统及方法 _        - Google Patents.html",
+      "type": "HTML",
+      "bytes": 117547,
+      "sha256": "41316c055abe4771b1695e6004cd9b4f8cb7638d7bcaa31208cbe27952cfcf35",
+      "url": "https://patents.google.com/patent/CN104191089A/zh",
+      "title": "CN104191089A - 基于激光器输出光束的三维动态聚焦标刻系统及方法 \n        - Google Patents",
+      "text_chars": 17028
+    },
+    {
+      "path": "01_移动透镜式与匹配光学\\R053_CN104191089A - 基于激光器输出光束的三维动态聚焦标刻系统及方法 - Google Patents.pdf",
+      "type": "PDF",
+      "pages": 10,
+      "bytes": 577283,
+      "sha256": "9ed82292c2e5d27bc533e73fbf1dc4cb6741dd1a2324e57b6517bd5dd60dad1d",
+      "url": "https://patentimages.storage.googleapis.com/88/36/85/d45978ac46e219/CN104191089A.pdf",
+      "text_chars": 18,
+      "title": "",
+      "preview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://patents.google.com/patent/CN104191089A/zh",
+      "http": 200,
+      "final_url": "https://patents.google.com/patent/CN104191089A/zh",
+      "result": "网页"
+    },
+    {
+      "url": "https://patentimages.storage.googleapis.com/88/36/85/d45978ac46e219/CN104191089A.pdf",
+      "http": 200,
+      "final_url": "https://patentimages.storage.googleapis.com/88/36/85/d45978ac46e219/CN104191089A.pdf",
+      "result": "有效PDF"
+    }
+  ],
+  "title": "CN104191089A - 基于激光器输出光束的三维动态聚焦标刻系统及方法 - Google Patents",
+  "status": "PDF已下载"
+}

@@ -1,0 +1,25 @@
+{
+  "url": "https://www.aerotech.com/product-category/laser-processing/",
+  "category": "01_移动透镜式与匹配光学",
+  "origins": [
+    "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md",
+    "苏州艾思兰_动态聚焦资料\\来源清单.csv"
+  ],
+  "context": "\n3. **Aerotech AGV/OptoMotive 3D扫描方案**：提供高速扫描与三维加工平台，适合精密制造集成评估。 [产品入口](https://www.aerotech.com/product-category/laser-processing/)",
+  "id": "R061",
+  "files": [],
+  "attempts": [
+    {
+      "url": "https://www.aerotech.com/product-category/laser-processing/",
+      "http": 200,
+      "final_url": "https://www.aerotech.com/wp-content/uploads/2026/05/Laser-Processing.jpg",
+      "result": "网页"
+    },
+    {
+      "url": "https://www.aerotech.com/wp-content/uploads/2026/05/Laser-Processing.jpg",
+      "error": "终检排除：非网页内容"
+    }
+  ],
+  "title": "Aerotech激光加工产品总入口_返回异常内容",
+  "status": "未获取"
+}

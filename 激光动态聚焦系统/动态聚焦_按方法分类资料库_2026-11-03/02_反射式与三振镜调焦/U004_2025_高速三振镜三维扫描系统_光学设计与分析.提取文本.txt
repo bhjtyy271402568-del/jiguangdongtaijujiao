@@ -1,0 +1,681 @@
+Full length article
+Optical design and analysis of a high-speed triple galvanometer laser 3D 
+scanning system
+Yi Liu a,1, Tianting Chen a,1, Yaqing Qiao a, Yuhang Ding a, Ziqiang Dan b, Wangrong Lu a,  
+Haoran Ma a, Guiyang Yang a, Chenfei Zhang c, Wei Xiong a, Leimin Deng a,*
+a Wuhan National Laboratory for Optoelectronics, Huazhong University of Science and Technology, Wuhan, Hubei 430074, China
+b Key Laboratory of Science and Technology on Tunable Laser, Harbin Institute of Technology, Harbin, Heilongjiang 150006, China
+c Medtronic Inc, 2343 W Medtronic Way, Tempe, AZ 85281, USA
+A R T I C L E I N F O
+Keywords:
+Laser scanning
+Dynamic focus
+3D Scanning range
+Optical design
+A B S T R A C T
+In this paper, a triple galvanometer laser three-dimensions (3D) scanning system (TGLSS) was proposed. The 
+system consisted of three galvanometers and two parabolic mirrors, with rapid movement of the laser focus in 3D 
+space by rotations of the three galvanometers. The optical principle of the TGLSS was analyzed, and the method 
+of designing TGLSS by geometrical optics and Abbe’s sine condition was given in detail. Scanning range and 
+focusing quality were analyzed by optical simulations. An experiment was carried out to verify the feasibility of 
+TGLSS. The implications of TGLSS for reflective dynamic focusing device (RDFD)-based laser system and their 
+impact on technologically relevant applications were discussed. The great potential for enhancing the speed of 
+advanced laser processing in 3D space was offered by TGLSS.
+1. Introduction
+Laser scanning has a wide range of applications, such as 
+manufacturing [1–4], texture processing [5–7], cutting [8–10], cleaning 
+[11–14], and imaging [15,16]. The speed and precision of laser scanning 
+affect the efficiency and quality of the laser processes [17–19], which 
+are the most critical concerns during the processing. For curved parts, 
+line width and scanning continuity could affect the dimensional accu­
+racy or functional characteristics of the finished product [20,21]. Due to 
+its simple structure, high speed, and high precision, a two-axis galva­
+nometer is commonly used for two-dimensional (2D) laser scanning 
+[22,23]. The scanning speed on the plane perpendicular to the optical 
+axis (XY plane) can reach 10 m/s [24]. With the complexity of scanned 
+workpieces and requirements, the need for laser scanning has been put 
+forward in three dimensions (3D). Achieving a rapid movement of the 
+focus in the axial (Z-) direction is the main challenge in laser scanning 
+from 2D to 3D. Conventional Z-focusing control methods are mainly 
+based on the mechanical movement of optical components [25–27]. The 
+Z-focusing speed is significantly limited by the moving speed of the 
+optical components and their attachments. Consequently, the scanning 
+speed of the laser focus in the Z-direction is three orders of magnitude 
+slower than in the X- and Y-directions [28] and the 3D scanning speed of 
+laser systems is limited.
+Recently, advanced Z-focusing optical elements have emerged to 
+meet the needs of industry and science. Methods based on electro- 
+wetting [29,30], shape-variable lenses [31–33] or Alvarez lenses 
+[34–36] allow for rapid movement of the Z-focus. However, the curva­
+tures of the lenses are difficult to control precisely, and the 3D scanning 
+speed of the laser systems based on the above varifocal optics is also 
+limited to the order of 1 m/s due to the slow response rate [27]. 
+Reflective dynamic focusing devices (RDFDs) use two highly dynamic 
+properties galvanometers to convert angular motion into axial motion, 
+increasing the laser scanning speed in the Z-direction [37–39]. However, 
+the optical principle of RDFDs is not well discussed, the relationship 
+between structure and aberration has not been analyzed, and no sys­
+tematic design method has been proposed. In addition, an RDFD-based 
+laser 3D scanning system requires a total of four galvanometers, 
+resulting in high costs, large volume and requiring four control channels.
+In this paper, the optical principle for RDFDs was analyzed and the 
+design method was proposed. A triple galvanometer laser 3D scanning 
+system (TGLSS) was proposed based on the method, with 3D scanning 
+speed up to 10 m/s. Specifically, as shown in Fig. 1, two parabolic 
+* Corresponding author.
+E-mail address: dlm@hust.edu.cn (L. Deng). 
+1 These authors contributed equally to this work.
+Contents lists available at ScienceDirect
+Optics and Laser Technology
+journal homepage: www.elsevier.com/locate/optlastec
+https://doi.org/10.1016/j.optlastec.2024.111608
+Received 2 January 2024; Received in revised form 3 August 2024; Accepted 10 August 2024  
+Optics & Laser Technology 181 (2025) 111608 
+Available online 29 August 2024 
+0030-3992/© 2024 Published by Elsevier Ltd. 
+
+
+mirrors (PM1, PM2), three galvanometers (G1, G2 and G3) and an F-theta 
+lens (FL) were utilized. The rotation angle Δα of the G1 and the rotation 
+angle Δβ of the G2 together determined the Z-coordinate of the focus, in 
+addition, the rotation angle Δβ of the G2 also determined the X-coor­
+dinate of the focus. The rotation angle Δγ of the G3 determined the Y- 
+coordinate of the focus. Different 3D scanning ranges could be realized 
+by different combinations of the rotation angles of the three galva­
+nometers. Since three identical galvanometers had the same dynamic 
+properties, it was possible to manipulate the laser focus with high speed, 
+high precision, and synchronization. In addition, the TGLSS was less 
+expensive, smaller, and had fewer control channels compared to the 
+conventional RDFD-based laser 3D scanning system.
+2. Optical design
+2.1. Design and analysis of Z-focus module
+The design scheme diagram of the Z-focus module of a TGLSS and 
+part of the geometrical optical path model were shown in Fig. 2. The D 
+was the laser beam diameter. The PM1 and PM2 were two parabolic 
+mirrors with the same focal length f and off-axis angle α. G1 and G2 were 
+the galvanometers placed at the focal points of PM1 and PM2, whose 
+rotary axes passed through the focal points of PMs. The rotation angles 
+of G1 and G2 were equivalent, and the rotation directions were opposite, 
+denoted by Δα and −Δα respectively. So that the deflection angles of the 
+optical paths were 2Δα and −2Δα respectively. Since the edge rays from 
+G1 were not pass through the focal point of PM1, the edge rays exiting 
+PM1 were not parallel but converge between PM1 and PM2 to form the 
+primary focus F.
+When the galvanometers were rotated, the path of F formed a tilted 
+image plane between PM1 and PM2, as shown by the blue solid line in 
+Fig. 2(a). When F located in the middle position of PM1 and PM2, the Z- 
+focus module was a symmetric structure, which satisfied the Abbe sine 
+condition [40], in which case the focus had no coma and spherical ab­
+errations. For the α corresponding to this F, the distance L between PM1 
+and PM2 in this case was LBest. When G1 and G2 were rotated around α 
+corresponding to LBest, the object plane of PM2 and the image plane of 
+PM1 do not coincide, as shown by the blue dashed line in Fig. 2(a). When 
+the primary focus F’ was in the positive focusing region, the focus was 
+shifted in the + Z direction, and when the primary focus F’’ was in the 
+negative focusing region, the focus was tuned in the −Z direction and 
+focused by the FL, as shown in the focal planes (FPs) FP1, FP2 and FP3 in 
+Fig. 2(a).
+Fig. 2(b) represented the optical path of the laser from G1 to the 
+primary focus F. For the rays emanating from the center G1 and edge Ge1, 
+could be calculated using the following equations: 
+⎧
+⎪
+⎪
+⎪
+⎪
+⎪
+⎨
+⎪
+⎪
+⎪
+⎪
+⎪
+⎩
+tanα = yB1/(f −xB1)
+y2
+B1 = 2pxB1 = 4fxB1
+yB1 = (−2f +̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅
+4f2 + 4f2tan2α
+√
+)/tanα
+(1) 
+⎧
+⎪
+⎪
+⎪
+⎪
+⎪
+⎨
+⎪
+⎪
+⎪
+⎪
+⎪
+⎩
+tanα = yBe1/(f −d/2 −xBe1)
+y2
+Be1 = 2pxBe1 = 4fxBe1
+yBe1 = (−2f +̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅
+4f2 −2dftan2α + 4f2tan2α
+√
+)/tanα
+(2) 
+where B1 and Be1 were the intersection of the chief ray with PM1 and the 
+intersection of the edge ray and PM1, respectively. The focal parameter 
+of the parabola was p, and the laser diameter D was projected on the x- 
+axis at a distance d. The angular relationship between the chief ray and 
+the edge ray satisfies: 
+α = η1 + δ1
+θ1 = η1 −δ1
+(3) 
+{ kl1 = tan(π/2 −δ1)
+kl1 = 2f/yBe1
+(4) 
+θ1 = α −π + 2arctan(kl1)
+(5) 
+where η1 was the angle of incidence of the edge ray, θ1 was the angle 
+between the chief ray and the edge ray, and δ1 was the angle between the 
+normal at point Be1 and the x-axis. kl1 was the slope of the tangent line at 
+Be1. The intersection F1 of the edge ray from Be1 with the chief ray could 
+be calculated: 
+xF1 = xBe1 + (yB1 −yBe1)/tanθ1
+= f −d/2 + (2f −m1)/tan2α +̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅
+4f2 + 4f2tan2α
+√
+−m1
+tanαtan(α + 2arctan(2ftanα/(m1 −2f)))
+(6) 
+m1 =̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅
+4f2 −2dftan2α + 4f2tan2α
+√
+Similarly, the intersection F2 of the edge ray from Be2 with the chief ray 
+could be calculated: 
+xF2 = f + d/2 + (2f
+−m2)/tan2α +̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅
+4f2 + 4f2tan2α
+√
+−m2
+tanαtan(α + 2arctan(2ftanα/(m2 −2f)))
+(7) 
+m2 =̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅
+4f2 + 2dftan2α + 4f2tan2α
+√
+When the distance L was equal to the sum of xF1 and xF2, the PM1 and 
+PM2 were symmetric with respect to point F. According to Abbe sine 
+condition, the distance L in this case was LBest at no aberration could be 
+obtained to satisfy: 
+Fig. 1. A conceptual design of a TGLSS.
+Fig. 2. Z-focus module of the TGLSS (a) Schematic diagram; (b) part of the 
+optical path.
+Y. Liu et al.                                                                                                                                                                                                                                      
+Optics and Laser Technology 181 (2025) 111608 
+2 
+
+
+LBest = 2f + 4f/tan2α +
+∑
+2
+i=1
+(̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅
+4f2 + 4f2tan2α
+√
+−mi
+tanαtan(α + 2arctan(2α/(mi −2f)))
+−mi/tan2α)
+(8) 
+The relationship between the LBest and the parameters α and f 
+calculated by Eq. (8) was shown in Fig. 3. It could be seen that the LBest 
+increased with α or f increased. This was due to that the location of the 
+more distant primary focus F determined by a larger α or f.
+When the diffraction of the ray was considered, the Strehl ratio 
+(STRH) reflected the effect of the laser light on the focusing effect in 
+terms of energy [41]. Therefore, the STRH was used to evaluate the 
+focusing effect within the scanning range, taking the value of 0 to 1, with 
+the closer to 1 indicating better focusing. A STRH ≥0.8 was generally 
+considered to correspond to diffraction-limited performance and effec­
+tive processing. For STRH≤0.3, the behavior of the STRH became un­
+correlated to the processing quality due to large aberrations [41]. The 
+STRH at the focus of the ZEMAX simulation was shown in Fig. 4 when f 
+and L were varied, and Fig. 4(a)~(c) were for α = 30◦, 45◦, and 60◦, 
+respectively. The simulation results showed that for a given value of α, 
+there was a region of best focusing effect (the yellow part of the figure), 
+and this region varies with f and L.
+The red curves in Fig. 4(a)~(c) showed the LBest calculated by Eq. (8). 
+With α = 30◦, the LBest increased from 228.708 mm to 457.432 mm when 
+f increased from 100 mm to 200 mm. With α = 45◦, the LBest increased 
+from 268.606 mm to 537.247 mm when f increased from 100 mm to 200 
+mm. With α = 60◦, the LBest increased from 333.293 mm to 666.647 mm 
+when f increased from 100 mm to 200 mm. The LBest results calculated 
+by Eq. (8) were all within the optimal STRH region for the ZEMAX 
+simulation, which proved the accuracy of the equation. The detailed 
+data were shown in Table 1.
+After determining the LBest based on the data in Table 1, the Z-focus 
+module of the TGLSS could be determined. With FL (focal length fFL =
+100 mm) focusing, the variation of the Z-coordinate of the focal point (Z) 
+with Δα of G1 (−Δα of G2) and f of PMs (α = 30◦, 45◦, 60◦) could be 
+calculated. The specific curves were shown in Fig. 5. When the Δα of G1 
+varied from −2◦to 2◦(−Δα of G2 varied from 2◦to −2◦), Z increased 
+with increasing Δα. The magnitude of this change decreased with 
+increasing f and increased with increasing α.
+The ΔZ was used to represent the Z-focus range when Δα varied 
+between −2◦and 2◦, as shown in Table 2.
+2.2. Design and analysis of X- and Y- focus model
+In the proposed Z-focus module of the TGLSS, by rotating G1 and G2 
+located at the focal points of PM1 and PM2, the movement of the focus 
+along the Z-direction could be realized to determine the focal plane of 
+the TGLSS. By setting a G3 at a distance l after the G2 with a rotational 
+axis orthogonal to the G2 rotational axis, the G2 and G3 could form the X- 
+and Y- focus module of the TGLSS. The detailed process was shown in 
+Fig. 6.
+The relationship between the position of the focus in the determined 
+Z-plane and the rotation angles was shown in Fig. 6. It could be seen that 
+the focus position in the X-direction could be changed by further 
+rotating the rotation axis R2 of G2, and the focus position in the Y-di­
+rection could be changed by rotating the rotation axis R3 of G3, and the 
+rotation angles θx of G2 and θy of G3 could be derived as 
+θx = 1
+2 arctan(x/(l +̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅
+h2 + y2
+√
+))
+(9) 
+θy = 1
+2 arctan(y/h)
+(10) 
+where x and y were the coordinates of laser focus P position, l was the 
+distance between the center of G2 and G3, and h was the distance be­
+tween the center of G3 and the laser focus P along the Z-direction.
+2.3. Parameter analysis and scanning simulation
+Combined with 2.1 and 2.2, the rotation Δα of G1 was determined by 
+the Z-coordinate of the focus P, the rotation Δβ of G2 was determined by 
+the Z- and X-coordinates of the focus P, and the rotation Δγ of G3 was 
+determined by the Y-coordinate of the focus P. The rotation of G2 
+satisfied the following equation: 
+⎧
+⎨
+⎩
+Δα = Δα(Z)
+Δβ = −Δα + θx
+Δγ = θy
+(11) 
+Fig. 3. Results of the theoretical analysis: variations of LBest with α and 
+f (D=8mm).
+Fig. 4. Theoretical and ZEMAX simulation analysis results: variation of LBest with α and f (D=8 mm).
+Table 1 
+Theoretically calculated values of LBest (mm).
+f = 100 mm
+f = 125 mm
+f = 150 mm
+f = 175 mm
+f = 200 mm
+α =
+30◦
+228.708
+285.890
+343.071
+400.252
+457.432
+α =
+45◦
+268.606
+335.768
+402.928
+470.088
+537.247
+α =
+60◦
+333.293
+416.635
+499.973
+583.316
+666.647
+Y. Liu et al.                                                                                                                                                                                                                                      
+Optics and Laser Technology 181 (2025) 111608 
+3 
+
+
+Fig. 7 showed the simulation of the 3D scanning range and focusing 
+effect of the TGLSS. The volume of the cube represented the 3D scanning 
+range, and the color bar represented the STRH value of the focusing 
+point. Δα ranged from −2◦to + 2◦, θx from −5◦to + 5◦, and θy from −5◦
+to + 5◦. At off-axis angle α = 30◦, 45◦, and 60◦, the 3D scanning range 
+decreased with increasing parabolic focal length f, and when f = 100 
+mm, 125 mm, 150 mm, 175 mm, 200 mm, the 3D scanning range 
+increased with the increasing α.
+The variations of focus uniformity with respect to α and f were shown 
+in Fig. 7. At α = 30◦, 45◦, and 60◦, the focus uniformity improved in the 
+scanning range with increasing f. When f = 100 mm, 125 mm, 150 mm, 
+175 mm, 200 mm, the focus uniformity decreased in the scanning range 
+with the increase of α. The variation of the effective processing 
+(STRH≥0.8) points as a percentage of the 3D scanning range was 
+showed in Table 3.
+3. Verification of rapid 3D scanning
+3.1. Experiment setup
+An experiment was carried out to verify the 3D scanning capability of 
+the TGLSS, and the experimental setup is shown in Fig. 8. A nanosecond 
+fiber laser (YDFLP-100-M8-M−R, JPT) with a 3.0 mm (expanded to 8 
+mm, for observing the experimental results more dramatically) beam 
+diameter was adopted for the experiment. The wavelength was 1064 
+nm, the beam quality factor M2 was 1.4, and the maximum average 
+power was 100 W. The focal length f of the off-axis parabolic mirrors 
+(35588, Edmund) was 152.4 mm, and the off-axis angle α was 45◦, 
+corresponding to the initial state of G1 and G2. The G1, G2 and G3 were 
+galvanometers (ExtraScan II 14, Hans), which could be rotated by ±
+12.5◦. An F-theta lens with a focal length fFL of 100 mm was used to focus 
+the laser. The distance of PM1 and PM2 was 410.729 mm, calculated by 
+Eq. (8). An XYZ stage was placed to move the samples. A 45◦block was 
+placed on the XYZ stage for tilting an aluminum plate 1060 with a size of 
+50 × 50 × 1 mm3, used for the experiment. Three different 3D scanning 
+modes were selected to verify the 3D scanning capability of the TGLSS: 
+horizontal, tilted, and vertical. The laser scanning path was a 20 × 20 
+mm2 rectangle, and each scan was repeated 10 times using the above 
+three scanning modes, all with lines spacing of 250 μ m. The laser pro­
+cessing effect was used as the criterion for verifying the 3D scanning 
+capability. The experimental laser energy was 100 μJ, the laser fre­
+quency was 100 kHz, and the 3D scanning speed was 10 m/s. A laser 
+scanning confocal microscope (VK-X1100, Keyence) was used to observe 
+and compare the scanning effect.
+3.2. Results and discussion
+The microscopic observations of 3D processing on a 45◦inclined 
+Fig. 6. X- and Y- focus module of the TGLSS (a) Schematic diagram; (b) part of 
+the optical path.
+Fig. 7. Simulation of TGLSS 3D scanning range and effect (Δα from −2◦to +
+2◦, θx from −5◦to + 5◦, θy from −5◦to + 5◦).
+Table 3 
+Effective processing (STRH≥0.8) points as a percentage of the 3D scanning 
+range.
+f = 100 
+mm
+f = 125 
+mm
+f = 150 mm
+f = 175 
+mm
+f = 200 
+mm
+α =
+30◦
+22.4 %
+39.3 %
+56.8 %
+71.2 %
+81.0 %
+α =
+45◦
+12.4 %
+16.8 %
+26.2 %
+38.3 %
+50.6 %
+α =
+60◦
+10.9 %
+12.6 %
+16.25 %
+23.1 %
+32.8 %
+Fig. 5. Variations of the Z-coordinate of the focal point with Δα of G1 (−Δα of G2) and f of PMs (α = 30◦, 45◦, 60◦), and the focal length fFL of FL=100 mm.
+Table 2 
+Simulation values of ΔZ (mm).
+f = 100 
+mm
+f = 125 
+mm
+f = 150 
+mm
+f = 175 
+mm
+f = 200 
+mm
+α =
+30◦
+14.499
+11.550
+9.598
+8.210
+7.173
+α =
+45◦
+21.105
+16.716
+13.837
+11.803
+10.093
+α =
+60◦
+26.134
+20.658
+17.077
+14.553
+12.678
+Y. Liu et al.                                                                                                                                                                                                                                      
+Optics and Laser Technology 181 (2025) 111608 
+4 
+
+
+plane were shown in Fig. 9. The horizontal scanning mode on a 45◦
+inclined plane was shown in Fig. 9(a-1). The observation of this mode at 
+10 × magnification was showed in Fig. 9(a-2), and the line spacing was 
+251.5 μm and the focus spacing was 100.4 μm. In the horizontal scan­
+ning mode, there was a completely unfilled area between consecutive 
+scanned points. The observation of this mode at 50 × magnification was 
+showed in Fig. 9(a-3), since the laser focused on the 45◦inclined plane, 
+the spots were no longer circular, but the projections (ellipses) of circles 
+on the inclined plane. Consequently, the line width of the scan was 
+92.73 μm as shown in Fig. 9(a-3).
+Fig. 8. The experiment setup of the TGLSS.
+Fig. 9. The scanning microscope observations of the system in a 45◦inclined plane. (a) horizontal scanning; (b) tilted scanning; (c) vertical scanning; (d) variation of 
+line width with scanning mode.
+Y. Liu et al.                                                                                                                                                                                                                                      
+Optics and Laser Technology 181 (2025) 111608 
+5 
+
+
+The tilted scanning mode on a 45◦inclined plane was shown in Fig. 9
+(b-1). The observation of this mode at 10 × magnification was showed in 
+Fig. 9(b-2), and the line spacing was 251.1 μm and the focus spacing was 
+100.3 μm. It was showed that the connections between successive 
+scanned points were tighter in the tilted scanning mode than in the 
+horizontal scanning mode. The observation of this mode at 50 ×
+magnification was showed in Fig. 9(b-3), and the line width of the scan 
+was 82.96 μm as shown in Fig. 9(b-3), which was narrower than that of 
+the horizontal mode.
+The vertical scanning mode on a 45◦inclined plane was shown in 
+Fig. 9(c-1). The observation of this mode at 10 × magnification was 
+showed in Fig. 9(c-2), and the line spacing was 250.6 μm and the focus 
+spacing was 100.5 μm. In the vertical scanning mode, the spots were 
+connected to each other. As shown in Fig. 9 (c-3), the line width of the 
+vertical mode was 65.58 μm at 50 × magnification, which was narrower 
+than that of the tilted mode.
+The lines spacing shown in Fig. 9(a-2), (b-2), and (c-2) were about 
+250 μm, corresponding to the preset line spacing, and the focus spacing 
+were about 100 μm, corresponding to the preset 100 kHz laser frequency 
+and 10 m/s 3D scanning speed. The depth of the scanning spot shown in 
+Fig. 9(a-3), (b-3), and (c-3) did not change under the three different 3D 
+scanning modes, because the spot overlaps were not high and the depth 
+depended only on the single pulse laser ablation. In addition, with the 
+scanning direction changed from the short axis to the long axis of the 
+ellipse projected by the focus, the line width became narrower and the 
+connection became more successive, as shown in Fig. 9(a-3), (b-3), (c-3), 
+and (d). It showed the capability of TGLSS to adjust line width and 
+scanning continuity in 3D space, which could help achieve better effi­
+ciency and quality of processing [42–48].
+4. Conclusion
+In conclusion, the optical principle and design method of TGLSS were 
+proposed and discussed, and the optical structure of TGLSS with no 
+aberration was given by geometrical optics calculation and Abbe’s sine 
+condition. The design method could be applied to other similar reflec­
+tive dynamic focusing devices (RDFDs). The simulations were per­
+formed to analyze the 3D scanning range and effect of TGLSS under 
+different parameters, where the axial focusing range ΔZ was varied 
+between 7.173 mm and 26.134 mm. In this experimentally verification, 
+the improvement in axial scanning speed (10 m/s) enabled different 
+laser 3D scanning modes with adjustable line width and scanning con­
+tinuity. Other laser processing applications such as manufacturing, 
+texture processing, cutting and cleaning will also benefit from this 
+development.
+CRediT authorship contribution statement
+Yi Liu: Writing – original draft, Resources, Methodology, Investi­
+gation, Formal analysis, Data curation, Conceptualization. Tianting 
+Chen: Writing – review & editing. Yaqing Qiao: Writing – review & 
+editing, Visualization, Conceptualization. Yuhang Ding: Software. 
+Ziqiang Dan: Data curation. Wangrong Lu: Software. Haoran Ma: 
+Investigation. Guiyang Yang: Validation. Chenfei Zhang: Resources. 
+Wei Xiong: Writing – review & editing, Supervision. Leimin Deng: 
+Writing – review & editing, Supervision, Funding acquisition.
+Declaration of competing interest
+The authors declare that they have no known competing financial 
+interests or personal relationships that could have appeared to influence 
+the work reported in this paper.
+Data availability
+Data will be made available on request.
+Acknowledgements
+The authors gratefully acknowledge the financial supports by the 
+China 
+Postdoctoral 
+Science 
+Foundation 
+(GZB20240241 
+& 
+2024M750993).
+References
+[1] Q. Yang, P. Zhang, Q. Lu, H. Yan, H. Shi, Z. Yu, T. Sun, R. Li, Q. Wang, Y. Wu, 
+J. Chen, Application and development of blue and green laser in industrial 
+manufacturing: a review, Opt. Laser Technol. 170 (2024).
+[2] X. Yang, G.J. Gibbons, D.A. Tanner, Z. Li, P. Wilson, M.A. Williams, H.R. Kotadia, 
+Scan strategy induced microstructure and consolidation variation in the laser- 
+powder bed fusion (L-PBF) additive manufacturing of low alloy 20MnCr5 steel, 
+Mater. Des. 232 (2023).
+[3] J. Saunders, M. Elbestawi, Q. Fang, Ultrafast Laser Additive Manufacturing: A 
+Review, Journal of Manufacturing and Materials Processing 7 (3) (2023).
+[4] D. Moldovan, J. Choi, Y. Choo, W.-S. Kim, Y. Hwa, Laser-based three-dimensional 
+manufacturing technologies for rechargeable batteries, Nano Convergence 8 (1) 
+(2021).
+[5] X. Wang, J. Duan, M. Jiang, S. Ke, B. Wu, X. Zeng, Study of laser precision ablating 
+texture patterns on large-scale freeform surface, Int. J. Adv. Manuf. Technol. 92 
+(9–12) (2017) 4571–4581.
+[6] Y. Zhou, S. Zhang, S. Zhao, H. Chen, Computer Texture Mapping for Laser 
+Texturing of Injection Mold, Adv. Mech. Eng. 6 (2015).
+[7] Y. Guo, H. Zhao, Femtosecond laser processed superhydrophobic surface, J. Manuf. 
+Process. 109 (2024) 250–287.
+[8] W. Li, Y. Rong, Y. Huang, X. Chen, L. Chen, G. Zhang, Dimethicone-assisted 
+interlaced scanning compound cutting for regulating thermal damage in CFRP laser 
+cutting by synergistic suppression of coupled heat effect, Compos. B Eng. 266 
+(2023).
+[9] Y. Qiao, T. Chen, H. Ma, Y. Liu, A. Tang, W. Xiong, L. Deng, Experimental study on 
+the sidewall quality of femtosecond laser drilling CFRP, Compos. B Eng. 266 
+(2023).
+[10] C. Leone, S. Genna, V. Tagliaferri, Fibre laser cutting of CFRP thin sheets by multi- 
+passes scan technique, Opt. Lasers Eng. 53 (2014) 43–50.
+[11] A.J. L´opez, J. Lamas, J.S. Pozo-Antonio, T. Rivas, A. Ramil, Development of 
+processing strategies for 3D controlled laser ablation: Application to the cleaning of 
+stonework surfaces, Opt. Lasers Eng. 126 (2020).
+[12] A. Rodríguez, A.J. L´opez, J. Lamas, A. Moreno, A. Ramil, Robot-assisted laser 
+ablation for 3D surfaces. Application for paint removal with ultrashort pulse laser, 
+Opt. Lasers Eng. 160 (2023).
+[13] Z. Tian, J. Feng, X. Chen, Z. Lei, Y. Chen, Hybrid laser cleaning characteristic of 
+marine barnacles fouling attached on Al alloys, J. Laser Appl. 33 (4) (2021).
+[14] A. Wang, A. Feng, X. Gu, X. Pan, J. Yu, Z. Jiang, Effect of picosecond laser cleaning 
+on surface morphology and properties of stainless steel, Opt. Laser Technol. 159 
+(2023).
+[15] M.E. Atik, Z. Duran, M. Yanalak, D.Z. Seker, A. Ak, 3D modeling of historical 
+measurement instruments using photogrammetric and laser scanning techniques, 
+Digital Applications in Archaeology and Cultural Heritage 30 (2023).
+[16] P. Zolfaghari, M. Khodapanahandeh, H. Urey, O. Ferhanoglu, Cascaded laser 
+scanning towards high-resolution LiDAR, Opt. Laser Technol. 168 (2024).
+[17] C. Yi, X. Chen, Y. Zhou, T. Chen, W. Zhang, Effects of scanning speed and scanning 
+times on surface quality of line spot laser polishing of nickel-based superalloys, 
+J. Mater. Res. Technol. 26 (2023) 2179–2190.
+[18] X. Kong, Y. Li, N. Tan, L. Cai, Z. Lu, Q. Li, Q. Deng, Y. Zhou, J. Wang, D. Hu, Effect 
+of scanning speeds on mechanical properties of CoCrNi medium entropy alloy 
+prepared by laser additive manufacturing, Heliyon 10 (1) (2024).
+[19] R.D. Seidgazov, F.K. Mirzade, Keyhole-induced Porosity in Laser Manufacturing 
+Processes: Formation Mechanism and Dependence on Scan Speed, Chinese Journal 
+of Mechanical Engineering: Additive Manufacturing Frontiers 1 (3) (2022).
+[20] M. Jiang, X. Wang, S. Ke, F. Zhang, X. Zeng, Large scale layering laser surface 
+texturing system based on high speed optical scanners and gantry machine tool, 
+Rob. Comput. Integr. Manuf. 48 (2017) 113–120.
+[21] T. Karkantonis, P. Penchev, V. Nasrollahi, H. Le, T.L. See, D. Bruneel, J.A. Ramos- 
+de-Campos, S. Dimov, Laser micro-machining of freeform surfaces: Accuracy, 
+repeatability and reproducibility achievable with multi-axis processing strategies, 
+Precis. Eng. 78 (2022) 233–247.
+[22] D. Franz, T. H¨afner, T. Kunz, G.-L. Roth, S. Rung, C. Esen, R. Hellmann, 
+Characterization of a hybrid scanning system comprising acousto-optical deflectors 
+and galvanometer scanners, Appl. Phys. B 128 (3) (2022).
+[23] J. Montagu, Scanners: Galvanometric and Resonant, Encyclopedia of Optical and 
+Photonic Engineering (print)-Five Volume Set (2015) 1–22.
+[24] M. Malinauskas, A. ˇZukauskas, S. Hasegawa, Y. Hayasaki, V. Mizeikis, R. Buividas, 
+S. Juodkazis, Ultrafast laser processing of materials: from science to industry, Light 
+Sci. Appl. 5 (8) (2016) e16133–e.
+[25] M.G. Lee, G. Kim, C.-W. Lee, S.-H. Lee, Y. Jeon, Design of voice coil motor dynamic 
+focusing unit for a laser scanner, Rev. Sci. Instrum. 85 (4) (2014).
+[26] N.T. Ersumo, C. Yalcin, N. Antipa, N. Pegard, L. Waller, D. L´opez, R. Muller, W. 
+Piyawattanametha, Y.-H. Park, H. Zappe, Design framework for high-speed 3D 
+scanning tools and development of an axial focusing micromirror-based array, 
+MOEMS and Miniaturized Systems XIX, 2020.
+Y. Liu et al.                                                                                                                                                                                                                                      
+Optics and Laser Technology 181 (2025) 111608 
+6 
+
+
+[27] X. Du, C. Florian, C.B. Arnold, Single-lens dynamic z-scanning for simultaneous in 
+situ position detection and laser processing focus control, Light Sci. Appl. 12 (1) 
+(2023).
+[28] S. Kang, M. Duocastella, C.B. Arnold, Variable optical elements for fast focus 
+control, Nat. Photonics 14 (9) (2020) 533–542.
+[29] C. Hao, Y. Liu, X. Chen, Y. He, Q. Li, K.Y. Li, Z. Wang, Electrowetting on liquid- 
+infused film (EWOLF): Complete reversibility and controlled droplet oscillation 
+suppression for fast optical imaging, Sci. Rep. 4 (1) (2014).
+[30] D. Shin, C. Kim, G. Koo, Y. Hyub Won, Depth plane adaptive integral imaging 
+system using a vari-focal liquid lens array for realizing augmented reality, Opt. 
+Express 28 (4) (2020) 5602–5616.
+[31] R. Patra, S. Agarwal, S. Kondaraju, S.S. Bahga, Membrane-less variable focus liquid 
+lens with manual actuation, Opt. Commun. 389 (2017) 74–78.
+[32] Y. Cheng, J. Cao, Q. Hao, Optical beam steering using liquid-based devices, Opt. 
+Lasers Eng. 146 (2021) 106700.
+[33] Z. Jian, Z. Tong, Y. Ma, M. Wang, S. Jia, X. Chen, Laser beam modulation with a 
+fast focus tunable lens for speckle reduction in laser projection displays, Opt. Lasers 
+Eng. 126 (2020).
+[34] M. Bawart, A. Jesacher, P. Zelger, S. Bernet, M. Ritsch-Marte, Modified Alvarez lens 
+for high-speed focusing, Opt. Express 25 (24) (2017).
+[35] Z. Yongchao, Z. Wei, T. Feng, C. Fook Siong, Z. Guangya, Development of 
+miniature tunable multi-element alvarez lenses, IEEE J. Select. Top. Quantum 
+Electron. 21(4) (2015) 100-107.
+[36] H. Radhakrishnan, W.N. Charman, Optical characteristics of Alvarez variable- 
+power spectacles, Ophthalmic Physiol. Opt. 37 (3) (2017) 284–296.
+[37] M. Rabe, M. Valentin, Divergence changing unit for changing divergence of e.g. 
+laser light used in material processing, has beam deflectors whose angles are 
+adjusted so that position of beam from deflectors is adjusted to be independent of a 
+specific angle, German, 2012.
+[38] L. Yu, K. Yang, Z. Zhang, Galvanometer driven optical system for laser dynamic 
+focusing, Opt. Express 31 (1) (2022).
+[39] Y. Liu, Y. Qiao, Y. Ding, W. Lu, T. Chen, H. Ma, J. Duan, W. Xiong, L. Deng, 
+Extending the 3D scanning range of reflective dynamic focusing device-based laser 
+scanners, Opt. Lett. 48 (24) (2023).
+[40] J. Francis, W, fourth edition, Harvey, Fundamentals of optics, 2001.
+[41] H. Ottevaere, H. Thienpont, OPTICAL MICROLENSES, in: R.D. Guenther (Ed.), 
+Encyclopedia of Modern Optics, Elsevier, Oxford, 2005, pp. 21–43.
+[42] T. Zhang, T. Liu, G. Ban, J. Zou, Z. Zhang, Y. Liu, C. Zhong, Effect of scanning speed 
+on laser cleaning of composite paint layer on aluminum alloy, Opt. Laser Technol. 
+171 (2024).
+[43] T. Sakai, Y. Okamoto, N. Taura, R. Saito, A. Okada, Effect of scanning speed on 
+molten metal behaviour under angled irradiation with a continuous-wave laser, 
+J. Mater. Process. Technol. 313 (2023).
+[44] X. Li, T. Li, B. Shi, D. Wang, M. Adnan, H. Lu, The influence of substrate tilt angle 
+on the morphology of laser cladding layer, Surf. Coat. Technol. 391 (2020) 
+125706.
+[45] Y. Lu, J. Deng, R. Wang, J. Wu, Y. Meng, Tribological performance of micro 
+textured surface machined by Nd:YAG laser with different incident angle, Opt. 
+Laser Technol. 148 (2022) 107768.
+[46] T. Van Huynh, D. Lee, The effect of incidence angle on the interaction of a pulse 
+laser with ultra-high-performance concrete in the scabbling process, Journal of 
+Building Engineering 73 (2023) 106726.
+[47] J. Chen, X. Chen, X. Zhang, W. Zhang, Effect of laser incidence angle on the 
+femtosecond laser ablation characteristics of silicon carbide ceramics, Opt. Lasers 
+Eng. 172 (2024) 107849.
+[48] Y. Lu, J. Deng, J. Wu, R. Wang, Y. Meng, Influence of micro-grooves processed by 
+laser with different incident angle on the properties of TiAlSiN coatings, Surf. Coat. 
+Technol. 446 (2022) 128793.
+Y. Liu et al.                                                                                                                                                                                                                                      
+Optics and Laser Technology 181 (2025) 111608 
+7 

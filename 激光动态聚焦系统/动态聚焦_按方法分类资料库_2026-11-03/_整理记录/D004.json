@@ -1,0 +1,28 @@
+{
+  "id": "D004",
+  "category": "05_MEMS与全息调焦",
+  "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-024-47009-w/MediaObjects/41467_2024_47009_MOESM1_ESM.docx",
+  "title": "Supplementary Information (download DOCX )",
+  "context": "R025论文补充材料",
+  "origins": [
+    "https://www.nature.com/articles/s41467-024-47009-w"
+  ],
+  "files": [
+    {
+      "path": "05_MEMS与全息调焦\\D004_Supplementary Information (download DOCX ).docx",
+      "type": "DOCX",
+      "bytes": 8737333,
+      "sha256": "af1d89587af8663bd8d06f050e9950f61bb0070dd63cacaa8116d4557f51821d",
+      "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-024-47009-w/MediaObjects/41467_2024_47009_MOESM1_ESM.docx",
+      "title": "Supplementary Information (download DOCX )"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-024-47009-w/MediaObjects/41467_2024_47009_MOESM1_ESM.docx",
+      "http": 200,
+      "result": "文件签名已检查"
+    }
+  ],
+  "status": "补充材料已下载"
+}

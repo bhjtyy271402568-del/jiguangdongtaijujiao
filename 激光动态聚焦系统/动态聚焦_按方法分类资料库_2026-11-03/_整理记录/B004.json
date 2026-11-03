@@ -1,0 +1,20 @@
+{
+  "id": "B004",
+  "category": "01_移动透镜式与匹配光学",
+  "url": "https://www.jgjs.net.cn/cn/article/id/15434",
+  "context": "大尺度三维动态聚焦_期刊文章编号入口",
+  "title": "大尺度三维动态聚焦_期刊文章编号入口",
+  "origins": [
+    "原文线索补充及相关中文综述"
+  ],
+  "files": [],
+  "attempts": [
+    {
+      "url": "https://www.jgjs.net.cn/cn/article/id/15434",
+      "error": "HTTPSConnectionPool(host='www.jgjs.net.cn', port=443): Max retries exceeded with url: /cn/article/id/15434 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1010)')))"
+    }
+  ],
+  "status": "全文已由用户补齐 → U008",
+  "resolved_by": "U008",
+  "resolution_note": "此前网络获取未完成；现已由用户提供正式版全文补齐。保留历史请求记录。"
+}

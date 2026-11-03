@@ -1,0 +1,60 @@
+﻿07_测高闭环_三轴同步与标定
+
+R003 | CN109894748B - 激光三维飞行打标方法、装置、计算机设备和存储介质 - Google Patents
+状态：PDF已下载
+来源：https://patents.google.com/patent/CN109894748B/zh
+文件：07_测高闭环_三轴同步与标定\R003_CN109894748B - 激光三维飞行打标方法、装置、计算机设备和存储介质 _      - Google Patents.html
+文件：07_测高闭环_三轴同步与标定\R003_CN109894748B - 激光三维飞行打标方法、装置、计算机设备和存储介质 - Google Patents.pdf
+
+R006 | CN121742097A - 一种集成振镜激光投影方法以及集成振镜激光控制装置 - Google Patents
+状态：专利全文网页已保存_无PDF附件
+来源：https://patents.google.com/patent/CN121742097A/zh
+文件：07_测高闭环_三轴同步与标定\R006_CN121742097A - 一种集成振镜激光投影方法以及集成振镜激光控制装置 _        - Google Patents.html
+
+R010 | CN222626476U - 自动调焦激光加工装置 - Google Patents
+状态：PDF已下载
+来源：https://patents.google.com/patent/CN222626476U/zh
+文件：07_测高闭环_三轴同步与标定\R010_CN222626476U - 自动调焦激光加工装置 _        - Google Patents.html
+文件：07_测高闭环_三轴同步与标定\R010_CN222626476U - 自动调焦激光加工装置 - Google Patents.pdf
+
+R040 | DLC2-V2 USB Laser Marking Control Board | JCZ
+状态：网页已保存
+来源：https://www.ezcad.com/products/dlc2-v2/
+文件：07_测高闭环_三轴同步与标定\R040_DLC2-V2 USB Laser Marking Control Board _ JCZ.html
+
+R041 | NIST_Methodologies and Implementation of Laser Powder-Bed Fusion Process Control_2023
+状态：PDF已下载
+来源：https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=935084
+文件：07_测高闭环_三轴同步与标定\R041_NIST_Methodologies and Implementation of Laser Powder-Bed Fusion Process Control_2023.pdf
+
+R048 | CN121245003A - 一种基于光学系统景深分层的动态对焦打印方法 - Google Patents
+状态：专利全文网页已保存_无PDF附件
+来源：https://patents.google.com/patent/CN121245003A/zh
+文件：07_测高闭环_三轴同步与标定\R048_CN121245003A - 一种基于光学系统景深分层的动态对焦打印方法 _        - Google Patents.html
+
+R054 | CN107315247B - 预览模块及动态聚焦激光振镜 - Google Patents
+状态：PDF已下载
+来源：https://patents.google.com/patent/CN107315247B/zh
+文件：07_测高闭环_三轴同步与标定\R054_CN107315247B - 预览模块及动态聚焦激光振镜 _        - Google Patents.html
+文件：07_测高闭环_三轴同步与标定\R054_CN107315247B - 预览模块及动态聚焦激光振镜 - Google Patents.pdf
+
+S008 | HALaser_E1803D控制卡完整手册
+状态：PDF已下载
+来源：https://halaser.systems/manuals/e1803_manual.pdf
+文件：07_测高闭环_三轴同步与标定\S008_HALaser_E1803D控制卡完整手册.pdf
+
+B002 | RAYLASE_SPICE3_官方规格书
+状态：未获取
+来源：https://www.raylase.de/_Resources/Persistent/b/a/6/6/ba66d25112e3d91511322aa417caae73c916557b/Datasheet_SP-ICE-3.pdf
+
+
+B003 | RAYLASE_SPICE3_官方在线手册入口
+状态：在线手册入口已保存_非完整离线手册
+来源：https://software.raylase.de/rpi/RAYLASE/spice3/usersmanual/
+文件：07_测高闭环_三轴同步与标定\B003_SP-ICE Control Electronics_ SP-ICE 3 User's Manual - Redirect.html
+
+C002 | SCANLAB_RTC6官方规格书
+状态：PDF已下载
+来源：https://www.scanlab.de/sites/default/files/2020-08/12_RTC6%20control%20boards.pdf
+文件：07_测高闭环_三轴同步与标定\C002_SCANLAB_RTC6官方规格书.pdf
+

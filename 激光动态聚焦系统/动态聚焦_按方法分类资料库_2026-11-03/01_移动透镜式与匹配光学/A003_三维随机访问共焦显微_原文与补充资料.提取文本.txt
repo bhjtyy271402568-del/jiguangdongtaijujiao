@@ -1,0 +1,796 @@
+communications engineering Article
+https://doi.org/10.1038/s44172-024-00320-2
+Three-dimensional random-access
+confocal microscopy with 3D remote
+focusing system
+Check for updates
+Haoyang Li 1,2,7,Q u a nL u1,3,4,7, Zhong Wang1,5,7, Wenbo Zhang1,3,Y uW u1, Yandong Sun1,3,Y u eH u4,
+Lehui Xiao6, Dongping Zhong 2 ,S u h u iD e n g 3 & Shangguo Hou 1
+Understanding biological activities in cells or deep tissues requires high-speed three-dimensional (3D)
+imaging. Substantial progress has been made with the emergence of 3D random-access microscopy.
+However, current solutions for fast 3D random-access imaging remain complex and costly. Herein we
+propose a simple, cost-effective, and fast 3D random-access confocal microscopy with remote
+focusing system. Our system shows isotropic response times across the x, y, and z axes, with a 34-fold
+improvement in axial response time over traditional piezo stages. We demonstrate its volumetric
+imaging performance with ﬂuorescent particles and live cells. Furthermore, we validate the 3D
+random-access imaging capability of this system by continuously monitoring the signals in three
+different planes, showing a refresh rate of 500 Hz on two different positions in 3D. The simplicity,
+versatility, and affordability of our system promise widespread applications in research and industry.
+Optical microscopy has become an indispensable tool in biological research
+by providing essential insights into the structures and functions of biological
+systems at the cellular and molecular levels 1– 11. Among various optical
+microscopies, confocal laser scanning microscopy (CLSM) is one of the
+most popular imaging techniques in biological research due to its high
+spatial resolution and versatility in examining various types of biological
+samples12– 15. The optical sectioning capability of CLSM enables it to study
+biological events in different depths in thick samples. However, CLSM
+builds images by scanning one point at a time through a focused laser beam,
+which must be precisely moved across the sample in a raster pattern. This
+point-by-point scanning process is inherently time-consuming, especially
+when high resolution is required. Moreover, to acquire a 3D image of the
+sample, multiple optical sections atdifferent depths of the sample are nee-
+ded, which further increases the image acquisition time. The low temporal
+resolution of CLSM in 3D imaging makes it challenging to study dynamical
+biological events in 3D.
+In recent decades, random-access microscopy has been developed to
+monitor neuronal activities at multiple locations 16– 27. Random-access
+microscopy typically employs two-dimensional acousto-optic de ﬂection
+(AOD) components to drive the laser focus in x and y directions16,17,22,23.F o r
+z direction, another pair of AODs, which form two orthogonal electric
+cylinder lenses ﬁlled with chirped acoustic waves, can be used to shift the
+axial laser focus positions 23. While these AOD-based random-access
+microscopies possess high spatiotemporal resolution and large scan range,
+there are still limitations that hinder their widespread applications. For
+instance, the AOD unit is sensitive to wavelength variations, which restricts
+its multicolor imaging capabilities28. Additionally, the AOD induced optical
+aberrations could degrade the resolution and overall image quality. Fur-
+thermore, AOD-based random-access imaging systems are sophisticated
+and costly. The requirement for speci alized optics expertize and a sub-
+stantial budget to build such systems could restrict their use in smaller
+laboratories.
+Remote focusing imaging, developed over a decade ago, is a technique
+that adjusts the focal plane of an optical system without requiring the
+mechanical movement of the sample29– 32. This method employs auxiliary
+optical elements, such as remote objec tive with translational mirror, to
+dynamically change the imaging focal plane with minimal aberration29– 31,33.
+Here we propose a simple, cost-effective, and fast 3D random-access con-
+focal microscopy, termed 3D Dynamical Focusing Imaging (3D-DyFI).
+3D-DyFI utilizes a dynamical focusing system to perform 3D remote
+focusing imaging. The 3D-DyFI eliminates the requirement of physically
+m o v i n gt h es a m p l eo rt h eo b j e c t i v el ens, facilitating fast 3D imaging over
+1Institute of Systems and Physical Biology, Shenzhen Bay Laboratory, Shenzhen, China. 2Center for Ultrafast Science and Technology, School of Chemistry and
+Chemical Engineering, Shanghai Jiao Tong University, Shanghai, China. 3School of Information Engineering, Nanchang University, Nanchang, China. 4School of
+Electronics and Information Engineering, Harbin Institute of Technology, Harbin, China.5School of Basic Medical Sciences, Division of Life Sciences and Medicine,
+University of Science and Technology of China, Hefei, China.6College of Chemistry and Chemical Engineering, Central South University, Changsha, China.7These
+authors contributed equally: Haoyang Li, Quan Lu, Zhong Wang. e-mail: dongping@sjtu.edu.cn; shdeng@ncu.edu.cn; shangguo.hou@szbl.ac.cn
+Communications Engineering |           (2024) 3:166 1
+1234567890():,;
+1234567890():,;
+
+various depths without the drawbacks associated with mechanical move-
+ment. Additionally, the de-scan conﬁguration of 3D-DyFI allows the use of
+more economic highly sensitive detectors with small active detection areas,
+such as avalanche photodiode (APD). We validate the performance of 3D-
+DyFI with 3D imaging of ﬂuorescent beads and live cells. The spatial
+resolution and response times were characterized, which shows isotropic
+scanning speeds across all three dimensions. We also scrutinized the
+random-access imaging capability of 3D-DyFI by monitoring the ﬂuores-
+cence intensity of beads in different axial planes. The refreshing rate of 3D-
+DyFI on two different detection positions in 3D can reach 500 Hz, about 25
+times faster than the piezoelectric stage-based random-access imaging.
+Although in this work 3D-DyFI is conﬁgured with single-photon excitation,
+it is also compatible with multiphoton microscopy. Additionally, 3D-DyFI
+can perform multicolor imaging, offering an advantage over AOD-based
+random-access microscopy systems. Moreover, the affordability and sim-
+plicity of 3D-DyFI allow for its straightforward implementation in most
+laboratories.
+Results
+Conﬁguration and 3D resolution characterization of 3D-DyFI
+The schematic design of 3D-DyFI is shown in Fig. 1a. An economically
+efﬁcient 635 nm laser (LWRL635, 100 mW, Laserwave), a 561 nm laser
+(LCX-561L-50-CSB-PPA, 50 mW, OXXIUS) and a 488 nm laser (LBX-488-
+60-CSB-PPA, 60 mW, OXXIUS) were used for excitation. Beam collimation
+and expansion were realized with a pair of achromatic doublet lenses
+(f = 50 mm, AC254-050-A-ML & f = 200 mm, AC254-200-AB-ML, Thor-
+labs). This beam expansion, quadrupling the spot size, optimally ﬁlls the
+back aperture of the objective lens ( 100x, 1.35NA, Nikon). A pinhole
+(Φ = 30 µm, P30K, Thorlabs) was placed in the focus of theﬁrst achromatic
+doublet lens. After being reﬂected by a dichroic mirror (for 635 nm exci-
+tation: ZT635dcrb; for 561 nm excitation: ZT561rdc; for 488 nm excitation:
+ZT488rdc, Chroma), the beam was then directed into the 3D dynamic
+focusing system (FL8220-3D-500, Sino-Galvo), which was used to manip-
+ulate the laser focus in 3D and de-scan ﬂuorescence from the sample. The
+detailed information about remote focusing system can be found in Sup-
+plementary Fig. S1-S3 and Supplementary Note 1. The 3D dynamic
+focusing system incorporates two ort hogonal one-dimensional galvan-
+ometers, two opposing plano-convex lenses, and a plano-concave lens
+mounted on a linear actuator, with its concave side facing the incident light.
+Changing the position of the plano-concave lens enables the movement of
+focused spot along the z-axis after objective lens. Lateral plane scanning was
+achieved through changing the angles of two one-dimensional galvan-
+ometers. A laser scanning tube lens (f = 200 mm, TTL200MP, Thorlabs)
+was precisely positioned in front of the objective lens. The emitted ﬂuor-
+escence from the sample was de-scanned by the 3D dynamic focusing
+system, passed through the dichroic mirror, and subsequently relayed and
+spatially ﬁltered by a pair of dual achromatic doublet lenses (f = 50 mm,
+AC254-50-AB-ML, Thorlabs) and a pinhole (Φ = 25 µm, P25K, Thorlabs).
+Fig. 1 | Schematic, point spread function, and the linearity characterization of the
+3D-DyFI system. a Schematic of 3D-DyFI. OL: Objective Lens, M: Mirror, F:
+ﬂuorescence ﬁlter, DM: Dichroic Mirror, PH: Pinhole, PCL: Plano-Concave Lens,
+APD: Avalanche Photodiode. The x-y scanning images (up panel) and x-z scanning
+images (low panel) of 50 nm green ﬂuorescent microsphere with ( b) piezoelectric
+stage scanning and ( c) 3D-DyFI. The color indicates ﬂuorescence intensity. Scale
+bar: 500 nm. The laser focus positions as a function of applied voltage in x ( d), y (e),
+and z (f) axes. Measured data are represented by blue circles, while the ﬁtting results
+are shown with green lines. n = 3.
+https://doi.org/10.1038/s44172-024-00320-2 Article
+Communications Engineering |           (2024) 3:166 2
+
+Ab a n dp a s sﬁlter (for 635 nm excitation: ET706/95 m, 25 mm diameter,
+Chroma; for 561 nm excitation: ET610/75 m, 25 mm diameter, Chroma; for
+488 nm excitation: FF01-535/50-25, 25mm diameter, Semrock) was used to
+reject the laser and a highly sensitive avalanche photodiode (APD, SPCM-
+AQRH-15, 65% quantum yield in 650 nm, Excelitas Technologies) was used
+for collecting the ﬂuorescence signal. With the use of laser scanning tube
+lens, the ﬁeld distortion and aberration can be reduced (Supplementary
+Note 2). To characterize the spatial resolution of 3D-DyFI, 50 nm green
+ﬂuorescent microspheres were scanned in 3D with both piezoelectric stage
+and 3D-DyFI (Fig. 1b, c). The full widths at half maximum (FWHM) of
+intensity proﬁles of the ﬂuorescent microspheres were subsequently mea-
+sured (Supplementary Fig. S4), revealing resolutions of 301 nm × 330 nm ×
+0.96 µm for 3D-DyFI and 311 nm × 322 nm × 0.93 µm for piezoelectric
+stage scanning in x, y and z, respectively. The resolution of 3D-DyFI shows
+slightly worse than piezoelectric stage scanning result, which could be
+attributed to the spherical aberrations from one plano-concave lens and two
+convex lenses in dynamic focusing system. This can be improved by
+replacing these lenses with achromatic doublets lenses in the future. The
+resolution discrepancy in x and y could come from the alignment and the
+poor quality of the laser source34. These results indicate that under similar
+measurement conditions, the resolution of 3D-DyFI is comparable to that of
+piezoelectric stage based confocal microscopy (Supplementary Figs. S5– S6).
+Linearly focus position changing with the applied voltage on 3D
+dynamic focusing system
+Next, we validated that the focus position is linearly changed with the
+voltage applied on 3D dynamic focusing system (Fig.1d– f). The positions of
+the piezoelectric stage were used as references. Initially, the laser was focused
+on a 200 nm ﬂuorescent bead. Subsequently, the sample was incrementally
+moved at predeﬁned distances along the x, y, and z axes, displacing the bead
+from the laser’s focus. To recenter the laser on the bead, voltage adjustments
+were made to the 3D dynamic focusing system along the respective axes. By
+correlating the applied voltage with the displacement distances of the pie-
+zoelectric stage, we established a linear relationship between the change in
+laser focus distance and the voltage applied in the x, y, and z directions
+(Fig. 1d– f). The linear response of the 3D dynamic focusing system ensured
+the imaging accuracy of the 3D-DyFI and avoided further data processing.
+Spatial resolution distribution in 3D range
+The uniform spatial resolution over a large 3D range is important for 3D
+imaging microscopy13.H e r ew ee x a m i n e dt h es p a t i a lr e s o l u t i o no f3 D - D y F I
+in various lateral and axial positions to provide a comprehensive assessment
+of its imaging performance. To investigate resolution consistency across an
+extensive scanning range (40 µm × 40 µm × 10 µm in x, y, and z), four
+locations (18, 0), ( −18, 0), (0, 18), and (0, −18) were chosen for lateral
+resolution analysis. Although the dynamic range for the x and y axes can
+extend up to ( −50 µm, 50 µm), as shown in Fig. 1e, f, aberrations were
+observed when the positions deviated substantially from the center. Con-
+sequently, we limited the operational range of x and y to (-20 µm, 20 µm)
+during imaging. Microspheres were initially positioned using the piezo-
+electric stage, followed by focused scanning at these locations with 3D-DyFI,
+a ss h o w ni nF i g .2a. The results indicate that even at the lateral boundary
+positions, the spatial resolution of 3D-DyFI remains nearly consistent with
+that at the center position of the dynamical focusing system. The relative
+uniform spatial resolution of 3D-DyFI across the entire x-y plane should be
+attributed to the distortion-correcting capability of the laser scanning tube
+lens (see Supplementary Note 2 for detailed information). A statistically
+spatial resolution evaluation was conducted with 39 measurements in 3D
+( ± 18 µm, ±18 µm, ±4 µm), resulting average resolution of 319 ± 55 nm,
+405 ± 56 nm, and 1.10 ± 0.11 µm in x, y and z respectively (Fig.2b). Addi-
+tionally, axial resolution consistency along the z-axis was further examined
+by measuring a microsphere at various depths (−4µ m ,−2 µm, 0, 2 µm, and
+4µ m ) ,a ss h o w ni nF i g .2c, d. Notably, the best axial resolution was obtained
+at the z = 0 position, with a slight resolution decrease as the axial position
+deviated from this central position, which can be improved by using long
+working distance objective lenses35. These results demonstrate that 3D-DyFI
+maintains relatively uniform resolution across a decent 3D scanning volume
+(40 µm × 40 µm × 10 µm). The spatial resolution distribution in 3D range
+has also been characterized by red ﬂuorescent microspheres with 635 nm
+excitation, showing similar result with slightly lower resolution due to the
+larger wavelength (Supplementary Figs. S6– S7). It is important to note that
+optimal resolution is achieved at the center of the scanning range of the 3D
+dynamic focusing system. Deviations from the center lead to resolution
+degradation, an effect that is more pronounced in the axial direction.
+Consequently, for optimal 3D imaging using 3D-DyFI, it is advisable to
+position the imaging target near the center of the scanning range of the 3D
+dynamic focusing system.
+Temporal resolution assessment
+The response time of the scanning unit iscrucial for achieving high temporal
+resolution in microscopy, especially in 3D random-access imaging micro-
+scopy. To assess the temporal resolution of 3D-DyFI, we examined the
+response times of 3D dynamic focusing system and 3D piezo stage across the
+x, y, and z axes, as shown in Fig. 3.I ti sw o r t h yt on o t et h a tb o t ht h e3 D
+dynamic focusing system and 3D piezo stage can perform addressable laser
+focus positioning and thereby realize 3D random-access imaging. There-
+fore, in this work we use the piezo stage-based confocal microscopy as the
+benchmark reference.
+The response times of the piezo stage were determined by the position
+feedback signals from the controller. Speciﬁcally, a displacement of 1 µm
+was induced to the piezo stage with simultaneously recording the feedback
+signals from the piezo stage controller. The obtained response times of x, y,
+and z are 13.6 ms, 9.3 ms, and 22.3 ms, respectively (Fig.3a). In contrast, the
+3D dynamic focusing system lacks direct feedback signal output. To
+determine the response time, a ﬂuorescent microsphere was positioned at
+t h ef o c a lp o i n t ,a n dt h el a s e rf o c u sw a st h e nd i s p l a c e db y1µ mu s i n gt h e3 D
+dynamic focusing system. The response time was quantiﬁed by analyzing
+theﬂuorescence intensity changing time. Here, the measured response times
+of 3D dynamic focusing system on x, y, and z are 0.74 ms, 0.82 ms, and
+0.65 ms, respectively (Fig. 3b). These results show that the 3D dynamic
+focusing system has a substantial i mprovement in response speed, with
+approximately 34 times faster on the z-axis, 18 times faster on the X-axis,
+and 11 times faster on the y-axis compared to the piezoelectric stage.
+Moreover, the galvo system demonstra ted near isotropic response times
+across all three dimensions, which is advantageous for random-access
+imaging. Additionally, the use of 3D dynamic focusing system not only
+facilitates faster imaging but also avoids potential disturbances caused by
+moving samples with piezo stage.
+Live cell 3D imaging with 3D-DyFI
+To demonstrate the 3D imaging performance of 3D-DyFI with biological
+samples, we performed volumetric cellular imaging in live cells. The cell
+membrane was stained with DiD (C1995S, Beyotime), a red membrane dye.
+The cells were ﬁrst imaged with piezo stage-b ased confocal microscopy
+(Fig. 4a), followed by 3D imaging with 3D-DyFI in the same area (Fig.4b).
+By examining the three-dimensional volume images and the section images
+in x-y, x-z, and y-z planes of the same cell, we found that the two systems
+have consistent 3D imaging performance (Fig.4a, b).
+To quantitatively evaluate the 3D imaging performance of 3D-DyFI,
+we compared two intensity proﬁl e so nxa n dya x e s( F i g .4c, d). The intensity
+proﬁles show a high degree of consistency in the two systems. The relative
+root mean squared errors (RRMSE) isa commonly used method to quantify
+the similarity of two sets of data 36,37.H e r ew em e a s u r e dt h eR R M S Eo f
+intensity proﬁles in Fig. 4ca n dF i g .4d, resulting values of 0.031 and 0.082,
+which indicate minimal differences between the image data collected by the
+two systems. These results show that the spatial resolution and accuracy of
+3D-DyFI are comparable with the piezostage-based confocal microscopy.
+To further demonstrate the 3D cellular imaging capability of 3D-DyFI.
+We imaged mitochondria (Fig.5), cell microtubule (Supplementary Fig. S8),
+cell membrane (Supplementary Fig. S9), and lipid droplets in live cell
+https://doi.org/10.1038/s44172-024-00320-2 Article
+Communications Engineering |           (2024) 3:166 3
+
+(Supplementary Fig. S10). Additionally, the 3D-DyFI can also be used for
+3D imaging in thick cells (Supplementary Fig. S11). These results demon-
+strate that the 3D-DyFI can be employed for 3D volume cellular imaging.
+3D Random-access imaging
+Random-access imaging allows for rapid and targeted imaging of multiple
+regions of interest, bypassing th e need for time-consuming raster
+scanning16– 27. This unique feature is particularly advantageous for dynamic
+studies where high temporal resolution is required. To demonstrate the 3D
+random-access imaging capability of the 3D-DyFI, we employed 3D-DyFI
+to monitor the ﬂuorescence signals of three ﬂuorescent beads in different
+locations with fast-switching rate (Fig.6a– d).
+Initially, ﬂuorescent beads were embedded in agarose and imaged in
+3D (Fig.6a, with beads labeled A, B, and C). Subsequently, theﬂuorescence
+intensities of these three beads were recorded by sequentially focusing laser
+on each bead at a fast-switching rate (Fig. 6b– d). An integration time of
+400 μs was employed for each data point to average out the ﬂuorescence
+noise, considering the ~800μs response time of the 3D dynamic focusing
+system. Different illumination times were applied to each particle in suc-
+cessive imaging period to assess the random-access imaging performance of
+3D-DyFI (Fig.6b– d). With 2 ms illumination time, the intensity difference
+among the three particles can be resolved, although only a few data points
+were presented in each stage (Fig. 6b, c). Figure 6bs h o w st h es e g m e n t a r y
+intensity trace of the threeﬂuorescent beads. The lines with different colors
+indicate different particles, which also show differentﬂuorescent intensities.
+Figure 6c, d shows the continuous intensity trace from three ﬂuorescent
+beads, which reveals the intensity changes as the laser switches between
+particles. When the illumination time is increased to 5 ms, a more pro-
+nounced stair-stepping intensity proﬁle is observed (Fig.6d). Additionally,
+the 3D imaging ofﬂuorescent microspheres were conducted with the pixel
+illumination time of 2 ms, 5 ms, and 10 ms, respectively (Supplementary
+Fig. S12). These results demonstrate that the refreshing rate of 3D-DyFI on
+two different detection positions in 3D can reach up to 500 Hz.
+For comparison, we also performed 3D random-access imaging using
+piezo stage-based imaging method (Fig. 6e– h). Similar with 3D random-
+access imaging by 3D-DyFI, the 3D image of three ﬂuorescent beads was
+Fig. 2 | 3D spatial resolution examination in various positions in 3D. a Images of
+50 nm ﬂuorescent green microspheres located at the positions of (18, 0), (−18, 0), (0,
+18), and (0, −18) in the x-y plane. The upper panel shows the PSF in x-y plane, while
+the lower panel shows the PSF in x-z plane. Scale bar = 500 nm. b The statistical
+histogram of spatial resolution distribution in x, y, and z directions, which shows
+mean values of 319 ± 55 nm, 405 ± 56 nm, and 1.10 ± 0.11 µm in x, y, and z. n = 39.
+c Fluorescent microsphere images at different z-depths (−4 μm, −2 μm, 0 μm, 2 μm,
+and 4 μm). Scale bar = 500 nm. d Plots of the intensity distribution of the PSFs in
+different axial positions in ( c). The axial resolutions were determined by ﬁtted
+FWHM. The color indicates ﬂuorescence intensity in ( a) and ( c).
+https://doi.org/10.1038/s44172-024-00320-2 Article
+Communications Engineering |           (2024) 3:166 4
+
+presented, and their intensity traces were recorded with 10 ms and 50 ms
+illumination time. The readout position and the input position of the piezo
+stage can be obtained from the controller of piezo stage (magenta line and
+t h ey e l l o wl i n ei nF i g .6g, h). It is evident that the piezo stage’sp o s i t i o nl a g s
+behind the input signal due to its slower response speed. Moreover, due to
+the ~20 ms response time of piezoelectric stage, theﬂuorescence signals of
+the three particles cannot be resolved with 10 ms illumination time (Fig.6g).
+When using 50 ms illumination time, the three particles can be identiﬁed,
+showing a refreshing rate of 20 Hz (Fig. 6f, h). However, there are signal
+drops caused by the long transition time between particles (Fig. 6h).
+Compared with the piezo-stage based random-access imaging method, 3D-
+DyFI shows 25 times improvement on refreshing rate, enabling milliseconds
+dynamics observation over 3D.
+Conclusion and discussion
+In this study, we developed a 3D random-access confocal microscopy with
+remote-focusing system, termed 3D-DyFI. This system not only can per-
+form fast 3D confocal raster scanning imaging, but also able to realize 3D
+random-access imaging. The 3D spatial resolution, imagingﬁeld range, and
+the response time of 3D-DyFI were f ully characterized. 3D-DyFI was
+employed to capture the 3D images of live HeLa cells, demonstrating its
+compatibility with biological sample imaging. Additionally, the random-
+access imaging capability of 3D-DyFI was validated by monitoring the
+ﬂuorescence intensity of nanoparticles ind i f f e r e n tl o c a t i o n si n3 D ,s h o w i n g
+a refreshing rate up to 500 Hz.
+Compared with 3D piezo stage-based confocal microscopy, 3D-DyFI
+utilizes remote-focusing system to perform fast and accurate laser focus
+manipulation in 3D. The 3D remote dynamical focusing system has several
+advantages over piezo stage-based method. Theﬁr s to n ei st h a ti ta v o i d st h e
+physical movement of the sample or theobjective lens, thereby eliminating
+the potential disturbances caused by mechanical movements. Secondly,
+while maintaining the spatial resolution comparable to piezo stage-based
+confocal microscopy, its 3D random-access imaging temporal resolution is
+improved by approximately 25-fold. Additionally, the cost of dynamical
+focusing system is also reduced compared with 3D piezo stage. The more
+affordable cost of dynamical focusing system increases the feasibility of 3D-
+DyFI in a broader range of research laboratories. In the remote objective
+based-remote focusing methods29– 33, a translational mirror and a polariza-
+tion beam splitter are utilized in the detection path. The use of polarization
+beam splitter results in 50 %ﬂuorescence loss in these methods. As contrast,
+3D-DyFI doesn’t suffer from this problem and has higher photon collection
+efﬁciency.
+In previously reported 3D random -access microscopy, two pairs of
+AODs are employed to manipulate the laser focus manipulation in 3D17,23,24.
+While this kind of 3D random-access microscopy shows great imaging
+speed and large imaging ﬁeld, the reliance of AOD limited its multicolor
+applications. In contrast, 3D-DyFI is not wavelength sensitive and is able to
+perform multicolor imaging. Addit ionally, in AOD-based 3D random-
+access microscopy, theﬂuorescence does not go through the de-scan pro-
+cess, which means that the system requires detectors with large detection
+area, such as photomultiplier tubes (PMTs). This limitation precludes the
+u s eo fm o r ee c o n o m i cs i n g l ep h o t onc o u n t i n ga v a l anche photodiode
+(APDs), of which detection area is usually less than 200μm. Moreover, the
+high complexity and high cost of A OD-based 3D random-access micro-
+scopy necessitate specialized optics expertize and a substantial budget to
+construct it, precluding the widespread application of 3D random-access
+microscopy. In contrast, 3D-DyFI provides a more economic, simple, and
+versatile solution for 3D random-access imaging.
+The spatial light modulator (SLM) and digital micromirror device
+(DMD) have also been used to generate 3D scanning patterns32,38,39.H o w -
+ever, the number of degrees of freedom (DoF) in these systems inherently
+limits the number of accessible voxels, despite improvements with the
+recently reported three-dimensional multi-site random access photo-
+stimulation (3D-MAP) method38. In contrast, in 3D-DyFI, the laser focus
+position is determined by the input voltage to the 3D dynamic focusing
+system, which eliminates this limitation.
+Another commonly used optical device for rapid axial scanning is the
+tunable acoustic gradient index of refraction (TAG) lens40– 43.T h eT A Gl e n s
+can oscillate the laser focus sinusoidally along the axial direction at fre-
+quencies reaching hundreds of kilohertz. However, the TAG lens is unable
+to maintain the laser focus at a speciﬁcf o c a lp l a n ef o re x t e n d e dp e r i o d s ,a n d
+pulsed light is required for selective focal plane excitation. In 3D-DyFI, the
+focal position is controlled through analog voltage, allowing for more
+straightforward and precise manipulation of the excitation focus.
+It should be noted that although in this work only single-photon 3D
+imaging was presented, 3D-DyFI is i nherently compatible with multi-
+photon imaging. Moreover, by using lower magniﬁcation objective lens, the
+imaging ﬁeld and imaging depth of 3D-DyFI can be further increased.
+Fig. 3 | Comparative analysis of response times for 3D-DyFI and piezoelectric stage system.Response times of the piezoelectric stage (a) and 3D-DyFI (b) on the x, y, and z
+directions.
+https://doi.org/10.1038/s44172-024-00320-2 Article
+Communications Engineering |           (2024) 3:166 5
+
+Additionally, the remote-focusing conﬁguration enables 3D-DyFI to per-
+form multimode imaging, such as combined 3Dﬂuorescence imaging with
+atom force microscopy, optical tweezers imaging or manipulation, ﬂuor-
+escence lifetime imaging, and electrophysiological measurement with patch
+clamp44– 51. Furthermore, as the sample is stationary during imaging process
+as in 3D-DyFI, it has the potential to achieve isotropic resolution imaging via
+dual-view plane illumination meth od with switching illumination and
+detection between two perpendicular objectives52. The recently developed
+deep-learning methods can also be adopted to improve the axial
+resolution53– 56. It can be expected that the simplicity, versatility, and
+affordability of 3D-DyFI promise its widespread applications in both the
+research community and industry.
+Methods
+Optical alignment and calibration
+Prior to collimation, the position of the plano-convex lens within the gal-
+vanometer was set to z = 0. Subsequently, the laser scanning tube lens was
+aligned to be conjugate with the galva nometer system, ensuring that the
+emitted light remained parallel. The back focal plane of the objective lens
+was conjugated with the laser scanning tube lens. This stringent arrange-
+ment is crucial for achieving high quality imaging. The beam expansion
+ratio has been meticulously engineered so that the spot size before entering
+the objective lens fully ﬁlls the entrance pupil of the objective lens. To
+facilitate system evaluation and comparative performance studies, a pie-
+zoelectric stage (LFHS3, Piezoconcept)was integrated into the custom-built
+microscope setup, allowing for directplacement of the sample on the stage.
+This optical setup enables 3D confocal imaging with either a 3D dynamic
+focusing system or a piezoelectric stage.
+The 3D dynamic focusing system need to be precisely calibrated to
+determine the actual laser focus posi tion after the objective lens for the
+correspondent control analog voltage. Moreover, the deﬂection range of 3D
+dynamic focusing system also needs to be obtained. Fortunately, nano
+piezoelectric stages capable of nano meter movements provide a precise
+“ruler.” We utilize the piezoelectric stage as a calibration standard to align
+the scanning parameters of the 3D dynamic focusing system, including step
+length and scanning range. Detailed calibration steps include:
+a) Place a 50/50 beam splitter between the 3D dynamic focusing system
+and the laser scanning tube lens to divert part of theﬂuorescence signal into
+Fig. 4 | Three-dimensional imaging of DiD-stained HeLa cell membranes with
+3D-DyFI and piezo stage-based confocal microscopy. a 3D live cell imaging with
+piezo stage-based confocal microscopy. b 3D live cell imaging with 3D-DyFI. The
+corresponding section images in the x-y, x-z, and y-z planes are shown in the right
+panel. The x-y plane section images were taken at the axial position of z = 0.4μm; the
+x-z plane section images were taken at the position of y = 15 μm; and the y-z plane
+section images were taken at the position of x = 24 μm. Dashed lines at x = 24 μm
+(cyan) and y = 15 μm (yellow) are marked on the x-y plane image. The color indi-
+cates ﬂuorescence intensity in (a) and (b). The intensity proﬁles along the y = 15 μm
+(c) and x = 24 μm lines ( d), respectively. The relative root means squared errors
+(RRMSE) between the two intensity pro ﬁles were calculated, resulting in 0.031 and
+0.082, respectively. Pixel size in x and y: 0.2 μm; Pixel size in z: 0.4 μm.
+https://doi.org/10.1038/s44172-024-00320-2 Article
+Communications Engineering |           (2024) 3:166 6
+
+the camera. The images at this location, yet to be de-scanned, indicate the
+movement of the light spot after the objective lens.
+b) Capture images of ﬁxed 200 nm red ﬂuorescent microspheres
+(PSRF00200, Beijing Zhongkeleiming Technology) with camera and move
+the piezoelectric stage 1 µm in the x-y direction to determine pixel size of the
+camera produced image for subsequent displacement calculations.
+c) Place a glass slide after the objective lens and record the laser
+reﬂection signal with camera. Adjust the x, y, and z axes of the 3D
+dynamic focusing system and measure the displacement of re ﬂection
+spot on camera. Using the calibrated pixel size as a reference, the scan-
+ning step length and scanning range of the dynamic focusing system’sx - y
+axis can be estimated, establishing the relationship between the galvan-
+ometer’sd e ﬂection angle (or applied voltage) and the laser focus
+displacement after the objective lens.
+d) Move the microspheres 1 µm away from the center position in x, y,
+and z directions with piezoelectric stage. Then use the 3D dynamic focusing
+galvanometer to compensate this motion to determine the calibration fac-
+tors. Comparing the images scanne d by the piezoelectric stage and the
+corrected scanning results of the 3D dynamic focusing galvanometer mul-
+tiple times ensures optimal alignment across all dimensions.
+Sample preparation
+Fluorescent microspheres sample preparation . Red and green
+ﬂuorescent microspheres with a diameter of 50 nm (FSFR001 and
+FSDG001, Bangs Laboratories, Inc.) and red ﬂuorescent microspheres
+with a diameter of 200 nm (PSRF00200, Beijing Zhongkeleiming Tech-
+nology) were used in this study. The microspheres were diluted in
+phosphate buffered saline (PBS, E607008, Sangon Biotech) at a ratio of
+1:4000 for 200 nm microspheres and 1:12,000 for 50 nm microspheres.
+For resolution characterization, 2 mL of 50 nm ﬂuorescent microsphere
+solution was added into a glass-bottom cell culture dish (801001, Nest).
+For 3D random-access imaging, 200 nm red ﬂuorescent beads were
+dispersed in 0.5% agarose at a dilution ratio of 1:2000. Initially, the 0.5%
+agarose solution was prepared and, prior to solidiﬁcation, the ﬂuorescent
+beads were introduced. The mixture was then gently stirred to ensure
+uniform distribution and to prevent bubble formation. Afterward, this
+homogeneous mixture was promptly transferred to a glass-bottom cell
+culture dish, where it was allowed to cool and solidify, thereby embedding
+the ﬂuorescent beads in a stable three-dimensional matrix.
+Culture of HeLa cells. HeLa cells were cultured in Dulbecco ’s Modiﬁed
+Eagle Medium (DMEM; PM150223-500, Pricella) supplemented with
+10% fetal bovine serum (FBS; F0193, Sigma-Aldrich) and 1% penicillin-
+streptomycin (15140122, Gibco). The cells were maintained at 37 °C in an
+atmosphere containing 5% CO 2 until they reached 60 – 80% conﬂuency.
+For subsequent experiments, cells were plated on glass-bottom dishes
+(801001, Nest) to achieve ~70% coverage.
+Label mitochondria and microtubules with ﬂuorescent protein .
+Mitochondria and microtubules were labeled with ﬂuorescent proteins
+using plasmid transfections performed with Lipofectamine 3000
+(L3000008, Invitrogen) as per the manufacturer ’s instructions. Between
+14 and 18 h post-transfection, cells expressed either 2 × COX8-mGold-
+HaloTag or mBaojin-Tubulin, supplied by the WeKwikGene Team
+(0000260). The COX8 gene (synthesized from Tsingke Biotech, Beijing,
+China) were engineered to fuse with mGold, a yellowﬂuorescent protein,
+which was derived from pCMV-mGold-Actin-C-18 (MiaoLingBio,
+P50209).
+Fig. 5 | 3D imaging of mitochondria of live HeLa cells with 3D-DyFI. The
+mitochondria were labeled with mGold ﬂuorescent protein. The left panel shows 3D
+live cell imaging. The right panel shows the section image in the x-y, x-z, and y-z
+planes. The sectioning positions are labeled in the upper right corner of the images.
+a, b are obtained from two different cells. The color indicates ﬂuorescence intensity.
+https://doi.org/10.1038/s44172-024-00320-2 Article
+Communications Engineering |           (2024) 3:166 7
+
+Membrane staining with DiD . For live-cell membrane staining, HeLa
+cells were treated with DiD (C1995S, Beyotime) following the manu-
+facturer’s guidelines. Cells were plated at a density of 1.5 × 10 5 cells per
+dish and allowed to adhere overnight. Subsequently, the culture medium
+was removed, and the cells were washed twice with DMEM. The staining
+solution was then applied, and the dishes were gently agitated to promote
+even dye distribution. Cells were incubated in the dark at 37 °C for
+20 min. Post-incubation, the cells were washed three times with DMEM,
+followed by the addition of pre-warmed medium for imaging.
+Stain L929 cells with Neil red . Glass-bottom culture dishes were pre-
+coated with ﬁbronectin (10 μg/mL in PBS, 33016015, Gibco ™) for 2 h at
+37 °C. L929 cells were seeded into the coated dishes (Nest; 801001, China)
+at a density of 6000 cells per dish and incubated for 15 h at 37 °C in 5%
+CO2, allowing the cells to reach 40– 50% conﬂuence. Live L929 cells were
+then stained with Nile Red (1 μM) in culture medium for 2 hours in a
+37 °C, 5% CO 2 incubator. After incubation, the cells were washed twice
+with PBS and imaged under the microscope in DMEM.
+To ensure cell viability, all live-cell imaging experiments were com-
+pleted within 20 min, with samples being replaced as necessary if the time
+was exceeded.
+Remote focusing system operation
+The motors for driving PCL and the galvo mirrors are independently
+controlled via three analog voltage output channels of the data acquisition
+card. Custom-build software developed in LabVIEW is employed to set the
+analog voltages applied to the three axes of the remote focusing system.
+Speciﬁcally, the voltages applied to the motors for PCL and galvo mirrors
+determine the position of laser focus position after objective lens. In
+random-access imaging mode, the remote focusing system sequentially
+switches laser focus among several predeﬁned positions. In confocal raster
+scanning imaging mode, the remote focusing system moves the laser focus
+in a raster scanning pattern. At the same time, the ﬂuorescence intensity
+signal from avalanche photodiode (APD) detector is recorded on the digital
+input channel of the data acquisition card. Both the applied analog voltages
+to the remote focusing system and the ﬂuorescence intensity signals are
+logged by the data acquisition card with precise timing tags.
+Data acquisition and processing
+Data acquisition and processing fo r 3D-DyFI were realized via custom-
+developed software, which integrated hardware control, data collection, and
+display functions. An FPGA data acquisition card (PCIe-7858, NI) was
+employed to precisely manipulatethe laser position and record the ﬂuor-
+escent signal. It should be noted here that a more economic data acquisition
+card could also fulﬁll these functions. Two 20 dB attenuators (PE7000-20,
+Pasternack) were incorporated at the inputs of the x and y axes. Fluorescence
+intensity data and the corresponding 3D coordinates during imaging are
+recorded and stored for subsequent analysis. Imaris and ImageJ software
+were used for image processing.
+Reporting summary
+Further information on research designis available in the Nature Portfolio
+Reporting Summary linked to this article.
+Data availability
+Data underlying the results presented in this paper are not publicly available
+at this time but may be obtained from the authors upon reasonable request.
+Received: 26 June 2024; Accepted: 4 November 2024;
+References
+1. Gao, Z., Li, Q., Fan, C. & Hou, S. Deciphering live-cell biomolecular
+dynamics with single-molecule ﬂuorescence imaging. Sci. Bull. 69,
+2095– 9273 (2024).
+2. Hou, S. G., Johnson, C. & Welsher, K. Real-time 3D single particle
+tracking: towards active feedback single molecule spectroscopy in
+live cells. Molecules 24, 2826 (2019).
+3. Liu, Z. C. et al. Structural and functional imaging of brains. Sci. China
+Chem. 66, 324– 366 (2023).
+Fig. 6 | 3D Random-access imaging with 3D-DyFI and piezo stage-based confocal
+system. a Three-dimensional image of three ﬂuorescent beads embedded in agarose
+obtained with 3D-DyFI. The particles are labeled with A, B, and C, respectively.
+b The segmentary intensity trace of the three ﬂuorescent beads in ( a). The illumi-
+nation time in each period is 2 ms. The lines in different colors indicate different
+particles as labeled in ( a). The continuous intensity trace from three ﬂuorescent
+beads with 2 ms illumination time ( c) and 5 ms illumination ( d) in each imaging
+period. The magenta lines show the z position of laser focus, obtained from the input
+of 3D dynamics focusing system. The ﬂuorescence intensity is bin in 400 μs, con-
+sidered the about 800 μs response time of 3D dynamic focusing system. e Three-
+dimensional image of three ﬂuorescent beads embedded in agarose obtained with
+piezo stage-based confocal system. The particles are labeled with A, B, and C,
+respectively. f The segmentary intensity trace of the three ﬂuorescent beads in ( e).
+The illumination time in each period is 50 ms. The lines in different colors indicate
+different particles as labeled in ( e). The continuous intensity trace from three
+ﬂuorescent beads with 10 ms illumination time ( g) and 50 ms illumination ( h)i n
+each imaging period. The magenta lines show the readout position from the pie-
+zoelectric stage controller. The yellow line indicates the input position of the pie-
+zoelectric stage controller. The color indicates ﬂuorescence intensity in ( a) and (e).
+https://doi.org/10.1038/s44172-024-00320-2 Article
+Communications Engineering |           (2024) 3:166 8
+
+4. Zhang, X. F., Li, H. Y., Ma, Y., Zhong, D. P. & Hou, S. G. Study liquid-
+liquid phase separation with optical microscopy: A methodology
+review. Apl. Bioeng. 7, 021502 (2023).
+5. Guo, Y. T. et al. Visualizing intracellular organelle and cytoskeletal
+interactions at nanoscale resolution on millisecond timescales. Cell
+175, 1430– 1442 (2018).
+6. Ray, S., Widom, J. R. & Walter, N. G. Life under the microscope:
+single-molecule ﬂuorescence highlights the RNA world. Chem. Rev.
+118, 4120– 4155 (2018).
+7. Jing, Y. Y., Zhang, C. S., Yu, B., Lin, D. Y. & Qu, J. L. Super-resolution
+microscopy: shedding new light on in vivo imaging. Front. Chem. 9,
+746900 (2021).
+8. Filbrun, S. L. et al. Imaging dynamic processes in multiple dimensions
+and length scales. Annu. Rev. Phys. Chem . 73, 377– 402 (2022).
+9. Hou, M. D. et al. Molecular resolution mapping of erythrocyte
+cytoskeleton by ultrastructure expansion single-molecule localization
+microscopy. Small Methods 7, 2201243 (2023).
+10. Wang, Z. J. et al. High-speed image reconstruction for optically
+sectioned, super-resolution structured illumination microscopy. Adv.
+Photonics 4, 026003 (2022).
+11. Sha, H., Li, H. Y., Zhang, Y. B. & Hou, S. G. Deep learning-enhanced
+single-molecule spectrum imaging. Apl. Photonics 8, 096102 (2023).
+12. Carlsson, K. et al. Three-dimensional microscopy using a confocal
+laser scanning microscope. Opt. Lett. 10,5 3– 55 (1985).
+13. Jonkman, J., Brown, C. M., Wright, G. D., Anderson, K. I. & North, A. J.
+Tutorial: guidance for quantitative confocal microscopy. Nat. Protoc.
+15, 1585– 1611 (2020).
+14. Stachelek, P., MacKenzie, L., Parker, D. & Pal, R. Circularly polarised
+luminescence laser scanning confocal microscopy to study live cell
+chiral molecular interactions. Nat. Commun. 13, 553 (2022).
+15. Ravel, G. et al. Inferring characteristics of bacterial swimming in
+bioﬁlm matrix from time-lapse confocal laser scanning microscopy.
+Elife 11, e76513 (2022).
+16. Bansal, V., Patel, S. & Saggau, P. High-speed addressable confocal
+microscopy for functional imaging of cellular activity. J. Biomed. Opt.
+11, 34003 (2006).
+17. Duemani Reddy, G., Kelleher, K., Fink, R. & Saggau, P. Three-
+dimensional random access multiphoton microscopy for functional
+imaging of neuronal activity. Nat. Neurosci. 11, 713– 720 (2008).
+18. Shi, R. et al. Random-access wide- ﬁeld mesoscopy for centimetre-
+scale imaging of biodynamics with subcellular resolution. Nat.
+Photonics 18, 721– 730 (2024).
+19. Salomé, R. et al. Ultrafast random-access scanning in two-photon
+microscopy using acousto-optic de ﬂectors. J. Neurosci. Methods
+154, 161– 174 (2006).
+20. Ashraf, M. et al. Random access parallel microscopy. Elife 10, e56426
+(2021).
+21. Iyer, V., Hoogland, T. M. & Saggau, P. Fast functional imaging of single
+neurons using random-access multiphoton (RAMP) microscopy. J.
+Neurophysiol. 95, 535– 545 (2006).
+22. Bullen, A., Patel, S. S. & Saggau, P. High-speed, random-access
+ﬂuorescence microscopy .1. High-resolution optical recording with
+voltage-sensitive dyes and ion indicators. Biophys. J. 73, 477– 491
+(1997).
+23. Katona, G. et al. Fast two-photon in vivo imaging with three-
+dimensional random-access scanning in large tissue volumes. Nat.
+Methods 9, 201– 208 (2012).
+24. Nadella, K. M. N. S. et al. Random-access scanning microscopy for
+3D imaging in awake behaving animals. Nat. Methods 13, 1001– 1004
+(2016).
+25. Geng, Q., Gu, C., Cheng, J. & Chen, S.-C. Digital micromirror device-
+based two-photon microscopy for three-dimensional and random-
+access imaging. Optica 4, 674– 677 (2017).
+26. Janiak, F. K. et al. Non-telecentric two-photon microscopy for 3D
+random access mesoscale imaging. Nat. Commun. 13, 544 (2022).
+27. Rózsa, B. et al. Random access three-dimensional two-photon
+microscopy. Appl. Opt. 46, 1860– 1865 (2007).
+28. Römer, G. R. B. E. & Bechtold, P. Electro-optic and acousto-optic
+laser beam scanners. Phys. Procedia 56,2 9– 39 (2014).
+29. Botcherby, E. J., Ju škaitis, R., Booth, M. J. & Wilson, T. An optical
+technique for remote focusing in microscopy. Opt. Commun. 281,
+880– 887 (2008).
+30. Botcherby, E. J., Juskaitis, R., Booth, M. J. & Wilson, T. Aberration-
+free optical refocusing in high numerical aperture microscopy. Opt.
+Lett. 32, 2007– 2009 (2007).
+31. Botcherby, E. J., Booth, M. J., Ju škaitis, R. & Wilson, T. Real-time
+extended depth of ﬁeld microscopy. Opt. Express 16, 21843– 21848
+(2008).
+32. Anselmi, F., Ventalon, C., Bègue, A., Ogden, D. & Emiliani, V. Three-
+dimensional imaging and photostimulation by remote-focusing and
+holographic light patterning. Proc. Natl Acad. Sci. 108, 19504– 19509
+(2011).
+33. Hugonnet, H., Lee, M. & Park, Y. Optimizing illumination in three-
+dimensional deconvolution microscopy for accurate refractive index
+tomography. Opt. Express 29, 6293– 6301 (2021).
+34. Chang, M., Zhang, P., Sun, J. & Zhang, X. in Advances in
+Optoelectronics and Micro/nano-optics 1 – 3 (IEEE, 2010).
+35. Qi, Y. et al. Remote-focusing microscopy with long working distance
+objective lenses. Appl. Opt. 53, 3473– 3478 (2014).
+36. Shaji, A. & Sheeja, M. in 2023 IEEE 15th International Conference on
+Computational Intelligence and Communication Networks (CICN)
+741– 745 (IEEE, 2023).
+37. Dogan, H., Dogan, R. O., Ay, I. & Sezen, S. F. DL-EDOF: Novel Multi-
+Focus Image Data Set and Deep Learning-Based Approach for More
+Accurate and Specimen-Free Extended Depth of Focus. Journal of
+Imaging Informatics in Medicine ,1 – 23 (2024).
+3 8 . X u e ,Y . ,W a l l e r ,L . ,A d e s n i k ,H .&P é g a r d ,N .T h r e e - d i m e n s i o n a lm u l t i -
+site random access photostimulation (3D-MAP).Elife 11, e73266 (2022).
+39. Lutz, C. et al. Holographic photolysis of caged neurotransmitters. Nat.
+Methods 5, 821– 827 (2008).
+40. Mermillod-Blondin, A., McLeod, E. & Arnold, C. B. High-speed
+varifocal imaging with a tunable acoustic gradient index of refraction
+lens. Opt. Lett. 33, 2146– 2148 (2008).
+41. Deguchi, T. et al. Volumetric Lissajous confocal microscopy with
+tunable spatiotemporal resolution. Biomed. Opt. Express 11,
+6293– 6310 (2020).
+42. Kong, L. et al. Continuous volumetric imaging via an optical phase-
+locked ultrasound lens. Nat. Methods 12, 759– 762 (2015).
+43. Duocastella, M., Vicidomini, G. & Diaspro, A. Simultaneous multiplane
+confocal microscopy using acoustic tunable lenses. Opt. Express 22,
+19293– 19301 (2014).
+44. Datta, R., Heaster, T. M., Sharick, J. T., Gillette, A. A. & Skala, M. C.
+Fluorescence lifetime imaging microscopy: fundamentals and
+advances in instrumentation, analysis, and applications. J. Biomed.
+Opt. 25,1 – 43 (2020).
+45. Levchenko, S. M., Pliss, A., Peng, X., Prasad, P. N. & Qu, J.
+Fluorescence lifetime imaging for studying DNA compaction and
+gene activities. Light. Sci. Appl. 10, 224 (2021).
+46. Dufrêne, Y. F. et al. Imaging modes of atomic force microscopy for
+application in molecular and cell biology. Nat. Nanotechnol. 12,
+295– 307 (2017).
+47. Gómez-Varela, A. I. et al. Simultaneous co-localized super-resolution
+ﬂuorescence microscopy and atomic force microscopy: combined
+SIM and AFM platform for the life sciences. Sci. Rep. 10, 1122 (2020).
+48. Shepherd, J. W. et al. Correlating ﬂuorescence microscopy, optical
+and magnetic tweezers to study single chiral biopolymers such as
+DNA. Nat. Commun. 15, 2748 (2024).
+49. Sirinakis, G., Ren, Y., Gao, Y., Xi, Z. & Zhang, Y. Combined versatile
+high-resolution optical tweezers and single-molecule ﬂuorescence
+microscopy. Rev. Sci. Instrum. 83, 093708 (2012).
+https://doi.org/10.1038/s44172-024-00320-2 Article
+Communications Engineering |           (2024) 3:166 9
+
+50. Yadav, R. & Lu, H. P. Revealing dynamically-organized receptor ion
+channel clusters in live cells by a correlated electric recording and
+super-resolution single-molecule imaging approach. Phys. Chem.
+Chem. Phys. 20, 8088– 8098 (2018).
+51. Sasmal, D. K. & Lu, H. P. Single-molecule patch-clamp FRET
+microscopy studies of NMDA receptor ion channel dynamics in living
+cells: revealing the multiple conformational states associated with a
+channel at its electrical off state. J. Am. Chem. Soc. 136,
+12998– 13005 (2014).
+52. Wu, Y. et al. Spatially isotropic four-dimensional imaging with dual-
+view plane illumination microscopy. Nat. Biotechnol. 31, 1032– 1038
+(2013).
+53. Ning, K. et al. Deep self-learning enables fast, high- ﬁdelity isotropic
+resolution restoration for volumetric ﬂuorescence microscopy. Light.:
+Sci. Appl. 12, 204 (2023).
+54. Zhao, F. et al. Deep-learning super-resolution light-sheet add-on
+microscopy (Deep-SLAM) for easy isotropic volumetric imaging of
+large biological specimens. Biomed. Opt. Express 11, 7273– 7285
+(2020).
+55. Park, H. et al. Deep learning enables reference-free isotropic super-
+resolution for volumetricﬂuorescence microscopy. Nat. Commun. 13,
+3297 (2022).
+56. Fang, C. et al. Minutes-timescale 3D isotropic imaging of entire
+organs at subcellular resolution by content-aware compressed-
+sensing light-sheet microscopy. Nat. Commun. 12, 107 (2021).
+Acknowledgements
+We would like to acknowledge support from the Shenzhen Medical
+Research Fund (B2301003), the National Natural Science Foundation of
+China (62065012, 22204106), the Evident & Shenzhen Bay Laboratory Joint
+Optical Microscopic Imaging Technology Development Program
+(S234602004-4), the Basic and Applied Basic Research Foundation of
+Guangdong Province (2021A1515110710), and the Guangdong Provincial
+Pearl River Talents Program (2021QN02Z631). We thank Feng Zhang at
+Sino-Galvo Technology for technical support.
+Author contributions
+Shangguo Hou conceived the idea and proposed this project; Shangguo
+Hou, Suhui Deng, and Dongping Zhong supervised this project, including
+the framework design and improvement. Haoyang Li, Quan Lu, and Wenbo
+Zhang performed the experiments. Haoyang Li, Quan Lu, Zhong Wang,
+Yandong Sun, and Yue Hu performed the data analysis. Haoyang Li,
+Shangguo Hou, Quan Lu, and Zhong Wang wrote the draft of the
+manuscript. All authors proofread and revised the manuscript. Yu Wu and
+Lehui Xiao prepared the cell samples.
+Competing interests
+The authors declare no competing interests.
+Additional information
+Supplementary informationThe online version contains
+supplementary material available at
+https://doi.org/10.1038/s44172-024-00320-2.
+Correspondenceand requests for materials should be addressed to
+Dongping Zhong, Suhui Deng or Shangguo Hou.
+Peer review information Communications Engineeringthanks Moosung
+Lee and the other, anonymous, reviewers for their contribution to the peer
+review of this work. Primary Handling Editors: Anastasiia Vasylchenkova.
+Peer review reports are available.
+Reprints and permissions informationis available at
+http://www.nature.com/reprints
+Publisher’s note Springer Nature remains neutral with regard to
+jurisdictional claims in published maps and institutional afﬁliations.
+Open Access This article is licensed under a Creative Commons
+Attribution-NonCommercial-NoDerivatives 4.0 International License,
+which permits any non-commercial use, sharing, distribution and
+reproduction in any medium or format, as long as you give appropriate
+credit to the original author(s) and the source, provide a link to the Creative
+Commons licence, and indicate if you modi ﬁed the licensed material. You
+do not have permission under this licence to share adapted material
+derived from this article or parts of it. The images or other third party
+material in this article are included in the article ’s Creative Commons
+licence, unless indicated otherwise in a credit line to the material. If material
+is not included in the article’s Creative Commons licence and your intended
+use is not permitted by statutory regulation or exceeds the permitted use,
+you will need to obtain permission directly from the copyright holder. To
+view a copy of this licence, visit http://creativecommons.org/licenses/by-
+nc-nd/4.0/.
+© The Author(s) 2024
+https://doi.org/10.1038/s44172-024-00320-2 Article
+Communications Engineering |           (2024) 3:166 10

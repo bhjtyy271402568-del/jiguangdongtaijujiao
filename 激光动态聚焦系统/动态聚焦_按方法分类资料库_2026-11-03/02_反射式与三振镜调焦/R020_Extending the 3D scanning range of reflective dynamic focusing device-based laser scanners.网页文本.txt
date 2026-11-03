@@ -1,0 +1,570 @@
+来源：https://opg.optica.org/ol/abstract.cfm?uri=ol-48-24-6496
+采集日期：2026-11-03
+
+Extending the 3D scanning range of reflective dynamic focusing device-based laser scanners
+Skip to main content
+Expand this Topic
+clickable element to expand a topic
+Your token has expired or is invalid. Please log in again to continue. Log in by email links must be used within 10 minutes of receipt.
+All Publications
+All Publications
+Site Search
+Advanced Search
+SEARCH OPTIONS
+Close
+Article Search
+ImageBank Search
+Site Search
+KEYWORDS
+Only if other supplemental resources are available
+Title and Abstract
+All text
+AUTHORS
+• Use these formats for best results: Smith or J Smith
+• Use a comma to separate multiple people: J Smith, RL Jones, Macarthur
+Any :
+All :
+?
+Tips for preparing a search:
+Keep it simple - don't use too many different parameters.
+Separate search groups with parentheses and Booleans. Note the Boolean sign must be in upper-case.
+Example: (diode OR solid-state) AND laser [search contains "diode" or "solid-state" and laser]
+Example: (photons AND downconversion) - pump [search contains both "photons" and "downconversion" but not "pump"]
+Improve efficiency in your search by using wildcards.
+Asterisk ( * ) -- Example: "elect*" retrieves documents containing "electron," "electronic," and "electricity"
+Question mark (?) -- Example: "gr?y" retrieves documents containing "grey" or "gray"
+Use quotation marks " " around specific phrases where you want the entire phrase only.
+For best results, use the separate Authors field to search for author names.
+Author name searching:
+Use these formats for best results: Smith or J Smith
+Use a comma to separate multiple people: J Smith, RL Jones, Macarthur
+Note: Author names will be searched in the keywords field, also, but that may find papers where the person is mentioned, rather than papers they authored.
+SEARCH IN
+Journals
+Vol.
+Issue
+Page
+Conferences
+Year
+Paper #
+Industry Reports
+Report Year
+PUBLICATION YEARS
+From
+To
+Enter only one date to search
+After ("From") or Before ("To")
+OPTICS & PHOTONICS TOPICS
+Browse All Topics
+Selected topics
+Find articles with
+any
+selected topics
+Find articles with
+all
+selected topics
+Browse All Topics
+Click the
+to reveal subtopics. Use the checkbox to select a topic to filter your search.
+?
+About Optics & Photonics Topics
+Optica Publishing Group developed the Optics and Photonics Topics to help organize its diverse content more accurately by topic area. This topic browser contains over 2400 terms and is organized in a three-level hierarchy.
+Read more.
+Topics can be refined further in the search results. The Topic facet will reveal the high-level topics associated with the articles returned in the search results.
+SPECIAL COLLECTIONS
+Energy and Environmental Optics Express
+Application Notes (formerly E&L Notes)
+Memoranda
+Opinions
+Reviews
+Spotlight on Optics
+Tutorials
+Retrospectives
+Clear my choices above
+Search
+KEYWORDS
+Search
+LOGIN
+SUBMIT
+OPTICA AI
+Skip to content
+Toggle navigation
+All Publications
+All Publications
+Site Search
+Journals
+Advances in Optics and Photonics
+Applied Optics
+Applied Spectroscopy
+Biomedical Optics Express
+Chinese Optics Letters
+Current Optics and Photonics
+Journal of Lightwave Technology
+Journal of Near Infrared Spectroscopy
+Journal of Optical Technology
+Journal of Optical Communications and Networking
+Journal of the Optical Society of America A
+Journal of the Optical Society of America B
+Optica
+Optica Quantum
+Optical Materials Express
+Optics and Photonics News
+Optics Continuum
+Optics Express
+Optics Letters
+Photonics Research
+Legacy Journals
+Journal of Display Technology (2005-2016)
+Journal of the Optical Society of Korea (1997-2016)
+Journal of Optical Networking (2002-2009)
+Journal of the Optical Society of America (1917-1983)
+Optics News (1975-1989)
+OSA Continuum (2018-2021)
+Conferences
+Find Conferences
+By Year
+By Name
+Featured
+Optical Fiber Communication (OFC)
+Conference on Lasers and Electro-Optics (CLEO)
+Frontiers in Optics (FiO)
+Newly Published
+JSAP-Optica Joint Symposia
+Bragg Gratings, Photosensitivity, and Poling in Glass Waveguides
+Integrated Photonics Research, Silicon and Nanophotonics
+Nonlinear Photonics
+Novel Optical Materials and Applications
+Preprints
+Optica Open
+View preprints
+Submit preprint
+Author instructions
+About
+FAQ
+Other Resources
+Information For
+Authors
+Reviewers
+Librarians
+Products and Services
+Digital Archive
+Interactive Science Publishing (ISP)
+Optica AI
+Optica Open
+Optics ImageBank
+Optics and Photonics Topics
+Spotlight on Optics
+Publications
+Bookshelf
+Special Collections
+Regional Content
+On The Cover: Photonics Research
+Spotlight: Chinese Optics Letters
+Open Access Information
+Open Access Statement and Policy
+Terms for Journal Article Reuse
+Accessibility Information
+OPG Accessibility Statement
+My Favorites
+Go to My Account
+Login to access favorites
+Recent Pages
+LOGIN
+OR
+CREATE ACCOUNT
+Journal Home
+About
+Issues in Progress
+Current Issue
+All Issues
+Early Posting
+Optics Letters
+Vol. 48,
+Issue 24
+,
+pp. 6496-6499
+(2023)
+•
+https://doi.org/10.1364/OL.509656
+Extending the 3D scanning range of reflective dynamic focusing device-based laser scanners
+Yi Liu, Yaqing Qiao, Yuhang Ding, Wangrong Lu, Tianting Chen, Haoran Ma, Jun Duan, Wei Xiong, and Leimin Deng
+Author Information
+Author Affiliations
+Yi Liu,
+†
+Yaqing Qiao,
+†
+Yuhang Ding,
+Wangrong Lu,
+Tianting Chen,
+Haoran Ma,
+Jun Duan,
+Wei Xiong,
+and Leimin Deng
+*
+Wuhan National Laboratory for Optoelectronics, Huazhong University of Science and Technology, Wuhan 430074, China
+†
+These authors contributed equally to this Letter.
+*
+Corresponding author:
+dlm@hust.edu.cn
+ORCID
+Wei
+Xiong
+https://orcid.org/0000-0002-2532-2503
+Leimin
+Deng
+https://orcid.org/0000-0002-3361-8822
+Find other works by these authors
+Y Liu
+Y Qiao
+Y Ding
+W Lu
+T Chen
+H Ma
+J Duan
+W Xiong
+L Deng
+Not Accessible
+Your library or personal account may give you access
+Get PDF
+Email
+Share
+Share with Facebook
+X
+Share on X
+Post on reddit
+Share with LinkedIn
+Add to BibSonomy
+Share with WeChat
+Get Citation
+Copy Citation Text
+Yi Liu, Yaqing Qiao, Yuhang Ding, Wangrong Lu, Tianting Chen, Haoran Ma, Jun Duan, Wei Xiong, and Leimin Deng, "Extending the 3D scanning range of reflective dynamic focusing device-based laser scanners," Opt. Lett.
+48
+, 6496-6499 (2023)
+Export Citation
+BibTex
+Endnote (RIS)
+HTML
+Plain Text
+Citation alert
+Save article
+Check for updates
+Related Topics
+Table of Contents Category
+Lasers and Laser Optics
+Optics & Photonics Topics
+?
+The topics in this list come from the
+Optics and Photonics Topics
+applied to this article.
+Confocal laser scanning microscopy
+Fiber lasers
+Laser energy
+Parabolic mirrors
+Scanners
+Spherical aberration
+About this Article
+History
+Original Manuscript: October 18, 2023
+Revised Manuscript: November 21, 2023
+Manuscript Accepted: November 21, 2023
+Published: December 8, 2023
+PDF Article
+Abstract
+Full Article
+Figures (
+4
+)
+Data Availability
+Tables (
+2
+)
+Equations (
+1
+)
+References (
+32
+)
+Cited By
+(
+2
+)
+Metrics
+Back to Top
+Abstract
+Reflective dynamic focusing devices (RDFDs) have shown their potential in laser scanning as high-performance laser Z-direction focusing devices. However, the scanning range of RDFD-based scanners is limited by aberrations during dynamic focusing. An aspheric symmetry correction (ASC) method was proposed to extend the effective scanning range. An aspheric lens was introduced to correct the optical path difference (OPD) and optimize aberrations. As a result, the scanning range in the three-dimensional (3D) space increased by 15.2%. The ASC method has been proven to extend the 3D scanning range of RDFD-based scanners and may have broad application prospects.
+© 2023 Optica Publishing Group
+Full Article
+|
+PDF Article
+More Like This
+Extending the 3D scanning range of DMD-based scanners for femtosecond lasers
+Yu Wang, Huaming Li, Qinglei Hu, Ruixi Chen, Xiaohua Lv, and Shaoqun Zeng
+Opt. Lett.
+45
+(24) 6639-6642 (2020)
+Doubled Z-axis scanning range and spot-quality enhancement in system-level integrated co-optimized transmissive 3D laser scanning systems
+Yunli Yu, Jian Shao, Dongxin Gao, Wenyu Wang, Yuzhai Pan, and Leimin Deng
+Opt. Express
+34
+(8) 14943-14958 (2026)
+Model-based large-dynamic iterative piston correction using extended objects
+Zexia Zhang and Bing Dong
+Opt. Lett.
+48
+(14) 3681-3684 (2023)
+View More...
+Long-range photon-efficient 3D imaging without range ambiguity
+Chen Dai, Wen-Long Ye, Chao Yu, Xin Huang, Zheng-Ping Li, and Feihu Xu
+Opt. Lett.
+48
+(6) 1542-1545 (2023)
+Accurate dynamic 3D deformation measurement based on the synchronous multiplexing of polarization and speckle metrology
+Yijun Du, Junxiang Li, Hong Zhao, Zixin Zhao, Chen Fan, Menghang Zhou, Xingyu Yang, and Rong Zhao
+Opt. Lett.
+48
+(9) 2329-2332 (2023)
+Previous Article
+Next Article
+Data availability
+Data underlying the results presented in this paper are not publicly available at this time but may be obtained from the authors upon reasonable request.
+Cited By
+You do not have subscription access to this journal. Cited by links are available to subscribers only. You may subscribe either as an Optica member, or as an authorized user of your institution.
+Contact your librarian or system administrator
+or
+Login to access Optica Member Subscription
+Figures (4)
+You do not have subscription access to this journal. Figure files are available to subscribers only. You may subscribe either as an Optica member, or as an authorized user of your institution.
+Contact your librarian or system administrator
+or
+Login to access Optica Member Subscription
+Tables (2)
+You do not have subscription access to this journal. Article tables are available to subscribers only. You may subscribe either as an Optica member, or as an authorized user of your institution.
+Contact your librarian or system administrator
+or
+Login to access Optica Member Subscription
+Equations (1)
+You do not have subscription access to this journal. Equations are available to subscribers only. You may subscribe either as an Optica member, or as an authorized user of your institution.
+Contact your librarian or system administrator
+or
+Login to access Optica Member Subscription
+Optics Letters
+Carsten Rockstuhl, Editor-in-Chief
+Journal Home
+About
+Issues in Progress
+Current Issue
+All Issues
+Early Posting
+×
+Table 1.
+Variations of OPD (Wave) with Z and x
+p
+/y
+p
+CL
+Z (mm)
+x
+p
+= −1.0
+x
+p
+= +1.0
+y
+p
+= −1.0
+y
+p
+= +1.0
+Without
+Z = −10
+0.148
+0.148
+0.298
+0.009
+Z = 10
+−0.138
+−0.138
+−0.269
+−0.008
+With
+Z = −10
+0.004
+0.004
+0.088
+−0.139
+Z = 10
+0.033
+0.033
+−0.110
+0.089
+Close
+×
+Table 2.
+Parameters of the CL
+Surface
+Radius
+Thickness
+Glass
+Conic
+2
+nd
+Order
+Even Asphere
+57.008
+3.596
+F_silica
+-0.191
+4.936E-4
+Standard
+57.014
+63.438
+/
+0.000
+0.000
+Close
+×
+Tables (2)
+Table 1.
+Variations of OPD (Wave) with Z and x
+p
+/y
+p
+CL
+Z (mm)
+x
+p
+= −1.0
+x
+p
+= +1.0
+y
+p
+= −1.0
+y
+p
+= +1.0
+Without
+Z = −10
+0.148
+0.148
+0.298
+0.009
+Z = 10
+−0.138
+−0.138
+−0.269
+−0.008
+With
+Z = −10
+0.004
+0.004
+0.088
+−0.139
+Z = 10
+0.033
+0.033
+−0.110
+0.089
+Table 2.
+Parameters of the CL
+Surface
+Radius
+Thickness
+Glass
+Conic
+2
+nd
+Order
+Even Asphere
+57.008
+3.596
+F_silica
+-0.191
+4.936E-4
+Standard
+57.014
+63.438
+/
+0.000
+0.000
+Close
+×
+Confirm Citation Alert
+Please
+login
+to set citation alerts.
+×
+MathJax Help
+Equations displayed with
+MathJax
+. Right click equation to reveal menu options.
+×
+Field Error
+Ok
+Select
+as filters
+Select Topics
+Cancel
+Top
+Publishing Home
+Journals
+Conferences
+Preprints (Optica Open)
+Information for
+Authors
+Reviewers
+Librarians
+Open Access Information
+Open Access Statement and Policy
+Terms for Journal Article Reuse
+Other Resources
+Optica AI
+Optica Open
+Optica Publishing Group Bookshelf
+Optics ImageBank
+Optics & Photonics News
+Spotlight on Optics
+Optica Home
+Accessibility Information
+OPG Accessibility Statement
+About
+About Optica Publishing Group
+About My Account
+Sign up for Alerts
+Contact Us
+Send Us Feedback
+My Favorites
+Go to My Account
+Login to access favorites
+Recent Pages
+© Copyright 2026 | Optica Publishing Group. All rights reserved, including rights for text and data mining and training of artificial technologies or similar technologies.
+Privacy
+|
+Terms of Use
+×
+Login or Create Account
+Sign in by:
+Log in with Password
+Log in with Link
+Please wait...
+Email*
+Password*
+Forgot your password?
+Remember me on this computer
+Log in
+Cancel
+Long Password? Hard to type?
+We can email you a link so you can sign in without having to type your password.
+Email
+Email a sign in link
+Cancel
+Don't have an account?
+Create an Account.
+Institutional Login
+(Optica Publishing Group participates in eduGAIN)
+China CARSI Member Access
+China CAoS Member Access
+Privacy Policy
+Need help?

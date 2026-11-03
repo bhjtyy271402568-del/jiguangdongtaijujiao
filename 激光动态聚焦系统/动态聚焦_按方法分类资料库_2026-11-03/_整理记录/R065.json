@@ -1,0 +1,48 @@
+{
+  "url": "https://patents.google.com/patent/CN116534252A/zh",
+  "category": "09_艾思兰及相邻应用",
+  "origins": [
+    "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md"
+  ],
+  "context": "原文提到的专利号，补全公开文本入口；标题及相关性待与原件核对",
+  "id": "R065",
+  "files": [
+    {
+      "path": "09_艾思兰及相邻应用\\R065_CN116534252A - 一种基于ai识别的无人机激光障碍物清除装置及方法 _        - Google Patents.html",
+      "type": "HTML",
+      "bytes": 96164,
+      "sha256": "aa7db05a0bdc0d37ed3a95c2317a9392eb943c3891d6308d35f93b475d402545",
+      "url": "https://patents.google.com/patent/CN116534252A/zh",
+      "title": "CN116534252A - 一种基于ai识别的无人机激光障碍物清除装置及方法 \n        - Google Patents",
+      "text_chars": 17964
+    },
+    {
+      "path": "09_艾思兰及相邻应用\\R065_CN116534252A - 一种基于ai识别的无人机激光障碍物清除装置及方法 - Google Patents.pdf",
+      "type": "PDF",
+      "pages": 11,
+      "bytes": 582748,
+      "sha256": "61bddb19eae78e0432dc5b1883b092263007aedc66bb2878e2120e8667268607",
+      "url": "https://patentimages.storage.googleapis.com/50/0c/b6/3bdea5d9398cf5/CN116534252A.pdf",
+      "text_chars": 9737,
+      "title": "",
+      "preview": "(19)国家知识产权局\n(12)发明专利申请\n(10)申请公布号 \n(43)申请公布日 \n(21)申请号 202310506672.9\n(22)申请日 2023.05.08\n(71)申请人 苏州艾思兰光电有限公司\n地址 215000 江苏省苏州市苏州工业园区\n金路18号，东坊创智园地c栋2楼\n(72)发明人 周倩　杨忠英　赵凌曦　丁志伟　\n(74)专利代理机构 北京中睿智恒知识产权代理\n事务所(普通合伙) 16025\n专利代理师 卢娇娇\n(51)Int.Cl.\nB64C 39/02(2023.01)\nH04L 67/10(2022.01)\nH02G 1/02(2006.01)\nG06V 20/17(2022.01)\nG06V 10/82(2022.01)\nG06N 3/0464(2023.01)\nB23K 26/38(2014.01)\nB23K 26/70(2014.01)\nB64D 47/00(2006.01)\nB64U 10/10(2023.01)\nB64U 20/80(2023.01)\nB64U 101/00(2023.01)\nB64U 101/30(2023.01)\n \n(54",
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://patents.google.com/patent/CN116534252A/zh",
+      "http": 200,
+      "final_url": "https://patents.google.com/patent/CN116534252A/zh",
+      "result": "网页"
+    },
+    {
+      "url": "https://patentimages.storage.googleapis.com/50/0c/b6/3bdea5d9398cf5/CN116534252A.pdf",
+      "http": 200,
+      "final_url": "https://patentimages.storage.googleapis.com/50/0c/b6/3bdea5d9398cf5/CN116534252A.pdf",
+      "result": "有效PDF"
+    }
+  ],
+  "title": "CN116534252A - 一种基于ai识别的无人机激光障碍物清除装置及方法 - Google Patents",
+  "status": "PDF已下载"
+}

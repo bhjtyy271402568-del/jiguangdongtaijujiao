@@ -1,0 +1,3888 @@
+来源：https://patents.google.com/patent/US12265207B2/en
+采集日期：2026-11-03
+
+US12265207B2 - Dynamic focus for laser processing head 
+        - Google Patents
+US12265207B2 - Dynamic focus for laser processing head 
+        - Google Patents
+Dynamic focus for laser processing head
+Download PDF
+Info
+Publication number
+US12265207B2
+US12265207B2
+US17/192,327
+US202117192327A
+US12265207B2
+US 12265207 B2
+US12265207 B2
+US 12265207B2
+US 202117192327 A
+US202117192327 A
+US 202117192327A
+US 12265207 B2
+US12265207 B2
+US 12265207B2
+Authority
+US
+United States
+Prior art keywords
+lens element
+lens
+optical axis
+processing head
+focal length
+Prior art date
+2021-03-04
+Legal status (The legal status is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the status listed.)
+Active
+, expires
+2042-11-24
+Application number
+US17/192,327
+Other versions
+US20220283416A1
+(
+en
+Inventor
+Danny Chan
+Current Assignee (The listed assignees may be inaccurate. Google has not performed a legal analysis and makes no representation or warranty as to the accuracy of the list.)
+II VI Delaware Inc
+Original Assignee
+II VI Delaware Inc
+Priority date (The priority date is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the date listed.)
+2021-03-04
+Filing date
+2021-03-04
+Publication date
+2025-04-01
+2021-03-04
+Application filed by II VI Delaware Inc
+filed
+Critical
+II VI Delaware Inc
+2021-03-04
+Priority to US17/192,327
+priority
+Critical
+patent/US12265207B2/en
+2021-03-04
+Assigned to II-VI DELAWARE, INC.
+reassignment
+II-VI DELAWARE, INC.
+ASSIGNMENT OF ASSIGNORS INTEREST (SEE DOCUMENT FOR DETAILS).
+Assignors: CHAN, DANNY
+2021-12-30
+Priority to CN202111656173.5A
+priority
+patent/CN115026416A/en
+2022-01-27
+Priority to DE102022101866.0A
+priority
+patent/DE102022101866A1/en
+2022-07-01
+Assigned to JPMORGAN CHASE BANK, N.A., AS COLLATERAL AGENT
+reassignment
+JPMORGAN CHASE BANK, N.A., AS COLLATERAL AGENT
+SECURITY INTEREST
+Assignors: COHERENT, INC., II-VI DELAWARE, INC., II-VI INCORPORATED, II-VI PHOTONICS (US), INC., M CUBED TECHNOLOGIES, INC., PHOTOP TECHNOLOGIES, INC.
+2022-09-08
+Publication of US20220283416A1
+publication
+Critical
+patent/US20220283416A1/en
+2025-04-01
+Application granted
+granted
+Critical
+2025-04-01
+Publication of US12265207B2
+publication
+Critical
+patent/US12265207B2/en
+Status
+Active
+legal-status
+Critical
+Current
+2042-11-24
+Adjusted expiration
+legal-status
+Critical
+Links
+USPTO
+USPTO PatentCenter
+USPTO Assignment
+Espacenet
+Global Dossier
+Discuss
+Images
+Classifications
+G
+—
+PHYSICS
+G02
+—
+OPTICS
+G02B
+—
+OPTICAL ELEMENTS, SYSTEMS OR APPARATUS
+G02B7/00
+—
+Mountings, adjusting means, or light-tight connections, for optical elements
+G02B7/02
+—
+Mountings, adjusting means, or light-tight connections, for optical elements for lenses
+G02B7/04
+—
+Mountings, adjusting means, or light-tight connections, for optical elements for lenses with mechanism for focusing or varying magnification
+G02B7/08
+—
+Mountings, adjusting means, or light-tight connections, for optical elements for lenses with mechanism for focusing or varying magnification adapted to co-operate with a remote control mechanism
+G
+—
+PHYSICS
+G02
+—
+OPTICS
+G02B
+—
+OPTICAL ELEMENTS, SYSTEMS OR APPARATUS
+G02B19/00
+—
+Condensers, e.g. light collectors or similar non-imaging optics
+G02B19/0004
+—
+Condensers, e.g. light collectors or similar non-imaging optics characterised by the optical means employed
+G02B19/0009
+—
+Condensers, e.g. light collectors or similar non-imaging optics characterised by the optical means employed having refractive surfaces only
+G02B19/0014
+—
+Condensers, e.g. light collectors or similar non-imaging optics characterised by the optical means employed having refractive surfaces only at least one surface having optical power
+B
+—
+PERFORMING OPERATIONS; TRANSPORTING
+B23
+—
+MACHINE TOOLS; METAL-WORKING NOT OTHERWISE PROVIDED FOR
+B23K
+—
+SOLDERING OR UNSOLDERING; WELDING; CLADDING OR PLATING BY SOLDERING OR WELDING; CUTTING BY APPLYING HEAT LOCALLY, e.g. FLAME CUTTING; WORKING BY LASER BEAM
+B23K26/00
+—
+Working by laser beam, e.g. welding, cutting or boring
+B23K26/02
+—
+Positioning or observing the workpiece, e.g. with respect to the point of impact; Aligning, aiming or focusing the laser beam
+B23K26/06
+—
+Shaping the laser beam, e.g. by masks or multi-focusing
+B23K26/064
+—
+Shaping the laser beam, e.g. by masks or multi-focusing by means of optical elements, e.g. lenses, mirrors or prisms
+B23K26/0648
+—
+Shaping the laser beam, e.g. by masks or multi-focusing by means of optical elements, e.g. lenses, mirrors or prisms comprising lenses
+B
+—
+PERFORMING OPERATIONS; TRANSPORTING
+B23
+—
+MACHINE TOOLS; METAL-WORKING NOT OTHERWISE PROVIDED FOR
+B23K
+—
+SOLDERING OR UNSOLDERING; WELDING; CLADDING OR PLATING BY SOLDERING OR WELDING; CUTTING BY APPLYING HEAT LOCALLY, e.g. FLAME CUTTING; WORKING BY LASER BEAM
+B23K26/00
+—
+Working by laser beam, e.g. welding, cutting or boring
+B23K26/02
+—
+Positioning or observing the workpiece, e.g. with respect to the point of impact; Aligning, aiming or focusing the laser beam
+B23K26/06
+—
+Shaping the laser beam, e.g. by masks or multi-focusing
+B23K26/0665
+—
+Shaping the laser beam, e.g. by masks or multi-focusing by beam condensation on the workpiece, e.g. for focusing
+B
+—
+PERFORMING OPERATIONS; TRANSPORTING
+B23
+—
+MACHINE TOOLS; METAL-WORKING NOT OTHERWISE PROVIDED FOR
+B23K
+—
+SOLDERING OR UNSOLDERING; WELDING; CLADDING OR PLATING BY SOLDERING OR WELDING; CUTTING BY APPLYING HEAT LOCALLY, e.g. FLAME CUTTING; WORKING BY LASER BEAM
+B23K26/00
+—
+Working by laser beam, e.g. welding, cutting or boring
+B23K26/70
+—
+Auxiliary operations or equipment
+B23K26/702
+—
+Auxiliary equipment
+B23K26/703
+—
+Cooling arrangements
+G
+—
+PHYSICS
+G02
+—
+OPTICS
+G02B
+—
+OPTICAL ELEMENTS, SYSTEMS OR APPARATUS
+G02B3/00
+—
+Simple or compound lenses
+G02B3/02
+—
+Simple or compound lenses with non-spherical faces
+G02B3/04
+—
+Simple or compound lenses with non-spherical faces with continuous faces that are rotationally symmetrical but deviate from a true sphere, e.g. so called "aspheric" lenses
+Definitions
+the present disclosure
+is directed to a high-power laser processing head configured to adjust its focal position dynamically while resisting contamination of the lenses and providing a large working distance.
+a laser processing head
+such as used for cutting or material processing, can provide a high-power laser beam of 10 kw and even up to 30 kW. Due to the working conditions, the high-power head is preferably resistant to contamination, which can damage the optics in the head and can undermine the laser's performance. In some laser processing heads, the focus position of the laser beam from the head can be adjusted along the optical axis.
+the subject matter of the present disclosure
+is directed to overcoming, or at least reducing the effects of, one or more of the problems set forth above.
+a laser processing head
+is used to transmit a laser beam that is input along an optical axis of the head, to a process zone, the head comprises first, second and third lens elements, which can each include one or more lenses or optical elements.
+the first lens element
+is disposed in the head and images the laser beam from the input with a first focal length along the optical axis.
+the first focal length
+can be negative or can be positive for magnifications of about 6 ⁇  or greater.
+the second lens element
+is disposed in the head and has an actuator arranged therewith.
+the second lens element
+images the laser beam from the first lens with a second (positive) focal length along the optical axis.
+the actuator
+is configured to move the second lens in the head along the optical axis over a variable lens distance relative to the first lens.
+the third lens element
+is disposed in the head and images the laser beam from the second lens element with a third (positive) focal length along the optical axis to a focal point.
+the third focal length
+is greater than the second focal length, and the focal point is variable along the optical axis over a variable focal distance in relation to the variable lens distance.
+the head
+can comprise a housing having an input and an output for the laser beam along the optical axis.
+the first and third lens elements
+are fixedly mounted in the housing, whereas the second lens element is movably mounted in the housing in connection with the actuator.
+FIG. 1 A
+illustrates a laser delivery system according to the present disclosure.
+FIGS. 1 B- 1 C
+schematically illustrate a laser processing head according to the present disclosure.
+FIG. 2 A
+illustrates a schematic view of a laser processing head having a lens arrangement according to the present disclosure.
+FIG. 2 B
+illustrates a detail of the lens arrangement in FIG. 2 A .
+FIG. 2 C
+schematically illustrates a lens, a fixed mounting structure, and a cooling element of the present disclosure and schematically illustrates a lens, a movable mounting structure, a cooling element, and an actuator of the present disclosure.
+FIG. 3 A
+illustrates schematic view of a laser processing head having another lens arrangement according to the present disclosure.
+FIG. 3 B
+illustrates a detail of the lens arrangement in FIG. 3 A .
+FIG. 1 A
+illustrates a laser delivery system 80 according to the present disclosure.
+a laser source 82
+generates high-power laser light that is propagated along a fiber optic cable 84 to a laser processing head 10 .
+the laser source 82
+can be an suitable multi-mode or a single-mode laser depending on the laser power required.
+the laser processing head 10
+can be moved relative to a workpiece WP and/or can have the workpiece WP moved relative to it.
+the laser processing head 10
+can be moved by a gantry system, robotic arm, or other apparatus 86 used in the art.
+the laser processing head 10
+includes optics to focus the laser energy in a laser beam LB to the workpiece WP to achieve cutting, brazing, welding, additive manufacturing, or some other lasing process.
+FIG. 1 B
+schematically illustrates the laser processing head 10 according to the present disclosure.
+the laser processing head 10
+includes a housing 12 for internal optics of a lens arrangement 20 .
+a receiver 85 at one end of the housing 12
+can couple to the laser cable 84 , which conducts the laser light into the head 12 .
+An output 16 at the other end of the housing 12
+allows a focused laser beam LB to be emitted from the housing 12 for achieving the purposes of the lasing operation, such as welding, additive manufacture, cutting, etc.
+the output 16
+can include a cover slide that acts as a transparent pressure window.
+the input 14
+e.g., a high-power laser delivery fiber
+the input 14
+emits a high-power laser beam LB in the housing 12 .
+a fixed input lens element 30
+images the laser beam LB to a second, movable lens element 40 .
+the movable lens element 40
+images the laser beam LB to a fixed focusing lens element 50 , which focuses the laser beam LB to pass through the protective cover slide of the output 16 .
+the beam LB
+is focused to a focal point or spot 18 , and the laser beam LB then impinges on or near the workpiece WP or some other desired process zone.
+the focal point 18
+can be located at or near the workpiece WP, inside a nozzle 17 as in FIG. 1 C attached to the head, or at some other location along the optical axis that suites the process at hand.
+the first lens element 30
+creates an image (typically a virtual image), which is de-magnified and serves as an object for the second lens element 40 .
+the second lens element 40
+images this de-magnified object to close to infinity. Therefore, when the second lens element 40 is in a neutral position, the image created by the second lens element 40 is at infinity.
+the last lens element 50
+images this new object from infinity to the focal plane of the last lens element 50 , forming the focal point 18 for the materials processing operation.
+Movement of the second element 40
+moves the virtual object for the last lens element 50 away from infinity and therefore results in a movement of the final focal point 18 .
+Demagnification of the intermediate object after first lens element 30
+means, that for a given total magnification of the head 10 , the remaining optics consisting of second and third lens elements 40 , 50 must have a larger magnification M2.
+Moving the second lens element 40
+is mostly equivalent to moving the virtual object.
+First order optics
+shows that this movement is translated to a movement of the focal point 18 by roughly M2*M2, meaning that the movement of the second lens element 40 can be much smaller than the resulting movement of the spot 18 .
+the laser processing head 10
+can be used in a laser process in which the focal point 18 of the laser beam LB can be adjusted in the optical axis (i.e., Z-axis) relative to a workpiece WP for laser cutting, welding, soldering, surface treatment, tactile brazing, additive manufacturing processes, and the like.
+the movable lens element 40
+permits the focal point 18 of the laser beam LB to be adjusted along the optical axis. In this way, the focal point 18 can be adjusted to the different contours of the workpiece WP or to different process zones needed for the lasing process.
+This adjustment along the optical axis Z
+can be performed while the head 10 remains stationary relative to the workpiece WP, while the head 10 moves in the X-Y plane relative the workpiece WP, while the head 10 is also moved along the Z-axis, or when a combination of such movements are performed.
+FIG. 2 A
+illustrates more detail of a laser processing head 10 having a lens arrangement 20 according to the present disclosure.
+the head 10
+focuses a laser beam LB to the focal point 18 .
+the focal point 18
+can be adjusted relative to a focal plane 51 , which can be outside or inside the head 10 (or component thereof, such as a nozzle) depending on the lasing process.
+the head 10
+includes the housing 12 having the input 14 and the output 16 for the laser beam LB to pass along the optical axis A.
+the housing 10
+includes the lens arrangement 20 with lens elements 30 , 40 , 50 disposed in the interior 15 of the housing 10 .
+each of the lens elements 30 , 40 , 50
+can include one lens, but they may also comprise a group of multiple lenses, composite lenses, or optical elements in the form of a lens group. (Reference to a lens may be used herein for the purpose of description, but it should be appreciated that each of the lens elements 30 , 40 , 50 can include one or more lenses or optical elements.)
+the first, input lens element 30
+is mounted in the housing's interior 15 using a fixed mounting structure 32 ;
+the second, intermediate lens element 40
+is mounted in the housing's interior 15 using a movable mounting structure 42 ;
+the third, focusing lens element 50
+is mounted in the housing's interior 15 using a fixed mounting structure 52 .
+the input mounting structure 32
+is in a fixed position in the housing 10 so that the input lens element 30 is set at a first distance D 1 from the input 14 , which can include an optical fiber input suited to the high-power laser of the head 10 .
+the intermediate mounting structure 42
+is mounted in conjunction with an actuator 46 operable to adjust the position of the intermediate lens element 40 in the housing 10 along the optical axis A. In this way, the second distance D 2 of the intermediate lens element 40 relative to the input lens element 30 can be controlled and varied.
+the output mounting structure 52
+is in a fixed position in the housing 10 so that the output lens element 50 is set at a distance (D 2 +D 3 ) from the input lens element 30 .
+the output lens element 50
+focuses the laser beam LB to a focal point 18 that can be varied a variable distance dz foc relative to a focal plane 51 of the output lens element 50 .
+the focal point 18
+is shown beyond the focal plane 51 of the output lens element 50 at the most distanced boundary (right in the drawing) of the range for the variable distance dz foc .
+the intermediate lens element 40
+is shown in FIG. 2 A at its farthest boundary (left in the drawing) of its movement range from the output lens element 50 .
+the laser beam LB between the intermediate and output lens elements 40 and 50
+diverges.
+the focal point 18
+would be inside the focal plane 51 of the output lens element 50 at the shortest boundary (left in the drawing) of the range for the variable distance dz foc .
+the laser beam LB between the intermediate and output lens elements 40 and 50
+would converge in this instance.
+the focal point 18
+can be beyond the housing's output 16 , but the focal point 18 does not necessarily have to be outside of the housing “proper”, depending on the type of housing used and any additional components used on the head 10 .
+the focus of the laser beam LB
+is controlled with respect to a cutting gas nozzle affixed on an end of the head 10 .
+the focal point 18
+can be both inside, at, or outside this nozzle.
+the actuator 46 on the intermediate lens element 40
+can adjust/control the third distance D 3 of the intermediate lens element 40 to the output lens element 50 in direct offset to the adjustment to the second distance D 2 .
+the input lens element 30
+images the laser beam LB from the input 14 with a first, input focal length f 1 along the optical axis A.
+the input focal length f 1
+is negative.
+the intermediate lens element 40
+images the laser beam LB from the input lens element 30 with a second, intermediate focal length f 2 along the optical axis A.
+the intermediate focal length f 2
+is positive.
+the actuator 46
+is configured to move the intermediate lens element 40 in the head 10 along the optical axis A at a variable lens distance dz 2 relative to the input and output lens elements 30 , 50 .
+the input focal length f 1
+can instead be positive when the head 10 has a very large magnification, such as for magnifications greater than about 6 ⁇ .
+the range of parameters disclosed herein for the head 10
+can include these large magnifications, which may be useful for cutting processes.
+the output lens element 50
+images the laser beam LB from the intermediate lens element 40 with a third, output focal length f 3 along the optical axis A to the focal point 18 .
+the output focal length f 3
+is positive.
+the focal point 18
+is variable over a variable focal distance dz foc along the optical axis A in relation to the increase/decrease of the variable lens distance dz 2 of the intermediate lens element 40 relative to the input and output lens elements 30 , 50 . Moving the lens element 40 towards the output lens element 50 will move the focal point 18 toward the output lens element 50 , and moving the intermediate lens element 40 away from the output lens element 50 will move the focal point 18 away from the output lens element 50 .
+the head 10
+includes at least one cooling arrangement disposed in the housing 10 .
+the at least one cooling arrangement
+is disposed in thermal communication with at least one of the lenses 30 , 40 , 50 and is configured to cool the associated lens element 30 , 40 , 50 .
+the outer stationary lens elements 30 and 50
+allow for good sealing of an optics room 25 in the head 10 and can be cooled efficiently.
+the optics room 25 for the lens elements 30 , 40 , 50
+is preferably sealed and is preferably as small as possible, which facilitates cooling and sealing.
+lens material having high thermal conductivity
+such as sapphire (Al 2 O 3 ), zinc sulfide (ZnS)
+these lens elements 30 and 50
+are very resistant to contamination. Due to the small movement range of the intermediate movable lens element 40 made possible for the reasons noted above, active cooling is at least easier for it as well. In addition, the small movement range allows for a very fast adjustment of the focal point 18 .
+the input lens element 30
+includes a cooling element 34 because this input lens element 30 is subject to more concentrated imaging of the laser beam LB from the input 14 and may be subject to the most heating per unit surface area.
+the first and third lenses 30 , 50
+include cooling elements 34 , 54 configured to cool the associated lens elements 30 , 50 because these lens elements 30 , 50 are mounted in a fixed position in the housing 12 , making the cooling elements 34 , 54 easier to incorporate into the mounting structure 32 , 52 .
+each of the lens elements 30 , 40 , 50
+includes a cooling element 34 , 44 , 54 disposed in thermal communication therewith and configured to actively cool the associated lens element 30 , 40 , 50 .
+the cooling elements 34 , 44 , 54
+can include thermoelectric cooling elements on the mounting structures 32 , 42 , 52 .
+any desired sensors
+can be more readily used for monitoring these stationary lens elements 30 , 50 .
+sensors
+can include a temperature sensor, a viewing sensor, or other form of detector to monitor the health of the lens element 30 , 50 .
+a sensor
+requires certain wiring or cabling that can be simplified for these fixed mounts of the mounting structures 32 , 52 .
+the input and output lens elements 30 , 50
+being fixed in the head 10 with the mounting structures 32 , 52 simplifies how the associated cooling element 34 , 54 can be incorporated into (onto) the mounting structure 32 , 52 and adjacent housing 12 .
+a number of mounting structures 32 , 42 , 52
+can be used for the lens elements 30 , 40 , 50 .
+the fixed position mounting structures 32 , 52
+can use components such as lens tubes, screw rings, and clamped mounts.
+the lens elements 30 , 40 , 50
+can be mounted with seals and can be held in place in the mounting structures 32 , 42 , and 52 .
+FIG. 2 C
+schematically illustrates details of a fixed lens element (e.g., 50 ), a fixed mounting structure 52 , and a cooling element 54 of the present disclosure.
+the mounting structure 52
+is a clamp-type mount with clamp elements 53 a - b affixed together and holding the lens element 50 therein. Sealing at 55 can be used to fix the lens element 50 in the clamp elements 53 a - b .
+the mounting structure 52
+can be affixed or mounted in the interior 15 of the housing using conventional features (not shown). For example, a module element 90 may be mounted in the interior 15 .
+the cooling element 54
+such as one or more thermoelectric cooling elements, can be disposed on (or disposed in) the clamp type mount 52 .
+a number of mounting structures and arrangements
+can be used to mount the fixed lenses ( 30 , 50 ) in the head's housing.
+FIG. 2 C
+also schematically illustrates details of the movable lens (e.g., intermediate lens element 40 ), a movable mounting structure 42 , a cooling element 44 , and an actuator 46 of the present disclosure.
+the mounting structure 42
+is a clamp-type mount with clamp elements 43 a - b affixed together and holding the lens element 40 therein. Sealing at 44 can be used to fix the lens element 40 in the clamp elements 43 a - b .
+the mounting structure 42
+can be mounted in or on a rail, track, or other guide in the interior 15 of the housing using conventional features.
+a module element 90 ′
+may be mounted in the interior 15 and can include the guide 92 . This module element 90 ′ can be part of the same module used for output lens and/or the input lens.
+the cooling element 44
+such as one or more thermoelectric cooling elements or water cooling arrangements, can be disposed on (or disposed in) the clamp type mount 42 .
+the actuator 46
+which can include one or more elements, can be mounted with respect to the housing's interior 15 in conjunction with the mount 42 on one or more locations or sides of the mount 42 .
+the actuator 46
+can move the mount 42 along the guide 92 , track or the like to adjust the position of the lens element 40 .
+a number of mounting structures and arrangements
+can be used to mount the movable lenses ( 40 ) in the head's housing.
+any desired sensors
+can still be used for monitoring this lens element 40 even with its movement.
+sensors
+can include a temperature sensor, a viewing sensor (i.e., photodiodes), or other form of detector to monitor the health of the lens.
+a sensor
+requires certain wiring or cabling that can be simplified for the mounting structure 42 that moves only the small variable lens distance dz 2 .
+the intermediate cooling element 44
+can still be incorporated into the mounting structure 42 , and the cooling element 44 and mounting structure 42 can be moved by the actuator 46 .
+the actuator 46 for the intermediate lens element 40
+is controlled by a controller 60 .
+the actuator 46
+allows for highly dynamic control to achieve the small movement dz 2 of the intermediate lens element 40 along the optical axis A.
+the actuator 46
+can include one or more unidirectional mover, bi-directional mover, motor, solenoid, piezoelectric element, linear motor, voice coil motor, or other device having precise, controlled movements over a short distance. Movement over the small distance dz 2 can be achieved with one actuator 46 capable of bi-directional movement. Alternatively, opposing unidirectional actuators 46 can be disposed on opposing sides of the mounting structure 42 to achieve the bi-directional movement.
+the actuator 46
+can be combined with bearings, joints, guides, biasing elements, springs, and any other necessary mechanical features to control movement. Overall, the actuator 46 can use any form of mechanical or electromechanical actuation that has fine precision and accuracy and that can accommodate cooling. Any of the cooling elements 34 , 44 , 54 in the head 10 can also be controlled by the controller 60 , which can be a microcontroller specifically associated with the head 10 or can be part of a larger control system for a laser delivery system (e.g., 80 : FIG. 1 A ).
+the controller 60
+operates the actuator 46 to adjust the position of the intermediate lens element 40 along the small variable lens distance dz 2 , which in turn adjust the focus position 18 of the laser beam LB along the larger variable focal distance dz foc .
+this focus position 18
+can be adjusted relative to surfaces of a workpiece, while the head 10 is stationary relative to the workpiece, while it moves relative to the workpiece, etc.
+Adjusting the focus position 18
+can be used in a number of ways during laser processing of the workpiece. While the head 10 is stationary relative to the workpiece, movement of the intermediate lens element 40 along the small variable lens distance dz 2 can adjust the focus position 18 with respect to surfaces of the workpiece. While the head 10 is moved along an axis consistently with respect to the workpiece or vice versa, movement of the intermediate lens element 40 along the small variable lens distance dz 2 can adjust the focus position 18 with respect to surfaces of the workpiece. (In other words, the focal point 18 can be moved relative to the head 10 during operations. If the head 10 is stationary, the focal point 18 can be moved relative to both workpiece and head 10 .
+the focal point 18
+can be kept stationary with respect to the workpiece while moving the head 10 .
+the actuator 46
+suitable for the small range of movement over the variable lens distance dz 2
+the intermediate lens element 40
+can be further operated to have high frequency oscillations in the head 10 , which produces high frequency oscillations of the focal point 18 along the optical axis A.
+the input focal length f 1
+is negative; the intermediate focal length f 2 is positive, and the output focal length f 3 is positive.
+the output optical length f 3
+is greater than the intermediate focal length f 2 .
+a movement range of the intermediate lens element 40
+can be less than about 15 mm, and the spot movement can be larger than 60 mm.
+the third focal length f 3
+can greater than the second focal length f 2 such that a ratio of
+the laser beam LB after the first two lenses 30 , 40
+is close to being collimated.
+the input lens element 30
+creates a smaller virtual image of the fiber tip of the input 14 , and this smaller virtual image is then imaged by the intermediate lens element 40 and the output lens element 50 towards the workpiece.
+the ratio of the output focal length f 3 relative to the intermediate focal length f 2
+is so large that a very small movement of the intermediate lens element 40 along the variable lens distance dz 2 results in a large movement of the focus position 18 along the variable focal distance dz foc .
+the required lens movement distance dz 2
+can be on the order of a few millimeters, allowing for highly dynamic adjustments of the laser beam's focal point 18 .
+the input lens element 30
+can be composed of sapphire (Al 2 O 3 ), zinc sulfide (ZnS), or other material having “high” thermal conductivity (e.g., glass having thermal conductivity at least as great as sapphire, or zinc sulfide).
+the thermal conductivity of aluminum oxide or sapphire
+varies based on temperature and orientation, but can be about 24 W/(m*K).
+the thermal conductivity of zinc sulfide
+varies based on temperature, but can be about 16.7 W/(m*K) at 20° C. These values are only meant to represent possible examples for the high thermal conductivity desired for the lens material.
+the output lens element 50
+can also be composed of sapphire, zinc sulfide, or other material (e.g., glass having high thermal conductivity of at least as great as sapphire, or zinc sulfide).
+the intermediate lens element 40
+can be composed of sapphire, zinc sulfide, or other material (e.g., glass having high thermal conductivity of at least as great as sapphire, or zinc sulfide).
+sapphire
+or zinc sulfide
+normal fused silica
+may be used in some or all of the lenses 30 , 40 , 50 to reduce costs or improve manufacturability with the tradeoff of reduced contamination resistance.
+At least one of the lens elements 30 , 40 , 50
+can be aspherical.
+the input lens element 30
+is a spherical lens
+the intermediate lens element 40
+is an aspherical lens
+the output lens element 50
+is either spherical or aspherical.
+either the intermediate lens element 40 , the output lens element 50 , or both
+can be aspheric to reduce imaging error. If sapphire or zinc sulfide is used for both of the input and output lens elements 30 , 50 , the lens arrangement 20 having a single aspheric lens can be sufficient.
+the focal lengths, the distances, and the optical diameters for the lens elements 30 , 40 , 50
+depends on the size of the housing 12 , the optical power of the laser beam LB, and other operational characteristics.
+the configuration
+can be generally characterized by a number of interrelated relationships discussed below.
+the input lens element 30
+has a first focal length f 1 ; the intermediate lens element 40 has a second focal length of f 2 ; and the output lens element 50 has a third focal length f 3 .
+the lens' variable distance dz 2
+represents the movement range for the intermediate lens element 40
+the expanse dz foc
+is the movement range of the focal point 18 around the focal plane of the output lens element 50 .
+the focal length f 2 of the intermediate lens element 40
+can be characterized by:
+the focal length f 3 of the output lens element 50
+corresponds to about the working distance of the head 10 .
+the collimated focal length f col grouped for the input lens element 30 relative to the intermediate lens element 40 at the neutral position
+is characterized by:
+the variable M
+is the magnification involved. Given the distance D 2 between input lens element 30 and the intermediate lens element 40 .
+the focal length f 1 of the input lens element 30
+is characterized by:
+the distance D 1 from the input 14 of the fiber tip to the input lens element 30
+is characterized by:
+the third focal distance f 3
+(i.e., working distance) can be greater than or equal to 200-mm and can be about 200-mm to 500-mm, resulting in a large working distance and large beam diameters for large laser power operation of the head 10 .
+the variable focal distance dz foc that the focal point 18 can vary along the optical axis
+can be from about 40-mm to 90-mm, depending on the requirements for cutting or other laser processes.
+the variable lens distance dz 2 of the intermediate lens element 40
+can be in the range of about 5-mm to 15-mm. This gives the adjustments a high dynamic range and allows the intermediate lens element 40 to be more easily cooled. Overall, the variable focal distance dz foc can be about 2 to 18 times greater than the variable lens distance dz 2 .
+the distance D 2 between the input lens element 30 and the intermediate lens element 40
+can be about 20-mm to 100-mm so that the optics can be more compact in the head 10 .
+the first distance D 1 from the fiber tip 14 to the input lens element 30
+can be greater than 50-mm so that the input lens 20 is not located too close to the input fiber 14 .
+the lens arrangement 20
+can be sized and used for the head 10 having the housing 12 with an overall distance of the laser beam LB of about 480-mm from the input 14 to the output (e.g., nozzle) of the head 10 .
+the input distance D 1
+can be about 100-mm; the distance between the input lens element 30 and the outlet lens element 50 (i.e., distances D 2 +D 3 ) can be about 80-mm; the distance between input lens element 30 and movable lens element 40 (distance D 2 ) can be about 30 mm; and the working distance f 3 can be 300-mm.
+the magnification M at a Z position  ⁇ 20-mm
+can be about 1.73 ⁇ , whereas the magnification M at a Z position +40-mm can be about 2.14 ⁇ .
+the beam diameter of the laser beam LB at the input lens element 30
+can be about 30-mm, and the beam diameter at the intermediate lens element 40 can be about 40-mm with typical cutting laser sources with a beam parameter product (BPP) of about 4 mm*mrad.
+BPP
+beam parameter product
+the laser beam LB
+is practically collimated between the intermediate lens element 40 and output focusing lens element 50 .
+the intermediate lens element 40
+can be varied along a variable lens distance dz 2 of about  ⁇ 2 mm.
+the small movement needed for the intermediate lens element 40
+allows the optics room 25 to be more readily sealed from the mechanics of the actuator 46 , to be more readily cooled, and to be easily fine-tuned.
+FIG. 3 A
+illustrates a laser processing head 10 having another lens arrangement 20 according to the present disclosure
+FIG. 3 B
+shows a detail of the lens arrangement 20 in FIG. 3 A
+This head 10 and lens arrangement 20
+is similar to the previous configuration of FIGS. 2 A- 2 B so that similar reference numbers are used for comparable components. Description of these comparable components is reincorporated here, but may not be repeated below.
+the lens arrangement 20
+has three lens elements 30 , 40 and 50 , which can each include one lens or group of lenses or optical elements.
+the first, input lens element 30
+has a negative focal length f 1 , is actively cooled, is stationary in the optical axis A, and is composed of a material having a high thermal conductivity.
+the input lens element 30
+can be composed of sapphire, or zinc sulfide.
+the first focal length
+can be positive when the head 10 has a magnification greater than about 6 ⁇  in some configurations.
+the third, output lens element 50
+has a positive focal length f 3 , is actively cooled, is stationary in the optical axis A, and is composed of a material with a high thermal conductivity as noted herein.
+the second, intermediate lens element 40
+has a positive focal length f 2 and can be moved along the optical axis A using the actuator 46 .
+the intermediate lens element 40
+can also be cooled with a cooling element 44 .
+the intermediate mounting structure 42
+is mounted in conjunction with the actuator 44 operable to adjust the position of the intermediate lens element 40 in the housing 10 along the variable lens distance dz 2 of the optical axis A.
+the intermediate lens element 40
+includes a number of differences in contrast to the previous arrangements.
+the intermediate lens element 40
+is mounted in the mounting structure 42 as a lens group further including a pair of cover slides 41 a - b .
+the lens 41 for the element 40 in this configuration
+can be composed of a different material than the other configurations and can, for example, be composed of a fused silica.
+This intermediate lens 41 of the element 40
+is sandwiched between the cover slides 41 a - b , which can be composed of sapphire, zinc sulfide, or other material of “high” thermal conductivity noted herein.
+This configuration
+may make tradeoffs as to size, weight, and performance compared to the previous configuration, the lens arrangement 20 here can still be kept cleaner from contamination.
+the intermediate lens 41
+can be composed of fused silica, which is a less expensive material, and can be aspherical.
+the aspherical, fused silica lens 41 sandwiched between the two sapphire cover slides 41 a - b
+therefore provides for reduced manufacturing costs, yet can keep the configuration clean from contamination.
+Landscapes
+Physics & Mathematics
+(
+AREA
+)
+Optics & Photonics
+(
+AREA
+)
+Engineering & Computer Science
+(
+AREA
+)
+Plasma & Fusion
+(
+AREA
+)
+Mechanical Engineering
+(
+AREA
+)
+General Physics & Mathematics
+(
+AREA
+)
+Laser Beam Processing
+(
+AREA
+)
+Abstract
+A laser processing head transmits a laser beam to a process zone. An input lens fixedly mounted in the head images the beam from an input with a first (negative) focal length along an optical axis. An intermediate lens is movably mounted in the head in connection with an actuator, which can move the intermediate lens along the axis at a variable lens distance relative to the input lens. The intermediate lens images the beam with a second (positive) focal length. An output lens fixedly mounted in the head images the beam with a third (positive) focal length along the axis to a focal point. The third focal length is greater than the second focal length and provides a large working distance. The focal point can be varied at a variable focal distance along the axis in relation to the variable lens distance by which the intermediate lens is moved.
+Description
+FIELD OF THE DISCLOSURE
+The present disclosure is directed to a high-power laser processing head configured to adjust its focal position dynamically while resisting contamination of the lenses and providing a large working distance.
+BACKGROUND OF THE DISCLOSURE
+A laser processing head, such as used for cutting or material processing, can provide a high-power laser beam of 10 kw and even up to 30 kW. Due to the working conditions, the high-power head is preferably resistant to contamination, which can damage the optics in the head and can undermine the laser's performance. In some laser processing heads, the focus position of the laser beam from the head can be adjusted along the optical axis.
+Although existing arrangements to adjust the focus position may be effective, the configurations may not be well suited for harsh working conditions, high-power laser energy, exposure to contamination, and other issues that can damage the optics in the head and undermine the laser's performance. In addition, changing the focus position is a time critical operation and should be performed as quickly as possible. This can complicate the implementation of some arrangements.
+The subject matter of the present disclosure is directed to overcoming, or at least reducing the effects of, one or more of the problems set forth above.
+SUMMARY OF THE DISCLOSURE
+A laser processing head is used to transmit a laser beam that is input along an optical axis of the head, to a process zone, the head comprises first, second and third lens elements, which can each include one or more lenses or optical elements. The first lens element is disposed in the head and images the laser beam from the input with a first focal length along the optical axis. The first focal length can be negative or can be positive for magnifications of about 6× or greater. The second lens element is disposed in the head and has an actuator arranged therewith. The second lens element images the laser beam from the first lens with a second (positive) focal length along the optical axis. The actuator is configured to move the second lens in the head along the optical axis over a variable lens distance relative to the first lens. The third lens element is disposed in the head and images the laser beam from the second lens element with a third (positive) focal length along the optical axis to a focal point. The third focal length is greater than the second focal length, and the focal point is variable along the optical axis over a variable focal distance in relation to the variable lens distance.
+The head can comprise a housing having an input and an output for the laser beam along the optical axis. The first and third lens elements are fixedly mounted in the housing, whereas the second lens element is movably mounted in the housing in connection with the actuator.
+The foregoing summary is not intended to summarize each potential embodiment or every aspect of the present disclosure.
+BRIEF DESCRIPTION OF THE DRAWINGS
+FIG.
+1
+A
+illustrates a laser delivery system according to the present disclosure.
+FIGS.
+1
+B-
+1
+C
+schematically illustrate a laser processing head according to the present disclosure.
+FIG.
+2
+A
+illustrates a schematic view of a laser processing head having a lens arrangement according to the present disclosure.
+FIG.
+2
+B
+illustrates a detail of the lens arrangement in
+FIG.
+2
+A
+.
+FIG.
+2
+C
+schematically illustrates a lens, a fixed mounting structure, and a cooling element of the present disclosure and schematically illustrates a lens, a movable mounting structure, a cooling element, and an actuator of the present disclosure.
+FIG.
+3
+A
+illustrates schematic view of a laser processing head having another lens arrangement according to the present disclosure.
+FIG.
+3
+B
+illustrates a detail of the lens arrangement in
+FIG.
+3
+A
+.
+DETAILED DESCRIPTION OF THE DISCLOSURE
+FIG.
+1
+A
+illustrates a
+laser delivery system
+80
+according to the present disclosure. A
+laser source
+82
+generates high-power laser light that is propagated along a fiber
+optic cable
+84
+to a
+laser processing head
+10
+. The
+laser source
+82
+can be an suitable multi-mode or a single-mode laser depending on the laser power required.
+The
+laser processing head
+10
+can be moved relative to a workpiece WP and/or can have the workpiece WP moved relative to it. For example, the
+laser processing head
+10
+can be moved by a gantry system, robotic arm, or
+other apparatus
+86
+used in the art. Internally, the
+laser processing head
+10
+includes optics to focus the laser energy in a laser beam LB to the workpiece WP to achieve cutting, brazing, welding, additive manufacturing, or some other lasing process.
+FIG.
+1
+B
+schematically illustrates the
+laser processing head
+10
+according to the present disclosure. The
+laser processing head
+10
+includes a
+housing
+12
+for internal optics of a
+lens arrangement
+20
+. A
+receiver
+85
+at one end of the
+housing
+12
+can couple to the
+laser cable
+84
+, which conducts the laser light into the
+head
+12
+. An
+output
+16
+at the other end of the
+housing
+12
+allows a focused laser beam LB to be emitted from the
+housing
+12
+for achieving the purposes of the lasing operation, such as welding, additive manufacture, cutting, etc. To protect the internal optics inside the
+housing
+12
+, the
+output
+16
+can include a cover slide that acts as a transparent pressure window.
+During operation, the input
+14
+(e.g., a high-power laser delivery fiber) in the
+head
+10
+emits a high-power laser beam LB in the
+housing
+12
+. In a general sense, a fixed
+input lens element
+30
+images the laser beam LB to a second,
+movable lens element
+40
+. In turn, the
+movable lens element
+40
+images the laser beam LB to a fixed focusing
+lens element
+50
+, which focuses the laser beam LB to pass through the protective cover slide of the
+output
+16
+. The beam LB is focused to a focal point or
+spot
+18
+, and the laser beam LB then impinges on or near the workpiece WP or some other desired process zone. (Depending on the laser process and the type of
+head
+10
+, the
+focal point
+18
+can be located at or near the workpiece WP, inside a
+nozzle
+17
+as in
+FIG.
+1
+C
+attached to the head, or at some other location along the optical axis that suites the process at hand.)
+In a more technical sense, the
+first lens element
+30
+creates an image (typically a virtual image), which is de-magnified and serves as an object for the
+second lens element
+40
+. In turn, the
+second lens element
+40
+images this de-magnified object to close to infinity. Therefore, when the
+second lens element
+40
+is in a neutral position, the image created by the
+second lens element
+40
+is at infinity. Finally, the
+last lens element
+50
+images this new object from infinity to the focal plane of the
+last lens element
+50
+, forming the
+focal point
+18
+for the materials processing operation.
+Movement of the
+second element
+40
+moves the virtual object for the
+last lens element
+50
+away from infinity and therefore results in a movement of the final
+focal point
+18
+. Demagnification of the intermediate object after
+first lens element
+30
+means, that for a given total magnification of the
+head
+10
+, the remaining optics consisting of second and
+third lens elements
+40
+,
+50
+must have a larger magnification M2. Moving the
+second lens element
+40
+is mostly equivalent to moving the virtual object. First order optics shows that this movement is translated to a movement of the
+focal point
+18
+by roughly M2*M2, meaning that the movement of the
+second lens element
+40
+can be much smaller than the resulting movement of the
+spot
+18
+.
+The
+laser processing head
+10
+can be used in a laser process in which the
+focal point
+18
+of the laser beam LB can be adjusted in the optical axis (i.e., Z-axis) relative to a workpiece WP for laser cutting, welding, soldering, surface treatment, tactile brazing, additive manufacturing processes, and the like. The
+movable lens element
+40
+permits the
+focal point
+18
+of the laser beam LB to be adjusted along the optical axis. In this way, the
+focal point
+18
+can be adjusted to the different contours of the workpiece WP or to different process zones needed for the lasing process. This adjustment along the optical axis Z can be performed while the
+head
+10
+remains stationary relative to the workpiece WP, while the
+head
+10
+moves in the X-Y plane relative the workpiece WP, while the
+head
+10
+is also moved along the Z-axis, or when a combination of such movements are performed.
+FIG.
+2
+A
+illustrates more detail of a
+laser processing head
+10
+having a
+lens arrangement
+20
+according to the present disclosure. As noted, the
+head
+10
+focuses a laser beam LB to the
+focal point
+18
+. The
+focal point
+18
+can be adjusted relative to a
+focal plane
+51
+, which can be outside or inside the head
+10
+(or component thereof, such as a nozzle) depending on the lasing process. As only schematically shown here, the
+head
+10
+includes the
+housing
+12
+having the
+input
+14
+and the
+output
+16
+for the laser beam LB to pass along the optical axis A. In an interior
+15
+, the
+housing
+10
+includes the
+lens arrangement
+20
+with
+lens elements
+30
+,
+40
+,
+50
+disposed in the
+interior
+15
+of the
+housing
+10
+. In general, each of the
+lens elements
+30
+,
+40
+,
+50
+can include one lens, but they may also comprise a group of multiple lenses, composite lenses, or optical elements in the form of a lens group. (Reference to a lens may be used herein for the purpose of description, but it should be appreciated that each of the
+lens elements
+30
+,
+40
+,
+50
+can include one or more lenses or optical elements.) In one arrangement, the first,
+input lens element
+30
+is mounted in the housing's interior
+15
+using a fixed mounting
+structure
+32
+; the second,
+intermediate lens element
+40
+is mounted in the housing's interior
+15
+using a
+movable mounting structure
+42
+; and the third, focusing
+lens element
+50
+is mounted in the housing's interior
+15
+using a fixed mounting
+structure
+52
+.
+The
+input mounting structure
+32
+is in a fixed position in the
+housing
+10
+so that the
+input lens element
+30
+is set at a first distance D
+1
+from the
+input
+14
+, which can include an optical fiber input suited to the high-power laser of the
+head
+10
+. The
+intermediate mounting structure
+42
+, by contrast, is mounted in conjunction with an
+actuator
+46
+operable to adjust the position of the
+intermediate lens element
+40
+in the
+housing
+10
+along the optical axis A. In this way, the second distance D
+2
+of the
+intermediate lens element
+40
+relative to the
+input lens element
+30
+can be controlled and varied. Finally, the
+output mounting structure
+52
+is in a fixed position in the
+housing
+10
+so that the
+output lens element
+50
+is set at a distance (D
+2
++D
+3
+) from the
+input lens element
+30
+. The
+output lens element
+50
+focuses the laser beam LB to a
+focal point
+18
+that can be varied a variable distance dz
+foc
+relative to a
+focal plane
+51
+of the
+output lens element
+50
+. (In
+FIG.
+2
+A
+, the
+focal point
+18
+is shown beyond the
+focal plane
+51
+of the
+output lens element
+50
+at the most distanced boundary (right in the drawing) of the range for the variable distance dz
+foc
+. This means also that the
+intermediate lens element
+40
+is shown in
+FIG.
+2
+A
+at its farthest boundary (left in the drawing) of its movement range from the
+output lens element
+50
+. The laser beam LB between the intermediate and
+output lens elements
+40
+and
+50
+diverges. Although not shown, when the
+intermediate lens element
+40
+is positioned at its closest boundary (right in the drawing) of its movement range toward the
+output lens element
+50
+, then the
+focal point
+18
+would be inside the
+focal plane
+51
+of the
+output lens element
+50
+at the shortest boundary (left in the drawing) of the range for the variable distance dz
+foc
+. The laser beam LB between the intermediate and
+output lens elements
+40
+and
+50
+would converge in this instance.)
+In general, the
+focal point
+18
+can be beyond the housing's
+output
+16
+, but the
+focal point
+18
+does not necessarily have to be outside of the housing “proper”, depending on the type of housing used and any additional components used on the
+head
+10
+. In two-dimensional flat sheet cutting, for example, the focus of the laser beam LB is controlled with respect to a cutting gas nozzle affixed on an end of the
+head
+10
+. During use, the
+focal point
+18
+can be both inside, at, or outside this nozzle. The
+actuator
+46
+on the
+intermediate lens element
+40
+can adjust/control the third distance D
+3
+of the
+intermediate lens element
+40
+to the
+output lens element
+50
+in direct offset to the adjustment to the second distance D
+2
+.
+As also shown in the detail of the
+lens arrangement
+20
+in
+FIG.
+2
+B
+, the
+input lens element
+30
+images the laser beam LB from the
+input
+14
+with a first, input focal length f
+1
+along the optical axis A. In one configuration, the input focal length f
+1
+is negative. The
+intermediate lens element
+40
+images the laser beam LB from the
+input lens element
+30
+with a second, intermediate focal length f
+2
+along the optical axis A. The intermediate focal length f
+2
+is positive. As noted, the
+actuator
+46
+is configured to move the
+intermediate lens element
+40
+in the
+head
+10
+along the optical axis A at a variable lens distance dz
+2
+relative to the input and
+output lens elements
+30
+,
+50
+.
+In contrast to the previous configuration, the input focal length f
+1
+can instead be positive when the
+head
+10
+has a very large magnification, such as for magnifications greater than about 6×. The range of parameters disclosed herein for the
+head
+10
+can include these large magnifications, which may be useful for cutting processes.
+The
+output lens element
+50
+images the laser beam LB from the
+intermediate lens element
+40
+with a third, output focal length f
+3
+along the optical axis A to the
+focal point
+18
+. The output focal length f
+3
+is positive. The
+focal point
+18
+is variable over a variable focal distance dz
+foc
+along the optical axis A in relation to the increase/decrease of the variable lens distance dz
+2
+of the
+intermediate lens element
+40
+relative to the input and
+output lens elements
+30
+,
+50
+. Moving the
+lens element
+40
+towards the
+output lens element
+50
+will move the
+focal point
+18
+toward the
+output lens element
+50
+, and moving the
+intermediate lens element
+40
+away from the
+output lens element
+50
+will move the
+focal point
+18
+away from the
+output lens element
+50
+.
+Because the
+laser head
+10
+is used for high-power lasing, cooling of one or more of the
+lens elements
+30
+,
+40
+, and
+50
+can increase imaging performance of the head and can help prevent adverse effects. Preferably, the
+head
+10
+includes at least one cooling arrangement disposed in the
+housing
+10
+. The at least one cooling arrangement is disposed in thermal communication with at least one of the
+lenses
+30
+,
+40
+,
+50
+and is configured to cool the associated
+lens element
+30
+,
+40
+,
+50
+.
+The outer
+stationary lens elements
+30
+and
+50
+allow for good sealing of an
+optics room
+25
+in the
+head
+10
+and can be cooled efficiently. The
+optics room
+25
+for the
+lens elements
+30
+,
+40
+,
+50
+is preferably sealed and is preferably as small as possible, which facilitates cooling and sealing. When using lens material having high thermal conductivity such as sapphire (Al
+2
+O
+3
+), zinc sulfide (ZnS), these
+lens elements
+30
+and
+50
+are very resistant to contamination. Due to the small movement range of the intermediate
+movable lens element
+40
+made possible for the reasons noted above, active cooling is at least easier for it as well. In addition, the small movement range allows for a very fast adjustment of the
+focal point
+18
+.
+At least in one configuration, for example, the
+input lens element
+30
+includes a
+cooling element
+34
+because this
+input lens element
+30
+is subject to more concentrated imaging of the laser beam LB from the
+input
+14
+and may be subject to the most heating per unit surface area. In another configuration, the first and
+third lenses
+30
+,
+50
+include
+cooling elements
+34
+,
+54
+configured to cool the associated
+lens elements
+30
+,
+50
+because these
+lens elements
+30
+,
+50
+are mounted in a fixed position in the
+housing
+12
+, making the
+cooling elements
+34
+,
+54
+easier to incorporate into the mounting
+structure
+32
+,
+52
+.
+In yet another configuration, each of the
+lens elements
+30
+,
+40
+,
+50
+includes a
+cooling element
+34
+,
+44
+,
+54
+disposed in thermal communication therewith and configured to actively cool the associated
+lens element
+30
+,
+40
+,
+50
+. In general, the
+cooling elements
+34
+,
+44
+,
+54
+can include thermoelectric cooling elements on the mounting
+structures
+32
+,
+42
+,
+52
+.
+Because the input and
+output lens elements
+30
+,
+50
+are fixed in the
+head
+10
+with mounting
+structures
+32
+,
+52
+, any desired sensors can be more readily used for monitoring these
+stationary lens elements
+30
+,
+50
+. Such sensors (not shown) can include a temperature sensor, a viewing sensor, or other form of detector to monitor the health of the
+lens element
+30
+,
+50
+. Such a sensor requires certain wiring or cabling that can be simplified for these fixed mounts of the mounting
+structures
+32
+,
+52
+. Moreover, the input and
+output lens elements
+30
+,
+50
+being fixed in the
+head
+10
+with the mounting
+structures
+32
+,
+52
+simplifies how the associated
+cooling element
+34
+,
+54
+can be incorporated into (onto) the mounting
+structure
+32
+,
+52
+and
+adjacent housing
+12
+. A number of mounting
+structures
+32
+,
+42
+,
+52
+can be used for the
+lens elements
+30
+,
+40
+,
+50
+. For example, the fixed
+position mounting structures
+32
+,
+52
+can use components such as lens tubes, screw rings, and clamped mounts. The
+lens elements
+30
+,
+40
+,
+50
+can be mounted with seals and can be held in place in the mounting
+structures
+32
+,
+42
+, and
+52
+.
+Briefly,
+FIG.
+2
+C
+schematically illustrates details of a fixed lens element (e.g.,
+50
+), a fixed mounting
+structure
+52
+, and a
+cooling element
+54
+of the present disclosure. Here, the mounting
+structure
+52
+is a clamp-type mount with clamp elements
+53
+a
+-
+b
+affixed together and holding the
+lens element
+50
+therein. Sealing at
+55
+can be used to fix the
+lens element
+50
+in the clamp elements
+53
+a
+-
+b
+. The mounting
+structure
+52
+can be affixed or mounted in the
+interior
+15
+of the housing using conventional features (not shown). For example, a
+module element
+90
+may be mounted in the interior
+15
+.
+The
+cooling element
+54
+, such as one or more thermoelectric cooling elements, can be disposed on (or disposed in) the
+clamp type mount
+52
+. As will be appreciated with the benefit of this example, a number of mounting structures and arrangements can be used to mount the fixed lenses (
+30
+,
+50
+) in the head's housing.
+Briefly,
+FIG.
+2
+C
+also schematically illustrates details of the movable lens (e.g., intermediate lens element
+40
+), a
+movable mounting structure
+42
+, a
+cooling element
+44
+, and an
+actuator
+46
+of the present disclosure. Here, the mounting
+structure
+42
+is a clamp-type mount with clamp elements
+43
+a
+-
+b
+affixed together and holding the
+lens element
+40
+therein. Sealing at
+44
+can be used to fix the
+lens element
+40
+in the clamp elements
+43
+a
+-
+b
+. The mounting
+structure
+42
+can be mounted in or on a rail, track, or other guide in the
+interior
+15
+of the housing using conventional features. For example, a
+module element
+90
+′ may be mounted in the interior
+15
+and can include the
+guide
+92
+. This
+module element
+90
+′ can be part of the same module used for output lens and/or the input lens.
+The
+cooling element
+44
+, such as one or more thermoelectric cooling elements or water cooling arrangements, can be disposed on (or disposed in) the
+clamp type mount
+42
+. The
+actuator
+46
+, which can include one or more elements, can be mounted with respect to the housing's interior
+15
+in conjunction with the
+mount
+42
+on one or more locations or sides of the
+mount
+42
+. The
+actuator
+46
+can move the
+mount
+42
+along the
+guide
+92
+, track or the like to adjust the position of the
+lens element
+40
+. As will be appreciated with the benefit of this example, a number of mounting structures and arrangements can be used to mount the movable lenses (
+40
+) in the head's housing.
+Because the
+intermediate lens element
+40
+as shown in
+FIGS.
+2
+A-
+2
+B
+is movable at a small variable lens distance dz
+2
+in the
+head
+10
+by operation of the
+actuator
+46
+, any desired sensors (not shown) can still be used for monitoring this
+lens element
+40
+even with its movement. Such sensors can include a temperature sensor, a viewing sensor (i.e., photodiodes), or other form of detector to monitor the health of the lens. Such a sensor requires certain wiring or cabling that can be simplified for the mounting
+structure
+42
+that moves only the small variable lens distance dz
+2
+. Moreover, the
+intermediate cooling element
+44
+can still be incorporated into the mounting
+structure
+42
+, and the
+cooling element
+44
+and mounting
+structure
+42
+can be moved by the
+actuator
+46
+.
+As shown in
+FIG.
+2
+A
+, the
+actuator
+46
+for the
+intermediate lens element
+40
+is controlled by a
+controller
+60
+. Preferably, the
+actuator
+46
+allows for highly dynamic control to achieve the small movement dz
+2
+of the
+intermediate lens element
+40
+along the optical axis A. The
+actuator
+46
+can include one or more unidirectional mover, bi-directional mover, motor, solenoid, piezoelectric element, linear motor, voice coil motor, or other device having precise, controlled movements over a short distance. Movement over the small distance dz
+2
+can be achieved with one
+actuator
+46
+capable of bi-directional movement. Alternatively, opposing
+unidirectional actuators
+46
+can be disposed on opposing sides of the mounting
+structure
+42
+to achieve the bi-directional movement. The
+actuator
+46
+can be combined with bearings, joints, guides, biasing elements, springs, and any other necessary mechanical features to control movement. Overall, the
+actuator
+46
+can use any form of mechanical or electromechanical actuation that has fine precision and accuracy and that can accommodate cooling. Any of the
+cooling elements
+34
+,
+44
+,
+54
+in the
+head
+10
+can also be controlled by the
+controller
+60
+, which can be a microcontroller specifically associated with the
+head
+10
+or can be part of a larger control system for a laser delivery system (e.g.,
+80
+:
+FIG.
+1
+A
+).
+The
+controller
+60
+operates the
+actuator
+46
+to adjust the position of the
+intermediate lens element
+40
+along the small variable lens distance dz
+2
+, which in turn adjust the
+focus position
+18
+of the laser beam LB along the larger variable focal distance dz
+foc
+. As noted, this
+focus position
+18
+can be adjusted relative to surfaces of a workpiece, while the
+head
+10
+is stationary relative to the workpiece, while it moves relative to the workpiece, etc.
+Adjusting the
+focus position
+18
+can be used in a number of ways during laser processing of the workpiece. While the
+head
+10
+is stationary relative to the workpiece, movement of the
+intermediate lens element
+40
+along the small variable lens distance dz
+2
+can adjust the
+focus position
+18
+with respect to surfaces of the workpiece. While the
+head
+10
+is moved along an axis consistently with respect to the workpiece or vice versa, movement of the
+intermediate lens element
+40
+along the small variable lens distance dz
+2
+can adjust the
+focus position
+18
+with respect to surfaces of the workpiece. (In other words, the
+focal point
+18
+can be moved relative to the
+head
+10
+during operations. If the
+head
+10
+is stationary, the
+focal point
+18
+can be moved relative to both workpiece and
+head
+10
+. If the
+head
+10
+is moved relative to the workpiece and if at the same time
+focal point
+18
+is moved relative to the
+head
+10
+, the
+focal point
+18
+can be kept stationary with respect to the workpiece while moving the
+head
+10
+. These and other combinations of movement can be used.) Moreover, using the
+actuator
+46
+suitable for the small range of movement over the variable lens distance dz
+2
+, the
+intermediate lens element
+40
+can be further operated to have high frequency oscillations in the
+head
+10
+, which produces high frequency oscillations of the
+focal point
+18
+along the optical axis A. These and any other combinations of adjustments can be used by actuating the
+intermediate lens element
+40
+.
+For optical control and as best shown in
+FIG.
+2
+B
+, the input focal length f
+1
+is negative; the intermediate focal length f
+2
+is positive, and the output focal length f
+3
+is positive. The output optical length f
+3
+is greater than the intermediate focal length f
+2
+. Typically, a movement range of the
+intermediate lens element
+40
+can be less than about 15 mm, and the spot movement can be larger than 60 mm. In general, the third focal length f
+3
+can greater than the second focal length f
+2
+such that a ratio of |f
+3
+/f
+2
+| can be at least two (2).
+With this optical arrangement, the laser beam LB after the first two
+lenses
+30
+,
+40
+is close to being collimated. The
+input lens element
+30
+creates a smaller virtual image of the fiber tip of the
+input
+14
+, and this smaller virtual image is then imaged by the
+intermediate lens element
+40
+and the
+output lens element
+50
+towards the workpiece.
+Due to the reduced virtual image from the
+input lens element
+30
+, this initial part of the laser beam LB has a large magnification. Therefore, the ratio of the output focal length f
+3
+relative to the intermediate focal length f
+2
+is so large that a very small movement of the
+intermediate lens element
+40
+along the variable lens distance dz
+2
+results in a large movement of the
+focus position
+18
+along the variable focal distance dz
+foc
+. For typical adjustment required to focus position that would be used in 2-D sheet metal cutting, the required lens movement distance dz
+2
+can be on the order of a few millimeters, allowing for highly dynamic adjustments of the laser beam's
+focal point
+18
+.
+In general, the
+input lens element
+30
+can be composed of sapphire (Al
+2
+O
+3
+), zinc sulfide (ZnS), or other material having “high” thermal conductivity (e.g., glass having thermal conductivity at least as great as sapphire, or zinc sulfide). In general, the thermal conductivity of aluminum oxide or sapphire varies based on temperature and orientation, but can be about 24 W/(m*K). In general, the thermal conductivity of zinc sulfide varies based on temperature, but can be about 16.7 W/(m*K) at 20° C. These values are only meant to represent possible examples for the high thermal conductivity desired for the lens material. The
+output lens element
+50
+can also be composed of sapphire, zinc sulfide, or other material (e.g., glass having high thermal conductivity of at least as great as sapphire, or zinc sulfide).
+For its part, the
+intermediate lens element
+40
+can be composed of sapphire, zinc sulfide, or other material (e.g., glass having high thermal conductivity of at least as great as sapphire, or zinc sulfide). Instead of being composed of sapphire, or zinc sulfide, however, normal fused silica may be used in some or all of the
+lenses
+30
+,
+40
+,
+50
+to reduce costs or improve manufacturability with the tradeoff of reduced contamination resistance.
+At least one of the
+lens elements
+30
+,
+40
+,
+50
+can be aspherical. In one configuration, the
+input lens element
+30
+is a spherical lens; the
+intermediate lens element
+40
+is an aspherical lens; and the
+output lens element
+50
+is either spherical or aspherical. For example, either the
+intermediate lens element
+40
+, the
+output lens element
+50
+, or both can be aspheric to reduce imaging error. If sapphire or zinc sulfide is used for both of the input and
+output lens elements
+30
+,
+50
+, the
+lens arrangement
+20
+having a single aspheric lens can be sufficient.
+The focal lengths, the distances, and the optical diameters for the
+lens elements
+30
+,
+40
+,
+50
+depends on the size of the
+housing
+12
+, the optical power of the laser beam LB, and other operational characteristics. The configuration can be generally characterized by a number of interrelated relationships discussed below.
+As noted, the
+input lens element
+30
+has a first focal length f
+1
+; the
+intermediate lens element
+40
+has a second focal length of f
+2
+; and the
+output lens element
+50
+has a third focal length f
+3
+. The lens' variable distance dz
+2
+represents the movement range for the
+intermediate lens element
+40
+, and the expanse dz
+foc
+is the movement range of the
+focal point
+18
+around the focal plane of the
+output lens element
+50
+. Based on these variables, the focal length f
+2
+of the
+intermediate lens element
+40
+can be characterized by:
+f
+2
+=
+dz
+2
+dz
+foc
+The focal length f
+3
+of the
+output lens element
+50
+corresponds to about the working distance of the
+head
+10
+. The collimated focal length f
+col
+grouped for the
+input lens element
+30
+relative to the
+intermediate lens element
+40
+at the neutral position is characterized by:
+f
+col
+=
+f
+3
+M
+The variable M is the magnification involved. Given the distance D
+2
+between
+input lens element
+30
+and the
+intermediate lens element
+40
+. The focal length f
+1
+of the
+input lens element
+30
+is characterized by:
+f
+1
+=
+1
+-
+D
+2
+f
+2
+1
+f
+col
+-
+1
+f
+2
+Finally, the distance D
+1
+from the
+input
+14
+of the fiber tip to the
+input lens element
+30
+is characterized by:
+D
+1
+=
+1
+-
+D
+2
+F
+2
+1
+f
+1
++
+1
+f
+2
+-
+D
+2
+f
+1
+*
+f
+2
+Actual values for these parameters of the
+head
+10
+will depend on the particular implementation. Below is a brief discussion of some typical parameter values.
+In general, the third focal distance f
+3
+(i.e., working distance) can be greater than or equal to 200-mm and can be about 200-mm to 500-mm, resulting in a large working distance and large beam diameters for large laser power operation of the
+head
+10
+. The variable focal distance dz
+foc
+that the
+focal point
+18
+can vary along the optical axis can be from about 40-mm to 90-mm, depending on the requirements for cutting or other laser processes. The variable lens distance dz
+2
+of the
+intermediate lens element
+40
+can be in the range of about 5-mm to 15-mm. This gives the adjustments a high dynamic range and allows the
+intermediate lens element
+40
+to be more easily cooled. Overall, the variable focal distance dz
+foc
+can be about 2 to 18 times greater than the variable lens distance dz
+2
+.
+Continuing with the examples, the distance D
+2
+between the
+input lens element
+30
+and the
+intermediate lens element
+40
+can be about 20-mm to 100-mm so that the optics can be more compact in the
+head
+10
+. The first distance D
+1
+from the
+fiber tip
+14
+to the
+input lens element
+30
+can be greater than 50-mm so that the
+input lens
+20
+is not located too close to the
+input fiber
+14
+. These values discussed above are only presented as an example and can vary from one implementation to another depending on the characteristics.
+In one particular configuration, the
+lens arrangement
+20
+can be sized and used for the
+head
+10
+having the
+housing
+12
+with an overall distance of the laser beam LB of about 480-mm from the
+input
+14
+to the output (e.g., nozzle) of the
+head
+10
+. The input distance D
+1
+can be about 100-mm; the distance between the
+input lens element
+30
+and the outlet lens element
+50
+(i.e., distances D
+2
++D
+3
+) can be about 80-mm; the distance between
+input lens element
+30
+and movable lens element
+40
+(distance D
+2
+) can be about 30 mm; and the working distance f
+3
+can be 300-mm. Thus, when the working distance f
+3
+is about 300-mm, the magnification M at a Z position −20-mm can be about 1.73×, whereas the magnification M at a Z position +40-mm can be about 2.14×.
+With these dimension, the beam diameter of the laser beam LB at the
+input lens element
+30
+can be about 30-mm, and the beam diameter at the
+intermediate lens element
+40
+can be about 40-mm with typical cutting laser sources with a beam parameter product (BPP) of about 4 mm*mrad. As noted, the laser beam LB is practically collimated between the
+intermediate lens element
+40
+and output focusing
+lens element
+50
+.
+With these dimension, the
+intermediate lens element
+40
+can be varied along a variable lens distance dz
+2
+of about ±2 mm. As already noted, the small movement needed for the
+intermediate lens element
+40
+allows the
+optics room
+25
+to be more readily sealed from the mechanics of the
+actuator
+46
+, to be more readily cooled, and to be easily fine-tuned.
+FIG.
+3
+A
+illustrates a
+laser processing head
+10
+having another
+lens arrangement
+20
+according to the present disclosure, and
+FIG.
+3
+B
+shows a detail of the
+lens arrangement
+20
+in
+FIG.
+3
+A
+. This
+head
+10
+and
+lens arrangement
+20
+is similar to the previous configuration of
+FIGS.
+2
+A-
+2
+B
+so that similar reference numbers are used for comparable components. Description of these comparable components is reincorporated here, but may not be repeated below.
+As before, the
+lens arrangement
+20
+has three
+lens elements
+30
+,
+40
+and
+50
+, which can each include one lens or group of lenses or optical elements. The first,
+input lens element
+30
+has a negative focal length f
+1
+, is actively cooled, is stationary in the optical axis A, and is composed of a material having a high thermal conductivity. For example, the
+input lens element
+30
+can be composed of sapphire, or zinc sulfide. (As noted previously, the first focal length can be positive when the
+head
+10
+has a magnification greater than about 6× in some configurations.) The third,
+output lens element
+50
+has a positive focal length f
+3
+, is actively cooled, is stationary in the optical axis A, and is composed of a material with a high thermal conductivity as noted herein.
+As before, the second,
+intermediate lens element
+40
+has a positive focal length f
+2
+and can be moved along the optical axis A using the
+actuator
+46
+. The
+intermediate lens element
+40
+can also be cooled with a
+cooling element
+44
+. Again, the
+intermediate mounting structure
+42
+is mounted in conjunction with the
+actuator
+44
+operable to adjust the position of the
+intermediate lens element
+40
+in the
+housing
+10
+along the variable lens distance dz
+2
+of the optical axis A.
+The
+intermediate lens element
+40
+, however, includes a number of differences in contrast to the previous arrangements. In particular, the
+intermediate lens element
+40
+is mounted in the mounting
+structure
+42
+as a lens group further including a pair of cover slides
+41
+a
+-
+b
+. The
+lens
+41
+for the
+element
+40
+in this configuration can be composed of a different material than the other configurations and can, for example, be composed of a fused silica. This
+intermediate lens
+41
+of the
+element
+40
+is sandwiched between the cover slides
+41
+a
+-
+b
+, which can be composed of sapphire, zinc sulfide, or other material of “high” thermal conductivity noted herein. This configuration may make tradeoffs as to size, weight, and performance compared to the previous configuration, the
+lens arrangement
+20
+here can still be kept cleaner from contamination. The
+intermediate lens
+41
+can be composed of fused silica, which is a less expensive material, and can be aspherical. The aspherical, fused
+silica lens
+41
+sandwiched between the two sapphire cover slides
+41
+a
+-
+b
+therefore provides for reduced manufacturing costs, yet can keep the configuration clean from contamination. The cover slides
+41
+a
+-
+b
+seal the
+aspherical lens
+41
+in a small volume to keep the
+lens
+41
+clean. Contamination from outside is handled by the contamination resistant sapphire, or zinc sulfide of the cover slides
+41
+a
+-
+b.
+The foregoing description of preferred and other embodiments is not intended to limit or restrict the scope or applicability of the inventive concepts conceived of by the Applicants. It will be appreciated with the benefit of the present disclosure that features described above in accordance with any embodiment or aspect of the disclosed subject matter can be utilized, either alone or in combination, with any other described feature, in any other embodiment or aspect of the disclosed subject matter.
+Claims (
+17
+)
+What is claimed is:
+1. A laser processing head configured to transmit a laser beam along an optical axis of the laser processing head and to focus the laser beam at a focal point, the laser processing head comprising:
+an input configured to receive the laser beam from a laser source;
+a first lens element mounted in a first fixed position in the laser processing head and configured to receive and image the laser beam directly from the input, the first lens element having a first focal length along the optical axis;
+a second lens element configured to receive and image the laser beam directly from the first lens element, the second lens element having a second focal length along the optical axis, the second focal length being positive;
+an actuator configured to move the second lens element a variable lens distance along the optical axis; and
+a third lens element mounted in a second fixed position in the laser processing head and configured to receive the laser beam directly from the second lens element and image the laser beam to the focal point, the third lens element having a third focal length along the optical axis, the third focal length being positive and being greater than the second focal length by at least a factor of two, wherein:
+the focal point is configured to vary over a variable focal distance along the optical axis as a function of the variable lens distance, and
+the actuator is configured to move the second lens element along the optical axis relative to the first lens element mounted in the first fixed position and relative to the third lens element mounted in the second fixed position.
+2. The laser processing head of
+claim 1
+, wherein the first lens element comprises a spherical lens.
+3. The laser processing head of
+claim 1
+, wherein:
+the first focal length is positive, and
+the laser processing head has a magnification of 6× or greater.
+4. The laser processing head of
+claim 1
+, wherein:
+the first lens element comprises a lens, and
+the lens is made of at least one of fused silica, sapphire, zinc sulfide, or a material having a thermal conductivity at least as great as a thermal conductivity of at least one of sapphire or zinc sulfide.
+5. The laser processing head of
+claim 1
+, wherein:
+the second lens element comprises a lens, and
+the lens is made of at least one of fused silica, sapphire, zinc sulfide, or a material having a thermal conductivity at least as great as a thermal conductivity of at least one of sapphire or zinc sulfide.
+6. The laser processing head of
+claim 1
+, wherein:
+the third lens element comprises a lens, and
+the lens is made of at least one of fused silica, sapphire, zinc sulfide, or a material having a thermal conductivity at least as great as a thermal conductivity of at least one of sapphire or zinc sulfide.
+7. The laser processing head of
+claim 1
+, wherein:
+the first lens element and the third lens element together define an optics room in the laser processing head, and
+the optics room seals and encloses the second lens element.
+8. The laser processing head of
+claim 1
+, wherein at least one of the second lens element or the third lens element comprise an aspherical lens configured to reduce imaging error.
+9. The laser processing head of
+claim 1
+, further comprising a cooling arrangement in thermal communication with and configured to actively cool at least one of the first lens element, the second lens element, or the third lens element.
+10. The laser processing head of
+claim 1
+, wherein the actuator comprises at least one of a unidirectional mover, a bi-directional mover, a motor, a linear motor, a solenoid, a voice coil, or a piezoelectric element.
+11. A laser processing head configured to transmit a laser beam along an optical axis of the laser processing head and to focus the laser beam at a focal point, the laser processing head comprising:
+an input configured to receive the laser beam from a laser source;
+a first lens element mounted in a first fixed position in the laser processing head and configured to receive and image the laser beam directly from the input, the first lens element having a first focal length along the optical axis;
+a second lens element configured to receive and image the laser beam directly from the first lens element, the second lens element having a second focal length along the optical axis, the second focal length being positive;
+an actuator configured to move the second lens element a variable lens distance along the optical axis; and
+a third lens element mounted in a second fixed position in the laser processing head and configured to receive the laser beam directly from the second lens element and image the laser beam to the focal point, the third lens element having a third focal length along the optical axis, the third focal length being positive and being greater than the second focal length, wherein:
+the focal point is configured to vary over a variable focal distance along the optical axis as a function of the variable lens distance,
+the actuator is configured to move the second lens element along the optical axis relative to the first lens element mounted in the first fixed position and relative to the third lens element mounted in the second fixed position,
+the first focal length is negative,
+the first lens element is configured to image the input as a de-magnified object for the second lens element,
+the second lens element is configured to image the de-magnified object toward infinity as a resulting object, and
+the third lens element is configured to image the resulting object to a focal plane of the third lens element.
+12. A laser processing head configured to transmit a laser beam along an optical axis of the laser processing head and to focus the laser beam at a focal point, the laser processing head comprising:
+an input configured to receive the laser beam from a laser source;
+a first lens element mounted in a first fixed position in the laser processing head and configured to receive and image the laser beam directly from the input, the first lens element having a first focal length along the optical axis;
+a second lens element configured to receive and image the laser beam directly from the first lens element, the second lens element having a second focal length along the optical axis, the second focal length being positive;
+an actuator configured to move the second lens element a variable lens distance along the optical axis; and
+a third lens element mounted in a second fixed position in the laser processing head and configured to receive the laser beam directly from the second lens element and image the laser beam to the focal point, the third lens element having a third focal length along the optical axis, the third focal length being positive and being greater than the second focal length, wherein:
+the focal point is configured to vary over a variable focal distance along the optical axis as a function of the variable lens distance,
+the actuator is configured to move the second lens element along the optical axis relative to the first lens element mounted in the first fixed position and relative to the third lens element mounted in the second fixed position,
+the second lens element comprises a fused silica lens between a front cover slide and a back cover slide, and
+the front cover slide and the back cover slide are each made of at least one of sapphire, zinc sulfide, or a material having a thermal conductivity at least as great as a thermal conductivity of at least one of sapphire or zinc sulfide.
+13. A laser processing head configured to transmit a laser beam along an optical axis of the laser processing head and to focus the laser beam at a focal point, the laser processing head comprising:
+an input configured to receive the laser beam from a laser source;
+a first lens element mounted in a first fixed position in the laser processing head and configured to receive and image the laser beam directly from the input, the first lens element having a first focal length along the optical axis;
+a second lens element configured to receive and image the laser beam directly from the first lens element, the second lens element having a second focal length along the optical axis, the second focal length being positive;
+an actuator configured to move the second lens element a variable lens distance along the optical axis; and
+a third lens element mounted in a second fixed position in the laser processing head and configured to receive the laser beam directly from the second lens element and image the laser beam to the focal point, the third lens element having a third focal length along the optical axis, the third focal length being positive and being greater than the second focal length, wherein:
+the focal point is configured to vary over a variable focal distance along the optical axis as a function of the variable lens distance,
+the actuator is configured to move the second lens element along the optical axis relative to the first lens element mounted in the first fixed position and relative to the third lens element mounted in the second fixed position, and
+the variable focal distance is between 2 and 18 times, inclusive, greater than the variable lens distance.
+14. A laser processing head configured to transmit a laser beam along an optical axis of the laser processing head and to focus the laser beam at a focal point, the laser processing head comprising:
+a housing comprising an input and an output for the laser beam along the optical axis;
+a first lens element mounted in a first fixed position in the housing and configured to receive and image the laser beam directly from the input, the first lens element having a first focal length along the optical axis;
+a second lens element movably mounted in the housing, the second lens element being configured to receive and image the laser beam directly from the first lens element, the second lens element having a second focal length along the optical axis, the second focal length being positive;
+an actuator configured to move the second lens element a variable lens distance along the optical axis; and
+a third lens element mounted in a second fixed position in the housing and configured to receive the laser beam directly from the second lens element and image the laser beam to the focal point, the third lens element having a third focal length along the optical axis, the third focal length being positive and being greater than the second focal length, wherein:
+the focal point is configured to vary over a variable focal distance along the optical axis as a function of the variable lens distance,
+the actuator is configured to move the second lens element along the optical axis relative to the first lens element mounted in the first fixed position and relative to the third lens element mounted in the second fixed position, and
+the first focal length is negative; or the first focal length is positive and the laser processing head has a magnification of 6× or greater.
+15. The laser processing head of
+claim 14
+, further comprising at least one cooling arrangement in thermal communication with and configured to cool at least one of the first lens element, the second lens element, or the third lens element.
+16. The laser processing head of
+claim 14
+, wherein:
+the first lens element is a spherical lens; and
+at least one of the second lens element or the third lens element comprises an aspherical lens configured to reduce imaging error.
+17. The laser processing head of
+claim 14
+, wherein the second lens element comprises:
+a lens made of at least one of sapphire, zinc sulfide, or a material having a thermal conductivity at least as great as a thermal conductivity of at least one of sapphire or zinc sulfide; or
+a fused silica lens between a front cover slide and a back cover slide, the front cover slide and the back cover are each made of at least one of sapphire, zinc sulfide, or a material having a thermal conductivity at least as great as a thermal conductivity of at least one of sapphire or zinc sulfide.
+US17/192,327
+2021-03-04
+2021-03-04
+Dynamic focus for laser processing head
+Active
+2042-11-24
+US12265207B2
+(
+en
+)
+Priority Applications (3)
+Application Number
+Priority Date
+Filing Date
+Title
+US17/192,327
+US12265207B2
+(
+en
+)
+2021-03-04
+2021-03-04
+Dynamic focus for laser processing head
+CN202111656173.5A
+CN115026416A
+(
+en
+)
+2021-03-04
+2021-12-30
+Dynamic focus of a laser machining head
+DE102022101866.0A
+DE102022101866A1
+(
+en
+)
+2021-03-04
+2022-01-27
+DYNAMIC FOCUS FOR LASER PROCESSING HEAD
+Applications Claiming Priority (1)
+Application Number
+Priority Date
+Filing Date
+Title
+US17/192,327
+US12265207B2
+(
+en
+)
+2021-03-04
+2021-03-04
+Dynamic focus for laser processing head
+Publications (2)
+Publication Number
+Publication Date
+US20220283416A1
+US20220283416A1
+              (
+en
+)
+2022-09-08
+US12265207B2
+true
+US12265207B2
+              (
+en
+)
+2025-04-01
+Family
+ID=82898436
+Family Applications (1)
+Application Number
+Title
+Priority Date
+Filing Date
+US17/192,327
+Active
+2042-11-24
+US12265207B2
+(
+en
+)
+2021-03-04
+2021-03-04
+Dynamic focus for laser processing head
+Country Status (3)
+Country
+Link
+US
+(
+1
+)
+US12265207B2
+(
+en
+)
+CN
+(
+1
+)
+CN115026416A
+(
+en
+)
+DE
+(
+1
+)
+DE102022101866A1
+(
+en
+)
+Families Citing this family (2)
+* Cited by examiner, † Cited by third party
+Publication number
+Priority date
+Publication date
+Assignee
+Title
+US20240091883A1
+(
+en
+)
+*
+2022-09-20
+2024-03-21
+Ii-Vi Delaware, Inc.
+Process Monitor for Laser Processing Head
+CN117300350B
+(
+en
+)
+*
+2023-09-28
+2025-11-14
+奔腾激光(浙江)股份有限公司
+A laser welding robot
+Citations (53)
+* Cited by examiner, † Cited by third party
+Publication number
+Priority date
+Publication date
+Assignee
+Title
+US4353617A
+(
+en
+)
+*
+1980-11-18
+1982-10-12
+Canon Kabushiki Kaisha
+Optical system capable of continuously varying the diameter of a beam spot
+US4705367A
+(
+en
+)
+*
+1986-05-14
+1987-11-10
+United Technologies Corporation
+Variable focal length optical system having a constant diameter focal spot
+JPH07136790A
+(
+en
+)
+*
+1993-11-19
+1995-05-30
+Amada Co Ltd
+Method of controlling focal length of combination lens
+CN2293794Y
+(
+en
+)
+1997-04-28
+1998-10-07
+中国科学技术大学
+Adjustable semi-conductor laser collimation head
+US5828501A
+(
+en
+)
+1996-07-02
+1998-10-27
+Barco Gerber Systems
+Apparatus and method for positioning a lens to expand an optical beam of an imaging system
+DE19825092A1
+(
+en
+)
+*
+1998-06-05
+1999-12-16
+Baasel Carl Lasertech
+Laser system for generating a focused laser beam with variable focal diameter
+US20040080815A1
+(
+en
+)
+*
+2002-07-12
+2004-04-29
+Peter Muys
+Lens with optimized heat transfer properties
+EP1716963A1
+(
+en
+)
+2005-04-26
+2006-11-02
+Highyag Lasertechnologie GmbH
+Optical arrangement for remote laser machining which creates a 3D working area
+DE202006012840U1
+(
+en
+)
+2005-09-09
+2006-11-02
+Highyag Lasertechnologie Gmbh
+Laser beam positioning system, useful during laser material processing, has rotation module with store for positioning laser beam on join patch, where restoring force is effected at any angle during deflection of radiation deflection module
+CN2876815Y
+(
+en
+)
+*
+2005-12-02
+2007-03-07
+广东易美图数码影像科技有限公司
+Colour scanning projecting system
+JP3918583B2
+(
+en
+)
+2002-03-01
+2007-05-23
+株式会社デンソー
+High density energy processing apparatus and high density energy processing method
+CN101035646A
+(
+en
+)
+*
+2005-06-03
+2007-09-12
+三菱电机株式会社
+Laser processing method and laser processing device
+WO2008019681A1
+(
+en
+)
+*
+2006-08-18
+2008-02-21
+Highyag Lasertechnologie Gmbh
+Method and device for laser material working
+US7339750B2
+(
+en
+)
+*
+2004-09-30
+2008-03-04
+Trumpf Laser Gmbh & Co. Kg
+Focusing a laser beam
+DE102007039878A1
+(
+en
+)
+2006-08-18
+2008-05-08
+Highyag Lasertechnologie Gmbh
+Device for focusing a laser beam used during the modification of workpieces comprises a lens group which is mounted so that it can be moved in the axial direction and a further lens group fixed in relation to the other lens group
+CN201201128Y
+(
+en
+)
+2008-05-27
+2009-03-04
+深圳市大族激光科技股份有限公司
+Cutting head of laser cutting machine
+US20100072180A1
+(
+en
+)
+2008-09-22
+2010-03-25
+Precitec Kg
+Modular laser machining system with functional module
+DE102008048502A1
+(
+en
+)
+2008-09-23
+2010-04-01
+Precitec Kg
+Optical device for focusing laser beam in a laser processing head for material processing, comprises collimator, a first and second lens group movably arranged in axial direction, and front lens group stationary arranged to the collimator
+US20100116796A1
+(
+en
+)
+2008-11-10
+2010-05-13
+Jancso Alex
+System for High-Dynamic 3D Machining of a Workpiece by Means of a Laser Beam
+US7889428B2
+(
+en
+)
+*
+2005-04-05
+2011-02-15
+Olympus Corporation
+External laser light introducing device
+KR20110085487A
+(
+en
+)
+*
+2010-01-20
+2011-07-27
+(주)하드램
+Light guide plate pattern forming apparatus using CO2 laser
+US20120154922A1
+(
+en
+)
+*
+2009-09-01
+2012-06-21
+L'air Liquide Societe Anonyme Pour L'etude Et L'exploitation Des Procedes Georges Claude
+LASER-FOCUSING HEAD WITH ZnS LENSES HAVING A PERIPHERAL THICKNESS OF AT LEAST 5 MM AND LASER CUTTING UNIT AND METHOD USING ONE SUCH FOCUSING HEAD
+US8331044B2
+(
+en
+)
+*
+2008-04-28
+2012-12-11
+Han's Laser Technology Co., Ltd.
+Fixed focal length optical lens system
+US8331043B2
+(
+en
+)
+*
+2008-04-28
+2012-12-11
+Han's Laser Technology Co., Ltd.
+Optical lens
+CN102974939A
+(
+en
+)
+2012-11-19
+2013-03-20
+无锡市亚青机械厂
+Laser welding device capable of adjusting focus point
+DE102011117607A1
+(
+en
+)
+*
+2011-10-28
+2013-05-02
+Highyag Lasertechnologie Gmbh
+Optical system useful e.g. for imaging laser beam, comprises collimating objective, in which first- and third lens group have positive focal length, and second lens group has negative focal length, beam source, and focusing-objective
+US20130162886A1
+(
+en
+)
+*
+2011-12-15
+2013-06-27
+Olympus Imaging Corp.
+Inner Focus Lens System and Image Pickup Apparatus Using the Same
+EP2651594A1
+(
+en
+)
+2010-12-16
+2013-10-23
+Bystronic Laser AG
+Laser beam machining device and a process of laser machining comprising a single lens for light focussing
+US8804238B2
+(
+en
+)
+2010-04-22
+2014-08-12
+Trumpf Werkzeugmaschinen Gmbh + Co. Kg
+Beam shaping unit for focusing a laser beam
+US20140268368A1
+(
+en
+)
+*
+2013-03-12
+2014-09-18
+HIGHYAG Lasertechnologie
+Optical device for beam shaping
+CN104175003A
+(
+en
+)
+*
+2014-09-09
+2014-12-03
+深圳市大族激光科技股份有限公司
+Laser machining system and multi-path laser machining device
+CN204248222U
+(
+en
+)
+*
+2014-09-11
+2015-04-08
+苏州菲镭泰克激光技术有限公司
+A kind of three axle dynamic focusing laser mark printing devices
+US9346126B2
+(
+en
+)
+*
+2011-05-30
+2016-05-24
+Mitsubishi Heavy Industries, Ltd.
+Laser processing head, laser processing apparatus, optical system of laser processing apparatus, laser processing method, and laser focusing method
+DE102015108248A1
+(
+en
+)
+2015-05-26
+2016-12-01
+Scanlab Ag
+Laser material processing system and method for adjusting the size and position of a laser focus
+US20160368099A1
+(
+en
+)
+*
+2015-06-19
+2016-12-22
+Ipg Photonics Corporation
+Laser cutting head with controllable collimator having movable lenses for controlling beam diameter and/or focal point location
+JP2017185543A
+(
+en
+)
+*
+2017-03-14
+2017-10-12
+株式会社アマダホールディングス
+Laser beam machine
+DE102016005376A1
+(
+en
+)
+2016-05-04
+2017-11-09
+Precitec Gmbh & Co. Kg
+Imaging optics for material processing by means of laser radiation and laser processing head with such
+EP3437783A1
+(
+en
+)
+2016-04-01
+2019-02-06
+Amada Holdings Co., Ltd.
+Laser processing machine
+JP2019018233A
+(
+en
+)
+*
+2017-07-19
+2019-02-07
+株式会社アマダホールディングス
+Laser processing machine
+WO2019082110A1
+(
+en
+)
+*
+2017-10-26
+2019-05-02
+Salvagnini Italia S.P.A.
+Laser cutting head for machine tools
+DE102019108084A1
+(
+en
+)
+2018-03-28
+2019-10-02
+Highyag Lasertechnologie Gmbh
+zoom optics
+US20190310463A1
+(
+en
+)
+*
+2016-10-27
+2019-10-10
+Raylase Gmbh
+Deflector
+CN110471186A
+(
+en
+)
+2019-08-16
+2019-11-19
+上海嘉强自动化技术有限公司
+A ZOOM cutting device and method based on an aspheric mirror adjustable annular spot
+US10532427B2
+(
+en
+)
+*
+2015-02-20
+2020-01-14
+Technology Research Association For Future Additive Manufacturing
+Optical processing head, optical machining apparatus, and control method and control program of optical processing head
+CN111323927A
+(
+en
+)
+2020-04-08
+2020-06-23
+上海嘉强自动化技术有限公司
+Micro lens group for obtaining adjustable annular light beam
+US20200254563A1
+(
+en
+)
+2015-06-19
+2020-08-13
+Ipg Photonics Corporation
+Laser cutting head with controllable collimator having movable lenses for controlling beam diameter and/or focal point location
+CN111736329A
+(
+en
+)
+2020-07-10
+2020-10-02
+上海嘉强自动化技术有限公司
+A double-piece aspherical mirror ZOOM optical system
+CN111922514A
+(
+en
+)
+*
+2020-07-31
+2020-11-13
+南京波长光电科技股份有限公司
+Bifocal laser welding optical system and optical welding head thereof
+CN112255764A
+(
+en
+)
+*
+2020-10-29
+2021-01-22
+中山北方晶华精密光学有限公司
+Optical lens and laser processing equipment with the same
+US11020272B2
+(
+en
+)
+*
+2005-11-09
+2021-06-01
+Amo Development, Llc
+Laser scanner
+US20220063017A1
+(
+en
+)
+*
+2020-08-25
+2022-03-03
+Ii-Vi Delaware, Inc.
+Dynamic beam deflection and shaping for laser process
+US20220334367A1
+(
+en
+)
+*
+2020-01-15
+2022-10-20
+Panasonic Intellectual Property Management Co., Ltd.
+Laser device, and laser processing device in which same is used
+US11780029B2
+(
+en
+)
+*
+2014-03-05
+2023-10-10
+Panasonic Connect North America, division of Panasonic Corporation of North America
+Material processing utilizing a laser having a variable beam shape
+2021
+2021-03-04
+US
+US17/192,327
+patent/US12265207B2/en
+active
+Active
+2021-12-30
+CN
+CN202111656173.5A
+patent/CN115026416A/en
+active
+Pending
+2022
+2022-01-27
+DE
+DE102022101866.0A
+patent/DE102022101866A1/en
+active
+Pending
+Patent Citations (58)
+* Cited by examiner, † Cited by third party
+Publication number
+Priority date
+Publication date
+Assignee
+Title
+US4353617A
+(
+en
+)
+*
+1980-11-18
+1982-10-12
+Canon Kabushiki Kaisha
+Optical system capable of continuously varying the diameter of a beam spot
+US4705367A
+(
+en
+)
+*
+1986-05-14
+1987-11-10
+United Technologies Corporation
+Variable focal length optical system having a constant diameter focal spot
+JPH07136790A
+(
+en
+)
+*
+1993-11-19
+1995-05-30
+Amada Co Ltd
+Method of controlling focal length of combination lens
+US5828501A
+(
+en
+)
+1996-07-02
+1998-10-27
+Barco Gerber Systems
+Apparatus and method for positioning a lens to expand an optical beam of an imaging system
+CN2293794Y
+(
+en
+)
+1997-04-28
+1998-10-07
+中国科学技术大学
+Adjustable semi-conductor laser collimation head
+DE19825092A1
+(
+en
+)
+*
+1998-06-05
+1999-12-16
+Baasel Carl Lasertech
+Laser system for generating a focused laser beam with variable focal diameter
+JP3918583B2
+(
+en
+)
+2002-03-01
+2007-05-23
+株式会社デンソー
+High density energy processing apparatus and high density energy processing method
+US20040080815A1
+(
+en
+)
+*
+2002-07-12
+2004-04-29
+Peter Muys
+Lens with optimized heat transfer properties
+US7339750B2
+(
+en
+)
+*
+2004-09-30
+2008-03-04
+Trumpf Laser Gmbh & Co. Kg
+Focusing a laser beam
+US7889428B2
+(
+en
+)
+*
+2005-04-05
+2011-02-15
+Olympus Corporation
+External laser light introducing device
+EP1716963A1
+(
+en
+)
+2005-04-26
+2006-11-02
+Highyag Lasertechnologie GmbH
+Optical arrangement for remote laser machining which creates a 3D working area
+CN101035646A
+(
+en
+)
+*
+2005-06-03
+2007-09-12
+三菱电机株式会社
+Laser processing method and laser processing device
+DE202006012840U1
+(
+en
+)
+2005-09-09
+2006-11-02
+Highyag Lasertechnologie Gmbh
+Laser beam positioning system, useful during laser material processing, has rotation module with store for positioning laser beam on join patch, where restoring force is effected at any angle during deflection of radiation deflection module
+US11020272B2
+(
+en
+)
+*
+2005-11-09
+2021-06-01
+Amo Development, Llc
+Laser scanner
+CN2876815Y
+(
+en
+)
+*
+2005-12-02
+2007-03-07
+广东易美图数码影像科技有限公司
+Colour scanning projecting system
+WO2008019681A1
+(
+en
+)
+*
+2006-08-18
+2008-02-21
+Highyag Lasertechnologie Gmbh
+Method and device for laser material working
+DE102007039878A1
+(
+en
+)
+2006-08-18
+2008-05-08
+Highyag Lasertechnologie Gmbh
+Device for focusing a laser beam used during the modification of workpieces comprises a lens group which is mounted so that it can be moved in the axial direction and a further lens group fixed in relation to the other lens group
+US8331044B2
+(
+en
+)
+*
+2008-04-28
+2012-12-11
+Han's Laser Technology Co., Ltd.
+Fixed focal length optical lens system
+US8331043B2
+(
+en
+)
+*
+2008-04-28
+2012-12-11
+Han's Laser Technology Co., Ltd.
+Optical lens
+CN201201128Y
+(
+en
+)
+2008-05-27
+2009-03-04
+深圳市大族激光科技股份有限公司
+Cutting head of laser cutting machine
+US20100072180A1
+(
+en
+)
+2008-09-22
+2010-03-25
+Precitec Kg
+Modular laser machining system with functional module
+DE102008048502A1
+(
+en
+)
+2008-09-23
+2010-04-01
+Precitec Kg
+Optical device for focusing laser beam in a laser processing head for material processing, comprises collimator, a first and second lens group movably arranged in axial direction, and front lens group stationary arranged to the collimator
+US20100116796A1
+(
+en
+)
+2008-11-10
+2010-05-13
+Jancso Alex
+System for High-Dynamic 3D Machining of a Workpiece by Means of a Laser Beam
+US20120154922A1
+(
+en
+)
+*
+2009-09-01
+2012-06-21
+L'air Liquide Societe Anonyme Pour L'etude Et L'exploitation Des Procedes Georges Claude
+LASER-FOCUSING HEAD WITH ZnS LENSES HAVING A PERIPHERAL THICKNESS OF AT LEAST 5 MM AND LASER CUTTING UNIT AND METHOD USING ONE SUCH FOCUSING HEAD
+KR20110085487A
+(
+en
+)
+*
+2010-01-20
+2011-07-27
+(주)하드램
+Light guide plate pattern forming apparatus using CO2 laser
+US9329368B2
+(
+en
+)
+*
+2010-04-22
+2016-05-03
+Trumpf Werkzeugmaschinen Gmbh + Co. Kg
+Beam shaping unit for focusing a laser beam
+US8804238B2
+(
+en
+)
+2010-04-22
+2014-08-12
+Trumpf Werkzeugmaschinen Gmbh + Co. Kg
+Beam shaping unit for focusing a laser beam
+EP2651594A1
+(
+en
+)
+2010-12-16
+2013-10-23
+Bystronic Laser AG
+Laser beam machining device and a process of laser machining comprising a single lens for light focussing
+US9346126B2
+(
+en
+)
+*
+2011-05-30
+2016-05-24
+Mitsubishi Heavy Industries, Ltd.
+Laser processing head, laser processing apparatus, optical system of laser processing apparatus, laser processing method, and laser focusing method
+DE102011117607A1
+(
+en
+)
+*
+2011-10-28
+2013-05-02
+Highyag Lasertechnologie Gmbh
+Optical system useful e.g. for imaging laser beam, comprises collimating objective, in which first- and third lens group have positive focal length, and second lens group has negative focal length, beam source, and focusing-objective
+US20130162886A1
+(
+en
+)
+*
+2011-12-15
+2013-06-27
+Olympus Imaging Corp.
+Inner Focus Lens System and Image Pickup Apparatus Using the Same
+CN102974939A
+(
+en
+)
+2012-11-19
+2013-03-20
+无锡市亚青机械厂
+Laser welding device capable of adjusting focus point
+US20140268368A1
+(
+en
+)
+*
+2013-03-12
+2014-09-18
+HIGHYAG Lasertechnologie
+Optical device for beam shaping
+US9261702B2
+(
+en
+)
+2013-03-12
+2016-02-16
+Highyag Lasertechnologie Gmbh
+Optical device for beam shaping
+US11780029B2
+(
+en
+)
+*
+2014-03-05
+2023-10-10
+Panasonic Connect North America, division of Panasonic Corporation of North America
+Material processing utilizing a laser having a variable beam shape
+CN104175003A
+(
+en
+)
+*
+2014-09-09
+2014-12-03
+深圳市大族激光科技股份有限公司
+Laser machining system and multi-path laser machining device
+CN204248222U
+(
+en
+)
+*
+2014-09-11
+2015-04-08
+苏州菲镭泰克激光技术有限公司
+A kind of three axle dynamic focusing laser mark printing devices
+US10532427B2
+(
+en
+)
+*
+2015-02-20
+2020-01-14
+Technology Research Association For Future Additive Manufacturing
+Optical processing head, optical machining apparatus, and control method and control program of optical processing head
+DE102015108248A1
+(
+en
+)
+2015-05-26
+2016-12-01
+Scanlab Ag
+Laser material processing system and method for adjusting the size and position of a laser focus
+US20180154481A1
+(
+en
+)
+*
+2015-05-26
+2018-06-07
+Scanlab Gmbh
+System for Laser Material Processing and Method for Adjusting the Size and Position of a Laser Focus
+US20160368099A1
+(
+en
+)
+*
+2015-06-19
+2016-12-22
+Ipg Photonics Corporation
+Laser cutting head with controllable collimator having movable lenses for controlling beam diameter and/or focal point location
+WO2016205786A1
+(
+en
+)
+2015-06-19
+2016-12-22
+Ipg Photonics Corporation
+Laser cutting head with controllable collimator having movable lenses for controlling beam diameter and/or focal point location
+US20200254563A1
+(
+en
+)
+2015-06-19
+2020-08-13
+Ipg Photonics Corporation
+Laser cutting head with controllable collimator having movable lenses for controlling beam diameter and/or focal point location
+EP3437783A1
+(
+en
+)
+2016-04-01
+2019-02-06
+Amada Holdings Co., Ltd.
+Laser processing machine
+US20190151997A1
+(
+en
+)
+*
+2016-05-04
+2019-05-23
+Precitec Gmbh & Co. Kg
+Imaging optic for material machining by means of laser radiation and laser machining head having same
+DE102016005376A1
+(
+en
+)
+2016-05-04
+2017-11-09
+Precitec Gmbh & Co. Kg
+Imaging optics for material processing by means of laser radiation and laser processing head with such
+US20190310463A1
+(
+en
+)
+*
+2016-10-27
+2019-10-10
+Raylase Gmbh
+Deflector
+JP2017185543A
+(
+en
+)
+*
+2017-03-14
+2017-10-12
+株式会社アマダホールディングス
+Laser beam machine
+JP2019018233A
+(
+en
+)
+*
+2017-07-19
+2019-02-07
+株式会社アマダホールディングス
+Laser processing machine
+WO2019082110A1
+(
+en
+)
+*
+2017-10-26
+2019-05-02
+Salvagnini Italia S.P.A.
+Laser cutting head for machine tools
+DE102019108084A1
+(
+en
+)
+2018-03-28
+2019-10-02
+Highyag Lasertechnologie Gmbh
+zoom optics
+CN110471186A
+(
+en
+)
+2019-08-16
+2019-11-19
+上海嘉强自动化技术有限公司
+A ZOOM cutting device and method based on an aspheric mirror adjustable annular spot
+US20220334367A1
+(
+en
+)
+*
+2020-01-15
+2022-10-20
+Panasonic Intellectual Property Management Co., Ltd.
+Laser device, and laser processing device in which same is used
+CN111323927A
+(
+en
+)
+2020-04-08
+2020-06-23
+上海嘉强自动化技术有限公司
+Micro lens group for obtaining adjustable annular light beam
+CN111736329A
+(
+en
+)
+2020-07-10
+2020-10-02
+上海嘉强自动化技术有限公司
+A double-piece aspherical mirror ZOOM optical system
+CN111922514A
+(
+en
+)
+*
+2020-07-31
+2020-11-13
+南京波长光电科技股份有限公司
+Bifocal laser welding optical system and optical welding head thereof
+US20220063017A1
+(
+en
+)
+*
+2020-08-25
+2022-03-03
+Ii-Vi Delaware, Inc.
+Dynamic beam deflection and shaping for laser process
+CN112255764A
+(
+en
+)
+*
+2020-10-29
+2021-01-22
+中山北方晶华精密光学有限公司
+Optical lens and laser processing equipment with the same
+Non-Patent Citations (14)
+* Cited by examiner, † Cited by third party
+Title
+Andy Rowlands, Physics of Digital Photography, Chapter 1, 2017, pp. 1-1 to 1-62 [online], [retrieved Nov. 2, 2023], retrieved from the Internet <URL: https://iopscience.iop.org/book/mono/978-0-7503-1242-4/chapter/bk978-0-7503-1242-4ch1.pdf>. (Year: 2017).
+*
+Applications of Optotune Lenses, 2012, pp. 1-9 [online], [retrieved Nov. 26, 2024], retrieved from the Internet <URL: https://priorart.ip.com/IPCOM/000218299>. (Year: 2012).
+*
+Binh Xuan Cao et al., Automatic Real-time Focus Control System for Laser Processing Using Dynamic Focusing Optical System, 25 Optics Express 28427-28441 (2017). (Year: 2017).
+*
+Corey Boone, Properly Designing and Specifying Aspheric Lenses, 2020, pp. 1-8 [online], [retrieved May 2, 2023], retrieved from the Internet <URL: https://www.techbriefs.com/component/content/article/tb/supplements/pit/features/applications/36881>. (Year: 2020).
+*
+G.W. Moore, Laser Variable Focus/Flash on Fly Optical Head, 1982, pp. 1-3 [online], [retrieved Jan. 20, 2024], retrieved from the Internet <URL: https://priorart.ip.com/IPCOM/000048487>. (Year: 1982).
+*
+Laser Processing Head BIMO (II-VI Incorporated 2020). (Year: 2020).
+*
+Mark E. Wilkinson et al., Optics Review (2017). (Year: 2017).
+*
+Mortimer Abramowitz et al, Introduction to Lenses and Geometrical Optics, 2018, pp. 1-8 [online], [retrieved Apr. 20, 2023], retrieved from the Internet <URL: https://micro.magnet.fsu.edu/primer/lightandcolor/lensesintro.html>. (Year: 2018).
+*
+Mortimer Abramowitz et al., Introduction to Lenses, 2015, pp. 1-5 [online], [retrieved Jan. 19, 2023], retrieved from the Internet <URL: https://micro.magnet.fsu.edu/optics/lightandcolor/lenses.html>. (Year: 2015).
+*
+P.S. Salter et al., Exploring the Depth Range for Three-dimensional Laser Machining with Aberration Correction, 22 Optics Express 17644-17656 (2014). (Year: 2014).
+*
+Paul E. Nathnagle et al., Introduction to Stereomicroscopy, 2020, pp. 1-23 [online], [retrieved Jan. 22, 2024], retrieved from the Internet <URL: http://web.archive.org/web/20200731110829/https://www.microscopyu.com/techniques/stereomicroscopy/introduction-to-stereomicroscopy>. (Year: 2020).
+*
+Ross Team, Working with Ball Lenses, 2020, pp. 1-6 [online], [retrieved Jul. 30, 2023], retrieved from the Internet <URL: https://blog.rossoptical.com/blog/ball-lenses> . (Year: 2020).
+*
+The Ultimate Guide to Optical Windows, 2020, pp. 1-15 [online], [retrieved Jul. 31, 2023], retrieved from the Internet <URL: https://www.firebirdoptics.com/blog/optical-window-ultimate-guide>. (Year: 2020).
+*
+Xu Yue et al., Optical Design of Dynamic Focusing System for Laser Processing, 2017, pp. 1-2 [online], [retrieved Nov. 26, 2024], retrieved from the Internet <URL: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8119093>. (Year: 2017).
+*
+Also Published As
+Publication number
+Publication date
+DE102022101866A1
+(
+en
+)
+2022-09-08
+CN115026416A
+(
+en
+)
+2022-09-09
+US20220283416A1
+(
+en
+)
+2022-09-08
+Similar Documents
+Publication
+Publication Date
+Title
+US9329368B2
+(
+en
+)
+2016-05-03
+Beam shaping unit for focusing a laser beam
+JP5931141B2
+(
+en
+)
+2016-06-08
+Laser processing equipment with switchable fiber core
+JP6253410B2
+(
+en
+)
+2017-12-27
+Laser beam machining apparatus and laser machining method with a single optical focusing lens, laser machining apparatus, and method of using laser machining apparatus
+CA3013264C
+(
+en
+)
+2020-04-28
+Imaging optics for material machining by means of laser radiation and laser machining head with such imaging optics
+JP7217363B2
+(
+en
+)
+2023-02-02
+Machining Apparatus for Laser Machining a Workpiece, Parts Set for Machining Apparatus for Laser Machining Workpiece, and Method for Laser Machining Workpiece Using Such Machining Apparatus
+TWI392475B
+(
+en
+)
+2013-04-11
+Laser scanner
+JP2010523336A
+(
+en
+)
+2010-07-15
+Processing apparatus and material processing method
+CN115066310B
+(
+en
+)
+2025-09-23
+Laser cutting heads for machine tools
+US20220283416A1
+(
+en
+)
+2022-09-08
+Dynamic Focus For Laser Processing Head
+CN106773025A
+(
+en
+)
+2017-05-31
+Focusing lens and lens vibrating type laser scanning system
+CN217253588U
+(
+en
+)
+2022-08-23
+Laser processing head
+KR102675028B1
+(
+en
+)
+2024-06-13
+Laser processing device for hard-to-access workpieces
+EP4182114A1
+(
+en
+)
+2023-05-24
+Light centralizer for fiber laser cutting machines
+CN109332878B
+(
+en
+)
+2024-03-15
+Water-guide laser processing head
+CN111958104B
+(
+en
+)
+2024-07-05
+Laser cutting and engraving marking integrated machine
+US20260102846A1
+(
+en
+)
+2026-04-16
+Laser cutting system using a focusing lens with a shorter focal length
+US20260108981A1
+(
+en
+)
+2026-04-23
+Laser machining device and laser machining method for processing a workpiece
+CN223863035U
+(
+en
+)
+2026-02-03
+Laser processing module and laser processing equipment
+US20030147135A1
+(
+en
+)
+2003-08-07
+Optical device
+JP2025069549A
+(
+en
+)
+2025-05-01
+Laser processing head, laser processing apparatus including same, and method for adjusting focusing positions of first laser beam and second laser beam
+WO2016132554A1
+(
+en
+)
+2016-08-25
+Light machining head, light machining device, and method and program for controlling same
+JPS63118103A
+(
+en
+)
+1988-05-23
+Optical fiber cable for energy transmission
+JPS63261205A
+(
+en
+)
+1988-10-27
+Optical fiber cable for energy transmission
+Legal Events
+Date
+Code
+Title
+Description
+2021-03-04
+AS
+Assignment
+Owner name
+:
+II-VI DELAWARE, INC., DELAWARE
+Free format text
+:
+ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:CHAN, DANNY;REEL/FRAME:055497/0077
+Effective date
+:
+20210304
+2021-03-04
+FEPP
+Fee payment procedure
+Free format text
+:
+ENTITY STATUS SET TO UNDISCOUNTED (ORIGINAL EVENT CODE: BIG.); ENTITY STATUS OF PATENT OWNER: LARGE ENTITY
+2021-08-22
+STPP
+Information on status: patent application and granting procedure in general
+Free format text
+:
+DOCKETED NEW CASE - READY FOR EXAMINATION
+2022-07-01
+AS
+Assignment
+Owner name
+:
+JPMORGAN CHASE BANK, N.A., AS COLLATERAL AGENT, NEW YORK
+Free format text
+:
+SECURITY INTEREST;ASSIGNORS:II-VI INCORPORATED;II-VI DELAWARE, INC.;M CUBED TECHNOLOGIES, INC.;AND OTHERS;REEL/FRAME:060562/0254
+Effective date
+:
+20220701
+2023-08-09
+STPP
+Information on status: patent application and granting procedure in general
+Free format text
+:
+NON FINAL ACTION MAILED
+2023-11-01
+STPP
+Information on status: patent application and granting procedure in general
+Free format text
+:
+RESPONSE TO NON-FINAL OFFICE ACTION ENTERED AND FORWARDED TO EXAMINER
+2024-02-13
+STPP
+Information on status: patent application and granting procedure in general
+Free format text
+:
+FINAL REJECTION MAILED
+2024-04-17
+STPP
+Information on status: patent application and granting procedure in general
+Free format text
+:
+RESPONSE AFTER FINAL ACTION FORWARDED TO EXAMINER
+2024-05-03
+STPP
+Information on status: patent application and granting procedure in general
+Free format text
+:
+DOCKETED NEW CASE - READY FOR EXAMINATION
+2024-06-18
+STPP
+Information on status: patent application and granting procedure in general
+Free format text
+:
+NON FINAL ACTION MAILED
+2024-09-18
+STPP
+Information on status: patent application and granting procedure in general
+Free format text
+:
+RESPONSE TO NON-FINAL OFFICE ACTION ENTERED AND FORWARDED TO EXAMINER
+2024-12-11
+STPP
+Information on status: patent application and granting procedure in general
+Free format text
+:
+NOTICE OF ALLOWANCE MAILED -- APPLICATION RECEIVED IN OFFICE OF PUBLICATIONS
+2025-02-27
+STPP
+Information on status: patent application and granting procedure in general
+Free format text
+:
+PUBLICATIONS -- ISSUE FEE PAYMENT RECEIVED
+2025-03-03
+STPP
+Information on status: patent application and granting procedure in general
+Free format text
+:
+PUBLICATIONS -- ISSUE FEE PAYMENT VERIFIED
+2025-03-12
+STCF
+Information on status: patent grant
+Free format text
+:
+PATENTED CASE

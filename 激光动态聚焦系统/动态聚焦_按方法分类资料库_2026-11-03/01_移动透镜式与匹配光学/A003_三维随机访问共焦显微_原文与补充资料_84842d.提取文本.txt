@@ -1,0 +1,1006 @@
+This file contains all reviewer reports in order by version, followed by all author rebuttals in order by 
+version. 
+
+Peer Review File
+Three-dimensional random-access confocal microscopy with
+3D remote focusing system
+Corresponding Author: Professor Shangguo Hou
+Version 0: 
+Reviewer comments: 
+Reviewer #1 
+(Remarks to the Author) 
+Li et al. demonstrates three-dimensional (3D) random-access confocal fluorescence imaging using a commercially available
+3D dynamic focusing system (FL8220-3D-500, Sino-Galvo). Compared to a conventional 3D piezoelectric stage, the device
+enables high-speed imaging up with a refresh rate of up to 500 Hz for imaging three distant fluorescent beads, which is 25
+times faster than a piezostage-based scanning method. Several specific aspects in the manuscript could be addressed to
+potentially clarify the significance of the work. 
+Technical aspects: 
+[1] In section “Configuration and 3D Resolution characterization of 3D-DyFI,” the optical principle of remote focusing is
+unclear. As a reader in optics field, I’d like to understand the details of the configuration of the plano-convex lens and two
+lenses in the remote focusing system. This includes: (1) the focal lengths and distances of each lens, and (2) specifications
+of the used galvo mirrors and linear actuators. The essential principles of remote focusing should be more elaborated in the
+main text, and the details about the dynamic focusing system should be clarified at least in the supplementary section. 
+[2] The reported FWHM shows poorer resolution in 3D-DyFI, but this is not clearly indicated in the manuscript. I strongly
+suspect that the intrinsic spherical aberrations due to the array of plano-concave lens and two convex lenses caused the
+resolution degradation. Such indications and attributions of poorer 3D-DyFI should be fairly mentioned in the revised
+manuscript. 
+[3] In Fig. 2, I am also interested in the bidirectional repeatability of the system. If possible, could you provide data on
+whether the galvo mirrors and the z-axis linear actuators exhibited any mechanical hysteresis? If so, how much bidirectional
+repeatability is guaranteed? 
+Contents aspects: 
+[4] Would you kindly consider merging the contents of Fig. 6 and 7? I believe that the authors can clearly compare the
+performance gap between 3D-DyFI and the conventional piezostage-based scanning method in a cleverer way. As a reader,
+I had difficulty comparing the performance between them in the current version of the manuscript. 
+In the introduction and discussion, some relevant and essential references are missing: 
+[5] For instance, the manuscript should explicitly clarify that the concept of the remote focusing is not completely new. For
+this, please add the following references: (i) Opt. Express 16, 21843-21848 (2008) (ii) Proceedings of the National Academy
+of Sciences 108.49 (2011): 19504-19509, (iii) Optics Express 29.5 (2021): 6293-6301. Please then compare how the
+proposed method in the manuscript is different from conventional methods and what advantages it has. 
+[6] Additionally, recent technical advances allow for commercially available spatial light modulators and tunable acoustic
+index gradient lens, which can also offer high-speed lateral random-access imaging and axial scanning, respectively.
+Please cite the following references: (i) eLife 11:e73266 (2022), (2) Optics letters 33.18 (2008): 2146-2148. What is the
+advantage of the proposed method compared to using such devices? 
+Reviewer #2 
+
+(Remarks to the Author) 
+In this manuscript, the authors propose a 3D random-access confocal microscopy with remote-focusing system, namely 3D-
+DyFI, as a technique able to perform 3D raster scanning imaging and 3D random-access imaging. To validate the
+performance of the proposed 3D-DyFI, the authors perform 3D imaging of fluorescent beads and Hela cells by considering
+the 3D piezo stage-based confocal microscopy as ground truth. In this way, they demonstrate that their solution is simple,
+cost-effective, and fast with respect to a standard technology. In particular, the authors demonstrate that their system has an
+isotropic response time across the x, y, and z axes, with a 34-fold improvement in axial response time over traditional piezo
+stages, and with the possibility to continuously monitoring the signals in three different planes, showing a refresh rate of 500
+Hz on 12 two different positions in 3D. 
+The topic of this manuscript could be of interest for the readers of the Communications Engineering journal. In general, the
+manuscript is well written and easy to read and understand even by a reader who is not expert in this research topic. The
+authors present a complete and precise description of the methods, with all details needed to reproduce them. Most of the
+claims are well supported by the exhaustive validation proposed in the Results section. Therefore, in my opinion, this
+manuscript has the potential to be accepted in this journal, but the following major revisions must first be addressed. 
+1. In the abstract, the authors say that “this method is also compatible with multiphoton imaging and multicolor imaging in
+principle.” However, in the manuscript they don’t demonstrate this. Thus, this claim must be removed from the abstract and
+must be reported only in the Discussion section. 
+2. In the first sub-section of the Results, the authors measure the resolution of their system. It results that the resolution of the
+proposed 3D-DyFI system (344 nm × 518 nm × 1.02 μm) is worse than the piezoelectric stage (273 nm × 451 nm × 0.9 μm).
+However, throughout the manuscript, the authors only claim that the 3D-DyFI system is simple, cost-effective, and fast with
+respect to the piezoelectric stage. In my opinion, to be clear to the readers, the authors must add this aspect about resolution
+when they discuss the advantages of their system. 
+3. In the first sub-section of the Results, the authors say that “It is worth to note that due to the relatively large size of the
+fluorescent beads (200 nm), the measured FWHM value could be larger than the actual resolution of 3D-DyFI.” This means
+that the reported resolution (344 nm × 518 nm × 1.02 μm) is not the real one. In my opinion, it is needed to measure and
+report the real resolution of the system. 
+4. The resolution of the 3D-DyFI system is not isotropic in the three directions of the 3D space (344 nm × 518 nm × 1.02 μm),
+as well as the resolution of the piezoelectric stage (273 nm × 451 nm × 0.9 μm). Do the authors have any idea to make this
+resolution more isotropic? This could be an additional advantage compared to the piezoelectric stage. 
+Reviewer #3 
+(Remarks to the Author) 
+Version 1: 
+Reviewer comments: 
+Reviewer #1 
+(Remarks to the Author) 
+The authors have addressed the important concerns raised in the original manuscript and significantly improved the
+manuscript. I recommend its publication for Communications Engineering. 
+One minor comment: Please revise the legend in Fig. 6 to clarify how different (a) and (b) are. 
+Reviewer #2 
+(Remarks to the Author) 
+The authors addressed my questions and I think that the manuscript is ready for publication in the current form. 
+Reviewer #3 
+(Remarks to the Author) 
+Reviewer 3 : 
+The authors have addressed my queries adequately. I recommend the paper for publication pending the following small
+query. 
+1. Figure 2 in the main manuscript may be either merged with figure 1 or shifted to Supplementary materials. 
+2. In the figure on page #28 of the rebuttal letter (which is Fig. 2C in the main manuscript), the authors show the plots for
+which the horizontal axis is in Volt. Is this true. Should it be in milli-Volts. Please check. This gives an erroneous minimum
+sampling of 0.29 nm i.e, 2.9 Angstrom. 
+Also note that the voltage output resolution of FPGA card is 0.3 mV. How the plots are shown in Volts. 
+
+Open Access
+ This Peer Review File is licensed under a Creative Commons Attribution 4.0 International License, which
+permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate
+credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were
+made.
+In cases where reviewers are anonymous, credit should be given to 'Anonymous Referee' and the source.
+The images or other third party material in this Peer Review File are included in the article’s Creative Commons license,
+unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons
+license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain
+permission directly from the copyright holder.
+To view a copy of this license, visit 
+https://creativecommons.org/licenses/by/4.0/
+
+We sincerely thank the editor and all reviewers for their valuable feedback that we have used 
+to improve the quality of our manuscript. The reviewers’ comments are laid out below in italics 
+and specific concerns have been numbered. Our response is given in blue font and changes or 
+additions to the manuscript are given in green font. The corresponding revision are highlighted in 
+the revised manuscript. 
+ 
+  
+
+Reviewer #1 (Remarks to the Author): 
+Li et al. demonstrates three -dimensional (3D) random -access confocal fluorescence imaging 
+using a commercially available 3D dynamic focusing system (FL8220 -3D-500, Sino -Galvo). 
+Compared to a conventional 3D piezoelectric stage, the device enables hi gh-speed imaging up 
+with a refresh rate of up to 500 Hz for imaging three distant fluorescent beads, which is 25 times 
+faster than a piezostage-based scanning method. Several specific aspects in the manuscript could 
+be addressed to potentially clarify the significance of the work. 
+Response: Thank you for your comments and we greatly appreciate your professional review of 
+our manuscript. 
+ 
+Technical aspects: 
+[1] In section “Configuration and 3D Resolution characterization of 3D -DyFI,” the optical 
+principle of remote focusing is unclear. As a reader in optics field, I’d like to understand the 
+details of the configuration of the plano -convex lens and two lenses in the remote focusing 
+system. This includes: (1) the focal lengths and distances of each lens, and (2) specifications of 
+the used galvo mirrors and linear actuators. The essential principles of remote focusing should 
+be more elaborated in the main text, and the details about the dynamic focusing system should be 
+clarified at least in the supplementary section. 
+Response: Thank you for your valuable comments. We agree with you that the remote focusing 
+system needs to be more detailed described.  We now added  a detailed schematic of the remote 
+focusing system to the supplementary information. The focal length of each lens and their 
+distances are described in the schematic. We also added the specifications of the used galvo 
+mirrors and galvo motors in the suppl ementary information. It ’s worth to noted that the mirrors 
+and lens are controlled by the same kind of galvo motor. In the introduction section, we added 
+the essential principles of remote focusing imaging as your kind suggestion. 
+ 
+Revision 1: In page 2  of supplementary information , the  schematic figure of remote focusing 
+system is added: 
+
+ 
+Figure S1. Detailed schematic of remote focusing system. 
+ 
+Revision 2: In page 15 of supplementary information, we added a Supplementary Note 1 to 
+describe the specifications of the galvo mirrors and motors in remote focusing system: 
+“Supplementary Note 1. Specifications of the galvo mirrors and motors in remote focusing 
+system. 
+The mirrors are dielectric coated, with Ravg≥98% @ 405 - 700 nm at angle of incidence 
+from 30 to 60 degrees. The size of the mirror is 30 mm × 35 mm. The linearity of motors is 
+99.9%. The long -term drift of motors over 8 hours: < 0.5 mRad. The machinery sc an angle of 
+XY scanning is ± 11°. The control voltage range is ± 5 V . The repeatability, indicated by relative 
+root mean square error (RRMSE), are 0.058, 0.064, and 0.033 for x, y, and z, respectively 
+(Figure S2 and S3).” 
+ 
+Revision 3: In Page 3 Line 11, the essential principles of remote focusing imaging is added: 
+“Remote focusing imaging, developed over a decade ago, is a technique that adjusts the focal 
+plane of an optical system without requiring the mechanical movement of the sample 29-32. This 
+method employs auxiliary optical elements, such as remote objective with translational mirrors, 
+to dynamically change the imaging focal plane with minimal aberration.” 
+ 
+
+
+[2] The reported FWHM shows poorer resolution in 3D-DyFI, but this is not clearly indicated in  
+the manuscript. I strongly suspect that the intrinsic spherical aberrations due to the array of 
+plano-concave lens and two convex lenses caused the resolution degradation. Such indications 
+and attributions of poorer 3D-DyFI should be fairly mentioned in the revised manuscript. 
+Response: Thank you for your valuable comments.  We agree with you that the degraded 
+resolution of 3D-DyFI may be caused by the spherical aberrations from one plano-concave lens 
+and two convex lenses. In the future, we can replace these lenses with achromatic doublets lenses 
+to reduce the spherical aberrations. 
+Revision: In Page 5 Line 6, the following sentences are added to clarify the resolution 
+degradation: 
+“The resolution of 3D-DyFI shows slightly worse than piezoelectric stage  scanning result, which 
+could be attributed to the spherical aberrations  from one plano-concave lens and two convex 
+lenses in dynamic focusing system. This can be improved by replacing these lenses  with 
+achromatic doublets lenses in the future.” 
+ 
+[3] In Fig. 2, I am also interested in the bidirectional repeatability of the system. If possible, 
+could you provide data on whether the galvo mirrors and the z -axis linear actuators exhibited 
+any mechanical hysteresis? If so, how much bidirectional repeatability is guaranteed? 
+Response: This is a good question. As your nice suggestion, we added the bidirectional 
+repeatability measurement results in the supporting information file. We conducted the 
+repeatability test in two ways . Firstly, we measured the bidirectional repeatability  via power 
+measurement after a pinhole  (Figure S2). This method works very well for axial bidirectional 
+repeatability measurement. However, it can only measure a small range in x and y direction. 
+Therefore, we used the scanning reflected images to further characterize the bidirectional 
+repeatability in x and y direction with large range ( Figure S 3). As you can see from the 
+measurement results, we didn ’t find obvious mechanical hysteresis. The repeatability, indicated 
+by relative root mean square error (RRMSE) , are 0.058, 0.064, and 0.033 for x, y, and z, 
+respectively. 
+ 
+
+Revision: In page 3  to page 5  of supplementary information, the repeatability measurement 
+results are added:  
+ 
+Figure S2. Bidirectional repeatability measurement of the 3D dynamic focusing system via 
+power measurement after a pinhole.  (a) Schematic of setup for testing the bidirectional 
+repeatability of the 3D dynamic focusing  system. A 100 μm pinhole was placed near the focal 
+plane of 3D dynamic focusing  system and a power meter was used to detect the light intensity 
+after the pinhole. (b-g) The laser power measurement results in x (b-c), y (d-e), and z (f-g), 
+respectively. Three measurements were conducted, with forward scans represented by orange, 
+blue, and green dashed lines, and reverse scans by solid lines. (c, e, g) Scanning results along the 
+x, y, and z axes. The scanning range  with ranges for x and y is -2 μm to 2 μm .  The scanning 
+range with ranges for z is -5 μm to 5 μm. (b, d, f) Enlarged views of the red dashed boxes in (c, e, 
+
+
+g), respectively. The relative root mean square  error (RRMSE) values were calculated  for 
+characterizing the repeatbility. The RRMSE values for the x, y, and z axes were 0.032, 0.029, and 
+0.033, respectively, indicating good bidirectional repeatability across all axes. 
+ 
+ 
+Figure S3. Bidirectional repeatability measurement of the 3D dynamic focusing system via 
+scanning images.  (a) Schematic of setup for testing the bidirectional repeatability of the 3D 
+dynamic focusing system. The excitation light is focused on a blank coverslip and imaged on a 
+CMOS camera. As the system scans in the x and y  directions, the CMOS captures laser spot 
+
+
+images at 5 μm intervals. (b, d) Scanning images in the range between -20 and 20 μm in x and y 
+direction, respectively. Three sets of scanning results are shown: Scan 1 and Scan 2 represent the 
+first set, Scan 3 and Scan 4 the second set, and Scan 5 and Scan 6 the third set. Each set shows 
+both forward (orange arrow) and reverse (pink ar row) scan results. The bottom row presents the 
+merged images from all six scans . (c, e)  Overlayed n ormalized intensity profiles along the 
+scanning direction. The RRMSE values for the x and y axes are 0.058 and 0.064, respectively.  
+ 
+ 
+Contents aspects: 
+[4] Would you kindly consider merging the contents of Fig. 6 and 7? I believe that the authors 
+can clearly compare the performance gap between 3D -DyFI and the conventional piezostage -
+based scanning method in a cleverer way. As a reader, I had difficulty co mparing the 
+performance between them in the current version of the manuscript. 
+Response: Thank you for your nice suggestion. We apologize for the inefficient figure 
+arrangement in previous manuscript . Now we have merged  Fig. 6  and Fig. 7  for better 
+visualization. We removed the original Fig . 6c,e,g,h and Fig. 7c,e,g,h for clarity since they show 
+only redundant information. 
+Revision: The Fig. 6 and Fig. 7 has been merged into a new Fig. 7: 
+ 
+
+
+Fig. 7. 3D Random-access imaging with 3D-DyFI and piezo stage-based confocal system. (a) 
+Three-dimensional image of three fluorescent beads embedded in agarose  obtained with 3D -
+DyFI. The particles are labeled with A, B, and C, respectively. (b) The segmentary intensity 
+trace of the three fluorescent beads in (a). The illumination time in each period is 2 ms. The lines 
+in different colors indicate different particles as labeled in (a). (c-d) The continuous intensity 
+trace from three fluorescent beads with 2 ms illumination time (c) and 5 ms illumination (d) in 
+each imaging period. The magenta lines show the z position of laser focus, obtained from the 
+input of 3D dynamics focusing system. The fluorescence intensity is bin in 400 μs, considered 
+the ~ 800 μs response time of 3D dynamic focusing  system. (e) Three-dimensional image of 
+three fluorescent beads embedded in agarose  obtained with piezo stage-based confocal system. 
+The particles are labeled with A, B, and C, respectively. (f) The segmentary intensity trace of the 
+three fluorescent beads  in (e). The illumination time in each period is 50 ms. The lines in 
+different colors indicate different particles as labeled in (e). (g-h) The continuous intensity trace 
+from three fluorescent beads with 10 ms illumination time (g) and 50 ms illumination (h) in each 
+imaging period. The magenta lines show the readout position from the piezoelectric  stage 
+controller. The yellow line indicates the input position of the piezoelectric stage controller. 
+ 
+In the introduction and discussion, some relevant and essential references are missing: 
+[5] For instance, the manuscript should explicitly clarify that the concept of the remote focusing 
+is not completely new. For this, please add the following references: (i) Opt. Express 16, 21843 -
+21848 (2008) (ii) Proceedings of the National Academy of Sciences 108.49 (2011): 19504-19509, 
+(iii) Optics Express 29.5 (2021): 6293 -6301. Please then compare how the proposed  method in 
+the manuscript is different from conventional methods and what advantages it has. 
+Response: Thank you for your comment. In the revised manuscript we have clarified that remote 
+focusing imaging is a developed technique , and the suggested references have been added to the 
+manuscript. 
+The remote focusing methods on the above references utilize a remote objective and a 
+translational mirror to shift the focal plane. In th ese methods, a polarization beam splitter is also 
+utilized in the detection path , which can  bring 50% fluorescence loss. As contrast, 3D -DyFI 
+doesn’t suffer from this problem and has higher photon collection efficiency. 
+
+ 
+Revision 1: In Page 3 Line 1 1, the following sentences has been  added to clarify the r emote 
+focusing imaging is a developed technique and the relative references have been added: 
+“Remote focusing imaging, developed over a decade ago, is a technique that adjusts the focal 
+plane of an optical system without requiring the mechanical movement of the sample 29-32. This 
+method employs auxiliary optical elements, such as remote objective with translational mirrors, 
+to dynamically change the imaging focal plane with minimal aberration29-31, 33.” 
+“29. Botcherby, E.J., Juškaitis, R., Booth, M.J. & Wilson, T. An optical technique for remote 
+focusing in microscopy. Optics Communications 281, 880-887 (2008). 
+30. Botcherby, E.J., Juskaitis, R., Booth, M.J. & Wilson, T. Aberration-free optical refocusing 
+in high numerical aperture microscopy. Opt. Lett. 32, 2007-2009 (2007). 
+31. Botcherby, E.J., Booth, M.J., Juškaitis, R. & Wilson, T. Real-time extended depth of field 
+microscopy. Optics Express 16, 21843-21848 (2008). 
+32. Anselmi, F., Ventalon, C., Bègue, A., Ogden, D. & Emiliani, V . Three -dimensional 
+imaging and photostimulation by remote -focusing and holographic light patterning. Proceedings 
+of the National Academy of Sciences 108, 19504-19509 (2011). 
+33. Hugonnet, H., Lee, M. & Park, Y . Optimizing illumination in three -dimensional 
+deconvolution microscopy for accurate refractive index tomography. Optics Express 29, 6293 -
+6301 (2021).” 
+ 
+Revision 2: In Page 1 6 Line 30, the following sentences are added to compare the remote 
+objective based-remote focusing methods and 3D-DyFI: 
+“In the remote objective based -remote focusing methods, a translational mirror and a 
+polarization beam splitter are utilized in the detection pat h. The use of polarization beam splitter 
+results in 50 % fluorescence loss in these methods. As contrast, 3D-DyFI doesn’t suffer from this 
+problem and has higher photon collection efficiency.” 
+ 
+
+[6] Additionally, recent technical advances allow for commerci ally available spatial light 
+modulators and tunable acoustic index gradient lens, which can also offer high -speed lateral 
+random-access imaging and axial scanning, respectively. Please cite the following references: (i) 
+eLife 11:e73266 (2022), (2) Optics letters 33.18 (2008): 2146-2148. What is the advantage of the 
+proposed method compared to using such devices? 
+Response: Thank you for your nice suggestion.  We added the discussion about the applications 
+of SLM and TAG lens on 3D random -access imaging and fast axial scanning in the “Conclusion 
+and Discussion” section. The suggested references have been added to the manuscript. 
+You are correct that the spatial  light modulator (SLM) and digital micromirror device 
+(DMD) have also been frequently used in random -access imaging. However, the degrees of 
+freedom (DoF) in these systems inherently limit the number of accessible voxels, even with the 
+notable improvements  in the recently reported three -dimensional multi -site random access 
+photostimulation (3D-MAP) method (eLife 2022, 11:e73266). In contrast, in 3D -DyFI, the laser 
+focus position is determined by the input voltage to the 3D dynamic focusing system, which 
+eliminates this limitation. 
+The TAG lens can oscillate the laser focus sinusoidally along the axial direction at 
+frequencies reaching hundreds of kilohertz. However, the TAG lens is unable to maintain the 
+laser focus at a specific focal plane for extended per iods, and pulsed light is required for 
+selective focal plane excitation. In 3D -DyFI, the focal position is controlled through analog 
+voltage, allowing for more straightforward and precise manipulation of the excitation focus. 
+ 
+Revision: In Page 17 Line 16, the following discussion has been added: 
+The spatial light modulator (SLM) and digital micromirror device (DMD) have also been used to 
+generate 3D scanning patterns32, 38, 39. However, the number of degrees of freedom (DoF) in these 
+systems inherently limits the number of accessible voxels, despite significant improvements with 
+the recently reported three -dimensional multi -site random access photostimulation (3D -MAP) 
+method38. In contrast, in 3D -DyFI, the laser focus positi on is determined by the input voltage to 
+the 3D dynamic focusing system, which eliminates this limitation. 
+
+Another commonly used optical device for rapid axial scanning is the tunable acoustic gradient 
+index of refraction (TAG) lens40-43. The TAG lens can oscillate the laser focus sinusoidally along 
+the axial direction at frequencies reaching hundreds of kilohertz. However, the TAG lens is 
+unable to maintain the laser focus at a specific focal plane for extended periods, and pulsed light 
+is required for sel ective focal plane excitation. In 3D -DyFI, the focal position is controlled 
+through analog voltage, allowing for more straightforward and precise manipulation of the 
+excitation focus. 
+ 
+38. Xue, Y ., Waller, L., Adesnik, H. & Pégard, N. Three -dimensional mul ti-site random 
+access photostimulation (3D-MAP). Elife 11, e73266 (2022). 
+39. Lutz, C. et al. Holographic photolysis of caged neurotransmitters. Nature Methods 5, 
+821-827 (2008). 
+40. Mermillod-Blondin, A., McLeod, E. & Arnold, C.B. High-speed varifocal imaging with a 
+tunable acoustic gradient index of refraction lens. Opt. Lett. 33, 2146-2148 (2008). 
+41. Deguchi, T. et al. V olumetric Lissajous confocal microscopy with tunable spatiotemporal 
+resolution. Biomed. Opt. Express 11, 6293-6310 (2020). 
+42. Kong, L.  et al. Continuous volumetric imaging via an optical phase -locked ultrasound 
+lens. Nature Methods 12, 759-762 (2015). 
+43. Duocastella, M., Vicidomini, G. & Diaspro, A. Simultaneous multiplane confocal 
+microscopy using acoustic tunable lenses. Optics Express 22, 19293-19301 (2014). 
+ 
+  
+
+Reviewer #2 (Remarks to the Author): 
+In this manuscript, the authors propose a 3D random -access confocal microscopy with remote -
+focusing system, namely 3D -DyFI, as a technique able to perform 3D raster scanning imaging 
+and 3D random-access imaging. To validate the performance of the proposed 3D -DyFI, the 
+authors perform 3D imaging of fluorescent beads and Hela cells by considering the 3D piezo 
+stage-based confocal microscopy as ground truth. In this way, they demonstrate that t heir 
+solution is simple, cost-effective, and fast with respect to a standard technology. In particular, the 
+authors demonstrate that their system has an isotropic response time across the x, y, and z axes, 
+with a 34 -fold improvement in axial response time over traditional piezo stages, and with the 
+possibility to continuously monitoring the signals in three different planes, showing a refresh rate 
+of 500 Hz on 12 two different positions in 3D. 
+The topic of this manuscript could be of interest for the reader s of the Communications 
+Engineering journal. In general, the manuscript is well written and easy to read and understand 
+even by a reader who is not expert in this research topic. The authors present a complete and 
+precise description of the methods, with a ll details needed to reproduce them. Most of the claims 
+are well supported by the exhaustive validation proposed in the Results section. Therefore, in my 
+opinion, this manuscript has the potential to be accepted in this journal, but the following major 
+revisions must first be addressed. 
+Response: Thank you for your comments and we greatly appreciate your professional review of 
+our manuscript. 
+ 
+1. In the abstract, the authors say that “this method is also compatible with multiphoton imaging 
+and multicolor imaging in principle.” However, in the manuscript they don’t demonstrate this. 
+Thus, this claim must be removed from the abstract and must be reported only in the Discussion 
+section. 
+Response: Thank you for your comment. We have removed this sentence in cu rrent version of 
+manuscript. 
+Revision: In abstract section, the following sentence has been removed: 
+
+“Additionally, this method is also compatible with multiphoton imaging and multicolor imaging 
+in principle.” 
+ 
+2. In the first sub -section of the Results, t he authors measure the resolution of their system. It 
+results that the resolution of the proposed 3D -DyFI system (344 nm × 518 nm × 1.02 μm) is 
+worse than the piezoelectric stage (273 nm × 451 nm × 0.9 μm). However, throughout the 
+manuscript, the authors o nly claim that the 3D -DyFI system is simple, cost -effective, and fast 
+with respect to the piezoelectric stage. In my opinion, to be clear to the readers, the authors must 
+add this aspect about resolution when they discuss the advantages of their system. 
+Response: Thank you for your comment. We have revised the manuscript to clarify that  the 
+resolution of 3D-DyFI is worse than piezoelectric stage scanning result . We think the degraded 
+resolution of 3D-DyFI may be caused by the spherical aberrations from one plano-concave lens 
+and two convex lenses. In the future, we can replace these lenses with achromatic doublets lenses 
+to reduce the spherical aberrations. 
+Revision: In Page 5 Line 6, the following sentences  are added to clarify the resolution 
+degradation: 
+“The resolution of 3D-DyFI shows slightly worse than piezoelectric stage scanning result, which 
+could be attributed to the spherical aberrations  from one plano-concave lens and two convex 
+lenses in dynamic focusing system. This can be improved by replacing these lenses  with 
+achromatic doublets lenses in the future” 
+ 
+3. In the first sub -section of the Results, the authors say that “It is worth to note that due to the 
+relatively large size of the fluorescent beads (200 nm), the measured FWHM value could be 
+larger than the actual resolution of 3D -DyFI.” This means that t he reported resolution (344 nm 
+× 518 nm × 1.02 μm) is not the real one. In my opinion, it is needed to measure and report the 
+real resolution of the system. 
+Response: Thank you for your comment. This is a good suggestion. We now have measured the 
+PSF with 50 nm fluorescent bead. The size of 50 nm fluorescent bead is much smaller than the 
+resolution of 3D-DyFI. Therefore, it can be effectively used to characterize the resolution of 3D -
+
+DyFI. The measured results reveal a resolution of 301 nm × 330 nm × 0.96 µ m for 3D-DyFI and 
+311 nm × 322 nm × 0.93 µm for piezoelectric stage scanning in x, y and z . We have replaced the 
+PSF figures with measuring results with 50 nm fluorescent bead in Figure 1.  
+ 
+Revision 1: The Figure 1 have been renewed: 
+ 
+Fig. 1 . Schematic and point spread function of the 3D -DyFI. (a) Schematic of 3D -DyFI. OL: 
+Objective Lens, M: Mirror, F: fluorescence filter, DM: Dichroic Mirror, PH: Pinhole, PCL: 
+Plano-Concave Lens, APD: Avalanche Photodiode.  (b-c) The x -y scanning images (up panel) 
+
+
+and x -z scanning images (low panel) of 50 nm green fluorescent microsphere with (b) 
+piezoelectric stage scanning and (c) 3D-DyFI. Scale bar: 500 nm. 
+ 
+Revision 2: In page 5 Line 3, the following sentence has been revised: 
+“The full widths at half maximum (FWHM) of intensity profiles of the fluorescent microspheres 
+were subsequently measured ( Supplementary Figure S4 ), revealing resolutions of 301 nm × 
+330 nm × 0.96 µm for 3D -DyFI and 311 nm × 322 nm × 0.93 µm for piezoelectric stage 
+scanning in x, y and z, respectively.” 
+ 
+Revision 3: The following sentence has been removed: 
+“It is worth to note that due to the relatively large size of the fluorescent beads (200 nm), the 
+measured FWHM value could be larger than the actual resolution of 3D-DyFI”. 
+ 
+4. The resolution of the 3D -DyFI system is not isotropic in the three directions of the 3D space 
+(344 nm × 518 nm × 1.02 μm), as well as the resolution of the piezoelectric stage (273 nm × 451 
+nm × 0.9 μm). Do the authors have any idea to make this resolution mor e isotropic? This could 
+be an additional advantage compared to the piezoelectric stage. 
+Response: Thank you for your comment. It is an excellent question. There are several ways to 
+achieve isotropic resolution imaging. Some methods that most related to 3D -DyFI are listed as 
+below: 
+(a) By placing a mirror after the focal point of objective and shaping the incident beam with 
+spatial light modulator (SLM)  or phase plates , the isotropic focusing  can be achieved 
+(Physical Review Letters  105, 2039 03, (2010); Opt. Express 21, 19701 -19708 (2013) ; 
+Appl. Opt. 53, 7838-7844 (2014); Nat Biotechnol 41, 1307–1319 (2023).). However, this 
+kind of method does not fit 3D -DyFI, which requires laser focus scanning  without 
+moving sample.  
+(b) The isotropic resolution imaging can also be achieved via dual-view plane illumination 
+method with switching illumination and detection between two perpendicular objectives  
+
+(Nat Biotechnol 31, 1032–1038 (2013)). This method requires computationally fusing the 
+two perpendicular volumetric views. As the sample is stationary  during imaging process 
+as in 3D -DyFI, we think the 3D -DyFI can achieve i sotropic resolution imaging in this 
+way by add a perpendicular imaging path. 
+(c) The recently developed deep -learning methods can als o improve the axial resolution 
+(Light Sci Appl  12, 204 (2023) ; Biomed. Opt. Express  11, 7273 -7285 (2020) ; Nat 
+Commun 13, 3297 (2022) ; Nat Commun 12, 107 (2021) ;). This kind of methods doesn ’t 
+require the optical modification and is applicable to 3D-DyFI. 
+ 
+Revision: The following sentences are added to the Conclusion and Discussion section: 
+Furthermore, as the sample is stationary during imaging process as in 3D -DyFI, it has the 
+potential to achieve isotropic resolution imaging via dual -view plane illumination method with 
+switching illumination and detection between two perpendicular objectives 52. The recently 
+developed deep-learning methods can also be adopted to improve the axial resolution53-56. 
+ 
+52. Wu, Y . et al. Spatially isotropic four -dimensional imaging with dual -view plane 
+illumination microscopy. Nature Biotechnology 31, 1032-1038 (2013). 
+53. Ning, K. et al. Deep self -learning enables fast, high -fidelity isotropic resolution 
+restoration for volumetric fluorescence microscopy. Light: Science  & Applications 12, 204 
+(2023). 
+54. Zhao, F. et al. Deep -learning super -resolution light -sheet add -on microscopy (Deep -
+SLAM) for easy isotropic volumetric imaging of large biological specimens. Biomed. Opt. 
+Express 11, 7273-7285 (2020). 
+55. Park, H. et al.  Deep learning enables reference -free isotropic super -resolution for 
+volumetric fluorescence microscopy. Nature Communications 13, 3297 (2022). 
+56. Fang, C. et al. Minutes -timescale 3D isotropic imaging of entire organs at subcellular 
+resolution by content-aware compressed -sensing light -sheet microscopy. Nature 
+Communications 12, 107 (2021). 
+
+Reviewer #3 
+Review Report: 
+The manuscript titled, “three dimensional random -access confocal microscopy with 3D remote 
+focusing system” by Li et al discuss a rapi d 3D random access remote focusing technique for 
+volume imaging. The technique claims multifold improvement in response time along x, y, z axes. 
+Moreover, the technique achieves scanning without physically moving the sample and without 
+mechanical movement. This is good for a range of applications. While the concept is good and 
+economical, the application part needs to improve for the advantages of the technique to be 
+apparent. Here are my major and minor comments: 
+Response: We sincerely appreciate your valuable comments and thorough review of our 
+manuscript. Your expertise and insights have greatly contributed to the improvement of our work.  
+Major: 
+1. It would be nice to see the depth imaging capability of the proposed system on a cellular 
+system. 
+Response: Thank you for your nice suggestion. For now, we only test the system with cell 
+samples. We have added several cellular 3D imaging results to the manuscript and 
+supplementary information, including mitochondria (Fig. 6), cell microtubule (Supplementar y 
+Fig. S8), cell membrane (Supplementary Fig. S 9) and lipid droplets in live cell (Supplementary 
+Fig. S 10). Theoretically, t he depth imaging capability  of 3D -DyFI should be similar to 
+conventional confocal microscopy, which is limited to the wavelength of excitation laser and the 
+objective lens. It worth to mention in here that the axial imaging range of 3D -DyFI is limited to 
+10 µm.  
+Here we performed the axial slicing imaging of part of cell membrane in thick cell.  The 
+cells were initially imaging with piezo stage-based confocal microscopy to confirm the thickness 
+of cell. Subsequently, the 3D -DyFI was used to image the top part of the cell to demonstrate its 
+depth imaging capability. 
+Revision: The Supplementary Figure S11 has been added to the supplementary information to 
+demonstrate the imaging capability of 3D-DyFI in thick cells: 
+
+ 
+ 
+Figure S11. Thick cell imaging with  3D-DyFI.  (a) x-z plane image of DiD -stained Hela cell 
+membrane obtained with piezo stage -based confocal microscopy. (b) x -z plane image of DiD -
+stained Hela cell membrane obtained with 3D -DyFI. The imaging area is selected to the top part 
+of cell as marked with dash box. Pixel size in x: 0.1 µm; Pixel size in z: 0.2 µm; 
+ 
+2. The schematic diagram needs more discussion with special attention to the 3D galvo section. 
+Specifically discuss how PCL on linear actuator and Galvo mirror operated synchronously 
+during data acquisition. 
+Response: We greatly appreciate your nice suggestion. We agree with you that remote focusing 
+system needs to be more detailed described.  We now added the detailed information about  
+remote focusing system to the supplementary information  (Supplementary Figure S1 -S3). The 
+focal length of each lens and their distances are described in the Supplementary Figure S1. we 
+also added a  Supplementary Note  1 to describe the specifications of the galvo mirrors and 
+motors in remote focusing system. 
+ 
+In the Methods section, we added the details of the remote focusing system  operation 
+and signal acquisition with data acquisition card . The motors for driving PCL and the galvo 
+mirrors are independently controlled via three analog voltage output channels of the data 
+acquisition card. Custom - developed software developed in LabVIEW is employed to set the 
+analog voltages applied to the three axes of the remote focusing system. Specifically, the 
+
+
+voltages applied to the motors for PCL and galvo mirrors determine the position  of laser focus 
+position after objective lens. In random -access imaging mode, the remote focusing system 
+sequentially switches laser focus among several predefined positions. In random -access imaging 
+mode, the remote focusing system moves the laser focus in a raster scanning pattern. At the same 
+time, the fluorescence intensity signal from avalanche photodiode (APD) detector is recorded on 
+the digital input channel of the data acquisition card. Both the applied analog voltages to the 
+remote focusing system and the fluorescence intensity signals are logged by the data acquisition 
+card with precise timing tags. 
+ 
+Revision 1: In page 2 of supplementary information , the  schematic figure of remote focusing 
+system is added: 
+ 
+Figure S1. Detailed schematic of remote focusing system. 
+ 
+Revision 2: In page 15 of supplementary information, we added a Supplementary Note to 
+describe the specifications of the galvo mirrors and motors in remote focusing system: 
+“Supplementary Note 1. Specifications of the galvo mirrors and m otors in remote focusing 
+system. 
+The mirrors are dielectric coated, with Ravg≥98% @ 405 - 700 nm at angle of incidence 
+from 30 to 60 degrees. The size of the mirror is 30 mm × 35 mm. The linearity of motors is 
+99.9%. The long -term drift of motors over 8 ho urs: < 0.5 mRad. The machinery scan angle of 
+XY scanning is ± 11°. The control voltage range is ± 5  V. The repeatability, indicated by relative 
+
+
+root mean square error (RRMSE), are 0.058, 0.064, and 0.033 for x, y, and z, respectively 
+(Figure S2 and S3).” 
+ 
+Revision 3: In page 24 Line 6, the following paragraph is added: 
+“Remote focusing system operation 
+The motors for driving PCL and the galvo mirrors are independently controlled via three 
+analog voltage output channels of the data acquisition card. Custom-developed software 
+developed in LabVIEW is employed to set the analog voltages applied to the three axes of the 
+remote focusing system. Specifically, the voltages applied to the motors for PCL and galvo 
+mirrors determine the position of laser focus position after objective lens. In random -access 
+imaging mode, the remote focusing system sequentially switches laser focus among several 
+predefined positions. In random -access imaging mode, the remote focusing system moves the 
+laser focus in a raster scann ing pattern. At the same time, the fluorescence intensity signal from 
+avalanche photodiode (APD) detector is recorded on the digital input channel of the data 
+acquisition card. Both the applied analog voltages to the remote focusing system and the 
+fluorescence intensity signals are logged by the data acquisition card with precise timing tags.” 
+ 
+3. Needs more detail on the resolution of the proposed system with additional data. 
+Response: Thank you for your comment. We measured the resolution by fitting the full widths at 
+half maximum (FWHM) of intensity profiles of fluorescent beads. The detailed fitting process is 
+shown in the figure below: 
+
+ 
+ 
+Additionally, we have added more resolution characterization data by measuring the point 
+spread function (PSF) with 50 nm green and red fluorescent bead s. Due to their smaller size, 
+these 50 nm beads are expected to provide more precise resolution characterization compared to 
+200 nm beads. The resolution was evaluated using two types of 50 nm beads: green fluorescent 
+beads excited by a 488 nm laser and red fluorescent beads excited by a 635 nm laser. We have 
+updated the images in Figures 1( b-c) and Figure 3 to include the results obtained with 50 nm 
+fluorescent beads. The resolution characterization results with 50 nm red fluorescent beads have 
+been added to Supplementary Figure S6-S7. 
+Moreover, a comparison of the PSF profiles between 3D-DyFI and piezo -stage based 
+confocal microscopy has been incorporated into the Supplementary Information. 
+ 
+Revision 1: The  resolution characterization method has been added to the Supplementary 
+Information: 
+
+
+ 
+Figure S4.  Resolution characterization with fluorescent sphere image. The intensity profiles 
+along the x, y, and z directions are extracted and Gaussian fitted. The resolution is calculated by 
+the full widths at half maximum (FWHM) as noted in the figure.   
+ 
+Revision 2: Figure 1 and Figure 3 have been replaced with the following figures: 
+
+
+ 
+Fig. 1. Schematic and point spread function of the 3D -DyFI. (a) Schematic of 3D-DyFI. OL: 
+Objective Lens, M: Mirror, F: fluorescence filter, DM: Dichroic Mirror, PH: Pinhole, PCL: 
+Plano-Concave Lens, APD: A valanche Photodiode. (b-c) The x -y scanning images (up panel) 
+and x -z scanning images (low panel) of 50 nm green fluorescent microsphere with (b) 
+piezoelectric stage scanning and (c) 3D-DyFI. Scale bar: 500 nm. 
+  
+
+
+ 
+Fig. 3. 3D spatial resolution examination  in various positions in 3D.  (a) Images of 50 nm 
+fluorescent green microspheres located at the positions of (18, 0), (-18, 0), (0, 18), and (0, -18) in 
+the x-y plane. The upper panel shows the PSF in x -y plane, while the lower panel shows the PSF 
+in x-z plane. Scale bar = 500 nm. (b) The statistical histogram of spatial resolution distribution in 
+x, y, and z directions, which shows mean values of 319 ± 55 nm, 405 ± 56 nm, and 1.10 ± 0.11 
+µm in x, y, and z. n=39. (c) Fluorescent microsphere images at different z-depths (-4 μm, -2 μm, 
+0 μm, 2 μm, and 4 μm). Scale bar = 500 nm. (d) Plots of the intensity distribution of the PSFs in 
+different axial positions in (c).  The axial resolutions were determined by fitted FWHM. 
+
+
+Revision 3: 50 nm red fluorescent beads imaging result has been added to the Supplementary 
+Figure S6-S7: 
+ 
+ 
+Figure S6. The resolution characterization with 50 nm red fluorescent spheres  in the center 
+of scanning range of dynamics focusing lens . Images of four typical 50 nm red fluorescent  
+microspheres (635 nm excitation) in the x -y and x-z planes, obtained using the Piezo stage (a-b) 
+and 3D -DyFI (c-d) systems. The upper panel shows the PSF in the x -y plane, and the lower 
+panel shows the PSF in the x -z plane. Pixel size: 50 nm. Scale bar : 500 nm. (b, d)  Statistical 
+histogram of the spatial resolution distribution in the x, y, and z axis for the piezo stage-based 
+confocal microscopy (b) and 3D-DyFI (d) systems. n = 20. 
+ 
+
+
+ 
+Figure S 7. 3D spatial resolution examination in various positions in 3D  with 50 nm red 
+fluorescent beads . (a) Images of four typical 50 nm fluorescent microspheres located at the 
+boundary of the maximum scanning range, with positions at (18, 0), ( -18, 0), (0, 18), and (0, -18) 
+in the x -y plane. The upper panel shows the PSF in x -y plane, while the lower panel shows the 
+PSF in x -z plane. S cale bar = 500 nm. (b) The statistical histogram of spatial resolution 
+distribution in x, y, and z directions, which shows mean values of 405 ± 54 nm, 504 ± 65 nm, 
+and 1.06 ± 0.12 µm in x, y, and z. n=39. (c) Fluorescent microsphere images at different z-depths 
+(-4 μm, -2 μm, 0 μm, 2 μm, and 4 μm). Scale bar = 500 nm. (d) Plot of the intensity distribution 
+of the PSFs from (c) with the fitted FWHM values to determine the corresponding axial 
+resolution. 
+
+
+ 
+Revision 4: The comparison of PSF profiles between 3D-DyFI and the piezo -stage based 
+confocal microscopy also has been added to Supplementary Information: 
+ 
+Figure S5 . Comparison of the PSF between 3D-DyFI and the piezo -stage based confocal 
+microscopy. (a) The scanning images of 50 nm fluorescent beads with 3D-DyFI and the piezo -
+stage based confocal microscopy. Upper panel: x-y plane section images; lower plane: x -z plane 
+section images. (b-d) The comparative analysis of sectional intensity profiles  of PSF images in 
+(a) along x (b), y (c), and z (d) direction. Scale bar: 500 nm. 
+  
+4. For the characterization of laser focus with applied voltage, the dynamic range along X, Y, Z 
+needs to be increased. Moreover, why there are no error-bars? 
+Response: Thank you for your comment. We think this is a great suggestion. Upon review, we 
+realized that incorrect data were used in the previous version of our manuscript . We sincerely 
+apologize for this oversight. 
+The measurement results in previous version of our manuscript were obtained during the 
+initial phases of assembling our experimental setup. In this context, the x and y dimensions were 
+inaccurately measured without accounting for the bias voltage of the data acquisition card (USB -
+6001, National Instrum ents) when measuring the output voltages after 20 dB attenuator s. 
+
+
+Additionally, the z -direction measurement was performed while the scanning tube lens was 
+positioned differently compared to the current configuration. 
+In the current setup, the relationships  between the applied voltages and the laser focus 
+positions along the x, y, and z axes are shown below: 
+ 
+The range of applied voltage for the x and y axes is set from -0.2 V to 0.2 V . V oltages 
+exceeding this range cause the laser spot to move beyond the a perture of the objective lens.  The 
+voltage applied to the z axis is confined to the applicable voltage range of  the remote focusing 
+system, which is from -5 V to 5 V . Although the dynamic range for the x and y axes can extend 
+up to ( -50 µm, 50 µm), signifi cant aberrations were observed when the positions deviated 
+substantially from the center. Consequently, we limited the operational range of x and y to ( -20 
+µm, 20 µm) during imaging.  
+Each measurement was conducted three times to ensure accuracy, and error  bars have 
+been included in the plots. 
+ 
+Revision: The Figure 2 has been replaced with the following figure: 
+ 
+
+
+Fig. 2. The laser’s focal position is linearly changed with the applied voltage.  The laser focus 
+positions as a function of applied voltage  in x (a), y (b), and z (c) axes. Measured data are 
+represented by blue circles, while the fitting results are shown with green lines. n = 3. 
+ 
+5. What is the minimum sampling for X, Y, Z positions that can be achieved. 
+Response: Thank you for your comment.  To measure the minimum sampling of 3D-DyFI, we 
+directed the laser to  a target plate over a long distance. By varying the voltage applied to the 
+dynamic focusing system in the x and y directions and monitoring the resultant spot motion, we 
+determined that the minimum responsive voltage is 0.0705 mV , which corresponds to a 
+displacement of 20 nm at the imaging focal plane.  It should be noted that a 20 dB attenuator is 
+positioned between the output of the FPGA data acquisition card and the input to the dynamic  
+focusing system. The resolution of data acquisition card (PCIe-7858, NI) analog output is 16  bit 
+with a ± 10 V output range. Consequently, its analog voltage output resolution is 0.3 mV , which 
+can be enhanced to 0.003 mV using a 20 dB attenuator. 
+No attenuator was used for z-axis control. While the responsive voltage can reach 0.0705 
+mV , the resolution is constrained by the analog voltage output resolution of the FPGA data 
+acquisition card, which is 0.3 mV . Referring to Figure 2, the minimum sampling distance in the 
+z-axis is determined to be 0.29 nm. 
+In summary, the minimum sampling distance is 20 nm in the x and y directions and 0.29 
+nm in the z direction. 
+ 
+6. The claim, “… uniform resolution across a decent 3D scanning (40μm x 40μm x 10μm). ” 
+needs further discussion. 
+Response: Thank you for your comment.  We acknowledge that our previous description of 
+“uniform resolution across a decent 3D scanning  volume” is inaccurate. The best resolution is 
+achieved in the center of scanning range of 3D dynamic focusing system, while deviating from 
+the center resulting in resolution degradation. This effect is more obvious in axial direction (from 
+0.95 μm to 1.19 μm). It could be modified to “relatively uniform”. For optimal 3D imaging using 
+
+3D-DyFI, it is advisable to position the imaging target near the center of the scanning range of 
+the 3D dynamic focusing system. 
+Revision: We have revised the “uniform” to “relatively uniform ” and a discussion has been 
+added: 
+“These results demonstrate that 3D-DyFI maintains relatively uniform resolution across a decent 
+3D scanning volume (40 µm × 40 µm × 10 µm). It is important to note that optimal resolution is 
+achieved at the center of the scanning range of the 3D dynamic focusing system. Deviations from 
+the center lead to resolution degradation, an effect that is more pronounced in the axial direction. 
+Consequently, for optimal 3D imaging using 3D -DyFI, it is advisable to position the imaging 
+target near the center of the scanning range of the 3D dynamic focusing system.” 
+ 
+7. In general, the calibration and testing part is OK but the application part is weak. This can be 
+addressed by adding imaging additional cell samples and incorporating the same in the revised 
+version. 
+Response: Thank you for your nice suggestion. We have extended the application of 3D-DyFI to 
+encompass a broader range of cellular imaging, including mitochondria,  lipid droplets, and 
+microtubules. The imaging results have been included in Figure 6, Supplementary Figure 8-10. 
+ 
+Revision: The following figures have been added: 
+ 
+To further demonstrate the 3D cellular imaging capability of 3D-DyFI. We imaged mitochondria 
+(Fig. 6), cell microtubule ( Supplementary Fig. S 8), cell membrane ( Supplementary Fig. S9) 
+and lipid droplets in live cell ( Supplementary Fig. S10). These results demonstrate that the 3D -
+DyFI can be employed for 3D volume cellular imaging. 
+ 
+
+ 
+Fig. 6. 3D imaging of mitochondria of live Hela cells with 3D -DyFI. (a-b) The mitochondria 
+were labeled with mGold fluorescent protein.  The left panel shows 3D live cell imaging. The 
+right panel shows the section image in the x -y, x-z, and y-z planes. The sectioning positions are 
+labeled in the upper right corner of the images. 
+ 
+ 
+
+
+ 
+Figure S8. 3D imaging of microtubules of live Hela cell.  The microtubules were labeled with 
+mBaojin fluorescent protein. The left panel shows 3D live cell imaging. The right panel shows 
+the section image in the x -y, x -z, and y -z planes. The sectioning positions are labeled in the 
+upper right corner of the images. 
+ 
+
+
+  
+Figure S9. Three-dimensional imaging of DiD-stained Hela cell membranes with 3D-DyFI 
+(a-c). The left panel shows 3D live cell imaging. The right panel shows the section image in the 
+x-y, x-z, and y-z planes. The sectioning positions are labeled in the upper right corner of the 
+images.  
+
+
+ 
+Figure S10. 3D imaging of Nile Red labeled live L929 cell. The lipid droplets  (bright spots) 
+and cell membrane were labeled by Nile Red. The left panel shows 3D live cell imaging. The 
+right panel shows the section image in the x -y, x-z, and y-z planes. The sectioning positions are 
+labeled in the upper right corner of the images. 
+ 
+8. The images shown in Fig. 5 appears to be blurred. Was the system out of focus while taking 
+data? Certainly, this needs explanation. 
+Response: Thank you for your comment. This is a good question. We believe the observed 
+blurring in this figure is attributable to the use of large pixel sizes. Specifically, in the piezo 
+stage-based confocal imaging presented in this figure, the pixel sizes were 1 µm in both the x 
+and y dimensions, and 0.5 µm in the z  dimension. For 3D-DyFI, the pixel size in x, y, and is 1 
+µm. We acknowledge that these pixel sizes were excessively large and inconsistent between the 
+
+
+two systems. We apologize for this oversight. The Fig. 5  has since been updated with newly 
+acquired data  with smaller pixel sizes in the current version of the manuscript to address this 
+issue. 
+ 
+Revision: This Fig. 5 has been updated: 
+ 
+Fig. 5. Three -dimensional imaging of DiD -stained Hela cell membranes with 3D -DyFI and 
+piezo stage -based confocal microscopy. (a) 3D live cell imaging with piezo stage -based 
+
+
+confocal microscopy. (b) 3D live cell imaging with 3D -DyFI. The corresponding section images 
+in the x -y, x-z, and y -z planes are shown in the right panel. The x -y plane section images were 
+taken at the axial position of z = 0.4 μm; the x-z plane section images were taken at the position 
+of y = 15 μm; and the y-z plane section images were taken at the position of x = 2 4 μm. Dashed 
+lines at x = 2 4 μm (cyan) and y = 15 μm (yellow) are marked on the x -y plane image. (c-d) The 
+intensity profiles along the y = 15 μm (c) and x = 24 μm lines (d), respectively. The Relative root 
+mean squared errors (RRMSE) between the two intensity profiles were calculated, resulting in 
+0.031 and 0.082, respectively. Pixel size in x and y: 0.2 μm; Pixel size in z: 0.4 μm. 
+ 
+9. The authors state that, the illumination time was increased to 5 ms and 10 ms. Show 3D  
+images to visually access image quality. 
+Response: Thank you for your su ggestion. We have performed the 3D imaging of 50 nm red 
+fluorescent microspheres with 2 ms. 5 ms, and 10 ms illumination time. The results have been 
+added to the supplementary information. 
+Revision: The 3D images of 50 nm red fluorescent microspheres at different i llumination times 
+have been added to the Supplementary Figure S12: 
+
+ 
+Figure S 12. 3D imaging of  50 nm red fluorescent microspheres with different pixel 
+illumination times.  Microspheres located at coverslip were imaged with 3D -DyFI with 
+illumination times of 2 ms (a), 5 ms (b), and 10 ms (c). The left panels show 3D views, while the 
+right panels display maximum intensity projection (MIP) images along the x -y, y-z, and x -z 
+planes. Scale bar: 1 µm. 
+  
+
+
+10. In conclusion section, the claim “… while maintaining excellent spatial resolution …” need 
+to be substantiated with additional metric / sectional intensity plots. 
+Response: Thank you for your comments. We think the word of “excellent” may not be 
+appropriate here. We have modified this sentence t o “…while maintaining the spatial resolution 
+comparable to piezo stage-based confocal microscopy…”. In Supplementary Figure S5, we have 
+included the comparison of sectional intensity p rofiles between 3D-DyFI and the piezo -stage 
+based confocal microscopy . The results indicate that 3D -DyFI achieves spatial resolution 
+comparable to that of the piezo-stage based confocal microscopy. 
+ 
+Revision: The following figure has been added to the Supplementary Information: 
+ 
+Figure S5. Comparison of the PSF between 3D-DyFI and the piezo -stage based confocal 
+microscopy. (a) The scanning images of 50 nm fluorescent beads with 3D-DyFI and the piezo -
+stage based confocal microscopy. Upper panel: x-y plane section images; lower plane: x -z plane 
+section images. (b-d) The comparative analysis of sectional intensity profiles  of PSF images in 
+(a) along x (b), y (c), and z (d) direction. Scale bar: 500 nm. 
+ 
+Minor: 
+1. In the introduction section, authors state large imaging depth of CSLM. This is not correct. It 
+is the Bessel-beam based microscopy techniques that are capable of large imaging depths. 
+
+
+Response: Thank you for your comments. We agree with you that Bessel-beam based 
+microscopy techniques, such as Bessel-beam based light-sheet microscopy, are more suitable for 
+imaging over large depths . In here we want ed to express that the CSLM has relatively larger 
+imaging depth compared with conventional epifluorescence microscopy and TIRF microscopy. 
+To avoid any ambiguity, we have removed the “large imaging depth” in manuscript. 
+ 
+Revision: The following words have been removed in the introduction section: 
+“and large imaging depth”. 
+ 
+2. Details of filters, APD and other optical components are missing. 
+Response: Thank you for your comments. We apologize for our oversight. The details of these 
+components have been described in the revised manuscript. 
+ 
+Revision: The details of the filters, dichroic mirrors, and avalanche photodiode (APD) have been 
+incorporated into the section on Configuration and 3D Resolution Characterization of 3D -
+Dynamic Focusing Imaging (3D -DyFI). Additionally, the specifics of the dynamic focusing 
+system are described in Supplementary Figure 1 and Supplementary Note 1. 
+ 
+3. In general, the language needs improvement. For example: “… then the sample was then 
+moved…”. 
+Response: Thank you for your comments. We have meticulously refined the language in the 
+revised manuscript to ensure clarity and precision. 
+ 
+4. Few sentences need to be rewritten and with more clarity. For example: “ … imaging temporal 
+resolution …”; “… and then moved laser focus 1 μm away…”, “In previously frequently 
+reported 3D …” etc. 
+
+Response: Thank you for your comments. We have revised  the descriptions in the updated 
+manuscript accordingly.  We apologize once again for the deficiencies in the writing of the 
+previous version of the manuscript. 
+ 
+Overall, the work has potential, but more needs to be done to bring out the uniqueness of the 
+proposed technique. In view of this, the manuscript may be considered for publication provided 
+the comments are addressed and additional data is provided. 
+Response: We sincerely appreciate your valuable feedback.  
+ 
+
+We sincerely thank the editor and all reviewers for their valuable feedback that we have 
+used to improve the quality of our manuscript. The reviewers’ comments are laid out below in 
+italics and specific concerns have been numbered. Our response is given in blue font  and 
+changes or additions to the manuscript are given in green font. The corresponding revisions are 
+highlighted in the revised manuscript. 
+  
+
+Reviewer #1 (Remarks to the Author): 
+The authors have addressed the important concerns raised in the original manuscript and 
+significantly improved the manuscript. I recommend its publication for Communications 
+Engineering. 
+Response: Thank you very much for your positive comments and recommendation. We greatly 
+appreciate your professional review of our manuscript.  
+One minor comment: Please revise the legend in Fig. 6 to clarify how different (a) and (b) are. 
+Response: Thank you for your comment. We have revised the caption and legend in the revised 
+Figure 5 (formerly Figure 6) to explicitly state that panels (a) and (b) present images from two 
+different cells. 
+Revision: Fig. 5 and its caption have been revised: 
+ 
+
+
+“Fig. 5. 3D imaging of mitochondria of live HeLa cells with 3D-DyFI. The mitochondria were 
+labeled with mGold fluorescent protein. The left panel shows 3D live cell imaging. The right 
+panel shows the section image in the x -y, x -z, and y -z planes. The sectio ning positions are 
+labeled in the upper right corner of the images. (a) and (b) are obtained from two different cells” 
+ 
+  
+
+Reviewer #2 (Remarks to the Author): 
+The authors addressed my questions and I think that the manuscript is ready for publication in 
+the current form. 
+Response: Thank you very much for your positive comments and recommendation. We greatly 
+appreciate your professional review of our manuscript.  
+  
+
+ 
+Reviewer #3 (Remarks to the Author): 
+The authors have addressed my queries adequately. I recommend the paper for publication 
+pending the following small query. 
+Response: Thank you very much for your positive comments and recommendation. We greatly 
+appreciate your professional review of our manuscript.  
+1. Figure 2 in the main manuscript may be  either merged with figure 1 or shifted to 
+Supplementary materials. 
+Response: Thank you for your kind suggestion. Now we have merged Fig. 1 and Fig. 2 into a 
+new Fig. 1 in the revised manuscript.  
+Revision: Fig. 1 and Fig. 2 have been consolidated into a new Fig. 1 in the revised manuscript: 
+
+ 
+Fig. 1. Schematic, point spread function, and the linearity characterization of the 3D -DyFI 
+system. (a) Schematic of 3D-DyFI. OL: Objective Lens, M: Mirror, F: fluorescence filter, DM : 
+Dichroic Mirror, PH: Pinhole, PCL: Plano -Concave Lens, APD: Avalanche Photodiode. (b-c) 
+The x -y scanning images (up panel) and x -z scanning images (low panel) of 50 nm green 
+fluorescent microsphere with (b) piezoelectric stage scanning and (c) 3D-DyFI. Scale bar: 500 
+nm. (d-f) The laser focus positions as a function of applied voltage in x (d), y (e), and z (f) axes. 
+Measured data are represented by blue circles, while the fitting results are shown with green lines. 
+n = 3. 
+2. In the figure on page #28 of the rebuttal letter (which is Fig. 2C in the main manuscript), the 
+authors show the plots for which the horizontal axis is in Volt. Is this true. Should it be in milli -
+Volts. Please check. This gives an erroneous minimum sampling of 0.29 nm i.e, 2.9 Angstrom. 
+
+
+Also note that the voltage output resolution of FPGA card is 0.3 mV . How the plots are shown in 
+Volts. 
+Response: Thank you for your comment. The unit on the horizontal axis in Fig. 2C is indeed 
+volts, with the operationa l voltage range approximately ±5  V , corresponding to an axial position 
+change of about ±5 µm as illustrated in Fig. 2C. Given the voltage output resolution of the FPGA 
+card is 0.3 mV and the slope is 0.98 in Fig. 2C, the minimum sampling distance along the  z-axis 
+is calculated to be 0.29 nm. Experimentally measuring a 0.29 nm sampling distance is 
+challenging. In practical applications such as 3D random -access imaging or 3D volumetric 
+imaging, the minimum axial step size used in this study is 100 nm. Nonetheless, the capacity for 
+such fine minimum sampling on the z -axis may offer advantages for other types of studies, such 
+as interference measurement. 
+
+Review Report: 
+ 
+The manuscript titled, “three dimensional random-access confocal microscopy with 3D 
+remote focusing system” by Li et al discuss a rapid 3D random access remote focusing 
+technique for volume imaging. The technique claims multifold improvement in response 
+time along x, y, z axes. Moreover, the technique achieves scanning without physically 
+moving the sample and without mechanical movement. This is good for a range of 
+applications. While the concept is good and economical, the application part needs to 
+improve for the advantages of the technique to be apparent.  Here are my major and 
+minor comments: 
+ 
+Major: 
+ 
+1. It would be nice to see the depth imaging capability of the proposed system on a 
+cellular system. 
+2. The schematic diagram needs more discussion with special attention to the 3D 
+galvo section. Specifically discuss how PCL on linear actuator and Galvo mirror 
+operated synchronously during data acquisition. 
+3. Needs more detail on the resolution of the proposed system with additional data. 
+4. For the characterization of laser focus with applied voltage, the dynamic range 
+along X, Y, Z needs to be increased. Moreover, why there are no error-bars ?  
+5. What is the minimum sampling for X, Y, Z positions that can be achieved. 
+6. The claim, “… uniform resolution across a decent 3D scanning (40µm x 40µm x 
+10µm). ”  needs further discussion. 
+7. In general, the calibration and testing part is OK but the application part is weak. 
+This can be addressed by addi ng imaging additional cell samples and 
+incorporating the same in the revised version.   
+8. The images shown in Fig. 5 appears to be blurred. Was the system out of focus 
+while taking data ? Certainly, this needs explanation. 
+9. The authors state that, the illumination time was increased to 5 ms and 10 ms. 
+Show 3D images to visually access image quality.  
+
+10. In conclusion section, the claim “… while maintaining excellent spatial resolution 
+…” need to be substantiated with additional metric / sectional intensity plots.  
+ 
+Minor:  
+1. In the introduction section, authors state large imaging depth of CSLM. This is not 
+correct. It is the Bessel-beam based microscopy techniques that are capable of 
+large imaging depths.   
+2. Details of filters, APD and other optical components are missing.   
+3. In general, the language needs improvement. For example: “… then the sample 
+was then moved…”.  
+4. Few sentences need to be rewritten and with more clarity. For example:  “ … 
+imaging temporal resolution …”; “… and then moved laser focus 1 µm away…”, 
+“In previously frequently reported 3D …” etc. 
+ 
+ 
+Overall, the work has potential, but more needs to be done to bring out the uniqueness 
+of the proposed technique.  In view of this, the manuscript may be considered for 
+publication provided the comments are addressed and additional data is provided.  

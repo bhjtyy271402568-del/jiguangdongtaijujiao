@@ -1,0 +1,26 @@
+{
+  "id": "S005",
+  "url": "https://opg.optica.org/ol/viewmedia.cfm?uri=ol-48-24-6496&seq=0",
+  "category": "02_反射式与三振镜调焦",
+  "origins": [
+    "补充检索_原文提及条目及有效替代入口"
+  ],
+  "context": "反射式扫描范围扩展_2023_出版社PDF入口",
+  "title": "反射式扫描范围扩展_2023_出版社PDF入口",
+  "files": [],
+  "attempts": [
+    {
+      "url": "https://opg.optica.org/ol/viewmedia.cfm?uri=ol-48-24-6496&seq=0",
+      "http": 200,
+      "final_url": "https://validate.perfdrive.com/?ssa=9a00f438-fbaf-aad2-6fa8-e10135460193&ssb=33696278805&ssc=https%3A%2F%2Fopg.optica.org%2Fol%2Fviewmedia.cfm%3Furi%3Dol-48-24-6496%26seq%3D0&ssi=01b0b45a-d3hy-8a02-5a22-ffaea2570adc&ssk=botmanager_support@radware.com&ssm=46592264101518244106837465343443&ssn=1b96616e3f1d73f46485e58ae6bcb8fa3637d1f2ae32-c043-4306-aafaf0&sso=73c9a06-a8da-35d4493ddd32c603f2e86ab2372e81f8d58fd04284af2571&ssp=80494266991793630787179360477717007&ssq=09750957601125687547476011891683382299498&ssr=MjMuMTcyLjIwMC44OQ==&sst=Mozilla%2F5.0%20%28compatible%3B%20ResearchDocumentCollection%2F1.0%29&ssv=&ssw=",
+      "result": "网页"
+    },
+    {
+      "url": "https://validate.perfdrive.com/?ssa=9a00f438-fbaf-aad2-6fa8-e10135460193&ssb=33696278805&ssc=https%3A%2F%2Fopg.optica.org%2Fol%2Fviewmedia.cfm%3Furi%3Dol-48-24-6496%26seq%3D0&ssi=01b0b45a-d3hy-8a02-5a22-ffaea2570adc&ssk=botmanager_support@radware.com&ssm=46592264101518244106837465343443&ssn=1b96616e3f1d73f46485e58ae6bcb8fa3637d1f2ae32-c043-4306-aafaf0&sso=73c9a06-a8da-35d4493ddd32c603f2e86ab2372e81f8d58fd04284af2571&ssp=80494266991793630787179360477717007&ssq=09750957601125687547476011891683382299498&ssr=MjMuMTcyLjIwMC44OQ==&sst=Mozilla%2F5.0%20%28compatible%3B%20ResearchDocumentCollection%2F1.0%29&ssv=&ssw=",
+      "error": "终检排除：Radware Captcha Page"
+    }
+  ],
+  "status": "全文已由用户补齐 → U001",
+  "resolved_by": "U001",
+  "resolution_note": "此前网络获取未完成；现已由用户提供正式版全文补齐。保留历史请求记录。"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "D002",
+  "category": "04_TAG声学调焦",
+  "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41377-023-01303-2/MediaObjects/41377_2023_1303_MOESM3_ESM.mov",
+  "title": "supporting Video V2 (download MOV )",
+  "context": "R023论文补充材料",
+  "origins": [
+    "https://www.nature.com/articles/s41377-023-01303-2"
+  ],
+  "files": [
+    {
+      "path": "04_TAG声学调焦\\D002_supporting Video V2 (download MOV ).mov",
+      "type": "MOV",
+      "bytes": 14577180,
+      "sha256": "c7e61f7eb077658103b029be8237849476f5a0d7f79d2e12f56b82d722617883",
+      "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41377-023-01303-2/MediaObjects/41377_2023_1303_MOESM3_ESM.mov",
+      "title": "supporting Video V2 (download MOV )"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41377-023-01303-2/MediaObjects/41377_2023_1303_MOESM3_ESM.mov",
+      "http": 200,
+      "result": "文件签名已检查"
+    }
+  ],
+  "status": "补充材料已下载"
+}

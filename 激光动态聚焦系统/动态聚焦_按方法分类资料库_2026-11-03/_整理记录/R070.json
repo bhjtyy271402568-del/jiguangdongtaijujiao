@@ -1,0 +1,36 @@
+{
+  "url": "https://scholars.cityu.edu.hk/en/publications/single-lens-dynamic-z-scanning-for-simultaneous-in-situ-position-/",
+  "category": "04_TAG声学调焦",
+  "origins": [
+    "用户粘贴_激光动态聚焦深度调研.txt"
+  ],
+  "context": "\n探测光束和加工光束共用动态扫焦元件：通过反射信号确定表面高度，再在相应相位触发加工光。论文演示140–350 kHz动态表面检测，最低线性误差1.10%。[CityUHK Scholars](https://scholars.cityu.edu.hk/en/publications/single-lens-dynamic-z-scanning-for-simultaneous-in-situ-position-/)\r",
+  "id": "R070",
+  "files": [
+    {
+      "path": "04_TAG声学调焦\\R070_Single-lens dynamic z-scanning for simultaneous in situ position detection and laser processing focus con.html",
+      "type": "HTML",
+      "bytes": 56069,
+      "sha256": "ae1bc39856030eb4e59be5abe4398fc3c6dfaa789e530e52fc6b950ca00c5f89",
+      "url": "https://scholars.cityu.edu.hk/en/publications/single-lens-dynamic-z-scanning-for-simultaneous-in-situ-position-/",
+      "title": "Single-lens dynamic z-scanning for simultaneous in situ position detection and laser processing focus control\n      -  CityUHK Scholars",
+      "text_chars": 10816
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://scholars.cityu.edu.hk/en/publications/single-lens-dynamic-z-scanning-for-simultaneous-in-situ-position-/",
+      "http": 200,
+      "final_url": "https://scholars.cityu.edu.hk/en/publications/single-lens-dynamic-z-scanning-for-simultaneous-in-situ-position-/",
+      "result": "网页"
+    },
+    {
+      "url": "https://scholars.cityu.edu.hk/files/174965038/173284711.pdf",
+      "http": 403,
+      "final_url": "https://scholars.cityu.edu.hk/files/174965038/173284711.pdf",
+      "error": "403 Client Error: Forbidden for url: https://scholars.cityu.edu.hk/files/174965038/173284711.pdf"
+    }
+  ],
+  "title": "Single-lens dynamic z-scanning for simultaneous in situ position detection and laser processing focus control - CityUHK Scholars",
+  "status": "网页已保存"
+}

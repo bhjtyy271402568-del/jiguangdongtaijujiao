@@ -1,0 +1,26 @@
+{
+  "id": "S004",
+  "url": "https://opg.optica.org/oe/viewmedia.cfm?seq=0&uri=oe-34-8-14943",
+  "category": "01_移动透镜式与匹配光学",
+  "origins": [
+    "补充检索_原文提及条目及有效替代入口"
+  ],
+  "context": "系统联合优化_2026_出版社PDF入口",
+  "title": "系统联合优化_2026_出版社PDF入口",
+  "files": [],
+  "attempts": [
+    {
+      "url": "https://opg.optica.org/oe/viewmedia.cfm?seq=0&uri=oe-34-8-14943",
+      "http": 200,
+      "final_url": "https://validate.perfdrive.com/?ssa=912e7103-57d4-05d5-eb51-70b3fa2b10b5&ssb=02814268406&ssc=https%3A%2F%2Fopg.optica.org%2Foe%2Fviewmedia.cfm%3Fseq%3D0%26uri%3Doe-34-8-14943&ssi=20c1c4ef-d3hy-8861-53f0-2309e491fbe8&ssk=botmanager_support@radware.com&ssm=46166726974419155106020248304366&ssn=64435c6d4c2f059b24b56b6151c207358ce7472abce7-ce7c-d62c-17d4b9&sso=623052c-1f5d-63319264b74b70f9e5e2d36e4971efec049bfeb083ef0e63&ssp=76204998111793645064179368671209054&ssq=08362247601114676777076011141989562762938&ssr=MjMuMTcyLjIwMC44OQ==&sst=Mozilla%2F5.0%20%28compatible%3B%20ResearchDocumentCollection%2F1.0%29&ssv=&ssw=",
+      "result": "网页"
+    },
+    {
+      "url": "https://validate.perfdrive.com/?ssa=912e7103-57d4-05d5-eb51-70b3fa2b10b5&ssb=02814268406&ssc=https%3A%2F%2Fopg.optica.org%2Foe%2Fviewmedia.cfm%3Fseq%3D0%26uri%3Doe-34-8-14943&ssi=20c1c4ef-d3hy-8861-53f0-2309e491fbe8&ssk=botmanager_support@radware.com&ssm=46166726974419155106020248304366&ssn=64435c6d4c2f059b24b56b6151c207358ce7472abce7-ce7c-d62c-17d4b9&sso=623052c-1f5d-63319264b74b70f9e5e2d36e4971efec049bfeb083ef0e63&ssp=76204998111793645064179368671209054&ssq=08362247601114676777076011141989562762938&ssr=MjMuMTcyLjIwMC44OQ==&sst=Mozilla%2F5.0%20%28compatible%3B%20ResearchDocumentCollection%2F1.0%29&ssv=&ssw=",
+      "error": "终检排除：Radware Captcha Page"
+    }
+  ],
+  "status": "全文已由用户补齐 → U003",
+  "resolved_by": "U003",
+  "resolution_note": "此前网络获取未完成；现已由用户提供正式版全文补齐。保留历史请求记录。"
+}

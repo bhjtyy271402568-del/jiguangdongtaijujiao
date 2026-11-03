@@ -1,0 +1,3906 @@
+[
+  {
+    "url": "https://www.sino-galvo.com/Products_detail/7.html",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "Gemini输出.txt",
+      "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+      "用户粘贴_激光动态聚焦深度调研.txt",
+      "苏州艾思兰_动态聚焦资料\\设备自研方案与选型表.md"
+    ],
+    "context": "\n| **Sino-Galvo**（思特/华南及苏州） | **FL8220-3D-500** | 前聚焦三轴扫描头 | 1064 nm | $400 \\times 400$ 至 $500 \\times 500$ | 最大高度差 **$80\\text{ mm}$**（$\\pm 40\\text{ mm}$） | 移动透镜组 | 标刻速度 $2000\\text{ mm/s}$ | 重复定位精度 **$< 8\\text{ }\\mu\\text{rad}$**；8h漂移 $< 0.5\\text{ mRad}$ | XY2-100 | **约 ¥1.5万–3万元**；常用于科研共焦显微与工业中大幅面加工 | [Sino-Galvo产品页](https://www.sino-galvo.com/Products_detail/7.html) |\r",
+    "id": "R001",
+    "files": [
+      {
+        "path": "01_移动透镜式与匹配光学\\R001_FL8220-3D-500 Fiber 3D Galvo scanning system-Sino-Galvo Technology Co., Ltd.html",
+        "type": "HTML",
+        "bytes": 337844,
+        "sha256": "f74ab5cb77bbfe3d51623a131f744a1d5e9b328a9d822996bfd5cbc888ef0e15",
+        "url": "https://www.sino-galvo.com/Products_detail/7.html",
+        "title": "FL8220-3D-500 Fiber 3D Galvo scanning system-Sino-Galvo Technology Co., Ltd",
+        "text_chars": 7639
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://www.sino-galvo.com/Products_detail/7.html",
+        "http": 200,
+        "final_url": "https://www.sino-galvo.com/Products_detail/7.html",
+        "result": "网页"
+      }
+    ],
+    "title": "FL8220-3D-500 Fiber 3D Galvo scanning system-Sino-Galvo Technology Co., Ltd",
+    "status": "网页已保存"
+  },
+  {
+    "url": "https://patents.google.com/patent/US12265207B2/en",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "Gemini输出.txt",
+      "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+      "用户粘贴_激光动态聚焦深度调研.txt",
+      "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md"
+    ],
+    "context": "原文提到的专利号，补全公开文本入口；标题及相关性待与原件核对",
+    "id": "R002",
+    "files": [
+      {
+        "path": "01_移动透镜式与匹配光学\\R002_US12265207B2 - Dynamic focus for laser processing head _        - Google Patents.html",
+        "type": "HTML",
+        "bytes": 410914,
+        "sha256": "b12e73731f8cc75982bab354f829910156f3dde06c131368fbc4b405163d6ce5",
+        "url": "https://patents.google.com/patent/US12265207B2/en",
+        "title": "US12265207B2 - Dynamic focus for laser processing head \n        - Google Patents",
+        "text_chars": 111417
+      },
+      {
+        "path": "01_移动透镜式与匹配光学\\R002_US12265207B2 - Dynamic focus for laser processing head - Google Patents.pdf",
+        "type": "PDF",
+        "pages": 13,
+        "bytes": 1014800,
+        "sha256": "eca6c62619486fd20411e7cdff138c59e0655f65d40b634a6c40edb406322cc7",
+        "url": "https://patentimages.storage.googleapis.com/b6/08/46/d2c5aaf5cd8fb4/US12265207.pdf",
+        "text_chars": 24,
+        "title": "US00000012265207B220250401",
+        "preview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://patents.google.com/patent/US12265207B2/en",
+        "http": 200,
+        "final_url": "https://patents.google.com/patent/US12265207B2/en",
+        "result": "网页"
+      },
+      {
+        "url": "https://patentimages.storage.googleapis.com/b6/08/46/d2c5aaf5cd8fb4/US12265207.pdf",
+        "http": 200,
+        "final_url": "https://patentimages.storage.googleapis.com/b6/08/46/d2c5aaf5cd8fb4/US12265207.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "title": "US12265207B2 - Dynamic focus for laser processing head - Google Patents",
+    "status": "PDF已下载"
+  },
+  {
+    "url": "https://patents.google.com/patent/CN109894748B/zh",
+    "category": "07_测高闭环_三轴同步与标定",
+    "origins": [
+      "Gemini输出.txt"
+    ],
+    "context": "原文提到的专利号，补全公开文本入口；标题及相关性待与原件核对",
+    "id": "R003",
+    "files": [
+      {
+        "path": "07_测高闭环_三轴同步与标定\\R003_CN109894748B - 激光三维飞行打标方法、装置、计算机设备和存储介质 _      - Google Patents.html",
+        "type": "HTML",
+        "bytes": 115078,
+        "sha256": "18266f6c22aab0e908fbe7ac5028a6b0ac1edf1c201e0378fee46072c9571aac",
+        "url": "https://patents.google.com/patent/CN109894748B/zh",
+        "title": "CN109894748B - 激光三维飞行打标方法、装置、计算机设备和存储介质 \n      - Google Patents",
+        "text_chars": 19388
+      },
+      {
+        "path": "07_测高闭环_三轴同步与标定\\R003_CN109894748B - 激光三维飞行打标方法、装置、计算机设备和存储介质 - Google Patents.pdf",
+        "type": "PDF",
+        "pages": 14,
+        "bytes": 602415,
+        "sha256": "ebea76dfc3e081eab306577e8880bc602d1ed36bcf9a6932f561ce193d877ceb",
+        "url": "https://patentimages.storage.googleapis.com/a8/4b/72/5f3bfaf96f488f/CN109894748B.pdf",
+        "text_chars": 13556,
+        "title": "",
+        "preview": "(19)中华人民共和国国家知识产权局\n(12)发明专利\n(10)授权公告号  \n(45)授权公告日 \n(21)申请号  201910132341.7\n(22)申请日 2019.02.22\n(65)同一申请的已公布的文献号  \n申请公布号  CN  109894748  A\n(43)申请公布日 2019.06.18\n(73)专利权人  深圳泰德激光科技有限公司\n地址  518054  广东省深圳市南山区粤海街\n道麻岭社区南海大道4050号上汽大厦\n10层1005室\n(72)发明人  李启程　刘伟　盛辉　黄小龙　\n周威　张凯　周红林　贾长桥　\n刘文慧　\n(74)专利代理机构  广州华进联合专利商标代理\n有限公司  44224\n代理人  李文渊\n(51)Int.Cl.\nB23K 26/362(2014.01)\nB23K 26/046(2014.01)\nB23K 26/064(2014.01)\nB23K 26/067(2006.01)\nB23K 26/70(2014.01)\n审查员  王杰\n \n(54)发明名称\n激光三维飞行打标方法、 装置、 计算机设备\n和存储介质\n(57)摘要\n本申请涉及一",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://patents.google.com/patent/CN109894748B/zh",
+        "http": 200,
+        "final_url": "https://patents.google.com/patent/CN109894748B/zh",
+        "result": "网页"
+      },
+      {
+        "url": "https://patentimages.storage.googleapis.com/a8/4b/72/5f3bfaf96f488f/CN109894748B.pdf",
+        "http": 200,
+        "final_url": "https://patentimages.storage.googleapis.com/a8/4b/72/5f3bfaf96f488f/CN109894748B.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "title": "CN109894748B - 激光三维飞行打标方法、装置、计算机设备和存储介质 - Google Patents",
+    "status": "PDF已下载"
+  },
+  {
+    "url": "https://patents.google.com/patent/CN205899130U/zh",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "Gemini输出.txt",
+      "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md",
+      "苏州艾思兰_动态聚焦资料\\来源清单.csv"
+    ],
+    "context": "原文提到的专利号，补全公开文本入口；标题及相关性待与原件核对",
+    "id": "R004",
+    "files": [
+      {
+        "path": "01_移动透镜式与匹配光学\\R004_CN205899130U - 高速动态聚焦激光振镜模组 _        - Google Patents.html",
+        "type": "HTML",
+        "bytes": 72375,
+        "sha256": "c5fbbfdf4ef998b3c134b0bb9dc14e963731b5ae03e26bfbb082906c0ca598bd",
+        "url": "https://patents.google.com/patent/CN205899130U/zh",
+        "title": "CN205899130U - 高速动态聚焦激光振镜模组 \n        - Google Patents",
+        "text_chars": 13747
+      },
+      {
+        "path": "01_移动透镜式与匹配光学\\R004_CN205899130U - 高速动态聚焦激光振镜模组 - Google Patents.pdf",
+        "type": "PDF",
+        "pages": 13,
+        "bytes": 790627,
+        "sha256": "d5ca9f7fe343a8cfba7b8a7eace7864432ad78afbcd653e3f3c8507c77c9a9c5",
+        "url": "https://patentimages.storage.googleapis.com/1c/04/87/60b60370d1dd69/CN205899130U.pdf",
+        "text_chars": 24,
+        "title": "",
+        "preview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://patents.google.com/patent/CN205899130U/zh",
+        "http": 200,
+        "final_url": "https://patents.google.com/patent/CN205899130U/zh",
+        "result": "网页"
+      },
+      {
+        "url": "https://patentimages.storage.googleapis.com/1c/04/87/60b60370d1dd69/CN205899130U.pdf",
+        "http": 200,
+        "final_url": "https://patentimages.storage.googleapis.com/1c/04/87/60b60370d1dd69/CN205899130U.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "title": "CN205899130U - 高速动态聚焦激光振镜模组 - Google Patents",
+    "status": "PDF已下载"
+  },
+  {
+    "url": "https://patents.google.com/patent/CN204248222U/zh",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "Gemini输出.txt"
+    ],
+    "context": "原文提到的专利号，补全公开文本入口；标题及相关性待与原件核对",
+    "id": "R005",
+    "files": [
+      {
+        "path": "01_移动透镜式与匹配光学\\R005_CN204248222U - 一种三轴动态聚焦激光打标装置 _        - Google Patents.html",
+        "type": "HTML",
+        "bytes": 69357,
+        "sha256": "b1e442a41d5609d21eea275334aecbf5ca22b0b5508ccadd6e59e3e16d07eb60",
+        "url": "https://patents.google.com/patent/CN204248222U/zh",
+        "title": "CN204248222U - 一种三轴动态聚焦激光打标装置 \n        - Google Patents",
+        "text_chars": 9678
+      },
+      {
+        "path": "01_移动透镜式与匹配光学\\R005_CN204248222U - 一种三轴动态聚焦激光打标装置 - Google Patents.pdf",
+        "type": "PDF",
+        "pages": 5,
+        "bytes": 295300,
+        "sha256": "e61d762a721908bff4ece5d768e69e6df3c5c63ea0763ff944cb322cfd105e54",
+        "url": "https://patentimages.storage.googleapis.com/f1/10/2f/387aa81ff57412/CN204248222U.pdf",
+        "text_chars": 8,
+        "title": "",
+        "preview": "\n\n\n\n\n\n\n\n",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://patents.google.com/patent/CN204248222U/zh",
+        "http": 200,
+        "final_url": "https://patents.google.com/patent/CN204248222U/zh",
+        "result": "网页"
+      },
+      {
+        "url": "https://patentimages.storage.googleapis.com/f1/10/2f/387aa81ff57412/CN204248222U.pdf",
+        "http": 200,
+        "final_url": "https://patentimages.storage.googleapis.com/f1/10/2f/387aa81ff57412/CN204248222U.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "title": "CN204248222U - 一种三轴动态聚焦激光打标装置 - Google Patents",
+    "status": "PDF已下载"
+  },
+  {
+    "url": "https://patents.google.com/patent/CN121742097A/zh",
+    "category": "07_测高闭环_三轴同步与标定",
+    "origins": [
+      "Gemini输出.txt"
+    ],
+    "context": "原文提到的专利号，补全公开文本入口；标题及相关性待与原件核对",
+    "id": "R006",
+    "files": [
+      {
+        "path": "07_测高闭环_三轴同步与标定\\R006_CN121742097A - 一种集成振镜激光投影方法以及集成振镜激光控制装置 _        - Google Patents.html",
+        "type": "HTML",
+        "bytes": 71355,
+        "sha256": "afd66721685e48aa1e63b5ef6251b38d4f208aba3a6ab95d479237248a2417eb",
+        "url": "https://patents.google.com/patent/CN121742097A/zh",
+        "title": "CN121742097A - 一种集成振镜激光投影方法以及集成振镜激光控制装置 \n        - Google Patents",
+        "text_chars": 13345
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://patents.google.com/patent/CN121742097A/zh",
+        "http": 200,
+        "final_url": "https://patents.google.com/patent/CN121742097A/zh",
+        "result": "网页"
+      }
+    ],
+    "title": "CN121742097A - 一种集成振镜激光投影方法以及集成振镜激光控制装置 - Google Patents",
+    "status": "专利全文网页已保存_无PDF附件"
+  },
+  {
+    "url": "https://patents.google.com/patent/CN111130015A/zh",
+    "category": "09_艾思兰及相邻应用",
+    "origins": [
+      "Gemini输出.txt",
+      "苏州艾思兰_动态聚焦资料\\来源清单.csv"
+    ],
+    "context": "原文提到的专利号，补全公开文本入口；标题及相关性待与原件核对",
+    "id": "R007",
+    "files": [
+      {
+        "path": "09_艾思兰及相邻应用\\R007_CN111130015A - 一种激光除障仪 _        - Google Patents.html",
+        "type": "HTML",
+        "bytes": 102600,
+        "sha256": "fa86f71dadc4ca1ea474461fbab6f04ef17a59b47f768bf44720ad32699f7014",
+        "url": "https://patents.google.com/patent/CN111130015A/zh",
+        "title": "CN111130015A - 一种激光除障仪 \n        - Google Patents",
+        "text_chars": 13798
+      },
+      {
+        "path": "09_艾思兰及相邻应用\\R007_CN111130015A - 一种激光除障仪 - Google Patents.pdf",
+        "type": "PDF",
+        "pages": 8,
+        "bytes": 501328,
+        "sha256": "1ac4aeb725a7497e69858d3c68cd9a6cfbdac03330689fba0d09fd2cb5f280eb",
+        "url": "https://patentimages.storage.googleapis.com/af/c0/83/5896edf21c4fbc/CN111130015A.pdf",
+        "text_chars": 5558,
+        "title": "",
+        "preview": "(19)中华人民共和国国家知识产权局\n(12)发明专利申请\n(10)申请公布号 \n(43)申请公布日 \n(21)申请号 202010098925.X\n(22)申请日 2020.02.18\n(71)申请人 苏州艾思兰光电有限公司\n地址 215000 江苏省苏州市工业园区金芳\n路18号东坊创智园地C栋2楼\n(72)发明人 何舟　周倩　周健　\n(74)专利代理机构 苏州衡创知识产权代理事务\n所(普通合伙) 32329\n代理人 张芹\n(51)Int.Cl.\nH02G 1/02(2006.01)\nH02G 7/16(2006.01)\n \n(54)发明名称\n一种激光除障仪\n(57)摘要\n本发明公开了一种激光除障仪， 包括光纤激\n光器、 控制云台、 三脚架、 瞄准控制器、 电池组、 电\n源线、 激光发射器和无线遥控， 光纤激光器通过\n光纤与激光发射器连接， 电池组通过电源线与光\n纤激光器连接， 激光发射器通过快装板固定在控\n制云台上。 本发明激光除障仪， 可以远程、“地对\n空”进行作业， 除冰过程无需接触， 过程安全， 取\n代了登高梯， 人工攀爬等需要接触式操作的方\n式， 且可带电作业， 减少断电带",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://patents.google.com/patent/CN111130015A/zh",
+        "http": 200,
+        "final_url": "https://patents.google.com/patent/CN111130015A/zh",
+        "result": "网页"
+      },
+      {
+        "url": "https://patentimages.storage.googleapis.com/af/c0/83/5896edf21c4fbc/CN111130015A.pdf",
+        "http": 200,
+        "final_url": "https://patentimages.storage.googleapis.com/af/c0/83/5896edf21c4fbc/CN111130015A.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "title": "CN111130015A - 一种激光除障仪 - Google Patents",
+    "status": "PDF已下载"
+  },
+  {
+    "url": "https://patents.google.com/patent/CN111181117A/zh",
+    "category": "09_艾思兰及相邻应用",
+    "origins": [
+      "Gemini输出.txt",
+      "苏州艾思兰_动态聚焦资料\\来源清单.csv"
+    ],
+    "context": "原文提到的专利号，补全公开文本入口；标题及相关性待与原件核对",
+    "id": "R008",
+    "files": [
+      {
+        "path": "09_艾思兰及相邻应用\\R008_CN111181117A - 一种一字激光除冰装置 _        - Google Patents.html",
+        "type": "HTML",
+        "bytes": 87142,
+        "sha256": "58638300359c25d958820c545b67181e6b455ecd181305e81111e42e0e530eae",
+        "url": "https://patents.google.com/patent/CN111181117A/zh",
+        "title": "CN111181117A - 一种一字激光除冰装置 \n        - Google Patents",
+        "text_chars": 13224
+      },
+      {
+        "path": "09_艾思兰及相邻应用\\R008_CN111181117A - 一种一字激光除冰装置 - Google Patents.pdf",
+        "type": "PDF",
+        "pages": 6,
+        "bytes": 393904,
+        "sha256": "ba9d4162f7fd537f1f5875ec18d78d3dc96d2831f5c375e2b32f23c34294f6b7",
+        "url": "https://patentimages.storage.googleapis.com/c5/08/e3/73dd912396c371/CN111181117A.pdf",
+        "text_chars": 5919,
+        "title": "",
+        "preview": "(19)中华人民共和国国家知识产权局\n(12)发明专利申请\n(10)申请公布号 \n(43)申请公布日 \n(21)申请号 202010098927.9\n(22)申请日 2020.02.18\n(71)申请人 苏州艾思兰光电有限公司\n地址 215000 江苏省苏州市工业园区金芳\n路18号东坊创智园地C栋2楼\n(72)发明人 何舟　周倩　周健　\n(74)专利代理机构 苏州衡创知识产权代理事务\n所(普通合伙) 32329\n代理人 张芹\n(51)Int.Cl.\nH02G 7/16(2006.01)\nB08B 7/00(2006.01)\n \n(54)发明名称\n一种一字激光除冰装置\n(57)摘要\n本发明公开了一种一字激光除冰装置， 包括\n支架和底座， 其特征在于， 支架的顶端固定安装\n有电动转台， 电动转台的顶端固定安装有激光出\n射头， 激光出射头的背面固定安装有控制器。 该\n种一字激光除冰装置， 通过在支架上设置激光出\n射头以及通过控制器来控制激光出射头， 使得激\n光出射头射出水平一字型光斑， 从而完成除冰的\n效果， 采用该种方式可以远程、“地对空”进行作\n业， 除冰过程无需接触， 过程安全， 取代",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://patents.google.com/patent/CN111181117A/zh",
+        "http": 200,
+        "final_url": "https://patents.google.com/patent/CN111181117A/zh",
+        "result": "网页"
+      },
+      {
+        "url": "https://patentimages.storage.googleapis.com/c5/08/e3/73dd912396c371/CN111181117A.pdf",
+        "http": 200,
+        "final_url": "https://patentimages.storage.googleapis.com/c5/08/e3/73dd912396c371/CN111181117A.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "title": "CN111181117A - 一种一字激光除冰装置 - Google Patents",
+    "status": "PDF已下载"
+  },
+  {
+    "url": "https://patents.google.com/patent/CN213163617U/zh",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "Gemini输出.txt",
+      "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+      "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md",
+      "苏州艾思兰_动态聚焦资料\\来源清单.csv"
+    ],
+    "context": "原文提到的专利号，补全公开文本入口；标题及相关性待与原件核对",
+    "id": "R009",
+    "files": [
+      {
+        "path": "01_移动透镜式与匹配光学\\R009_CN213163617U - 一种三维动态聚焦振镜系统 _        - Google Patents.html",
+        "type": "HTML",
+        "bytes": 77952,
+        "sha256": "c261e09273c0d5d498897685dd740472a223a133f785d22b22ea5456396e0387",
+        "url": "https://patents.google.com/patent/CN213163617U/zh",
+        "title": "CN213163617U - 一种三维动态聚焦振镜系统 \n        - Google Patents",
+        "text_chars": 11426
+      },
+      {
+        "path": "01_移动透镜式与匹配光学\\R009_CN213163617U - 一种三维动态聚焦振镜系统 - Google Patents.pdf",
+        "type": "PDF",
+        "pages": 13,
+        "bytes": 854568,
+        "sha256": "2911d303ef3dcadd1517f0f67e02e0ed6d23ad5ef6a9cf09cb543d39495a8638",
+        "url": "https://patentimages.storage.googleapis.com/4d/56/25/0554444e0d5dd0/CN213163617U.pdf",
+        "text_chars": 8640,
+        "title": "",
+        "preview": "(19)中华人民共和国国家知识产权局\n(12)实用新型专利\n(10)授权公告号  \n(45)授权公告日 \n(21)申请号  202021742069.9\n(22)申请日 2020.08.18\n(73)专利权人  深圳市智博泰克科技有限公司\n地址  518000  广东省深圳市光明区凤凰街\n道甲子塘社区力缆科技大楼九层A区\n(72)发明人  林梓荣　曹志强　\n(74)专利代理机构  深圳市深联知识产权代理事\n务所(普通合伙) 44357\n代理人  黄立强\n(51)Int.Cl.\nB23K 26/046(2014.01)\nB23K 26/064(2014.01)\nB23K 26/70(2014.01)\nG02B 26/08(2006.01)\n \n(54)实用新型名称\n一种三维动态聚焦振镜系统\n(57)摘要\n一种三维动态聚焦振镜系统， 包括X、 Y轴电\n机反射镜、 调焦透镜、 固定透镜、 聚焦场镜、 Z轴调\n焦机构、 光路底座和光路上盖， 光路底座设有由\n所述光路上盖密封罩盖的安装腔， 以及与安装腔\n导通的入光孔和出光孔， X轴电机反射镜接收依\n次经入光孔、 调焦透镜和固定透镜射入的激光器\n",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://patents.google.com/patent/CN213163617U/zh",
+        "http": 200,
+        "final_url": "https://patents.google.com/patent/CN213163617U/zh",
+        "result": "网页"
+      },
+      {
+        "url": "https://patentimages.storage.googleapis.com/4d/56/25/0554444e0d5dd0/CN213163617U.pdf",
+        "http": 200,
+        "final_url": "https://patentimages.storage.googleapis.com/4d/56/25/0554444e0d5dd0/CN213163617U.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "title": "CN213163617U - 一种三维动态聚焦振镜系统 - Google Patents",
+    "status": "PDF已下载"
+  },
+  {
+    "url": "https://patents.google.com/patent/CN222626476U/zh",
+    "category": "07_测高闭环_三轴同步与标定",
+    "origins": [
+      "Gemini输出.txt"
+    ],
+    "context": "原文提到的专利号，补全公开文本入口；标题及相关性待与原件核对",
+    "id": "R010",
+    "files": [
+      {
+        "path": "07_测高闭环_三轴同步与标定\\R010_CN222626476U - 自动调焦激光加工装置 _        - Google Patents.html",
+        "type": "HTML",
+        "bytes": 63232,
+        "sha256": "8b96e840e5346ab3a0dad3bef999f9d6a191e0520d36e6f575c3c8049776d816",
+        "url": "https://patents.google.com/patent/CN222626476U/zh",
+        "title": "CN222626476U - 自动调焦激光加工装置 \n        - Google Patents",
+        "text_chars": 11106
+      },
+      {
+        "path": "07_测高闭环_三轴同步与标定\\R010_CN222626476U - 自动调焦激光加工装置 - Google Patents.pdf",
+        "type": "PDF",
+        "pages": 9,
+        "bytes": 470172,
+        "sha256": "a8312d636104a22c5d3e46630e1c67f3027af4095e8cda942752349eca3db1c6",
+        "url": "https://patentimages.storage.googleapis.com/7c/21/17/50706c1f6d2c8d/CN222626476U.pdf",
+        "text_chars": 8456,
+        "title": "",
+        "preview": "(19)国家知识产权局\n(12)实用新型专利\n(10)授权公告号 \n(45)授权公告日 \n(21)申请号 202420908185.5\n(22)申请日 2024.04.28\n(73)专利权人 海目星激光智能装备（江苏）有限\n公司\n地址 213000 江苏省常州市金坛区金坛大\n道66号\n(72)发明人 刘琦　赵盛宇　杨玉怀　苗健烨　\n张雪　何奇芮　\n(74)专利代理机构 北京市京大律师事务所 \n11321\n专利代理师 姚维\n(51)Int.Cl.\nB23K 26/046(2014.01)\nB23K 26/00(2014.01)\n \n(54)实用新型名称\n自动调焦激光加工装置\n(57)摘要\n本实用新型公开一种自动调焦激光加工装\n置，所述自 动调焦激光加工装置包括激光发生\n器、场镜、第一检测器以及驱动模组 ；其中，所述\n激光发生器与所述场镜间隔设置，所述场镜安装\n在所述驱动模组上，所述激光发生器用于发射激\n光，所述场镜用于将激光聚焦在工件表面上 ； 所\n述第一检测器与所述驱动模组电连接，所述第一\n检测器用于实时检测所述场镜与所述工件表面\n之间的距离，所述驱动模组根据所述第一检测器\n检测到的所",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://patents.google.com/patent/CN222626476U/zh",
+        "http": 200,
+        "final_url": "https://patents.google.com/patent/CN222626476U/zh",
+        "result": "网页"
+      },
+      {
+        "url": "https://patentimages.storage.googleapis.com/7c/21/17/50706c1f6d2c8d/CN222626476U.pdf",
+        "http": 200,
+        "final_url": "https://patentimages.storage.googleapis.com/7c/21/17/50706c1f6d2c8d/CN222626476U.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "title": "CN222626476U - 自动调焦激光加工装置 - Google Patents",
+    "status": "PDF已下载"
+  },
+  {
+    "url": "https://patents.google.com/patent/CN103157904B/zh",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "Gemini输出.txt",
+      "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md",
+      "苏州艾思兰_动态聚焦资料\\来源清单.csv"
+    ],
+    "context": "原文提到的专利号，补全公开文本入口；标题及相关性待与原件核对",
+    "id": "R011",
+    "files": [
+      {
+        "path": "01_移动透镜式与匹配光学\\R011_CN103157904B - 一种基于动态聚焦的激光加工装置 _        - Google Patents.html",
+        "type": "HTML",
+        "bytes": 125515,
+        "sha256": "616977425c5c0c36d8e1b111fa2120836ca4f63a662d4f91fd9c4efd390b97b5",
+        "url": "https://patents.google.com/patent/CN103157904B/zh",
+        "title": "CN103157904B - 一种基于动态聚焦的激光加工装置 \n        - Google Patents",
+        "text_chars": 22482
+      },
+      {
+        "path": "01_移动透镜式与匹配光学\\R011_CN103157904B - 一种基于动态聚焦的激光加工装置 - Google Patents.pdf",
+        "type": "PDF",
+        "pages": 12,
+        "bytes": 987303,
+        "sha256": "006215ae7d85d95577457e5171d7c4cb130278e2fc5b20ba82de36b5a9f0ede5",
+        "url": "https://patentimages.storage.googleapis.com/07/fe/95/58e829bc4c4d4f/CN103157904B.pdf",
+        "text_chars": 22,
+        "title": "",
+        "preview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://patents.google.com/patent/CN103157904B/zh",
+        "http": 200,
+        "final_url": "https://patents.google.com/patent/CN103157904B/zh",
+        "result": "网页"
+      },
+      {
+        "url": "https://patentimages.storage.googleapis.com/07/fe/95/58e829bc4c4d4f/CN103157904B.pdf",
+        "http": 200,
+        "final_url": "https://patentimages.storage.googleapis.com/07/fe/95/58e829bc4c4d4f/CN103157904B.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "title": "CN103157904B - 一种基于动态聚焦的激光加工装置 - Google Patents",
+    "status": "PDF已下载"
+  },
+  {
+    "url": "https://patents.google.com/patent/US20220283416A1/en",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "Gemini输出.txt",
+      "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md",
+      "苏州艾思兰_动态聚焦资料\\来源清单.csv"
+    ],
+    "context": "原文提到的专利号，补全公开文本入口；标题及相关性待与原件核对",
+    "id": "R012",
+    "files": [
+      {
+        "path": "01_移动透镜式与匹配光学\\R012_US20220283416A1 - Dynamic Focus For Laser Processing Head _        - Google Patents.html",
+        "type": "HTML",
+        "bytes": 391318,
+        "sha256": "2710b4b59718780ab10d440c8940b8c00498e4375bb0c21cd1e65a2f4d35f804",
+        "url": "https://patents.google.com/patent/US20220283416A1/en",
+        "title": "US20220283416A1 - Dynamic Focus For Laser Processing Head \n        - Google Patents",
+        "text_chars": 102492
+      },
+      {
+        "path": "01_移动透镜式与匹配光学\\R012_US20220283416A1 - Dynamic Focus For Laser Processing Head - Google Patents.pdf",
+        "type": "PDF",
+        "pages": 12,
+        "bytes": 1201905,
+        "sha256": "514fc9ac4689880cd2cefd9dbce4bd68bbb0f753d5778d24fd89619e2cfa9403",
+        "url": "https://patentimages.storage.googleapis.com/49/f5/74/78d90f856d09a6/US20220283416A1.pdf",
+        "text_chars": 46477,
+        "title": "US020220283416A120220908",
+        "preview": "US 20220283416A1 IN \n ( 19 ) United States \n ( 12 ) Patent Application Publication ( 10 ) Pub . No .: US 2022/0283416 A1 . \n CHAN ( 43 ) Pub . Date : Sep. 8 , 2022 \n ( 54 ) DYNAMIC FOCUS FOR LASER PROCESSING HEAD \n ( 71 ) Applicant : II - VI Delaware , Inc. , Wilmington , DE \n ( US ) \n ( 72 ) Inventor : Danny CHAN , Kleinmachnow ( DE ) \n ( 21 ) Appl . No .: 17 / 192,327 \n ( 52 ) U.S. CI . CPC G02B 19/0014 ( 2013.01 ) ; G02B 3/04 ( 2013.01 ) ; B23K 26/703 ( 2015.10 ) ; B23K 26/0665 ( 2013.01 ) \n ",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://patents.google.com/patent/US20220283416A1/en",
+        "http": 200,
+        "final_url": "https://patents.google.com/patent/US20220283416A1/en",
+        "result": "网页"
+      },
+      {
+        "url": "https://patentimages.storage.googleapis.com/49/f5/74/78d90f856d09a6/US20220283416A1.pdf",
+        "http": 200,
+        "final_url": "https://patentimages.storage.googleapis.com/49/f5/74/78d90f856d09a6/US20220283416A1.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "title": "US20220283416A1 - Dynamic Focus For Laser Processing Head - Google Patents",
+    "status": "PDF已下载"
+  },
+  {
+    "url": "https://patents.google.com/patent/US20240393604A1/en",
+    "category": "06_可变发散角激光源",
+    "origins": [
+      "Gemini输出.txt",
+      "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+      "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md",
+      "苏州艾思兰_动态聚焦资料\\来源清单.csv"
+    ],
+    "context": "原文提到的专利号，补全公开文本入口；标题及相关性待与原件核对",
+    "id": "R013",
+    "files": [
+      {
+        "path": "06_可变发散角激光源\\R013_US20240393604A1 - Variable divergence laser for dynamic focus adjustment _      - Google Patents.html",
+        "type": "HTML",
+        "bytes": 285898,
+        "sha256": "388b06103c86696dcc7ff9ded3f0d42260c1049e50b04eb16fd5973bd0c24d63",
+        "url": "https://patents.google.com/patent/US20240393604A1/en",
+        "title": "US20240393604A1 - Variable divergence laser for dynamic focus adjustment \n      - Google Patents",
+        "text_chars": 94923
+      },
+      {
+        "path": "06_可变发散角激光源\\R013_US20240393604A1 - Variable divergence laser for dynamic focus adjustment - Google Patents.pdf",
+        "type": "PDF",
+        "pages": 20,
+        "bytes": 1954142,
+        "sha256": "0eaf57735141ff3e4da8ca83021b94b987cc95c232527286f7c497c43e7d4846",
+        "url": "https://patentimages.storage.googleapis.com/07/93/2a/802f8f80534a22/US20240393604A1.pdf",
+        "text_chars": 38,
+        "title": "US020240393604A120241128",
+        "preview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://patents.google.com/patent/US20240393604A1/en",
+        "http": 200,
+        "final_url": "https://patents.google.com/patent/US20240393604A1/en",
+        "result": "网页"
+      },
+      {
+        "url": "https://patentimages.storage.googleapis.com/07/93/2a/802f8f80534a22/US20240393604A1.pdf",
+        "http": 200,
+        "final_url": "https://patentimages.storage.googleapis.com/07/93/2a/802f8f80534a22/US20240393604A1.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "title": "US20240393604A1 - Variable divergence laser for dynamic focus adjustment - Google Patents",
+    "status": "PDF已下载"
+  },
+  {
+    "url": "https://patents.google.com/patent/CN210203085U/zh",
+    "category": "09_艾思兰及相邻应用",
+    "origins": [
+      "Gemini输出.txt",
+      "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md",
+      "苏州艾思兰_动态聚焦资料\\来源清单.csv"
+    ],
+    "context": "原文提到的专利号，补全公开文本入口；标题及相关性待与原件核对",
+    "id": "R014",
+    "files": [
+      {
+        "path": "09_艾思兰及相邻应用\\R014_CN210203085U - 一种激光驱鸟器 _      - Google Patents.html",
+        "type": "HTML",
+        "bytes": 67030,
+        "sha256": "e4c0ebc8fbdc58b33a5688c7874293bc273de4d717f7a282865a1a4c40c5ca25",
+        "url": "https://patents.google.com/patent/CN210203085U/zh",
+        "title": "CN210203085U - 一种激光驱鸟器 \n      - Google Patents",
+        "text_chars": 8501
+      },
+      {
+        "path": "09_艾思兰及相邻应用\\R014_CN210203085U - 一种激光驱鸟器 - Google Patents.pdf",
+        "type": "PDF",
+        "pages": 5,
+        "bytes": 291656,
+        "sha256": "6dc83878d219317c64c79e9b015f5e84c8b51adae44abf46d7701d68c9b2d860",
+        "url": "https://patentimages.storage.googleapis.com/f1/8c/8d/2916ebde53a935/CN210203085U.pdf",
+        "text_chars": 3550,
+        "title": "",
+        "preview": "(19)中华人民共和国国家知识产权局\n(12)实用新型专利\n(10)授权公告号 \n(45)授权公告日 \n(21)申请号 201920637556.X\n(22)申请日 2019.05.07\n(73)专利权人 苏州艾思兰光电有限公司\n地址 215123 江苏省苏州市工业园区金芳\n路18号210室\n(72)发明人 周倩　周键　何舟　\n(51)Int.Cl.\nA01M 29/10(2011.01)\n \n(54)实用新型名称\n一种激光驱鸟器\n(57)摘要\n本实用新型公开了一种激光驱鸟器， 包括底\n座、 固定于所述底座上的支架、 固定于所述支架\n顶部的电动云台、 固定于所述电动云台上安装有\n激光驱鸟组件、 驱动所述电动云台的控制器； 所\n述激光驱鸟组件由出射孔的保护罩、 设置于所述\n保护罩内的激光器和扩束镜构成。 激光器发射出\n的激光通过扩束镜， 形成激光光束从出射孔射\n出； 激光驱鸟组件在电动云台的带动下在水平和\n垂直方向循环往复转动， 从而达到全方位驱鸟的\n效果。\n权利要求书1页  说明书2页  附图1页\nCN 210203085 U\n2020.03.31\nCN 210203085 U\n\n\n1",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://patents.google.com/patent/CN210203085U/zh",
+        "http": 200,
+        "final_url": "https://patents.google.com/patent/CN210203085U/zh",
+        "result": "网页"
+      },
+      {
+        "url": "https://patentimages.storage.googleapis.com/f1/8c/8d/2916ebde53a935/CN210203085U.pdf",
+        "http": 200,
+        "final_url": "https://patentimages.storage.googleapis.com/f1/8c/8d/2916ebde53a935/CN210203085U.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "title": "CN210203085U - 一种激光驱鸟器 - Google Patents",
+    "status": "PDF已下载"
+  },
+  {
+    "url": "https://patents.google.com/patent/CN116373177A/zh",
+    "category": "09_艾思兰及相邻应用",
+    "origins": [
+      "Gemini输出.txt",
+      "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md",
+      "苏州艾思兰_动态聚焦资料\\来源清单.csv"
+    ],
+    "context": "原文提到的专利号，补全公开文本入口；标题及相关性待与原件核对",
+    "id": "R015",
+    "files": [
+      {
+        "path": "09_艾思兰及相邻应用\\R015_CN116373177A - 激光洗模机 _        - Google Patents.html",
+        "type": "HTML",
+        "bytes": 188879,
+        "sha256": "fb7cf84bb5851aade7e2d4e882c3181a34ab6c85790321d55d2d81721600af8d",
+        "url": "https://patents.google.com/patent/CN116373177A/zh",
+        "title": "CN116373177A - 激光洗模机 \n        - Google Patents",
+        "text_chars": 27117
+      },
+      {
+        "path": "09_艾思兰及相邻应用\\R015_CN116373177A - 激光洗模机 - Google Patents.pdf",
+        "type": "PDF",
+        "pages": 22,
+        "bytes": 2160960,
+        "sha256": "bc456e0e0c8f828bbbff94547772c191be5cc265af6d1e9f41d7c5e760297d20",
+        "url": "https://patentimages.storage.googleapis.com/df/25/67/b20fc0df98880c/CN116373177A.pdf",
+        "text_chars": 17889,
+        "title": "",
+        "preview": "(19)国家知识产权局\n(12)发明专利申请\n(10)申请公布号 \n(43)申请公布日 \n(21)申请号 202310358665.9\n(22)申请日 2023.04.06\n(71)申请人 苏州艾思兰光电有限公司\n地址 215024 江苏省苏州市工业园区金芳\n路18号东坊创智园地C栋2楼\n(72)发明人 周倩　许路　杨忠英　王建波　\n(74)专利代理机构 苏州谨和知识产权代理事务\n所(特殊普通合伙) 32295\n专利代理师 许冬莹\n(51)Int.Cl.\nB29C 33/72(2006.01)\n \n(54)发明名称\n激光洗模机\n(57)摘要\n本申请提供激光洗模机，涉及激光洗模技术\n领域。激光洗模机包含控制系统、运动系统、防护\n系统和光学系统，所述六轴机器人末端设置有激\n光清洗头，所述第一滑轨对称固接于所述底架 ，\n所述第一齿条固接于所述第一滑轨，所述第一驱\n动电机的输出端和所述第一齿条传动连接，所述\n第二驱动电机和所述顶板传动连接，利用第一驱\n动电机和第一齿条的传动连接，使底板和顶板沿\n着第一齿条位移，使工件得以输送到激光清洗头\n处，利用第二驱动电机和顶板的传动关系 ，对顶\n板上的工件",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://patents.google.com/patent/CN116373177A/zh",
+        "http": 200,
+        "final_url": "https://patents.google.com/patent/CN116373177A/zh",
+        "result": "网页"
+      },
+      {
+        "url": "https://patentimages.storage.googleapis.com/df/25/67/b20fc0df98880c/CN116373177A.pdf",
+        "http": 200,
+        "final_url": "https://patentimages.storage.googleapis.com/df/25/67/b20fc0df98880c/CN116373177A.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "title": "CN116373177A - 激光洗模机 - Google Patents",
+    "status": "PDF已下载"
+  },
+  {
+    "url": "https://www.nature.com/articles/s41566-020-0684-z",
+    "category": "08_综述与光学基础",
+    "origins": [
+      "激光动态聚焦_来源索引与验证清单_2026-11-03.md"
+    ],
+    "context": "\n- 原始入口：https://www.nature.com/articles/s41566-020-0684-z",
+    "id": "R016",
+    "files": [
+      {
+        "path": "08_综述与光学基础\\R016_Variable optical elements for fast focus control _ Nature Photonics.html",
+        "type": "HTML",
+        "bytes": 389996,
+        "sha256": "79eddc80a1f4cc9ca9da40f850985ffe27a42a9ffe95f648cae5868f5462d12d",
+        "url": "https://www.nature.com/articles/s41566-020-0684-z",
+        "title": "Variable optical elements for fast focus control | Nature Photonics",
+        "text_chars": 24959
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://www.nature.com/articles/s41566-020-0684-z",
+        "http": 200,
+        "final_url": "https://www.nature.com/articles/s41566-020-0684-z",
+        "result": "网页"
+      },
+      {
+        "url": "https://www.nature.com/articles/s41566-020-0684-z.pdf",
+        "http": 200,
+        "final_url": "https://www.nature.com/articles/s41566-020-0684-z",
+        "result": "网页"
+      }
+    ],
+    "title": "Variable optical elements for fast focus control | Nature Photonics",
+    "status": "摘要或元数据网页已保存"
+  },
+  {
+    "url": "https://pure-oai.bham.ac.uk/ws/portalfiles/portal/25552450/2016_Experimental_Investigation_of_3D_Scanheads_for_Laser_Micro_Processing_FINAL.pdf",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+      "用户粘贴_激光动态聚焦深度调研.txt"
+    ],
+    "context": "\n- 原始入口：https://pure-oai.bham.ac.uk/ws/portalfiles/portal/25552450/2016_Experimental_Investigation_of_3D_Scanheads_for_Laser_Micro_Processing_FINAL.pdf",
+    "id": "R017",
+    "files": [
+      {
+        "path": "01_移动透镜式与匹配光学\\R017_Experimental investigation of 3D scanheads for laser micro-processing_2016_作者稿.pdf",
+        "type": "PDF",
+        "pages": 12,
+        "bytes": 1104555,
+        "sha256": "950b43c5a4e13984b53994eba3096bb940d2cf35414e85bc1d2ecbe848251b50",
+        "url": "https://pure-oai.bham.ac.uk/ws/portalfiles/portal/25552450/2016_Experimental_Investigation_of_3D_Scanheads_for_Laser_Micro_Processing_FINAL.pdf",
+        "text_chars": 19009,
+        "title": "",
+        "preview": " \n \nUniversity of Birmingham\nExperimental Investigation of 3D Scanheads for\nLaser Micro ProcessingDimov, Stefan; Penchev, Pavel; Bhaduri, Debajyoti\nDOI:\n10.1016/j.optlastec.2016.01.035\nLicense:\nCreative Commons: Attribution-NonCommercial-NoDerivs (CC BY-NC-ND)\nDocument Version\nPeer reviewed version\nCitation for published version (Harvard):\nDimov, S, Penchev, P & Bhaduri, D 2016, 'Experimental Investigation of 3D Scanheads for Laser Micro\nProcessing', Optics & Laser Technology, vol. 81, pp. 55-59",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://pure-oai.bham.ac.uk/ws/portalfiles/portal/25552450/2016_Experimental_Investigation_of_3D_Scanheads_for_Laser_Micro_Processing_FINAL.pdf",
+        "http": 200,
+        "final_url": "https://pure-oai.bham.ac.uk/ws/portalfiles/portal/25552450/2016_Experimental_Investigation_of_3D_Scanheads_for_Laser_Micro_Processing_FINAL.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "status": "PDF已下载",
+    "title": "Experimental investigation of 3D scanheads for laser micro-processing_2016_作者稿"
+  },
+  {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/36607001/",
+    "category": "02_反射式与三振镜调焦",
+    "origins": [
+      "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+      "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md",
+      "苏州艾思兰_动态聚焦资料\\来源清单.csv"
+    ],
+    "context": "\n- 原始入口：https://pubmed.ncbi.nlm.nih.gov/36607001/",
+    "id": "R018",
+    "files": [],
+    "attempts": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/36607001/",
+        "http": 403,
+        "final_url": "https://pubmed.ncbi.nlm.nih.gov/36607001/",
+        "error": "403 Client Error: Forbidden for url: https://pubmed.ncbi.nlm.nih.gov/36607001/"
+      }
+    ],
+    "status": "全文已由用户补齐 → U002",
+    "title": "Galvanometer driven optical system for laser dynamic focusing_2023",
+    "resolved_by": "U002",
+    "resolution_note": "此前网络获取未完成；现已由用户提供正式版全文补齐。保留历史请求记录。"
+  },
+  {
+    "url": "https://www.researchgate.net/publication/366318787_Galvanometer_driven_optical_system_for_laser_dynamic_focusing",
+    "category": "02_反射式与三振镜调焦",
+    "origins": [
+      "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+      "用户粘贴_激光动态聚焦深度调研.txt"
+    ],
+    "context": "\n- 核查范围与注意事项：原文全文网页文本可访问；出版社PDF访问受限。405 nm实验，两个Z振镜加XY振镜共四执行器；600 μs对应3.5 mrad小步进，折算焦移约2.04 mm。468 nm焦点重复性由角重复性和光学关系推算，不是独立的全体积动态焦点实测。全文备用：https://www.researchgate.net/publication/366318787_Galvanometer_driven_optical_system_for_laser_dynamic_focusing",
+    "id": "R019",
+    "files": [],
+    "attempts": [
+      {
+        "url": "https://www.researchgate.net/publication/366318787_Galvanometer_driven_optical_system_for_laser_dynamic_focusing",
+        "http": 403,
+        "final_url": "https://www.researchgate.net/publication/366318787_Galvanometer_driven_optical_system_for_laser_dynamic_focusing",
+        "error": "403 Client Error: Forbidden for url: https://www.researchgate.net/publication/366318787_Galvanometer_driven_optical_system_for_laser_dynamic_focusing"
+      }
+    ],
+    "status": "全文已由用户补齐 → U002",
+    "title": "Galvanometer driven optical system for laser dynamic focusing_2023_ResearchGate",
+    "resolved_by": "U002",
+    "resolution_note": "此前网络获取未完成；现已由用户提供正式版全文补齐。保留历史请求记录。"
+  },
+  {
+    "url": "https://opg.optica.org/ol/abstract.cfm?uri=ol-48-24-6496",
+    "category": "02_反射式与三振镜调焦",
+    "origins": [
+      "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+      "用户粘贴_激光动态聚焦深度调研.txt"
+    ],
+    "context": "\n- 原始入口：https://opg.optica.org/ol/abstract.cfm?uri=ol-48-24-6496",
+    "id": "R020",
+    "files": [
+      {
+        "path": "02_反射式与三振镜调焦\\R020_Extending the 3D scanning range of reflective dynamic focusing device-based laser scanners.html",
+        "type": "HTML",
+        "bytes": 113433,
+        "sha256": "f62a72220fd87a2932780f8a63c822af1aaa29cdee0e77fa063d5027e88fd18b",
+        "url": "https://opg.optica.org/ol/abstract.cfm?uri=ol-48-24-6496",
+        "title": "Extending the 3D scanning range of reflective dynamic focusing device-based laser scanners",
+        "text_chars": 12526
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://opg.optica.org/ol/abstract.cfm?uri=ol-48-24-6496",
+        "http": 200,
+        "final_url": "https://opg.optica.org/ol/abstract.cfm?uri=ol-48-24-6496",
+        "result": "网页"
+      },
+      {
+        "url": "https://opg.optica.org/viewmedia.cfm?uri=ol-48-24-6496&seq=0",
+        "http": 200,
+        "final_url": "https://validate.perfdrive.com/?ssa=df2b33d6-d6c2-0c21-2881-4a5f346b677b&ssb=32387275929&ssc=https%3A%2F%2Fopg.optica.org%2Fviewmedia.cfm%3Furi%3Dol-48-24-6496%26seq%3D0&ssi=5ac69680-d3hy-b54f-f6a5-77dc6054232d&ssk=botmanager_support@radware.com&ssm=82604893250568616105208723591105&ssn=2d74f6260a0634d7478a7c2e279155bfe49aa8333fe3-72b9-afd1-77b4ab&sso=85a27d1-77d6-7135c4e4831bf9a20cf74e048a9cd87c7c844a6e0ed34380&ssp=28402150111793611138179360862865787&ssq=19041067588394625449575883528008883660648&ssr=MjMuMTcyLjIwMC44OQ==&sst=Mozilla%2F5.0%20%28compatible%3B%20ResearchDocumentCollection%2F1.0%29&ssv=&ssw=",
+        "result": "网页"
+      }
+    ],
+    "title": "Extending the 3D scanning range of reflective dynamic focusing device-based laser scanners",
+    "status": "全文已由用户补齐 → U001",
+    "resolved_by": "U001",
+    "resolution_note": "此前网络获取未完成；现已由用户提供正式版全文补齐。保留历史请求记录。"
+  },
+  {
+    "url": "https://www.sciencedirect.com/science/article/pii/S0030399224010661",
+    "category": "02_反射式与三振镜调焦",
+    "origins": [
+      "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+      "用户粘贴_激光动态聚焦深度调研.txt",
+      "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md",
+      "苏州艾思兰_动态聚焦资料\\来源清单.csv"
+    ],
+    "context": "\n- 原始入口：https://www.sciencedirect.com/science/article/pii/S0030399224010661",
+    "id": "R021",
+    "files": [],
+    "attempts": [
+      {
+        "url": "https://www.sciencedirect.com/science/article/pii/S0030399224010661",
+        "http": 403,
+        "final_url": "https://www.sciencedirect.com/science/article/pii/S0030399224010661",
+        "error": "403 Client Error: Forbidden for url: https://www.sciencedirect.com/science/article/pii/S0030399224010661"
+      }
+    ],
+    "status": "全文已由用户补齐 → U004",
+    "title": "Optical design and analysis of a high-speed triple galvanometer laser 3D scanning system_2025",
+    "resolved_by": "U004",
+    "resolution_note": "此前网络获取未完成；现已由用户提供正式版全文补齐。保留历史请求记录。"
+  },
+  {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42071592/",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+      "用户粘贴_激光动态聚焦深度调研.txt"
+    ],
+    "context": "\n- 原始入口：https://pubmed.ncbi.nlm.nih.gov/42071592/",
+    "id": "R022",
+    "files": [],
+    "attempts": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42071592/",
+        "http": 403,
+        "final_url": "https://pubmed.ncbi.nlm.nih.gov/42071592/",
+        "error": "403 Client Error: Forbidden for url: https://pubmed.ncbi.nlm.nih.gov/42071592/"
+      }
+    ],
+    "status": "全文已由用户补齐 → U003",
+    "title": "Doubled Z-axis scanning range and spot-quality enhancement_2026",
+    "resolved_by": "U003",
+    "resolution_note": "此前网络获取未完成；现已由用户提供正式版全文补齐。保留历史请求记录。"
+  },
+  {
+    "url": "https://www.nature.com/articles/s41377-023-01303-2",
+    "category": "04_TAG声学调焦",
+    "origins": [
+      "激光动态聚焦_来源索引与验证清单_2026-11-03.md"
+    ],
+    "context": "\n- 原始入口：https://www.nature.com/articles/s41377-023-01303-2",
+    "id": "R023",
+    "files": [
+      {
+        "path": "04_TAG声学调焦\\R023_Single-lens dynamic $$z$$ -scanning for simultaneous in situ position detection and laser processing focu.html",
+        "type": "HTML",
+        "bytes": 427298,
+        "sha256": "515f603d361cb6e6ba6dfb26ac90c6f50d2a88edf9ae4cc6192c50cbf75d0953",
+        "url": "https://www.nature.com/articles/s41377-023-01303-2",
+        "title": "Single-lens dynamic $$z$$ -scanning for simultaneous in situ position detection and laser processing focus control | Light: Science & Applications",
+        "text_chars": 64236
+      },
+      {
+        "path": "04_TAG声学调焦\\R023_TAG_2023_正文.pdf",
+        "type": "PDF",
+        "pages": 13,
+        "bytes": 1719339,
+        "sha256": "addfe359849a08f49035f2333cb312fc593091038988381336384d4b8bd1c259",
+        "url": "https://www.nature.com/articles/s41377-023-01303-2.pdf",
+        "text_chars": 61346,
+        "title": "Single-lens dynamic z-scanning for simultaneous in situ position detection and laser processing focus control",
+        "preview": "Du et al. Light: Science & Applications          (2023) 12:274 Ofﬁcial journal of the CIOMP 2047-7538\nhttps://doi.org/10.1038/s41377-023-01303-2 www.nature.com/lsa\nARTICLE Open Access\nSingle-lens dynamicz-scanning for simultaneous in\nsitu position detection and laser processing focus\ncontrol\nXiaohan Du1,2, Camilo Florian3,4 and Craig B. Arnold 1,4✉\nAbstract\nExisting auto-focusing methods in laser processing typically include two independent modules, one for surface\ndetection and another for z-ax",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      },
+      {
+        "path": "04_TAG声学调焦\\R023_TAG_2023_补充资料.pdf",
+        "type": "PDF",
+        "pages": 10,
+        "bytes": 7477011,
+        "sha256": "768023e18e64c647b0a3cb5586291b9390b7b68278c8b9fcf4d4462e234c6b08",
+        "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41377-023-01303-2/MediaObjects/41377_2023_1303_MOESM1_ESM.pdf",
+        "text_chars": 16224,
+        "title": "",
+        "preview": "Supplementary Information for Single-lens dynamic\nz-scanning for simultaneous in-situ position detection\nand laser processing focus control\nXiaohan Du1,2, Camilo Florian3,4, and Craig B.Arnold1,4,*\n1Department of Mechanical and Aerospace Engineering, Princeton University, Princeton, NJ, 08544, USA\n2Department of Systems Engineering, City University of Hong Kong, Hong Kong, China\n3Institut für Werkstofftechnik, Universität Kassel, 34125, Kassel, Germany\n4Princeton Materials Institute, Princeton U",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://www.nature.com/articles/s41377-023-01303-2",
+        "http": 200,
+        "final_url": "https://www.nature.com/articles/s41377-023-01303-2",
+        "result": "网页"
+      },
+      {
+        "url": "https://www.nature.com/articles/s41377-023-01303-2.pdf",
+        "http": 200,
+        "final_url": "https://www.nature.com/articles/s41377-023-01303-2.pdf",
+        "result": "有效PDF"
+      },
+      {
+        "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41377-023-01303-2/MediaObjects/41377_2023_1303_MOESM1_ESM.pdf",
+        "http": 200,
+        "final_url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41377-023-01303-2/MediaObjects/41377_2023_1303_MOESM1_ESM.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "title": "Single-lens dynamic $$z$$ -scanning for simultaneous in situ position detection and laser processing focus control | Light: Science & Applications",
+    "status": "PDF已下载"
+  },
+  {
+    "url": "https://www.newswise.com/pdf_docs/170367637534890_s41377-023-01303-2.pdf",
+    "category": "04_TAG声学调焦",
+    "origins": [
+      "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+      "用户粘贴_激光动态聚焦深度调研.txt"
+    ],
+    "context": "\n- 核查范围与注意事项：公开原文PDF已检查。双光束共用TAG镜，140–350 kHz测高/选相位出光。周期扫描频率不等于任意Z轨迹伺服带宽。原文PDF镜像：https://www.newswise.com/pdf_docs/170367637534890_s41377-023-01303-2.pdf",
+    "id": "R024",
+    "files": [
+      {
+        "path": "04_TAG声学调焦\\R023_TAG_2023_正文.pdf",
+        "type": "PDF",
+        "pages": 13,
+        "bytes": 1719339,
+        "sha256": "addfe359849a08f49035f2333cb312fc593091038988381336384d4b8bd1c259",
+        "url": "https://www.newswise.com/pdf_docs/170367637534890_s41377-023-01303-2.pdf",
+        "text_chars": 61346,
+        "title": "Single-lens dynamic z-scanning for simultaneous in situ position detection and laser processing focus control",
+        "preview": "Du et al. Light: Science & Applications          (2023) 12:274 Ofﬁcial journal of the CIOMP 2047-7538\nhttps://doi.org/10.1038/s41377-023-01303-2 www.nature.com/lsa\nARTICLE Open Access\nSingle-lens dynamicz-scanning for simultaneous in\nsitu position detection and laser processing focus\ncontrol\nXiaohan Du1,2, Camilo Florian3,4 and Craig B. Arnold 1,4✉\nAbstract\nExisting auto-focusing methods in laser processing typically include two independent modules, one for surface\ndetection and another for z-ax",
+        "validation": "PDF签名、逐页解析、首末页渲染通过",
+        "duplicate": true
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://www.newswise.com/pdf_docs/170367637534890_s41377-023-01303-2.pdf",
+        "http": 200,
+        "final_url": "https://www.newswise.com/pdf_docs/170367637534890_s41377-023-01303-2.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "status": "PDF已下载",
+    "title": "Single-lens dynamic z-scanning_2023_TAG_全文镜像"
+  },
+  {
+    "url": "https://www.nature.com/articles/s41467-024-47009-w",
+    "category": "05_MEMS与全息调焦",
+    "origins": [
+      "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+      "用户粘贴_激光动态聚焦深度调研.txt"
+    ],
+    "context": "\n- 原始入口：https://www.nature.com/articles/s41467-024-47009-w",
+    "id": "R025",
+    "files": [
+      {
+        "path": "05_MEMS与全息调焦\\R025_Large-volume focus control at 10 MHz refresh rate via fast line-scanning amplitude-encoded scattering-ass.html",
+        "type": "HTML",
+        "bytes": 465517,
+        "sha256": "dcddbf17ea66cd3d9a1d35da06c68fa6f6db7df7dda2f5999bf6363cd0e6b127",
+        "url": "https://www.nature.com/articles/s41467-024-47009-w",
+        "title": "Large-volume focus control at 10 MHz refresh rate via fast line-scanning amplitude-encoded scattering-assisted holography | Nature Communications",
+        "text_chars": 67936
+      },
+      {
+        "path": "05_MEMS与全息调焦\\R025_全息10MHz_2024_正文.pdf",
+        "type": "PDF",
+        "pages": 10,
+        "bytes": 2314494,
+        "sha256": "06fa95fe1bde248b4e0b5e989b9462543a49673e514a9099fb5cba31c4a48df1",
+        "url": "https://www.nature.com/articles/s41467-024-47009-w.pdf",
+        "text_chars": 62619,
+        "title": "Large-volume focus control at 10â€‰MHz refresh rate via fast line-scanning amplitude-encoded scattering-assisted holography",
+        "preview": "Article https://doi.org/10.1038/s41467-024-47009-w\nLarge-volume focus control at 10 MHz\nrefresh rate via fast line-scanning amplitude-\nencoded scattering-assisted holography\nAtsushi Shibukawa1,R y o t aH i g u c h i1, Gookho Song 2, Hideharu Mikami 1 ,\nYuki Sudo 3 & Mooseok Jang 2\nThe capability of focus control has been central to optical technologies that\nrequire both high temporal and spatial resolutions. However, existing varifocal\nlens schemes are commonly limited to the response time on th",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      },
+      {
+        "path": "05_MEMS与全息调焦\\R025_全息10MHz_2024_公开审稿文件.pdf",
+        "type": "PDF",
+        "pages": 28,
+        "bytes": 857918,
+        "sha256": "f222507e440fbdea9087ff93c2d0ceac1d5f64be68a36ae85bd67a330f581428",
+        "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-024-47009-w/MediaObjects/41467_2024_47009_MOESM2_ESM.pdf",
+        "text_chars": 79974,
+        "title": "Peer_Review_File_cover_letter-.pdf",
+        "preview": "Open Access This file is licensed under a Creative Commons Attribution 4.0 \nInternational License, which permits use, sharing, adaptation, distribution and \nreproduction in any medium or format, as long as you give appropriate credit to \nthe original author(s) and the source, provide a link to the Creative Commons license, and indicate if \nchanges were made. In the cases where the authors are anonymous, such as is the case for the reports of \nanonymous peer reviewers, author attribution should b",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://www.nature.com/articles/s41467-024-47009-w",
+        "http": 200,
+        "final_url": "https://www.nature.com/articles/s41467-024-47009-w",
+        "result": "网页"
+      },
+      {
+        "url": "https://www.nature.com/articles/s41467-024-47009-w.pdf",
+        "http": 200,
+        "final_url": "https://www.nature.com/articles/s41467-024-47009-w.pdf",
+        "result": "有效PDF"
+      },
+      {
+        "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-024-47009-w/MediaObjects/41467_2024_47009_MOESM2_ESM.pdf",
+        "http": 200,
+        "final_url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-024-47009-w/MediaObjects/41467_2024_47009_MOESM2_ESM.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "title": "Large-volume focus control at 10 MHz refresh rate via fast line-scanning amplitude-encoded scattering-assisted holography | Nature Communications",
+    "status": "PDF已下载"
+  },
+  {
+    "url": "https://ira.lib.polyu.edu.hk/handle/10397/115461",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+      "用户粘贴_激光动态聚焦深度调研.txt"
+    ],
+    "context": "\n- 原始入口：https://ira.lib.polyu.edu.hk/handle/10397/115461",
+    "id": "R026",
+    "files": [
+      {
+        "path": "01_移动透镜式与匹配光学\\R026_Model-driven 3D laser focus shifting for precision fabrication of microstructures in transparent flexible.html",
+        "type": "HTML",
+        "bytes": 46095,
+        "sha256": "dea97dd00f653e9ec698a0f033c04bdc1a23ec5bfab088a9a37fb72cb15788da",
+        "url": "https://ira.lib.polyu.edu.hk/handle/10397/115461",
+        "title": "Model-driven 3D laser focus shifting for precision fabrication of microstructures in transparent flexible polymers | PolyU Institutional Research Archive",
+        "text_chars": 3820
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://ira.lib.polyu.edu.hk/handle/10397/115461",
+        "http": 200,
+        "final_url": "https://ira.lib.polyu.edu.hk/handle/10397/115461",
+        "result": "网页"
+      }
+    ],
+    "title": "Model-driven 3D laser focus shifting for precision fabrication of microstructures in transparent flexible polymers | PolyU Institutional Research Archive",
+    "status": "全文已由用户补齐 → U006",
+    "resolved_by": "U006",
+    "resolution_note": "此前网络获取未完成；现已由用户提供正式版全文补齐。保留历史请求记录。"
+  },
+  {
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12029447/",
+    "category": "05_MEMS与全息调焦",
+    "origins": [
+      "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+      "用户粘贴_激光动态聚焦深度调研.txt"
+    ],
+    "context": "\n- 原始入口：https://pmc.ncbi.nlm.nih.gov/articles/PMC12029447/",
+    "id": "R027",
+    "files": [
+      {
+        "path": "05_MEMS与全息调焦\\R027_MEMS Varifocal Optical Elements for Focus Control - PMC.html",
+        "type": "HTML",
+        "bytes": 477629,
+        "sha256": "b180009998b98855edf7506b46062301bdca13d215d61ea3d0c20a09f4099211",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12029447/",
+        "title": "MEMS Varifocal Optical Elements for Focus Control - PMC",
+        "text_chars": 154071
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12029447/",
+        "http": 200,
+        "final_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12029447/",
+        "result": "网页"
+      },
+      {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12029447/pdf/micromachines-16-00482.pdf",
+        "http": 200,
+        "final_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12029447/pdf/micromachines-16-00482.pdf",
+        "error": "验证/错误页面或正文过短: Checking your browser - reCAPTCHA"
+      }
+    ],
+    "title": "MEMS Varifocal Optical Elements for Focus Control - PMC",
+    "status": "论文全文HTML已保存_未取得PDF"
+  },
+  {
+    "url": "https://link.springer.com/article/10.1007/s44258-025-00067-1",
+    "category": "04_TAG声学调焦",
+    "origins": [
+      "激光动态聚焦_来源索引与验证清单_2026-11-03.md"
+    ],
+    "context": "\n- 原始入口：https://link.springer.com/article/10.1007/s44258-025-00067-1",
+    "id": "R028",
+    "files": [],
+    "attempts": [
+      {
+        "url": "https://link.springer.com/article/10.1007/s44258-025-00067-1",
+        "http": 200,
+        "final_url": "https://link.springer.com/article/10.1007/s44258-025-00067-1",
+        "result": "网页"
+      },
+      {
+        "url": "https://link.springer.com/article/10.1007/s44258-025-00067-1",
+        "error": "终检排除：Client Challenge"
+      }
+    ],
+    "title": "Localized dynamic lensing via collinear light-sound interactions_2026",
+    "status": "全文已由用户补齐 → U007",
+    "resolved_by": "U007",
+    "resolution_note": "此前网络获取未完成；现已由用户提供正式版全文补齐。保留历史请求记录。"
+  },
+  {
+    "url": "https://www.scanlab.de/en/products/z-axes-3d-add-ons/varioscan-ii",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+      "用户粘贴_激光动态聚焦深度调研.txt",
+      "苏州艾思兰_动态聚焦资料\\设备自研方案与选型表.md"
+    ],
+    "context": "\n- 原始入口：https://www.scanlab.de/en/products/z-axes-3d-add-ons/varioscan-ii",
+    "id": "R029",
+    "files": [
+      {
+        "path": "01_移动透镜式与匹配光学\\R029_varioSCAN II _ Scanlab.html",
+        "type": "HTML",
+        "bytes": 105938,
+        "sha256": "9aec6c3a55b2f6a0d63ee39816b00c7e19ddf7c987096c67551d20e0869d8271",
+        "url": "https://www.scanlab.de/en/products/z-axes-3d-add-ons/varioscan-ii",
+        "title": "varioSCAN II | Scanlab",
+        "text_chars": 5374
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://www.scanlab.de/en/products/z-axes-3d-add-ons/varioscan-ii",
+        "http": 200,
+        "final_url": "https://www.scanlab.de/en/products/z-axes-3d-add-ons/varioscan-ii",
+        "result": "网页"
+      }
+    ],
+    "title": "varioSCAN II | Scanlab",
+    "status": "网页已保存"
+  },
+  {
+    "url": "https://www.scanlab.de/sites/default/files/2026-03/SCANLAB-varioSCANII-eBox-EN.pdf",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+      "用户粘贴_激光动态聚焦深度调研.txt"
+    ],
+    "context": "\n- 核查范围与注意事项：已核查PDF表格。FT与PR两类；0.5 μm重复性是电机/移动单元指标。当前PDF：https://www.scanlab.de/sites/default/files/2026-03/SCANLAB-varioSCANII-eBox-EN.pdf",
+    "id": "R030",
+    "files": [
+      {
+        "path": "01_移动透镜式与匹配光学\\R030_SCANLAB_varioSCAN_II_eBox_官方规格书.pdf",
+        "type": "PDF",
+        "pages": 4,
+        "bytes": 786993,
+        "sha256": "a714528a9fb9cb55d68b56142cce0ff405a66d624b7e4e2c576c9524fcf0085d",
+        "url": "https://www.scanlab.de/sites/default/files/2026-03/SCANLAB-varioSCANII-eBox-EN.pdf",
+        "text_chars": 6359,
+        "title": "varioSCAN II",
+        "preview": "dynamic and precise laser focussing\nvariovarioSCANSCAN II II\nThe varioSCAN II focusing unit enables highly dynamic and  \nexceptionally precise positioning of the laser focus along the  \nbeam direction.\nThe z-axes enable 2D scan systems to execute 3D processing or \nreplace costly objectives for providing a plane focusing surface.\nThe product series offers a wide range of different sizes, optics \ndesigns and functional upgrades (e.g. integrated encoder).  \nThe system design is tailor-made for the ",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://www.scanlab.de/sites/default/files/2026-03/SCANLAB-varioSCANII-eBox-EN.pdf",
+        "http": 200,
+        "final_url": "https://www.scanlab.de/sites/default/files/2026-03/SCANLAB-varioSCANII-eBox-EN.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "status": "PDF已下载",
+    "title": "SCANLAB_varioSCAN_II_eBox_官方规格书"
+  },
+  {
+    "url": "https://www.aerotech.com/product/agv3d-three-axis-laser-scan-heads/",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+      "用户粘贴_激光动态聚焦深度调研.txt"
+    ],
+    "context": "\n- 原始入口：https://www.aerotech.com/product/agv3d-three-axis-laser-scan-heads/",
+    "id": "R031",
+    "files": [
+      {
+        "path": "01_移动透镜式与匹配光学\\R031_AGV3D Three-Axis Laser Scan Heads _ Aerotech.html",
+        "type": "HTML",
+        "bytes": 320786,
+        "sha256": "c55d6807946d9a748fcd63e9697c4cc80025578eee7f7915ce98e46c0162805d",
+        "url": "https://www.aerotech.com/product/agv3d-three-axis-laser-scan-heads/",
+        "title": "AGV3D Three-Axis Laser Scan Heads | Aerotech",
+        "text_chars": 27006
+      },
+      {
+        "path": "01_移动透镜式与匹配光学\\R031_Aerotech_AGV3D_产品页与安装使用手册.pdf",
+        "type": "PDF",
+        "pages": 60,
+        "bytes": 1883064,
+        "sha256": "1953b1e0c0ff049a3d28916ca64c7fff7d4602b682bc97458cf740ee611bc373",
+        "url": "https://help.aerotech.com/active-products-pdfs/AGV3D-Hardware-Manual.pdf",
+        "text_chars": 63659,
+        "title": "My Document",
+        "preview": "Revision2.01\nAGV3D Three-Axis Laser Scan Head\nHARDWARE MANUAL\n\nGLOBAL TECHNICAL SUPPORT\nGotothe GlobalTechnicalSupportPortal forinformationandsupportaboutyour\nAerotech,Inc.products.Thewebsitesuppliessoftware,productmanuals,Helpfiles,\ntrainingschedules,andPC-to-PCremotetechnicalsupport.Ifnecessary,youcan\ncompleteProductReturn(RMA)formsandgetinformationaboutrepairsandspare\norreplacementparts.Togethelpimmediately,contactaserviceofficeoryoursales\nrepresentative.Includeyourcustomerordernumberinyourem",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://www.aerotech.com/product/agv3d-three-axis-laser-scan-heads/",
+        "http": 200,
+        "final_url": "https://www.aerotech.com/product/agv3d-three-axis-laser-scan-heads/",
+        "result": "网页"
+      },
+      {
+        "url": "https://help.aerotech.com/active-products-pdfs/AGV3D-Hardware-Manual.pdf",
+        "http": 200,
+        "final_url": "https://help.aerotech.com/active-products-pdfs/AGV3D-Hardware-Manual.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "title": "Aerotech_AGV3D_产品页与安装使用手册",
+    "status": "PDF已下载"
+  },
+  {
+    "url": "https://www.aerotech.com/wp-content/uploads/2021/12/AGV3D-7.pdf",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+      "苏州艾思兰_动态聚焦资料\\设备自研方案与选型表.md"
+    ],
+    "context": "\n- 核查范围与注意事项：直驱聚焦机构；Z精度0.5 μm、重复性0.15 μm是聚焦机构位置指标。不同版本的供电与预热条件不宜混用。手册：https://www.aerotech.com/wp-content/uploads/2021/12/AGV3D-7.pdf",
+    "id": "R032",
+    "files": [
+      {
+        "path": "01_移动透镜式与匹配光学\\R031_Aerotech_AGV3D_产品页与安装使用手册.pdf",
+        "type": "PDF",
+        "pages": 60,
+        "bytes": 1883064,
+        "sha256": "1953b1e0c0ff049a3d28916ca64c7fff7d4602b682bc97458cf740ee611bc373",
+        "url": "https://www.aerotech.com/wp-content/uploads/2021/12/AGV3D-7.pdf",
+        "text_chars": 63659,
+        "title": "My Document",
+        "preview": "Revision2.01\nAGV3D Three-Axis Laser Scan Head\nHARDWARE MANUAL\n\nGLOBAL TECHNICAL SUPPORT\nGotothe GlobalTechnicalSupportPortal forinformationandsupportaboutyour\nAerotech,Inc.products.Thewebsitesuppliessoftware,productmanuals,Helpfiles,\ntrainingschedules,andPC-to-PCremotetechnicalsupport.Ifnecessary,youcan\ncompleteProductReturn(RMA)formsandgetinformationaboutrepairsandspare\norreplacementparts.Togethelpimmediately,contactaserviceofficeoryoursales\nrepresentative.Includeyourcustomerordernumberinyourem",
+        "validation": "PDF签名、逐页解析、首末页渲染通过",
+        "duplicate": true
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://www.aerotech.com/wp-content/uploads/2021/12/AGV3D-7.pdf",
+        "http": 200,
+        "final_url": "https://www.aerotech.com/wp-content/uploads/2021/12/AGV3D-7.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "status": "PDF已下载",
+    "title": "Aerotech_AGV3D_安装使用手册"
+  },
+  {
+    "url": "https://www.raylase.de/en/products/focusshifter/focusshifter-rd-14.html",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+      "用户粘贴_激光动态聚焦深度调研.txt"
+    ],
+    "context": "\n- 原始入口：https://www.raylase.de/en/products/focusshifter/focusshifter-rd-14.html",
+    "id": "R033",
+    "files": [
+      {
+        "path": "01_移动透镜式与匹配光学\\R033_FOCUSSHIFTER RD-14 - RAYLASE - raylase.html",
+        "type": "HTML",
+        "bytes": 69051,
+        "sha256": "cd3135e281d44044b0696524bc2c4e7766f41df50bb6d095947e883b02b9908a",
+        "url": "https://www.raylase.de/en/products/focusshifter/focusshifter-rd-14.html",
+        "title": "FOCUSSHIFTER RD-14 - RAYLASE - raylase",
+        "text_chars": 12564
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://www.raylase.de/en/products/focusshifter/focusshifter-rd-14.html",
+        "http": 200,
+        "final_url": "https://www.raylase.de/en/products/focusshifter/focusshifter-rd-14.html",
+        "result": "网页"
+      }
+    ],
+    "title": "FOCUSSHIFTER RD-14 - RAYLASE - raylase",
+    "status": "网页已保存"
+  },
+  {
+    "url": "https://www.raylase.de/_Resources/Persistent/8/3/8/2/8382e9d0599c27104c9f8316603afbaa4d944558/03119_Datenblatt_FOCUSSHIFTER%20RD-14_EN.pdf",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+      "用户粘贴_激光动态聚焦深度调研.txt"
+    ],
+    "context": "\n- 核查范围与注意事项：带F-theta方案。f163配置自由焦移−16…+14 mm；f254为−41…+32 mm。0.9 ms为tracking error，900 mm/s为镜片运动速度。规格书：https://www.raylase.de/_Resources/Persistent/8/3/8/2/8382e9d0599c27104c9f8316603afbaa4d944558/03119_Datenblatt_FOCUSSHIFTER%20RD-14_EN.pdf",
+    "id": "R034",
+    "files": [],
+    "attempts": [
+      {
+        "url": "https://www.raylase.de/_Resources/Persistent/8/3/8/2/8382e9d0599c27104c9f8316603afbaa4d944558/03119_Datenblatt_FOCUSSHIFTER%20RD-14_EN.pdf",
+        "http": 404,
+        "final_url": "https://www.raylase.de/_Resources/Persistent/8/3/8/2/8382e9d0599c27104c9f8316603afbaa4d944558/03119_Datenblatt_FOCUSSHIFTER%20RD-14_EN.pdf",
+        "error": "404 Client Error: Not Found for url: https://www.raylase.de/_Resources/Persistent/8/3/8/2/8382e9d0599c27104c9f8316603afbaa4d944558/03119_Datenblatt_FOCUSSHIFTER%20RD-14_EN.pdf"
+      }
+    ],
+    "status": "未获取",
+    "title": "RAYLASE_FOCUSSHIFTER_RD14_旧版失效链接"
+  },
+  {
+    "url": "https://www.raylase.de/en/products/prefocusing-deflection-units/axialscan-rd-14.html",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "激光动态聚焦_来源索引与验证清单_2026-11-03.md"
+    ],
+    "context": "\n- 原始入口：https://www.raylase.de/en/products/prefocusing-deflection-units/axialscan-rd-14.html",
+    "id": "R035",
+    "files": [
+      {
+        "path": "01_移动透镜式与匹配光学\\R035_AXIALSCAN RD-14 - raylase.html",
+        "type": "HTML",
+        "bytes": 64176,
+        "sha256": "efe08eae63662acaa5f8ae05fb9ff1bd835c40c0e82f25c55fa30eb4e3561473",
+        "url": "https://www.raylase.de/en/products/prefocusing-deflection-units/axialscan-rd-14.html",
+        "title": "AXIALSCAN RD-14 - raylase",
+        "text_chars": 10004
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://www.raylase.de/en/products/prefocusing-deflection-units/axialscan-rd-14.html",
+        "http": 200,
+        "final_url": "https://www.raylase.de/en/products/prefocusing-deflection-units/axialscan-rd-14.html",
+        "result": "网页"
+      }
+    ],
+    "title": "AXIALSCAN RD-14 - raylase",
+    "status": "网页已保存"
+  },
+  {
+    "url": "https://www.raylase.de/_Resources/Persistent/b/9/a/f/b9afb6124b7834b86df20625625e58d8316dbf82/2026-03-16_Datenblatt_AXIALSCAN%20RD-14_EN_v2.0.pdf",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+      "用户粘贴_激光动态聚焦深度调研.txt"
+    ],
+    "context": "\n- 核查范围与注意事项：无F-theta预聚焦系统；支持200–600 mm方形场的不同配置。不能把所有配置的最大场幅、Z范围和最小光斑拼成同一指标。PDF：https://www.raylase.de/_Resources/Persistent/b/9/a/f/b9afb6124b7834b86df20625625e58d8316dbf82/2026-03-16_Datenblatt_AXIALSCAN%20RD-14_EN_v2.0.pdf",
+    "id": "R036",
+    "files": [
+      {
+        "path": "01_移动透镜式与匹配光学\\R036_RAYLASE_AXIALSCAN_RD14_官方规格书_2026.pdf",
+        "type": "PDF",
+        "pages": 6,
+        "bytes": 1523708,
+        "sha256": "56231456c30cf3a4aef71c0d50b7f1381c01880b3743039152a707ac036da80b",
+        "url": "https://www.raylase.de/_Resources/Persistent/b/9/a/f/b9afb6124b7834b86df20625625e58d8316dbf82/2026-03-16_Datenblatt_AXIALSCAN%20RD-14_EN_v2.0.pdf",
+        "text_chars": 11693,
+        "title": "03119_Datenblatt_AXIALSCAN RD-14.indd",
+        "preview": "www.raylase.com\nHIGH DYNAMICS IN LARGE WORKING FIELDS \nThe AXIALSCAN RD-14 was developed to be able to efficiently process large workpieces. It combines the \nhigh dynamics of a MINISCAN III with the advantages of dynamic pre-focusing. In contrast to a solution \nwith an F-Theta lens, the laser is focused in front of the scan mirrors, allowing the deflection angle to be fully \nutilized. This means that larger processing fields are possible and even large components can be processed \nwith a single ",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://www.raylase.de/_Resources/Persistent/b/9/a/f/b9afb6124b7834b86df20625625e58d8316dbf82/2026-03-16_Datenblatt_AXIALSCAN%20RD-14_EN_v2.0.pdf",
+        "http": 200,
+        "final_url": "https://www.raylase.de/_Resources/Persistent/b/9/a/f/b9afb6124b7834b86df20625625e58d8316dbf82/2026-03-16_Datenblatt_AXIALSCAN%20RD-14_EN_v2.0.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "status": "PDF已下载",
+    "title": "RAYLASE_AXIALSCAN_RD14_官方规格书_2026"
+  },
+  {
+    "url": "https://www.feeltek.cn/products/3dzhenjing/fr20_xilie/3dqianjujiaodongtaixitong_fr20_f_f20_.html",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+      "用户粘贴_激光动态聚焦深度调研.txt"
+    ],
+    "context": "\n- 原始入口：https://www.feeltek.cn/products/3dzhenjing/fr20_xilie/3dqianjujiaodongtaixitong_fr20_f_f20_.html",
+    "id": "R037",
+    "files": [
+      {
+        "path": "01_移动透镜式与匹配光学\\R037_动态聚焦 , 焊接振镜 , 3D振镜 , 激光3D打印 , 视觉定位曲面打标-苏州菲镭泰克激光有限公司.html",
+        "type": "HTML",
+        "bytes": 120060,
+        "sha256": "41a1db8c2655c2b1bcf8f6417efaa4fb7b6d854b73303b684615e218a5435c79",
+        "url": "https://www.feeltek.cn/products/3dzhenjing/fr20_xilie/3dqianjujiaodongtaixitong_fr20_f_f20_.html",
+        "title": "动态聚焦 , 焊接振镜 , 3D振镜 , 激光3D打印 , 视觉定位曲面打标-苏州菲镭泰克激光有限公司",
+        "text_chars": 926
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://www.feeltek.cn/products/3dzhenjing/fr20_xilie/3dqianjujiaodongtaixitong_fr20_f_f20_.html",
+        "http": 200,
+        "final_url": "https://www.feeltek.cn/products/3dzhenjing/fr20_xilie/3dqianjujiaodongtaixitong_fr20_f_f20_.html",
+        "result": "网页"
+      }
+    ],
+    "title": "动态聚焦 , 焊接振镜 , 3D振镜 , 激光3D打印 , 视觉定位曲面打标-苏州菲镭泰克激光有限公司",
+    "status": "网页已保存"
+  },
+  {
+    "url": "https://www.scanneroptics.com/products/scanner-optics-vcm-f1/",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+      "用户粘贴_激光动态聚焦深度调研.txt"
+    ],
+    "context": "\n- 原始入口：https://www.scanneroptics.com/products/scanner-optics-vcm-f1/",
+    "id": "R038",
+    "files": [
+      {
+        "path": "01_移动透镜式与匹配光学\\R038_Scanner Optics VCM F1 - Digital Processing Driver Galvano Technology.html",
+        "type": "HTML",
+        "bytes": 84812,
+        "sha256": "ca4e5d5dc3f05f0fc5ab02a668a8f04901d1e7300d179f341cf4a292fbe2ad2d",
+        "url": "https://www.scanneroptics.com/products/scanner-optics-vcm-f1/",
+        "title": "Scanner Optics VCM F1 - Digital Processing Driver Galvano Technology",
+        "text_chars": 6856
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://www.scanneroptics.com/products/scanner-optics-vcm-f1/",
+        "http": 200,
+        "final_url": "https://www.scanneroptics.com/products/scanner-optics-vcm-f1/",
+        "result": "网页"
+      }
+    ],
+    "title": "Scanner Optics VCM F1 - Digital Processing Driver Galvano Technology",
+    "status": "网页已保存"
+  },
+  {
+    "url": "https://www.optotune.com/s/Optotune-tunable-optics-for-laser-processing.pdf",
+    "category": "03_液体与膜片可调透镜",
+    "origins": [
+      "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+      "用户粘贴_激光动态聚焦深度调研.txt"
+    ],
+    "context": "\n- 原始入口：https://www.optotune.com/s/Optotune-tunable-optics-for-laser-processing.pdf",
+    "id": "R039",
+    "files": [
+      {
+        "path": "03_液体与膜片可调透镜\\R039_Optotune_tunable_optics_for_laser_processing_2024.pdf",
+        "type": "PDF",
+        "pages": 14,
+        "bytes": 1158031,
+        "sha256": "743b648c9a2ae2c402c0a9e2c9edc75b2cc243cfdce157affaab8c682937670b",
+        "url": "https://145326430.fs1.hubspotusercontent-eu1.net/hubfs/145326430/2025%20Website%20Downloads/Download%20Hub/Optotune%2Btunable%2Boptics%2Bfor%2Blaser%2Bprocessing.pdf",
+        "text_chars": 8232,
+        "title": "",
+        "preview": "Optotune tunable optics for Laser Processing\nEnabling beam wobbling, inline inspection and 3D laser processing\nNovember 2024\nDr Branislav Timotijevic, BD Manager\nBernstrasse 388 | CH-8953 Dietikon | Switzerland\nPhone +41 58 856 3000 | www.optotune.com | info@optotune.com\n\nThis information is confidential to Optotune and is not to be copied or forwarded to any 3rd party without our prior written consent.\nBeam shifting devices\nOptotune provides four core product lines\n2\nFocus tunable lenses Laser ",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://www.optotune.com/s/Optotune-tunable-optics-for-laser-processing.pdf",
+        "http": 200,
+        "final_url": "https://145326430.fs1.hubspotusercontent-eu1.net/hubfs/145326430/2025%20Website%20Downloads/Download%20Hub/Optotune%2Btunable%2Boptics%2Bfor%2Blaser%2Bprocessing.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "status": "PDF已下载",
+    "title": "Optotune_tunable_optics_for_laser_processing_2024"
+  },
+  {
+    "url": "https://www.ezcad.com/products/dlc2-v2/",
+    "category": "07_测高闭环_三轴同步与标定",
+    "origins": [
+      "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+      "用户粘贴_激光动态聚焦深度调研.txt"
+    ],
+    "context": "\n- 原始入口：https://www.ezcad.com/products/dlc2-v2/",
+    "id": "R040",
+    "files": [
+      {
+        "path": "07_测高闭环_三轴同步与标定\\R040_DLC2-V2 USB Laser Marking Control Board _ JCZ.html",
+        "type": "HTML",
+        "bytes": 273299,
+        "sha256": "30bd7173abd8250caea745f1814275fe9d06699e3edbb844a234bbe09642cca6",
+        "url": "https://www.ezcad.com/products/dlc2-v2/",
+        "title": "DLC2-V2 USB Laser Marking Control Board | JCZ",
+        "text_chars": 24988
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://www.ezcad.com/products/dlc2-v2/",
+        "http": 200,
+        "final_url": "https://www.ezcad.com/products/dlc2-v2/",
+        "result": "网页"
+      }
+    ],
+    "title": "DLC2-V2 USB Laser Marking Control Board | JCZ",
+    "status": "网页已保存"
+  },
+  {
+    "url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=935084",
+    "category": "07_测高闭环_三轴同步与标定",
+    "origins": [
+      "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+      "用户粘贴_激光动态聚焦深度调研.txt"
+    ],
+    "context": "\n- 原始入口：https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=935084",
+    "id": "R041",
+    "files": [
+      {
+        "path": "07_测高闭环_三轴同步与标定\\R041_NIST_Methodologies and Implementation of Laser Powder-Bed Fusion Process Control_2023.pdf",
+        "type": "PDF",
+        "pages": 9,
+        "bytes": 1255547,
+        "sha256": "22f04c2d14a3637c8ef36eef44fdae8fb6740e71a3184104549198d8db10971c",
+        "url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=935084",
+        "text_chars": 42893,
+        "title": "Methodologies and Implementation of Laser Powder-Bed Fusion Process Control",
+        "preview": "Methodologies and Implementation of\nLaser Powder-Bed Fusion\nProcess Control\nHo Yeung, National Institute of Standards and Technology (NIST)\nPART QUALITY in additive manufacturing\n(AM) is highly dependent on process control,\nbut there is a lack of adequate AM control\nmethods and standards. In particular, a stan-\ndard programing language (such as G-code/\nM-code for traditional machine tools) is not\nwell deﬁned, and there is no uniform/transpar-\nent way of implementing laser scan strategies\namong t",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=935084",
+        "http": 200,
+        "final_url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=935084",
+        "result": "有效PDF"
+      }
+    ],
+    "status": "PDF已下载",
+    "title": "NIST_Methodologies and Implementation of Laser Powder-Bed Fusion Process Control_2023"
+  },
+  {
+    "url": "https://www.edmundoptics.com/knowledge-center/application-notes/lasers/gaussian-beam-propagation/",
+    "category": "08_综述与光学基础",
+    "origins": [
+      "激光动态聚焦_来源索引与验证清单_2026-11-03.md"
+    ],
+    "context": "\n- 原始入口：https://www.edmundoptics.com/knowledge-center/application-notes/lasers/gaussian-beam-propagation/",
+    "id": "R042",
+    "files": [
+      {
+        "path": "08_综述与光学基础\\R042_Propagation of a Gaussian Beam Through a Thin Lens _ Edmund Optics.html",
+        "type": "HTML",
+        "bytes": 363431,
+        "sha256": "096b6963f8b0a2bf166e0c6f957f638998dafbfcfb85c0da9019187fba71f10d",
+        "url": "https://www.edmundoptics.com/knowledge-center/application-notes/lasers/gaussian-beam-propagation/",
+        "title": "Propagation of a Gaussian Beam Through a Thin Lens | Edmund Optics",
+        "text_chars": 38338
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://www.edmundoptics.com/knowledge-center/application-notes/lasers/gaussian-beam-propagation/",
+        "http": 200,
+        "final_url": "https://www.edmundoptics.com/knowledge-center/application-notes/lasers/gaussian-beam-propagation/",
+        "result": "网页"
+      }
+    ],
+    "title": "Propagation of a Gaussian Beam Through a Thin Lens | Edmund Optics",
+    "status": "网页已保存"
+  },
+  {
+    "url": "https://patents.google.com/patent/CN104191089B/zh",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+      "用户粘贴_激光动态聚焦深度调研.txt"
+    ],
+    "context": "\n- 原始入口：https://patents.google.com/patent/CN104191089B/zh",
+    "id": "R043",
+    "files": [
+      {
+        "path": "01_移动透镜式与匹配光学\\R043_CN104191089B - 基于激光器输出光束的三维动态聚焦标刻系统及方法 _        - Google Patents.html",
+        "type": "HTML",
+        "bytes": 99724,
+        "sha256": "27c8abc6c457f2810804430a8fba128353978b47b5ce07babb3c20dfd1182054",
+        "url": "https://patents.google.com/patent/CN104191089B/zh",
+        "title": "CN104191089B - 基于激光器输出光束的三维动态聚焦标刻系统及方法 \n        - Google Patents",
+        "text_chars": 15141
+      },
+      {
+        "path": "01_移动透镜式与匹配光学\\R043_CN104191089B - 基于激光器输出光束的三维动态聚焦标刻系统及方法 - Google Patents.pdf",
+        "type": "PDF",
+        "pages": 10,
+        "bytes": 584149,
+        "sha256": "2473a2607fc7d551559e2a0c74cdcc32ce6ec4c861953a161254095fb0e959d2",
+        "url": "https://patentimages.storage.googleapis.com/c4/d2/82/29f16adf7208c2/CN104191089B.pdf",
+        "text_chars": 18,
+        "title": "",
+        "preview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://patents.google.com/patent/CN104191089B/zh",
+        "http": 200,
+        "final_url": "https://patents.google.com/patent/CN104191089B/zh",
+        "result": "网页"
+      },
+      {
+        "url": "https://patentimages.storage.googleapis.com/c4/d2/82/29f16adf7208c2/CN104191089B.pdf",
+        "http": 200,
+        "final_url": "https://patentimages.storage.googleapis.com/c4/d2/82/29f16adf7208c2/CN104191089B.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "title": "CN104191089B - 基于激光器输出光束的三维动态聚焦标刻系统及方法 - Google Patents",
+    "status": "PDF已下载"
+  },
+  {
+    "url": "https://patents.google.com/patent/CN112068309B/zh",
+    "category": "02_反射式与三振镜调焦",
+    "origins": [
+      "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+      "用户粘贴_激光动态聚焦深度调研.txt"
+    ],
+    "context": "\n- 原始入口：https://patents.google.com/patent/CN112068309B/zh",
+    "id": "R044",
+    "files": [
+      {
+        "path": "02_反射式与三振镜调焦\\R044_CN112068309B - 一种含双抛物面镜动态聚焦模块的三维扫描系统 _        - Google Patents.html",
+        "type": "HTML",
+        "bytes": 105448,
+        "sha256": "d4bbf83cc25a9c65022133de828f53f0354b2aa8efbc0d48ecbfe4a8ff324454",
+        "url": "https://patents.google.com/patent/CN112068309B/zh",
+        "title": "CN112068309B - 一种含双抛物面镜动态聚焦模块的三维扫描系统 \n        - Google Patents",
+        "text_chars": 13509
+      },
+      {
+        "path": "02_反射式与三振镜调焦\\R044_CN112068309B - 一种含双抛物面镜动态聚焦模块的三维扫描系统 - Google Patents.pdf",
+        "type": "PDF",
+        "pages": 13,
+        "bytes": 780201,
+        "sha256": "3cbc7a8430c97536b1510bfc3b6b6ee1d2a94c3413b77d3133ff9a3597847c31",
+        "url": "https://patentimages.storage.googleapis.com/a3/36/e8/2994880d96c00b/CN112068309B.pdf",
+        "text_chars": 7220,
+        "title": "",
+        "preview": "(19)中华人民共和国国家知识产权局\n(12)发明专利\n(10)授权公告号  \n(45)授权公告日 \n(21)申请号  202010936660.6\n(22)申请日 2020.09.08\n(65)同一申请的已公布的文献号  \n申请公布号  CN  112068309  A\n(43)申请公布日 2020.12.11\n(73)专利权人  清华大学\n地址  100084  北京市海淀区清华园1号\n(72)发明人  张震　余良　\n(74)专利代理机构  北京三聚阳光知识产权代理\n有限公司  11250\n代理人  张建纲\n(51)Int.Cl.\nG02B 26/10(2006.01)\nG02B 26/08(2006.01)\n审查员  孙钦青\n \n(54)发明名称\n一种含双抛物面镜动态聚焦模块的三维扫\n描系统\n(57)摘要\n本发明公开了一种含双抛物面镜动态聚焦\n模块的三维扫描系统， 所述的含双抛物面镜动态\n聚焦模块的三维扫描系统由双抛物面镜动态聚\n焦模块、 激光扩束和聚焦透镜组以及激光二维扫\n描模块组成。 本发明采用由双抛物面反射镜以及\n动平面反射镜组成的动态聚焦模块实现聚焦光\n斑沿光轴的位置变化",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://patents.google.com/patent/CN112068309B/zh",
+        "http": 200,
+        "final_url": "https://patents.google.com/patent/CN112068309B/zh",
+        "result": "网页"
+      },
+      {
+        "url": "https://patentimages.storage.googleapis.com/a3/36/e8/2994880d96c00b/CN112068309B.pdf",
+        "http": 200,
+        "final_url": "https://patentimages.storage.googleapis.com/a3/36/e8/2994880d96c00b/CN112068309B.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "title": "CN112068309B - 一种含双抛物面镜动态聚焦模块的三维扫描系统 - Google Patents",
+    "status": "PDF已下载"
+  },
+  {
+    "url": "https://patents.google.com/patent/CN222506659U/zh",
+    "category": "02_反射式与三振镜调焦",
+    "origins": [
+      "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+      "用户粘贴_激光动态聚焦深度调研.txt"
+    ],
+    "context": "\n- 原始入口：https://patents.google.com/patent/CN222506659U/zh",
+    "id": "R045",
+    "files": [
+      {
+        "path": "02_反射式与三振镜调焦\\R045_CN222506659U - 一种光学动态聚焦模组及三维扫描系统 _        - Google Patents.html",
+        "type": "HTML",
+        "bytes": 70884,
+        "sha256": "ac2e52145d79272990dc767b54acca16fdfc18b1e46a50b41946d1ba3a25231a",
+        "url": "https://patents.google.com/patent/CN222506659U/zh",
+        "title": "CN222506659U - 一种光学动态聚焦模组及三维扫描系统 \n        - Google Patents",
+        "text_chars": 13815
+      },
+      {
+        "path": "02_反射式与三振镜调焦\\R045_CN222506659U - 一种光学动态聚焦模组及三维扫描系统 - Google Patents.pdf",
+        "type": "PDF",
+        "pages": 19,
+        "bytes": 1363486,
+        "sha256": "e78dc393d267edc09d8c3684505f806a57a6d931e13a33036f0c7fd5f4f6f9ad",
+        "url": "https://patentimages.storage.googleapis.com/cb/64/1e/f8cd0ac7de351a/CN222506659U.pdf",
+        "text_chars": 11789,
+        "title": "",
+        "preview": "(19)国家知识产权局\n(12)实用新型专利\n(10)授权公告号 \n(45)授权公告日 \n(21)申请号 202421292289.4\n(22)申请日 2024.06.06\n(73)专利权人 苏州市捷恩泰科技有限公司\n地址 215000 江苏省苏州市高新区科技城\n培源路2号微系统园M3-103-1\n(72)发明人 陈泽华　\n(74)专利代理机构 苏州汇诚汇智专利代理事务\n所(普通合伙) 32623\n专利代理师 李旭\n(51)Int.Cl.\nG02B 26/10(2006.01)\nG02B 27/09(2006.01)\n(ESM)同样的发明创造已同日申请发明专利\n \n(54)实用新型名称\n一种光学动态聚焦模组及三维扫描系统\n(57)摘要\n本实用新型公开了一种光学动态聚焦模组\n及三维扫描系统包括光学组件，所述光学组件至\n少包括：对称布置的第一离轴抛物面镜和第二离\n轴抛物面镜，所述第一离轴抛物面镜的离轴抛物\n面与所述第二离轴抛物面镜的离轴抛物面相背\n设置；第一反射镜和第二反射镜 ，所述第一反射\n镜用于接收所述第一离轴抛物面镜折射的激光\n束，并朝向所述第二反射镜反射 ，所述第二反射\n镜能够将接",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://patents.google.com/patent/CN222506659U/zh",
+        "http": 200,
+        "final_url": "https://patents.google.com/patent/CN222506659U/zh",
+        "result": "网页"
+      },
+      {
+        "url": "https://patentimages.storage.googleapis.com/cb/64/1e/f8cd0ac7de351a/CN222506659U.pdf",
+        "http": 200,
+        "final_url": "https://patentimages.storage.googleapis.com/cb/64/1e/f8cd0ac7de351a/CN222506659U.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "title": "CN222506659U - 一种光学动态聚焦模组及三维扫描系统 - Google Patents",
+    "status": "PDF已下载"
+  },
+  {
+    "url": "https://patents.google.com/patent/CN222866943U/zh",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+      "用户粘贴_激光动态聚焦深度调研.txt",
+      "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md"
+    ],
+    "context": "\n- 原始入口：https://patents.google.com/patent/CN222866943U/zh",
+    "id": "R046",
+    "files": [
+      {
+        "path": "01_移动透镜式与匹配光学\\R046_CN222866943U - 一种动态聚焦光学系统 _        - Google Patents.html",
+        "type": "HTML",
+        "bytes": 49428,
+        "sha256": "df22bc97e2212361e4765d5f8a79eedd9b398e5446c86ccd7f26119e55b8f294",
+        "url": "https://patents.google.com/patent/CN222866943U/zh",
+        "title": "CN222866943U - 一种动态聚焦光学系统 \n        - Google Patents",
+        "text_chars": 7404
+      },
+      {
+        "path": "01_移动透镜式与匹配光学\\R046_CN222866943U - 一种动态聚焦光学系统 - Google Patents.pdf",
+        "type": "PDF",
+        "pages": 5,
+        "bytes": 363700,
+        "sha256": "9d9ae0bdc17fc60b8674b43fe02f811604e4d7d5b11a70d7e9d628767789a3bc",
+        "url": "https://patentimages.storage.googleapis.com/a3/0f/51/d8fdeed8947d7d/CN222866943U.pdf",
+        "text_chars": 3808,
+        "title": "",
+        "preview": "(19)国家知识产权局\n(12)实用新型专利\n(10)授权公告号 \n(45)授权公告日 \n(21)申请号 202422385342.1\n(22)申请日 2024.09.29\n(73)专利权人 苏州卡门哈斯激光技术有限责任\n公司\n地址 215000 江苏省苏州市中国(江苏)自\n由贸易试验区苏州片区苏州工业园区\n苏虹西路155号\n(72)发明人 张春艳　段奇　杨晓亮　徐海建　\n(74)专利代理机构 重庆天成卓越专利代理事务\n所(普通合伙) 50240\n专利代理师 谭小容\n(51)Int.Cl.\nG02B 7/10(2021.01)\nG02B 26/10(2006.01)\nG02B 27/09(2006.01)\n \n(54)实用新型名称\n一种动态聚焦光学系统\n(57)摘要\n本实用新型公开了一种动态聚焦光学系统 ，\n包括振镜模块及场镜模块， 还包括动态扩束 模\n块，动态扩束模块包括可驱动透镜和固定透镜，\n可驱动透镜和固定透镜均设于入射光线的光路\n上，可驱动透镜位于固定透镜的前方 ，且可驱动\n透镜能沿入射光线的光路前后移动，固定透镜固\n定不动，当可驱动透镜受驱后移时 ，入射光线发\n散，场镜模块聚",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://patents.google.com/patent/CN222866943U/zh",
+        "http": 200,
+        "final_url": "https://patents.google.com/patent/CN222866943U/zh",
+        "result": "网页"
+      },
+      {
+        "url": "https://patentimages.storage.googleapis.com/a3/0f/51/d8fdeed8947d7d/CN222866943U.pdf",
+        "http": 200,
+        "final_url": "https://patentimages.storage.googleapis.com/a3/0f/51/d8fdeed8947d7d/CN222866943U.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "title": "CN222866943U - 一种动态聚焦光学系统 - Google Patents",
+    "status": "PDF已下载"
+  },
+  {
+    "url": "https://patents.google.com/patent/CN120928524B/zh",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+      "用户粘贴_激光动态聚焦深度调研.txt"
+    ],
+    "context": "\n- 原始入口：https://patents.google.com/patent/CN120928524B/zh",
+    "id": "R047",
+    "files": [
+      {
+        "path": "01_移动透镜式与匹配光学\\R047_CN120928524B - 一种用于激光动态聚焦的驱动装置 _        - Google Patents.html",
+        "type": "HTML",
+        "bytes": 82494,
+        "sha256": "bcf493655121c21884664e7653073f010bda0798ab9a921169a75e10084b63c4",
+        "url": "https://patents.google.com/patent/CN120928524B/zh",
+        "title": "CN120928524B - 一种用于激光动态聚焦的驱动装置 \n        - Google Patents",
+        "text_chars": 16394
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://patents.google.com/patent/CN120928524B/zh",
+        "http": 200,
+        "final_url": "https://patents.google.com/patent/CN120928524B/zh",
+        "result": "网页"
+      }
+    ],
+    "title": "CN120928524B - 一种用于激光动态聚焦的驱动装置 - Google Patents",
+    "status": "专利全文网页已保存_无PDF附件"
+  },
+  {
+    "url": "https://patents.google.com/patent/CN121245003A/zh",
+    "category": "07_测高闭环_三轴同步与标定",
+    "origins": [
+      "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+      "用户粘贴_激光动态聚焦深度调研.txt",
+      "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md"
+    ],
+    "context": "\n- 原始入口：https://patents.google.com/patent/CN121245003A/en",
+    "id": "R048",
+    "files": [
+      {
+        "path": "07_测高闭环_三轴同步与标定\\R048_CN121245003A - 一种基于光学系统景深分层的动态对焦打印方法 _        - Google Patents.html",
+        "type": "HTML",
+        "bytes": 57782,
+        "sha256": "2c815b0dbead749e69ddccb68fedb25638696bf7454297b8ce6971a2864c2cbb",
+        "url": "https://patents.google.com/patent/CN121245003A/zh",
+        "title": "CN121245003A - 一种基于光学系统景深分层的动态对焦打印方法 \n        - Google Patents",
+        "text_chars": 8829
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://patents.google.com/patent/CN121245003A/zh",
+        "http": 200,
+        "final_url": "https://patents.google.com/patent/CN121245003A/zh",
+        "result": "网页"
+      }
+    ],
+    "title": "CN121245003A - 一种基于光学系统景深分层的动态对焦打印方法 - Google Patents",
+    "status": "专利全文网页已保存_无PDF附件"
+  },
+  {
+    "url": "https://www.patent9.com/search.aspx?c=Inventor&k=Zhou+He&t=fmzl",
+    "category": "09_艾思兰及相邻应用",
+    "origins": [
+      "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md"
+    ],
+    "context": "\n- [Patent9 艾思兰/何舟专利列表（含CN111130015A、CN111181117A）](https://www.patent9.com/search.aspx?c=Inventor&k=Zhou+He&t=fmzl)",
+    "id": "R049",
+    "files": [
+      {
+        "path": "09_艾思兰及相邻应用\\R049_Patent9专利在线.html",
+        "type": "HTML",
+        "bytes": 56398,
+        "sha256": "9cd271c0afb02e1f9d4cdb7ce36aa7d68bf011ffba2ecf15c656483dda655dfe",
+        "url": "https://www.patent9.com/search.aspx?c=Inventor&k=Zhou+He&t=fmzl",
+        "title": "Patent9专利在线",
+        "text_chars": 16963
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://www.patent9.com/search.aspx?c=Inventor&k=Zhou+He&t=fmzl",
+        "http": 200,
+        "final_url": "https://www.patent9.com/search.aspx?c=Inventor&k=Zhou+He&t=fmzl",
+        "result": "网页"
+      }
+    ],
+    "title": "Patent9专利在线",
+    "status": "网页已保存"
+  },
+  {
+    "url": "https://zhirongipp.oss-cn-hangzhou.aliyuncs.com/application/2025-03-17-10-43-29TOfCkMEo.pdf",
+    "category": "09_艾思兰及相邻应用",
+    "origins": [
+      "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md"
+    ],
+    "context": "\n- [CN116534252A 线索记录](https://zhirongipp.oss-cn-hangzhou.aliyuncs.com/application/2025-03-17-10-43-29TOfCkMEo.pdf)",
+    "id": "R050",
+    "files": [
+      {
+        "path": "09_艾思兰及相邻应用\\R050_艾思兰_CN116534252A_项目线索记录.pdf",
+        "type": "PDF",
+        "pages": 15,
+        "bytes": 459397,
+        "sha256": "6fc848dde89cea1506959f126f95342eeb101e36bd76843b7c51dbb611fa7a5a",
+        "url": "https://zhirongipp.oss-cn-hangzhou.aliyuncs.com/application/2025-03-17-10-43-29TOfCkMEo.pdf",
+        "text_chars": 40923,
+        "title": "",
+        "preview": "MEC边缘计算近期新增公开专利清单\n序号 标题 (中文) 申请人 公开（公告）号 申请号 专利类型\n1 一种最小化总成本的车载边缘服\n务器调度方法及系统 南京邮电大学 CN118590939A CN202410621505.3 发明专利\n2 一种面向AGV依赖型计算任务的\n主动迁移式卸载方法及系统 大连理工大学 CN119576500A CN202411725739.9 发明专利\n3 一种隧道交通流量及事故预测模\n型\n厦门凡想智能科技有限公司 CN119580507A CN202411781973.3 发明专利\n4 一种智能网联车云协同自动代客\n泊车系统及控制方法\n湖南湘江智车出行科技有限\n公司 CN119580526A CN202411801582.3 发明专利\n5 边缘计算系统无人机轨迹和用户\n卸载决策优化方法及装置 广东工业大学 CN119580535A CN202411790360.6 发明专利\n6\n一种最小化车载边缘服务器数量\n的车载边缘服务器调度方法、系\n统及存储介质\n南京邮电大学 CN118519769A CN202410620241.X 发明专利\n7 人脸图像数据分布式",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://zhirongipp.oss-cn-hangzhou.aliyuncs.com/application/2025-03-17-10-43-29TOfCkMEo.pdf",
+        "http": 200,
+        "final_url": "https://zhirongipp.oss-cn-hangzhou.aliyuncs.com/application/2025-03-17-10-43-29TOfCkMEo.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "status": "PDF已下载",
+    "title": "艾思兰_CN116534252A_项目线索记录"
+  },
+  {
+    "url": "https://www.oeshow.cn/storedetail/1087",
+    "category": "09_艾思兰及相邻应用",
+    "origins": [
+      "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md"
+    ],
+    "context": "\n- [艾思兰企业与产品介绍](https://www.oeshow.cn/storedetail/1087)",
+    "id": "R051",
+    "files": [
+      {
+        "path": "09_艾思兰及相邻应用\\R051_苏州艾思兰光电有限公司-光电汇.html",
+        "type": "HTML",
+        "bytes": 22734,
+        "sha256": "8cab2a048d75c32bec04175f02b5492d0fd365259fb682d4a47d7efe15e89367",
+        "url": "https://www.oeshow.cn/storedetail/1087",
+        "title": "苏州艾思兰光电有限公司-光电汇",
+        "text_chars": 966
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://www.oeshow.cn/storedetail/1087",
+        "http": 200,
+        "final_url": "https://www.oeshow.cn/storedetail/1087",
+        "result": "网页"
+      }
+    ],
+    "title": "苏州艾思兰光电有限公司-光电汇",
+    "status": "网页已保存"
+  },
+  {
+    "url": "https://gs.jiangnan.edu.cn/__local/A/D9/73/4082B9916C97698C2C9E277F7DF_FBB7F3C8_108FD4.pdf",
+    "category": "09_艾思兰及相邻应用",
+    "origins": [
+      "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md"
+    ],
+    "context": "\n- [江南大学项目清单](https://gs.jiangnan.edu.cn/__local/A/D9/73/4082B9916C97698C2C9E277F7DF_FBB7F3C8_108FD4.pdf)",
+    "id": "R052",
+    "files": [
+      {
+        "path": "09_艾思兰及相邻应用\\R052_江南大学项目清单_含艾思兰光束整形项目.pdf",
+        "type": "PDF",
+        "pages": 36,
+        "bytes": 1085396,
+        "sha256": "1dbdc8a2511e2f43978ea6802d2505e60f28a0bc8b0c84628fb2e26f8625f51e",
+        "url": "https://gs.jiangnan.edu.cn/__local/A/D9/73/4082B9916C97698C2C9E277F7DF_FBB7F3C8_108FD4.pdf",
+        "text_chars": 25369,
+        "title": "",
+        "preview": "\n\n \n  \n \n一、学位授权点建设进展情况 \n光学工程学术学位硕士点在 2021 年在学科梯队、学术研究、研\n究生培养、硬件条件等方面都得到了快速发展。 \n在学科方向布局方面， 继续聚焦食品光学检测、 生物光电传感以\n及新型光电材料与器件等领域，形成 5 个“轻工特色鲜明、交叉融合\n深入”的学科方向。在光学工程与食品及轻工等交叉领域，进行基础\n理论与关键技术探索， 做出了系列开拓性的工作， 为食品安全和绿色\n发展、 碳中和等重大国计民生问题的解决提供重要理论和关键技术支\n撑。 \n本年度获得省部级人才计划支持 1 人次； 引进教师2 人， 其中高\n级职称 2 人；自主培养副高职称 1 人。建有“光响应功能分子材料国\n际联合研究中心”国家级科研平台 1 个、省级教学科研平台 4 个和省\n级企业研究生工作站 11 个；取得系列具有国际领先水平的原创性学\n术成果。 \n本年度获得中国电子学会科技进步奖三等奖 1 项， 江苏省光伏科\n学技术奖三等奖 1 项；主持国家及省部级科研项目 14 项，发表高水\n平论文 109 篇；申请发明专利 20 项，其中国际专利 1 项；授权发明\n专利 12 项、 ",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://gs.jiangnan.edu.cn/__local/A/D9/73/4082B9916C97698C2C9E277F7DF_FBB7F3C8_108FD4.pdf",
+        "http": 200,
+        "final_url": "https://gs.jiangnan.edu.cn/__local/A/D9/73/4082B9916C97698C2C9E277F7DF_FBB7F3C8_108FD4.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "status": "PDF已下载",
+    "title": "江南大学项目清单_含艾思兰光束整形项目"
+  },
+  {
+    "url": "https://patents.google.com/patent/CN104191089A/zh",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md",
+      "苏州艾思兰_动态聚焦资料\\来源清单.csv"
+    ],
+    "context": "\n   [Google Patents](https://patents.google.com/patent/CN104191089A/en)",
+    "id": "R053",
+    "files": [
+      {
+        "path": "01_移动透镜式与匹配光学\\R053_CN104191089A - 基于激光器输出光束的三维动态聚焦标刻系统及方法 _        - Google Patents.html",
+        "type": "HTML",
+        "bytes": 117547,
+        "sha256": "41316c055abe4771b1695e6004cd9b4f8cb7638d7bcaa31208cbe27952cfcf35",
+        "url": "https://patents.google.com/patent/CN104191089A/zh",
+        "title": "CN104191089A - 基于激光器输出光束的三维动态聚焦标刻系统及方法 \n        - Google Patents",
+        "text_chars": 17028
+      },
+      {
+        "path": "01_移动透镜式与匹配光学\\R053_CN104191089A - 基于激光器输出光束的三维动态聚焦标刻系统及方法 - Google Patents.pdf",
+        "type": "PDF",
+        "pages": 10,
+        "bytes": 577283,
+        "sha256": "9ed82292c2e5d27bc533e73fbf1dc4cb6741dd1a2324e57b6517bd5dd60dad1d",
+        "url": "https://patentimages.storage.googleapis.com/88/36/85/d45978ac46e219/CN104191089A.pdf",
+        "text_chars": 18,
+        "title": "",
+        "preview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://patents.google.com/patent/CN104191089A/zh",
+        "http": 200,
+        "final_url": "https://patents.google.com/patent/CN104191089A/zh",
+        "result": "网页"
+      },
+      {
+        "url": "https://patentimages.storage.googleapis.com/88/36/85/d45978ac46e219/CN104191089A.pdf",
+        "http": 200,
+        "final_url": "https://patentimages.storage.googleapis.com/88/36/85/d45978ac46e219/CN104191089A.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "title": "CN104191089A - 基于激光器输出光束的三维动态聚焦标刻系统及方法 - Google Patents",
+    "status": "PDF已下载"
+  },
+  {
+    "url": "https://patents.google.com/patent/CN107315247B/zh",
+    "category": "07_测高闭环_三轴同步与标定",
+    "origins": [
+      "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md"
+    ],
+    "context": "\n   [Google Patents](https://patents.google.com/patent/CN107315247B/en)",
+    "id": "R054",
+    "files": [
+      {
+        "path": "07_测高闭环_三轴同步与标定\\R054_CN107315247B - 预览模块及动态聚焦激光振镜 _        - Google Patents.html",
+        "type": "HTML",
+        "bytes": 140214,
+        "sha256": "d2feb92abd995962d29eb66060ffeb5b1881b6bc2d460966b9c3f3a2251f962a",
+        "url": "https://patents.google.com/patent/CN107315247B/zh",
+        "title": "CN107315247B - 预览模块及动态聚焦激光振镜 \n        - Google Patents",
+        "text_chars": 20148
+      },
+      {
+        "path": "07_测高闭环_三轴同步与标定\\R054_CN107315247B - 预览模块及动态聚焦激光振镜 - Google Patents.pdf",
+        "type": "PDF",
+        "pages": 18,
+        "bytes": 1257472,
+        "sha256": "30144d05c1c558a529fa7e95413f31d8ebb471f772c7d5406837fb376175760d",
+        "url": "https://patentimages.storage.googleapis.com/8a/4b/62/5df454c0c3805c/CN107315247B.pdf",
+        "text_chars": 13422,
+        "title": "",
+        "preview": "(19)国家知识产权局\n(12)发明专利\n(10)授权公告号 \n(45)授权公告日 \n(21)申请号 201710739483.0\n(22)申请日 2017.08.24\n(65)同一申请的已公布的文献号 \n申请公布号 CN 107315247 A\n(43)申请公布日 2017.11.03\n(73)专利权人 江苏金海创科技有限公司\n地址 212000 江苏省镇江市新区丁卯经十\n五路99号29幢二楼\n(72)发明人 李宝良　崔振华　\n(74)专利代理机构 北京超凡志成知识产权代理\n事务所(普通合伙) 11371\n专利代理师 史明罡\n(51)Int.Cl.\nG02B 26/08(2006.01)\nG02B 26/10(2006.01)\n审查员 周峰\n \n(54)发明名称\n预览模块及动态聚焦激光振镜\n(57)摘要\n本发明涉及振镜技术领域，尤其是涉及一种\n预览模块及动态聚焦激光振镜。以缓解现有技术\n中存在的光损较大以 及占用空间较大的技术问\n题。包括：第一驱动机构、第一传动机构和摇臂 ；\n摇臂的侧面设置有限位槽、自由端设置有红光发\n射装置；第一传动机构包括摆杆和连接件 ，摆杆\n上设置有第一安装孔",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://patents.google.com/patent/CN107315247B/zh",
+        "http": 200,
+        "final_url": "https://patents.google.com/patent/CN107315247B/zh",
+        "result": "网页"
+      },
+      {
+        "url": "https://patentimages.storage.googleapis.com/8a/4b/62/5df454c0c3805c/CN107315247B.pdf",
+        "http": 200,
+        "final_url": "https://patentimages.storage.googleapis.com/8a/4b/62/5df454c0c3805c/CN107315247B.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "title": "CN107315247B - 预览模块及动态聚焦激光振镜 - Google Patents",
+    "status": "PDF已下载"
+  },
+  {
+    "url": "https://orca.cardiff.ac.uk/id/eprint/114207/",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md",
+      "苏州艾思兰_动态聚焦资料\\来源清单.csv"
+    ],
+    "context": "\n- [ORCA：Experimental investigation of 3D scanheads](https://orca.cardiff.ac.uk/id/eprint/114207/)",
+    "id": "R055",
+    "files": [],
+    "attempts": [
+      {
+        "url": "https://orca.cardiff.ac.uk/id/eprint/114207/",
+        "http": 403,
+        "final_url": "https://orca.cardiff.ac.uk/id/eprint/114207/",
+        "error": "403 Client Error: Forbidden for url: https://orca.cardiff.ac.uk/id/eprint/114207/"
+      }
+    ],
+    "status": "未获取",
+    "title": "Experimental investigation of 3D scanheads_ORCA机构库入口"
+  },
+  {
+    "url": "https://www.jgjs.net.cn/en/article/doi/10.7510/jgjs.issn.1001-3806.2016.04.002",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md"
+    ],
+    "context": "\n- [Journal of Optics：large scale 3-D laser dynamic scanning](https://www.jgjs.net.cn/en/article/doi/10.7510/jgjs.issn.1001-3806.2016.04.002)",
+    "id": "R056",
+    "files": [],
+    "attempts": [
+      {
+        "url": "https://www.jgjs.net.cn/en/article/doi/10.7510/jgjs.issn.1001-3806.2016.04.002",
+        "error": "HTTPSConnectionPool(host='www.jgjs.net.cn', port=443): Max retries exceeded with url: /en/article/doi/10.7510/jgjs.issn.1001-3806.2016.04.002 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1010)')))"
+      }
+    ],
+    "status": "全文已由用户补齐 → U008",
+    "title": "激光大尺度3维动态聚焦扫描加工系统研究_2016",
+    "resolved_by": "U008",
+    "resolution_note": "此前网络获取未完成；现已由用户提供正式版全文补齐。保留历史请求记录。"
+  },
+  {
+    "url": "https://www.osa-opn.org/home/optics_letters/abstract.cfm?uri=ol-48-24-6496",
+    "category": "02_反射式与三振镜调焦",
+    "origins": [
+      "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md"
+    ],
+    "context": "\n- [Optics Letters：reflective dynamic focusing range](https://www.osa-opn.org/home/optics_letters/abstract.cfm?uri=ol-48-24-6496)",
+    "id": "R057",
+    "files": [],
+    "attempts": [
+      {
+        "url": "https://www.osa-opn.org/home/optics_letters/abstract.cfm?uri=ol-48-24-6496",
+        "http": 404,
+        "final_url": "https://www.optica-opn.org/home/optics_letters/abstract.cfm?uri=ol-48-24-6496",
+        "error": "404 Client Error: Not Found for url: https://www.optica-opn.org/home/optics_letters/abstract.cfm?uri=ol-48-24-6496"
+      }
+    ],
+    "status": "全文已由用户补齐 → U001",
+    "title": "反射式扫描范围扩展_旧版失效入口",
+    "resolved_by": "U001",
+    "resolution_note": "此前网络获取未完成；现已由用户提供正式版全文补齐。保留历史请求记录。"
+  },
+  {
+    "url": "https://www.sciencedirect.com/science/article/pii/S0890695525000653",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md"
+    ],
+    "context": "\n- [ScienceDirect：model-driven 3D focus shifting](https://www.sciencedirect.com/science/article/pii/S0890695525000653)",
+    "id": "R058",
+    "files": [],
+    "attempts": [
+      {
+        "url": "https://www.sciencedirect.com/science/article/pii/S0890695525000653",
+        "http": 403,
+        "final_url": "https://www.sciencedirect.com/science/article/pii/S0890695525000653",
+        "error": "403 Client Error: Forbidden for url: https://www.sciencedirect.com/science/article/pii/S0890695525000653"
+      }
+    ],
+    "status": "全文已由用户补齐 → U006",
+    "title": "Model-driven 3D laser focus shifting_2025_出版社入口",
+    "resolved_by": "U006",
+    "resolution_note": "此前网络获取未完成；现已由用户提供正式版全文补齐。保留历史请求记录。"
+  },
+  {
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11555065/",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md",
+      "苏州艾思兰_动态聚焦资料\\来源清单.csv"
+    ],
+    "context": "\n1. **Sino-Galvo（苏州/中国）3D动态聚焦振镜**：公开论文案例使用FL8220-3D-500进行3D随机访问共焦显微；适合作为集成式3D扫描头对标。 [论文中的设备记录](https://pmc.ncbi.nlm.nih.gov/articles/PMC11555065/)",
+    "id": "R059",
+    "files": [],
+    "attempts": [
+      {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11555065/",
+        "http": 200,
+        "final_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11555065/",
+        "error": "验证/错误页面或正文过短: Checking your browser - reCAPTCHA"
+      }
+    ],
+    "status": "未获取",
+    "title": "Three-dimensional random-access confocal microscopy_2024"
+  },
+  {
+    "url": "https://www.scanlab.de/en/products/scan-systems",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md",
+      "苏州艾思兰_动态聚焦资料\\来源清单.csv"
+    ],
+    "context": "\n2. **Scanlab intelliSCAN / varioSCAN系列**：典型振镜扫描头与动态聚焦模块组合，面向激光打标、焊接和3D加工。建议采购时核实具体波长、口径、Z行程和控制协议。 [厂商官网](https://www.scanlab.de/en/products/scan-systems)",
+    "id": "R060",
+    "files": [
+      {
+        "path": "01_移动透镜式与匹配光学\\R060_Scan Systems _ Scanlab.html",
+        "type": "HTML",
+        "bytes": 144029,
+        "sha256": "5bd67ceb54a5caf463b3759bf389ae1b1018877a27feb25aba637460fe93be07",
+        "url": "https://www.scanlab.de/en/products/scan-systems",
+        "title": "Scan Systems | Scanlab",
+        "text_chars": 6680
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://www.scanlab.de/en/products/scan-systems",
+        "http": 200,
+        "final_url": "https://www.scanlab.de/en/products/scan-systems",
+        "result": "网页"
+      }
+    ],
+    "title": "Scan Systems | Scanlab",
+    "status": "网页已保存"
+  },
+  {
+    "url": "https://www.aerotech.com/product-category/laser-processing/",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md",
+      "苏州艾思兰_动态聚焦资料\\来源清单.csv"
+    ],
+    "context": "\n3. **Aerotech AGV/OptoMotive 3D扫描方案**：提供高速扫描与三维加工平台，适合精密制造集成评估。 [产品入口](https://www.aerotech.com/product-category/laser-processing/)",
+    "id": "R061",
+    "files": [],
+    "attempts": [
+      {
+        "url": "https://www.aerotech.com/product-category/laser-processing/",
+        "http": 200,
+        "final_url": "https://www.aerotech.com/wp-content/uploads/2026/05/Laser-Processing.jpg",
+        "result": "网页"
+      },
+      {
+        "url": "https://www.aerotech.com/wp-content/uploads/2026/05/Laser-Processing.jpg",
+        "error": "终检排除：非网页内容"
+      }
+    ],
+    "title": "Aerotech激光加工产品总入口_返回异常内容",
+    "status": "未获取"
+  },
+  {
+    "url": "https://patents.google.com/patent/CN110883020A/zh",
+    "category": "09_艾思兰及相邻应用",
+    "origins": [
+      "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md"
+    ],
+    "context": "原文提到的专利号，补全公开文本入口；标题及相关性待与原件核对",
+    "id": "R062",
+    "files": [
+      {
+        "path": "09_艾思兰及相邻应用\\R062_CN110883020A - 清模机 _        - Google Patents.html",
+        "type": "HTML",
+        "bytes": 254839,
+        "sha256": "e5ad33f5110c1d7a0389d790200991bf30b3c74ade90fd3d0cef897f1b502050",
+        "url": "https://patents.google.com/patent/CN110883020A/zh",
+        "title": "CN110883020A - 清模机 \n        - Google Patents",
+        "text_chars": 26466
+      },
+      {
+        "path": "09_艾思兰及相邻应用\\R062_CN110883020A - 清模机 - Google Patents.pdf",
+        "type": "PDF",
+        "pages": 37,
+        "bytes": 2543523,
+        "sha256": "00fae1f074ddda4e4f2182e2211e53ed7549e18b1cd400bc1dadf6ad560dafe0",
+        "url": "https://patentimages.storage.googleapis.com/65/26/44/e8e584f87e3357/CN110883020A.pdf",
+        "text_chars": 21844,
+        "title": "",
+        "preview": "(19)中华人民共和国国家知识产权局\n(12)发明专利申请\n(10)申请公布号 \n(43)申请公布日 \n(21)申请号 201911357217.7\n(22)申请日 2019.12.25\n(71)申请人 钛昇科技股份有限公司\n地址 中国台湾高雄市\n(72)发明人 陈又田　张境晃　\n(74)专利代理机构 北京戈程知识产权代理有限\n公司 11314\n代理人 程伟　王锦阳\n(51)Int.Cl.\nB08B 7/00(2006.01)\nB08B 13/00(2006.01)\nB29C 33/72(2006.01)\n \n(54)发明名称\n清模机\n(57)摘要\n本发明涉及一种清模机， 其能伸入模塑成型\n设备中对模具执行清模作业， 该清模机于其移动\n基座上设置承载台， 承载台上设置激光装置与驱\n动激光装置的X轴向驱动装置， 于承载台伸出移\n动基座一侧的工作区段的两侧各设有载台固定\n装置， 且设有控制装置控制激光装置、 X轴向驱动\n装置及载台固定装置的动作， 该清模机能以伸出\n移动基座外的承载台伸入开模状态的上模与下\n模之间的预定位置， 在承载台通过受控的载台固\n定装置固接模具两侧的横向导轨呈稳固定位",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://patents.google.com/patent/CN110883020A/zh",
+        "http": 200,
+        "final_url": "https://patents.google.com/patent/CN110883020A/zh",
+        "result": "网页"
+      },
+      {
+        "url": "https://patentimages.storage.googleapis.com/65/26/44/e8e584f87e3357/CN110883020A.pdf",
+        "http": 200,
+        "final_url": "https://patentimages.storage.googleapis.com/65/26/44/e8e584f87e3357/CN110883020A.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "title": "CN110883020A - 清模机 - Google Patents",
+    "status": "PDF已下载"
+  },
+  {
+    "url": "https://patents.google.com/patent/CN116373177B/zh",
+    "category": "09_艾思兰及相邻应用",
+    "origins": [
+      "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md"
+    ],
+    "context": "原文提到的专利号，补全公开文本入口；标题及相关性待与原件核对",
+    "id": "R063",
+    "files": [
+      {
+        "path": "09_艾思兰及相邻应用\\R063_CN116373177B - 激光洗模机 _        - Google Patents.html",
+        "type": "HTML",
+        "bytes": 148552,
+        "sha256": "126711493272e0381c9cd0cf634c00c1230ef0712081302c1b7de577d24864c7",
+        "url": "https://patents.google.com/patent/CN116373177B/zh",
+        "title": "CN116373177B - 激光洗模机 \n        - Google Patents",
+        "text_chars": 27046
+      },
+      {
+        "path": "09_艾思兰及相邻应用\\R063_CN116373177B - 激光洗模机 - Google Patents.pdf",
+        "type": "PDF",
+        "pages": 22,
+        "bytes": 2093421,
+        "sha256": "7c9180515c8daefa6b341a8c7713d28fb6fe8ca4c2598608a8d33b560bf296c4",
+        "url": "https://patentimages.storage.googleapis.com/07/0e/7c/3f060d3ce9ea87/CN116373177B.pdf",
+        "text_chars": 18370,
+        "title": "",
+        "preview": "(19)国家知识产权局\n(12)发明专利\n(10)授权公告号 \n(45)授权公告日 \n(21)申请号 202310358665.9\n(22)申请日 2023.04.06\n(65)同一申请的已公布的文献号 \n申请公布号 CN 116373177 A\n(43)申请公布日 2023.07.04\n(73)专利权人 苏州艾思兰光电有限公司\n地址 215024 江苏省苏州市工业园区金芳\n路18号东坊创智园地C栋2楼\n(72)发明人 周倩　许路　杨忠英　王建波　\n(74)专利代理机构 苏州谨和知识产权代理事务\n所(特殊普通合伙) 32295\n专利代理师 许冬莹\n(51)Int.Cl.\nB29C 33/72(2006.01)\n(56)对比文件\nCN 110000111  A,2019.07.12\nCN 101320192 A, 2008.12.10\nCN 110883020 A, 2020.03.17\nCN 115007560 A,2022. 09.06\nCN 209775802  U,2019.12.13\nCN 212883943 U, 2021.04.06\nCN 215508159  U,2022",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://patents.google.com/patent/CN116373177B/zh",
+        "http": 200,
+        "final_url": "https://patents.google.com/patent/CN116373177B/zh",
+        "result": "网页"
+      },
+      {
+        "url": "https://patentimages.storage.googleapis.com/07/0e/7c/3f060d3ce9ea87/CN116373177B.pdf",
+        "http": 200,
+        "final_url": "https://patentimages.storage.googleapis.com/07/0e/7c/3f060d3ce9ea87/CN116373177B.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "title": "CN116373177B - 激光洗模机 - Google Patents",
+    "status": "PDF已下载"
+  },
+  {
+    "url": "https://patents.google.com/patent/CN114054972A/zh",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md"
+    ],
+    "context": "原文提到的专利号，补全公开文本入口；标题及相关性待与原件核对",
+    "id": "R064",
+    "files": [
+      {
+        "path": "01_移动透镜式与匹配光学\\R064_CN114054972A - 一种动态聚焦激光切割方法与装置 _        - Google Patents.html",
+        "type": "HTML",
+        "bytes": 131909,
+        "sha256": "383cb429dd551040c00d6e7952d03dac385d6aa4dce5f7515722fce9964547b5",
+        "url": "https://patents.google.com/patent/CN114054972A/zh",
+        "title": "CN114054972A - 一种动态聚焦激光切割方法与装置 \n        - Google Patents",
+        "text_chars": 18620
+      },
+      {
+        "path": "01_移动透镜式与匹配光学\\R064_CN114054972A - 一种动态聚焦激光切割方法与装置 - Google Patents.pdf",
+        "type": "PDF",
+        "pages": 13,
+        "bytes": 676980,
+        "sha256": "b6635b29d029290d3e7f7056dff326f9b8128b253b89538e08ecb53d0b2d2e43",
+        "url": "https://patentimages.storage.googleapis.com/d5/8f/8a/05deb6bcb9d1dc/CN114054972A.pdf",
+        "text_chars": 9362,
+        "title": "",
+        "preview": "(19)中华人民共和国国家知识产权局\n(12)发明专利申请\n(10)申请公布号  \n(43)申请公布日 \n(21)申请号  202011492509.4\n(22)申请日 2020.12.17\n(71)申请人  帝尔激光科技 （无锡） 有限公司\n地址  214000  江苏省无锡市锡山区锡山经\n济技术开发区凤威路2号\n(72)发明人  程晓伟　李志刚　朱凡　陆红艳　\n张松　朱俊　\n(74)专利代理机构  湖北武汉永嘉专利代理有限\n公司  42102\n代理人  王丹\n(51)Int.Cl.\nB23K 26/38(2014.01)\nB23K 26/046(2014.01)\n \n(54)发明名称\n一种动态聚焦激光切割方法与装置\n(57)摘要\n本发明提供一种动态聚焦激光切割方法与\n装置， 采用一个激光， 调整所述激光的发散角， 或\n者调整待加工产品表面与激光加工模组的相对\n距离， 使得激光聚焦后在待加工产品表面形成第\n一光斑或第二光斑， 采用第一光斑扫描预定切割\n线上的至少2个点， 形成诱导切割槽； 采用第二光\n斑沿预定切割线进行扫描， 形成热应力， 使待加\n工产品沿预定切割线断裂； 预定切割线",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://patents.google.com/patent/CN114054972A/zh",
+        "http": 200,
+        "final_url": "https://patents.google.com/patent/CN114054972A/zh",
+        "result": "网页"
+      },
+      {
+        "url": "https://patentimages.storage.googleapis.com/d5/8f/8a/05deb6bcb9d1dc/CN114054972A.pdf",
+        "http": 200,
+        "final_url": "https://patentimages.storage.googleapis.com/d5/8f/8a/05deb6bcb9d1dc/CN114054972A.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "title": "CN114054972A - 一种动态聚焦激光切割方法与装置 - Google Patents",
+    "status": "PDF已下载"
+  },
+  {
+    "url": "https://patents.google.com/patent/CN116534252A/zh",
+    "category": "09_艾思兰及相邻应用",
+    "origins": [
+      "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md"
+    ],
+    "context": "原文提到的专利号，补全公开文本入口；标题及相关性待与原件核对",
+    "id": "R065",
+    "files": [
+      {
+        "path": "09_艾思兰及相邻应用\\R065_CN116534252A - 一种基于ai识别的无人机激光障碍物清除装置及方法 _        - Google Patents.html",
+        "type": "HTML",
+        "bytes": 96164,
+        "sha256": "aa7db05a0bdc0d37ed3a95c2317a9392eb943c3891d6308d35f93b475d402545",
+        "url": "https://patents.google.com/patent/CN116534252A/zh",
+        "title": "CN116534252A - 一种基于ai识别的无人机激光障碍物清除装置及方法 \n        - Google Patents",
+        "text_chars": 17964
+      },
+      {
+        "path": "09_艾思兰及相邻应用\\R065_CN116534252A - 一种基于ai识别的无人机激光障碍物清除装置及方法 - Google Patents.pdf",
+        "type": "PDF",
+        "pages": 11,
+        "bytes": 582748,
+        "sha256": "61bddb19eae78e0432dc5b1883b092263007aedc66bb2878e2120e8667268607",
+        "url": "https://patentimages.storage.googleapis.com/50/0c/b6/3bdea5d9398cf5/CN116534252A.pdf",
+        "text_chars": 9737,
+        "title": "",
+        "preview": "(19)国家知识产权局\n(12)发明专利申请\n(10)申请公布号 \n(43)申请公布日 \n(21)申请号 202310506672.9\n(22)申请日 2023.05.08\n(71)申请人 苏州艾思兰光电有限公司\n地址 215000 江苏省苏州市苏州工业园区\n金路18号，东坊创智园地c栋2楼\n(72)发明人 周倩　杨忠英　赵凌曦　丁志伟　\n(74)专利代理机构 北京中睿智恒知识产权代理\n事务所(普通合伙) 16025\n专利代理师 卢娇娇\n(51)Int.Cl.\nB64C 39/02(2023.01)\nH04L 67/10(2022.01)\nH02G 1/02(2006.01)\nG06V 20/17(2022.01)\nG06V 10/82(2022.01)\nG06N 3/0464(2023.01)\nB23K 26/38(2014.01)\nB23K 26/70(2014.01)\nB64D 47/00(2006.01)\nB64U 10/10(2023.01)\nB64U 20/80(2023.01)\nB64U 101/00(2023.01)\nB64U 101/30(2023.01)\n \n(54",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://patents.google.com/patent/CN116534252A/zh",
+        "http": 200,
+        "final_url": "https://patents.google.com/patent/CN116534252A/zh",
+        "result": "网页"
+      },
+      {
+        "url": "https://patentimages.storage.googleapis.com/50/0c/b6/3bdea5d9398cf5/CN116534252A.pdf",
+        "http": 200,
+        "final_url": "https://patentimages.storage.googleapis.com/50/0c/b6/3bdea5d9398cf5/CN116534252A.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "title": "CN116534252A - 一种基于ai识别的无人机激光障碍物清除装置及方法 - Google Patents",
+    "status": "PDF已下载"
+  },
+  {
+    "url": "https://www.scanlab.de/sites/default/files/2021-11/varioSCANII_en.pdf",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "苏州艾思兰_动态聚焦资料\\设备自研方案与选型表.md"
+    ],
+    "context": "\n- [SCANLAB varioSCAN II PDF](https://www.scanlab.de/sites/default/files/2021-11/varioSCANII_en.pdf)：包含焦移、口径、行程和误差等参数线索。",
+    "id": "R066",
+    "files": [
+      {
+        "path": "01_移动透镜式与匹配光学\\R029_varioSCAN II _ Scanlab.html",
+        "type": "HTML",
+        "bytes": 105938,
+        "sha256": "9aec6c3a55b2f6a0d63ee39816b00c7e19ddf7c987096c67551d20e0869d8271",
+        "url": "https://www.scanlab.de/en/products/z-axes-3d-add-ons/varioscan-ii",
+        "title": "varioSCAN II | Scanlab",
+        "text_chars": 5374,
+        "duplicate": true
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://www.scanlab.de/sites/default/files/2021-11/varioSCANII_en.pdf",
+        "http": 200,
+        "final_url": "https://www.scanlab.de/en/products/z-axes-3d-add-ons/varioscan-ii",
+        "result": "网页"
+      }
+    ],
+    "title": "SCANLAB_varioSCAN_II旧PDF地址_已重定向至产品网页",
+    "status": "网页已保存"
+  },
+  {
+    "url": "https://haaslti.com/products/tailored-solutions/dynamic-focus-system",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "苏州艾思兰_动态聚焦资料\\设备自研方案与选型表.md"
+    ],
+    "context": "\n- [Haas Laser Technologies Dynamic Focus](https://haaslti.com/products/tailored-solutions/dynamic-focus-system)：独立调焦透镜、DC伺服和加工头集成方案。",
+    "id": "R067",
+    "files": [
+      {
+        "path": "01_移动透镜式与匹配光学\\R067_Dynamic Focus System.html",
+        "type": "HTML",
+        "bytes": 66659,
+        "sha256": "74867794da884d2c590cd4e60ae7174a433b63a3315264af58de267c5047a927",
+        "url": "https://haaslti.com/products/tailored-solutions/dynamic-focus-system",
+        "title": "Dynamic Focus System",
+        "text_chars": 4798
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://haaslti.com/products/tailored-solutions/dynamic-focus-system",
+        "http": 200,
+        "final_url": "https://haaslti.com/products/tailored-solutions/dynamic-focus-system",
+        "result": "网页"
+      }
+    ],
+    "title": "Dynamic Focus System",
+    "status": "网页已保存"
+  },
+  {
+    "url": "https://www.scanneroptics.com/products/3d-laser-scanning-head/",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "苏州艾思兰_动态聚焦资料\\设备自研方案与选型表.md"
+    ],
+    "context": "\n- [Scanner Optics 3D扫描头](https://www.scanneroptics.com/products/3d-laser-scanning-head/)：3D扫描头和动态轴的产品参数线索。",
+    "id": "R068",
+    "files": [
+      {
+        "path": "01_移动透镜式与匹配光学\\R068_3D Laser Scanning Head.html",
+        "type": "HTML",
+        "bytes": 85587,
+        "sha256": "5116c1e11d331044741b28b20e58ecc13ff31d38dc59acbb7620f7382d84f40e",
+        "url": "https://www.scanneroptics.com/products/3d-laser-scanning-head/",
+        "title": "3D Laser Scanning Head",
+        "text_chars": 7519
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://www.scanneroptics.com/products/3d-laser-scanning-head/",
+        "http": 200,
+        "final_url": "https://www.scanneroptics.com/products/3d-laser-scanning-head/",
+        "result": "网页"
+      }
+    ],
+    "title": "3D Laser Scanning Head",
+    "status": "网页已保存"
+  },
+  {
+    "url": "https://research.birmingham.ac.uk/en/publications/experimental-investigation-of-3d-scanheads-for-laser-micro-proces/",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "用户粘贴_激光动态聚焦深度调研.txt"
+    ],
+    "context": "\n| 《Experimental investigation of 3D scanheads…》是2018年论文 | 正式发表年份是**2016年**。另外，三振镜高速扫描论文虽然DOI含2024，期刊卷期是**2025年2月**。[University of Birmingham](https://research.birmingham.ac.uk/en/publications/experimental-investigation-of-3d-scanheads-for-laser-micro-proces/) |\r",
+    "id": "R069",
+    "files": [
+      {
+        "path": "01_移动透镜式与匹配光学\\R069_Experimental Investigation of 3D Scanheads for Laser Micro Processing_      -  University of Birmingham.html",
+        "type": "HTML",
+        "bytes": 49987,
+        "sha256": "e4cb6bf5b1138e545143d3b053c81bcfff4a5c4472e458f5df8347a521e3a942",
+        "url": "https://research.birmingham.ac.uk/en/publications/experimental-investigation-of-3d-scanheads-for-laser-micro-proces/",
+        "title": "Experimental Investigation of 3D Scanheads for Laser Micro Processing\n      -  University of Birmingham",
+        "text_chars": 9299
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://research.birmingham.ac.uk/en/publications/experimental-investigation-of-3d-scanheads-for-laser-micro-proces/",
+        "http": 200,
+        "final_url": "https://research.birmingham.ac.uk/en/publications/experimental-investigation-of-3d-scanheads-for-laser-micro-proces/",
+        "result": "网页"
+      },
+      {
+        "url": "https://research.birmingham.ac.uk/files/25552450/2016_Experimental_Investigation_of_3D_Scanheads_for_Laser_Micro_Processing_FINAL.pdf",
+        "http": 403,
+        "final_url": "https://research.birmingham.ac.uk/files/25552450/2016_Experimental_Investigation_of_3D_Scanheads_for_Laser_Micro_Processing_FINAL.pdf",
+        "error": "403 Client Error: Forbidden for url: https://research.birmingham.ac.uk/files/25552450/2016_Experimental_Investigation_of_3D_Scanheads_for_Laser_Micro_Processing_FINAL.pdf"
+      }
+    ],
+    "title": "Experimental Investigation of 3D Scanheads for Laser Micro Processing - University of Birmingham",
+    "status": "网页已保存"
+  },
+  {
+    "url": "https://scholars.cityu.edu.hk/en/publications/single-lens-dynamic-z-scanning-for-simultaneous-in-situ-position-/",
+    "category": "04_TAG声学调焦",
+    "origins": [
+      "用户粘贴_激光动态聚焦深度调研.txt"
+    ],
+    "context": "\n探测光束和加工光束共用动态扫焦元件：通过反射信号确定表面高度，再在相应相位触发加工光。论文演示140–350 kHz动态表面检测，最低线性误差1.10%。[CityUHK Scholars](https://scholars.cityu.edu.hk/en/publications/single-lens-dynamic-z-scanning-for-simultaneous-in-situ-position-/)\r",
+    "id": "R070",
+    "files": [
+      {
+        "path": "04_TAG声学调焦\\R070_Single-lens dynamic z-scanning for simultaneous in situ position detection and laser processing focus con.html",
+        "type": "HTML",
+        "bytes": 56069,
+        "sha256": "ae1bc39856030eb4e59be5abe4398fc3c6dfaa789e530e52fc6b950ca00c5f89",
+        "url": "https://scholars.cityu.edu.hk/en/publications/single-lens-dynamic-z-scanning-for-simultaneous-in-situ-position-/",
+        "title": "Single-lens dynamic z-scanning for simultaneous in situ position detection and laser processing focus control\n      -  CityUHK Scholars",
+        "text_chars": 10816
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://scholars.cityu.edu.hk/en/publications/single-lens-dynamic-z-scanning-for-simultaneous-in-situ-position-/",
+        "http": 200,
+        "final_url": "https://scholars.cityu.edu.hk/en/publications/single-lens-dynamic-z-scanning-for-simultaneous-in-situ-position-/",
+        "result": "网页"
+      },
+      {
+        "url": "https://scholars.cityu.edu.hk/files/174965038/173284711.pdf",
+        "http": 403,
+        "final_url": "https://scholars.cityu.edu.hk/files/174965038/173284711.pdf",
+        "error": "403 Client Error: Forbidden for url: https://scholars.cityu.edu.hk/files/174965038/173284711.pdf"
+      }
+    ],
+    "title": "Single-lens dynamic z-scanning for simultaneous in situ position detection and laser processing focus control - CityUHK Scholars",
+    "status": "网页已保存"
+  },
+  {
+    "id": "S001",
+    "url": "https://diposit.ub.edu/dspace/bitstream/2445/192696/1/704304.pdf",
+    "category": "08_综述与光学基础",
+    "origins": [
+      "补充检索_原文提及条目及有效替代入口"
+    ],
+    "context": "Variable optical elements for fast focus control_机构库作者稿",
+    "title": "Variable optical elements for fast focus control_机构库作者稿",
+    "files": [],
+    "attempts": [
+      {
+        "url": "https://diposit.ub.edu/dspace/bitstream/2445/192696/1/704304.pdf",
+        "http": 404,
+        "final_url": "https://diposit.ub.edu/dspace/bitstream/2445/192696/1/704304.pdf",
+        "error": "404 Client Error: Not found for url: https://diposit.ub.edu/dspace/bitstream/2445/192696/1/704304.pdf"
+      }
+    ],
+    "status": "未获取"
+  },
+  {
+    "id": "S002",
+    "url": "https://papers.ssrn.com/sol3/Delivery.cfm/23961627-8231-4cfa-adf1-3947f632d984-MECA.pdf?abstractid=4733403&mirid=1",
+    "category": "02_反射式与三振镜调焦",
+    "origins": [
+      "补充检索_原文提及条目及有效替代入口"
+    ],
+    "context": "三振镜光学设计_SSRN预印本_2024",
+    "title": "三振镜光学设计_SSRN预印本_2024",
+    "files": [],
+    "attempts": [
+      {
+        "url": "https://papers.ssrn.com/sol3/Delivery.cfm/23961627-8231-4cfa-adf1-3947f632d984-MECA.pdf?abstractid=4733403&mirid=1",
+        "http": 403,
+        "final_url": "https://papers.ssrn.com/sol3/Delivery.cfm/23961627-8231-4cfa-adf1-3947f632d984-MECA.pdf?abstractid=4733403&mirid=1",
+        "error": "403 Client Error: Forbidden for url: https://papers.ssrn.com/sol3/Delivery.cfm/23961627-8231-4cfa-adf1-3947f632d984-MECA.pdf?abstractid=4733403&mirid=1"
+      }
+    ],
+    "status": "全文已由用户补齐 → U004",
+    "resolved_by": "U004",
+    "resolution_note": "此前网络获取未完成；现已由用户提供正式版全文补齐。保留历史请求记录。"
+  },
+  {
+    "id": "S003",
+    "url": "https://opg.optica.org/oe/viewmedia.cfm?seq=0&uri=oe-31-1-673",
+    "category": "02_反射式与三振镜调焦",
+    "origins": [
+      "补充检索_原文提及条目及有效替代入口"
+    ],
+    "context": "振镜驱动动态聚焦_2023_出版社PDF入口",
+    "title": "振镜驱动动态聚焦_2023_出版社PDF入口",
+    "files": [],
+    "attempts": [
+      {
+        "url": "https://opg.optica.org/oe/viewmedia.cfm?seq=0&uri=oe-31-1-673",
+        "http": 200,
+        "final_url": "https://validate.perfdrive.com/?ssa=08e8669c-4581-075f-d3cf-25f6447bfea7&ssb=05079284888&ssc=https%3A%2F%2Fopg.optica.org%2Foe%2Fviewmedia.cfm%3Fseq%3D0%26uri%3Doe-31-1-673&ssi=737c3580-d3hy-3429-b40a-171439c13392&ssk=botmanager_support@radware.com&ssm=33128662603976319108714986774373&ssn=38c6caf8e3da5f9216d88ae55c99ef06262767468515-0ae6-f461-495482&sso=422cf61-40a6-18460a9aff471d8e4c60c94262d5d28e39ad3e6323a1b80c&ssp=26442588641793686163179364737379506&ssq=53260887601182529505176011012749606097794&ssr=MjMuMTcyLjIwMC44OQ==&sst=Mozilla%2F5.0%20%28compatible%3B%20ResearchDocumentCollection%2F1.0%29&ssv=&ssw=",
+        "result": "网页"
+      },
+      {
+        "url": "https://validate.perfdrive.com/?ssa=08e8669c-4581-075f-d3cf-25f6447bfea7&ssb=05079284888&ssc=https%3A%2F%2Fopg.optica.org%2Foe%2Fviewmedia.cfm%3Fseq%3D0%26uri%3Doe-31-1-673&ssi=737c3580-d3hy-3429-b40a-171439c13392&ssk=botmanager_support@radware.com&ssm=33128662603976319108714986774373&ssn=38c6caf8e3da5f9216d88ae55c99ef06262767468515-0ae6-f461-495482&sso=422cf61-40a6-18460a9aff471d8e4c60c94262d5d28e39ad3e6323a1b80c&ssp=26442588641793686163179364737379506&ssq=53260887601182529505176011012749606097794&ssr=MjMuMTcyLjIwMC44OQ==&sst=Mozilla%2F5.0%20%28compatible%3B%20ResearchDocumentCollection%2F1.0%29&ssv=&ssw=",
+        "error": "终检排除：Radware Captcha Page"
+      }
+    ],
+    "status": "全文已由用户补齐 → U002",
+    "resolved_by": "U002",
+    "resolution_note": "此前网络获取未完成；现已由用户提供正式版全文补齐。保留历史请求记录。"
+  },
+  {
+    "id": "S004",
+    "url": "https://opg.optica.org/oe/viewmedia.cfm?seq=0&uri=oe-34-8-14943",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "补充检索_原文提及条目及有效替代入口"
+    ],
+    "context": "系统联合优化_2026_出版社PDF入口",
+    "title": "系统联合优化_2026_出版社PDF入口",
+    "files": [],
+    "attempts": [
+      {
+        "url": "https://opg.optica.org/oe/viewmedia.cfm?seq=0&uri=oe-34-8-14943",
+        "http": 200,
+        "final_url": "https://validate.perfdrive.com/?ssa=912e7103-57d4-05d5-eb51-70b3fa2b10b5&ssb=02814268406&ssc=https%3A%2F%2Fopg.optica.org%2Foe%2Fviewmedia.cfm%3Fseq%3D0%26uri%3Doe-34-8-14943&ssi=20c1c4ef-d3hy-8861-53f0-2309e491fbe8&ssk=botmanager_support@radware.com&ssm=46166726974419155106020248304366&ssn=64435c6d4c2f059b24b56b6151c207358ce7472abce7-ce7c-d62c-17d4b9&sso=623052c-1f5d-63319264b74b70f9e5e2d36e4971efec049bfeb083ef0e63&ssp=76204998111793645064179368671209054&ssq=08362247601114676777076011141989562762938&ssr=MjMuMTcyLjIwMC44OQ==&sst=Mozilla%2F5.0%20%28compatible%3B%20ResearchDocumentCollection%2F1.0%29&ssv=&ssw=",
+        "result": "网页"
+      },
+      {
+        "url": "https://validate.perfdrive.com/?ssa=912e7103-57d4-05d5-eb51-70b3fa2b10b5&ssb=02814268406&ssc=https%3A%2F%2Fopg.optica.org%2Foe%2Fviewmedia.cfm%3Fseq%3D0%26uri%3Doe-34-8-14943&ssi=20c1c4ef-d3hy-8861-53f0-2309e491fbe8&ssk=botmanager_support@radware.com&ssm=46166726974419155106020248304366&ssn=64435c6d4c2f059b24b56b6151c207358ce7472abce7-ce7c-d62c-17d4b9&sso=623052c-1f5d-63319264b74b70f9e5e2d36e4971efec049bfeb083ef0e63&ssp=76204998111793645064179368671209054&ssq=08362247601114676777076011141989562762938&ssr=MjMuMTcyLjIwMC44OQ==&sst=Mozilla%2F5.0%20%28compatible%3B%20ResearchDocumentCollection%2F1.0%29&ssv=&ssw=",
+        "error": "终检排除：Radware Captcha Page"
+      }
+    ],
+    "status": "全文已由用户补齐 → U003",
+    "resolved_by": "U003",
+    "resolution_note": "此前网络获取未完成；现已由用户提供正式版全文补齐。保留历史请求记录。"
+  },
+  {
+    "id": "S005",
+    "url": "https://opg.optica.org/ol/viewmedia.cfm?uri=ol-48-24-6496&seq=0",
+    "category": "02_反射式与三振镜调焦",
+    "origins": [
+      "补充检索_原文提及条目及有效替代入口"
+    ],
+    "context": "反射式扫描范围扩展_2023_出版社PDF入口",
+    "title": "反射式扫描范围扩展_2023_出版社PDF入口",
+    "files": [],
+    "attempts": [
+      {
+        "url": "https://opg.optica.org/ol/viewmedia.cfm?uri=ol-48-24-6496&seq=0",
+        "http": 200,
+        "final_url": "https://validate.perfdrive.com/?ssa=9a00f438-fbaf-aad2-6fa8-e10135460193&ssb=33696278805&ssc=https%3A%2F%2Fopg.optica.org%2Fol%2Fviewmedia.cfm%3Furi%3Dol-48-24-6496%26seq%3D0&ssi=01b0b45a-d3hy-8a02-5a22-ffaea2570adc&ssk=botmanager_support@radware.com&ssm=46592264101518244106837465343443&ssn=1b96616e3f1d73f46485e58ae6bcb8fa3637d1f2ae32-c043-4306-aafaf0&sso=73c9a06-a8da-35d4493ddd32c603f2e86ab2372e81f8d58fd04284af2571&ssp=80494266991793630787179360477717007&ssq=09750957601125687547476011891683382299498&ssr=MjMuMTcyLjIwMC44OQ==&sst=Mozilla%2F5.0%20%28compatible%3B%20ResearchDocumentCollection%2F1.0%29&ssv=&ssw=",
+        "result": "网页"
+      },
+      {
+        "url": "https://validate.perfdrive.com/?ssa=9a00f438-fbaf-aad2-6fa8-e10135460193&ssb=33696278805&ssc=https%3A%2F%2Fopg.optica.org%2Fol%2Fviewmedia.cfm%3Furi%3Dol-48-24-6496%26seq%3D0&ssi=01b0b45a-d3hy-8a02-5a22-ffaea2570adc&ssk=botmanager_support@radware.com&ssm=46592264101518244106837465343443&ssn=1b96616e3f1d73f46485e58ae6bcb8fa3637d1f2ae32-c043-4306-aafaf0&sso=73c9a06-a8da-35d4493ddd32c603f2e86ab2372e81f8d58fd04284af2571&ssp=80494266991793630787179360477717007&ssq=09750957601125687547476011891683382299498&ssr=MjMuMTcyLjIwMC44OQ==&sst=Mozilla%2F5.0%20%28compatible%3B%20ResearchDocumentCollection%2F1.0%29&ssv=&ssw=",
+        "error": "终检排除：Radware Captcha Page"
+      }
+    ],
+    "status": "全文已由用户补齐 → U001",
+    "resolved_by": "U001",
+    "resolution_note": "此前网络获取未完成；现已由用户提供正式版全文补齐。保留历史请求记录。"
+  },
+  {
+    "id": "S006",
+    "url": "https://opg.optica.org/oe/abstract.cfm?uri=oe-33-6-14314",
+    "category": "02_反射式与三振镜调焦",
+    "origins": [
+      "补充检索_原文提及条目及有效替代入口"
+    ],
+    "context": "三振镜曲面加工_2025_10.1364_OE.557541",
+    "title": "三振镜曲面加工_2025_10.1364_OE.557541",
+    "files": [],
+    "attempts": [
+      {
+        "url": "https://opg.optica.org/oe/abstract.cfm?uri=oe-33-6-14314",
+        "http": 200,
+        "final_url": "https://validate.perfdrive.com/?ssa=f1e03d0b-05ea-962a-7b2c-e47904605904&ssb=04671246596&ssc=https%3A%2F%2Fopg.optica.org%2Foe%2Fabstract.cfm%3Furi%3Doe-33-6-14314&ssi=1132dde9-d3hy-33a1-d586-c81c976661c9&ssk=botmanager_support@radware.com&ssm=74215136538873426102275433267829&ssn=1d19424132c1e22323f317cb9cb680fc06ac6c02dc31-65f3-6bf2-9227ab&sso=2badff2-9f14-96bbe73f9c835e7538248c8d027cdf884e1365bb16667e66&ssp=14834219181793614069179369140654560&ssq=30680617601145419720776011647257509474954&ssr=MjMuMTcyLjIwMC44OQ==&sst=Mozilla%2F5.0%20%28compatible%3B%20ResearchDocumentCollection%2F1.0%29&ssv=&ssw=",
+        "result": "网页"
+      },
+      {
+        "url": "https://validate.perfdrive.com/?ssa=f1e03d0b-05ea-962a-7b2c-e47904605904&ssb=04671246596&ssc=https%3A%2F%2Fopg.optica.org%2Foe%2Fabstract.cfm%3Furi%3Doe-33-6-14314&ssi=1132dde9-d3hy-33a1-d586-c81c976661c9&ssk=botmanager_support@radware.com&ssm=74215136538873426102275433267829&ssn=1d19424132c1e22323f317cb9cb680fc06ac6c02dc31-65f3-6bf2-9227ab&sso=2badff2-9f14-96bbe73f9c835e7538248c8d027cdf884e1365bb16667e66&ssp=14834219181793614069179369140654560&ssq=30680617601145419720776011647257509474954&ssr=MjMuMTcyLjIwMC44OQ==&sst=Mozilla%2F5.0%20%28compatible%3B%20ResearchDocumentCollection%2F1.0%29&ssv=&ssw=",
+        "error": "终检排除：Radware Captcha Page"
+      }
+    ],
+    "status": "全文已由用户补齐 → U005",
+    "resolved_by": "U005",
+    "resolution_note": "此前网络获取未完成；现已由用户提供正式版全文补齐。保留历史请求记录。"
+  },
+  {
+    "id": "S007",
+    "url": "https://opg.optica.org/oe/viewmedia.cfm?uri=oe-33-6-14314&seq=0",
+    "category": "02_反射式与三振镜调焦",
+    "origins": [
+      "补充检索_原文提及条目及有效替代入口"
+    ],
+    "context": "三振镜曲面加工_2025_出版社PDF入口",
+    "title": "三振镜曲面加工_2025_出版社PDF入口",
+    "files": [],
+    "attempts": [
+      {
+        "url": "https://opg.optica.org/oe/viewmedia.cfm?uri=oe-33-6-14314&seq=0",
+        "http": 200,
+        "final_url": "https://validate.perfdrive.com/?ssa=3f6ddf37-f307-cf78-853d-2a8cf6bcff75&ssb=61328291074&ssc=https%3A%2F%2Fopg.optica.org%2Foe%2Fviewmedia.cfm%3Furi%3Doe-33-6-14314%26seq%3D0&ssi=15eb0731-d3hy-37d4-3ca7-e436bd900640&ssk=botmanager_support@radware.com&ssm=17389140643481075108519224623820&ssn=80fbc88689f37e72743c39d2b1f97d625d973a223ff3-27a8-87e0-6ef962&sso=44a6ce0-61c1-7dac346a7e38c9a97297d71d32e5681e74890c37d5f6b631&ssp=46440973151793665567179367806169600&ssq=46321377601279378019576012962549548927740&ssr=MjMuMTcyLjIwMC44OQ==&sst=Mozilla%2F5.0%20%28compatible%3B%20ResearchDocumentCollection%2F1.0%29&ssv=&ssw=",
+        "result": "网页"
+      },
+      {
+        "url": "https://validate.perfdrive.com/?ssa=3f6ddf37-f307-cf78-853d-2a8cf6bcff75&ssb=61328291074&ssc=https%3A%2F%2Fopg.optica.org%2Foe%2Fviewmedia.cfm%3Furi%3Doe-33-6-14314%26seq%3D0&ssi=15eb0731-d3hy-37d4-3ca7-e436bd900640&ssk=botmanager_support@radware.com&ssm=17389140643481075108519224623820&ssn=80fbc88689f37e72743c39d2b1f97d625d973a223ff3-27a8-87e0-6ef962&sso=44a6ce0-61c1-7dac346a7e38c9a97297d71d32e5681e74890c37d5f6b631&ssp=46440973151793665567179367806169600&ssq=46321377601279378019576012962549548927740&ssr=MjMuMTcyLjIwMC44OQ==&sst=Mozilla%2F5.0%20%28compatible%3B%20ResearchDocumentCollection%2F1.0%29&ssv=&ssw=",
+        "error": "终检排除：Radware Captcha Page"
+      }
+    ],
+    "status": "全文已由用户补齐 → U005",
+    "resolved_by": "U005",
+    "resolution_note": "此前网络获取未完成；现已由用户提供正式版全文补齐。保留历史请求记录。"
+  },
+  {
+    "id": "S008",
+    "url": "https://halaser.systems/manuals/e1803_manual.pdf",
+    "category": "07_测高闭环_三轴同步与标定",
+    "origins": [
+      "补充检索_原文提及条目及有效替代入口"
+    ],
+    "context": "HALaser_E1803D控制卡完整手册",
+    "title": "HALaser_E1803D控制卡完整手册",
+    "files": [
+      {
+        "path": "07_测高闭环_三轴同步与标定\\S008_HALaser_E1803D控制卡完整手册.pdf",
+        "type": "PDF",
+        "pages": 173,
+        "bytes": 4651333,
+        "sha256": "bed0b3c8e6c7c39780daaebfa9a146f381e19ec39b05ab4f40a3e857fa84d1b1",
+        "url": "https://halaser.systems/manuals/e1803_manual.pdf",
+        "text_chars": 521398,
+        "title": "",
+        "preview": "E1803D All-In-One Scanner Controller\nXY2-100, XY2-200,\nXY2-100E, XY2-200E,\nXY3-100\nSL2-100, NX-02, SDP optionally\nUsers Manual\n© 2016-2026 by HALaser Systems GmbH\n1\n\nTable of Contents\n1  Copyright.........................................................................................................................................................................................................4\n2  History...........................................................................................",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://halaser.systems/manuals/e1803_manual.pdf",
+        "http": 200,
+        "final_url": "https://halaser.systems/manuals/e1803_manual.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "status": "PDF已下载"
+  },
+  {
+    "id": "S009",
+    "url": "https://www.raylase.de/_Resources/Persistent/5/1/8/9/5189d9ad9239901c83aa37b1738071904ed74596/2026-03-16_Datenblatt_FOCUSSHIFTER%20RD-14_EN_v2.0.pdf",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "补充检索_原文提及条目及有效替代入口"
+    ],
+    "context": "RAYLASE_FOCUSSHIFTER_RD14_有效新版2026",
+    "title": "RAYLASE_FOCUSSHIFTER_RD14_有效新版2026",
+    "files": [
+      {
+        "path": "01_移动透镜式与匹配光学\\S009_RAYLASE_FOCUSSHIFTER_RD14_有效新版2026.pdf",
+        "type": "PDF",
+        "pages": 8,
+        "bytes": 1560091,
+        "sha256": "4a1f8a40c5411e75fa1e43f8e515a054364fe465a5e5117fd99324d647688e6d",
+        "url": "https://www.raylase.de/_Resources/Persistent/5/1/8/9/5189d9ad9239901c83aa37b1738071904ed74596/2026-03-16_Datenblatt_FOCUSSHIFTER%20RD-14_EN_v2.0.pdf",
+        "text_chars": 16068,
+        "title": "03119_Datenblatt_FOCUSSHIFTER RD-14.indd",
+        "preview": "www.raylase.com\nEFFICIENT PROCESSING OF DIFFERENT SURFACE HEIGHTS\nThe combination of f-theta lens and defl  ection unit is an ideal solution for many marking and engraving \napplications. After all, for small and medium-sized working fi  elds, it off  ers small focus diameters and good \nfl  at fi  eld correction with low spot variations.\nHowever, the workpieces are not always fl  at. Especially when cleaning components from paint, oxide layers or \noil, cutting fl  exible printed circuit boards or",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://www.raylase.de/_Resources/Persistent/5/1/8/9/5189d9ad9239901c83aa37b1738071904ed74596/2026-03-16_Datenblatt_FOCUSSHIFTER%20RD-14_EN_v2.0.pdf",
+        "http": 200,
+        "final_url": "https://www.raylase.de/_Resources/Persistent/5/1/8/9/5189d9ad9239901c83aa37b1738071904ed74596/2026-03-16_Datenblatt_FOCUSSHIFTER%20RD-14_EN_v2.0.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "status": "PDF已下载"
+  },
+  {
+    "id": "S010",
+    "url": "https://www.raylase.de/_Resources/Persistent/6/7/1/2/6712ab165f7dce513a0c934c651708e7256f153a/RAYLASE_AXIALSCAN-30%20DIGITAL%20II%20HP_en.pdf",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "补充检索_原文提及条目及有效替代入口"
+    ],
+    "context": "RAYLASE_AXIALSCAN30_Digital_II_HP",
+    "title": "RAYLASE_AXIALSCAN30_Digital_II_HP",
+    "files": [],
+    "attempts": [
+      {
+        "url": "https://www.raylase.de/_Resources/Persistent/6/7/1/2/6712ab165f7dce513a0c934c651708e7256f153a/RAYLASE_AXIALSCAN-30%20DIGITAL%20II%20HP_en.pdf",
+        "http": 404,
+        "final_url": "https://www.raylase.de/_Resources/Persistent/6/7/1/2/6712ab165f7dce513a0c934c651708e7256f153a/RAYLASE_AXIALSCAN-30%20DIGITAL%20II%20HP_en.pdf",
+        "error": "404 Client Error: Not Found for url: https://www.raylase.de/_Resources/Persistent/6/7/1/2/6712ab165f7dce513a0c934c651708e7256f153a/RAYLASE_AXIALSCAN-30%20DIGITAL%20II%20HP_en.pdf"
+      }
+    ],
+    "status": "未获取"
+  },
+  {
+    "id": "S011",
+    "url": "https://ar.scanneroptics.com/products/scanner-optics-vcm-g1/",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "补充检索_原文提及条目及有效替代入口"
+    ],
+    "context": "Scanner_Optics_VCM_G1",
+    "title": "Scanner_Optics_VCM_G1",
+    "files": [
+      {
+        "path": "01_移动透镜式与匹配光学\\S011_Scanner Optics VCM G1 - Adopts Full Digital Galvanometer Driver.html",
+        "type": "HTML",
+        "bytes": 84387,
+        "sha256": "f4d33cdcb5a4d0c06a6d19f7942697bb2bb268b3741d177f857a6c9d2f8cf25a",
+        "url": "https://ar.scanneroptics.com/products/scanner-optics-vcm-g1/",
+        "title": "Scanner Optics VCM G1 - Adopts Full Digital Galvanometer Driver",
+        "text_chars": 6769
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://ar.scanneroptics.com/products/scanner-optics-vcm-g1/",
+        "http": 200,
+        "final_url": "https://ar.scanneroptics.com/products/scanner-optics-vcm-g1/",
+        "result": "网页"
+      }
+    ],
+    "status": "网页已保存"
+  },
+  {
+    "id": "S012",
+    "url": "https://en.bjjcz.cn/product/156.html",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "补充检索_原文提及条目及有效替代入口"
+    ],
+    "context": "JCZ_G3_3D",
+    "title": "JCZ_G3_3D",
+    "files": [
+      {
+        "path": "01_移动透镜式与匹配光学\\S012_G3-3D_Beijing JCZ Technology Co., Ltd.html",
+        "type": "HTML",
+        "bytes": 129728,
+        "sha256": "f91b7859187ba393fb11fb52b5102e0d5ac209c62c6207c74b481661b7f98aef",
+        "url": "https://en.bjjcz.cn/product/156.html",
+        "title": "G3-3D_Beijing JCZ Technology Co., Ltd.",
+        "text_chars": 3691
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://en.bjjcz.cn/product/156.html",
+        "http": 200,
+        "final_url": "https://en.bjjcz.cn/product/156.html",
+        "result": "网页"
+      }
+    ],
+    "status": "网页已保存"
+  },
+  {
+    "id": "S013",
+    "url": "https://www.mdpi.com/2072-666X/16/4/482/pdf?version=1745050038",
+    "category": "05_MEMS与全息调焦",
+    "origins": [
+      "补充检索_原文提及条目及有效替代入口"
+    ],
+    "context": "MEMS综述_出版社PDF",
+    "title": "MEMS综述_出版社PDF",
+    "files": [],
+    "attempts": [
+      {
+        "url": "https://www.mdpi.com/2072-666X/16/4/482/pdf?version=1745050038",
+        "http": 403,
+        "final_url": "https://www.mdpi.com/2072-666X/16/4/482/pdf?version=1745050038",
+        "error": "403 Client Error: Forbidden for url: https://www.mdpi.com/2072-666X/16/4/482/pdf?version=1745050038"
+      }
+    ],
+    "status": "未获取"
+  },
+  {
+    "id": "S014",
+    "url": "https://www.mdpi.com/2072-666X/16/4/482",
+    "category": "05_MEMS与全息调焦",
+    "origins": [
+      "补充检索_原文提及条目及有效替代入口"
+    ],
+    "context": "MEMS综述_出版社网页",
+    "title": "MEMS综述_出版社网页",
+    "files": [],
+    "attempts": [
+      {
+        "url": "https://www.mdpi.com/2072-666X/16/4/482",
+        "http": 403,
+        "final_url": "https://www.mdpi.com/2072-666X/16/4/482",
+        "error": "403 Client Error: Forbidden for url: https://www.mdpi.com/2072-666X/16/4/482"
+      }
+    ],
+    "status": "未获取"
+  },
+  {
+    "id": "S015",
+    "url": "https://www.renishaw.com/resourcecentre/download/data-sheet-atom-dx-miniature-encoder-system--142831?userLanguage=en",
+    "category": "10_执行器_导轨与编码器",
+    "origins": [
+      "补充检索_原文提及条目及有效替代入口"
+    ],
+    "context": "Renishaw_ATOM_DX数据表",
+    "title": "Renishaw_ATOM_DX数据表",
+    "files": [
+      {
+        "path": "10_执行器_导轨与编码器\\S015_Renishaw_ATOM_DX数据表.pdf",
+        "type": "PDF",
+        "pages": 27,
+        "bytes": 1700576,
+        "sha256": "6b99e5ce393265e50a926f3f5e942172df1523981c919b9e3b73c4b4d1180aec",
+        "url": "https://www.renishaw.com/resourcecentre/download/data-sheet-atom-dx-miniature-encoder-system--142831?userLanguage=en",
+        "text_chars": 28063,
+        "title": "ATOM DX™ miniature encoder system data sheet",
+        "preview": "#renishaw\nATOM DX™ miniature encoder system\nwww.renishaw.com/atomdxdownloads\nData sheet\nL-9517-9736-05-A\nThe ATOM DX™ encoder series is \nRenishaw’s smallest incremental optical \nencoder with digital output direct from the \nreadhead, providing positional feedback, \nonboard interpolation, and filtering optics all \nin a miniature package.\nATOM DX incorporates the market proven filtering optical \nsystem of the ATOM™ encoder series, and integrates \nRenishaw’s high-performance interpolation technology",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://www.renishaw.com/resourcecentre/download/data-sheet-atom-dx-miniature-encoder-system--142831?userLanguage=en",
+        "http": 200,
+        "final_url": "https://www.renishaw.com/resourcecentre/download/data-sheet-atom-dx-miniature-encoder-system--142831?userLanguage=en",
+        "result": "有效PDF"
+      }
+    ],
+    "status": "PDF已下载"
+  },
+  {
+    "id": "S016",
+    "url": "https://ikowb01.ikont.co.jp/technicalservice/ikoc0130.php?FLG=CRWG&from=html&lang=en",
+    "category": "10_执行器_导轨与编码器",
+    "origins": [
+      "补充检索_原文提及条目及有效替代入口"
+    ],
+    "context": "IKO_CRWG交叉滚柱导轨官方目录入口",
+    "title": "IKO_CRWG交叉滚柱导轨官方目录入口",
+    "files": [],
+    "attempts": [
+      {
+        "url": "https://ikowb01.ikont.co.jp/technicalservice/ikoc0130.php?FLG=CRWG&from=html&lang=en",
+        "http": 502,
+        "final_url": "https://ikowb01.ikont.co.jp/technicalservice/ikoc0130.php?FLG=CRWG&from=html&lang=en",
+        "error": "502 Server Error: Bad Gateway for url: https://ikowb01.ikont.co.jp/technicalservice/ikoc0130.php?FLG=CRWG&from=html&lang=en"
+      }
+    ],
+    "status": "未获取"
+  },
+  {
+    "id": "S017",
+    "url": "https://www.thk.com/us/en/products/other_linear_motion_guides/cross_roller_guide_ball_guide/vr/",
+    "category": "10_执行器_导轨与编码器",
+    "origins": [
+      "补充检索_原文提及条目及有效替代入口"
+    ],
+    "context": "THK_VR交叉滚柱导轨",
+    "title": "THK_VR交叉滚柱导轨",
+    "files": [
+      {
+        "path": "10_执行器_导轨与编码器\\S017_Cross-Roller Guide Model VR｜Other Linear Motion Products｜Product Information｜THK Official Web Site [North.html",
+        "type": "HTML",
+        "bytes": 90530,
+        "sha256": "f2e6a0042e41f28d029a3ad6e0e3a4faf5a68ff18e3d23d66de2c9df5f2ada89",
+        "url": "https://www.thk.com/us/en/products/other_linear_motion_guides/cross_roller_guide_ball_guide/vr/",
+        "title": "Cross-Roller Guide Model VR｜Other Linear Motion Products｜Product Information｜THK Official Web Site [North America]",
+        "text_chars": 3556
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://www.thk.com/us/en/products/other_linear_motion_guides/cross_roller_guide_ball_guide/vr/",
+        "http": 200,
+        "final_url": "https://www.thk.com/us/en/products/other_linear_motion_guides/cross_roller_guide_ball_guide/vr/",
+        "result": "网页"
+      }
+    ],
+    "status": "网页已保存"
+  },
+  {
+    "id": "S018",
+    "url": "https://agito-akribis.com/wp-content/uploads/2022/02/AVM-Series-.pdf",
+    "category": "10_执行器_导轨与编码器",
+    "origins": [
+      "补充检索_原文提及条目及有效替代入口"
+    ],
+    "context": "Akribis_AVM音圈电机规格",
+    "title": "Akribis_AVM音圈电机规格",
+    "files": [
+      {
+        "path": "10_执行器_导轨与编码器\\S018_Akribis_AVM音圈电机规格.pdf",
+        "type": "PDF",
+        "pages": 10,
+        "bytes": 10804928,
+        "sha256": "f74be6793384131e5358fdb33a1d352ee4060b57af42a2e5f3d7ec0466d18f02",
+        "url": "https://agito-akribis.com/wp-content/uploads/2022/02/AVM-Series-.pdf",
+        "text_chars": 12303,
+        "title": "",
+        "preview": "ADR360-A150 / ADR360-A215\nContinuous force measured without any additional mounting plate or heat sink on coil\nMeasured at 25 °2\n1\n Specifications （Standard Series）AVM\nAkribis  systems\nIII-05 / III-06\nAVM Series\nmm\nN/A\nV/(m/s)\nN\nN\nohms\nmH\nV\nA\nA\nVdc\nN/Sqrt(W)\nW\nms\nms\nmm\nW\nW/°C\n°C\ng\ng\nAVM 30-15\n15\n7.35\n7.35\n4.63\n29.40\n10.22\n2.63\n40.88\n0.63\n4.00\n60\n2.30\n4.06\n0.26\n6.81\n0.60\n163.52\n0.054\n100\n36.0\n95.6\nAVM 40-20\n20\n12.90\n12.90\n9.93\n58.05\n12.10\n5.12\n54.45\n0.77\n4.50\n60\n3.71\n7.17\n0.42\n4.87\n0.60\n245.03\n0.",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://agito-akribis.com/wp-content/uploads/2022/02/AVM-Series-.pdf",
+        "http": 200,
+        "final_url": "https://agito-akribis.com/wp-content/uploads/2022/02/AVM-Series-.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "status": "PDF已下载"
+  },
+  {
+    "id": "S019",
+    "url": "https://www.akribis-sys.eu/uploads/files/website/Voice_coil_motor_user_manual.pdf",
+    "category": "10_执行器_导轨与编码器",
+    "origins": [
+      "补充检索_原文提及条目及有效替代入口"
+    ],
+    "context": "Akribis音圈电机使用手册",
+    "title": "Akribis音圈电机使用手册",
+    "files": [],
+    "attempts": [
+      {
+        "url": "https://www.akribis-sys.eu/uploads/files/website/Voice_coil_motor_user_manual.pdf",
+        "error": "HTTPSConnectionPool(host='www.akribis-sys.eu', port=443): Max retries exceeded with url: /uploads/files/website/Voice_coil_motor_user_manual.pdf (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))"
+      }
+    ],
+    "status": "未获取"
+  },
+  {
+    "id": "S020",
+    "url": "https://www.jgjs.net.cn/cn/article/doi/10.7510/jgjs.issn.1001-3806.2016.04.002",
+    "category": "01_移动透镜式与匹配光学",
+    "origins": [
+      "补充检索_原文提及条目及有效替代入口"
+    ],
+    "context": "大尺度三维动态聚焦_中文期刊入口",
+    "title": "大尺度三维动态聚焦_中文期刊入口",
+    "files": [],
+    "attempts": [
+      {
+        "url": "https://www.jgjs.net.cn/cn/article/doi/10.7510/jgjs.issn.1001-3806.2016.04.002",
+        "error": "HTTPSConnectionPool(host='www.jgjs.net.cn', port=443): Max retries exceeded with url: /cn/article/doi/10.7510/jgjs.issn.1001-3806.2016.04.002 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1010)')))"
+      }
+    ],
+    "status": "全文已由用户补齐 → U008",
+    "resolved_by": "U008",
+    "resolution_note": "此前网络获取未完成；现已由用户提供正式版全文补齐。保留历史请求记录。"
+  },
+  {
+    "id": "A001",
+    "category": "08_综述与光学基础",
+    "url": "https://diposit.ub.edu/bitstreams/499f25a7-7d55-4c1d-b9bc-d5568d2fcaf8/download",
+    "context": "综述_大学机构库作者稿_新地址",
+    "title": "综述_大学机构库作者稿_新地址",
+    "origins": [
+      "补充检索_修复失效入口"
+    ],
+    "files": [
+      {
+        "path": "08_综述与光学基础\\A001_综述_大学机构库作者稿_新地址.pdf",
+        "type": "PDF",
+        "pages": 22,
+        "bytes": 1539548,
+        "sha256": "41908be496441f2c2db3b36e212a794649ad275ae1cfacccf17e93a966808221",
+        "url": "https://diposit.ub.edu/server/api/core/bitstreams/499f25a7-7d55-4c1d-b9bc-d5568d2fcaf8/content",
+        "text_chars": 57536,
+        "title": "Microsoft Word - Varifocal optics_Final_Revised_v5",
+        "preview": "Review Article:  Variable Optical Elements for Fast Focus Control \nSeungYeon Kang1,3, Martí Duocastella2,4, and Craig B. Arnold1,* \n1 Department of Mechanical and Aerospace Engineering, Princeton University, New Jersey, 08540 \n2 Nanophysics, Isituto Italiano di Tecnologia, 16163 Genova, Italy \n3 Current: Mechanical Engineering, University of Connecticut, Storrs, Connecticut, 06269  \n4 Current: Department of Applied Physics, Universitat de Barcelona, 08028 Barcelona, Spain \n* Corresponding author",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://diposit.ub.edu/bitstreams/499f25a7-7d55-4c1d-b9bc-d5568d2fcaf8/download",
+        "http": 200,
+        "final_url": "https://diposit.ub.edu/server/api/core/bitstreams/499f25a7-7d55-4c1d-b9bc-d5568d2fcaf8/content",
+        "result": "有效PDF"
+      }
+    ],
+    "status": "PDF已下载"
+  },
+  {
+    "id": "A002",
+    "category": "04_TAG声学调焦",
+    "url": "https://link.springer.com/content/pdf/10.1007/s44258-025-00067-1.pdf",
+    "context": "光声共线调焦_2026_原文PDF",
+    "title": "光声共线调焦_2026_原文PDF",
+    "origins": [
+      "补充检索_修复失效入口"
+    ],
+    "files": [],
+    "attempts": [
+      {
+        "url": "https://link.springer.com/content/pdf/10.1007/s44258-025-00067-1.pdf",
+        "http": 200,
+        "final_url": "https://link.springer.com/content/pdf/10.1007/s44258-025-00067-1.pdf",
+        "error": "验证/错误页面或正文过短: Client Challenge"
+      }
+    ],
+    "status": "全文已由用户补齐 → U007",
+    "resolved_by": "U007",
+    "resolution_note": "此前网络获取未完成；现已由用户提供正式版全文补齐。保留历史请求记录。"
+  },
+  {
+    "id": "A003",
+    "category": "01_移动透镜式与匹配光学",
+    "url": "https://www.nature.com/articles/s44172-024-00320-2",
+    "context": "三维随机访问共焦显微_原文与补充资料",
+    "title": "三维随机访问共焦显微_原文与补充资料",
+    "origins": [
+      "补充检索_修复失效入口"
+    ],
+    "files": [
+      {
+        "path": "01_移动透镜式与匹配光学\\A003_Three-dimensional random-access confocal microscopy with 3D remote focusing system _ Communications Engin.html",
+        "type": "HTML",
+        "bytes": 429134,
+        "sha256": "a8a49000b3309acd9ed22c36c67e8c755e5471c7dd3a1625fce6fce02d19a318",
+        "url": "https://www.nature.com/articles/s44172-024-00320-2",
+        "title": "Three-dimensional random-access confocal microscopy with 3D remote focusing system | Communications Engineering",
+        "text_chars": 58295
+      },
+      {
+        "path": "01_移动透镜式与匹配光学\\A003_三维随机访问共焦显微_原文与补充资料.pdf",
+        "type": "PDF",
+        "pages": 10,
+        "bytes": 2318551,
+        "sha256": "0371956e333fc763c16060badcaa9920093d0be71a913882d68841d43f821fbb",
+        "url": "https://www.nature.com/articles/s44172-024-00320-2.pdf",
+        "text_chars": 52759,
+        "title": "Three-dimensional random-access confocal microscopy with 3D remote focusing system",
+        "preview": "communications engineering Article\nhttps://doi.org/10.1038/s44172-024-00320-2\nThree-dimensional random-access\nconfocal microscopy with 3D remote\nfocusing system\nCheck for updates\nHaoyang Li 1,2,7,Q u a nL u1,3,4,7, Zhong Wang1,5,7, Wenbo Zhang1,3,Y uW u1, Yandong Sun1,3,Y u eH u4,\nLehui Xiao6, Dongping Zhong 2 ,S u h u iD e n g 3 & Shangguo Hou 1\nUnderstanding biological activities in cells or deep tissues requires high-speed three-dimensional (3D)\nimaging. Substantial progress has been made wit",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      },
+      {
+        "path": "01_移动透镜式与匹配光学\\A003_三维随机访问共焦显微_原文与补充资料_84842d.pdf",
+        "type": "PDF",
+        "pages": 53,
+        "bytes": 4713120,
+        "sha256": "84842d13c6591490e822bd369e3fd25e3813d22bfdb294b643828306851bfc1b",
+        "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs44172-024-00320-2/MediaObjects/44172_2024_320_MOESM1_ESM.pdf",
+        "text_chars": 67400,
+        "title": "",
+        "preview": "This file contains all reviewer reports in order by version, followed by all author rebuttals in order by \nversion. \n\nPeer Review File\nThree-dimensional random-access confocal microscopy with\n3D remote focusing system\nCorresponding Author: Professor Shangguo Hou\nVersion 0: \nReviewer comments: \nReviewer #1 \n(Remarks to the Author) \nLi et al. demonstrates three-dimensional (3D) random-access confocal fluorescence imaging using a commercially available\n3D dynamic focusing system (FL8220-3D-500, Sin",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      },
+      {
+        "path": "01_移动透镜式与匹配光学\\A003_三维随机访问共焦显微_原文与补充资料_f4bb0a.pdf",
+        "type": "PDF",
+        "pages": 18,
+        "bytes": 4896145,
+        "sha256": "f4bb0a31196202118d4fdcfef061bc1e39cd42cd39afe84f3fc33b8a1f42dc60",
+        "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs44172-024-00320-2/MediaObjects/44172_2024_320_MOESM2_ESM.pdf",
+        "text_chars": 11663,
+        "title": "",
+        "preview": "1 \n \nSupplementary Information  1 \nThree-dimensional random -access confocal microscopy with 3D remote 2 \nfocusing system 3 \n 4 \nLi. et al. 5 \n  6 \n\n2 \n \n 1 \nFigure S1. Detailed schematic of remote focusing system.  2 \n3 \n\n\n3 \n \n 1 \nFigure S2. Bidirectional repeatability measurement of the 3D dynamic focusing  system 2 \nvia power measurement after a pinhole. (a) Schematic of setup for testing the bidirectional 3 \nrepeatability of the 3D dynamic focusing system. A 100 μm pinhole was placed near t",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      },
+      {
+        "path": "01_移动透镜式与匹配光学\\A003_三维随机访问共焦显微_原文与补充资料_159780.pdf",
+        "type": "PDF",
+        "pages": 3,
+        "bytes": 1210154,
+        "sha256": "159780d922a8dc2a502e65d3fa8e87e81a1a9b1612dcfc28691fea2e69fa3f05",
+        "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs44172-024-00320-2/MediaObjects/44172_2024_320_MOESM3_ESM.pdf",
+        "text_chars": 4,
+        "title": "1632_2_supp_32142_sljcjs.pdf",
+        "preview": "\n\n\n\n",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://www.nature.com/articles/s44172-024-00320-2",
+        "http": 200,
+        "final_url": "https://www.nature.com/articles/s44172-024-00320-2",
+        "result": "网页"
+      },
+      {
+        "url": "https://www.nature.com/articles/s44172-024-00320-2.pdf",
+        "http": 200,
+        "final_url": "https://www.nature.com/articles/s44172-024-00320-2.pdf",
+        "result": "有效PDF"
+      },
+      {
+        "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs44172-024-00320-2/MediaObjects/44172_2024_320_MOESM1_ESM.pdf",
+        "http": 200,
+        "final_url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs44172-024-00320-2/MediaObjects/44172_2024_320_MOESM1_ESM.pdf",
+        "result": "有效PDF"
+      },
+      {
+        "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs44172-024-00320-2/MediaObjects/44172_2024_320_MOESM2_ESM.pdf",
+        "http": 200,
+        "final_url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs44172-024-00320-2/MediaObjects/44172_2024_320_MOESM2_ESM.pdf",
+        "result": "有效PDF"
+      },
+      {
+        "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs44172-024-00320-2/MediaObjects/44172_2024_320_MOESM3_ESM.pdf",
+        "http": 200,
+        "final_url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs44172-024-00320-2/MediaObjects/44172_2024_320_MOESM3_ESM.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "status": "PDF已下载"
+  },
+  {
+    "id": "A004",
+    "category": "02_反射式与三振镜调焦",
+    "url": "https://www.researchgate.net/publication/366318787_Galvanometer_driven_optical_system_for_laser_dynamic_focusing/links/65e2e82dadf2362b636352aa/Galvanometer-driven-optical-system-for-laser-dynamic-focusing.pdf",
+    "context": "反射式动态聚焦_ResearchGate公开PDF入口",
+    "title": "反射式动态聚焦_ResearchGate公开PDF入口",
+    "origins": [
+      "补充检索_修复失效入口"
+    ],
+    "files": [],
+    "attempts": [
+      {
+        "url": "https://www.researchgate.net/publication/366318787_Galvanometer_driven_optical_system_for_laser_dynamic_focusing/links/65e2e82dadf2362b636352aa/Galvanometer-driven-optical-system-for-laser-dynamic-focusing.pdf",
+        "http": 403,
+        "final_url": "https://www.researchgate.net/publication/366318787_Galvanometer_driven_optical_system_for_laser_dynamic_focusing/links/65e2e82dadf2362b636352aa/Galvanometer-driven-optical-system-for-laser-dynamic-focusing.pdf",
+        "error": "403 Client Error: Forbidden for url: https://www.researchgate.net/publication/366318787_Galvanometer_driven_optical_system_for_laser_dynamic_focusing/links/65e2e82dadf2362b636352aa/Galvanometer-driven-optical-system-for-laser-dynamic-focusing.pdf"
+      }
+    ],
+    "status": "全文已由用户补齐 → U002",
+    "resolved_by": "U002",
+    "resolution_note": "此前网络获取未完成；现已由用户提供正式版全文补齐。保留历史请求记录。"
+  },
+  {
+    "id": "A005",
+    "category": "01_移动透镜式与匹配光学",
+    "url": "https://www.researchgate.net/publication/403458253_DOUBLED_Z-AXIS_SCANNING_RANGE_AND_SPOT-QUALITY_ENHANCEMENT_IN_SYSTEM-LEVEL_INTEGRATED_CO-OPTIMIZED_TRANSMISSIVE_3D_LASER_SCANNING_SYSTEMS/links/69dd3aca00864436152c8e96/Doubled-Z-axis-scanning-range-and-spot-quality-enhancement-in-system-level-integrated-co-optimized-transmissive-3D-laser-scanning-systems.pdf",
+    "context": "联合优化_ResearchGate公开PDF入口",
+    "title": "联合优化_ResearchGate公开PDF入口",
+    "origins": [
+      "补充检索_修复失效入口"
+    ],
+    "files": [],
+    "attempts": [
+      {
+        "url": "https://www.researchgate.net/publication/403458253_DOUBLED_Z-AXIS_SCANNING_RANGE_AND_SPOT-QUALITY_ENHANCEMENT_IN_SYSTEM-LEVEL_INTEGRATED_CO-OPTIMIZED_TRANSMISSIVE_3D_LASER_SCANNING_SYSTEMS/links/69dd3aca00864436152c8e96/Doubled-Z-axis-scanning-range-and-spot-quality-enhancement-in-system-level-integrated-co-optimized-transmissive-3D-laser-scanning-systems.pdf",
+        "http": 403,
+        "final_url": "https://www.researchgate.net/publication/403458253_DOUBLED_Z-AXIS_SCANNING_RANGE_AND_SPOT-QUALITY_ENHANCEMENT_IN_SYSTEM-LEVEL_INTEGRATED_CO-OPTIMIZED_TRANSMISSIVE_3D_LASER_SCANNING_SYSTEMS/links/69dd3aca00864436152c8e96/Doubled-Z-axis-scanning-range-and-spot-quality-enhancement-in-system-level-integrated-co-optimized-transmissive-3D-laser-scanning-systems.pdf",
+        "error": "403 Client Error: Forbidden for url: https://www.researchgate.net/publication/403458253_DOUBLED_Z-AXIS_SCANNING_RANGE_AND_SPOT-QUALITY_ENHANCEMENT_IN_SYSTEM-LEVEL_INTEGRATED_CO-OPTIMIZED_TRANSMISSIVE_3D_LASER_SCANNING_SYSTEMS/links/69dd3aca00864436152c8e96/Doubled-Z-axis-scanning-range-and-spot-quality-enhancement-in-system-level-integrated-co-optimized-transmissive-3D-laser-scanning-systems.pdf"
+      }
+    ],
+    "status": "全文已由用户补齐 → U003",
+    "resolved_by": "U003",
+    "resolution_note": "此前网络获取未完成；现已由用户提供正式版全文补齐。保留历史请求记录。"
+  },
+  {
+    "id": "B001",
+    "category": "08_综述与光学基础",
+    "url": "https://qikan.cmes.org/jxgcxb/CN/PDF/10.3901/JME.2023.19.375",
+    "context": "激光自身空间维度加工系统综述_机械工程学报2023",
+    "title": "激光自身空间维度加工系统综述_机械工程学报2023",
+    "origins": [
+      "原文线索补充及相关中文综述"
+    ],
+    "files": [
+      {
+        "path": "08_综述与光学基础\\B001_激光自身空间维度加工系统综述_机械工程学报2023.pdf",
+        "type": "PDF",
+        "pages": 14,
+        "bytes": 1128417,
+        "sha256": "137668a127e2cadb52150219910e694753fb2ded1eef28d366b24e84d774de8b",
+        "url": "https://qikan.cmes.org/jxgcxb/CN/PDF/10.3901/JME.2023.19.375",
+        "text_chars": 30183,
+        "title": "Microsoft Word - 375-388  2023-0326  梅雪松",
+        "preview": " \n \n第 59卷第 19期 \n2023 年 10 月 \n机  械  工  程  学  报 \nJOURNAL OF MECHANICAL ENGINEERING \nVol.59  No.19 \nOct.    2023  \n \nDOI：10.3901/JME.2023.19.375 \n激光自身空间维度加工系统综述*①\n \n梅雪松 1, 2  李凯林 1, 2  赵万芹 1, 2  刘 斌 1, 2  孙 铮 1, 2  段文强 1, 2 \n王文君 1, 2  崔健磊 1, 2  凡正杰 1, 2 \n(1. 西安交通大学机械工程学院  西安  710049 ； \n2. 西安交通大学机械制造系统工程国家重点实验室  西安  710049) \n \n摘要：随着智能制造时代的到来，各行业对精细化零部件的加工需求 日益旺盛，激光自身空间维度加工系统具备的调\n控激光束空间维度变化的能力，特别适用于高效、高精度的激光加工，因而具有良好的应用前景和市场需求。激光自\n身空间维度加工系统主要包括点维、一维、二维、三维和“五 +N”维，论述点维到“五 +N”维激光加工系统的光学结\n构，分析光学镜片结构尺寸、安",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://qikan.cmes.org/jxgcxb/CN/PDF/10.3901/JME.2023.19.375",
+        "http": 200,
+        "final_url": "https://qikan.cmes.org/jxgcxb/CN/PDF/10.3901/JME.2023.19.375",
+        "result": "有效PDF"
+      }
+    ],
+    "status": "PDF已下载"
+  },
+  {
+    "id": "B002",
+    "category": "07_测高闭环_三轴同步与标定",
+    "url": "https://www.raylase.de/_Resources/Persistent/b/a/6/6/ba66d25112e3d91511322aa417caae73c916557b/Datasheet_SP-ICE-3.pdf",
+    "context": "RAYLASE_SPICE3_官方规格书",
+    "title": "RAYLASE_SPICE3_官方规格书",
+    "origins": [
+      "原文线索补充及相关中文综述"
+    ],
+    "files": [],
+    "attempts": [
+      {
+        "url": "https://www.raylase.de/_Resources/Persistent/b/a/6/6/ba66d25112e3d91511322aa417caae73c916557b/Datasheet_SP-ICE-3.pdf",
+        "http": 404,
+        "final_url": "https://www.raylase.de/_Resources/Persistent/b/a/6/6/ba66d25112e3d91511322aa417caae73c916557b/Datasheet_SP-ICE-3.pdf",
+        "error": "404 Client Error: Not Found for url: https://www.raylase.de/_Resources/Persistent/b/a/6/6/ba66d25112e3d91511322aa417caae73c916557b/Datasheet_SP-ICE-3.pdf"
+      }
+    ],
+    "status": "未获取"
+  },
+  {
+    "id": "B003",
+    "category": "07_测高闭环_三轴同步与标定",
+    "url": "https://software.raylase.de/rpi/RAYLASE/spice3/usersmanual/",
+    "context": "RAYLASE_SPICE3_官方在线手册入口",
+    "title": "RAYLASE_SPICE3_官方在线手册入口",
+    "origins": [
+      "原文线索补充及相关中文综述"
+    ],
+    "files": [
+      {
+        "path": "07_测高闭环_三轴同步与标定\\B003_SP-ICE Control Electronics_ SP-ICE 3 User's Manual - Redirect.html",
+        "type": "HTML",
+        "bytes": 1140,
+        "sha256": "4e7255a7f06f122c62c56cad27937cb1c6c6035cee40dbf0be8cdd7e9ea007f8",
+        "url": "https://software.raylase.de/rpi/RAYLASE/spice3/usersmanual/",
+        "title": "SP-ICE Control Electronics: SP-ICE 3 User's Manual - Redirect",
+        "text_chars": 142
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://software.raylase.de/rpi/RAYLASE/spice3/usersmanual/",
+        "http": 200,
+        "final_url": "https://software.raylase.de/rpi/RAYLASE/spice3/usersmanual/",
+        "result": "网页"
+      }
+    ],
+    "status": "在线手册入口已保存_非完整离线手册"
+  },
+  {
+    "id": "B004",
+    "category": "01_移动透镜式与匹配光学",
+    "url": "https://www.jgjs.net.cn/cn/article/id/15434",
+    "context": "大尺度三维动态聚焦_期刊文章编号入口",
+    "title": "大尺度三维动态聚焦_期刊文章编号入口",
+    "origins": [
+      "原文线索补充及相关中文综述"
+    ],
+    "files": [],
+    "attempts": [
+      {
+        "url": "https://www.jgjs.net.cn/cn/article/id/15434",
+        "error": "HTTPSConnectionPool(host='www.jgjs.net.cn', port=443): Max retries exceeded with url: /cn/article/id/15434 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1010)')))"
+      }
+    ],
+    "status": "全文已由用户补齐 → U008",
+    "resolved_by": "U008",
+    "resolution_note": "此前网络获取未完成；现已由用户提供正式版全文补齐。保留历史请求记录。"
+  },
+  {
+    "id": "B005",
+    "category": "08_综述与光学基础",
+    "url": "https://diposit.ub.edu/items/c5405db1-7249-4964-abb3-89c9d150361f/full",
+    "context": "Variable_optical_elements_作者稿元数据",
+    "title": "Variable_optical_elements_作者稿元数据",
+    "origins": [
+      "原文线索补充及相关中文综述"
+    ],
+    "files": [
+      {
+        "path": "08_综述与光学基础\\B005_Variable optical elements for fast focus control.html",
+        "type": "HTML",
+        "bytes": 471235,
+        "sha256": "96dcccc7adb0e3f1037cfaeea82427cba62f2c056fdd19acd0ba0b515b8f2fc2",
+        "url": "https://diposit.ub.edu/items/c5405db1-7249-4964-abb3-89c9d150361f/full",
+        "title": "Variable optical elements for fast focus control",
+        "text_chars": 2835
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://diposit.ub.edu/items/c5405db1-7249-4964-abb3-89c9d150361f/full",
+        "http": 200,
+        "final_url": "https://diposit.ub.edu/items/c5405db1-7249-4964-abb3-89c9d150361f/full",
+        "result": "网页"
+      },
+      {
+        "url": "https://dd-x-0-fe-01.fe.cpd.local:4000/bitstreams/499f25a7-7d55-4c1d-b9bc-d5568d2fcaf8/download",
+        "error": "HTTPSConnectionPool(host='dd-x-0-fe-01.fe.cpd.local', port=4000): Max retries exceeded with url: /bitstreams/499f25a7-7d55-4c1d-b9bc-d5568d2fcaf8/download (Caused by NameResolutionError(\"HTTPSConnection(host='dd-x-0-fe-01.fe.cpd.local', port=4000): Failed to resolve 'dd-x-0-fe-01.fe.cpd.local' ([Errno 11001] getaddrinfo failed)\"))"
+      }
+    ],
+    "status": "摘要或元数据网页已保存"
+  },
+  {
+    "id": "C001",
+    "category": "10_执行器_导轨与编码器",
+    "url": "https://www.ikont.com/catalogs/linear-motion-rolling-guide-series/red/1561E_CrossRollerWay.pdf",
+    "context": "IKO_CRWG_防保持架蠕变交叉滚柱导轨",
+    "title": "IKO_CRWG_防保持架蠕变交叉滚柱导轨",
+    "origins": [
+      "原文器件型号补充检索"
+    ],
+    "files": [],
+    "attempts": [
+      {
+        "url": "https://www.ikont.com/catalogs/linear-motion-rolling-guide-series/red/1561E_CrossRollerWay.pdf",
+        "http": 404,
+        "final_url": "https://ikont.com/catalogs/linear-motion-rolling-guide-series/red/1561E_CrossRollerWay.pdf",
+        "error": "404 Client Error: Not Found for url: https://ikont.com/catalogs/linear-motion-rolling-guide-series/red/1561E_CrossRollerWay.pdf"
+      }
+    ],
+    "status": "未获取"
+  },
+  {
+    "id": "C002",
+    "category": "07_测高闭环_三轴同步与标定",
+    "url": "https://www.scanlab.de/sites/default/files/2020-08/12_RTC6%20control%20boards.pdf",
+    "context": "SCANLAB_RTC6官方规格书",
+    "title": "SCANLAB_RTC6官方规格书",
+    "origins": [
+      "原文器件型号补充检索"
+    ],
+    "files": [
+      {
+        "path": "07_测高闭环_三轴同步与标定\\C002_SCANLAB_RTC6官方规格书.pdf",
+        "type": "PDF",
+        "pages": 2,
+        "bytes": 2265504,
+        "sha256": "1f7baa40a0a42e05b7bbb1d749571ebd73ab756f8354978078b5dce2c30db855",
+        "url": "https://www.scanlab.de/sites/default/files/2020-08/12_RTC6%20control%20boards.pdf",
+        "text_chars": 4131,
+        "title": "RTC6",
+        "preview": "high performance. advanced scan control.\nRTC 6\nRTC6 control boards enable smart and flexible control of scan \nsystems, lasers and peripheral devices in real time. \nKey Features:\n• SCANahead control \n• UltraFastPixelMode (up to 3.2 MHz)\n• Enlarged list memory\n• Standalone functonality for RTC6 Ethernet\nBased on the field-proven RTC5, the RTC6 control board delivers \nnew functionalities to tackle complex control tasks. Examples are \nimproved speed and position-dependent laser control and the \nsync",
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://www.scanlab.de/sites/default/files/2020-08/12_RTC6%20control%20boards.pdf",
+        "http": 200,
+        "final_url": "https://www.scanlab.de/sites/default/files/2020-08/12_RTC6%20control%20boards.pdf",
+        "result": "有效PDF"
+      }
+    ],
+    "status": "PDF已下载"
+  },
+  {
+    "id": "D001",
+    "category": "04_TAG声学调焦",
+    "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41377-023-01303-2/MediaObjects/41377_2023_1303_MOESM2_ESM.mov",
+    "title": "Supporting Video V1 (download MOV )",
+    "context": "R023论文补充材料",
+    "origins": [
+      "https://www.nature.com/articles/s41377-023-01303-2"
+    ],
+    "files": [
+      {
+        "path": "04_TAG声学调焦\\D001_Supporting Video V1 (download MOV ).mov",
+        "type": "MOV",
+        "bytes": 9357574,
+        "sha256": "f60340706e3bdf5f92dad918120d31b461fff1b9347584ba17ba6e3bbb78ff2f",
+        "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41377-023-01303-2/MediaObjects/41377_2023_1303_MOESM2_ESM.mov",
+        "title": "Supporting Video V1 (download MOV )"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41377-023-01303-2/MediaObjects/41377_2023_1303_MOESM2_ESM.mov",
+        "http": 200,
+        "result": "文件签名已检查"
+      }
+    ],
+    "status": "补充材料已下载"
+  },
+  {
+    "id": "D002",
+    "category": "04_TAG声学调焦",
+    "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41377-023-01303-2/MediaObjects/41377_2023_1303_MOESM3_ESM.mov",
+    "title": "supporting Video V2 (download MOV )",
+    "context": "R023论文补充材料",
+    "origins": [
+      "https://www.nature.com/articles/s41377-023-01303-2"
+    ],
+    "files": [
+      {
+        "path": "04_TAG声学调焦\\D002_supporting Video V2 (download MOV ).mov",
+        "type": "MOV",
+        "bytes": 14577180,
+        "sha256": "c7e61f7eb077658103b029be8237849476f5a0d7f79d2e12f56b82d722617883",
+        "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41377-023-01303-2/MediaObjects/41377_2023_1303_MOESM3_ESM.mov",
+        "title": "supporting Video V2 (download MOV )"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41377-023-01303-2/MediaObjects/41377_2023_1303_MOESM3_ESM.mov",
+        "http": 200,
+        "result": "文件签名已检查"
+      }
+    ],
+    "status": "补充材料已下载"
+  },
+  {
+    "id": "D003",
+    "category": "04_TAG声学调焦",
+    "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41377-023-01303-2/MediaObjects/41377_2023_1303_MOESM4_ESM.mov",
+    "title": "Supporting Video V3 (download MOV )",
+    "context": "R023论文补充材料",
+    "origins": [
+      "https://www.nature.com/articles/s41377-023-01303-2"
+    ],
+    "files": [
+      {
+        "path": "04_TAG声学调焦\\D003_Supporting Video V3 (download MOV ).mov",
+        "type": "MOV",
+        "bytes": 37713428,
+        "sha256": "e76dbdc87f98fa9613c0455f63c6a56ab7233d179de31e4fd3d28fd5641dc8bd",
+        "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41377-023-01303-2/MediaObjects/41377_2023_1303_MOESM4_ESM.mov",
+        "title": "Supporting Video V3 (download MOV )"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41377-023-01303-2/MediaObjects/41377_2023_1303_MOESM4_ESM.mov",
+        "http": 200,
+        "result": "文件签名已检查"
+      }
+    ],
+    "status": "补充材料已下载"
+  },
+  {
+    "id": "D004",
+    "category": "05_MEMS与全息调焦",
+    "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-024-47009-w/MediaObjects/41467_2024_47009_MOESM1_ESM.docx",
+    "title": "Supplementary Information (download DOCX )",
+    "context": "R025论文补充材料",
+    "origins": [
+      "https://www.nature.com/articles/s41467-024-47009-w"
+    ],
+    "files": [
+      {
+        "path": "05_MEMS与全息调焦\\D004_Supplementary Information (download DOCX ).docx",
+        "type": "DOCX",
+        "bytes": 8737333,
+        "sha256": "af1d89587af8663bd8d06f050e9950f61bb0070dd63cacaa8116d4557f51821d",
+        "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-024-47009-w/MediaObjects/41467_2024_47009_MOESM1_ESM.docx",
+        "title": "Supplementary Information (download DOCX )"
+      }
+    ],
+    "attempts": [
+      {
+        "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-024-47009-w/MediaObjects/41467_2024_47009_MOESM1_ESM.docx",
+        "http": 200,
+        "result": "文件签名已检查"
+      }
+    ],
+    "status": "补充材料已下载"
+  },
+  {
+    "id": "U001",
+    "url": "https://doi.org/10.1364/OL.509656",
+    "category": "02_反射式与三振镜调焦",
+    "title": "2023_反射式动态聚焦_非球面校正与扫描范围扩展",
+    "context": "用户提供的正式期刊全文PDF，已核对首页标题与DOI",
+    "origins": [
+      "F:\\发票\\ol-48-24-6496.pdf"
+    ],
+    "local_source": "F:\\发票\\ol-48-24-6496.pdf",
+    "doi": "10.1364/OL.509656",
+    "status": "PDF已下载",
+    "files": [
+      {
+        "path": "02_反射式与三振镜调焦\\U001_2023_反射式动态聚焦_非球面校正与扫描范围扩展.pdf",
+        "type": "PDF",
+        "pages": 4,
+        "bytes": 4685042,
+        "sha256": "a6909896eabec0f01f9f79c5c81a2bce5420f28486400468682369df1f88119f",
+        "url": "https://doi.org/10.1364/OL.509656",
+        "title": "2023_反射式动态聚焦_非球面校正与扫描范围扩展",
+        "text_chars": 22325,
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "source": "F:\\发票\\ol-48-24-6496.pdf",
+        "result": "用户提供本地PDF，复制归档，原件保留"
+      }
+    ]
+  },
+  {
+    "id": "U002",
+    "url": "https://doi.org/10.1364/OE.476921",
+    "category": "02_反射式与三振镜调焦",
+    "title": "2023_清华_振镜驱动反射式动态聚焦",
+    "context": "用户提供的正式期刊全文PDF，已核对首页标题与DOI",
+    "origins": [
+      "F:\\发票\\oe-31-1-673.pdf"
+    ],
+    "local_source": "F:\\发票\\oe-31-1-673.pdf",
+    "doi": "10.1364/OE.476921",
+    "status": "PDF已下载",
+    "files": [
+      {
+        "path": "02_反射式与三振镜调焦\\U002_2023_清华_振镜驱动反射式动态聚焦.pdf",
+        "type": "PDF",
+        "pages": 11,
+        "bytes": 46357513,
+        "sha256": "7a1acdb14d3a5204ab74196c46eda8d7b4abbdcea3531ee64b4edbf263d37222",
+        "url": "https://doi.org/10.1364/OE.476921",
+        "title": "2023_清华_振镜驱动反射式动态聚焦",
+        "text_chars": 30549,
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "source": "F:\\发票\\oe-31-1-673.pdf",
+        "result": "用户提供本地PDF，复制归档，原件保留"
+      }
+    ]
+  },
+  {
+    "id": "U003",
+    "url": "https://doi.org/10.1364/OE.588979",
+    "category": "01_移动透镜式与匹配光学",
+    "title": "2026_Z镜组_XY振镜_场镜系统联合优化",
+    "context": "用户提供的正式期刊全文PDF，已核对首页标题与DOI",
+    "origins": [
+      "F:\\发票\\oe-34-8-14943.pdf"
+    ],
+    "local_source": "F:\\发票\\oe-34-8-14943.pdf",
+    "doi": "10.1364/OE.588979",
+    "status": "PDF已下载",
+    "files": [
+      {
+        "path": "01_移动透镜式与匹配光学\\U003_2026_Z镜组_XY振镜_场镜系统联合优化.pdf",
+        "type": "PDF",
+        "pages": 16,
+        "bytes": 29276469,
+        "sha256": "0880057d89ebcc5feb776c71b039cdef209cd4d79d3f54fd4ba23f919ef8290d",
+        "url": "https://doi.org/10.1364/OE.588979",
+        "title": "2026_Z镜组_XY振镜_场镜系统联合优化",
+        "text_chars": 48785,
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "source": "F:\\发票\\oe-34-8-14943.pdf",
+        "result": "用户提供本地PDF，复制归档，原件保留"
+      }
+    ]
+  },
+  {
+    "id": "U004",
+    "url": "https://doi.org/10.1016/j.optlastec.2024.111608",
+    "category": "02_反射式与三振镜调焦",
+    "title": "2025_高速三振镜三维扫描系统_光学设计与分析",
+    "context": "用户提供的正式期刊全文PDF，已核对首页标题与DOI",
+    "origins": [
+      "F:\\发票\\1-s2.0-S0030399224010661-main.pdf"
+    ],
+    "local_source": "F:\\发票\\1-s2.0-S0030399224010661-main.pdf",
+    "doi": "10.1016/j.optlastec.2024.111608",
+    "status": "PDF已下载",
+    "files": [
+      {
+        "path": "02_反射式与三振镜调焦\\U004_2025_高速三振镜三维扫描系统_光学设计与分析.pdf",
+        "type": "PDF",
+        "pages": 7,
+        "bytes": 7650780,
+        "sha256": "74b93980fc31255bb5cc8cec10478760a16027199a760e9811652d00e6f8b1c0",
+        "url": "https://doi.org/10.1016/j.optlastec.2024.111608",
+        "title": "2025_高速三振镜三维扫描系统_光学设计与分析",
+        "text_chars": 33375,
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "source": "F:\\发票\\1-s2.0-S0030399224010661-main.pdf",
+        "result": "用户提供本地PDF，复制归档，原件保留"
+      }
+    ]
+  },
+  {
+    "id": "U005",
+    "url": "https://doi.org/10.1364/OE.557541",
+    "category": "02_反射式与三振镜调焦",
+    "title": "2025_高速三振镜三维扫描系统_曲面加工",
+    "context": "用户提供的正式期刊全文PDF，已核对首页标题与DOI",
+    "origins": [
+      "F:\\发票\\oe-33-6-14314.pdf"
+    ],
+    "local_source": "F:\\发票\\oe-33-6-14314.pdf",
+    "doi": "10.1364/OE.557541",
+    "status": "PDF已下载",
+    "files": [
+      {
+        "path": "02_反射式与三振镜调焦\\U005_2025_高速三振镜三维扫描系统_曲面加工.pdf",
+        "type": "PDF",
+        "pages": 13,
+        "bytes": 5120695,
+        "sha256": "1719a3879fb155b3d10840d9e4d4450b273126778e42ff59c5f2422e58fb6ca1",
+        "url": "https://doi.org/10.1364/OE.557541",
+        "title": "2025_高速三振镜三维扫描系统_曲面加工",
+        "text_chars": 32390,
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "source": "F:\\发票\\oe-33-6-14314.pdf",
+        "result": "用户提供本地PDF，复制归档，原件保留"
+      }
+    ]
+  },
+  {
+    "id": "U006",
+    "url": "https://doi.org/10.1016/j.ijmachtools.2025.104310",
+    "category": "01_移动透镜式与匹配光学",
+    "title": "2025_模型驱动三维焦点移动_透明柔性聚合物微加工",
+    "context": "用户提供的正式期刊全文PDF，已核对首页标题与DOI",
+    "origins": [
+      "F:\\发票\\1-s2.0-S0890695525000653-main.pdf"
+    ],
+    "local_source": "F:\\发票\\1-s2.0-S0890695525000653-main.pdf",
+    "doi": "10.1016/j.ijmachtools.2025.104310",
+    "status": "PDF已下载",
+    "files": [
+      {
+        "path": "01_移动透镜式与匹配光学\\U006_2025_模型驱动三维焦点移动_透明柔性聚合物微加工.pdf",
+        "type": "PDF",
+        "pages": 28,
+        "bytes": 42300644,
+        "sha256": "eb2cb66b75f95689028ed2a1282314ba53594d3fa10bcf9b91ed8735bf63e391",
+        "url": "https://doi.org/10.1016/j.ijmachtools.2025.104310",
+        "title": "2025_模型驱动三维焦点移动_透明柔性聚合物微加工",
+        "text_chars": 125458,
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "source": "F:\\发票\\1-s2.0-S0890695525000653-main.pdf",
+        "result": "用户提供本地PDF，复制归档，原件保留"
+      }
+    ]
+  },
+  {
+    "id": "U007",
+    "url": "https://doi.org/10.1007/s44258-025-00067-1",
+    "category": "04_TAG声学调焦",
+    "title": "2026_共线光声相互作用_局域动态调焦与扩展景深",
+    "context": "用户提供的正式期刊全文PDF，已核对首页标题与DOI",
+    "origins": [
+      "F:\\发票\\s44258-025-00067-1.pdf"
+    ],
+    "local_source": "F:\\发票\\s44258-025-00067-1.pdf",
+    "doi": "10.1007/s44258-025-00067-1",
+    "status": "PDF已下载",
+    "files": [
+      {
+        "path": "04_TAG声学调焦\\U007_2026_共线光声相互作用_局域动态调焦与扩展景深.pdf",
+        "type": "PDF",
+        "pages": 12,
+        "bytes": 3257543,
+        "sha256": "dd58b27e6ea4c22e5041bd272678ea195028fe811242885335fe954d6a62748e",
+        "url": "https://doi.org/10.1007/s44258-025-00067-1",
+        "title": "2026_共线光声相互作用_局域动态调焦与扩展景深",
+        "text_chars": 36196,
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "source": "F:\\发票\\s44258-025-00067-1.pdf",
+        "result": "用户提供本地PDF，复制归档，原件保留"
+      }
+    ]
+  },
+  {
+    "id": "U008",
+    "url": "https://doi.org/10.7510/jgjs.issn.1001-3806.2016.04.002",
+    "category": "01_移动透镜式与匹配光学",
+    "title": "2016_激光大尺度3维动态聚焦扫描加工系统研究",
+    "context": "用户提供的正式期刊全文PDF，已核对首页标题与DOI",
+    "origins": [
+      "F:\\发票\\激光大尺度3维动态聚焦扫描加工系统研究.pdf"
+    ],
+    "local_source": "F:\\发票\\激光大尺度3维动态聚焦扫描加工系统研究.pdf",
+    "doi": "10.7510/jgjs.issn.1001-3806.2016.04.002",
+    "status": "PDF已下载",
+    "files": [
+      {
+        "path": "01_移动透镜式与匹配光学\\U008_2016_激光大尺度3维动态聚焦扫描加工系统研究.pdf",
+        "type": "PDF",
+        "pages": 6,
+        "bytes": 1911841,
+        "sha256": "ed7fe3bfecf2fde9c58b548e3af07f5f8293a1e18d02b0ab0f71a0fad231a017",
+        "url": "https://doi.org/10.7510/jgjs.issn.1001-3806.2016.04.002",
+        "title": "2016_激光大尺度3维动态聚焦扫描加工系统研究",
+        "text_chars": 12971,
+        "validation": "PDF签名、逐页解析、首末页渲染通过"
+      }
+    ],
+    "attempts": [
+      {
+        "source": "F:\\发票\\激光大尺度3维动态聚焦扫描加工系统研究.pdf",
+        "result": "用户提供本地PDF，复制归档，原件保留"
+      }
+    ]
+  }
+]

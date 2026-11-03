@@ -1,0 +1,29 @@
+﻿05_MEMS与全息调焦
+
+R025 | Large-volume focus control at 10 MHz refresh rate via fast line-scanning amplitude-encoded scattering-assisted holography | Nature Communications
+状态：PDF已下载
+来源：https://www.nature.com/articles/s41467-024-47009-w
+文件：05_MEMS与全息调焦\R025_Large-volume focus control at 10 MHz refresh rate via fast line-scanning amplitude-encoded scattering-ass.html
+文件：05_MEMS与全息调焦\R025_全息10MHz_2024_正文.pdf
+文件：05_MEMS与全息调焦\R025_全息10MHz_2024_公开审稿文件.pdf
+
+R027 | MEMS Varifocal Optical Elements for Focus Control - PMC
+状态：论文全文HTML已保存_未取得PDF
+来源：https://pmc.ncbi.nlm.nih.gov/articles/PMC12029447/
+文件：05_MEMS与全息调焦\R027_MEMS Varifocal Optical Elements for Focus Control - PMC.html
+
+S013 | MEMS综述_出版社PDF
+状态：未获取
+来源：https://www.mdpi.com/2072-666X/16/4/482/pdf?version=1745050038
+
+
+S014 | MEMS综述_出版社网页
+状态：未获取
+来源：https://www.mdpi.com/2072-666X/16/4/482
+
+
+D004 | Supplementary Information (download DOCX )
+状态：补充材料已下载
+来源：https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-024-47009-w/MediaObjects/41467_2024_47009_MOESM1_ESM.docx
+文件：05_MEMS与全息调焦\D004_Supplementary Information (download DOCX ).docx
+

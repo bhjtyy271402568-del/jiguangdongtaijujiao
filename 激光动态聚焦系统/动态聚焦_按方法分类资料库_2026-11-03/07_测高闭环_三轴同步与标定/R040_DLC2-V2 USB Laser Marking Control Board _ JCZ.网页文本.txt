@@ -1,0 +1,597 @@
+来源：https://www.ezcad.com/products/dlc2-v2/
+采集日期：2026-11-03
+
+DLC2-V2 USB Laser Marking Control Board | JCZ
+Skip to content
+Toggle Navigation
+sales01@bjjcz.com
+Toggle Navigation
+Home
+Products
+Laser Software
+Ezcad2 Software
+Ezcad3 Software
+Ezcad SDK
+Large Size Processing Software
+Laser Cutting Software – Cutmaker
+3D Laser Printing Software
+3D Glass Engraving System
+Laser Controller
+Laser Marking – DLC Series
+DLC2 – V2
+DLC2 – V3
+DLC2 – V4
+DLC2PCIE
+Laser Marking – LMC Series
+LMCV4
+LMCPCIE
+Fly Marking System
+J2000
+MINI02
+Large Size Processing Controller
+Laser Cutting Contoller
+Laser Welding Controller
+3D Printing Controller
+Galvo Scanner
+2D Galvo Scanner
+GO7 Series
+G3 Series(G3 Ult/ Base / Std)
+3D Galvo Scanner
+G3-3D
+GO3D – T
+Dynamic Focus
+Welding Galvo Scanner
+Laser Source
+Fiber 1064nm
+JPT MOPA – LP
+JPT MOPA – M7
+Raycus – Pulsed Low – Power
+Raycus – Pulsed High – Power
+Raycus QCW Laser
+Raycus – CW Single-Module
+Raycus – CW Multi-Module
+UV 355nm
+JPT UV – SEAL Water Cooling
+JPT UV – LARK Air Cooling
+HUARAY-Cypress2-355
+CO2 10600nm
+Nanosecond Laser
+Picosecond Laser
+Femtosecond Laser
+Laser Optics
+F-theta Lens – Flat Field
+F-theta Lens – Telecentric
+Laser Marking Machines
+Portable Laser Marking Machine
+Table Laser Marking Machine
+Small Closed Laser Marking Machine
+Large Closed  Laser Marking Machine
+Mini Type-Laser Marking Machine
+AIO-All in One Laser
+Handheld Fiber Laser Marking Machine
+Fly Laser Marking Machine
+Laser Cleaning Machines
+CW Laser Cleaning Machine
+Pulse Laser Cleaning Machine
+Suitcase Pulsed Laser Cleaning Machine
+Backpack-Style Laser Cleaning Machine
+Laser Welding Machine
+Mini Jewelry Laser Welding Machine
+Handheld Fiber Laser Welding Machine
+Platform Laser Welding Machine
+3D-Printing-Machine
+Resistor Trimming Machine
+TS4210D
+TS4410F
+TS3335D
+RD-C50 Type
+RD-L500
+MT350
+PC510
+TS5210F
+Laser Cutting Head
+Solutions
+Industry
+Automobile Industry
+Metalworking Industry
+Medical Industry
+Aerospace Industry
+Semiconductor & Display Industry
+3C Electronics Industry
+Semiconductor Industry
+PCB Industry
+Consumer Products Industry
+Home Appliance
+Jewelry & Gift Industry
+Clothing
+Battery Industry
+New Energy Industry
+Application & Solution
+News
+Company News
+BLOG
+Download
+Video
+About Us
+Contact Us
+DLC2-V2 EZCAD3 DLC2 Series | USB Laser & Galvo Controller
+Previous
+Next
+View Larger Image
+View Larger Image
+View Larger Image
+DLC2-V2 EZCAD3 DLC2 Series | USB Laser & Galvo Controller
+ezcadchina
+2026-10-19T15:03:50+08:00
+Professional design software
+DLC2-V2 EZCAD3 DLC2 Series | USB Laser & Galvo Controller
+Supports the enhanced version of the protocol data XY2-100 (X, Y, Z three-axis scanhead)
+Fiber, CO2, QCW, SPI, UV, YAG and other lasers can be supported by the laser expansion card
+Support 10 input and 8 output ports
+12V power supply, minimum current requirement 3A
+Support fly marking function
+Support offline marking function
+Support 16bit/18bit galvanometer, can be customized according to the actual galvanometer protocol
+Contact us for a free quote
+0
+YEARS EXPERIENCE
+0
+EXPERIENCED EMPLOYEES
+0
+R&D AND SUPPORT ENGINEERS
+0
+GLOBAL CUSTOMERS
+Specifications
+Product Description
+Specifications
+Configurations
+Connection Method
+USB2.0
+Compatible Laser
+All Mainstream Laser Types In The Market
+Galvo Scanner Control Protocol
+All Mainstream Galvos Types In The Market
+Power Supply Method
+12-24V DC Wide Voltage Input
+Number of Input Ports
+10 Channels
+Number of Output Ports
+8 Channels
+Operating System
+WIN7/WIN10/WIN11, 64-bit Systems
+Encoder Input
+2 Channels
+Supports laser control via interface cards like Fiber, STD, SPI, QCW, etc.
+Equipped with a watchdog function to prevent abnormal prolonged laser emissions
+Enhanced control card with interference resistance
+Input port triggering supports both PNP and NPN relay connections
+Product Description
+DLC2-V2 USB Laser Marking Control Board for EZCAD3
+The DLC2-V2 is a USB 2.0 laser and galvo controller for
+EZCAD3
+laser marking systems. It is a digital, high-performance control card that supports enhanced XY2-100 three-axis scanhead communication, 16-bit and 18-bit galvanometers, 10 input channels, 8 output channels and 2 encoder inputs. It can be expanded into a 4-axis motion control board for project-based needs, and it supports fly marking and offline marking.
+Fiber, CO₂, QCW, SPI, UV, YAG and other lasers can be driven through laser interface cards. This makes the DLC2-V2 laser controller a good fit for OEM laser equipment, automated marking stations, three-axis galvo projects and machine upgrades that need more flexibility than a basic 2D marking card while keeping a simple USB machine architecture.
+The DLC2-V2 belongs to the
+DLC series
+in the JCZ
+laser controller
+range. This page covers the specifications, laser and galvo compatibility, I/O and encoder functions, fly and offline marking, motion expansion, software and drivers, replacement projects, model comparison, and the information we need to quote.
+Contact us for a free quote
+.
+DLC2-V2 at a Glance
+Control card type: USB laser and galvo control board for EZCAD3
+Connection: USB 2.0
+Galvo: enhanced XY2-100 (X, Y, Z three-axis scanhead), 16-bit and 18-bit, customizable to the actual galvo protocol
+Lasers: Fiber, CO₂, QCW, SPI, UV, YAG and others through laser interface cards
+I/O: 10 input channels, 8 output channels, 2 encoder inputs
+Functions: fly marking, offline marking, motion expansion up to 4 axes
+Protection: watchdog function against abnormal prolonged laser emission
+Operating system: Windows 7, 10 and 11, 64-bit
+What the DLC2-V2 Controller Does
+The DLC2-V2 is the central control board of a laser marking system. EZCAD3 runs on the PC and sends marking data over USB 2.0. The control card then drives the laser source through the laser interface card, controls the galvo scanner in real time, reads the encoder and input signals, and sets the output signals for the rest of the machine. Because the laser and galvo are controlled together, it can mark, engrave and process with synchronized timing.
+It is a control board, not a complete machine. A complete system also needs:
+A
+laser source
+:
+fiber
+,
+QCW
+,
+CO₂
+,
+UV
+or another compatible source
+The laser interface card that matches that source
+A
+2D galvo
+or a compatible
+3D galvo
+scanner
+An
+F-theta flat-field lens
+or
+telecentric lens
+An encoder or product sensor, and a rotary axis, XY stage or Z-axis expansion where needed
+I/O devices and PLC signals, an industrial PC or HMI, and an electrical cabinet
+A safety enclosure, interlock system and fume extraction for applicable processes
+If you would rather buy a finished machine, see our
+laser marking machines
+.
+Why Choose the DLC2-V2 USB Laser Controller
+Three-axis ready.
+Enhanced XY2-100 communication supports X, Y and Z scanheads for compatible 3-axis and dynamic-focus projects.
+High-resolution galvos.
+It supports 16-bit and 18-bit galvanometers and can be customized to the actual galvo protocol.
+Flexible laser support.
+Interface cards let one controller family serve fiber, CO₂, QCW, SPI, UV, YAG and other lasers.
+Industrial I/O.
+10 inputs, 8 outputs and 2 encoder inputs, with PNP and NPN input triggering.
+Production-line functions.
+Fly marking and offline marking are supported.
+Room to grow.
+It can be expanded to 4-axis motion control for rotary axes, stages and Z-axis projects.
+Built for industrial environments.
+An interference-resistant design and a watchdog function help protect the process.
+Simple USB architecture.
+A single USB 2.0 link to a local PC or industrial PC.
+Typical DLC2-V2 Applications
+Industrial serial-number marking, QR codes, Data Matrix and variable production data
+Metal and plastic traceability marking
+Encoder-based marking of moving products on a conveyor
+Offline marking workflows
+2D laser marking systems
+Rotary-axis or project-specific motion expansion
+Compatible 3-axis galvo and dynamic-focus projects
+OEM laser equipment development
+Industries that use this type of control include
+automotive
+,
+3C electronics
+,
+medical
+,
+battery
+,
+new energy
+,
+metalworking
+,
+semiconductor
+and
+PCB
+. More examples are on the
+application and solution page
+.
+Laser Source Compatibility and Interface Cards
+The DLC2-V2 supports Fiber, CO₂, QCW, SPI, UV, YAG and other lasers through the appropriate laser interface card. The laser category alone is not enough to confirm compatibility. Two sources of the same type can use different connectors, control signals and pin assignments, and some lasers need special signals. Do not choose a controller by laser brand alone.
+Typical interface options include a fiber interface (including IPG Type E lasers), an SPI interface, a standard (STD) interface for CO₂, UV and green lasers, and QCW interfaces for sources that need a 5V or 24V control signal. The exact laser model decides which card is required.
+Fiber lasers
+Fiber lasers are the most common configuration. Check the laser model and its control interface, and see our
+1064nm fiber lasers
+, including
+JPT MOPA LP
+,
+JPT MOPA M7
+and the
+Raycus pulsed
+range.
+QCW and CW fiber lasers
+QCW sources are supported through a QCW interface card. Provide the operating mode and the control-signal level the laser needs. See the
+Raycus QCW laser
+.
+SPI lasers
+SPI lasers need the SPI interface configuration. Send the source model, interface specification and existing cable details.
+CO₂, UV, YAG and green lasers
+These sources connect through a compatible interface card. See
+CO₂ 10600nm
+and
+UV 355nm
+lasers, such as
+JPT UV SEAL
+and
+JPT UV LARK
+.
+To confirm the controller and interface card, send:
+Laser brand, exact model, type and wavelength
+Laser interface type and required power-control method
+A photo of the existing interface card
+A photo of the existing laser-control cable
+Galvo Scanner Compatibility and Three-Axis Control
+The DLC2-V2 supports all mainstream galvo types, enhanced XY2-100 three-axis (X, Y, Z) scanhead communication, and 16-bit and 18-bit galvos, and it can be customized to the actual galvo protocol.
+2D galvos:
+for flat-field marking with
+GO7 series
+or
+G3 series
+scanners.
+3-axis scanheads:
+X, Y and Z communication for compatible 3D galvos such as
+G3-3D
+and
+GO3D-T
+.
+Dynamic focus:
+compatible
+dynamic focus
+projects, subject to the focus axis, optics and calibration.
+Custom protocols:
+send the protocol documentation if your galvo is not a standard type.
+Three-axis communication does not automatically mean every 3D or dynamic-focus application works without extra configuration. The result depends on the scanhead, focus axis, lens, calibration file and EZCAD3 setup. Before ordering, send the galvo brand and model, the 2-axis or 3-axis requirement, the lens focal length, the marking field, and any Z-axis or dynamic-focus function you need. For other scanner options, see all
+galvo scanners
+.
+Industrial I/O, Encoder Input and Wiring
+The DLC2-V2 provides 10 input channels, 8 output channels and 2 encoder inputs. Input triggering supports both PNP and NPN relay connections. These resources let the controller coordinate start signals, sensors, PLC signals, indicators and encoder feedback on a machine or production line.
+The I/O and encoder specifications do not mean every PLC, sensor, encoder or driver connects directly. Before installation, list:
+Each input: sensor type, trigger logic (PNP or NPN) and signal voltage
+Each output: the connected device and electrical interface
+Encoder specification, signal type, direction and scaling
+The complete I/O assignment and control sequence
+Fly Marking and Offline Marking
+Fly marking
+The DLC2-V2 supports fly marking for marking moving products. With 2 encoder inputs, it can follow product movement on a conveyor. Suitability depends on the encoder, trigger method, line speed range, product spacing, laser, galvo and marking content. Provide the encoder model, conveyor speed range, required marking position, product spacing and trigger logic. For dedicated high-speed line coding, also compare the
+fly marking system
+, including
+J2000
+and
+MINI02
+.
+Offline marking
+Offline marking is supported for compatible configurations. Describe your workflow, such as the job data source, the trigger and the job-switching method, so we can confirm the setup for your machine.
+Motion Expansion: 4-Axis, Rotary and Z-Axis
+The DLC2-V2 can be expanded into a 4-axis motion control board for project-based needs. This suits rotary-axis marking, XY stage projects and Z-axis expansion. The required hardware and scope are confirmed per project. Please provide:
+The number of axes and the axis type (rotary, linear stage, Z)
+Motor and driver model, and feedback signals
+The motion sequence and synchronization requirement
+The mechanical layout and travel
+If you need more complex motion, networked integration or higher I/O capacity, compare the
+DLC2-V3
+and
+DLC2-V4
+.
+Is the DLC2-V2 the Right Controller?
+Your requirement
+Recommended direction
+Standard 2D marking with EZCAD2
+LMC series
+, such as
+LMCV4
+(USB) or
+LMCPCIE
+(PCIe)
+USB-based EZCAD3 controller with I/O, encoders, offline marking or three-axis scanhead communication
+DLC2-V2
+Ethernet, multi-card connection or networked integration
+DLC2-V3
+Gigabit Ethernet, higher I/O count and expanded motion capability
+DLC2-V4
+PCIe-based controller architecture
+DLC2PCIE
+Dedicated high-speed production-line coding
+J2000
+or
+MINI02
+Advanced SDK, PLC, MES or custom HMI development
+EZCAD SDK
+project
+Choose the DLC2-V2 when USB suits your workstation design and you need an EZCAD3-compatible controller with I/O and encoder functions, fly or offline marking, or three-axis scanhead communication. Choose DLC2-V3 or DLC2-V4 when Ethernet, multi-card architecture, higher I/O capacity or advanced motion expansion is the main requirement.
+DLC2-V2 vs LMCV4: EZCAD3 or EZCAD2?
+The DLC series and the LMC series are two different control platforms.
+DLC2-V2:
+EZCAD3, USB 2.0, three-axis scanhead communication, 2 encoder inputs, fly and offline marking, motion expansion.
+LMCV4
+:
+EZCAD2, USB 2.0, digital galvo control, in FIBER, DIGIT and SPI versions for standard 2D marking.
+LMCPCIE
+:
+EZCAD2, installs in a PCIe slot.
+If your machine runs EZCAD2 and only needs standard 2D marking, an LMC board is the direct choice. If you need EZCAD3 features such as three-axis control or motion expansion, choose the DLC series. Read
+JCZ LMC and DLC controller solutions
+,
+Understanding Laser Control Boards
+and
+The Best Laser Marking Controllers
+for a deeper comparison.
+EZCAD3 Software, Drivers and Operating System
+EZCAD3 is supplied with compatible original DLC controller hardware as part of the control-system configuration. It is not sold as standalone software. The DLC2-V2 supports Windows 7, 10 and 11, 64-bit systems, and connects to the PC with a USB 2.0 cable.
+Drivers and software are available on the
+download page
+, and the
+official driver update notice
+lists current driver information. Compare
+EZCAD2
+and
+EZCAD3
+if you are deciding between the two platforms, and see the
+EZCAD SDK
+for custom software integration.
+DLC2-V2 Replacement and Upgrade Projects
+Many orders replace a damaged board or upgrade an older machine. Replacement is not decided by board appearance alone. Before ordering, confirm:
+The existing board model and label, and whether it is original JCZ hardware
+Whether the machine runs EZCAD2 or EZCAD3. Moving from an LMC (EZCAD2) board to a DLC (EZCAD3) board means moving to EZCAD3.
+The laser source model and the interface card required
+The galvo model, protocol and cable pinout
+The I/O assignments and encoder wiring
+Existing files, parameters and calibration data that must be migrated
+Send photos of the existing board, connectors and cables with your laser and galvo models. A replacement may need a different interface card, cabling or system configuration.
+Custom Configuration and OEM Integration
+The DLC2-V2 can be configured for compatible laser interface cards, galvo protocols and project-based motion expansion. Custom SDK development, HMI, PLC or MES integration is not automatically included in the standard supply, so describe those requirements separately for technical review. Useful details are:
+Laser source model and interface card requirement
+Galvo protocol and bit resolution
+Complete I/O list, signal types and control sequence
+Encoder model, line speed and trigger method
+Number of motion axes, motor drivers and feedback signals
+External communication or software requirements
+Installation and Integration Checklist
+Host computer:
+Windows 7, 10 or 11, 64-bit, with a USB 2.0 port.
+Power:
+confirm the supply voltage, a minimum of 3A, polarity and connection.
+Laser:
+exact model, interface card, signal requirements and connector pinout.
+Galvo:
+protocol, bit resolution, cable pinout, and 2-axis or 3-axis requirement.
+Encoder and I/O:
+signal types, trigger logic, output assignments and wiring.
+Software:
+EZCAD3 configuration, device settings and calibration files.
+Safety:
+laser enclosure, access control, interlocks and emergency stop.
+The watchdog function helps prevent abnormal prolonged laser emission. It does not replace the safety enclosure, interlocks and emergency-stop design that your machine requires.
+DLC2-V2 Price, Supplier, MOQ and Delivery
+The DLC2-V2 is quoted per project. The price depends on the controller configuration, laser interface card, cables and accessories, any motion expansion, order quantity and destination. We work with OEM machine builders, distributors, system integrators, service companies and end users.
+To compare quotations fairly, ask every supplier to state the same scope:
+Controller model and hardware configuration
+EZCAD3 software supplied with the original DLC hardware
+Laser interface card for your exact laser
+Laser, galvo, I/O, encoder and power cables
+Power supply and accessories
+Additional hardware for motion expansion
+MOQ, lead time, shipping, warranty and after-sales support are confirmed in the quotation, based on the exact configuration and quantity. They should not be assumed from other suppliers’ listings or from a different controller model.
+Request a DLC2-V2 USB Laser Controller Quote
+Send us the following and we will reply with a quotation and technical confirmation:
+Laser source brand, model and type
+Galvo brand, model and protocol
+Existing controller photo and cable photos, if this is a replacement
+Required I/O signals and encoder details
+Marking process and application
+Motion axes, if any
+Power-supply requirement
+Destination country, quantity and company type
+We will confirm whether the DLC2-V2 fits your OEM machine, replacement project, three-axis galvo system, fly-marking application or automation workflow, and which interface card or expansion it needs.
+Request a DLC2-V2 Quote
+DLC2-V2 FAQ
+What is the DLC2-V2 USB laser marking control board?
+It is a USB 2.0 laser and galvo controller for EZCAD3. It drives the laser through an interface card, controls the galvo (including enhanced XY2-100 three-axis scanheads), and handles inputs, outputs and encoders.
+Is the DLC2-V2 a complete laser marking machine?
+No. It is a control board. A complete system also needs a compatible laser source, galvo scanner, lens, interface card, cables, power supply, host computer and safety system.
+Is DLC2-V2 the same as a DLC2 laser controller or EZCAD3 control card?
+Yes, these are different names for the same kind of product: the control card between EZCAD3 and the laser and galvo. DLC2-V2 is the USB model in the
+DLC series
+.
+Is EZCAD3 included with the DLC2-V2?
+EZCAD3
+is supplied with compatible original DLC controller hardware. It is not sold as standalone software.
+Which lasers can the DLC2-V2 run?
+Fiber, CO₂, QCW, SPI, UV, YAG and other lasers, through the appropriate laser interface card. Confirm the exact laser model, control signals, connector and cable pinout before ordering.
+Does the DLC2-V2 support QCW lasers?
+Yes, through a QCW interface. Send the laser model, operating mode and the control-signal level it requires.
+Does the DLC2-V2 support SPI lasers?
+Yes, through the SPI interface configuration. Send the source model and interface specification.
+Does the DLC2-V2 support 3D or dynamic-focus marking?
+It supports enhanced XY2-100 three-axis scanhead communication. Actual 3D or dynamic-focus operation depends on the scanhead, optics, calibration and EZCAD3 setup.
+Does the DLC2-V2 support 16-bit and 18-bit galvos?
+Yes. It supports 16-bit and 18-bit galvo protocols and can be customized to the actual galvo protocol.
+Does the DLC2-V2 support fly marking?
+Yes. It has 2 encoder inputs and supports fly marking, subject to the encoder, trigger method, line speed, product spacing and marking content.
+Does the DLC2-V2 support offline marking?
+Yes, for compatible configurations. Describe your job data source, trigger and workflow so we can confirm the setup.
+How many inputs, outputs and encoder inputs does it have?
+10 input channels, 8 output channels and 2 encoder inputs. Inputs support PNP and NPN relay triggering.
+Can the DLC2-V2 control a rotary axis or extra motion axes?
+Yes. It can be expanded into a 4-axis motion control board for project-based needs. Confirm the axes, motor drivers and feedback signals in your inquiry.
+What power supply does the DLC2-V2 need?
+The specification table lists 12–24V DC wide-voltage input, and the feature list mentions 12V with a minimum of 3A. A 12V supply rated for at least 3A satisfies both. Confirm the input range for your board revision.
+Which operating systems does the DLC2-V2 support?
+Windows 7, Windows 10 and Windows 11, 64-bit systems, over USB 2.0. Check the
+download page
+for current drivers.
+Can I replace my EZCAD2 board (LMCV4 or LMCPCIE) with a DLC2-V2?
+Not directly. LMC boards use EZCAD2 and the DLC series uses EZCAD3, so the change means moving to EZCAD3. To stay on EZCAD2, see
+LMCV4
+or
+LMCPCIE
+.
+Can I use the DLC2-V2 with LightBurn?
+EZCAD3 is the software supplied with the DLC2-V2. LightBurn has announced support for JCZ DLC-series boards that use the EZCAD3 protocol, but that support is provided by LightBurn. Check LightBurn’s current compatibility information for your exact board before relying on it.
+What is the difference between the DLC2-V2 and DLC2-V3?
+The DLC2-V2 is a USB-based EZCAD3 controller. The
+DLC2-V3
+is the option for Ethernet, multi-card connection and more networked integration.
+What is the difference between the DLC2-V2 and DLC2-V4?
+The
+DLC2-V4
+uses Gigabit Ethernet and offers higher I/O and expanded motion capability. Choose it when those are the main requirements.
+What about the DLC2PCIE?
+The
+DLC2PCIE
+uses a PCIe-based architecture instead of USB. Choose it when your machine is designed around a PCIe slot.
+Can the DLC2-V2 be customized for my OEM machine?
+Laser interface cards and galvo protocols can be configured to your hardware, and motion expansion is project-based. Custom SDK, HMI, PLC or MES work needs separate technical review and is not automatically included. See the
+EZCAD SDK
+.
+Does the watchdog replace laser safety measures?
+No. The watchdog helps prevent abnormal prolonged laser emission, but your machine still needs a safety enclosure, interlocks and an emergency-stop design.
+What should I send for a quotation or compatibility review?
+Send your laser brand and model, galvo model and protocol, existing controller photos if replacing one, required I/O and encoder details, marking process, destination country and quantity, plus photos of connectors and interface cards.
+Contact JCZ
+with these details.
+What are the MOQ, lead time and warranty?
+These depend on the configuration and quantity and are confirmed in the quotation.
+Contact us
+for the terms for your order.
+Inquire Us
+Recommended products
+ezcadchina
+2026-07-30T09:37:06+08:00
+Platform Laser Welding Machine | High-Speed Fiber Laser Welder with Automatic Wire Feeder
+ezcadchina
+2026-07-20T13:35:18+08:00
+Elite Series Nanosecond Laser – Compact UV, Green & Red Industrial Laser
+ezcadchina
+2026-02-12T16:13:03+08:00
+AOFEMTO Series Femtosecond Laser – Compact UV, Green & Red Industrial Laser
+ezcadchina
+2026-02-12T15:47:48+08:00
+AMT Series Picosecond Laser – Compact UV, Green & Red Industrial Laser
+News
+OFFICIAL DRIVER UPDATE NOTICE
+Read More
+Trends in Enclosed Laser Marking Cell Integration
+Read More
+2026 Mid-Autumn Festival and National Day Holiday Notice
+Read More
+Top Factors That Affect Marking Quality in Handheld Fiber Laser Systems
+Read More
+Meet JCZ at Laser World of Photonics India 2026 in Bengaluru
+Read More
+1
+2
+Next
+Share This Story, Choose Your Platform!
+Facebook
+X
+Reddit
+LinkedIn
+WhatsApp
+Tumblr
+Pinterest
+Vk
+Xing
+Email
+Top Partner of
+About Us
+Contact Us
+About Us
+Contact Us
+Contact Us
+Headquarter:
+#22 Building, #13 Mintai Road, Shunyi District, Beijing City, China, 101300.
+Main Factory:
+#15 Building, #13 Mintai Road, Shunyi District, Beijing City, China, 101300.
++86-13911011827
++86-01-64426995
+sales01@bjjcz.com
+Application
+About Us
+Contact Us
+Blog
+Download
+Like Us On Facebook
+Follow Us On Instagram
+Follow Us On Youtube
+© Copyright 2012 - 2026 |   Ezcad by
+Beijing JCZ Technology Co., Ltd.
+|   All Rights Reserved   |   Powered by
+Ezcad
+Page load link
+Go to Top

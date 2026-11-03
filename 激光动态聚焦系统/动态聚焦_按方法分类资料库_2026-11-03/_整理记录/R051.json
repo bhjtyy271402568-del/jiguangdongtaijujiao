@@ -1,0 +1,30 @@
+{
+  "url": "https://www.oeshow.cn/storedetail/1087",
+  "category": "09_艾思兰及相邻应用",
+  "origins": [
+    "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md"
+  ],
+  "context": "\n- [艾思兰企业与产品介绍](https://www.oeshow.cn/storedetail/1087)",
+  "id": "R051",
+  "files": [
+    {
+      "path": "09_艾思兰及相邻应用\\R051_苏州艾思兰光电有限公司-光电汇.html",
+      "type": "HTML",
+      "bytes": 22734,
+      "sha256": "8cab2a048d75c32bec04175f02b5492d0fd365259fb682d4a47d7efe15e89367",
+      "url": "https://www.oeshow.cn/storedetail/1087",
+      "title": "苏州艾思兰光电有限公司-光电汇",
+      "text_chars": 966
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://www.oeshow.cn/storedetail/1087",
+      "http": 200,
+      "final_url": "https://www.oeshow.cn/storedetail/1087",
+      "result": "网页"
+    }
+  ],
+  "title": "苏州艾思兰光电有限公司-光电汇",
+  "status": "网页已保存"
+}

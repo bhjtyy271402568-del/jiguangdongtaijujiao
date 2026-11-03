@@ -1,0 +1,34 @@
+{
+  "url": "https://pure-oai.bham.ac.uk/ws/portalfiles/portal/25552450/2016_Experimental_Investigation_of_3D_Scanheads_for_Laser_Micro_Processing_FINAL.pdf",
+  "category": "01_移动透镜式与匹配光学",
+  "origins": [
+    "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+    "用户粘贴_激光动态聚焦深度调研.txt"
+  ],
+  "context": "\n- 原始入口：https://pure-oai.bham.ac.uk/ws/portalfiles/portal/25552450/2016_Experimental_Investigation_of_3D_Scanheads_for_Laser_Micro_Processing_FINAL.pdf",
+  "id": "R017",
+  "files": [
+    {
+      "path": "01_移动透镜式与匹配光学\\R017_Experimental investigation of 3D scanheads for laser micro-processing_2016_作者稿.pdf",
+      "type": "PDF",
+      "pages": 12,
+      "bytes": 1104555,
+      "sha256": "950b43c5a4e13984b53994eba3096bb940d2cf35414e85bc1d2ecbe848251b50",
+      "url": "https://pure-oai.bham.ac.uk/ws/portalfiles/portal/25552450/2016_Experimental_Investigation_of_3D_Scanheads_for_Laser_Micro_Processing_FINAL.pdf",
+      "text_chars": 19009,
+      "title": "",
+      "preview": " \n \nUniversity of Birmingham\nExperimental Investigation of 3D Scanheads for\nLaser Micro ProcessingDimov, Stefan; Penchev, Pavel; Bhaduri, Debajyoti\nDOI:\n10.1016/j.optlastec.2016.01.035\nLicense:\nCreative Commons: Attribution-NonCommercial-NoDerivs (CC BY-NC-ND)\nDocument Version\nPeer reviewed version\nCitation for published version (Harvard):\nDimov, S, Penchev, P & Bhaduri, D 2016, 'Experimental Investigation of 3D Scanheads for Laser Micro\nProcessing', Optics & Laser Technology, vol. 81, pp. 55-59",
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://pure-oai.bham.ac.uk/ws/portalfiles/portal/25552450/2016_Experimental_Investigation_of_3D_Scanheads_for_Laser_Micro_Processing_FINAL.pdf",
+      "http": 200,
+      "final_url": "https://pure-oai.bham.ac.uk/ws/portalfiles/portal/25552450/2016_Experimental_Investigation_of_3D_Scanheads_for_Laser_Micro_Processing_FINAL.pdf",
+      "result": "有效PDF"
+    }
+  ],
+  "status": "PDF已下载",
+  "title": "Experimental investigation of 3D scanheads for laser micro-processing_2016_作者稿"
+}

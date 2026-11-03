@@ -1,0 +1,18 @@
+{
+  "id": "S019",
+  "url": "https://www.akribis-sys.eu/uploads/files/website/Voice_coil_motor_user_manual.pdf",
+  "category": "10_执行器_导轨与编码器",
+  "origins": [
+    "补充检索_原文提及条目及有效替代入口"
+  ],
+  "context": "Akribis音圈电机使用手册",
+  "title": "Akribis音圈电机使用手册",
+  "files": [],
+  "attempts": [
+    {
+      "url": "https://www.akribis-sys.eu/uploads/files/website/Voice_coil_motor_user_manual.pdf",
+      "error": "HTTPSConnectionPool(host='www.akribis-sys.eu', port=443): Max retries exceeded with url: /uploads/files/website/Voice_coil_motor_user_manual.pdf (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))"
+    }
+  ],
+  "status": "未获取"
+}

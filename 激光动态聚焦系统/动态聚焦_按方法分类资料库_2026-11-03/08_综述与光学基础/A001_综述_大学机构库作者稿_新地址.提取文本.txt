@@ -1,0 +1,772 @@
+Review Article:  Variable Optical Elements for Fast Focus Control 
+SeungYeon Kang1,3, Martí Duocastella2,4, and Craig B. Arnold1,* 
+1 Department of Mechanical and Aerospace Engineering, Princeton University, New Jersey, 08540 
+2 Nanophysics, Isituto Italiano di Tecnologia, 16163 Genova, Italy 
+3 Current: Mechanical Engineering, University of Connecticut, Storrs, Connecticut, 06269  
+4 Current: Department of Applied Physics, Universitat de Barcelona, 08028 Barcelona, Spain 
+* Corresponding author. Email: cbarnold@princeton.edu  
+ 
+Abstract 
+In this article, we survey recent developments in the emerging field of high-speed variable z-focus 
+optical elements, which are driving important innovations in advanced imaging and materials processing 
+applications. 3D biomedical imaging, high-throughput industrial inspection, advanced spectroscopies, and 
+other optical characterization and materials modifications methods have made great strides forward in 
+recent years due to precise and fast axial control of light. Three state-of-the-art key optical technologies 
+that enable fast z-focus modulation are reviewed along with a discussion on the implications of what the 
+new variable optical element developments entail and the resulting impact on technologically relevant 
+applications.   
+ 
+Technological advances that increase the speed and precision of light-focus control have enabled 
+new opportunities in imaging and materials processing applications. Previously, the goals of obtaining 
+fundamental understanding of sub-cellular dynamics and achieving highly efficient laser processing 
+methods have been stifled by slower optics that inevitably come hand in hand with excessive light-
+exposure on photosensitive living organisms and slow acquisition of light information. The key to resolving 
+these problems is to modulate focus of light at very high-speeds in all three dimensions which minimizes 
+prolonged light-exposure on living organisms and increases light-based-information acquisition-rate, 
+leading to innovations that have not been possible with slower systems. Recent achievements such as 
+video-rate optical microscopy of sub-cellular dynamics, increased throughput in laser micromachining, 
+and spectroscopic determination of physical parameters are advancing various areas including 3D 
+biomedical imaging, industrial manufacturing and advanced spectroscopies. Therefore, it is invaluable for 
+both scientific and industrial communities to look into the state-of-the-art optical technologies that 
+enabled the advancements and their implications for future applications. 
+The central question in the design of any tunable optical system is how fast one can control the 
+focal position of light across the three dimensions of space.  For imaging applications, light-focus control 
+can determine the rate at which three-dimensional (3D) information can be retrieved from a sample – the 
+understanding of key processes such as neuronal signaling or molecular diffusion depends on it. In laser 
+materials processing, fabrication throughput is directly correlated to the speed at which one or multiple 
+laser foci can be moved across a workpiece. While fast control of light along the x- and y-direction is 
+straightforward to implement using mirrors or light deflectors, a classical problem in optics has been to 
+attain the same degree of control along the z-direction. Indeed, traditional methods based on 
+mechanically moving the sample or optical components impose serious speed restrictions in z-focus 
+
+translation – up to three orders of magnitude slower than along the x- and y- direction. Therefore, modern 
+technologies focus on compensating such speed imbalance by developing remote-focusing systems with 
+higher z-focusing speed. Box 1 explains how the remote-focusing variable optical systems use changes in 
+optical power to achieve z-focus control.  
+In this review we focus on the development in the speed of the variable optical elements which 
+opened the doors to exciting advanced applications. We use the term high-speed to refer to variable 
+optical elements with a focus-varying response time that is faster than a millisecond (ms), and we use the 
+term ultra-high-speed to narrow variable optical elements down to those with a response time of a 
+microsecond (µs) and faster. Extra attention is given to recent ultra-high-speed variable optics that 
+allowed reaching a µs response time. Phenomena relevant to the µs time scale includes the triplet state 
+relaxation of fluorophores, the typical pixel dwell time of a point scanning microscope and heat 
+dissipation. Therefore, controlling light at these speeds enables novel light-matter interactions that would 
+not be possible with slower systems such as reduced photobleaching, fast 3D particle tracking or 
+enhanced laser processing. The review is divided into 3 sections. In the first section of the review, we 
+analyze and present the key technologies in variable optical elements that allowed to achieve sub-ms and 
+µs response time. Next, we review the new implications the development in ultra-high-speed variable 
+focusing entails and discuss the resulting impact on technologically relevant areas.  We conclude with a 
+discussion of the future outlook on variable optical elements for important innovations in advanced 
+imaging and materials processing applications. 
+
+ 
+Box 1. Axial focus tuning with variable optical elements 
+The focal length of a varifocal lens (VL) can be generally written as 𝑓௏௅ (𝑥), where x represents the lens 
+operating signal. The mathematical expression of 𝑓௏௅ (𝑥) depends on the particular working principle 
+of the lens, but the attainable change in optical power (∆𝑂𝑃) is always given by: 
+∆𝑂𝑃 = 1
+𝑓௏௅(𝑥ଵ) − 1
+𝑓௏௅(𝑥ଶ) 
+where 𝑓௏௅(𝑥ଵ)and 𝑓௏௅(𝑥ଶ) correspond to the respective minimum and maximum focal length values.  
+When using a VL as the last optical element for light focusing or for imaging, the axial focus position 
+directly corresponds to the focal length or it can be easily calculated using paraxial optics (Box figure 
+a). However, most VL systems have a low numerical aperture (NA) and thus to gain spatial resolution, 
+they are usually combined with high NA focusing optics. In this case, the optimal position of the VL 
+that avoids magnification effects, preserves resolution and maximizes the axial scan range corresponds 
+to a conjugate plane of the rear focal plane of the focusing lens (Box figure b). By using geometrical 
+optics, the displacement in z-focus position 𝑧(𝑥) with respect to the native focusing plane of a lens 
+with focal length 𝑓଴ can be calculated as103: 
+𝑧(𝑥) = −𝑓଴
+ଶ
+𝑀ோ
+ଶ𝑓௏௅(𝑥) 
+where 𝑀ோ is the magnification factor of the relay lens system and the total scan range ∆𝑧 is:  
+∆𝑧 = −𝑓଴
+ଶ∆𝑂𝑃/𝑀ோ
+ଶ 
+There are several important factors to consider when choosing the appropriate VL for a given 
+application. Besides the change in optical power, the physical aperture of the varifocal system plays a 
+key role. For example, to match the aperture of the focusing lens and exploit its full NA, a relay lens 
+system with a magnification above 1 may be needed, which can reduce ∆𝑧. Importantly, the axial focus 
+shift induced by a VL can result in spherical aberration. In particular, the defocus term at a distance z’ 
+with respect to the native focusing plane can be described by a phase term44,104: 
+𝜑 ≈ 𝑘𝑧′ −1
+2 𝜌ଶ𝑘𝑧′ sinଶ 𝛼 − 1
+8 𝜌ସ𝑘𝑧′ sinସ 𝛼 
+where 𝑘 is the wavenumber, 𝜌 is the normalized pupil radius, and 𝛼 is the maximum acceptance angle 
+of the lens, determined from its NA. Although the first phase term can be typically ignored and the 
+second term can be cancelled with a VL, the residual aberration corresponding to the third term can 
+only be compensated by adaptive optics. Therefore, for high NA systems or when moving the focus far 
+away from their native focusing plane, extra caution is required to limit the undesirable effects.  
+ 
+ 
+Box figure. Strategies for axial focus control using a variable optical element.  a) Focusing with the varifocal lens as the last 
+focusing element. b) Normal configuration for high-resolution imaging or tight focusing. The varifocal lens is placed at a 
+conjugate plane of the high NA focusing lens. 
+ 
+
+
+The key enabling technologies for shifting towards higher-speed variable focus  
+In order to determine the key technologies that enabled higher-speed variable focusing, we 
+performed a meta-analysis on a comprehensive set of variable-optic-element studies and summarized it 
+in Table 1 and Figure 1(a). Table 1 categorizes the various types of varifocal optical systems based on their 
+material components and working principles and figure 1 shows the speed of the varifocal optical systems 
+categorized in table 1 in terms of response time. By categorizing varifocal optical systems based on their 
+material components and working principles, we identify that the development of higher-speed varifocal 
+optics has been carried out in two directions; one by improving the material response-time and the other 
+by applying faster working principles. For example, the slow response time for mechanical-wetting lenses 
+has been improved by adopting new fast-response materials such as ferroelectric liquid crystals or by 
+implementing elements such as adaptive optics or acoustic waves that can drive the varifocal optics at a 
+faster rate.  
+ 
+Type / Working Principle Material / Components 
+Tuning 
+power 
+[1/m] 
+Aperture 
+or Beam 
+diameter 
+Mechanical lens 
+Alvarez lens1–3 & Moiré lens4 
+: Two patterned refractive lenses or diffractive elements are 
+translated or rotated relative to each other 
+-50 to 50  1 -10 mm 
+Electronic 
+liquid/ 
+polymer 
+lens 
+Membrane or 
+liquid shape 
+deformation5 
+(Electro-
+mechanical) 
+Membrane
+-structured 
+Glass diaphragm or elastic membrane with 
+microfluidic channels and fluidic actuation6–10  0 to 200 100 μm - 
+100 mm 
+Meta-lens11–13 
+: Metasurface optics and dielectric elastomer 
+actuators 
+15 to 7000 10 μm - 
+10 mm 
+Membrane
+-less 
+Dielectric lens 
+: Dielectric liquid with high voltage source 14–16 20 to 2000 100 μm - 
+10 mm 
+Electro-wetting lens 
+: Conducting liquid with high voltage source17–21 
+-500 to 
+1500 
+100 μm - 
+10 mm 
+Mechanical-wetting lens 
+: Immiscible liquids and sharp interface with 
+microfluidics 
+- Ferrofluidic actuator 22,23 
+- Piezoelectric transducer24 
+- Manual actuation25 
+- Hydrogel lens26 :  
+-500 to 50 1 - 10 mm 
+Refractive 
+index 
+gradients 
+Electro-optical liquid crystal (LC) lens 27–32 0 to 2000 100 μm - 
+30 mm 
+Electro-
+optic 
+ceramic 
+lens 
+Potassium tantalate niobate (KTN) lens 33–35 0 to 2.5 1 – 10 mm 
+Lead–lanthanum zirconate–titanate (PLZT) lens 36 0 to 10 1 – 10 mm 
+Acoustic 
+lens 
+Tunable Acoustic Gradient index (TAG) lens: 
+: Acoustic wave generated by a piezoelectric material37–39 -30 to 30 ~ 10 mm 
+Acousto-
+optic 
+system 
+Bragg 
+diffraction 
+Acoustic optic deflector (AOD) system40,41:  
+: Two acousto optic modulators (AOM) driven with a chirped 
+frequency 
+-2 to 2 1 – 10 mm 
+
+Other adaptive-optical 
+element (AOE) systems 
+- Multi-plane light conversion device42 
+- Deformable mirrors (DM) & spatial light modulators (SLM)1,43–45 
+-0.5 to 0.5, 
+but 
+depends on 
+the stroke 
+excursion 
+or of DM 
+bit depth of 
+SLM 
+100 μm - 
+10 mm 
+Table 1. Classification of varifocal optical systems based on working principles. Tuning power and beam size values are 
+extracted from review papers and references in the table.  
+ 
+ 
+
+ 
+Figure 1. Performance of varifocal optical systems and the key three higher focal-varying speed enabling technologies.  
+(a) Response time of varifocal optical systems from data gathered in Table 1. Dashed lines represent definition of high-speed 
+and ultra-high speed, (b) Nematic phase LCs with randomly positioned center of mass and long-range directional order vs. 
+
+
+Smectic C* phase FLCs with well-defined layers and chirality (often shown with a cone to show the director tilt of each layer), (c) 
+Scheme of the acoustically driven fluid lens model with TAG lens as a resonator. Cylindrical acoustic waves travel back and forth 
+in the TAG lens, interfering with each other and producing periodic changes in the lens optical power every 2 τ. From ref 46, (d) 
+Schematic of modified Alvarez lens via beam steering using adaptive optics. Image modified from ref1. 
+ 
+Here, we introduce three recent technologies that enabled development of higher-speed varifocal 
+optics, either by improving the material response-time or through implementation of faster driving 
+methods. Ferroelectric liquid crystal lenses and adaptive optical technologies have enabled sub-ms 
+response times and high-speed acoustic waves have been used to allow unique innovations in the µs 
+response time. Due to the ultra-fast speed capabilities, new scanning microscopy applications are enabled 
+that work at the µs time scale such as for triplet-state relaxation and also at the tens of µs- time scale for 
+typical pixel dwell times. Elaborate time dependent behavior characterization studies such as 
+determination of molecular diffusion coefficients in free solution have become possible, and the ability to 
+micromachine on the µs time scale has brought higher efficiency in laser-processing applications. Note 
+that even though electro-optic ceramic lenses such as KTN & PLZT operate at near ultra-high speeds, due 
+to their long history of development we focus more on the recent developments that include use of 
+ferroelectric liquid crystals, acoustic waves and adaptive optics. 
+ 
+Ferroelectric liquid crystal lens. Liquid crystal (LC) lenses offer tunable refractive indices from varying LC 
+orientations based on the optical and dielectric anisotropies in response to an electric field. Changes in 
+focal length are then obtained by using LC with a curved surface or, alternatively, by applying an axially 
+symmetric non-uniform electric field with patterned electrodes. While several types of LCs structures 
+exist, lenses have conventionally been implemented with those exhibiting a nematic phase, featuring rod-
+like molecules arranged in random positions while maintaining a long-range order (figure 1b). Despite the 
+long history of development in LC lenses, the intrinsic highly oriented nematic phase properties result in 
+a slow response time in the order of a few 10s-100s of ms 47. More information on the conventional LC 
+lenses can be found in other review articles 29,47,48. Reduction in the dimension and addition of 
+functionalized polymers have been attempted to achieve faster response time with nematic LCs but are 
+yet unable to reach sub-ms 49. Lenses with a relatively fast response time can be obtained by using LCs 
+with a highly twisted chiral nematic phase. The higher speed appears when operated at a specific 
+temperature range near the LC–isotropic transition point, where the so-called blue phases appear. In this 
+case, though, the restricted temperature working range 50 limits practical implementation and recent 
+efforts in trying to increase it are being made through the addition of polymer or surface-functionalized 
+nanoparticles51.  
+What allowed the development of high-speed LC varifocal optics was the implementation of 
+ferroelectric LCs with a smectic C* (* represents chirality) phase. They present well-defined layers and 
+chirality which leads to a spontaneous polarization response to an electric field that allows sub-ms optical 
+switching time 52 (figure 2a). Although the basic principles of ferroelectric LCs have been around since 
+1980, much development has been made recently with the large display market growth in consumer 
+electronics. New crystal structures and methods to further amplify the spontaneous polarization response 
+of ferroelectric LCs to increase the speed are being investigated 53–55. Ferroelectric LCs capability to fast 
+
+phase modulate has been opening doors to new exciting applications in LC photonic devices such as 
+photobiomodulation in light-therapy or LC on silicon technology56,57. 
+ 
+Acoustically driven fluid lenses. A tunable acoustic gradient index (TAG) lens, also referred to as an 
+ultrasound lens, uses acoustic waves generated by a piezoelectric material to radially excite a refractive 
+fluid-filled cylindrical cavity with two flat glass windows and induce ultra-high-speed variation in focal-
+length37–39. As shown in figure 1c, the stronger radial vibration modes of the cylindrical piezoelectric 
+generate waves at the wall with a driving frequency (t=0). At t=τ, the first set of waves travel to the center 
+of the lens. At t=2τ, the waves travel back to the cylindrical wall and interferes with a new set of waves 
+generated. The combined waves travel back to the center at t=3 τ, resulting in a variation in the amplitude 
+with a periodicity of 2τ. The waves continuously travel back and forth interfering with each other to reach 
+steady state. It is these standing wave density oscillations within the refractive fluid that result in a 
+continuously scanning gradient index of refraction and corresponding variable focal length.    By driving 
+the lens with a sound wave at the lens’ resonance frequency, it allows a single axial scan to achieve 
+unsurpassed speeds of a µs or less. The ability of the acoustic driven fluid lenses to rapidly modulate the 
+focus can be combined with two-photon point scanning microscopy or fluorescence correlation 
+spectroscopy or light-sheet microscopy techniques to image three-dimensionally continuously moving 
+biological systems with various velocities and accelerations 58–60, to enhance 3D resolution in optical 
+coherence tomography61,to determine molecular diffusion coefficients of proteins in living organisms by 
+estimating the change in the size of the encapsulated volume 62, and in industrial applications to provide 
+increased efficiency in micromachining and inspection analysis rate63–65.  
+ 
+Enhanced adaptive optical technologies. Another way to achieve faster varifocal response time is to make 
+use of galvano mirrors or adaptive optical elements (AOEs) such as deformable mirrors (DMs) and spatial 
+light modulators (SLMs) that intrinsically perform at high-speeds. In these cases, the optical power of non-
+imaging elements capable of wave front modulation is often evaluated by the extended depth of field 
+(DOF) in contrast to the optical power of the lens or numerical aperture. Alvarez lens is one example that 
+has been invented in the late sixties and has recently been modified by combining the advantages of 
+multiple optical elements to achieve varying focal capabilities at high speeds 1. Alvarez lens is composed 
+of two refractive lenses each with a plano surface and a cubic profile surface that are placed in inverse 
+and translated with respect to each other to adjust the focus. Multiple sub-elements or Alvarez lens pairs 
+are also used to further extend the focus 3. In contrast to the classical mechanical translation approach, 
+Bawart et al. placed a galvo-mirror in between the two lenses to acquire change in optical power through 
+beam deflection rather than from displacement of the lenses1. By using galvo-mirror that already performs 
+in the sub-ms, they were able to shift the response time of conventional Alvarez lenses into the high-
+speed regime (figure 1d). Other examples of using enhanced adaptive optical technologies include works 
+by Booth et al.44,45 and Mertz et al.43 where they used AOEs to create extended DOF for volumetric imaging. 
+In these examples, AOEs are positioned so that the phase of incident wave-fronts get altered at high 
+speeds either to displace focal spot or to achieve extended DOF.  
+ 
+It is worthwhile to note that all ultrahigh speed variable optics have limitations that should be 
+considered when applying them. For instance, variable optical elements which operate through 
+
+transmission in a refractive fluid or fluid-like medium have a tendency to exhibit absorption at high optical 
+power leading to potential thermal lensing or other heat-related phenomena 14,50,66,67.  Similarly, those 
+with low NA elements are less effective as stand-alone lenses and typically must be coupled to high NA 
+objectives that are corrected for large field imaging which can lead to spherical aberration as described in 
+Box 1. More specifically to each system, ultrasound driven lenses are limited to fast sinusoidal scanning44 
+and LC lenses are limited to small dimensions to minimize disruption in the alignment of LCs 29,48. Even 
+though AOE systems have the advantage of compensating for aberrations, they are typically complex and 
+require precise alignment with actual lens components 42,45. Thus, their performance varies vastly 
+depending on the setup. 
+ 
+Implications of the ultra-high-speed variable focus optics in important applications  
+The recent high-speed and ultra-high-speed varifocal enabling technologies discussed previously 
+imply that exciting innovations can be made in various applications for both science and industry 
+community. Examples on advancements in high-speed and ultra-high-speed applications in 
+technologically relevant areas such as volumetric imaging, microscopy, single particle tracking and laser 
+processing are presented. 
+ 
+Reduced photobleaching and phototoxicity. The exposure of living cells or organisms to light can have 
+damaging effects to their health, a phenomenon generally known as phototoxicity. Phototoxicity is 
+typically aggravated in live imaging and spectroscopy techniques that use samples labeled with 
+fluorophores or other fluorescent probes68. In this case, fluorescence excitation produces damaging free 
+radicals, which can alter cell function or even induce cell death if generated at rates above the tolerance 
+levels that cells naturally possess. Importantly, because the fluorescence quantum yield of common dyes 
+or proteins is typically low, to maintain a strong fluorescence flux relatively high excitation intensities are 
+used which further increase the risk of photon-induced damage. Intense excitation can also result in 
+photobleaching, namely the progressive loss of fluorescent signal. While phototoxic effects can be 
+obviated in fluid mechanics or polymer sciences with inert fluorescent-labeled samples, photobleaching 
+is the other obstacle that can perturb or even impede the collection of the signal of interest.  
+Fast axial focus control of light is a promising solution for preventing the critical concern of 
+photobleaching and phototoxicity 69. Figure 2 shows the two main pathways that can lead to reduced 
+photon-induced damage with ultra-high-speed variable focus systems. Both pathways make use of fast 
+splitting of the light focus into an arbitrary number of sections along the optical axis, as illustrated in Figure 
+2a. The first pathway gives advantage of focus splitting for potential reduction in the total amount of 
+excitation power delivered to the sample and, consequently, of the photo-toxic or photo-degradation 
+effects. For example in light-sheet microscopy70, implementation of varifocal optics enables confinement 
+of illumination to a user-defined number of 4D (x,y,z,time) regions of interest (ROI) as shown in figure 2b. 
+Because the rest of the sample remains unexposed, volumetric imaging using varifocal optics results in a 
+significant reduction of the total light dose. In addition, the increase in the number of sections 
+interrogated can lead to improved statistics and facilitates low excitation intensities as shown in figure 2c. 
+This has been successfully proved in fluorescence correlation spectroscopy (FCS) applications where the 
+use of a varifocal lens allowed collecting of accurate correlation curves over shorter times and hence at 
+lower light doses than standard FCS62. The second pathway demonstrates the benefit of fast focus splitting 
+
+by modulation of illumination (figure 2d). The axial displacement of the focus generated with varifocal 
+optics allow each axial section to be discontinuously illuminated, with a period that can be in the 
+microsecond time scale. Notably, periods of darkness have been found to play a major role in reducing 
+photobleaching71. One of the main causes of photobleaching is the excitation of molecules from the triplet 
+state (Tn), which has a normal relaxation time of microseconds as shown in figure 2e. By using inter-pulse 
+dark periods during illumination modulation, the excited molecules can relax back to the ground state and 
+diminish the probability of photobleaching. This process eliminates photodamage for studies such as  
+recording of calcium dynamics in live neurons, even if the total excitation power applied was higher than 
+for 2D imaging59. Similar results have been found when assessing photobleaching effects in two-photon72 
+and light-sheet60 microscopy, demonstrating the potential advantages of variable optical elements for the 
+characterization of light-sensitive systems.  
+ 
+ 
+Figure 2. Pathways to limit photobleaching and phototoxicity using fast variable optical elements.  a) Schematic of the effects 
+induced by fast axial scanning, allowing the splitting of the focus into several axial sections. b) Selection of tailored regions of 
+interest (ROI) or c) improved statics in correlation (Corr.) techniques enable the reduction of the overall illumination of the sample 
+and help prevent photodamage. d) The discontinuous excitation (Exc.) at microsecond time scales produced by fast axial scanning 
+enables the relaxation of the triplet state typically responsible for photobleaching. e) Jablonsky diagram of a typical organic 
+fluorophore, indicating the major molecular routes for excitation (Exc), fluorescence (Fluor.), intersystem crossing (ISC) and 
+relaxation (dashed lines).   
+ 
+Real-time volumetric imaging. Volumetric information from a sample is normally acquired through a 
+sequence of images from different focal planes, the so-called z-stack (Figure 3a). Fast acquisition of 2D 
+planar information is possible nowadays with high-speed cameras or optical methods to collect the light 
+signals. However, the capability of fast z-focus translation is still lagging behind, which limits the overall 
+3D imaging rate. This is especially important in real-world industrial manufacturing applications where 
+there are plenty of photons from reflected or scattered light (i.e. high photon-budget) but the limitation 
+arises from the insufficient z-focus translation speed. Additionally, in the area of microscopy recent 
+improvements in the quantum efficiency of various detectors, the development of brighter dyes and 
+optimized labeling protocols are pushing fluorescence microscopy to high number of photon regimes or 
+
+
+high signal-to-noise ratios (SNR), which in return calls for a development in a faster z-focus control more 
+than ever.  
+The acquisition of a z-stack over an extended range in a short period of time can be made by 
+implementing a high-speed varifocal lens. Successful examples include the use of an electrically tunable 
+lens for light-sheet fluorescence microscopy (LSFM) 73 (Figure 3b), quantitative phase microscopy 74 and 
+temporal focusing75, and the use of a TAG lens for bright-field microscopy63. In these instances, an image 
+is captured at every pulsed illumination that is synchronized with the variable optical element. Notably, 
+the few or even the lack of mechanical moving parts for focus translation minimizes the waiting time for 
+refocusing to occur enabling rapid acquisition of a z-stack which is now only limited by the camera frame 
+rate or SNR.  
+Volumetric imaging at faster rates is possible by using an extended DOF (EDOF), as shown in Figure 
+3c.  Although the axial elongation of the focal volume comes at the cost of sacrificing the retrieval of the 
+accurate z-position coordinates of the imaged elements, EDOF has still been proven to be advantageous 
+for fast characterization of sparse events, such as neuronal transients 76, or the topography of 
+microstructures77. In comparison to traditional methods such as phase masks or axicons to generate a 
+Bessel beam, high-speed varifocal elements can be used to create a dynamic EDOF with a tunable axial 
+range43,78–80. Dynamic EDOF can help achieve axial-invariance in the point-spread function (PSF) 81 which 
+aids in full recovery of 3D image sharpness by using easier-to-implement 2D deconvolution algorithms43,78. 
+To obtain a dynamic EDOF, an unsynchronized z-focus sweep that is faster than the exposure time of the 
+detector is the key. The exposure time is typically in the order of milliseconds for wide-field systems but 
+can go down to tens of microseconds in point-scanning systems. Therefore for dynamic EDOF generation, 
+while relatively slow varifocal elements can be used in wide-field architectures, ultra-high speed varifocal 
+elements are essential in point-scanning systems such as confocal and two-photon microscopy 79,80 
+Examples of EDOF volumetric imaging are presented in Figures 3d and 3e.  
+ As a matter of fact, the fastest 3D imaging can be accomplished by acquiring an entire z-stack 
+simultaneously, as illustrated in Figure 3f. This can be accomplished by using light-field systems that 
+capture information of both intensity and direction of light. However they are only compatible with wide-
+field systems and normally come at the cost of a loss in spatial resolution 82,83. Variable optical elements 
+can be a good alternative approach that allows quasi-simultaneous imaging of two or more focal planes 
+when used with synchronized illumination or detection. By using pulsed illumination synchronized with a 
+varifocal lens, biplane imaging has been implemented for wide-field systems. When combined with color 
+or time encoding, information from the two planes acquired in single or consecutive frames was extracted 
+in a post-processing step 84,85. In another example of confocal 72,86 and two-photon 59,79,87,88 microscopes, 
+pixel-by-pixel multiplane capture has been made possible with an ultra-high-speed liquid lens and 
+synchronized detection. In this case, the high z-focus translation allowed one or multiple axial scans to be 
+performed during the pixel dwell time. The detection of the arrival time of the photons using fast readout 
+electronics with sub-microsecond timing accuracy allows sorting the photons into a user-defined number 
+of planes, producing high intravital imaging speeds (Figure 3g-h).  
+On a last note, the trade-off between the 3D imaging speed and an acceptable SNR will always 
+exist and therefore continuous efforts are being made to address this issue; besides the continuous 
+improvement in detectors and fluorescent labels, the seamless integration of hardware and software into 
+modular systems has recently shown promise to capture image volumes at unprecedented rates89,90. 
+
+ 
+Figure 3. Examples of volumetric imaging using variable optical elements.  (a) Normal mode of 3D acquisition by capturing of a 
+z-stack. (b) Time sequence of 3 reconstructed volumes of a beating Zebrafish heart obtained with light-sheet fluorescence 
+microscopy. Adapted from Ref 73. (c) Extended depth of field (EDOF) method to acquire volumetric data.(d) Normalized 
+photoacoustic images of a mouse ear with fast z-scanning (top) and no scanning (bottom). Adapted from Ref 91. (e) Imaging of 
+flowing beads captured with a light-sheet microscope with an unsynchronized TAG lens in the detection arm. From Ref 92 (f) Fast 
+volumetric imaging by simultaneous capturing of multiple planes. (g) Representative volume view (left) and corresponding calcium 
+dynamics (right) of neuronal events from a behaving mouse  with a two-photon microscope and a TAG lens. From Ref  59 (h)  
+Snapshots of a neutrophil flowing through a vascular junction, same system as in e. From Ref  88. 
+ 
+Increased statistics and data acquisition speed. The demand for optical techniques capable of extracting 
+quantitative data is continuously growing. One example is single molecule localization techniques93, which 
+are not only capable of attaining images with enhanced spatial detail but also of quantifying the number 
+of fluorophores or even molecules. Other optical techniques such as single particle tracking 94 (SPT) or 
+FCS95 are routinely used to quantify velocity, diffusion coefficient and other important parameters of 
+targeted specimens that can lead to the unmasking of the dynamics of key processes including virus 
+trafficking or molecular diffusion at synapses. In these cases, fast variable optical elements can improve 
+the quality of the data acquired and reduce the uncertainty of the measured parameters. For example, 
+the use of a high-speed varifocal lens for SPT facilitated the gathering of information from different focal 
+planes and enabled tracking of multiple micro and nanoscale objects over an axial range which have not 
+
+
+possible with the traditional systems 96,97. Figures 4(a)-(b) show 3D trajectories of a freely diffusing virus-
+like particle98 and 1-μm beads96 which was then used to study the extracellular behavior of single virons, 
+and to track the movement in an evaporating drop of a water. Similarly, an optical feedback SPT system 
+featuring a TAG lens provided real-time 3D-tracking of fluorescent nanoparticles and quantum dots with 
+high speed and high-localization precision using relatively low photon numbers98. The increased statistics 
+collected with variable optical elements has also been shown to have a positive impact in techniques that 
+rely on correlative data fluctuations, such as FCS 62 mentioned in the previous section. In this case, the 
+timely collection of data from multiple axial positions offers two advantages. First, a gain in the accuracy 
+of the measured parameters. Second, the possibility to perform additional correlation analysis along 
+different axial data points and unveil asymmetric dynamics. Importantly, the growing number of novel 
+super-resolution fluorescence microscopies based on fluctuation analysis99–101 could also benefit from the 
+increased amount of information collected through fast variable optical elements. Since the quality of the 
+reconstructed images depends on the number of collected frames, increased data acquisition speed can 
+lead to better-resolved images.  
+ Another example where increase in statistics and data acquisition speed can benefit is for ultra-
+fast manufacturing applications. In industrial settings, the capability to rapidly prototype and perform 
+complex metrological analysis is indispensable to maintain a high-quality controlled process. One of the 
+challenges associated with dimensional metrology is to generate highly accurate 3D relative motions 
+between sensors and measured surfaces with sub-µm resolutions. An ultra-high-speed varifocal lens has 
+been implemented to develop a highly accurate confocal point sensor for nano- coordinate measuring 
+systems (CMS) 102. Combined with a signal processing method, light-information from the fast focus 
+modulation has been used in the confocal point sensor to significantly improve accuracy and to reduce 
+measurement uncertainty and the probing time. For real-world industrial applications, an ultra-high-
+speed varifocal lens was used in a wide-field system to provide sufficient number of image-data frames at 
+a rapid rate in order to analyze samples with a height that is orders of magnitude larger than that of the 
+biological or lab-scale samples 63. Figures in 4(c) show a metrological analysis example of a tooth-brush 
+head, a general consumer product, and the positions of 54 image focal-planes that were collected over a 
+9-mm height. Aided by a post computational process, a quantitative data-set on the brush height and 
+angles was acquired. Thus, the high-resolution and high-speed data acquisition enabled by an ultra-high-
+speed varifocal lens allows a detailed metrological analysis that can help with the rapid prototyping and 
+quality control process for industrial applications.  
+ 
+
+ 
+Figure 4. Examples of retrieving enhanced quantitative data and laser micromachining via varifocal optics. (a) 3D trajectory of 
+single fluorescent bead  in water. 98, (b) 3D tracking of beads in an evaporating water droplet. Snapshot of the beads at 8.25 s and 
+their particle-trajectory color-plot. 96, (c) Oral-B electronic tooth-brush used for analysis, relative height analysis and relative 
+angular measurements of the bristles. 63. (d) Line machining silicon on stepped surfaces with axial scanning on vs. off. All 4 surfaces 
+are micromachined with axial scanning. 64. (e) (left) SEM images of square holes ablated without a z-scanner (0 m −1 lens power 
+(LP)) with 4 passes, 3 passes with scanning (0.76m −1 varifocal LP) and 2 passes with scanning (1.21m −1 varifocal LP). Measured 
+ablated volume vs. pulse number shown in plot 65. (right) Vertical cross-sectional profiles of the ablated squares with no focus 
+modulation vs 3 passes with 0.91 m−1 varifocal LP65.  
+ 
+Enhanced temporal and spatial control over 3D beam focus. In general, tightly focused beams are desired 
+for various applications such as high-resolution imaging, optical trapping, 3D printing, laser machining, 
+and optical communications. However, tight-focusing of the laser beam into micrometer-sized spots 
+inevitably results in a shallow DOF along the axial direction. Especially for laser printing and machining 
+applications, shallow DOF prevents laser processing of uneven surfaces with height differences larger than 
+the DOF and entails refocusing of the sample surface by translating the sample-holding stage for every 
+step. Implementation of varifocal optical elements obviates the need for exact surface profiling and re-
+adjustment of the focus every time. The faster the focus is modulated, the higher the laser processing rate 
+can be achieved. In addition, when combined with the capability to micromachine on the µs time scale at 
+which heat dissipation occurs, laser-processing with high-speed varifocal optics can considerably increase 
+the efficiency in various micromachining applications. Figures 4(d) and 4(e) show examples of using an 
+ultra-high-speed varifocal lens to enhance temporal and spatial control over 3D beam focus for high 
+throughput, high-precision laser micromachining. In figure 4(d), lines are micromachined on a stack of 4 
+silicon wafers. When an ultra-high-speed variable focal lens inserted, it has been shown that lines can be 
+
+
+written on each of all 4 uneven silicon surfaces for a total scanning range that is as twice as deep when 
+compared with those written with no focus modulation. Figure 4(e) demonstrates higher throughput laser 
+micromachining of silicon wafers achieved by using an ultra-high-speed varifocal lens. On the left, SEM 
+images of three 200-μm by 200-μm, 500-μm depth square ablated holes are compared, each with and 
+without a varifocal lens with varying number of laser passes. While only 2 passes are required to ablate 
+the square hole with a varying focal lens, a total of 4 passes are required to ablate the same amount of 
+volume without any focus modulation. Figures on the right show a comparison of vertical cross-sectional 
+profiles of two holes, each written with no focus modulation and with a varying focal lens operation. The 
+increased micromachining rate demonstrated in these figures leads to realization of higher-throughput 
+micromachining for future industrial applications. 
+ 
+Conclusions and outlook 
+The capability to precisely vary focus at ultra-high-speeds opens the door to new applications in 
+3D biomedical imaging, industrial inspection, spectroscopies, and other optical characterization and 
+materials modifications methods. Continuous progress in the speed and quantum efficiency of optical 
+detectors, together with faster electronics, makes implementation of variable optical elements into 
+traditional systems easier than ever. For imaging in general, fast axial focus control of light entails rapid 
+acquisition of sufficient image-data over an extended depth which enables real-time volumetric imaging. 
+For bio-samples, fast focus modulation prevents photobleaching and phototoxicity effects for increased 
+efficiency. In laser processing applications, adapting fast focal varying lenses into the system enhances 
+the depth of field which removes the need for z-focus control during processing without lateral resolution 
+loss. Hence, the enhancement in temporal and spatial control enables not only more efficient imaging and 
+spectroscopies for lab-scale applications but also higher-throughput for industrial inspection and 
+manufacturing areas.  
+We expect the technological impact of the development towards higher-speed varifocal optical 
+elements will go beyond the few examples we have reviewed in this article. For example, miniaturization 
+of the ultra-high-speed varifocal optics combined with optofluidics research can help achieve ultra-high-
+speed optical communications. As new material properties get discovered and innovative light 
+manipulating principles get implemented to enhance the focal-varying response, interesting applications 
+will continue to emerge to advance both the scientific and industrial communities. 
+ 
+Acknowledgements 
+The authors acknowledge financial support from Princeton University. MD is a Serra Hunter 
+Fellow. MD acknowledges Compagnia di San Paolo, ROL 34704. 
+References 
+1. Bawart, M., Jesacher, A., Zelger, P., Bernet, S. & Ritsch-Marte, M. Modified Alvarez lens 
+for high-speed focusing. Opt. Express 25, 29847–29855 (2017). 
+2. Radhakrishnan, H. & Charman, W. N. Optical characteristics of Alvarez variable-power 
+spectacles. Ophthalmic Physiol. Opt. 37, 284–296 (2017). 
+
+3. Zou, Y., Zhang, W., Tian, F., Siong Chau, F. & Zhou, G. Development of miniature tunable 
+multi-element Alvarez lenses. IEEE J. Sel. Top. Quantum Electron. 21, 2–9 (2015). 
+4. Bernet, S., Harm, W. & Ritsch-marte, M. Demonstration of focus-tunable diffractive 
+Moir´e-lenses. Opt. Express 21, 4317–4322 (2013). 
+5. Mishra, K., van den Ende, D. & Mugele, F. Recent developments in optofluidic lens 
+technology. Micromachines 7, (2016). 
+6. Choi, J. M., Son, H. M. & Lee, Y. J. Biomimetic variable-focus lens system controlled by 
+winding-type SMA actuator. Opt. Express 17, 8152–8164 (2009). 
+7. Fuh, Y. K., Huang, W. C., Lee, Y. S. & Lee, S. An oscillation-free actuation of fluidic lens for 
+optical beam control. Appl. Phys. Lett. 101, 2010–2013 (2012). 
+8. Hasan, N., Kim, H. & Mastrangelo, C. H. Large aperture tunable-focus liquid lens using 
+shape memory alloy spring. Opt. Express 24, 13334 (2016). 
+9. Kim, J., Lee, J. & Won, Y. H. Method to reduce the aberration of a polygonal aperture 
+focus-tunable lens array for high fill factor. Opt. Lett. 44, 2554 (2019). 
+10. Cao, J. et al. Bioinspired Zoom Compound Eyes Enable Variable-Focus Imaging. ACS Appl. 
+Mater. Interfaces 12, 10107–10117 (2020). 
+11. Ee, H. S. & Agarwal, R. Tunable Metasurface and Flat Optical Zoom Lens on a Stretchable 
+Substrate. Nano Lett. 16, 2818–2823 (2016). 
+12. She, A., Zhang, S., Shian, S., Clarke, D. R. & Capasso, F. Adaptive metalenses with 
+simultaneous electrical control of focal length, astigmatism, and shift. Sci. Adv. 4, 1–8 
+(2018). 
+13. Aiello, M. D. et al. Achromatic Varifocal Metalens for the Visible Spectrum. ACS Photonics 
+6, 2432–2440 (2019). 
+14. Ren, H., Xianyu, H., Xu, S. & Wu, S.-T. Adaptive dielectric liquid lens. Opt. Express 16, 
+14954–14960 (2008). 
+15. Lu, Y. S., Tu, H., Xu, Y. & Jiang, H. Tunable dielectric liquid lens on flexible substrate. Appl. 
+Phys. Lett. 103, (2013). 
+16. Jin, B., Ren, H. & Choi, W.-K. Dielectric liquid lens with chevron-patterned electrode. Opt. 
+Express 25, 32411–32419 (2017). 
+17. Miccio, L., Paturzo, M., Grilli, S., Vespini, V. & Ferraro, P. Hemicylindrical and toroidal 
+liquid microlens formed by pyro-electro-wetting. Opt. Lett. 34, 1075–1077 (2009). 
+18. Hao, C. et al. Electrowetting on liquid-infused film (EWOLF): Complete reversibility and 
+controlled droplet oscillation suppression for fast optical imaging. Sci. Rep. 4, 1–7 (2014). 
+19. Li, L., Wang, J.-H., Wang, Q.-H. & Wu, S.-T. Displaceable and focus-tunable electrowetting 
+optofluidic lens. Opt. Express 26, 25839 (2018). 
+
+20. Lee, J., Park, Y. & Chung, S. K. Multifunctional liquid lens for variable focus and aperture. 
+Sensors Actuators A Phys. 287, 177–184 (2019). 
+21. Shin, D., Kim, C., Koo, G. & Won, Y. Depth plane adaptive integral imaging system using a 
+vari-focal liquid lens array for realizing augmented reality. Opt. Express 28, 5602–5616 
+(2020). 
+22. Xiao, W. & Hardt, S. An adaptive liquid microlens driven by a ferrofluidic transducer. J. 
+Micromechanics Microengineering 20, (2010). 
+23. Cheng, H. C., Xu, S., Liu, Y., Levi, S. & Wu, S. T. Adaptive mechanical-wetting lens actuated 
+by ferrofluids. Opt. Commun. 284, 2118–2121 (2011). 
+24. Oku, H. & Ishikawa, M. High-speed liquid lens with 2ms response and 80.3 nm root-
+mean-square wavefront error. Appl. Phys. Lett. 94, 2–5 (2009). 
+25. Patra, R., Agarwal, S., Kondaraju, S. & Bahga, S. S. Membrane-less variable focus liquid 
+lens with manual actuation. Opt. Commun. 389, 74–78 (2017). 
+26. Dong, L., Agarwal, A. K., Beebe, D. J. & Jiang, H. Adaptive liquid microlenses activated by 
+stimuli-responsive hydrogels. Nature 442, 551–554 (2006). 
+27. Kim, J., Kim, J., Na, J.-H., Lee, B. & Lee, S.-D. Liquid crystal-based square lens array with 
+tunable focal length. Opt. Express 22, 3316 (2014). 
+28. Zhou, Z., Li, X. & Ren, H. Liquid crystal lens with a concave polyimide layer. Opt. Eng. 56, 
+077102 (2017). 
+29. Kim, S. U., Na, J. H., Kim, C. & Lee, S. D. Design and fabrication of liquid crystal-based 
+lenses. Liq. Cryst. 44, 2121–2132 (2017). 
+30. Ma, Y. et al. Fast switching ferroelectric liquid crystal Pancharatnam-Berry lens. Opt. 
+Express 27, 10079 (2019). 
+31. Chen, H. et al. A large bistable negative lens by integrating a polarization switch with a 
+passively anisotropic focusing element. 22, 2045–2052 (2014). 
+32. Bharath, M. et al. Compact vari-focal augmented reality display based on ultrathin , 
+polarization-insensitive , and adaptive liquid crystal lens. Opt. Lasers Eng. 128, 26–32 
+(2020). 
+33. Yin, S. et al. Nanosecond KTN varifocal lens without electric field induced phase 
+transition. Photonic Fiber Cryst. Devices Adv. Mater. Innov. Device Appl. XI 27 (2017) 
+doi:10.1117/12.2276511. 
+34. Sohan Kawamura, Tadayuki Imai, Jun Miyazu, Tadashi Sakamoto,  and J. K. 2 . 5-fold 
+increase in lens power of a KTN varifocal lens by employing an octagonal structure. Appl. 
+Opt. 54, (2015). 
+35. Inagaki, T., Imai, T., Miyazu, J. & Kobayashi, J. Polarization independent varifocal lens 
+using KTN crystals. Opt. Lett. 38, 2673 (2013). 
+
+36. Shibaguchi, T. & Funato, H. Lead-lanthanum zirconate-titanate (Plzt) electrooptic variable 
+focal-length lens with stripe electrodes. Jpn. J. Appl. Phys. 31, 3196–3200 (1992). 
+37. Mermillod-blondin, A., Mcleod, E. & Arnold, C. B. Acoustic Gradient Index of Refraction 
+Lens. Opt. Lett. 33, 2146–2148 (2008). 
+38. Koyama, D., Isago, R. & Nakamura, K. Three-dimensional focus scanning by an acoustic 
+variable-focus optical liquid lens. AIP Conf. Proc. 1474, 355–358 (2012). 
+39. Koyama, D., Isago, R. & Nakamura, K. Ultrasonic variable-focus optical lens using 
+viscoelastic material. Appl. Phys. Lett. 100, (2012). 
+40. Kaplan, A., Friedman, N. & Davidson, N. Acousto-optic lens with very fast focus scanning. 
+Opt. Lett. 26, 1078–1080 (2001). 
+41. Reddy, G. D. & Saggau, P. Fast three-dimensional laser scanning scheme using acousto-
+optic deflectors. J. Biomed. Opt. 10, 064038 (2005). 
+42. Boucher, P., Barré, N., Pinel, O., Labroille, G. & Treps, N. Continuous axial scanning of a 
+Gaussian beam via beam steering. Opt. Express 25, 23060 (2017). 
+43. Shain, W. J., Vickers, N. A., Goldberg, B. B., Bifano, T. & Mertz, J. Extended depth-of-field 
+microscopy with a high-speed deformable mirror. Opt. Lett. 42, 995–998 (2017). 
+44. Žurauskas, M., Barnstedt, O., Frade-Rodriguez, M., Waddell, S. & Booth, M. J. Rapid 
+adaptive remote focusing microscope for sensing of volumetric neural activity. Biomed. 
+Opt. Express 8, 4369 (2017). 
+45. Salter, P. S., Iqbal, Z. & Booth, M. J. Analysis of the Three-Dimensional Focal Positioning 
+Capability of Adaptive Optic Elements. Int. J. Optomechatronics 7, 1–14 (2013). 
+46. Duocastella, M. & Arnold, C. B. Transient response in ultra-high speed liquid lenses. J. 
+Phys. D. Appl. Phys. 46, 075102 (2013). 
+47. Sato, S. Applications of liquid crystals to variable-focusing lenses. Opt. Rev. 6, 471–485 
+(1999). 
+48. Lin, Y., Wang, Y. & Reshetnyak, V. Liquid crystal lenses with tunable focal length. Liq. 
+Cryst. Rev. 5, 111–143 (2017). 
+49. Lin, Y., Wang, Y. & Reshetnyak, V. Liquid crystal lenses with tunable focal length. Liq. 
+Cryst. Rev. 5, 111–143 (2017). 
+50. Rahman, A., Said, S. M. & Balamurugan, S. Blue phase liquid crystal : strategies for phase 
+stabilization and device development. doi:10.1088/1468-6996/16/3/033501. 
+51. Xu, S. et al. Fast-Response Liquid Crystal Microlens. Micromachines 5, 300–324 (2014). 
+52. Guo, Q., Zhao, X., Zhao, H. & Chigrinov, V. G. Reverse bistable effect in ferroelectric liquid 
+crystal devices with ultra-fast switching at low driving voltage. Opt. Lett. 40, 2413–2416 
+(2015). 
+
+53. Sreenilayam, S. P. et al. Spontaneous helix formation in non-chiral bent-core liquid 
+crystals with fast linear electro-optic effect. Nat. Commun. 7, 11369 (2016). 
+54. Basu, R. Effects of graphene on electro-optic switching and spontaneous polarization of a 
+ferroelectric liquid crystal. Appl. Phys. Lett. 112905, (2014). 
+55. Shukla, R. K. et al. Electro-optic and dielectric properties of a ferroelectric liquid crystal 
+doped with chemically and thermally stable emissive carbon dots. RSC Adv. 5, 34491–
+34496 (2015). 
+56. Chang, C., Lin, Y., Srivastava, A. K. & Chigrinov, V. G. An optical system via liquid crystal 
+photonic devices for photobiomodulation. Sci. Rep. 8, 4251 (2018). 
+57. Zhang, Z., You, Z. & Chu, D. Fundamentals of phase-only liquid crystal on silicon ( LCOS ) 
+devices. Light Sci. Appl. 3, 1–10 (2014). 
+58. Karagyozov, D., Skanata, M. M., Lesar, A. & Gershow, M. Recording neural activity in 
+unrestrained animals with 3D tracking two photon microscopy. bioRxiv 213942 (2017) 
+doi:10.1101/213942. 
+59. Kong, L. et al. Continuous volumetric imaging via an optical phase-locked ultrasound lens. 
+Nat. Methods 12, (2015). 
+60. Zong, W. et al. Large-field high-resolution two-photon digital scanned light-sheet 
+microscopy. Cell Res. 25, 254–257 (2015). 
+61. Grulkowski, I., Szulzycki, K. & Wojtkowski, M. Microscopic OCT imaging with focus 
+extension by ultrahigh-speed acousto-optic tunable lens and stroboscopic illumination. 
+Opt. Express 22, 31746 (2014). 
+62. Wei, M. T. et al. Phase behaviour of disordered proteins underlying low density and high 
+permeability of liquid organelles. Nat. Chem. 9, (2017). 
+63. Kang, S., Dotsenko, E., Amrhein, D., Theriault, C. & Arnold, C. B. Ultra-high-speed variable 
+focus optics for novel applications in advanced imaging. in Proceedings of SPIE - The 
+International Society for Optical Engineering vol. 10539 (2018). 
+64. Duocastella, M. & Arnold, C. B. Enhanced depth of field laser processing using an ultra-
+high-speed axial scanner. Appl. Phys. Lett. 102, 061113 (2013). 
+65. Chen, T., Fardel, R. & Arnold, C. B. Ultrafast z-scanning for high-efficiency micro-
+machining. Light Sci. Appl. 7, 17181 (2018). 
+66. Lopez, C. A. & Hirsa, A. H. Fast focusing using a pinned-contact oscillating liquid lens. Nat. 
+Photon. 2, 610–613 (2008). 
+67. Murade, C. U., Ende, D. Van Der & Mugele, F. High speed adaptive liquid microlens array. 
+Opt. Express 20, 18180–18187 (2012). 
+68. Laissue, P. P., Alghamdi, R. A., Tomancak, P., Reynaud, E. G. & Shroff, H. Assessing 
+phototoxicity in live fluorescence imaging. Nat. Methods 14, 657–661 (2017). 
+
+69. Icha, J., Weber, M., Waters, J. C. & Norden, C. Phototoxicity in live fluorescence 
+microscopy, and how to avoid it. BioEssays 39, 1–15 (2017). 
+70. Power, R. M. & Huisken, J. Adaptable, illumination patterning light sheet microscopy. Sci. 
+Rep. 8, 1–11 (2018). 
+71. Donnert, G., Eggeling, C. & Hell, S. W. Major signal increase in fluorescence microscopy 
+through dark-state relaxation. Nat. Methods 4, 81–86 (2007). 
+72. Duocastella, M., Vicidomini, G. & Diaspro, A. Simultaneous multiplane confocal 
+microscopy using acoustic tunable lenses. Opt. Express 22, 19293 (2014). 
+73. Fahrbach, F. O., Voigt, F. F., Schmid, B., Helmchen, F. & Huisken, J. Rapid 3D light-sheet 
+microscopy with a tunable lens. Opt. Express 21, 21010–26 (2013). 
+74. Zuo, C., Chen, Q., Qu, W. & Asundi, A. High-speed transport-of-intensity phase 
+microscopy with an electrically tunable lens. Opt. Express 21, 24060 (2013). 
+75. Jiang, J. et al. Fast 3-D temporal focusing microscopy using an electrically tunable lens. 
+Opt. Express 23, 24362 (2015). 
+76. Lu, R. et al. Video-rate volumetric functional imaging of the brain at synaptic resolution. 
+Nat. Neurosci. 20, 620–628 (2017). 
+77. Colomb, T. et al. Extended depth-of-focus by digital holographic microscopy. Opt. Lett. 
+35, 1840–1842 (2010). 
+78. Liu, S. & Hua, H. Extended depth-of-field microscopic imaging with a variable focus 
+microscope objective. Opt. Express 19, 353–62 (2011). 
+79. Piazza, S., Bianchini, P., Sheppard, C., Diaspro, A. & Duocastella, M. Enhanced volumetric 
+imaging in 2-photon microscopy via acoustic lens beam shaping. J. Biophotonics 11, 
+e201700050 (2018). 
+80. Zheng, J., Zuo, C., Gao, P. & Nienhaus, G. U. Dual-mode phase and fluorescence imaging 
+with a confocal laser scanning microscope. Opt. Lett. 43, 5689 (2018). 
+81. Lu, S.-H. & Hua, H. Imaging properties of extended depth of field microscopy through 
+single-shot focus scanning. Opt. Express 23, 10714 (2015). 
+82. Prevedel, R. et al. Simultaneous whole-animal 3D imaging of neuronal activity using light-
+field microscopy. Nat. Methods 11, 727–30 (2014). 
+83. Martínez-Corral, M. & Javidi, B. Fundamentals of 3D imaging and displays: a tutorial on 
+integral imaging, light-field, and plenoptic systems. Adv. Opt. Photonics 10, 512 (2018). 
+84. Grewe, B. F., Voigt, F. F., van ’t Hoff, M. & Helmchen, F. Fast two-layer two-photon 
+imaging of neuronal cell populations using an electrically tunable lens. Biomed. Opt. 
+Express 2, 2035–46 (2011). 
+85. Sheffield, M. E. J. & Dombeck, D. A. Calcium transient prevalence across the dendritic 
+
+arbour predicts place field properties. Nature 517, 200–204 (2015). 
+86. Szulzycki, K., Savaryn, V. & Grulkowski, I. Rapid acousto-optic focus tuning for 
+improvement of imaging performance in confocal microscopy. Appl. Opt. 57, C14–C18 
+(2018). 
+87. Kong, L., Tang, J. & Cui, M. In vivo volumetric imaging of biological dynamics in deep 
+tissue via wavefront engineering. Opt. Express 24, 1214–1221 (2016). 
+88. Kong, L., Tang, J. & Cui, M. Multicolor multiphoton in vivo imaging flow cytometry. Opt. 
+Express 24, 6126–6135 (2016). 
+89. Har-gil, H. et al. PySight : plug and play photon counting for fast intravital microscopy. 
+Optica 5, 29–37 (2018). 
+90. Yamato, K., Yamashita, T., Chiba, H. & Oku, H. Fast volumetric feedback under 
+microscope by temporally coded exposure camera. Sensors 19, (2019). 
+91. Yang, X., Song, X., Jiang, B. & Luo, Q. Multifocus optical-resolution photoacoustic 
+microscope using ultrafast axial scanning of single laser pulse. Opt. Express 25, 28192 
+(2017). 
+92. Duocastella, M. et al. Fast Inertia-Free Volumetric Light-Sheet Microscope. ACS Photonics 
+4, 1797–1804 (2017). 
+93. Deschout, H. et al. Precisely and accurately localizing single emitters in fluorescence 
+microscopy. Nat. Methods 11, 253–266 (2014). 
+94. Manzo, C. & Garcia-parajo, M. F. A review of progress in single particle tracking : from 
+methods to biophysical insights. Reports Prog. Phys. 78, 124601 (2015). 
+95. Elson, E. L. Fluorescence Correlation Spectroscopy : Past , Present , Future. Biophys. J. 
+101, 2855–2870 (2011). 
+96. Duocastella, M., Theriault, C. & Arnold, C. B. Three-dimensional particle tracking via 
+tunable color-encoded multiplexing. Opt. Lett. 41, 863–866 (2016). 
+97. Sancataldo, G. et al. Three-dimensional multiple-particle tracking with nanometric 
+precision over tunable axial ranges. Optica 4, 367 (2017). 
+98. Hou, S., Lang, X. & Welsher, K. Robust real-time 3D single-particle tracking using a 
+dynamically moving laser spot. Opt. Lett. 42, 2390 (2017). 
+99. Dertinger, T., Colyer, R., Iyer, G., Weiss, S. & Enderlein, J. Fast, background-free, 3D 
+super-resolution optical fluctuation imaging (SOFI). Proc. Natl. Acad. Sci. 106, 22287–
+22292 (2009). 
+100. Agarwal, K. & Macha, R. Multiple signal classification algorithm for super-resolution 
+fluorescence microscopy. Nat. Commun. 7, 13752 (2016). 
+101. Ashdown, G., Owen, D. M., Pereira, P. M., Gustafsson, N. & Henriques, R. Fast live-cell 
+
+conventional fluorophore nanoscopy with ImageJ through super-resolution radial 
+fluctuation. Nat. Commun. 7, 1–9 (2016). 
+102. Hausotte, T., Gröschl, A. & Schaude, J. High-speed focal-distance-modulated fiber-
+coupled confocal sensor for coordinate measuring systems. Appl. Opt. 57, 3907 (2018). 
+103. Sancataldo, G. et al. Three-dimensional multiple-particle tracking with nanometric 
+precision over tunable axial ranges. Optica 4, 367 (2017). 
+104. Sheppard, C. J. R. Limitations of the paraxial Debye approximation. Opt. Lett. 38, 1074–
+1076 (2013). 
+ 

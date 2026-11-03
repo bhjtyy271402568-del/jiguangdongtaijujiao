@@ -1,0 +1,21 @@
+{
+  "url": "https://www.raylase.de/_Resources/Persistent/8/3/8/2/8382e9d0599c27104c9f8316603afbaa4d944558/03119_Datenblatt_FOCUSSHIFTER%20RD-14_EN.pdf",
+  "category": "01_移动透镜式与匹配光学",
+  "origins": [
+    "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+    "用户粘贴_激光动态聚焦深度调研.txt"
+  ],
+  "context": "\n- 核查范围与注意事项：带F-theta方案。f163配置自由焦移−16…+14 mm；f254为−41…+32 mm。0.9 ms为tracking error，900 mm/s为镜片运动速度。规格书：https://www.raylase.de/_Resources/Persistent/8/3/8/2/8382e9d0599c27104c9f8316603afbaa4d944558/03119_Datenblatt_FOCUSSHIFTER%20RD-14_EN.pdf",
+  "id": "R034",
+  "files": [],
+  "attempts": [
+    {
+      "url": "https://www.raylase.de/_Resources/Persistent/8/3/8/2/8382e9d0599c27104c9f8316603afbaa4d944558/03119_Datenblatt_FOCUSSHIFTER%20RD-14_EN.pdf",
+      "http": 404,
+      "final_url": "https://www.raylase.de/_Resources/Persistent/8/3/8/2/8382e9d0599c27104c9f8316603afbaa4d944558/03119_Datenblatt_FOCUSSHIFTER%20RD-14_EN.pdf",
+      "error": "404 Client Error: Not Found for url: https://www.raylase.de/_Resources/Persistent/8/3/8/2/8382e9d0599c27104c9f8316603afbaa4d944558/03119_Datenblatt_FOCUSSHIFTER%20RD-14_EN.pdf"
+    }
+  ],
+  "status": "未获取",
+  "title": "RAYLASE_FOCUSSHIFTER_RD14_旧版失效链接"
+}

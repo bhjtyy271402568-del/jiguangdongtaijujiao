@@ -1,0 +1,48 @@
+{
+  "url": "https://patents.google.com/patent/CN222626476U/zh",
+  "category": "07_测高闭环_三轴同步与标定",
+  "origins": [
+    "Gemini输出.txt"
+  ],
+  "context": "原文提到的专利号，补全公开文本入口；标题及相关性待与原件核对",
+  "id": "R010",
+  "files": [
+    {
+      "path": "07_测高闭环_三轴同步与标定\\R010_CN222626476U - 自动调焦激光加工装置 _        - Google Patents.html",
+      "type": "HTML",
+      "bytes": 63232,
+      "sha256": "8b96e840e5346ab3a0dad3bef999f9d6a191e0520d36e6f575c3c8049776d816",
+      "url": "https://patents.google.com/patent/CN222626476U/zh",
+      "title": "CN222626476U - 自动调焦激光加工装置 \n        - Google Patents",
+      "text_chars": 11106
+    },
+    {
+      "path": "07_测高闭环_三轴同步与标定\\R010_CN222626476U - 自动调焦激光加工装置 - Google Patents.pdf",
+      "type": "PDF",
+      "pages": 9,
+      "bytes": 470172,
+      "sha256": "a8312d636104a22c5d3e46630e1c67f3027af4095e8cda942752349eca3db1c6",
+      "url": "https://patentimages.storage.googleapis.com/7c/21/17/50706c1f6d2c8d/CN222626476U.pdf",
+      "text_chars": 8456,
+      "title": "",
+      "preview": "(19)国家知识产权局\n(12)实用新型专利\n(10)授权公告号 \n(45)授权公告日 \n(21)申请号 202420908185.5\n(22)申请日 2024.04.28\n(73)专利权人 海目星激光智能装备（江苏）有限\n公司\n地址 213000 江苏省常州市金坛区金坛大\n道66号\n(72)发明人 刘琦　赵盛宇　杨玉怀　苗健烨　\n张雪　何奇芮　\n(74)专利代理机构 北京市京大律师事务所 \n11321\n专利代理师 姚维\n(51)Int.Cl.\nB23K 26/046(2014.01)\nB23K 26/00(2014.01)\n \n(54)实用新型名称\n自动调焦激光加工装置\n(57)摘要\n本实用新型公开一种自动调焦激光加工装\n置，所述自 动调焦激光加工装置包括激光发生\n器、场镜、第一检测器以及驱动模组 ；其中，所述\n激光发生器与所述场镜间隔设置，所述场镜安装\n在所述驱动模组上，所述激光发生器用于发射激\n光，所述场镜用于将激光聚焦在工件表面上 ； 所\n述第一检测器与所述驱动模组电连接，所述第一\n检测器用于实时检测所述场镜与所述工件表面\n之间的距离，所述驱动模组根据所述第一检测器\n检测到的所",
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://patents.google.com/patent/CN222626476U/zh",
+      "http": 200,
+      "final_url": "https://patents.google.com/patent/CN222626476U/zh",
+      "result": "网页"
+    },
+    {
+      "url": "https://patentimages.storage.googleapis.com/7c/21/17/50706c1f6d2c8d/CN222626476U.pdf",
+      "http": 200,
+      "final_url": "https://patentimages.storage.googleapis.com/7c/21/17/50706c1f6d2c8d/CN222626476U.pdf",
+      "result": "有效PDF"
+    }
+  ],
+  "title": "CN222626476U - 自动调焦激光加工装置 - Google Patents",
+  "status": "PDF已下载"
+}

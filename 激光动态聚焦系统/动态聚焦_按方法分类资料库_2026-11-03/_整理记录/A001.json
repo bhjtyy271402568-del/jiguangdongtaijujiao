@@ -1,0 +1,33 @@
+{
+  "id": "A001",
+  "category": "08_综述与光学基础",
+  "url": "https://diposit.ub.edu/bitstreams/499f25a7-7d55-4c1d-b9bc-d5568d2fcaf8/download",
+  "context": "综述_大学机构库作者稿_新地址",
+  "title": "综述_大学机构库作者稿_新地址",
+  "origins": [
+    "补充检索_修复失效入口"
+  ],
+  "files": [
+    {
+      "path": "08_综述与光学基础\\A001_综述_大学机构库作者稿_新地址.pdf",
+      "type": "PDF",
+      "pages": 22,
+      "bytes": 1539548,
+      "sha256": "41908be496441f2c2db3b36e212a794649ad275ae1cfacccf17e93a966808221",
+      "url": "https://diposit.ub.edu/server/api/core/bitstreams/499f25a7-7d55-4c1d-b9bc-d5568d2fcaf8/content",
+      "text_chars": 57536,
+      "title": "Microsoft Word - Varifocal optics_Final_Revised_v5",
+      "preview": "Review Article:  Variable Optical Elements for Fast Focus Control \nSeungYeon Kang1,3, Martí Duocastella2,4, and Craig B. Arnold1,* \n1 Department of Mechanical and Aerospace Engineering, Princeton University, New Jersey, 08540 \n2 Nanophysics, Isituto Italiano di Tecnologia, 16163 Genova, Italy \n3 Current: Mechanical Engineering, University of Connecticut, Storrs, Connecticut, 06269  \n4 Current: Department of Applied Physics, Universitat de Barcelona, 08028 Barcelona, Spain \n* Corresponding author",
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://diposit.ub.edu/bitstreams/499f25a7-7d55-4c1d-b9bc-d5568d2fcaf8/download",
+      "http": 200,
+      "final_url": "https://diposit.ub.edu/server/api/core/bitstreams/499f25a7-7d55-4c1d-b9bc-d5568d2fcaf8/content",
+      "result": "有效PDF"
+    }
+  ],
+  "status": "PDF已下载"
+}

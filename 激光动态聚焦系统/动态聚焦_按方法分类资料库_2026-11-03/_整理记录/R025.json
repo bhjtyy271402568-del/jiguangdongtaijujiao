@@ -1,0 +1,67 @@
+{
+  "url": "https://www.nature.com/articles/s41467-024-47009-w",
+  "category": "05_MEMS与全息调焦",
+  "origins": [
+    "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+    "用户粘贴_激光动态聚焦深度调研.txt"
+  ],
+  "context": "\n- 原始入口：https://www.nature.com/articles/s41467-024-47009-w",
+  "id": "R025",
+  "files": [
+    {
+      "path": "05_MEMS与全息调焦\\R025_Large-volume focus control at 10 MHz refresh rate via fast line-scanning amplitude-encoded scattering-ass.html",
+      "type": "HTML",
+      "bytes": 465517,
+      "sha256": "dcddbf17ea66cd3d9a1d35da06c68fa6f6db7df7dda2f5999bf6363cd0e6b127",
+      "url": "https://www.nature.com/articles/s41467-024-47009-w",
+      "title": "Large-volume focus control at 10 MHz refresh rate via fast line-scanning amplitude-encoded scattering-assisted holography | Nature Communications",
+      "text_chars": 67936
+    },
+    {
+      "path": "05_MEMS与全息调焦\\R025_全息10MHz_2024_正文.pdf",
+      "type": "PDF",
+      "pages": 10,
+      "bytes": 2314494,
+      "sha256": "06fa95fe1bde248b4e0b5e989b9462543a49673e514a9099fb5cba31c4a48df1",
+      "url": "https://www.nature.com/articles/s41467-024-47009-w.pdf",
+      "text_chars": 62619,
+      "title": "Large-volume focus control at 10â€‰MHz refresh rate via fast line-scanning amplitude-encoded scattering-assisted holography",
+      "preview": "Article https://doi.org/10.1038/s41467-024-47009-w\nLarge-volume focus control at 10 MHz\nrefresh rate via fast line-scanning amplitude-\nencoded scattering-assisted holography\nAtsushi Shibukawa1,R y o t aH i g u c h i1, Gookho Song 2, Hideharu Mikami 1 ,\nYuki Sudo 3 & Mooseok Jang 2\nThe capability of focus control has been central to optical technologies that\nrequire both high temporal and spatial resolutions. However, existing varifocal\nlens schemes are commonly limited to the response time on th",
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "path": "05_MEMS与全息调焦\\R025_全息10MHz_2024_公开审稿文件.pdf",
+      "type": "PDF",
+      "pages": 28,
+      "bytes": 857918,
+      "sha256": "f222507e440fbdea9087ff93c2d0ceac1d5f64be68a36ae85bd67a330f581428",
+      "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-024-47009-w/MediaObjects/41467_2024_47009_MOESM2_ESM.pdf",
+      "text_chars": 79974,
+      "title": "Peer_Review_File_cover_letter-.pdf",
+      "preview": "Open Access This file is licensed under a Creative Commons Attribution 4.0 \nInternational License, which permits use, sharing, adaptation, distribution and \nreproduction in any medium or format, as long as you give appropriate credit to \nthe original author(s) and the source, provide a link to the Creative Commons license, and indicate if \nchanges were made. In the cases where the authors are anonymous, such as is the case for the reports of \nanonymous peer reviewers, author attribution should b",
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://www.nature.com/articles/s41467-024-47009-w",
+      "http": 200,
+      "final_url": "https://www.nature.com/articles/s41467-024-47009-w",
+      "result": "网页"
+    },
+    {
+      "url": "https://www.nature.com/articles/s41467-024-47009-w.pdf",
+      "http": 200,
+      "final_url": "https://www.nature.com/articles/s41467-024-47009-w.pdf",
+      "result": "有效PDF"
+    },
+    {
+      "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-024-47009-w/MediaObjects/41467_2024_47009_MOESM2_ESM.pdf",
+      "http": 200,
+      "final_url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-024-47009-w/MediaObjects/41467_2024_47009_MOESM2_ESM.pdf",
+      "result": "有效PDF"
+    }
+  ],
+  "title": "Large-volume focus control at 10 MHz refresh rate via fast line-scanning amplitude-encoded scattering-assisted holography | Nature Communications",
+  "status": "PDF已下载"
+}

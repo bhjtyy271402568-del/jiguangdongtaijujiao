@@ -1,0 +1,779 @@
+来源：https://patents.google.com/patent/CN111181117A/zh
+采集日期：2026-11-03
+
+CN111181117A - 一种一字激光除冰装置 
+        - Google Patents
+CN111181117A - 一种一字激光除冰装置 
+        - Google Patents
+一种一字激光除冰装置
+Download PDF
+Info
+Publication number
+CN111181117A
+CN111181117A
+CN202010098927.9A
+CN202010098927A
+CN111181117A
+CN 111181117 A
+CN111181117 A
+CN 111181117A
+CN 202010098927 A
+CN202010098927 A
+CN 202010098927A
+CN 111181117 A
+CN111181117 A
+CN 111181117A
+Authority
+CN
+China
+Prior art keywords
+laser
+plano
+cylindrical mirror
+line
+battery
+Prior art date
+2020-02-18
+Legal status (The legal status is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the status listed.)
+Pending
+Application number
+CN202010098927.9A
+Other languages
+English
+(
+en
+)
+Inventor
+何舟
+周倩
+周健
+Current Assignee (The listed assignees may be inaccurate. Google has not performed a legal analysis and makes no representation or warranty as to the accuracy of the list.)
+Suzhou Usiland Optoelectronic Co ltd
+Original Assignee
+Suzhou Usiland Optoelectronic Co ltd
+Priority date (The priority date is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the date listed.)
+2020-02-18
+Filing date
+2020-02-18
+Publication date
+2020-05-19
+2020-02-18
+Application filed by Suzhou Usiland Optoelectronic Co ltd
+filed
+Critical
+Suzhou Usiland Optoelectronic Co ltd
+2020-02-18
+Priority to CN202010098927.9A
+priority
+Critical
+patent/CN111181117A/zh
+2020-03-04
+Priority to PCT/CN2020/077776
+priority
+patent/WO2021164057A1/zh
+2020-05-19
+Publication of CN111181117A
+publication
+Critical
+patent/CN111181117A/zh
+Status
+Pending
+legal-status
+Critical
+Current
+Links
+Espacenet
+Global Dossier
+Discuss
+230000003287
+optical effect
+Effects
+0.000
+claims
+description
+7
+HBBGRARXTFLTSG-UHFFFAOYSA-N
+Lithium ion
+Chemical compound
+[Li+]
+HBBGRARXTFLTSG-UHFFFAOYSA-N
+0.000
+claims
+description
+3
+229910001416
+lithium ion
+Inorganic materials
+0.000
+claims
+description
+3
+230000000694
+effects
+Effects
+0.000
+abstract
+description
+3
+230000009286
+beneficial effect
+Effects
+0.000
+abstract
+description
+2
+230000001737
+promoting effect
+Effects
+0.000
+abstract
+1
+XLYOFNOQVPJJNP-UHFFFAOYSA-N
+water
+Substances
+O
+XLYOFNOQVPJJNP-UHFFFAOYSA-N
+0.000
+description
+6
+238000002844
+melting
+Methods
+0.000
+description
+4
+230000008018
+melting
+Effects
+0.000
+description
+4
+238000000034
+method
+Methods
+0.000
+description
+4
+238000010586
+diagram
+Methods
+0.000
+description
+2
+230000005540
+biological transmission
+Effects
+0.000
+description
+1
+239000013078
+crystal
+Substances
+0.000
+description
+1
+230000005611
+electricity
+Effects
+0.000
+description
+1
+238000005516
+engineering process
+Methods
+0.000
+description
+1
+230000003760
+hair shine
+Effects
+0.000
+description
+1
+229910052739
+hydrogen
+Inorganic materials
+0.000
+description
+1
+239000001257
+hydrogen
+Substances
+0.000
+description
+1
+125000004435
+hydrogen atom
+Chemical group
+[H]*
+0.000
+description
+1
+238000009434
+installation
+Methods
+0.000
+description
+1
+238000004093
+laser heating
+Methods
+0.000
+description
+1
+230000004048
+modification
+Effects
+0.000
+description
+1
+238000012986
+modification
+Methods
+0.000
+description
+1
+238000007493
+shaping process
+Methods
+0.000
+description
+1
+Images
+Classifications
+H
+—
+ELECTRICITY
+H02
+—
+GENERATION; CONVERSION OR DISTRIBUTION OF ELECTRIC POWER
+H02G
+—
+INSTALLATION OF ELECTRIC CABLES OR LINES, OR OF COMBINED OPTICAL AND ELECTRIC CABLES OR LINES
+H02G7/00
+—
+Overhead installations of electric lines or cables
+H02G7/16
+—
+Devices for removing snow or ice from lines or cables
+B
+—
+PERFORMING OPERATIONS; TRANSPORTING
+B08
+—
+CLEANING
+B08B
+—
+CLEANING IN GENERAL; PREVENTION OF FOULING IN GENERAL
+B08B7/00
+—
+Cleaning by methods not provided for in a single other subclass or a single group in this subclass
+B08B7/0035
+—
+Cleaning by methods not provided for in a single other subclass or a single group in this subclass by radiant energy, e.g. UV, laser, light beam or the like
+B08B7/0042
+—
+Cleaning by methods not provided for in a single other subclass or a single group in this subclass by radiant energy, e.g. UV, laser, light beam or the like by laser
+Landscapes
+Physics & Mathematics
+(
+AREA
+)
+Optics & Photonics
+(
+AREA
+)
+Laser Beam Processing
+(
+AREA
+)
+Lasers
+(
+AREA
+)
+Abstract
+本发明公开了一种一字激光除冰装置，包括支架和底座，其特征在于，支架的顶端固定安装有电动转台，电动转台的顶端固定安装有激光出射头，激光出射头的背面固定安装有控制器。该种一字激光除冰装置，通过在支架上设置激光出射头以及通过控制器来控制激光出射头，使得激光出射头射出水平一字型光斑，从而完成除冰的效果，采用该种方式可以远程、“地对空”进行作业，除冰过程无需接触，过程安全，取代了机械除冰等需要接触式操作的方式；同时可带电作业，减少断电带来的经济损失，由于智能化特性强，采用相机进行识别与反馈线缆或塔架等及其覆冰覆雪，有利于促进与完善除冰工作的执行。
+Description
+一种一字激光除冰装置
+技术领域
+本发明涉及一种除冰装置，具体为一种一字激光除冰装置。
+背景技术
+冰是由水分子有序排列形成的结晶，水分子间靠氢键连接在一起形成非常“疏松”(低密度)的刚性结构。最邻近水分子的O—O核间距为0.276nm，O—O—O键角约为109度，十分接近理想四面体的键角109度28分；但仅是相邻而不直接结合的各水分子的O一O间距要大的多，最远的要达0.347nm。每个水分子都能缔合另外4个水分子，形成四面体结构，所以水分子的配位数为4。
+目前，现有的清除高压输电线路覆冰覆雪的手段主要有机械除冰、热力熔冰、自然除冰、混合方式四类。机械除冰是一种接触式除冰操作，操作困难、安全性能差，需要线路断电进行除冰，且易受地形限制等；自然脱冰无需附加能量，但仅局部、单次有效，适用性与可控性较差；热力熔冰以加热措施使覆冰熔化或脱落，使用最为广泛，目前，主要利用的热力熔冰措施如阻性线、热气、过电流等的装置复杂、使线路负荷增大，有时需断电操作，因而存在局限性。激光除冰技术作为一种热力熔冰方式，通过激光加热使高压电缆的温度高于零度无法凝结成冰，或者直接熔冰，具有功率强、非接触操作、可移动等优点。因此我们对此做出改进，提出一种一字激光除冰装置。
+发明内容
+为了解决上述技术问题，本发明提供了如下的技术方案：
+本发明一种一字激光除冰装置，包括支架和底座，其特征在于，所述支架的顶端固定安装有电动转台，所述电动转台的顶端固定安装有激光出射头，所述激光出射头的背面固定安装有控制器，所述激光出射头内通过信号线连接有激光主机，所述激光主机的一侧通过电缆连接有电池，所述底座的顶端固定安装在支架上，所述底座的顶端与支架之间固定安装有支撑架，所述激光出射头的内部从左至右依次设有相机、平凹柱面镜、可调活动块和导向腔。
+作为本发明的一种优选技术方案，所述可调活动块的一侧螺纹连接有可调螺丝，所述导向腔的内部开设有凹槽，所述导向腔上的凹槽内设有平凸柱面镜。
+作为本发明的一种优选技术方案，所述底座的顶端开设有若干个安装孔，若干个所述安装孔呈环形分布，所述底座的底端设有防滑纹路。
+作为本发明的一种优选技术方案，所述电动转台上装有使水平转动的第一电机和垂直运动的第二电机，所述第一电机和第二电机上均装有编码器，所述第一电机和第二电机的编码器均通过电缆和控制器电连接。
+作为本发明的一种优选技术方案，所述电池为直流V锂离子电池，所述电池安装在防爆手提箱内。
+作为本发明的一种优选技术方案，所述激光出射头的内部设有光路调节装置，所述电池安装在电路调节装置的正上方，所述电池上的光轴和激光出射光平行，且电池通过视频线和控制器连接。
+作为本发明的一种优选技术方案，所述光路调节装置包含一个平凹柱面镜和一个平凸柱面镜，所述平凸柱面镜固定在导向腔的内部，所述平凹柱面镜固定在可调活动块上。
+作为本发明的一种优选技术方案，所述平凹柱面镜和平凸柱面镜可调距离范围为45mm-55mm，所述光路调节装置发射出的激光为水平一字型光斑，距离150m处宽度为40-50mm。
+本发明的有益效果是：该种一字激光除冰装置，通过在支架上设置激光出射头以及通过控制器来控制激光出射头，使得激光出射头射出水平一字型光斑，从而完成除冰的效果，采用该种方式可以远程、“地对空”进行作业，除冰过程无需接触，过程安全，取代了机械除冰等需要接触式操作的方式；同时可带电作业，减少断电带来的经济损失，由于智能化特性强，采用相机进行识别与反馈线缆或塔架等及其覆冰覆雪，有利于促进与完善除冰工作的执行，并且极大的降低了的操作人员的工作安全风险，并提高了工作效率，极大的提高了清除高压线覆冰覆雪工作的自动化水平和智能化水平。
+附图说明
+附图用来提供对本发明的进一步理解，并且构成说明书的一部分，与本发明的实施例一起用于解释本发明，并不构成对本发明的限制。在附图中：
+图1是本发明一种一字激光除冰装置的结构示意图；
+图2是本发明一种一字激光除冰装置相机的结构示意图。
+图中：1、支架；2、电动转台；3、激光出射头；4、控制器；5、激光主机；6、电池；7、底座；8、支撑架；9、相机；10、平凹柱面镜；11、可调活动块；12、可调螺丝；13、导向腔；14、平凸柱面镜。
+具体实施方式
+以下结合附图对本发明的优选实施例进行说明，应当理解，此处所描述的优选实施例仅用于说明和解释本发明，并不用于限定本发明。
+实施例：如图1和图2所示，本发明一种一字激光除冰装置，包括支架1和底座7，支架1的顶端固定安装有电动转台2，电动转台2的顶端固定安装有激光出射头3，激光出射头3的背面固定安装有控制器4，激光出射头3内通过信号线连接有激光主机5，激光主机5的一侧通过电缆连接有电池6，底座7的顶端固定安装在支架1上，底座7的顶端与支架1之间固定安装有支撑架8，激光出射头3的内部从左至右依次设有相机9、平凹柱面镜10、可调活动块11和导向腔13。
+其中，可调活动块11的一侧螺纹连接有可调螺丝12，导向腔13的内部开设有凹槽，导向腔13上的凹槽内设有平凸柱面镜14。
+其中，底座7的顶端开设有若干个安装孔，若干个安装孔呈环形分布，底座7的底端设有防滑纹路，通过在底座7上设置若干个呈环形分布的安装孔，使得支架1安装的更加稳定。
+其中，电动转台2上装有使水平转动的第一电机和垂直运动的第二电机，第一电机和第二电机上均装有编码器，第一电机和第二电机的编码器均通过电缆和控制器4电连接，通过在电动转台2上设置第一电机和第二电机以及通过在电机上设置编码器和控制器4连接，可以控制激光出射头3进行调节。
+其中，电池6为直流24V锂离子电池，电池6安装在防爆手提箱内，通过将电池6放在防爆手提箱内，防止电池6出现爆炸的情况。
+其中，激光出射头3的内部设有光路调节装置，电池6安装在电路调节装置的正上方，电池6上的光轴和激光出射光平行，且电池6通过视频线和控制器连接。
+其中，光路调节装置包含一个平凹柱面镜10和一个平凸柱面镜14，平凸柱面镜14固定在导向腔13的内部，平凹柱面镜10固定在可调活动块11上。
+其中，平凹柱面镜10和平凸柱面镜14可调距离范围为45mm-55mm，光路调节装置发射出的激光为水平一字型光斑，距离150m处宽度为40-50mm。
+工作时，当需要对冰进行清除时，首先通过电钻在地面上转孔，再将底座7放在地面上，并通过螺钉穿过位于底座7内的安装孔，可以对支架1进行安装固定，再开启位于激光主机5上电源开关，使电池6为整个装置提供电能，激光主机5进行工作并使得激光出射头3射出的激光经过光路调节装置整形，发射出水平一字线的光斑，相机9安装在水平同轴的光路调节装置上，可以看到光束照射在冰块上的反馈。控制器4控制转动电动转台2上的两个电机转动，带动激光出射头3扫描冰块，完成对冰块的多角度除冰作业，通过在支架1上设置激光出射头3以及通过控制器4来控制激光出射头3，使得激光出射头3射出水平一字型光斑，从而完成除冰的效果，采用该种方式可以远程、“地对空”进行作业，除冰过程无需接触，过程安全，取代了机械除冰等需要接触式操作的方式；同时可带电作业，减少断电带来的经济损失，由于智能化特性强，采用相机9进行识别与反馈线缆或塔架等及其覆冰覆雪，有利于促进与完善除冰工作的执行，并且极大的降低了的操作人员的工作安全风险，并提高了工作效率，极大的提高了清除高压线覆冰覆雪工作的自动化水平和智能化水平。
+最后应说明的是：在本发明的描述中，需要说明的是，术语“竖直”、“上”、“下”、“水平”等指示的方位或位置关系为基于附图所示的方位或位置关系，仅是为了便于描述本发明和简化描述，而不是指示或暗示所指的装置或元件必须具有特定的方位、以特定的方位构造和操作，因此不能理解为对本发明的限制。
+在本发明的描述中，还需要说明的是，除非另有明确的规定和限定，术语“设置”、“安装”、“相连”、“连接”应做广义理解，例如，可以是固定连接，也可以是可拆卸连接，或一体地连接；可以是机械连接，也可以是电连接；可以是直接相连，也可以通过中间媒介间接相连，可以是两个元件内部的连通。对于本领域的普通技术人员而言，可以根据具体情况理解上述术语在本发明中的具体含义。
+以上所述仅为本发明的优选实施例而已，并不用于限制本发明，尽管参照前述实施例对本发明进行了详细的说明，对于本领域的技术人员来说，其依然可以对前述各实施例所记载的技术方案进行修改，或者对其中部分技术特征进行等同替换。凡在本发明的精神和原则之内，所作的任何修改、等同替换、改进等，均应包含在本发明的保护范围之内。
+Claims (
+8
+)
+1.一种一字激光除冰装置，包括支架(1)和底座(7)，其特征在于，所述支架(1)的顶端固定安装有电动转台(2)，所述电动转台(2)的顶端固定安装有激光出射头(3)，所述激光出射头(3)的背面固定安装有控制器(4)，所述激光出射头(3)内通过信号线连接有激光主机(5)，所述激光主机(5)的一侧通过电缆连接有电池(6)，所述底座(7)的顶端固定安装在支架(1)上，所述底座(7)的顶端与支架(1)之间固定安装有支撑架(8)，所述激光出射头(3)的内部从左至右依次设有相机(9)、平凹柱面镜(10)、可调活动块(11)和导向腔(13)。
+2.根据权利要求1所述的一种一字激光除冰装置，其特征在于，所述可调活动块(11)的一侧螺纹连接有可调螺丝(12)，所述导向腔(13)的内部开设有凹槽，所述导向腔(13)上的凹槽内设有平凸柱面镜(14)。
+3.根据权利要求1所述的一种一字激光除冰装置，其特征在于，所述底座(7)的顶端开设有若干个安装孔，若干个所述安装孔呈环形分布，所述底座(7)的底端设有防滑纹路。
+4.根据权利要求1所述的一种一字激光除冰装置，其特征在于，所述电动转台(2)上装有使水平转动的第一电机和垂直运动的第二电机，所述第一电机和第二电机上均装有编码器，所述第一电机和第二电机的编码器均通过电缆和控制器(4)电连接。
+5.根据权利要求1所述的一种一字激光除冰装置，其特征在于，所述电池(6)为直流24V锂离子电池，所述电池(6)安装在防爆手提箱内。
+6.根据权利要求1所述的一种一字激光除冰装置，其特征在于，所述激光出射头(3)的内部设有光路调节装置，所述电池(6)安装在电路调节装置的正上方，所述电池(6)上的光轴和激光出射光平行，且电池(6)通过视频线和控制器连接。
+7.根据权利要求6所述的一种一字激光除冰装置，其特征在于，所述光路调节装置包含一个平凹柱面镜(10)和一个平凸柱面镜(14)，所述平凸柱面镜(14)固定在导向腔(13)的内部，所述平凹柱面镜(10)固定在可调活动块(11)上。
+8.根据权利要求1所述的一种一字激光除冰装置，其特征在于，所述平凹柱面镜(10)和平凸柱面镜(14)可调距离范围为45mm-55mm，所述光路调节装置发射出的激光为水平一字型光斑，距离150m处宽度为40-50mm。
+CN202010098927.9A
+2020-02-18
+2020-02-18
+一种一字激光除冰装置
+Pending
+CN111181117A
+(
+zh
+)
+Priority Applications (2)
+Application Number
+Priority Date
+Filing Date
+Title
+CN202010098927.9A
+CN111181117A
+(
+zh
+)
+2020-02-18
+2020-02-18
+一种一字激光除冰装置
+PCT/CN2020/077776
+WO2021164057A1
+(
+zh
+)
+2020-02-18
+2020-03-04
+一种一字激光除冰装置
+Applications Claiming Priority (1)
+Application Number
+Priority Date
+Filing Date
+Title
+CN202010098927.9A
+CN111181117A
+(
+zh
+)
+2020-02-18
+2020-02-18
+一种一字激光除冰装置
+Publications (1)
+Publication Number
+Publication Date
+CN111181117A
+true
+CN111181117A
+              (
+zh
+)
+2020-05-19
+Family
+ID=70656686
+Family Applications (1)
+Application Number
+Title
+Priority Date
+Filing Date
+CN202010098927.9A
+Pending
+CN111181117A
+(
+zh
+)
+2020-02-18
+2020-02-18
+一种一字激光除冰装置
+Country Status (2)
+Country
+Link
+CN
+(
+1
+)
+CN111181117A
+(
+zh
+)
+WO
+(
+1
+)
+WO2021164057A1
+(
+zh
+)
+Citations (6)
+* Cited by examiner, † Cited by third party
+Publication number
+Priority date
+Publication date
+Assignee
+Title
+JPH0798745A
+(
+ja
+)
+*
+1993-09-28
+1995-04-11
+Sony Corp
+レーザー罫書線照射装置
+CA2222881A1
+(
+en
+)
+*
+1998-02-10
+1999-08-10
+Pin Long
+Methods for removing ice by using laser beam radiation
+CN105226569A
+(
+zh
+)
+*
+2015-11-13
+2016-01-06
+江苏省电力公司电力科学研究院
+一种便携式架空线路异物激光清除装置及其使用方法
+CN206038999U
+(
+zh
+)
+*
+2016-08-09
+2017-03-22
+无锡亮源激光技术有限公司
+一种可调焦深焦镜头
+CN106848830A
+(
+zh
+)
+*
+2017-01-05
+2017-06-13
+无锡亮源激光技术有限公司
+小型风冷一字线激光系统
+CN209215750U
+(
+zh
+)
+*
+2018-12-28
+2019-08-06
+中国电子科技集团公司第二十七研究所
+一种线光斑激光远场聚焦发射天线
+Family Cites Families (2)
+* Cited by examiner, † Cited by third party
+Publication number
+Priority date
+Publication date
+Assignee
+Title
+CN101562320B
+(
+zh
+)
+*
+2009-05-08
+2011-02-09
+国网电力科学研究院
+一种用于输变电设备激光除冰的方法及系统
+CN208158006U
+(
+zh
+)
+*
+2018-06-04
+2018-11-27
+国网湖北省电力有限公司宜昌供电公司
+一种电力线路激光除异物装置
+2020
+2020-02-18
+CN
+CN202010098927.9A
+patent/CN111181117A/zh
+active
+Pending
+2020-03-04
+WO
+PCT/CN2020/077776
+patent/WO2021164057A1/zh
+not_active
+Ceased
+Patent Citations (6)
+* Cited by examiner, † Cited by third party
+Publication number
+Priority date
+Publication date
+Assignee
+Title
+JPH0798745A
+(
+ja
+)
+*
+1993-09-28
+1995-04-11
+Sony Corp
+レーザー罫書線照射装置
+CA2222881A1
+(
+en
+)
+*
+1998-02-10
+1999-08-10
+Pin Long
+Methods for removing ice by using laser beam radiation
+CN105226569A
+(
+zh
+)
+*
+2015-11-13
+2016-01-06
+江苏省电力公司电力科学研究院
+一种便携式架空线路异物激光清除装置及其使用方法
+CN206038999U
+(
+zh
+)
+*
+2016-08-09
+2017-03-22
+无锡亮源激光技术有限公司
+一种可调焦深焦镜头
+CN106848830A
+(
+zh
+)
+*
+2017-01-05
+2017-06-13
+无锡亮源激光技术有限公司
+小型风冷一字线激光系统
+CN209215750U
+(
+zh
+)
+*
+2018-12-28
+2019-08-06
+中国电子科技集团公司第二十七研究所
+一种线光斑激光远场聚焦发射天线
+Also Published As
+Publication number
+Publication date
+WO2021164057A1
+(
+zh
+)
+2021-08-26
+Similar Documents
+Publication
+Publication Date
+Title
+CN101722370A
+(
+zh
+)
+2010-06-09
+一种电池极片激光切割装置
+CN111130015A
+(
+zh
+)
+2020-05-08
+一种激光除障仪
+CN112769084B
+(
+zh
+)
+2024-12-10
+一种激光-微波复合除冰系统及方法
+CN110401138A
+(
+zh
+)
+2019-11-01
+一种大功率无水冷小型化激光清障设备及其使用方法
+CN117856142A
+(
+zh
+)
+2024-04-09
+基于微波-机械融合的无人机空中电缆除冰装置及方法
+CN115743198A
+(
+zh
+)
+2023-03-07
+一种光伏电站智慧巡检系统
+CN108856172A
+(
+zh
+)
+2018-11-23
+基于视觉的激光除冰装置
+CN117570415A
+(
+zh
+)
+2024-02-20
+一种可调节间距的灯带组件
+CN110015530A
+(
+zh
+)
+2019-07-16
+一种自平衡智能搬运幼苗机器
+CN108521746A
+(
+zh
+)
+2018-09-11
+一种具有防掉线功能的散热效果好的通信设备
+CN112460424A
+(
+zh
+)
+2021-03-09
+一种智能配网设备监控装置
+WO2021164057A1
+(
+zh
+)
+2021-08-26
+一种一字激光除冰装置
+CN116422652A
+(
+zh
+)
+2023-07-14
+应用于金具端子表面激光清洗的激光清洗加工头及方法
+CN112186692A
+(
+zh
+)
+2021-01-05
+超高压绝缘子除冰装置及方法
+CN119834149A
+(
+zh
+)
+2025-04-15
+一种机器视觉引导下的机械-加热协同除冰设备
+CN221094726U
+(
+zh
+)
+2024-06-07
+一种智慧交通道路除冰融雪设备
+CN119341450A
+(
+zh
+)
+2025-01-21
+一种网络工程基站用预警装置
+CN217463816U
+(
+zh
+)
+2022-09-20
+一种草地监测标识装置
+CN215955680U
+(
+zh
+)
+2022-03-04
+一种适合激光除冰用的高功率单谐振腔风冷激光光源
+CN223567187U
+(
+zh
+)
+2025-11-18
+一种用于配网线路的自动清障装置及激光清障智能系统
+CN108645279B
+(
+zh
+)
+2023-10-03
+一种无人机挂载的激光眩目器
+CN114665379A
+(
+zh
+)
+2022-06-24
+一种波长稳定的半导体激光装置
+CN115416131A
+(
+zh
+)
+2022-12-02
+一种封边机用智能激光器
+CN118711922A
+(
+zh
+)
+2024-09-27
+多功能绝缘子融雪装置
+CN119889966A
+(
+zh
+)
+2025-04-25
+一种水平旋转式隔离开关联调辅助定位装置
+Legal Events
+Date
+Code
+Title
+Description
+2020-05-19
+PB01
+Publication
+2020-05-19
+PB01
+Publication
+2020-06-12
+SE01
+Entry into force of request for substantive examination
+2020-06-12
+SE01
+Entry into force of request for substantive examination
+2021-12-24
+RJ01
+Rejection of invention patent application after publication
+2021-12-24
+RJ01
+Rejection of invention patent application after publication
+Application publication date
+:
+20200519

@@ -1,0 +1,32 @@
+﻿10_执行器_导轨与编码器
+
+S015 | Renishaw_ATOM_DX数据表
+状态：PDF已下载
+来源：https://www.renishaw.com/resourcecentre/download/data-sheet-atom-dx-miniature-encoder-system--142831?userLanguage=en
+文件：10_执行器_导轨与编码器\S015_Renishaw_ATOM_DX数据表.pdf
+
+S016 | IKO_CRWG交叉滚柱导轨官方目录入口
+状态：未获取
+来源：https://ikowb01.ikont.co.jp/technicalservice/ikoc0130.php?FLG=CRWG&from=html&lang=en
+
+
+S017 | THK_VR交叉滚柱导轨
+状态：网页已保存
+来源：https://www.thk.com/us/en/products/other_linear_motion_guides/cross_roller_guide_ball_guide/vr/
+文件：10_执行器_导轨与编码器\S017_Cross-Roller Guide Model VR｜Other Linear Motion Products｜Product Information｜THK Official Web Site [North.html
+
+S018 | Akribis_AVM音圈电机规格
+状态：PDF已下载
+来源：https://agito-akribis.com/wp-content/uploads/2022/02/AVM-Series-.pdf
+文件：10_执行器_导轨与编码器\S018_Akribis_AVM音圈电机规格.pdf
+
+S019 | Akribis音圈电机使用手册
+状态：未获取
+来源：https://www.akribis-sys.eu/uploads/files/website/Voice_coil_motor_user_manual.pdf
+
+
+C001 | IKO_CRWG_防保持架蠕变交叉滚柱导轨
+状态：未获取
+来源：https://www.ikont.com/catalogs/linear-motion-rolling-guide-series/red/1561E_CrossRollerWay.pdf
+
+

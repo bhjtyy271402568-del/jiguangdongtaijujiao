@@ -1,0 +1,30 @@
+{
+  "url": "https://haaslti.com/products/tailored-solutions/dynamic-focus-system",
+  "category": "01_移动透镜式与匹配光学",
+  "origins": [
+    "苏州艾思兰_动态聚焦资料\\设备自研方案与选型表.md"
+  ],
+  "context": "\n- [Haas Laser Technologies Dynamic Focus](https://haaslti.com/products/tailored-solutions/dynamic-focus-system)：独立调焦透镜、DC伺服和加工头集成方案。",
+  "id": "R067",
+  "files": [
+    {
+      "path": "01_移动透镜式与匹配光学\\R067_Dynamic Focus System.html",
+      "type": "HTML",
+      "bytes": 66659,
+      "sha256": "74867794da884d2c590cd4e60ae7174a433b63a3315264af58de267c5047a927",
+      "url": "https://haaslti.com/products/tailored-solutions/dynamic-focus-system",
+      "title": "Dynamic Focus System",
+      "text_chars": 4798
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://haaslti.com/products/tailored-solutions/dynamic-focus-system",
+      "http": 200,
+      "final_url": "https://haaslti.com/products/tailored-solutions/dynamic-focus-system",
+      "result": "网页"
+    }
+  ],
+  "title": "Dynamic Focus System",
+  "status": "网页已保存"
+}

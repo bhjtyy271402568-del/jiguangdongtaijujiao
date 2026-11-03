@@ -1,0 +1,30 @@
+{
+  "id": "S012",
+  "url": "https://en.bjjcz.cn/product/156.html",
+  "category": "01_移动透镜式与匹配光学",
+  "origins": [
+    "补充检索_原文提及条目及有效替代入口"
+  ],
+  "context": "JCZ_G3_3D",
+  "title": "JCZ_G3_3D",
+  "files": [
+    {
+      "path": "01_移动透镜式与匹配光学\\S012_G3-3D_Beijing JCZ Technology Co., Ltd.html",
+      "type": "HTML",
+      "bytes": 129728,
+      "sha256": "f91b7859187ba393fb11fb52b5102e0d5ac209c62c6207c74b481661b7f98aef",
+      "url": "https://en.bjjcz.cn/product/156.html",
+      "title": "G3-3D_Beijing JCZ Technology Co., Ltd.",
+      "text_chars": 3691
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://en.bjjcz.cn/product/156.html",
+      "http": 200,
+      "final_url": "https://en.bjjcz.cn/product/156.html",
+      "result": "网页"
+    }
+  ],
+  "status": "网页已保存"
+}

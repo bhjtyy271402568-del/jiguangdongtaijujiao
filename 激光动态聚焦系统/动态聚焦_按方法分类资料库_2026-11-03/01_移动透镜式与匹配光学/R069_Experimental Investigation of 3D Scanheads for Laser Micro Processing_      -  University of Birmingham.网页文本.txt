@@ -1,0 +1,191 @@
+来源：https://research.birmingham.ac.uk/en/publications/experimental-investigation-of-3d-scanheads-for-laser-micro-proces/
+采集日期：2026-11-03
+
+Experimental Investigation of 3D Scanheads for Laser Micro Processing
+      -  University of Birmingham
+Skip to main navigation
+Skip to search
+Skip to main content
+University of Birmingham Home
+Help & FAQ
+Link opens in a new tab
+Search content at University of Birmingham
+Home
+Research output
+Profiles
+Research units
+Projects
+Activities
+Datasets
+Equipment
+Prizes
+Press/Media
+Experimental Investigation of 3D Scanheads for Laser Micro Processing
+Stefan Dimov
+,
+Pavel Penchev
+, Debajyoti Bhaduri
+Mechanical Engineering
+Research output
+:
+Contribution to journal
+›
+Article
+›
+peer-review
+5
+Citations
+(Scopus)
+375
+Downloads
+(Pure)
+Overview
+Fingerprint
+Abstract
+The broader use of laser micro processing technology increases the demand for executing complex machining and joining operations on free-from (3D) workpieces. To satisfy these growing requirements it is necessary to utilise 3D scanheads that integrate beam deflectors (X and Y optical axes) and Z modules with high dynamics. The research presented in this communication proposes an experimental technique to quantify the dynamic capabilities of Z modules, also called Dynamic Focusing Modules (DFM), of such 3D scanheads that are essential for efficient, accurate and repeatable laser micro processing of free form surfaces. The proposed experimental technique is validated on state-of-art laser micro-machining platform and the results show that the DFM dynamic capabilities are substantially inferior than those of X and Y beam deflectors, in particular the maximum speed of the Z module is less than 10% of the maximum speeds achievable with X and Y optical axes of the scanhead. Thus, the DFM dynamics deficiencies can become a major obstacle for the broader use of high frequency laser sources that necessitate high dynamics 3D scanheads for executing cost effectively free-form surface processing operations.
+Original language
+English
+Pages (from-to)
+55-59
+Journal
+Optics & Laser Technology
+Volume
+81
+Early online date
+29 Jan 2016
+DOIs
+https://doi.org/10.1016/j.optlastec.2016.01.035
+Publication status
+Published -
+Jul 2016
+Keywords
+laser micro processing; 3D scanheads; dynamic focusing module; dynamic capabilities
+Access to Document
+10.1016/j.optlastec.2016.01.035
+Penchev_et_al_Experimental_Investigation_of_3D_Scanheads_for_Laser_Micro_Processing_FINAL
+After an embargo period this document is subject to a CC-BY-NC-ND license
+
+Checked Feb 2016
+Accepted author manuscript, 1.01 MB
+Licence:
+Creative Commons: Attribution-NonCommercial-NoDerivs (CC BY-NC-ND)
+Fingerprint
+Dive into the research topics of 'Experimental Investigation of 3D Scanheads for Laser Micro Processing'. Together they form a unique fingerprint.
+Laser Source
+Physics
+100%
+Join Operation
+Keyphrases
+33%
+View full fingerprint
+Cite this
+APA
+Author
+BIBTEX
+Harvard
+Standard
+RIS
+Vancouver
+Dimov, S.
+, Penchev, P.
+, & Bhaduri, D. (2016).
+Experimental Investigation of 3D Scanheads for Laser Micro Processing
+.
+Optics & Laser Technology
+,
+81
+, 55-59.
+https://doi.org/10.1016/j.optlastec.2016.01.035
+Dimov, Stefan
+; Penchev, Pavel
+; Bhaduri, Debajyoti. /
+Experimental Investigation of 3D Scanheads for Laser Micro Processing
+. In:
+Optics & Laser Technology
+. 2016 ; Vol. 81. pp. 55-59.
+@article{84fef191e5284a249a7d869ed419001a,
+title     = "Experimental Investigation of 3D Scanheads for Laser Micro Processing",
+abstract  = "The broader use of laser micro processing technology increases the demand for executing complex machining and joining operations on free-from (3D) workpieces. To satisfy these growing requirements it is necessary to utilise 3D scanheads that integrate beam deflectors (X and Y optical axes) and Z modules with high dynamics. The research presented in this communication proposes an experimental technique to quantify the dynamic capabilities of Z modules, also called Dynamic Focusing Modules (DFM), of such 3D scanheads that are essential for efficient, accurate and repeatable laser micro processing of free form surfaces. The proposed experimental technique is validated on state-of-art laser micro-machining platform and the results show that the DFM dynamic capabilities are substantially inferior than those of X and Y beam deflectors, in particular the maximum speed of the Z module is less than 10\% of the maximum speeds achievable with X and Y optical axes of the scanhead. Thus, the DFM dynamics deficiencies can become a major obstacle for the broader use of high frequency laser sources that necessitate high dynamics 3D scanheads for executing cost effectively free-form surface processing operations.",
+keywords  = "laser micro processing; 3D scanheads; dynamic focusing module; dynamic capabilities",
+author    = "Stefan Dimov and Pavel Penchev and Debajyoti Bhaduri",
+year      = "2016",
+month     = jul,
+doi       = "10.1016/j.optlastec.2016.01.035",
+language  = "English",
+volume    = "81",
+pages     = "55--59",
+journal   = "Optics \& Laser Technology",
+issn      = "0030-3992",
+publisher = "Elsevier",
+}
+Dimov, S
+, Penchev, P
+& Bhaduri, D 2016, '
+Experimental Investigation of 3D Scanheads for Laser Micro Processing
+',
+Optics & Laser Technology
+, vol. 81, pp. 55-59.
+https://doi.org/10.1016/j.optlastec.2016.01.035
+Experimental Investigation of 3D Scanheads for Laser Micro Processing.
+/
+Dimov, Stefan
+; Penchev, Pavel
+; Bhaduri, Debajyoti.
+In:
+Optics & Laser Technology
+, Vol. 81, 07.2016, p. 55-59.
+Research output
+:
+Contribution to journal
+›
+Article
+›
+peer-review
+TY  - JOUR
+T1  - Experimental Investigation of 3D Scanheads for Laser Micro Processing
+AU  - Dimov, Stefan
+AU  - Penchev, Pavel
+AU  - Bhaduri, Debajyoti
+PY  - 2016/7
+Y1  - 2016/7
+N2  - The broader use of laser micro processing technology increases the demand for executing complex machining and joining operations on free-from (3D) workpieces. To satisfy these growing requirements it is necessary to utilise 3D scanheads that integrate beam deflectors (X and Y optical axes) and Z modules with high dynamics. The research presented in this communication proposes an experimental technique to quantify the dynamic capabilities of Z modules, also called Dynamic Focusing Modules (DFM), of such 3D scanheads that are essential for efficient, accurate and repeatable laser micro processing of free form surfaces. The proposed experimental technique is validated on state-of-art laser micro-machining platform and the results show that the DFM dynamic capabilities are substantially inferior than those of X and Y beam deflectors, in particular the maximum speed of the Z module is less than 10% of the maximum speeds achievable with X and Y optical axes of the scanhead. Thus, the DFM dynamics deficiencies can become a major obstacle for the broader use of high frequency laser sources that necessitate high dynamics 3D scanheads for executing cost effectively free-form surface processing operations.
+AB  - The broader use of laser micro processing technology increases the demand for executing complex machining and joining operations on free-from (3D) workpieces. To satisfy these growing requirements it is necessary to utilise 3D scanheads that integrate beam deflectors (X and Y optical axes) and Z modules with high dynamics. The research presented in this communication proposes an experimental technique to quantify the dynamic capabilities of Z modules, also called Dynamic Focusing Modules (DFM), of such 3D scanheads that are essential for efficient, accurate and repeatable laser micro processing of free form surfaces. The proposed experimental technique is validated on state-of-art laser micro-machining platform and the results show that the DFM dynamic capabilities are substantially inferior than those of X and Y beam deflectors, in particular the maximum speed of the Z module is less than 10% of the maximum speeds achievable with X and Y optical axes of the scanhead. Thus, the DFM dynamics deficiencies can become a major obstacle for the broader use of high frequency laser sources that necessitate high dynamics 3D scanheads for executing cost effectively free-form surface processing operations.
+KW  - laser micro processing; 3D scanheads; dynamic focusing module; dynamic capabilities
+U2  - 10.1016/j.optlastec.2016.01.035
+DO  - 10.1016/j.optlastec.2016.01.035
+M3  - Article
+SN  - 0030-3992
+VL  - 81
+SP  - 55
+EP  - 59
+JO  - Optics & Laser Technology
+JF  - Optics & Laser Technology
+ER  -
+Dimov S
+, Penchev P
+, Bhaduri D.
+Experimental Investigation of 3D Scanheads for Laser Micro Processing
+.
+Optics & Laser Technology
+. 2016 Jul;81:55-59. Epub 2016 Jan 29. doi: 10.1016/j.optlastec.2016.01.035
+Powered by
+Pure
+Link opens in a new tab
+,
+Scopus
+Link opens in a new tab
+&
+Elsevier Fingerprint Engine™
+Link opens in a new tab
+All content on this site: Copyright © 2026 University of Birmingham, its licensors, and contributors. All rights are reserved, including those for text and data mining, AI training, and similar technologies. For all open access content, the relevant licensing terms apply
+We use cookies to help provide and enhance our service and tailor content. By continuing you agree to the
+use of cookies
+Log in to Pure
+Link opens in a new tab
+University of Birmingham data protection policy
+Link opens in a new tab
+About web accessibility
+Link opens in a new tab
+Report vulnerability
+Link opens in a new tab
+Contact us

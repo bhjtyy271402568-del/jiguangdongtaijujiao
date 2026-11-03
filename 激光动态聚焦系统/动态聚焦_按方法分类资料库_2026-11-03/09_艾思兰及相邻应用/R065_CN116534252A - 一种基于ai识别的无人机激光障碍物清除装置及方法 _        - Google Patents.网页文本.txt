@@ -1,0 +1,832 @@
+来源：https://patents.google.com/patent/CN116534252A/zh
+采集日期：2026-11-03
+
+CN116534252A - 一种基于ai识别的无人机激光障碍物清除装置及方法 
+        - Google Patents
+CN116534252A - 一种基于ai识别的无人机激光障碍物清除装置及方法 
+        - Google Patents
+一种基于ai识别的无人机激光障碍物清除装置及方法
+Download PDF
+Info
+Publication number
+CN116534252A
+CN116534252A
+CN202310506672.9A
+CN202310506672A
+CN116534252A
+CN 116534252 A
+CN116534252 A
+CN 116534252A
+CN 202310506672 A
+CN202310506672 A
+CN 202310506672A
+CN 116534252 A
+CN116534252 A
+CN 116534252A
+Authority
+CN
+China
+Prior art keywords
+laser
+unmanned aerial
+aerial vehicle
+transmission line
+power transmission
+Prior art date
+2023-05-08
+Legal status (The legal status is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the status listed.)
+Pending
+Application number
+CN202310506672.9A
+Other languages
+English
+(
+en
+)
+Inventor
+周倩
+杨忠英
+赵凌曦
+丁志伟
+Current Assignee (The listed assignees may be inaccurate. Google has not performed a legal analysis and makes no representation or warranty as to the accuracy of the list.)
+Suzhou Usiland Optronics Co ltd
+Original Assignee
+Suzhou Usiland Optronics Co ltd
+Priority date (The priority date is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the date listed.)
+2023-05-08
+Filing date
+2023-05-08
+Publication date
+2023-08-04
+2023-05-08
+Application filed by Suzhou Usiland Optronics Co ltd
+filed
+Critical
+Suzhou Usiland Optronics Co ltd
+2023-05-08
+Priority to CN202310506672.9A
+priority
+Critical
+patent/CN116534252A/zh
+2023-08-04
+Publication of CN116534252A
+publication
+Critical
+patent/CN116534252A/zh
+Status
+Pending
+legal-status
+Critical
+Current
+Links
+Espacenet
+Global Dossier
+Discuss
+Classifications
+H
+—
+ELECTRICITY
+H04
+—
+ELECTRIC COMMUNICATION TECHNIQUE
+H04L
+—
+TRANSMISSION OF DIGITAL INFORMATION, e.g. TELEGRAPHIC COMMUNICATION
+H04L67/00
+—
+Network arrangements or protocols for supporting network services or applications
+H04L67/01
+—
+Protocols
+H04L67/10
+—
+Protocols in which an application is distributed across nodes in the network
+B
+—
+PERFORMING OPERATIONS; TRANSPORTING
+B23
+—
+MACHINE TOOLS; METAL-WORKING NOT OTHERWISE PROVIDED FOR
+B23K
+—
+SOLDERING OR UNSOLDERING; WELDING; CLADDING OR PLATING BY SOLDERING OR WELDING; CUTTING BY APPLYING HEAT LOCALLY, e.g. FLAME CUTTING; WORKING BY LASER BEAM
+B23K26/00
+—
+Working by laser beam, e.g. welding, cutting or boring
+B23K26/36
+—
+Removing material
+B23K26/38
+—
+Removing material by boring or cutting
+B
+—
+PERFORMING OPERATIONS; TRANSPORTING
+B23
+—
+MACHINE TOOLS; METAL-WORKING NOT OTHERWISE PROVIDED FOR
+B23K
+—
+SOLDERING OR UNSOLDERING; WELDING; CLADDING OR PLATING BY SOLDERING OR WELDING; CUTTING BY APPLYING HEAT LOCALLY, e.g. FLAME CUTTING; WORKING BY LASER BEAM
+B23K26/00
+—
+Working by laser beam, e.g. welding, cutting or boring
+B23K26/70
+—
+Auxiliary operations or equipment
+B23K26/702
+—
+Auxiliary equipment
+B
+—
+PERFORMING OPERATIONS; TRANSPORTING
+B64
+—
+AIRCRAFT; AVIATION; COSMONAUTICS
+B64C
+—
+AEROPLANES; HELICOPTERS
+B64C39/00
+—
+Aircraft not otherwise provided for
+B64C39/02
+—
+Aircraft not otherwise provided for characterised by special use
+B64C39/024
+—
+Aircraft not otherwise provided for characterised by special use of the remote controlled vehicle type, i.e. RPV
+B
+—
+PERFORMING OPERATIONS; TRANSPORTING
+B64
+—
+AIRCRAFT; AVIATION; COSMONAUTICS
+B64D
+—
+EQUIPMENT FOR FITTING IN OR TO AIRCRAFT; FLIGHT SUITS; PARACHUTES; ARRANGEMENT OR MOUNTING OF POWER PLANTS OR PROPULSION TRANSMISSIONS IN AIRCRAFT
+B64D47/00
+—
+Equipment not otherwise provided for
+B
+—
+PERFORMING OPERATIONS; TRANSPORTING
+B64
+—
+AIRCRAFT; AVIATION; COSMONAUTICS
+B64U
+—
+UNMANNED AERIAL VEHICLES [UAV]; EQUIPMENT THEREFOR
+B64U10/00
+—
+Type of UAV
+B64U10/10
+—
+Rotorcrafts
+B
+—
+PERFORMING OPERATIONS; TRANSPORTING
+B64
+—
+AIRCRAFT; AVIATION; COSMONAUTICS
+B64U
+—
+UNMANNED AERIAL VEHICLES [UAV]; EQUIPMENT THEREFOR
+B64U20/00
+—
+Constructional aspects of UAVs
+B64U20/80
+—
+Arrangement of on-board electronics, e.g. avionics systems or wiring
+G
+—
+PHYSICS
+G06
+—
+COMPUTING OR CALCULATING; COUNTING
+G06N
+—
+COMPUTING ARRANGEMENTS BASED ON SPECIFIC COMPUTATIONAL MODELS
+G06N3/00
+—
+Computing arrangements based on biological models
+G06N3/02
+—
+Neural networks
+G06N3/04
+—
+Architecture, e.g. interconnection topology
+G06N3/0464
+—
+Convolutional networks [CNN, ConvNet]
+G
+—
+PHYSICS
+G06
+—
+COMPUTING OR CALCULATING; COUNTING
+G06V
+—
+IMAGE OR VIDEO RECOGNITION OR UNDERSTANDING
+G06V10/00
+—
+Arrangements for image or video recognition or understanding
+G06V10/70
+—
+Arrangements for image or video recognition or understanding using pattern recognition or machine learning
+G06V10/82
+—
+Arrangements for image or video recognition or understanding using pattern recognition or machine learning using neural networks
+G
+—
+PHYSICS
+G06
+—
+COMPUTING OR CALCULATING; COUNTING
+G06V
+—
+IMAGE OR VIDEO RECOGNITION OR UNDERSTANDING
+G06V20/00
+—
+Scenes; Scene-specific elements
+G06V20/10
+—
+Terrestrial scenes
+G06V20/17
+—
+Terrestrial scenes taken from planes or by drones
+H
+—
+ELECTRICITY
+H02
+—
+GENERATION; CONVERSION OR DISTRIBUTION OF ELECTRIC POWER
+H02G
+—
+INSTALLATION OF ELECTRIC CABLES OR LINES, OR OF COMBINED OPTICAL AND ELECTRIC CABLES OR LINES
+H02G1/00
+—
+Methods or apparatus specially adapted for installing, maintaining, repairing or dismantling electric cables or lines
+H02G1/02
+—
+Methods or apparatus specially adapted for installing, maintaining, repairing or dismantling electric cables or lines for overhead lines or cables
+B
+—
+PERFORMING OPERATIONS; TRANSPORTING
+B64
+—
+AIRCRAFT; AVIATION; COSMONAUTICS
+B64U
+—
+UNMANNED AERIAL VEHICLES [UAV]; EQUIPMENT THEREFOR
+B64U2101/00
+—
+UAVs specially adapted for particular uses or applications
+B
+—
+PERFORMING OPERATIONS; TRANSPORTING
+B64
+—
+AIRCRAFT; AVIATION; COSMONAUTICS
+B64U
+—
+UNMANNED AERIAL VEHICLES [UAV]; EQUIPMENT THEREFOR
+B64U2101/00
+—
+UAVs specially adapted for particular uses or applications
+B64U2101/30
+—
+UAVs specially adapted for particular uses or applications for imaging, photography or videography
+Landscapes
+Engineering & Computer Science
+(
+AREA
+)
+Physics & Mathematics
+(
+AREA
+)
+Theoretical Computer Science
+(
+AREA
+)
+Aviation & Aerospace Engineering
+(
+AREA
+)
+Mechanical Engineering
+(
+AREA
+)
+Evolutionary Computation
+(
+AREA
+)
+Remote Sensing
+(
+AREA
+)
+General Physics & Mathematics
+(
+AREA
+)
+General Health & Medical Sciences
+(
+AREA
+)
+Software Systems
+(
+AREA
+)
+Artificial Intelligence
+(
+AREA
+)
+Plasma & Fusion
+(
+AREA
+)
+Computing Systems
+(
+AREA
+)
+Optics & Photonics
+(
+AREA
+)
+Multimedia
+(
+AREA
+)
+Health & Medical Sciences
+(
+AREA
+)
+Biophysics
+(
+AREA
+)
+General Engineering & Computer Science
+(
+AREA
+)
+Biomedical Technology
+(
+AREA
+)
+Medical Informatics
+(
+AREA
+)
+Computational Linguistics
+(
+AREA
+)
+Data Mining & Analysis
+(
+AREA
+)
+Molecular Biology
+(
+AREA
+)
+Life Sciences & Earth Sciences
+(
+AREA
+)
+Mathematical Physics
+(
+AREA
+)
+Databases & Information Systems
+(
+AREA
+)
+Computer Vision & Pattern Recognition
+(
+AREA
+)
+Signal Processing
+(
+AREA
+)
+Computer Networks & Wireless Communication
+(
+AREA
+)
+Microelectronics & Electronic Packaging
+(
+AREA
+)
+Control Of Position, Course, Altitude, Or Attitude Of Moving Bodies
+(
+AREA
+)
+Abstract
+本发明公开了一种基于AI识别的无人机激光障碍物清除装置及方法，所述装置包括：无人机以及搭载在无人机上的边缘计算模块、小型化激光设备以及相机，所述无人机与遥控器远程通信连接，所述边缘计算模块分别与所述小型化激光设备以及相机电性连接。所述方法通过机载边缘计算模块分别识别悬挂异物和输电线路，并反馈给遥控器系统主界面，分别以红色方框标记悬挂异物，绿色线条标记输电线路，对准目标，开启激光器，实现异物的清除。本发明设计小型化激光器将其固定安装于无人机上，通过AI障碍物识别，生成无人机激光切割最优路径，激光动作切割障碍物，提高障碍物的清除效率，同时激光清除降低了着火的可能性。
+Description
+一种基于AI识别的无人机激光障碍物清除装置及方法
+技术领域
+本发明涉及无人机技术领域，特别是涉及一种基于AI识别的无人机激光障碍物清除装置及方法。
+背景技术
+随着我国经济的不断发展，电能在生产、生活中发挥着越来越大的作用,我国电网规模也有了极大的增长。附着在输电线路上的各类障碍物成为输电设备尤其是高压输电线路安全工作、电力系统稳定运行的巨大威胁。常见的线路障碍物包括塑料薄膜、鸟窝、覆冰树障等。塑料薄膜等电网悬挂异物会缠绕导线与地线，可能引发相间短路故障；树障会使得高压线绝缘距离减小，可能造成放电，引起林区火灾；这些障碍物不仅会引发停电事故，造成电网损坏，还可能造成更大的间接经济损失。
+目前，已有的障碍物处理方式包括停电作业法，利用绝缘软梯、屏蔽服、绝缘操作杆等简易工具的人工处理法及吊车处理法等。这些处理方法各有缺点，比如停电作业法会造成大量经济损失且有时间限制；人工处理法有较高的安全隐患且操作困难，处理过程受天气与线路结构影响；吊车处理法对道路条件要求较高，不适合在复杂地形中使用。
+而多旋翼无人机由于操作灵活、不受气候以及地理环境的限制等众多优点为清除输电线路漂浮异物提供了新途径，众多研究学者在无人机设备上搭载喷火装置或发热丝装置，对高空中的障碍物体进行清除。针对输电线路异物清除目前采取技术如下：技术一，无人机搭载喷火装置在高空中对于异物进行清除作业，迅速燃烧的大面积异物会随着空气中的气流到处飘散，增加了发生火灾的概率；技术二，无人机搭载发热丝装置由于设备近距离靠近输电线路易受到电磁干扰，无人机易失去控制，增加了无人机坠毁的风险。因此，亟需一种更加安全可靠的无人机障碍清除技术。
+发明内容
+本发明的目的是提供一种基于AI识别的无人机激光障碍物清除装置及方法，设计小型化激光器，将其固定安装于无人机上，通过AI障碍物识别，生成无人机激光切割最优路径，激光动作切割障碍物，提高障碍物的清除效率，同时激光清除降低了着火的可能性。
+为实现上述目的，本发明提供了如下方案：
+一种基于AI识别的无人机激光障碍物清除装置，该装置包括无人机以及搭载在无人机上的边缘计算模块、小型化激光设备以及相机，所述无人机与遥控器远程通信连接，所述边缘计算模块分别与所述小型化激光设备以及相机电性连接，所述边缘计算模块用于AI识别悬挂异物及输电线路，所述小型化激光设备用于发射激光清除悬挂异物。
+进一步地，所述小型化激光设备包括依次连接的中间固定件、电池仓、上外壳、激光器外壳固定架以及下外壳，所述无人机和所述小型化激光设备通过所述中间固定件连接；所述电池仓用于放置激光器的远程控制模块和电源模块，所述上外壳连接在电池仓的下方，所述下外壳通过所述激光器外壳固定架与所述上外壳连接，所述上外壳和下外壳构成立体存放空间，用于存放激光器，所述远程控制模块和电源模块与所述激光器电性连接，所述远程控制模块与所述边缘计算模块连接。
+进一步地，所述电池仓采用侧面抽拉式结构；所述立体存放空间采取三面镂空式结构。
+进一步地，所述相机为云台相机，所述小型化激光设备的激光出光口设置在所述云台相机的下端面。
+进一步地，所述小型化激光设备的激光出光口通过嵌入式的T型结构嵌入到所述云台相机的下端面。
+本发明提供的一种基于AI识别的无人机激光障碍物清除方法，应用于上述的基于AI识别的无人机激光障碍物清除装置，包括以下步骤：
+无人机沿输电线路进行巡检，当发现输电线路上悬挂异物，操控无人机飞行至指定位置；
+通过相机采集输电线路及悬挂异物的图像，并传输给边缘计算模块；
+基于采集的图像，边缘计算模块对于悬挂异物进行图像识别，待发现悬挂异物后，用红框标记悬挂异物，并反馈给遥控器的系统主界面；
+基于采集的图像，边缘计算模块对于输电线路进行识别，待发现输电线路后，用绿色线条标记输电线路，并反馈给遥控器的系统主界面；
+基于红框标记的悬挂异物以及绿色线条标记的输电线路，确定激光清除目标位置，开启小型化激光设备，发射激光，进行悬挂异物的清除。
+进一步地，所述边缘计算模块对于悬挂异物进行图像识别，具体为：
+所述边缘计算模块基于YOLOv3算法对于悬挂异物进行图像识别。
+进一步地，所述边缘计算模块对于输电线路进行识别，具体为：
+所述边缘计算模块基于霍夫变换对于输电线路进行识别。
+进一步地，所述指定位置为输电线路平行方向距离输电线路6-11米的位置。
+根据本发明提供的具体实施例，本发明公开了以下技术效果：本发明提供的基于AI识别的无人机激光障碍物清除装置及方法，实现基于AI识别无人机激光清障一体化，在结构上，小型化激光器的设计较为紧凑，采取镂空式的结构设计，充分保证了散热以及无人机的有限负荷，保障了飞行的稳定性。设计小型化激光器，并将其固定安装于无人机上，通过AI障碍物识别，生成无人机激光切割最优路径，激光动作切割障碍物。AI识别和最优路径可以提高障碍物的清除效率，而由于激光束可以做到和接触物体的点接触，接触面积小，造成异物可燃面积小，极大地降低了着火的可能性。
+附图说明
+为了更清楚地说明本发明实施例或现有技术中的技术方案，下面将对实施例中所需要使用的附图作简单地介绍，显而易见地，下面描述中的附图仅仅是本发明的一些实施例，对于本领域普通技术人员来讲，在不付出创造性劳动性的前提下，还可以根据这些附图获得其他的附图。
+图1为本发明基于AI识别的无人机激光障碍物清除装置的结构示意图；
+图2为本发明小型化激光设备的结构示意图；
+图3为本发明云台相机的结构示意图；
+图4为本发明基于AI识别的无人机激光障碍物清除方法的流程图；
+图5为本发明悬挂异物识别及清除的控制原理图；
+图6为本发明YOLO-V3算法的网络结构示意图。
+附图标记说明：1、边缘计算模块；2、无人机；3、小型化激光设备；4、相机；
+31、中间固定件；32、电池仓；33、上外壳；34、激光器外壳固定架；35、下外壳；
+41、前端相机；42、嵌入式的T型结构；43、激光出光口。
+具体实施方式
+下面将结合本发明实施例中的附图，对本发明实施例中的技术方案进行清楚、完整地描述，显然，所描述的实施例仅仅是本发明一部分实施例，而不是全部的实施例。基于本发明中的实施例，本领域普通技术人员在没有做出创造性劳动前提下所获得的所有其他实施例，都属于本发明保护的范围。
+需要说明，本发明实施例中所有方向性指示(诸如上、下、左、右、前、后……)仅用于解释在某一特定姿态(如附图所示)下各部件之间的相对位置关系、运动情况等，如果该特定姿态发生改变时，则该方向性指示也相应地随之改变。
+在本发明中，除非另有明确的规定和限定，术语“连接”、“固定”等应做广义理解，例如，“固定”可以是固定连接，也可以是可拆卸连接，或成一体；可以是机械连接，也可以是电连接，还可以是物理连接或无线通信连接；可以是直接相连，也可以通过中间媒介间接相连，可以是两个元件内部的连通或两个元件的相互作用关系，除非另有明确的限定。对于本领域的普通技术人员而言，可以根据具体情况理解上述术语在本发明中的具体含义。
+本发明的目的是提供一种基于AI识别的无人机激光障碍物清除装置及方法，设计小型化激光器，将其固定安装于无人机上，通过AI障碍物识别，生成无人机激光切割最优路径，激光动作切割障碍物，提高障碍物的清除效率，同时激光清除降低了着火的可能性。
+为使本发明的上述目的、特征和优点能够更加明显易懂，下面结合附图和具体实施方式对本发明作进一步详细的说明。
+如图1所示，本发明提供的基于AI识别的无人机激光障碍物清除装置包括无人机2以及搭载在无人机2上的边缘计算模块1、小型化激光设备3以及相机4，所述无人机2与遥控器远程通信连接，所述边缘计算模块1分别与所述小型化激光设备3以及相机4电性连接，所述边缘计算模块用于AI识别悬挂异物及输电线路，所述小型化激光设备用于发射激光清除悬挂异物。所述边缘计算模块1的主要作用有二，其一，基于YOLOv3算法对于输电线路悬挂异物进行图像识别，待发现异物后，用红框标记异物，并反馈给遥控器的系统主界面；其二，基于霍夫变换对于输电线路进行识别，待发现输电线路后，用绿色线条进行标记，并反馈给遥控器的系统主界面。
+示例地，所述无人机可以采用大疆M300无人机。
+具体地，如图2所示，所述小型化激光设备3包括依次连接的中间固定件31、电池仓32、上外壳33、激光器外壳固定架34以及下外壳35，所述无人机2和所述小型化激光设备3之间通过所述中间固定件31连接；所述电池仓32用于放置激光器的远程控制模块和电源模块，所述上外壳33连接在电池仓的下方，所述下外壳35通过所述激光器外壳固定架34与所述上外壳33连接，所述上外壳33和下外壳35构成立体存放空间，用于存放激光器，所述远程控制模块和电源模块与所述激光器电性连接，所述远程控制模块与所述边缘计算模块连接。示例地，所述激光器可以选用60W连续光纤激光器，立体存放空间内存放着60W连续光纤激光器的控制电路和光路部分。
+所述电池仓32采用侧面抽拉式结构，方便抽拉使用；所述立体存放空间采取三面镂空式结构，即上外壳33和下外壳35上设置孔洞，用于减轻设备自身重量的同时，增大散热面积。
+如图3所示，所述相机4为云台相机，所述小型化激光设备3的激光出光口43设置在所述云台相机的下端面。具体地，所述小型化激光设备的激光出光口43通过嵌入式的T型结构42嵌入到所述云台相机的下端面。所述云台相机的主要作用在于通过前端相机41，采集输电线路以及悬挂异物图像，并发送至机载边缘计算模块1，进行数据的处理，通过遥控器控制无人机飞行至指定位置，微调左右手柄，打开激光器的控制按钮，发射激光光束清除障碍物。示例地，所述相机可以采用H20相机。
+如图4和图5所示，本发明提供的一种基于AI识别的无人机激光障碍物清除方法，应用于上述的基于AI识别的无人机激光障碍物清除装置，包括以下步骤：
+无人机沿输电线路进行巡检，当发现输电线路上悬挂异物，操控无人机飞行至指定位置；所述指定位置为输电线路平行方向距离输电线路6-11米的位置；
+通过相机采集输电线路及悬挂异物的图像，并传输给边缘计算模块；
+基于采集的图像，边缘计算模块对于悬挂异物进行图像识别，待发现悬挂异物后，用红框标记悬挂异物，并反馈给遥控器的系统主界面；
+基于采集的图像，边缘计算模块对于输电线路进行识别，待发现输电线路后，用绿色线条标记输电线路，并反馈给遥控器的系统主界面；
+基于红框标记的悬挂异物以及绿色线条标记的输电线路，确定激光清除目标位置，开启小型化激光设备，发射激光，进行悬挂异物的清除。
+具体地，所述边缘计算模块对于悬挂异物进行图像识别，具体为：
+所述边缘计算模块基于YOLOv3算法对于悬挂异物进行图像识别。
+其中，YOLOV3算法的基本思想可以分成两部分：
+(1)按一定规则在图片上产生一系列的候选区域，然后根据这些候选区域与图片上物体真实框之间的位置关系对候选区域进行标注。跟真实框足够接近的那些候选区域会被标注为正样本，同时将真实框的位置作为正样本的位置目标。偏离真实框较大的那些候选区域则会被标注为负样本，负样本不需要预测位置或者类别。
+(2)使用卷积神经网络提取图片特征并对候选区域的位置和类别进行预测。这样每个预测框就可以看成是一个样本，根据真实框相对它的位置和类别进行了标注而获得标签值，通过网络模型预测其位置和类别，将网络预测值和标签值进行比较，就可以建立起损失函数。
+YOLO-V3网络如图6所示：在训练过程中对于每幅输入图像，yolov3会预测三个不同大小的3Dtensor，对应着三个不同的scale，设计这三个scale的目的是为了能检测出不同大小的物体。以13*13的tensor为例，对于这个scale，原始输入图像会被分割成13×13的gridcell，每个gridcell对应着3Dtensor中的1×1×255这样一个长条形voxel。255是由3×(4+1+80)而来，由图6可知，公式N×N×[3×(4+1+80)]中N×N表示的是scalesize例如上面提到的13×13。3表示的是eachgridpredict3boxes。4表示的是坐标值即(tx，ty，tw，th)。1表示的是置信度，80表示的是类别数目。
+如果训练集中某一个groundtruth对应的boundingbox中心恰好落在了输入图像的摸一个gridcell中，那么这个gridcell就负责预测此物体的bounding box，于是这个gridcell所对应的置信度为1，其他gridcell的置信度为0。每个gridcell都会被赋予3个不同大小的priorbox，开发过程中，这个gridcell如何选择哪个大小的priorbox。定义只选择与groundtruthboundingbox的IOU重合度最高的priorbox。
+上面说到的3个预设的不同大小的priorbox，首先在训练前，将coco数据集中的所有bbox使用k-meansclustering分成9个类别，每3个类别对应一个scale，故总共3个scale，这种关于box大小的先验信息帮助网络准确预测每个box的offset和coordinate。从直观上，大小合适的box会使得网络更精准的学习。
+具体地，所述边缘计算模块对于输电线路进行识别，具体为：
+所述边缘计算模块基于霍夫变换对于输电线路进行识别。
+霍夫变换(HoughTransform)是图像处理中检测是否存在直线的重要算法，通过将图像中的像素在一个空间坐标系中变换到另一个坐标空间坐标系中，使得在原空间中具有形同特性的曲线或者直线映射到另一个空间中形成峰值，从而把检测任意形状的问题转化为统计峰值的问题。
+霍夫变换通过构建检测形状的数学解析式将图像中像素点映射到参数空间中，例如，检测两个像素点所在的直线，需要构建直线的数学解析式。在图像空间x-y直角坐标系中，对于直线可以用如下所示的解析式来表示：
+y＝kx+b
+其中，k是直线的斜率，b是直线的截距。
+霍夫变换算法检测图像中的直线主要分为4个步骤：
+(1)将参数空间的坐标轴窝散化，例如θ＝0°，10°，20°....·r＝0.1，0.2，0.3.....
+(2)将图像中每个非0像素通过映射关系求取在参数空间通过的方格；
+(3)统计参数空间内每个方格出现的次数，选取次数大于某一阈值的方格作为表示直线的方格；
+(4)将参数空间中表示直线的方格的参数作为图像中直线的参数。
+霍夫变换具有抗干扰能力强，对图像中直线的残缺部分、噪声以及其它共存的非直线结构不敏感，能容忍特征边界描述中的间隙，并且相对不受图像噪声影响等优点。
+利用霍夫变换可以准确识别输电线路，提高识别精度。
+本发明设计小型化激光器将其固定安装于无人机上，通过AI障碍物识别，生成无人机激光切割最优路径，激光动作切割障碍物。AI识别和最优路径可以提高障碍物的清除效率，而由于激光束可以做到和接触物体的点接触，接触面积小，造成异物可燃面积小，极大地降低了着火的可能性。
+本文中应用了具体个例对本发明的原理及实施方式进行了阐述，以上实施例的说明只是用于帮助理解本发明的方法及其核心思想；同时，对于本领域的一般技术人员，依据本发明的思想，在具体实施方式及应用范围上均会有改变之处。综上所述，本说明书内容不应理解为对本发明的限制。
+Claims (
+9
+)
+1.一种基于AI识别的无人机激光障碍物清除装置，其特征在于，包括无人机以及搭载在无人机上的边缘计算模块、小型化激光设备以及相机，所述无人机与遥控器远程通信连接，所述边缘计算模块分别与所述小型化激光设备以及相机电性连接，所述边缘计算模块用于AI识别悬挂异物及输电线路，所述小型化激光设备用于发射激光清除悬挂异物。
+2.根据权利要求1所述的基于AI识别的无人机激光障碍物清除装置，其特征在于，所述小型化激光设备包括依次连接的中间固定件、电池仓、上外壳、激光器外壳固定架以及下外壳，所述无人机和所述小型化激光设备通过所述中间固定件连接；所述电池仓用于放置激光器的远程控制模块和电源模块，所述上外壳连接在电池仓的下方，所述下外壳通过所述激光器外壳固定架与所述上外壳连接，所述上外壳和下外壳构成立体存放空间，用于存放激光器，所述远程控制模块和电源模块与所述激光器电性连接，所述远程控制模块与所述边缘计算模块连接。
+3.根据权利要求2所述的基于AI识别的无人机激光障碍物清除装置，其特征在于，所述电池仓采用侧面抽拉式结构；所述立体存放空间采取三面镂空式结构。
+4.根据权利要求1所述的基于AI识别的无人机激光障碍物清除装置，其特征在于，所述相机为云台相机，所述小型化激光设备的激光出光口设置在所述云台相机的下端面。
+5.根据权利要求4所述的基于AI识别的无人机激光障碍物清除装置，其特征在于，所述小型化激光设备的激光出光口通过嵌入式的T型结构嵌入到所述云台相机的下端面。
+6.一种基于AI识别的无人机激光障碍物清除方法，应用于权利要求1-5任一所述的基于AI识别的无人机激光障碍物清除装置，其特征在于，包括以下步骤：
+无人机沿输电线路进行巡检，当发现输电线路上悬挂异物，操控无人机飞行至指定位置；
+通过相机采集输电线路及悬挂异物的图像，并传输给边缘计算模块；
+基于采集的图像，边缘计算模块对于悬挂异物进行图像识别，待发现悬挂异物后，用红框标记悬挂异物，并反馈给遥控器的系统主界面；
+基于采集的图像，边缘计算模块对于输电线路进行识别，待发现输电线路后，用绿色线条标记输电线路，并反馈给遥控器的系统主界面；
+基于红框标记的悬挂异物以及绿色线条标记的输电线路，确定激光清除目标位置，开启小型化激光设备，发射激光，进行悬挂异物的清除。
+7.根据权利要求6所述的基于AI识别的无人机激光障碍物清除方法，其特征在于，所述边缘计算模块对于悬挂异物进行图像识别，具体为：
+所述边缘计算模块基于YOLOv3算法对于悬挂异物进行图像识别。
+8.根据权利要求6所述的基于AI识别的无人机激光障碍物清除方法，其特征在于，所述边缘计算模块对于输电线路进行识别，具体为：
+所述边缘计算模块基于霍夫变换对于输电线路进行识别。
+9.根据权利要求6所述的基于AI识别的无人机激光障碍物清除方法，其特征在于，所述指定位置为输电线路平行方向距离输电线路6-11米的位置。
+CN202310506672.9A
+2023-05-08
+2023-05-08
+一种基于ai识别的无人机激光障碍物清除装置及方法
+Pending
+CN116534252A
+(
+zh
+)
+Priority Applications (1)
+Application Number
+Priority Date
+Filing Date
+Title
+CN202310506672.9A
+CN116534252A
+(
+zh
+)
+2023-05-08
+2023-05-08
+一种基于ai识别的无人机激光障碍物清除装置及方法
+Applications Claiming Priority (1)
+Application Number
+Priority Date
+Filing Date
+Title
+CN202310506672.9A
+CN116534252A
+(
+zh
+)
+2023-05-08
+2023-05-08
+一种基于ai识别的无人机激光障碍物清除装置及方法
+Publications (1)
+Publication Number
+Publication Date
+CN116534252A
+true
+CN116534252A
+              (
+zh
+)
+2023-08-04
+Family
+ID=87446552
+Family Applications (1)
+Application Number
+Title
+Priority Date
+Filing Date
+CN202310506672.9A
+Pending
+CN116534252A
+(
+zh
+)
+2023-05-08
+2023-05-08
+一种基于ai识别的无人机激光障碍物清除装置及方法
+Country Status (1)
+Country
+Link
+CN
+(
+1
+)
+CN116534252A
+(
+zh
+)
+Cited By (2)
+* Cited by examiner, † Cited by third party
+Publication number
+Priority date
+Publication date
+Assignee
+Title
+CN118572557A
+(
+zh
+)
+*
+2024-05-15
+2024-08-30
+武汉巨合科技有限公司
+一种车载智能激光清障仪及清障方法
+CN119068363A
+(
+zh
+)
+*
+2024-08-21
+2024-12-03
+江苏三变科技有限公司
+一种无人机输电线路异物智能识别及远程快速清除方法
+2023
+2023-05-08
+CN
+CN202310506672.9A
+patent/CN116534252A/zh
+active
+Pending
+Cited By (3)
+* Cited by examiner, † Cited by third party
+Publication number
+Priority date
+Publication date
+Assignee
+Title
+CN118572557A
+(
+zh
+)
+*
+2024-05-15
+2024-08-30
+武汉巨合科技有限公司
+一种车载智能激光清障仪及清障方法
+CN118572557B
+(
+zh
+)
+*
+2024-05-15
+2025-05-13
+武汉巨合科技有限公司
+一种车载智能激光清障仪及清障方法
+CN119068363A
+(
+zh
+)
+*
+2024-08-21
+2024-12-03
+江苏三变科技有限公司
+一种无人机输电线路异物智能识别及远程快速清除方法
+Similar Documents
+Publication
+Publication Date
+Title
+CN111198004A
+(
+zh
+)
+2020-05-26
+一种基于无人机的电力巡查信息采集系统
+CN115185292B
+(
+zh
+)
+2024-06-14
+基于地空一体化的空气污染智能监测方法及平台
+CN112101088A
+(
+zh
+)
+2020-12-18
+一种无人机电力自动巡检方法、装置及系统
+CN105743017B
+(
+zh
+)
+2017-12-08
+输电线路无人机巡检地面测控运输保障系统
+CN118803433B
+(
+zh
+)
+2024-11-22
+一种森林防火监测报警方法及装置
+CN114115317A
+(
+zh
+)
+2022-03-01
+一种基于人工智能的变电站无人机巡检方法
+CN112684806A
+(
+zh
+)
+2021-04-20
+一种基于双重避障和智能识别的电力巡检无人机系统
+CN117649785A
+(
+zh
+)
+2024-03-05
+一种无人机多运行人分布式协同冲突化解方法及系统
+CN109901618A
+(
+zh
+)
+2019-06-18
+电力巡线系统及方法
+CN118210328B
+(
+zh
+)
+2024-09-13
+基于模型轻量化技术的无人机自主导航系统
+CN112947588A
+(
+zh
+)
+2021-06-11
+无人机电网巡线系统
+CN112615301A
+(
+zh
+)
+2021-04-06
+一种无人机电力巡检视像识别激光清障系统
+CN117629217A
+(
+zh
+)
+2024-03-01
+一种基于北斗网格码的电力巡检实时防碰撞方法
+CN109270957A
+(
+zh
+)
+2019-01-25
+一种植保系统及其飞行器控制方法和装置
+CN118798643A
+(
+zh
+)
+2024-10-18
+一种风机叶片运输防碰撞预警方法及系统
+CN120949807A
+(
+zh
+)
+2025-11-14
+一种基于地形评估与进近成本分析的无人机自主择址方法
+CN208384644U
+(
+zh
+)
+2019-01-15
+无人机电力巡检系统
+CN116700357A
+(
+zh
+)
+2023-09-05
+一种架空输电线路无人机编队智能巡检方法
+CN118610939A
+(
+zh
+)
+2024-09-06
+一种基于无人机的输电系统危险物清除方法及系统
+CN121785354B
+(
+zh
+)
+2026-05-19
+一种基于无人机的高压输电线仿线巡检系统
+CN120161858A
+(
+zh
+)
+2025-06-17
+服务区作为地面低空保障站点的低空保障方法
+CN120560324A
+(
+zh
+)
+2025-08-29
+基于激光点云的变电站无人机局域网自动巡检方法及系统
+CN114021906A
+(
+zh
+)
+2022-02-08
+无人值守的风力发电运维管理方法及系统
+CN115063953A
+(
+zh
+)
+2022-09-16
+输电线路智能防护预警方法、装置、系统以及电子设备
+CN120523214A
+(
+zh
+)
+2025-08-22
+一种基于多传感器融合与智能识别的电网线路无人机巡检系统
+Legal Events
+Date
+Code
+Title
+Description
+2023-08-04
+PB01
+Publication
+2023-08-04
+PB01
+Publication
+2023-08-22
+SE01
+Entry into force of request for substantive examination
+2023-08-22
+SE01
+Entry into force of request for substantive examination

@@ -1,0 +1,593 @@
+Supplementary Information for Single-lens dynamic
+z-scanning for simultaneous in-situ position detection
+and laser processing focus control
+Xiaohan Du1,2, Camilo Florian3,4, and Craig B.Arnold1,4,*
+1Department of Mechanical and Aerospace Engineering, Princeton University, Princeton, NJ, 08544, USA
+2Department of Systems Engineering, City University of Hong Kong, Hong Kong, China
+3Institut für Werkstofftechnik, Universität Kassel, 34125, Kassel, Germany
+4Princeton Materials Institute, Princeton University, Princeton, NJ, 08544, USA
+*Corresponding Author, email: cbarnold@princeton.edu.
+1 Ray transfer matrix analysis
+We can use a simplified ray transfer matrix model to calculate the photodiode signal. The outgoing
+ray, rp, which is focused at the pinhole can be expressed by,
+rp = Lp· F2· L2· F1· L1· rin (s1)
+where
+Li =
+1 li
+0 1
+
+, Fi =
+ 1 0
+− 1
+fi 1
+
+. (s2)
+li is the distance between optical elements, fi is the focal length of the objective lens, and rin
+denotes the incoming ray that is reflected from the sample surface. Due to the dynamic scanning
+of the probing beam, l1 is a function of time t.
+l1(t) = z0 + ztag cos(2π ftagt) +∆z (s3)
+where ∆z is the displacement of the sample surface from the mean value of z-scanning (z0). The
+distance of the focused beam after the second objective lens is denoted by lp, and is solved from
+Equation s3 as,
+lp(t) =
+l2 + (1− l2
+f1
+)l1(t)
+l2
+f2
+− 1 + ( 1
+f2
++
+1− l2
+f2
+f1
+)l1(t)
+(s4)
+The radius of the beam at the pinhole Rp is then [1],
+R2
+p = R2
+0[( λ
+πR0
+)2(l3− lp(t))2 + 1] (s5)
+1
+
+𝒓𝒑=1𝒍𝒑
+01
+1 0
+−1
+𝑓"
+1
+1𝑙"
+01
+1 0
+−1
+𝑓#
+1
+1𝒍𝟏(𝒕)
+0 1 𝒓𝒊𝒏
+Pinhole
+PD
+𝒍𝟏(𝒕)𝑙"𝑙’
+OBJ
+10⨯
+𝒍𝒑
+𝐹" 𝐹#
+OBJ
+40⨯
+a b
+d e
+measured	signal	at	𝑧(,calibration	A1
+calculated	signal	at	𝑧(
+measured	signal	at	A,calibration	A1
+calculated	signal	at	𝑧)=𝑧(−0.65𝑧*+,
+0
+0.2
+0.4
+0.6
+0.8
+1
+1.2
+0 0.5 1
+Normalized PD signal
+t/T
+0
+0.2
+0.4
+0.6
+0.8
+1
+1.2
+0 0.5 1
+Normalized PD signal
+t/T
+0
+0.2
+0.4
+0.6
+0.8
+1
+1.2
+0 0.5 1
+Normalized PD signal
+t/T
+0
+0.2
+0.4
+0.6
+0.8
+1
+1.2
+0 0.5 1
+Normalized PD signal
+t/T
+0
+0.2
+0.4
+0.6
+0.8
+1
+1.2
+0 0.5 1
+Normalized PD signal
+t/T
+0
+0.2
+0.4
+0.6
+0.8
+1
+1.2
+0 0.5 1
+Normalized PD signal
+t/T
+0
+0.2
+0.4
+0.6
+0.8
+1
+1.2
+0 0.5 1
+Normalized PD signal
+t/T
+0
+0.2
+0.4
+0.6
+0.8
+1
+1.2
+0 0.5 1
+Normalized PD signal
+t/T
+measured	signal	at	D,calibration	A1
+calculated	signal	at	𝑧-=𝑧(+0.14𝑧*+,
+measured	signal	at	C,calibration	A1
+calculated	signal	at	𝑧.=𝑧(−0.14𝑧*+,
+measured	signal	at	B,calibration	A1
+calculated	signal	at	𝑧/=𝑧(−0.42𝑧*+,
+measured	signal	at	G,calibration	A1
+calculated	signal	at	𝑧0=𝑧(+0.84𝑧*+,
+measured	signal	at	F,calibration	A1
+calculated	signal	at	𝑧1=𝑧(+0.65𝑧*+,
+measured	signal	at	E,calibration	A1
+calculated	signal	at	𝑧2=𝑧(+0.42𝑧*+,
+c
+f
+g h i
+0.5
+Figure s1: a. A simplified ray transfer matrix model for the probing beam. b. Comparison between
+the measured signal at zs = z0 from calibration A1 and the calculated signal by the ray transfer
+matrix model. c-i. Calculated and measured photodiode signal for locations A to G in Figure 1b-c
+of the main text.
+where R0 is the minimum beam radius for the beam focused at lp(t), l3 is the distance between
+the pinhole and the second objective lens. We assume that R0 is constant despite the varying
+optical power of the TAG lens. Lastly, the intensity of the photodiode signal passing through the
+pinhole is considered proportional to 1 /R2
+p [1]. Therefore the photodiode signal can be obtained
+by substituting Equation s4 to Equation s5.
+Figure s1b plots the calculated photodiode signal at zs = z0 (or ∆z = 0) in a dashed line. We
+have plugged in the following values to all the constants: f1 = z0 = 4 mm, f2 = 16 mm, l2 = 160
+mm, and ztag = 11.98 µm from calibration experiment A1. The time interval between double
+peaks in the calculated signal is exactly 0.5T . The dots show the measured signal from calibration
+experiment A1, which is in good agreement with the calculated signal. Similarly, Figure s1c-i
+compares the calculated and the measured signal for locations A to G (see Figure 1b-c of the main
+text) within the scanning range from calibration experiment A1.
+2
+
+2 List of calibration measurements
+We evaluate the accuracy and the repeatability of the in-situ detection method under different align-
+ment and driving conditions. Multiple calibration experiments (A1-A9 and B1-B10) are conducted
+with OBJ1 = 40× and OBJ1 = 4×, respectively. Table s1 and Table s2 exhibit the setting parame-
+ters (power of probing beam Ppb, input voltage Vtag, and scanning frequency ftag), the fitted value
+of z0 and ztag, as well as the calculated accuracy and linearity error of the calibration experiments.
+Figure s2 and Figure s3 exhibit the data points for the calibration experiments. We plot the mea-
+sured surface position z′
+s versus the real surface position zs in red, with the fitted intercept (z0) and
+slope (ztag). The secondary axis plots the error δ z = z′
+s− zs in blue.
+Table s1: List of all calibration measurements with OBJ1 = 40×
+No. Ppb
+(W)
+Vtag
+(V)
+ftag
+(kHz)
+z0
+(mm)
+ztag
+(µm)
+Accuracy
+max|δ z|
+(µm)
+Linearity
+error ε
+(%)
+A1 0.06 15 139.8 2.4482 11.98 0.31 1.30
+A2 0.06 15 139.8 2.4484 11.56 0.41 1.77
+A3 0.06 15 140.5 2.4483 11.54 0.30 1.29
+A4 0.06 15 140.5 2.4484 12.18 0.48 1.95
+A5 0.25 15 140.0 2.4481 11.10 0.30 1.35
+A6 0.25 15 140.3 2.4482 12.13 0.30 1.24
+Average of A1-A6 2.4483 11.75 0.35 1.49
+SD of A1-A6 0.0001 0.420 0.08 0.30
+A7 0.25 9 140.4 2.4482 7.400 0.23 1.57
+A8 0.25 9 140.4 2.4482 7.408 0.19 1.25
+A9 0.06 18 139.2 2.4481 13.47 0.42 1.57
+3
+
+Table s2: List of calibration measurements with OBJ1 = 4×
+No. Ppb
+(W)
+Vtag
+(V)
+ftag
+(kHz)
+z0
+(mm)
+ztag
+(mm)
+Accuracy
+max δ z
+(mm)
+Linearity
+error ε
+(%)
+B1 0.06 15 141.0 2.187 0.719 0.034 2.37
+B2 0.06 15 141.0 2.173 0.730 0.022 1.52
+B3 0.06 15 141.0 2.150 0.736 0.039 2.68
+B4 0.06 15 141.1 2.167 0.654 0.017 1.28
+B5 0.25 15 141.1 2.169 0.664 0.030 2.29
+B6 0.25 15 141.1 2.174 0.665 0.015 1.10
+Average of B1-B6 2.170 0.695 0.026 1.87
+SD of B1-B6 0.012 0.037 0.010 0.66
+B7 0.06 18 141.0 2.101 0.819 0.044 2.71
+B8† 0.06 15 140.4 2.202 1.365 0.169 6.19
+B9† 0.06 15 140.4 2.182 1.374 0.158 5.73
+B10 0.11 15 350.8 2.219 1.058 0.052 2.48
+† pinhole removed
+-0.6
+-0.3
+0
+0.3
+0.6
+-1
+-0.5
+0
+0.5
+1
+2.436 2.442 2.448 2.454 2.460
+𝐜𝐨𝐬(𝝅𝜟𝒕/𝑻)
+𝜹𝒛	(𝝁𝐦)
+𝐜𝐨𝐬(𝝅𝜟𝒕/𝑻)
+𝜹𝒛	(𝝁𝐦)
+cos(𝜋𝛥𝑡/𝑇)
+𝑧!"=𝑧#+𝑧$%&cos(𝜋𝛥𝑡/𝑇),𝑧#=2.4482mm,𝑧$%&=11.98µm
+error	𝛿𝑧=𝑧!"−𝑧!calibration	A1:
+cos(𝜋𝛥𝑡/𝑇)
+𝑧!"=𝑧#+𝑧$%&cos(𝜋𝛥𝑡/𝑇),𝑧#=2.4484mm,𝑧$%&=11.54µm
+error	𝛿𝑧=𝑧!"−𝑧!calibration	A3:
+𝒛𝒔	(𝐦𝐦)
+-0.6
+-0.3
+0
+0.3
+0.6
+-1
+-0.5
+0
+0.5
+1
+2.436 2.442 2.448 2.454 2.460
+𝒛𝒔	(𝐦𝐦)
+-0.6
+-0.3
+0
+0.3
+0.6
+-1
+-0.5
+0
+0.5
+1
+2.436 2.442 2.448 2.454 2.460
+𝒛𝒔	(𝐦𝐦)
+𝐜𝐨𝐬(𝝅𝜟𝒕/𝑻)
+cos(𝜋𝛥𝑡/𝑇)
+𝑧!"=𝑧#+𝑧$%&cos(𝜋𝛥𝑡/𝑇),𝑧#=2.4484mm,𝑧$%&=12.18µm
+error	𝛿𝑧=𝑧!"−𝑧!calibration	A4:
+𝜹𝒛	(𝝁𝐦)
+-0.6
+-0.3
+0
+0.3
+0.6
+-1
+-0.5
+0
+0.5
+1
+2.436 2.442 2.448 2.454 2.460
+𝒛𝒔	(𝐦𝐦)
+𝐜𝐨𝐬(𝝅𝜟𝒕/𝑻)
+cos(𝜋𝛥𝑡/𝑇)
+𝑧!"=𝑧#+𝑧$%&cos(𝜋𝛥𝑡/𝑇),𝑧#=2.4481mm,𝑧$%&=13.47µm
+error	𝛿𝑧=𝑧!"−𝑧!calibration	A9:
+𝜹𝒛	(𝝁𝐦)
+Figure s2: Data for calibrations with OBJ1 = 40×, showing a plot of the measured surface position
+z′
+s versus the real surface position zs in red, with the fitted intercept ( z0) and slope ( ztag). The
+secondary axis plots the error δ z = z′
+s− zs in blue.
+4
+
+-0.06
+-0.03
+0
+0.03
+0.06
+-1
+-0.5
+0
+0.5
+1
+1.40 1.80 2.20 2.60 3.00
+𝒛𝒔	(𝐦𝐦)
+𝐜𝐨𝐬(𝝅𝜟𝒕/𝑻)
+𝜹𝒛	(𝐦𝐦)
+cos(𝜋𝛥𝑡/𝑇)
+𝑧"#=𝑧$+𝑧%&’cos(𝜋𝛥𝑡/𝑇),𝑧$=2.187mm,𝑧%&’=0.719mm
+error	𝛿𝑧=𝑧"#−𝑧"calibration	B1:
+-0.06
+-0.03
+0
+0.03
+0.06
+-1
+-0.5
+0
+0.5
+1
+1.40 1.80 2.20 2.60 3.00
+𝒛𝒔	(𝐦𝐦)
+𝐜𝐨𝐬(𝝅𝜟𝒕/𝑻)
+𝜹𝒛	(𝐦𝐦)
+cos(𝜋𝛥𝑡/𝑇)
+𝑧"#=𝑧$+𝑧%&’cos(𝜋𝛥𝑡/𝑇),𝑧$=2.173mm,𝑧%&’=0.730mm
+error	𝛿𝑧=𝑧"#−𝑧"calibration	B2:
+-0.06
+-0.03
+0
+0.03
+0.06
+-1
+-0.5
+0
+0.5
+1
+1.40 1.80 2.20 2.60 3.00
+𝒛𝒔	(𝐦𝐦)
+𝐜𝐨𝐬(𝝅𝜟𝒕/𝑻)
+𝜹𝒛	(𝐦𝐦)
+cos(𝜋𝛥𝑡/𝑇)
+𝑧"#=𝑧$+𝑧%&’cos(𝜋𝛥𝑡/𝑇),𝑧$=2.167mm,𝑧%&’=0.654mm
+error	𝛿𝑧=𝑧"#−𝑧"calibration	B4:
+-0.06
+-0.03
+0
+0.03
+0.06
+-1
+-0.5
+0
+0.5
+1
+1.40 1.80 2.20 2.60 3.00
+𝒛𝒔	(𝐦𝐦)
+𝐜𝐨𝐬(𝝅𝜟𝒕/𝑻)
+𝜹𝒛	(𝐦𝐦)
+cos(𝜋𝛥𝑡/𝑇)
+𝑧"#=𝑧$+𝑧%&’cos(𝜋𝛥𝑡/𝑇),𝑧$=2.101mm,𝑧%&’=0.819mm
+error	𝛿𝑧=𝑧"#−𝑧"calibration	B7:
+-0.2
+-0.1
+0
+0.1
+0.2
+-1
+-0.5
+0
+0.5
+1
+1.00 1.50 2.00 2.50 3.00
+cos(𝜋𝛥𝑡/𝑇)
+𝑧"#=𝑧$+𝑧%&’cos(𝜋𝛥𝑡/𝑇),𝑧$=2.202mm,𝑧%&’=1.365mm
+error	𝛿𝑧=𝑧"#−𝑧"calibration	B8:
+𝒛𝒔	(𝐦𝐦)
+𝐜𝐨𝐬(𝝅𝜟𝒕/𝑻)
+𝜹𝒛	(𝐦𝐦)
+-0.1
+-0.05
+0
+0.05
+0.1
+-1
+-0.5
+0
+0.5
+1
+1.40 1.80 2.20 2.60 3.00
+𝒛𝒔	(𝐦𝐦)
+𝐜𝐨𝐬(𝝅𝜟𝒕/𝑻)
+𝜹𝒛	(𝐦𝐦)
+cos(𝜋𝛥𝑡/𝑇)
+𝑧"#=𝑧$+𝑧%&’cos(𝜋𝛥𝑡/𝑇),𝑧$=2.219mm,𝑧%&’=1.058mm
+error	𝛿𝑧=𝑧"#−𝑧"calibration	B10:
+Figure s3: Data for calibrations with OBJ1 = 4×, showing a plot of the measured surface position
+z′
+s versus the real surface position zs in red, with the fitted intercept ( z0) and slope ( ztag). The
+secondary axis plots the error δ z = z′
+s− zs in blue.
+3 Characterization of synchronous pulses
+Figure s4a shows the characterized focal position z f (φ ) triggered at various phases φ from 0o to
+180o. z f (φ ) is measured as the z location of the thinnest line from a set of z-scan line ablation
+experiment on a Si wafer using a 10× objective lens, ftag = 140.1 kHz, and Vtag = 15 V [2]. The
+adopted laser energy is 5 µJ (± 25%) per pulse with a linear translation speed of 0.65 mm/s. The
+positive z direction is opposite to the beam propagation direction. The error bar is set as ± 0.1
+mm, which is the z stage motion pitch. The solid line represents a least-square fit of z f (φ ) based
+5
+
+on Equation 7 in the main text with R2 = 0.96. The fitted ztag =−0.53 mm and z0 = f0− 0.27
+mm, where f0 is the focal length of the objective lens. The dashed line plots an envelope of z f (φ )
+accounting for any uncertainty originating from the triggering pulse width by adding a ±π ftagδt
+term to its phase. The envelope of focal position is expressed asz f (φ ) = z0 + ztagcos(φ± π ftagδt).
+Thus, the accuracy of synchronous focus control is defined as the axial width of the envelope at
+90o. For ztag =−0.53 mm, the maximum axial width at φ = 90o is± 0.22 mm if δt = 1 µs, and
+± 0.023 mm if δt = 100 ns.
+Figure s4b shows the measured ablated line depth using pulses triggered at φ = 0o, 90 o and
+180o. The peaks indicate the focal positions at f0− 0.8, f0− 0.1, and f0 + 0.2 mm respectively.
+The corresponding ablation depth when at focus decreases from 0.95 µm to 0.22 µm as the lens
+power decreases from φ = 180o (the most converging) to φ = 0o (the most diverging).
+a
+0
+0.3
+0.6
+0.9
+1.2
+-1 -0.5 0 0.5
+𝒛−𝒇𝟎	(𝐦𝐦)
+𝐝𝐞𝐩𝐭𝐡	(𝛍𝐦)
+𝜙=0" 𝜙=90" 𝜙=180"
+b
+-1
+-0.5
+0
+0.5
+0 30 60 90 120150180
+𝐳𝒔𝝓		(𝐦𝐦)
+𝝓	(𝐨)
+measured	𝑧%(𝜙)
+>it:	z%𝜙=𝑓&−0.269−0.527cos(𝜙)
+envelope:	z%𝜙=𝑓&−0.269
+−0.527cos(𝜙±𝜋𝑓’()𝛿’)
+𝑓&+0.5
+𝑓&
+𝑓&−0.5
+𝑓&−1
+R² = 0.9586
+Figure s4: a. Characterized focal position z f (φ ) as a function of the triggering phase φ by z-
+scan experiment on Si wafers. The solid line plots a least-square fit, and the dashed line draws
+an envelope including any uncertainty originating from the triggering pulse width. b. Measured
+ablated depth on Si with laser pulses triggered at φ = 0o, 90o and 180o.
+6
+
+4 The reference experiment on synchronized pulses
+Several reference experiments are performed to determine the number of triggered pulses by the
+TAG lens controller in the absence of the TAG lens in the beam path. The laser is triggered at
+a single phase in Figure s5, with linear translation speeds V x = 1.2 mm/s and V x = 2.4 mm/s,
+presented in two columns. The TAG lens frequencies for the four rows were 140.1 kHz, 140.9
+kHz, 141.1 kHz, and 283.4 kHz, corresponding to fsync values of 140.1 Hz, 140.9 Hz, 141.1 Hz,
+and 283.4 Hz, respectively. With an image length of 0.64 mm, the calculated number of triggered
+pulses displayed in the image is 0 .64/(V x/ fsync). To illustrate the results, we marked the ratio
+between the counted number of pulses and the calculated number of pulses on the images, revealing
+a missing percentage of around 30%.
+Vx=2.4mm/sVx=1.2mm/s𝑓!"#$
+Hz
+140.1
+140.9
+141.1
+283.4
+56/74=75% 28/37=75%
+53/75=71% 26/37=70%
+57/75=76% 28/37=75%
+52/75=69%101/151=67%
+Figure s5: Reference experiments of synchronous pulses. The image length is 0.64 mm, and the
+scale bar is 100 µm.
+5 Supplementary videos for the real-time detection and focus-
+ing
+Figure s6a illustrates the video frames that depict the setup of the real-time detection system in sup-
+plementary videos V1 and V2. The system comprises an oscilloscope, a programmable xyz stage,
+and a computer running Matlab. Frame 1-4 corresponds to the sequential steps taken to initiate
+data acquisition. In the first video (V1), we detect programmed periodic back-and-forth motions
+of the z stage, which translates between 0 mm and 0.2 mm with varying acceleration/deceleration.
+Figure s6b displays the selected frames 5-8 after the frames 1-4 in Figure s6a for z motion with
+a velocity of 0.02 mm/s and an acceleration of 0.002 mm/s 2. On the other hand, Figure s6c il-
+lustrates the selected frames for z motion with a velocity of 0.01 mm/s and an acceleration of 0.1
+mm/s2. Both experiments begin with z = 0.2 mm and go through two cycles of motion. As the
+7
+
+time (s)
+z (mm)
+time (s)
+z (mm)
+time (s)
+z (mm)
+a.	Setup	of	the	real	time	data	acquisition
+b.	Back	and	forth	motion	of	the	zstage	between	0mm	and	0.2mm,	acceleration=0.002mm/s2
+c.	Back	and	forth	motion	of	the	zstage	between	0mm	and	0.2mm,	acceleration=0.1mm/s2
+d.	Detection	of	a	step	surface	with	a	linear	xmotion	from	0mm	to	-7.5mm
+5.	start	motion 6.	in	motion 7.	stop	motion 8.	result
+4.	start	acquisition3.	connect	to	Matlab2.	turn	on	the	laser1.	layout	of	components
+5.	start	motion 6.	in	motion 7.	stop	motion 8.	result
+5.	start	motion 6.	in	motion 7.	stop	motion 8.	result
+Figure s6: Video frames showing real-time detection. a. Frame 1-4, showing the setup and the
+sequential steps taken to start data acquisition for both Video V1 and V2. b-c. Frame 5-8 of Video
+V1, showing the back-and-forth motion of the z stage with different accelerations. d. Frame 5-8 of
+Video V2, showing the detection of a step surface with a linear motion in x.
+programmed z motion is terminated manually, the stage stops at z = 0.2 mm and z = 0.17 mm in
+Figure s6b and c, respectively, as shown in Frame 7. Frame 8 plots the final measured zs versus
+time at the completion of each measurement. In the second video (V2), we detect the step surface
+in real-time while translating linearly along the x direction from 0 mm to -7.5 mm. The x stage
+speed is 0.1 mm/s. Figure s6d displays the selected frames 5-8 for ax motion with a velocity of 0.1
+mm/s. The measured step size is 0.565 mm, with a standard deviation of 0.024 mm (determined
+by the top surface variation).
+In the third video (V3), we implement real-time position detection and simultaneous focusing
+for laser marking of a two-step surface. Selected frames of video V3 are exhibited in Figure s7.
+The auto-focusing setup consists of multiple hardware and software components, as displayed in
+Frame 1 and 2. After turning on the probing beam in Frame 3), we conduct a local calibration
+experiment by mechanically shifting the z stage for 0.05 mm per step and acquiring the real-time
+8
+
+signal from the oscilloscope, as shown in Frame 4. Frame 5 plots the obtained calibration curve,
+with the two fitting parameters as z0 = 1.51 mm and ztag =−0.38 mm. Next, based on the two
+sets of calibrated parameters of the probing and fabrication beams, the matching phase φ can be
+calculated in real-time accordingly. We then input the matching phase into the TAG lens controller
+software to trigger the fabrication beam and focus on the probed surface position (Frame 6). Frame
+7-9 shows that by adjusting the matching phase to trigger the fabrication laser, we can focus on
+different surfaces while the x stage moves with a velocity of 0.2 mm/s.
+3.	turn	on	the	probing	beam2.	software	components1.	hardware	components
+4.	start	calibration 5.	calibration	curve 6.	input	the	matching	phase
+7.	focus	onthe	low	surface 8.	focus	onthe	middle	surface9.	focus	onthe	high	surface
+Figure s7: Video frames showing real-time detection and simultaneous focusing of a two-step
+surface.
+9
+
+Supplementary information accompanies the manuscript on the Light: Science & Applications
+website (http://www.nature.com/lsa).
+References
+[1] Nakazawa, K. et al. Confocal laser displacement sensor using a micro-machined varifocal
+mirror. Applied Optics 56, 6911 (2017).
+[2] Du, X., Florian, C. & Arnold, C. B. Parametric study of multi-focal laser processing using an
+ultrafast tunable acoustic lens. In Laser Applications in Microelectronic and Optoelectronic
+Manufacturing (LAMOM) XXVII, vol. 11988, 94–98 (SPIE, 2022).
+10

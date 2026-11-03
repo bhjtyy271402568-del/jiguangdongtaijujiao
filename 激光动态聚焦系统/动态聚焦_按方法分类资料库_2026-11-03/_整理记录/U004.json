@@ -1,0 +1,32 @@
+{
+  "id": "U004",
+  "url": "https://doi.org/10.1016/j.optlastec.2024.111608",
+  "category": "02_反射式与三振镜调焦",
+  "title": "2025_高速三振镜三维扫描系统_光学设计与分析",
+  "context": "用户提供的正式期刊全文PDF，已核对首页标题与DOI",
+  "origins": [
+    "F:\\发票\\1-s2.0-S0030399224010661-main.pdf"
+  ],
+  "local_source": "F:\\发票\\1-s2.0-S0030399224010661-main.pdf",
+  "doi": "10.1016/j.optlastec.2024.111608",
+  "status": "PDF已下载",
+  "files": [
+    {
+      "path": "02_反射式与三振镜调焦\\U004_2025_高速三振镜三维扫描系统_光学设计与分析.pdf",
+      "type": "PDF",
+      "pages": 7,
+      "bytes": 7650780,
+      "sha256": "74b93980fc31255bb5cc8cec10478760a16027199a760e9811652d00e6f8b1c0",
+      "url": "https://doi.org/10.1016/j.optlastec.2024.111608",
+      "title": "2025_高速三振镜三维扫描系统_光学设计与分析",
+      "text_chars": 33375,
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    }
+  ],
+  "attempts": [
+    {
+      "source": "F:\\发票\\1-s2.0-S0030399224010661-main.pdf",
+      "result": "用户提供本地PDF，复制归档，原件保留"
+    }
+  ]
+}

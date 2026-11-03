@@ -1,0 +1,102 @@
+{
+  "id": "A003",
+  "category": "01_移动透镜式与匹配光学",
+  "url": "https://www.nature.com/articles/s44172-024-00320-2",
+  "context": "三维随机访问共焦显微_原文与补充资料",
+  "title": "三维随机访问共焦显微_原文与补充资料",
+  "origins": [
+    "补充检索_修复失效入口"
+  ],
+  "files": [
+    {
+      "path": "01_移动透镜式与匹配光学\\A003_Three-dimensional random-access confocal microscopy with 3D remote focusing system _ Communications Engin.html",
+      "type": "HTML",
+      "bytes": 429134,
+      "sha256": "a8a49000b3309acd9ed22c36c67e8c755e5471c7dd3a1625fce6fce02d19a318",
+      "url": "https://www.nature.com/articles/s44172-024-00320-2",
+      "title": "Three-dimensional random-access confocal microscopy with 3D remote focusing system | Communications Engineering",
+      "text_chars": 58295
+    },
+    {
+      "path": "01_移动透镜式与匹配光学\\A003_三维随机访问共焦显微_原文与补充资料.pdf",
+      "type": "PDF",
+      "pages": 10,
+      "bytes": 2318551,
+      "sha256": "0371956e333fc763c16060badcaa9920093d0be71a913882d68841d43f821fbb",
+      "url": "https://www.nature.com/articles/s44172-024-00320-2.pdf",
+      "text_chars": 52759,
+      "title": "Three-dimensional random-access confocal microscopy with 3D remote focusing system",
+      "preview": "communications engineering Article\nhttps://doi.org/10.1038/s44172-024-00320-2\nThree-dimensional random-access\nconfocal microscopy with 3D remote\nfocusing system\nCheck for updates\nHaoyang Li 1,2,7,Q u a nL u1,3,4,7, Zhong Wang1,5,7, Wenbo Zhang1,3,Y uW u1, Yandong Sun1,3,Y u eH u4,\nLehui Xiao6, Dongping Zhong 2 ,S u h u iD e n g 3 & Shangguo Hou 1\nUnderstanding biological activities in cells or deep tissues requires high-speed three-dimensional (3D)\nimaging. Substantial progress has been made wit",
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "path": "01_移动透镜式与匹配光学\\A003_三维随机访问共焦显微_原文与补充资料_84842d.pdf",
+      "type": "PDF",
+      "pages": 53,
+      "bytes": 4713120,
+      "sha256": "84842d13c6591490e822bd369e3fd25e3813d22bfdb294b643828306851bfc1b",
+      "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs44172-024-00320-2/MediaObjects/44172_2024_320_MOESM1_ESM.pdf",
+      "text_chars": 67400,
+      "title": "",
+      "preview": "This file contains all reviewer reports in order by version, followed by all author rebuttals in order by \nversion. \n\nPeer Review File\nThree-dimensional random-access confocal microscopy with\n3D remote focusing system\nCorresponding Author: Professor Shangguo Hou\nVersion 0: \nReviewer comments: \nReviewer #1 \n(Remarks to the Author) \nLi et al. demonstrates three-dimensional (3D) random-access confocal fluorescence imaging using a commercially available\n3D dynamic focusing system (FL8220-3D-500, Sin",
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "path": "01_移动透镜式与匹配光学\\A003_三维随机访问共焦显微_原文与补充资料_f4bb0a.pdf",
+      "type": "PDF",
+      "pages": 18,
+      "bytes": 4896145,
+      "sha256": "f4bb0a31196202118d4fdcfef061bc1e39cd42cd39afe84f3fc33b8a1f42dc60",
+      "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs44172-024-00320-2/MediaObjects/44172_2024_320_MOESM2_ESM.pdf",
+      "text_chars": 11663,
+      "title": "",
+      "preview": "1 \n \nSupplementary Information  1 \nThree-dimensional random -access confocal microscopy with 3D remote 2 \nfocusing system 3 \n 4 \nLi. et al. 5 \n  6 \n\n2 \n \n 1 \nFigure S1. Detailed schematic of remote focusing system.  2 \n3 \n\n\n3 \n \n 1 \nFigure S2. Bidirectional repeatability measurement of the 3D dynamic focusing  system 2 \nvia power measurement after a pinhole. (a) Schematic of setup for testing the bidirectional 3 \nrepeatability of the 3D dynamic focusing system. A 100 μm pinhole was placed near t",
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "path": "01_移动透镜式与匹配光学\\A003_三维随机访问共焦显微_原文与补充资料_159780.pdf",
+      "type": "PDF",
+      "pages": 3,
+      "bytes": 1210154,
+      "sha256": "159780d922a8dc2a502e65d3fa8e87e81a1a9b1612dcfc28691fea2e69fa3f05",
+      "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs44172-024-00320-2/MediaObjects/44172_2024_320_MOESM3_ESM.pdf",
+      "text_chars": 4,
+      "title": "1632_2_supp_32142_sljcjs.pdf",
+      "preview": "\n\n\n\n",
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://www.nature.com/articles/s44172-024-00320-2",
+      "http": 200,
+      "final_url": "https://www.nature.com/articles/s44172-024-00320-2",
+      "result": "网页"
+    },
+    {
+      "url": "https://www.nature.com/articles/s44172-024-00320-2.pdf",
+      "http": 200,
+      "final_url": "https://www.nature.com/articles/s44172-024-00320-2.pdf",
+      "result": "有效PDF"
+    },
+    {
+      "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs44172-024-00320-2/MediaObjects/44172_2024_320_MOESM1_ESM.pdf",
+      "http": 200,
+      "final_url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs44172-024-00320-2/MediaObjects/44172_2024_320_MOESM1_ESM.pdf",
+      "result": "有效PDF"
+    },
+    {
+      "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs44172-024-00320-2/MediaObjects/44172_2024_320_MOESM2_ESM.pdf",
+      "http": 200,
+      "final_url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs44172-024-00320-2/MediaObjects/44172_2024_320_MOESM2_ESM.pdf",
+      "result": "有效PDF"
+    },
+    {
+      "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs44172-024-00320-2/MediaObjects/44172_2024_320_MOESM3_ESM.pdf",
+      "http": 200,
+      "final_url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs44172-024-00320-2/MediaObjects/44172_2024_320_MOESM3_ESM.pdf",
+      "result": "有效PDF"
+    }
+  ],
+  "status": "PDF已下载"
+}

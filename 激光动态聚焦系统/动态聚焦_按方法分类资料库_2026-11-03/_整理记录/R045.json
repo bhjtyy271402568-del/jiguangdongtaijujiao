@@ -1,0 +1,49 @@
+{
+  "url": "https://patents.google.com/patent/CN222506659U/zh",
+  "category": "02_反射式与三振镜调焦",
+  "origins": [
+    "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+    "用户粘贴_激光动态聚焦深度调研.txt"
+  ],
+  "context": "\n- 原始入口：https://patents.google.com/patent/CN222506659U/zh",
+  "id": "R045",
+  "files": [
+    {
+      "path": "02_反射式与三振镜调焦\\R045_CN222506659U - 一种光学动态聚焦模组及三维扫描系统 _        - Google Patents.html",
+      "type": "HTML",
+      "bytes": 70884,
+      "sha256": "ac2e52145d79272990dc767b54acca16fdfc18b1e46a50b41946d1ba3a25231a",
+      "url": "https://patents.google.com/patent/CN222506659U/zh",
+      "title": "CN222506659U - 一种光学动态聚焦模组及三维扫描系统 \n        - Google Patents",
+      "text_chars": 13815
+    },
+    {
+      "path": "02_反射式与三振镜调焦\\R045_CN222506659U - 一种光学动态聚焦模组及三维扫描系统 - Google Patents.pdf",
+      "type": "PDF",
+      "pages": 19,
+      "bytes": 1363486,
+      "sha256": "e78dc393d267edc09d8c3684505f806a57a6d931e13a33036f0c7fd5f4f6f9ad",
+      "url": "https://patentimages.storage.googleapis.com/cb/64/1e/f8cd0ac7de351a/CN222506659U.pdf",
+      "text_chars": 11789,
+      "title": "",
+      "preview": "(19)国家知识产权局\n(12)实用新型专利\n(10)授权公告号 \n(45)授权公告日 \n(21)申请号 202421292289.4\n(22)申请日 2024.06.06\n(73)专利权人 苏州市捷恩泰科技有限公司\n地址 215000 江苏省苏州市高新区科技城\n培源路2号微系统园M3-103-1\n(72)发明人 陈泽华　\n(74)专利代理机构 苏州汇诚汇智专利代理事务\n所(普通合伙) 32623\n专利代理师 李旭\n(51)Int.Cl.\nG02B 26/10(2006.01)\nG02B 27/09(2006.01)\n(ESM)同样的发明创造已同日申请发明专利\n \n(54)实用新型名称\n一种光学动态聚焦模组及三维扫描系统\n(57)摘要\n本实用新型公开了一种光学动态聚焦模组\n及三维扫描系统包括光学组件，所述光学组件至\n少包括：对称布置的第一离轴抛物面镜和第二离\n轴抛物面镜，所述第一离轴抛物面镜的离轴抛物\n面与所述第二离轴抛物面镜的离轴抛物面相背\n设置；第一反射镜和第二反射镜 ，所述第一反射\n镜用于接收所述第一离轴抛物面镜折射的激光\n束，并朝向所述第二反射镜反射 ，所述第二反射\n镜能够将接",
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://patents.google.com/patent/CN222506659U/zh",
+      "http": 200,
+      "final_url": "https://patents.google.com/patent/CN222506659U/zh",
+      "result": "网页"
+    },
+    {
+      "url": "https://patentimages.storage.googleapis.com/cb/64/1e/f8cd0ac7de351a/CN222506659U.pdf",
+      "http": 200,
+      "final_url": "https://patentimages.storage.googleapis.com/cb/64/1e/f8cd0ac7de351a/CN222506659U.pdf",
+      "result": "有效PDF"
+    }
+  ],
+  "title": "CN222506659U - 一种光学动态聚焦模组及三维扫描系统 - Google Patents",
+  "status": "PDF已下载"
+}

@@ -1,0 +1,742 @@
+Vol.:(0123456789)
+Med-X (2026) 4:1
+https://doi.org/10.1007/s44258-025-00067-1
+RESEARCH ARTICLE
+Localized dynamic lensing with instantaneous extended depth of field 
+via collinear light–sound interactions
+Hamid R. Chabok1   · Thompson Lu2 · Pawel S. Jung3 · Mohammad Reza Mostaan4 · Babak Bahari5 · 
+Demetrios N. Christodoulides5 · Mercedeh Khajavikhan5
+Received: 26 December 2024 / Revised: 16 July 2025 / Accepted: 27 August 2025 / Published online: 6 January 2026 
+© The Author(s) 2026, modified publication 2026
+Abstract
+Tunable acousto-optic (AO) lenses have recently emerged as versatile tools for optical beam shaping, imaging, and parti-
+cle manipulation. Conventional AO lenses rely on light propagating orthogonally to a standing ultrasonic field, producing 
+Bessel-like beam patterns via the Raman–Nath effect that compromise focal localization and depth of field (DoF). Here, we 
+introduce a novel class of AO lenses based on a three-dimensional, dynamically variable refractive index profile generated 
+by a z-axis-scanning focused ultrasound transducer. By exploiting co- and counter-propagating light–sound interactions 
+over an extended axial range, we achieve fully controllable, localized optical focusing with an instantaneous extended DoF. 
+We demonstrate dynamic tuning of focal position, lateral resolution, and optical power throughput by adjusting ultrasound 
+parameters. This approach offers a promising platform for applications requiring precise remote focusing, three-dimensional 
+micromanipulation, and deep tissue imaging or therapy.
+Graphical Abstract
+Extended author information available on the last page of the article
+
+
+	
+Med-X (2026) 4:1
+1 
+Page 2 of 12
+Highlights
+• Collinear co- and counter-propagating light–sound interactions create a dynamic 3D-variable refractive index profile for 
+tunable optical focusing.
+• The proposed acousto-optic lens achieves localized single-point focus with instantaneous, real-time extended depth of 
+field, without laser–ultrasound synchronization.
+• Dynamic control of focal location, depth of field, lateral resolution, and optical throughput is demonstrated by adjusting 
+ultrasound duty cycle and input voltage.
+• This novel light–sound interaction scheme shows promise for advanced applications in high-resolution 3D/4D imaging, 
+adaptive microscopy, and remote photonic manipulation.
+Keywords  Acousto-optic lens · Dynamic focusing · Tunable focal length · Ultrasound modulation · Extended depth of 
+field · Remote optical control
+Introduction
+Lenses with variable focal lengths are essential in various 
+fields of science and technology, ranging from imaging to 
+sensing and laser beam shaping to microscopy, adaptive 
+optics, and materials processing [1]. Over the years, various 
+techniques have been deployed to realize dynamic focusing, 
+including mechanically moving and micro-electro-mechan-
+ical systems devices, electro-optically addressable holo-
+graphic plates, and acousto-optic (AO) elements. Among 
+them, AO approaches are highly preferred [2, 3] for provid-
+ing fast switching, adaptability (e.g., in shape and dioptric 
+power), and noninvasiveness with no need for macroscopic 
+moving elements [4].
+The AO effect refers to light diffraction due to the varia-
+tions in refractive index caused by the presence of ultrasound 
+waves [5–7]. Several diffractive AO elements and acoustic 
+gradient-index lenses have been introduced in recent years, 
+generating tunable Bessel-like spots by forming ultrasonic 
+cylindrical standing waves that interact orthogonally with the 
+passing light [3, 4, 8–14] —an effect known as Raman-Nath 
+[15]. By using a confined liquid-filled radial-mode-vibrating 
+piezoelectric shell, these AO lenses enable a combination of 
+tunability, large damage thresholds, and fast z-focus scan-
+ning [10, 14]. Such fast z-focusing is accompanied by virtual 
+extended Depth of Field (DoF) owing to collecting multiple 
+focal planes [14]. However, the effective numerical aperture 
+(NA) of these lenses is low—as the aperture is limited by the 
+central lobe of the Bessel function that describes the ultra-
+sound standing wave in the piezo-shell [14]. Also, in addi-
+tion to generating transversely non-localized (in x–y plane) 
+ring-shaped focal spots, these arrangements tend to suffer 
+from the inability to change the refractive index profile in the 
+z-direction and outside of the AO lens chamber while relying 
+on pulsed laser sources for synchronization. Finally, unlike 
+the ideal Bessel beams that are diffraction-free, the beam, in 
+this case, tends to diffract quickly [16].
+Here we present a novel AO dynamic lensing approach 
+that exploits collinear co- or counter-propagating light and 
+focused ultrasound waves to produce a unique, spherically 
+confined refractive index profile for tunable optical focusing. 
+Unlike conventional AO systems that rely on standing-wave 
+Bessel-like fields, our design generates a transversely local-
+ized acoustic focal zone to achieve a true single-point optical 
+focus. To realize this, we developed a custom high-frequency 
+z-axis-scan focused ultrasound (FUS) transducer, designed 
+to form a single-point acoustic focus outside and in front of 
+the transducer aperture (Fig. 1b). The thin piezoelectric disk 
+on the front face of the FUS transducer operates in thickness-
+mode axial vibration (Fig. 2d), producing traveling ultrasonic 
+waves that enhance longitudinal light–sound interaction and 
+induce a 3D-variable refractive index profile (Fig. 2a-b). 
+This configuration enables both laterally localized dynamic 
+focusing and instantaneous extended DoF for continuous-
+wave (CW) laser beams, without requiring laser–ultrasound 
+synchronization. As illustrated in Fig. 1a, the laser beam is 
+expanded and directed through the water medium to interact 
+with the focused acoustic pressure field generated by the FUS 
+transducer at modest acoustic intensities. Figure 2 schemati-
+cally depicts the light–sound interaction and induced refrac-
+tive index gradients that underpin the lensing mechanism.
+Modeling and simulation
+As an optical beam travels through an acoustic field, vari-
+ations in the medium’s refractive index cause it to deviate 
+from its original path. Depending on the beam’s size and 
+the characteristics of the acoustic waveform, this interaction 
+may result in either a deflection or a displacement. There-
+fore, to model the effect of ultrasonic waves on laser beam 
+deflection, the relationship between variations in the refrac-
+tive index and acoustic pressure must be derived.
+According to Hooke’s law, a change in pressure Δp is approxi-
+mately proportional to a change in density Δ휌 as the following:
+(1)
+Δp = Bw
+휌0
+Δ휌
+
+
+Med-X (2026) 4:1	
+Page 3 of 12 
+1
+where p is the acoustic pressure, 휌0 is the ambient density 
+and Bw is the bulk modulus of elasticity, respectively.
+The International Association for the Properties of 
+Water and Steam (IAPWS) developed a model that 
+expresses the refractive index of a medium as a func-
+tion of wavelength, temperature, and pressure as the 
+following [17]:
+Fig. 1   a A schematic of the experimental setup for counter-propagating alignment (see Supplementary materials 1 and 2 for co-propagating 
+setup). b A schematic of the forward-scan ring focused ultrasound (FUS) transducer
+Fig. 2   a Induced axial refractive index profile. b Simulated ultrasonic pressure field generated by the FUS transducer (shown in dark brown), 
+which induces a 3D refractive index contrast in both the lateral (yellow plot) and axial (blue plot, shown in part a) directions. c Schematic illus-
+tration of the interaction between the counter-propagating laser beam and the ultrasound (US) pressure field. d Schematic of the piezoelectric 
+element in the FUS transducer illustrating thickness-mode vibration
+
+
+	
+Med-X (2026) 4:1
+1 
+Page 4 of 12
+where n is the refractive index, p is the normalized pressure 
+( p
+Bw ) and the parameter A is a function of optical wavelength, 
+temperature and density as:
+where 휌 is normalized density ( 휌
+휌0 ), T is the dimensionless 
+temperature, 휆 is wavelength, and ai ’s are empirical con-
+stants listed in Table 1.
+A simplified version the refractive index can be expressed as:
+When light passes through a medium with a dynamic 
+refractive index, it bends by an angle 휃b . The amount of 
+beam bending is calculated using the following equation:
+For simulating the problem under investigation, the pres-
+sure field of the transducer was first modeled using COMSOL 
+Multiphysics software. The details of simulation are omitted 
+here for the sake of brevity. Figure 3 illustrates the modu-
+lated refractive index induced by ultrasounds. The range of 
+refractive index variation is from 1.334 to 1.338, which cor-
+responds to approximately 0.3%. As evident from the image, 
+the highest refractive index is located at the focal point.
+Following the calculation of the refractive index, the light 
+propagation in a medium with modulated refractive index 
+induced by ultrasounds is simulated using Beam Propagation 
+Method [18] with the split-step algorithm in MATLAB. The 
+light source is assumed to be a Gaussian beam with 633 nm 
+(2)
+n =
+√
+√
+√
+√1 + 2(1 + p)A
+1 −(1 + p)A
+(3)
+A = a1휌+ a7휌2 + a8
+(
+T, 휆
+)
+= a9 + a10p + a7p2
+(4)
+n =
+√
+√
+√
+√a14 + 2휒(p)
+a15 −휒(p)
+(5)
+휒
+(
+p) = a11p + a12p2 + a7p3
+(6)
+휃b = ∫
+1
+n(x, z)
+휕n(x, z)
+휕x
+dz
+wavelength and 6.12 mm beam width. Figure 4 shows the 
+simulated laser beam propagation in water (Fig. 4b) and free 
+space (Fig. 4c), calculated using the axial intensity defini-
+tion in Fig. 4a. These simulations use the modulated refrac-
+tive-index distribution from Fig. 3. As seen in Fig. 4, the 
+light intensity increases near the acoustic focal region and 
+remains extended along the longitudina (z) direction, with 
+symmetric profiles in the x and y directions. In free-space 
+environment, the light intensity reaches its maximum at 
+z = 122.67 μm. The light intensity profile along the center 
+and in the longitudinal direction is shown in Fig. 5. Accord-
+ing to this figure, the DoF of the modulated laser beam is 
+found to be approximately 49 cm (~0.5 m).
+Figure 6 presents the light-intensity distribution in the 
+transverse plane at the focal point (z = 122.67 mm) for 
+two conditions: with the ultrasonic transducer turned OFF 
+(unmodulated laser) and ON (modulated laser). When the 
+FUS is ON, the ultrasound-induced refractive-index grating 
+produces strong lateral focuing, resulting in a significantly 
+narrower and more intense beam profile at the focal plane. 
+Experimental setup
+The FUS transducer has an aperture size of 24 mm, with 
+an acoustic focal length of 23 mm (in front of it). It was 
+designed and fabricated with PZT-8 (a high mechanical-Q 
+material) and a final thickness of 0.46 mm. The electrical 
+circuit, as well as matching and backing layers (made from 
+epoxy) were placed inside a custom-machined brass hous-
+ing. The average center frequency of the transducer was 
+3.3 MHz, and the − 6-dB bandwidth was 51%, as estimated 
+from the measured pulse-echo response. The average inser-
+tion loss was measured to be 16.3 dB.
+In the characterization setup, the Gaussian beam from 
+a He–Ne class-II laser (Oriel Corporation) with an output 
+power of 0.95 mW, centered at a wavelength of 633.2 nm, 
+was expanded, and collimated with a beam expander to a 
+beam diameter of 6.12 mm. The laser was direct to a raised 
+fish tank filled halfway with deionized milli-pure water. 
+The FUS transducer was submerged in the water upward 
+with the focal face pointing away from the bottom of the 
+tank (for counter-propagating setup, Figs. 1 and supple-
+mentary material 3). FUS transducer was arranged either in 
+a co-propagating configuration (Fig. S1) or a counter-prop-
+agating configuration (Fig. 1 and supplementary material 3) 
+relative to the laser-beam propagation, with the beam enter-
+ing through the bottom of the fish tank. A photograph of 
+the experimental setup is shown in supplementary material 
+3, showing the tank, FUS transducer, laser source, CCD 
+camera, and related equipment. Table 2 summarizes the 
+key characteristics of the experimental setup.
+Table 1   Constants and derived quantities
+a0 = 0.244257733
+ a1 = 9.74634476 × 10⁻³
+a2 = -3.73234996 × 10⁻³
+ a3 = 2.65666426 × 10⁻⁴
+a4 = 2.45733798 × 10⁻³
+ a5 = 2.45934259 × 10⁻³
+a6 = 0.900704920
+a7 = -1.66626219 × 10⁻²
+휆UV = 0.229202
+휆IR = 5.432937
+a8 ≡a0 + a2̄T + a3̄𝜆2̄T + a4̄
+𝜆2 +
+a5̄
+𝜆2−̄𝜆2
+UV +
+a6̄
+𝜆2−̄𝜆2
+IR
+a9 = a1 + a8 + a7
+a10 = a1 + 2*a7
+a11 = a9 + a10
+a12 = a7 + a10
+a14 = 1 + 2*a9
+a15 = 1 - a9
+
+
+Med-X (2026) 4:1	
+Page 5 of 12 
+1
+Experimental results and discussion
+Figure 7 presents the 2D intensity profiles of the light beam, 
+recorded by the CCD camera at FUS input duty cycles of 2% 
+and 20% (i.e., the fraction of each period during which the 
+ultrasound signal is active). These profiles reveal a localized 
+focus (single-point focus in the x–y plane) when the FUS trans-
+ducer is excited. The duty cycle plays a critical role in shaping 
+the laser beam: at a 2% duty cycle, the beam width is signifi-
+cantly narrower compared to the 20% case, making the 2% duty 
+Fig. 3   The modulated refractive 
+index induced by ultrasound
+Fig. 4   Simulated intensity profiles of the modulated light along the propagational direction in water (b) and in free space (c), calculated using 
+the intensity expression shown in (a)
+
+
+	
+Med-X (2026) 4:1
+1 
+Page 6 of 12
+Fig. 5   Simulated intensity 
+profiles of the modulated light 
+in free space
+Fig. 6   Simulated x-y light intensity cross-section profile at z = 122.67 mm in free space (focal plane). a,b FUS OFF (no refractive-index modula-
+tion), c-e FUS ON. showing modulation by the refractive-index grating from a spherically fucused ultrasound wave. f 1D intensity cut along x at 
+y = 0 and z = 122.67 mm, |E (y = 0, z = 122.67 mm|2, highlighting the sharper beam confinement with FUS. 
+
+
+Med-X (2026) 4:1	
+Page 7 of 12 
+1
+cycle more suitable for high-resolution imaging applications. 
+Conversely, a 20% duty cycle can be advantageous when higher 
+optical intensity and greater light throughput are desired.
+In these experiments, the FUS transducer was driven at 
+84 V. At duty cycles of 2% and 20%, the x–y cross-sec-
+tional beam area was reduced by factors of approximately 
+477 (Fig. 7b compared to a and c) and 208 (Fig. 7e com-
+pared to d and f), respectively, corresponding to equivalent 
+increases in power density. These factors were calculated 
+by comparing the pre-FUS beam area (approximately 
+3.61 mm × 3.62 mm) to the during-FUS full-width at half 
+maximum (FWHM) (approximately 0.16 mm × 0.17 mm) at 
+2%, and 3.63 mm × 3.64 mm to 0.24 mm × 0.26 mm at 20%. 
+These results indicate that the power density enhancement 
+at a 2% duty cycle is more than twice that achieved at 20%.
+Figure 8 shows the variation of lensing power over time 
+for two different duty cycles, indicating a relatively stable 
+behavior.
+In addition to the reduction in laser beam width and 
+its increased focusing, the extension of the DoF is one of 
+the key features of the ultrasonic interaction with the laser 
+beam. The dynamic control of focal properties in our system 
+arises from the interaction between the FUS pressure field 
+and the optical beam. The acoustic pressure amplitude ­(Pac) 
+is approximately proportional to both the input voltage (V) 
+and the duty cycle (D), since higher duty cycles deliver more 
+average power to the medium. This acoustic field induces a 
+spatially varying refractive index contrast in the medium, 
+governed by the relation Δn = C·Pac, where C is the acou-
+sto-optic coefficient. A larger Δn corresponds to a stronger 
+refractive index gradient, which bends light more sharply, 
+leading to a shorter optical focal length and a narrower DoF. 
+This relationship can be summarized approximately by the 
+following proportionalities:
+foptical ∝1∕Δn(V, D) ∝1∕(V ⋅D), and DoF ∝foptical
+Figures 9 and 10 illustrate the experimental results vali-
+dating these principles. Figure 9 presents measurements of 
+optical beam diameter and FWHM in the x and y directions 
+along the propagation axis for two different FUS duty cycles 
+(2% and 20%), both at a constant voltage of 84 V. Panel 
+(a) corresponds to the 2% duty cycle and (b) to the 20% 
+duty cycle. Panels (a,b) compare the depth of focus (DoF), 
+which is approximately 28 cm for 2% and 11.5 cm for 20%. 
+During-FUS results (green) show significantly narrowed 
+beam diameters and FWHM compared to the unmodulated 
+cases (brown). These results confirm that lower duty cycles 
+produce longer instantaneous DoF with sharper focus.
+By stating that the extended DoF is instantaneous, we 
+mean that the extended optical focus appears physically 
+and in real time—unlike in TAG lens systems, where it is 
+achieved by rapidly scanning multiple focal planes and inte-
+grating them into a single image, thereby creating a virtually 
+extended DoF. In contrast, our C2AM system generates a 
+true, static extended DoF without scanning, due to the col-
+linear alignment and interaction of the focused ultrasound 
+and laser beams. We refer to this as instantaneous DoF. Fur-
+ther investigation is ongoing to fully understand the mecha-
+nism behind this behavior.
+Figure 10 shows the effect of varying the FUS input 
+voltage on the axial location of the optical focal spot. At 
+the maximum input voltage of 105 V (panel a, duty cycle 
+5%), the focal point is observed at z = 4 cm. As the volt-
+age decreases to 84 V (panel b, duty cycle 2%) and 63 V 
+(panel c, duty cycle 20%), the focal spot shifts progres-
+sively farther away to z = 8 cm and z = 10 cm, respectively. 
+Despite the differences in duty cycle across these condi-
+tions, the results indicate that the input voltage has a more 
+pronounced effect on the axial focal position than the duty 
+cycle. The relationship among focal length, voltage, and 
+duty cycle appears nonlinear, likely due to complex inter-
+actions between acoustic pressure dynamics and medium 
+response under varying power levels.
+Table 2   The characteristics of experimental setup
+FUS Transducer (A custom-made z-axis-scan FUS)
+  Focal length/Aperture size
+23 mm/24 mm
+  Center frequency/Bandwidth
+3.3 MHz/51%
+  Piezoelectric Material/Thickness
+PZT-8/0.46 mm
+  FUS acoustic intensity
+119 W/cm2
+  Insertion loss
+16.3 dB
+Laser (He–Ne class-II laser, Oriel Corporation)
+  Output power
+0.95 mW
+  Wavelength
+633.2 nm
+  Laser beam diameter
+6.12 mm
+Camera (EM-CCD, Hamamatsu, C9100-13)
+  Frames per second
+31.9 fps
+
+
+	
+Med-X (2026) 4:1
+1 
+Page 8 of 12
+Our experimental results demonstrate dynamic and tunable 
+control of key optical parameters—focal point location, DoF, 
+lateral resolution, FWHM, and power throughput—by adjust-
+ing the FUS input voltage and duty cycle. Figures 7 and 9 
+show that lower duty cycles (e.g., 2%) at 84 V yield a sharper 
+focus, narrower FWHM, higher lateral resolution, and longer 
+DoF, while higher duty cycles (e.g., 20%) deliver greater opti-
+cal power but at the cost of reduced resolution and shorter 
+DoF. Figure 10 further confirms that the axial focal position is 
+primarily governed by the input voltage rather than duty cycle. 
+Together, these results demonstrate that our system enables 
+flexible and precise tuning of optical focusing performance, 
+balancing resolution, DoF, focal location, and power delivery 
+to meet specific application needs.
+Figure 11 illustrates the measured light intensity profiles 
+along the propagation axis (z) for various FUS input voltages 
+and duty cycles, demonstrating how these parameters guide 
+and modulate the localized focus within the extended DoF. As 
+shown, increasing the voltage or adjusting the duty cycle shifts 
+the axial location of peak intensity, allowing precise control of 
+the focal position while maintaining a confined beam.
+Table 3 summarizes the measured characteristics of the 
+output light beam for two FUS duty cycles at a constant input 
+voltage of 84 V. As shown, the lower duty cycle (2%) yields 
+Fig. 7   Observed 2D light intensity patterns and FWHM recorded by the CCD camera in pre- (a, d), during- (b, e), and post- (c, f) FUS states. 
+FUS is ON during (b, e) and OFF in pre- (a, d) and post- (c, f) states, shown for two different duty cycles
+Fig. 8   Distribution of the 
+measured lensing power over 
+the time for two extreme duty 
+cycles of 2% (red squares) and 
+20% (blue circle), respectively
+
+
+Med-X (2026) 4:1	
+Page 9 of 12 
+1
+a significantly narrower FWHM and a longer depth of field, 
+demonstrating a more localized and elongated optical focus.
+To compare our C2AM system with conventional AO 
+lenses, particularly Tunable Acoustic Gradient (TAG) 
+lenses, we evaluated both the effective NA and refractive 
+index modulation depth (Δn). The NA in our system is esti-
+mated from the measured FWHM of the optical focus using 
+the relation NA ≈ 0.51 × λ/FWHM, where λ = 633.2 nm. 
+With a minimum measured FWHM of 0.16  mm, we 
+obtain NA ≈ 0.0078, which is significantly higher than 
+the typical range reported for TAG lenses in the literature 
+(NA ~ 0.0005–0.001) [9]. The improved confinement in our 
+system arises from the traveling-wave focused ultrasound 
+field, which is not limited by the central lobe size inherent to 
+the standing-wave Bessel beam in TAG lenses [14].
+Furthermore, the refractive index modulation depth in 
+our system is estimated as Δn = C. ­Ppeak [2], where C ≈ 
+1.3 × 10⁻1⁰ Pa⁻1 is the AO coefficient of water. Using the 
+relation I = ­(Prms​)2/(ρc), the root-mean-square pressure is 
+calculated as ­Prms​≈19.36 MPa, giving P_peak ≈ 27.4 MPa 
+at 105 V, which yields Δn ≈ 3.56 × 10⁻3. This is at least an 
+order of magnitude greater than TAG lenses, which typically 
+achieve Δn on the order of 10⁻5–10⁻4 [9, 13].
+The ability to steepen the refractive index gradient and 
+achieve shorter optical focal lengths can be addressed through 
+several approaches. Increasing the ultrasound frequency f 
+decreases the acoustic wavelength λs = ­cs/f and thereby nar-
+rows the lateral beam width ­Wb ≈ ­f# × λ and depth of focus 
+­Df ≈ ­f#
+2 × λ. As optical focusing in our system is governed by 
+the steepness of the induced refractive index profile, higher 
+ultrasound frequencies produce a more tightly focused acous-
+tic beam with sharper pressure and refractive index varia-
+tions, enabling stronger optical focusing. Additionally, replac-
+ing water (C ≈ 1.3 × 10⁻1⁰ Pa⁻1) with a medium of higher 
+Fig. 9   Experimental results of optical beam diameter and FWHM in the x and y directions along the propagation axis (z) at FUS input duty cycles 
+of 2% (a) and 20% (b), both at an input voltage of 84 V. The measured DoF is approximately 28 cm for the 2% duty cycle and 11.5 cm for the 20% 
+duty cycle, as indicated. The unmodulated (FUS-OFF) beam diameters and FWHM in x and y are shown at z = 0 in brown, while the narrower beam 
+profiles during FUS-ON are annotated in the figures, demonstrating the focusing effect and extended DoF under different duty cycles
+Fig. 10   Dynamic control of 
+optical focusing along the prop-
+agation axis. Panels (a–c) show 
+CCD camera-recorded intensity 
+patterns at different FUS input 
+voltages. As the input voltage 
+decreases, the optical focal spot 
+shifts progressively farther from 
+the C2AM lens. The scale bar 
+is 1 mm
+
+
+	
+Med-X (2026) 4:1
+1 
+Page 10 of 12
+photoelastic coefficient—such as glycerol–water mixtures or 
+silicone oils—can increase Δn at the same acoustic pressure, 
+thereby producing a stronger gradient. Other strategies include 
+optimizing the ultrasound field through phased arrays or non-
+linear focusing techniques to enhance confinement.
+It is worth noting that the acoustic wave frequency, the 
+size of the piezoelectric element, and the sound velocity in 
+the medium influence the lens switching speed [9]. The thin 
+piezoelectric material in our z-axis-scan FUS transducer, 
+which supports higher resonance frequencies, is expected to 
+enable faster focal switching than existing AO elements [10]. 
+Potentially, up to two orders of magnitude higher switch-
+ing speed could be achieved using even thinner disks. Fur-
+thermore, the electromechanical coupling coefficient of 
+our transducer is nominally higher than that of cylindrical 
+transducers commonly used in AO lenses, favoring lower 
+insertion loss, wider frequency response, improved axial 
+resolution, and higher acoustic penetration [19–21].
+Our results demonstrate that the maximum applied inten-
+sity (25 kW/cm2) at 105 V remains below the cavitation 
+threshold in air-free water [22], avoiding cavitation and 
+Mie scattering effects. This ensures that the observed opti-
+cal focusing performance in our experiments is not compro-
+mised by bubble formation.
+To enable future translation of our approach to deep tissue 
+imaging, it is important to consider the potential for cavita-
+tion, particularly when using pulsed laser irradiation, which 
+achieves higher peak powers but also increases the risk of 
+cavitation due to rapid thermal expansion and acoustic tran-
+sients. Our preliminary simulations and tissue experiments 
+indicate that CW laser operation enables improved optical 
+focusing at ultrasound frequencies above 2–3 MHz, while 
+keeping cavitation risk minimal. Nevertheless, the cavitation 
+threshold is expected to vary depending on tissue proper-
+ties and operating parameters, and further investigation is 
+warranted. In addition, our system offers flexibility to miti-
+gate cavitation risks and improve portability. Redesigning 
+the FUS transducers—for example, using smaller apertures, 
+lower voltage drives, or alternative frequency ranges—can 
+reduce acoustic intensities while maintaining sufficient 
+refractive index modulation.
+We also plan to explore alternative coupling media with 
+higher elasto-optic coefficients and higher refractive indices, 
+including both liquids and solids, which could enhance lens-
+ing efficiency and allow for a smaller, more compact con-
+tainer. Since our FUS transducers are already compact and 
+fabricated in-house, further miniaturization and optimization 
+Fig. 11   Measured modulation of light intensity by ultrasound input voltage and duty cycle over an extended localized DoF. Experimental results 
+show light intensity variations as a function of FUS input voltage (a–e) and duty cycle (f–j) at different positions along the propagation axis (z). 
+In panels f–j, peak intensities corresponding to each voltage (a–e) and duty cycle (f–j) are observed at distinct axial locations
+Table 3   The measured characteristics for the output light beam
+* For FUS input voltage = 84 V
+FUS Duty cycle
+2%
+20%
+FWHM (mm × mm)
+0.16 × 0.17
+0.24 × 0.26
+FWHM reduction
+477- fold
+218- fold
+Depth of field (cm)
+11.5
+28
+Lensing power (1/m)
+2.55
+1.88
+
+
+Med-X (2026) 4:1	
+Page 11 of 12 
+1
+are feasible and planned as part of our ongoing work to 
+develop a portable, tissue-compatible system.
+In earlier studies [16], the light and ultrasound paths were 
+either perpendicular, as in the Raman-Nath scattering regime 
+([8], foundational to TAG lens technology), or at a small 
+Bragg angle, still near-perpendicular. In our configuration, 
+the Bragg angle for first-order diffraction can be calculated as 
+follows. Assuming a light wavelength in vacuum λ₀ = 633 nm, 
+refractive index of water nₘ ≈ 1.33, ultrasound frequency 
+fₛ = 3.3 MHz, and speed of sound cₛ ≈ 1500 m/s, the light 
+wavelength in water is λ = λ₀/nₘ ≈ 476 nm, and the acous-
+tic wavelength is Λ = cₛ/fₛ ≈ 454.5 µm. Using Bragg’s law: 
+nλ = 2Λ·sinθ. For first-order diffraction (n = 1): sinθ ≈ λ/(2Λ) 
+≈ 5.237 × 10⁻4, yields θ ≈ 0.03°. This calculation confirms 
+that the angle between ultrasound and light in prior configu-
+rations is close to 90°, while our system operates in a truly 
+co-linear configuration with ultrasound and laser beams either 
+co-propagating or counter-propagating.
+This co- and counter-propagating configuration enables 
+distinct focal behaviors and enhanced longitudinal inter-
+action. In our experiments, the counter-propagating setup 
+consistently produced a more stable, sharply defined focus 
+with higher resolution, likely due to asymmetries in tank 
+alignment or optical path, which we plan to address in future 
+compact setups. Additionally, mid-range interaction angles 
+may offer a balance between stability and confinement, 
+which we intend to explore using phased arrays or adjust-
+able transducer orientations.
+Conclusion
+We have demonstrated a novel class of dynamic AO lenses 
+based on co-linear interaction between a laser beam and a 
+focused traveling ultrasound field (C2AM system). This 
+approach enables a physically localized optical focus in the 
+lateral plane and an extended DoF along the propagation 
+axis, realized instantaneously without scanning or compu-
+tational reconstruction. By tuning the ultrasound input volt-
+age and duty cycle, we achieved flexible, precise control of 
+key optical parameters—including focal point location, DoF, 
+lateral resolution, FWHM, and optical power throughput. 
+Lower duty cycles favored sharper focus and longer DoF, 
+whereas higher duty cycles enhanced optical power at the 
+expense of resolution. The axial focal position was primarily 
+governed by input voltage, enabling additional tunability.
+The co- and counter-propagating geometries distinguish 
+this system from conventional AO lenses, offering higher 
+index modulation, tighter confinement, and broad tunability. 
+These features make C2AM a promising platform for imag-
+ing, manipulation, and photonic applications, while laying 
+the groundwork for future compact and tissue-compatible 
+implementations.
+Supplementary Information  The online version contains supplemen-
+tary material available at https://​doi.​org/​10.​1007/​s44258-​025-​00067-1.
+Acknowledgements  The authors acknowledge the support of Prof. B. 
+Anvari with lab and optical equipment. The authors would like to thank 
+Prof. L.V. Wang from Caltech for helpful technical discussions.
+Authors’ contributions  HRC conceived the idea and framework; HRC and 
+TL performed the experiments; MRM, BB, and PSJ analyzed the data. 
+HRC wrote the original manuscript; MK and HRC edited and revised 
+the manuscript; and MK and DNC read and approved the final version.
+Funding  Not applicable.
+Data availability  All datasets generated during and/or analyzed during 
+this study are available from the corresponding authors on reasonable 
+request.
+Declarations 
+Ethics approval and consent to participate  Not applicable.
+Consent for publication  Not applicable.
+Competing interests  The authors declare that they have no competing 
+interests.
+Open Access  This article is licensed under a Creative Commons Attri-
+bution 4.0 International License, which permits use, sharing, adapta-
+tion, distribution and reproduction in any medium or format, as long 
+as you give appropriate credit to the original author(s) and the source, 
+provide a link to the Creative Commons licence, and indicate if changes 
+were made. The images or other third party material in this article are 
+included in the article's Creative Commons licence, unless indicated 
+otherwise in a credit line to the material. If material is not included in 
+the article's Creative Commons licence and your intended use is not 
+permitted by statutory regulation or exceeds the permitted use, you will 
+need to obtain permission directly from the copyright holder. To view a 
+copy of this licence, visit http://​creat​iveco​mmons.​org/​licen​ses/​by/4.​0/.
+References
+	 1.	 Kang S, Duocastella M, Arnold CB. Variable optical elements 
+for fast focus control. Nat Photonics. 2020;14:533–42. https://​
+doi.​org/​10.​1038/​s41566-​020-​0684-z.
+	 2.	 Korpel A. Acousto-optics. New York: Marcel Dekker; 1988.
+	 3.	 Grulkowski I, Kwiek P. Experimental study of light diffraction by 
+standing ultrasonic wave with cylindrical symmetry. Opt Com-
+mun. 2006;1:14-9. https://​doi.​org/​10.​1016/j.​optcom.​2006.​06.​006.
+	 4.	 Higginson KA, Costolo MA, Rietman EA. Adaptive geometric 
+optics derived from nonlinear acoustic effects. J Appl Phys. 
+2004;84:843-5. https://​doi.​org/​10.​1063/1.​16456​63.
+	 5.	 Brillouin L. Diffusion of light and X-rays by a transparent body. Actu-
+alités Scientifiques et Industrielles, Hermann et Cie, Paris (1933).
+	 6.	 Debye P, Sears FW. On the scattering of light by supersonic 
+waves. Proc Natl Acad Sci U S A. 1932;18:409–14. https://​doi.​
+org/​10.​1073/​pnas.​18.6.​409.
+	 7.	 Lucas R, Biquard P. Propriétés optiques des milieux solides et 
+liquides soumis aux vibrations élastiques ultra sonores. J Phys 
+Radium. 1932;3:464–77. 
+	 8.	 Hargrove LE. Diffraction of a Gaussian light beam by ultrasonic 
+cylindrical standing waves. J Acoust Soc Am. 1972;51:888–93. 
+https://​doi.​org/​10.​1121/1.​19129​36.
+
+
+	
+Med-X (2026) 4:1
+1 
+Page 12 of 12
+	 9.	 Mermillod-Blondin A, McLeod E, Arnold CB. High-speed varifocal 
+imaging with a tunable acoustic gradient index of refraction lens. 
+Opt Lett. 2008;33:2146–8. https://​doi.​org/​10.​1364/​OL.​33.​002146.
+	10.	 Chen TH, Fardel R, Arnold CB. Ultrafast z-scanning for high-
+efficiency laser micro-machining. Light Sci Appl. 2018;7:17181. 
+https://​doi.​org/​10.​1038/​lsa.​2017.​181.
+	11.	 Chamanzar M, Scopelliti MG, Bloch J, Do N, Huh M, Seo D, et al. 
+Ultrasonic sculpting of virtual optical waveguides in tissue. Nat Com-
+mun. 2019;10:92. https://​doi.​org/​10.​1038/​s41467-​018-​07856-w.
+	12.	 Scopelliti MG, Chamanzar M. Utrasonically sculpted virtual relay 
+lens for in situ microimaging. Light Sci Appl. 2019;8:65. https://​
+doi.​org/​10.​1038/​s41377-​019-​0173-7.
+	13.	 McLeod E, Hopkins AB, Arnold CB. Multiscale bessel beams 
+generated by a tunable acoustic gradient. Opt Lett. 2006;31:3155–
+7. https://​doi.​org/​10.​1364/​OL.​31.​003155.
+	14.	 Duocastella M, Surdo S, Zunino A, Diaspro A, Saggau P. Acou-
+sto-optic systems for advanced microscopy. J Phys Photonics. 
+2021;3:012002. https://​doi.​org/​10.​1088/​2515-​7647/​abc23c.
+	15.	 Raman CV, Nagendra Nath NS. The diffraction of light by high 
+frequency sound waves: Part I. Proc Indian Acad Sci Sect A. 
+1935;2:406–412.
+	16.	 Duocastella M, Arnold CB. Enhanced depth of field laser pro-
+cessing using an ultra-high-speed axial scanner. Appl Phys Lett. 
+2013;102:061113. https://​doi.​org/​10.​1063/1.​47915​93.
+	17.	 Caron JN, DiComo GP. Frequency response of optical beam 
+deflection by ultrasound in water. Appl Opt. 2014;53:7677–83. 
+https://​doi.​org/​10.​1364/​AO.​53.​007677.
+	18.	 Pollock C, Lipson M. Integrated photonics. Dordrecht: Kluwer 
+Academic Publishers; 2003.
+	19.	 Chabok HR, Zhou Q, Alagha S, Tian J, Han P, Shung KK. Thick-
+ness dependent characteristics of high permittivity PMN-0.32PT 
+single crystal for high frequency medical imaging applications. 
+Ferroelectrics. 2011;422:70–6. https://​doi.​org/​10.​1080/​00150​193.​
+2011.​594707.
+	20.	 Chabok HR. Development of high frequency composites for ultra-
+sound transducer applications [dissertation]. Los Angeles (CA): 
+University of Southern California; 2011.
+	21.	 Chabok HR, Cannata JM, Kim HH, Williams JA, Park J, Shung 
+KK. A high-frequency annular-array transducer using an interdigi-
+tal bonded 1-3 composite. IEEE Trans Ultrason Ferroelectr Freq 
+Control. 2011;58:206–14. https://​doi.​org/​10.​1109/​TUFFC.​2011.​
+1787.
+	22.	 Capelo-Martínez JL, ed. Ultrasound in chemistry: analytical appli-
+cations. Weinheim: Wiley-VCH; 2009.
+Publisher's Note  Springer Nature remains neutral with regard to 
+jurisdictional claims in published maps and institutional affiliations.
+Authors and Affiliations
+Hamid R. Chabok1   · Thompson Lu2 · Pawel S. Jung3 · Mohammad Reza Mostaan4 · Babak Bahari5 · 
+Demetrios N. Christodoulides5 · Mercedeh Khajavikhan5
+ *	 Hamid R. Chabok 
+	
+chabok@usc.edu
+1	
+Department of Physics and Astronomy, University 
+of Southern California, Los Angeles, CA 90089, USA
+2	
+Department of Bioengineering, University of California, 
+Riverside, CA 92521, USA
+3	
+Department of Physics, University of Miami, Coral Gables, 
+FL 33146, USA
+4	
+Department of Physics, Simon Fraser University, Burnaby, 
+B.C. V5A 1S6, Canada
+5	
+Department of Electrical and Computer Engineering, 
+University of Southern California, Los Angeles, CA 90089, 
+USA

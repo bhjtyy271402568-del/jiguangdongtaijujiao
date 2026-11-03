@@ -1,0 +1,48 @@
+{
+  "url": "https://patents.google.com/patent/CN110883020A/zh",
+  "category": "09_艾思兰及相邻应用",
+  "origins": [
+    "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md"
+  ],
+  "context": "原文提到的专利号，补全公开文本入口；标题及相关性待与原件核对",
+  "id": "R062",
+  "files": [
+    {
+      "path": "09_艾思兰及相邻应用\\R062_CN110883020A - 清模机 _        - Google Patents.html",
+      "type": "HTML",
+      "bytes": 254839,
+      "sha256": "e5ad33f5110c1d7a0389d790200991bf30b3c74ade90fd3d0cef897f1b502050",
+      "url": "https://patents.google.com/patent/CN110883020A/zh",
+      "title": "CN110883020A - 清模机 \n        - Google Patents",
+      "text_chars": 26466
+    },
+    {
+      "path": "09_艾思兰及相邻应用\\R062_CN110883020A - 清模机 - Google Patents.pdf",
+      "type": "PDF",
+      "pages": 37,
+      "bytes": 2543523,
+      "sha256": "00fae1f074ddda4e4f2182e2211e53ed7549e18b1cd400bc1dadf6ad560dafe0",
+      "url": "https://patentimages.storage.googleapis.com/65/26/44/e8e584f87e3357/CN110883020A.pdf",
+      "text_chars": 21844,
+      "title": "",
+      "preview": "(19)中华人民共和国国家知识产权局\n(12)发明专利申请\n(10)申请公布号 \n(43)申请公布日 \n(21)申请号 201911357217.7\n(22)申请日 2019.12.25\n(71)申请人 钛昇科技股份有限公司\n地址 中国台湾高雄市\n(72)发明人 陈又田　张境晃　\n(74)专利代理机构 北京戈程知识产权代理有限\n公司 11314\n代理人 程伟　王锦阳\n(51)Int.Cl.\nB08B 7/00(2006.01)\nB08B 13/00(2006.01)\nB29C 33/72(2006.01)\n \n(54)发明名称\n清模机\n(57)摘要\n本发明涉及一种清模机， 其能伸入模塑成型\n设备中对模具执行清模作业， 该清模机于其移动\n基座上设置承载台， 承载台上设置激光装置与驱\n动激光装置的X轴向驱动装置， 于承载台伸出移\n动基座一侧的工作区段的两侧各设有载台固定\n装置， 且设有控制装置控制激光装置、 X轴向驱动\n装置及载台固定装置的动作， 该清模机能以伸出\n移动基座外的承载台伸入开模状态的上模与下\n模之间的预定位置， 在承载台通过受控的载台固\n定装置固接模具两侧的横向导轨呈稳固定位",
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://patents.google.com/patent/CN110883020A/zh",
+      "http": 200,
+      "final_url": "https://patents.google.com/patent/CN110883020A/zh",
+      "result": "网页"
+    },
+    {
+      "url": "https://patentimages.storage.googleapis.com/65/26/44/e8e584f87e3357/CN110883020A.pdf",
+      "http": 200,
+      "final_url": "https://patentimages.storage.googleapis.com/65/26/44/e8e584f87e3357/CN110883020A.pdf",
+      "result": "有效PDF"
+    }
+  ],
+  "title": "CN110883020A - 清模机 - Google Patents",
+  "status": "PDF已下载"
+}

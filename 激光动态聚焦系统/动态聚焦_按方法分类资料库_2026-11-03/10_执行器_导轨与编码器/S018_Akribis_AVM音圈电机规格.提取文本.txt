@@ -1,0 +1,1184 @@
+ADR360-A150 / ADR360-A215
+Continuous force measured without any additional mounting plate or heat sink on coil
+Measured at 25 °2
+1
+ Specifications （Standard Series）AVM
+Akribis  systems
+III-05 / III-06
+AVM Series
+mm
+N/A
+V/(m/s)
+N
+N
+ohms
+mH
+V
+A
+A
+Vdc
+N/Sqrt(W)
+W
+ms
+ms
+mm
+W
+W/°C
+°C
+g
+g
+AVM 30-15
+15
+7.35
+7.35
+4.63
+29.40
+10.22
+2.63
+40.88
+0.63
+4.00
+60
+2.30
+4.06
+0.26
+6.81
+0.60
+163.52
+0.054
+100
+36.0
+95.6
+AVM 40-20
+20
+12.90
+12.90
+9.93
+58.05
+12.10
+5.12
+54.45
+0.77
+4.50
+60
+3.71
+7.17
+0.42
+4.87
+0.60
+245.03
+0.096
+100
+67.0
+226.2
+AVM 60-25
+25
+17.00
+17.00
+26.35
+119.00
+5.37
+3.73
+37.59
+1.55
+7.00
+60
+7.34
+12.90
+0.69
+3.99
+0.70
+263.13
+0.172
+100
+215.0
+692.9
+AVM 90-30
+30
+22.50
+22.50
+89.10
+315.00
+2.70
+3.20
+37.8
+3.96
+14.00
+120
+13.69
+42.34
+1.19
+4.37
+0.65
+529.20
+0.565
+100
+820.0
+1750.0
+mm
+N/A
+V/(m/s)
+N
+N
+ohms
+mH
+V
+A
+A
+Vdc
+N/Sqrt(W)
+W
+ms
+ms
+mm
+W
+W/°C
+°C
+g
+g
+AVM 12-6.4
+6.4
+0.57
+0.57
+0.91
+3.53
+1.13
+0.09
+7.01
+1.60
+6.20
+60
+0.54
+2.89
+0.08
+17.39
+0.35
+43.44
+0.039
+100
+5.0
+7.3
+AVM 19-5
+5
+1.75
+1.75
+1.75
+7.88
+2.23
+0.27
+10.04
+1.00
+4.50
+60
+1.17
+2.23
+0.12
+6.55
+0.40
+45.16
+0.030
+100
+9.0
+23.8
+AVM 20-10
+10
+2.00
+2.00
+1.56
+7.60
+3.59
+0.50
+13.64
+0.78
+3.80
+60
+1.06
+2.18
+0.14
+9.87
+0.50
+51.84
+0.029
+100
+11.0
+45.1
+AVM 24-5
+5
+3.00
+3.00
+2.10
+11.40
+3.09
+0.51
+11.7
+0.70
+3.80
+60
+1.71
+1.51
+0.17
+4.12
+0.50
+44.62
+0.020
+100
+12.0
+29.7
+AVM 24-10
+10
+3.90
+3.90
+2.65
+14.82
+5.86
+1.23
+22.3
+0.68
+3.80
+60
+1.61
+2.71
+0.21
+6.36
+0.50
+84.62
+0.036
+100
+16.5
+45.0
+Direct drive, 
+zero cogging, 
+zero backlash 
+voice coil motors
+Low coil mass with 
+very fast response
+ and bandwidth
+No contact between
+coil and core movement 
+(no wear and tear)
+Smooth motion at 
+low speeds with 
+limitless resolution
+(depends on 
+feedback device)
+Stroke
+Force sensitivity (at mid stroke)
+Back EMF constant
+Continuous force (at 100 °C) ①
+Peak force
+Resistance ②
+Inductance ②
+Voltage at peak force
+Continuous current (coil at 100 °C)
+Peak current
+Max voltage
+Actuator constant
+Continuous power
+Electrical time constant
+Mechanical time constant
+Clearance of coil
+Power at peak force
+Thermal dissipation constant
+Max coil temperature
+Coil assembly mass
+Core assembly mass
+Stroke
+Force sensitivity (at mid stroke)
+Back EMF constant
+Continuous force (at 100 °C) ①
+Peak force
+Resistance ②
+Inductance ②
+Voltage at peak force
+Continuous current (coil at 100 °C)
+Peak current
+Max voltage
+Actuator constant
+Continuous power
+Electrical time constant
+Mechanical time constant
+Clearance of coil
+Power at peak force
+Thermal dissipation constant
+Max coil temperature
+Coil assembly mass
+Core assembly mass
+Model
+Model
+Units
+Units
+Voice Coil Motors
+C
+
+Dimensions （Standard Series）AVM Dimensions （Standard Series）AVM
+Akribis  systems
+III-07 / III-08
+AVM 12-6.4
+AVM 19-5
+AVM 20-10
+AVM 24-5
+AVM 24-10
+AVM 30-15
+Voice Coil Motors
+Voice Coil Motors
+
+Dimensions （Standard Series）AVM (High Force Serise)AVM Specifications
+Akribis  systems
+III-09 / III-10
+AVM 40-20
+AVM 60-25
+AVM 90-30
+Continuous force measured without any additional mounting plate or heat sink on coil 
+ Measured at 25 °2
+1
+mm
+N/A
+V/(m/s)
+N
+N
+ohms
+mH
+V
+A
+A
+Vdc
+N/Sqrt(W)
+W
+ms
+ms
+mm
+W
+W/°C
+°C
+g
+g
+AVM 35-HF-7
+7
+16.00
+16.00
+14.40
+72.00
+9.80
+3.60
+44.10
+0.90
+4.50
+60
+5.11
+7.14
+0.37
+2.03
+0.50
+198.45
+0.095
+100
+53.0
+146.8
+AVM 50-HF-10
+10
+28.00
+28.00
+33.60
+140.00
+8.64
+5.30
+43.20
+1.20
+5.00
+60
+9.53
+12.44
+0.61
+1.63
+0.60
+216.00
+0.166
+100
+148.0
+553.0
+AVM 60-HF-10
+10
+32.00
+32.00
+51.20
+224.00
+5.91
+4.01
+41.4
+1.60
+7.00
+60
+13.16
+15.13
+0.68
+1.36
+0.70
+289.59
+0.202
+100
+236.5
+997.0
+AVM 40-HF-6.5
+6.5
+20.70
+20.70
+16.56
+93.15
+11.31
+4.47
+50.90
+0.80
+4.50
+60
+6.16
+7.24
+0.40
+1.79
+0.60
+229.03
+0.097
+100
+68.0
+218.7
+AVM 90-HF-10 AVM 100-HF-10 AVM 130-HF-25 AVM 250-HF-20
+mm 10 10 25 20
+N/A 43.62 55.00 54.60 168.40
+V/(m/s) 43.62 55.00 54.60 168.40
+N 152.67 192.50 360.36 1111.44
+N 610.68 770.00 764.40 4715.20
+ohms 2.90 3.20 1.48 3.70
+mH 3.59 4.12 1.70 5.00
+V 40.60 44.80 20.72 103.6
+A 3.50 3.50 6.60 6.60
+A 14.00 14.00 14.00 28.00
+Vdc 120 120 120 120
+N/Sqrt(W) 25.61 30.75 44.88 87.55
+W 35.53 39.20 64.47 161.17
+ms 1.24 1.29 1.15 1.35
+ms 1.46 1.18 0.77 0.77
+mm 0.65 0.65 0.55 0.90
+W 568.40 627.20 290.08 2900.80
+W/°C 0.474 0.523 0.860 2.149
+°C 100 100 100 100
+g 960.0 1117.0 1550.0 5900.0
+g 2400.0 3300.0 9300.0 27200.0
+Stroke
+Force sensitivity (at mid stroke)
+Back EMF constant
+Continuous force (at 100 °C) ①
+Peak force
+Resistance ②
+Inductance ②
+Voltage at peak force
+Continuous current (coil at 100 °C)
+Peak current
+Max voltage
+Actuator constant
+Continuous power
+Electrical time constant
+Mechanical time constant
+Clearance of coil
+Power at peak force
+Thermal dissipation constant
+Max coil temperature
+Coil assembly mass
+Core assembly mass
+Model Units
+Stroke
+Force sensitivity (at mid stroke)
+Back EMF constant
+Continuous force (at 100 °C) ①
+Peak force
+Resistance ②
+Inductance ②
+Voltage at peak force
+Continuous current (coil at 100 °C)
+Peak current
+Max voltage
+Actuator constant
+Continuous power
+Electrical time constant
+Mechanical time constant
+Clearance of coil
+Power at peak force
+Thermal dissipation constant
+Max coil temperature
+Coil assembly mass
+Core assembly mass
+Model Units
+Voice Coil Motors
+Voice Coil Motors
+C
+
+DimensionsDimensions (High Force Serise)AVM (High Force Serise)AVM
+Akribis  systems
+III-11  / III-12
+AVM 35-HF-7
+AVM 40-HF-6.5
+AVM 50-HF-10
+AVM 60-HF-10
+AVM 90-HF-10
+AVM 100-HF-10
+Voice Coil Motors
+Voice Coil Motors
+
+Dimensions  Specifications(High Force Serise)AVM (Special Models)AVM
+Akribis  systems
+III-13 / III-14
+AVM 130-HF-25
+AVM 250-HF-20
+AVM 20-10
+Continuous force measured without any additional mounting plate or heat sink on coil  
+Measured at 25 °2
+1
+AVM14-HF-4-C19 AVM14-10-C56 AVM 20-HF-6-C28
+mm 4 10 6
+N/A 1.88 0.82 4.74
+V/(m/s) 1.88 0.82 4.74
+N 2.44 0.98 5.69
+N 7.33 2.95 17.06
+ohms 1.93 2.24 4.85
+mH 0.14 0.24 0.56
+V 7.53 8.06 17.46
+A 1.30 1.20 1.20
+A 3.90 3.60 3.60
+Vdc 60 60 60
+N/Sqrt(W) 1.35 0.55 2.15
+W 3.26 3.23 6.98
+ms 0.073 0.107 0.115
+ms 3.822 10.019 2.914
+mm 0.35 0.35 0.50
+W 29.36 29.03 62.86
+W/°C 0.043 0.043 0.093
+°C 100 100 100
+g 7.0 3.0 13.5
+g 13.7 13.6 47.5
+mm
+N/A
+V/(m/s)
+N
+N
+ohms
+mH
+V
+A
+A
+Vdc
+N/Sqrt(W)
+W
+ms
+ms
+mm
+W
+W/°C
+°C
+g
+g
+5
+8.40
+8.40
+5.88
+31.92
+8.24
+1.69
+31.31
+0.70
+3.80
+60
+2.93
+4.04
+0.205
+2.511
+0.50
+118.99
+0.054
+100
+21.5
+82.0
+7
+6.20
+6.20
+5.64
+24.80
+5.50
+1.52
+22.00
+0.91
+4.00
+60
+2.64
+4.55
+0.276
+2.189
+0.60
+88.00
+0.061
+100
+15.3
+86.2
+15
+24.70
+24.70
+19.76
+98.80
+16.60
+7.11
+66.40
+0.80
+4.00
+60
+6.06
+8.50
+0.428
+2.196
+0.50
+265.60
+0.113
+100
+80.7
+261.0
+AVM24-HF-5-C13 AVM 30-7-C60 AVM35-HF-15-C22
+Stroke
+Force sensitivity (at mid stroke)
+Back EMF constant
+Continuous force (at 100 °C) ①
+Peak force
+Resistance ②
+Inductance ②
+Voltage at peak force
+Continuous current (coil at 100 °C)
+Peak current
+Max voltage
+Actuator constant
+Continuous power
+Electrical time constant
+Mechanical time constant
+Clearance of coil
+Power at peak force
+Thermal dissipation constant
+Max coil temperature
+Coil assembly mass
+Core assembly mass
+Model Units
+Stroke
+Force sensitivity (at mid stroke)
+Back EMF constant
+Continuous force (at 100 °C) ①
+Peak force
+Resistance ②
+Inductance ②
+Voltage at peak force
+Continuous current (coil at 100 °C)
+Peak current
+Max voltage
+Actuator constant
+Continuous power
+Electrical time constant
+Mechanical time constant
+Clearance of coil
+Power at peak force
+Thermal dissipation constant
+Max coil temperature
+Coil assembly mass
+Core assembly mass
+Model Units
+Voice Coil Motors
+Voice Coil Motors
+C
+
+ Specifications  Specifications(Special Models)AVM (Special Models)AVM
+Akribis  systems
+III-15 / III-16
+Continuous force measured without any additional mounting plate or heat sink on coil     
+Measured at 25 °2
+1
+mm
+N/A
+V/(m/s)
+N
+N
+ohms
+mH
+V
+A
+A
+Vdc
+N/Sqrt(W)
+W
+ms
+ms
+mm
+W
+W/°C
+°C
+g
+g
+mm
+N/A
+V/(m/s)
+N
+N
+ohms
+mH
+V
+A
+A
+Vdc
+N/Sqrt(W)
+W
+ms
+ms
+mm
+W
+W/°C
+°C
+g
+g
+Continuous force measured without any additional mounting plate or heat sink on coil   
+Measured at 25 °2
+1
+mm
+N/A
+V/(m/s)
+N
+N
+ohms
+mH
+V
+A
+A
+Vdc
+N/Sqrt(W)
+W
+ms
+ms
+mm
+W
+W/°C
+°C
+g
+g
+mm
+N/A
+V/(m/s)
+N
+N
+ohms
+mH
+V
+A
+A
+Vdc
+N/Sqrt(W)
+W
+ms
+ms
+mm
+W
+W/°C
+°C
+g
+g
+AVM35-HF-10-C31 AVM 40-20-C18
+10 20
+20.90 10.53
+20.90 10.53
+16.72 8.11
+83.60 47.39
+12.02 11.00
+4.96 6.22
+48.08 49.50
+0.80 0.77
+4.00 4.50
+60 60
+6.03 3.17
+6.15 6.52
+0.413 0.565
+2.146 6.448
+0.50 0.60
+192.32 222.75
+0.082 0.087
+100 100
+78.0 65.0
+AVM35-HF-8-C35
+8
+34.29
+34.29
+27.43
+137.16
+16.89
+6.89
+67.56
+0.80
+4.00
+60
+8.34
+8.65
+0.408
+1.224
+0.50
+270.24
+0.115
+100
+85.2
+371.4 285.7 205.0
+AVM 40-HF-6.4-C11-A AVM 50-HF-10-C15-A AVM 50-HF-10-C34-A
+6.4
+14.20
+14.20
+18.18
+99.40
+5.42
+1.38
+37.94
+1.28
+7.00
+60
+6.10
+8.88
+0.255
+1.317
+0.50
+265.58
+0.118
+100
+49.0
+195.0
+10
+21.00
+21.00
+25.20
+105.00
+7.80
+5.30
+39.00
+1.20
+5.00
+60
+7.52
+11.23
+0.679
+2.512
+0.60
+195.00
+0.150
+100
+142.0
+482.0
+10
+31.31
+31.31
+37.57
+156.55
+7.80
+5.30
+39.00
+1.20
+5.00
+60
+11.21
+11.23
+0.679
+1.146
+0.60
+195.00
+0.150
+100
+144.0
+628.0
+AVM 75-HF-25-C12
+25
+33.70
+33.70
+124.69
+572.90
+2.72
+2.88
+46.24
+3.70
+17.00
+60
+20.43
+37.24
+1.059
+1.700
+0.50
+786.08
+0.496
+100
+710.0
+1940.0
+AVM75-38-C39
+38
+13.72
+13.72
+45.26
+192.02
+2.35
+1.89
+32.90
+3.30
+14.00
+60
+8.95
+25.59
+0.804
+6.671
+0.50
+460.60
+0.341
+100
+534.0
+1277.0
+AVM 80-12-C8
+12
+21.40
+21.40
+33.71
+192.60
+6.36
+1.62
+57.24
+1.58
+9.00
+60
+8.49
+15.78
+0.255
+1.722
+0.60
+515.16
+0.210
+100
+124.0
+1262.4
+AVM 90-30-C77
+30
+14.47
+14.47
+57.30
+202.60
+2.9
+6.61
+40.60
+4.0
+14.0
+120
+8.50
+45.48
+2.3
+10.4
+0.65
+568.40
+0.606
+100
+751.2
+1135.1
+AVM90-HF-5-C40-A
+5
+15.78
+15.78
+62.49
+220.92
+1.21
+0.75
+16.94
+3.96
+14.00
+120
+14.35
+18.97
+0.620
+2.076
+0.65
+237.16
+0.253
+100
+427.2
+1514.6
+AVM 130-HF-10-C29-A
+10
+46.40
+46.40
+162.40
+487.20
+0.88
+0.82
+9.24
+3.50
+10.50
+120
+49.46
+10.78
+0.932
+0.441
+0.55
+97.02
+0.144
+100
+1080.0
+5300.0
+AVM 150-HF-20-C53
+20
+97.63
+97.63
+585.77
+1757.30
+4.40
+2.60
+79.20
+6.00
+18.00
+120
+46.54
+158.40
+0.591
+0.692
+0.75
+1425.60
+2.112
+100
+1500.0
+12700.0
+Stroke
+Force sensitivity (at mid stroke)
+Back EMF constant
+Continuous force (at 100 °C) ①
+Peak force
+Resistance ②
+Inductance ②
+Voltage at peak force
+Continuous current (coil at 100 °C)
+Peak current
+Max voltage
+Actuator constant
+Continuous power
+Electrical time constant
+Mechanical time constant
+Clearance of coil
+Power at peak force
+Thermal dissipation constant
+Max coil temperature
+Coil assembly mass
+Core assembly mass
+Model Units
+Stroke
+Force sensitivity (at mid stroke)
+Back EMF constant
+Continuous force (at 100 °C) ①
+Peak force
+Resistance ②
+Inductance ②
+Voltage at peak force
+Continuous current (coil at 100 °C)
+Peak current
+Max voltage
+Actuator constant
+Continuous power
+Electrical time constant
+Mechanical time constant
+Clearance of coil
+Power at peak force
+Thermal dissipation constant
+Max coil temperature
+Coil assembly mass
+Core assembly mass
+Model Units
+Stroke
+Force sensitivity (at mid stroke)
+Back EMF constant
+Continuous force (at 100 °C) ①
+Peak force
+Resistance ②
+Inductance ②
+Voltage at peak force
+Continuous current (coil at 100 °C)
+Peak current
+Max voltage
+Actuator constant
+Continuous power
+Electrical time constant
+Mechanical time constant
+Clearance of coil
+Power at peak force
+Thermal dissipation constant
+Max coil temperature
+Coil assembly mass
+Core assembly mass
+Model Units
+Stroke
+Force sensitivity (at mid stroke)
+Back EMF constant
+Continuous force (at 100 °C) ①
+Peak force
+Resistance ②
+Inductance ②
+Voltage at peak force
+Continuous current (coil at 100 °C)
+Peak current
+Max voltage
+Actuator constant
+Continuous power
+Electrical time constant
+Mechanical time constant
+Clearance of coil
+Power at peak force
+Thermal dissipation constant
+Max coil temperature
+Coil assembly mass
+Core assembly mass
+Model Units
+Voice Coil Motors
+Voice Coil Motors
+C C
+
+Dimensions Dimensions(Special Models)AVM (Special Models)AVM
+Akribis  systems
+III-17 / III-18
+AVM 14-10-C56
+AVM 14-HF-4-C19
+AVM 24-HF-6-C28
+AVM 24-HF-5-C13
+AVM 30-7-C60
+AVM 35-HF-8-C35
+Voice Coil Motors
+Voice Coil Motors
+
+Dimensions Dimensions(Special Models)AVM (Special Models)AVM
+Akribis  systems
+III-19 / III-20
+AVM 35-HF-10-C31
+AVM 35-HF-15-C22
+AVM 40-20-C18
+AVM 40-HF-6.4-C11-A
+AVM 50-HF-10-C15
+AVM 50-HF-10-C34-A
+Voice Coil Motors
+Voice Coil Motors
+
+Dimensions Dimensions(Special Models)AVM (Special Models)AVM
+Akribis  systems
+III-21 / III-22
+AVM 75-38-C39
+AVM 75-HF-25-C12
+AVM 80-12-C8
+AVM 90-30-C77
+AVM 90-HF-5-C40-A
+AVM 130-HF-10-C29-A
+Voice Coil Motors
+Voice Coil Motors
+
+Akribis  systems
+III-23 / III-24
+Dimensions Part Numbering(Special Models)AVM AVM
+AVM 150-HF-20-C53
+Model & Stroke(mm)
+AVM30
+AVM 30-15-0.5
+Cable Length (m)
+0.5
+Stroke(mm)
+15
+Coil（Standard Series）
+Voice Coil Motors
+Voice Coil Motors

@@ -1,0 +1,31 @@
+{
+  "url": "https://www.feeltek.cn/products/3dzhenjing/fr20_xilie/3dqianjujiaodongtaixitong_fr20_f_f20_.html",
+  "category": "01_移动透镜式与匹配光学",
+  "origins": [
+    "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+    "用户粘贴_激光动态聚焦深度调研.txt"
+  ],
+  "context": "\n- 原始入口：https://www.feeltek.cn/products/3dzhenjing/fr20_xilie/3dqianjujiaodongtaixitong_fr20_f_f20_.html",
+  "id": "R037",
+  "files": [
+    {
+      "path": "01_移动透镜式与匹配光学\\R037_动态聚焦 , 焊接振镜 , 3D振镜 , 激光3D打印 , 视觉定位曲面打标-苏州菲镭泰克激光有限公司.html",
+      "type": "HTML",
+      "bytes": 120060,
+      "sha256": "41a1db8c2655c2b1bcf8f6417efaa4fb7b6d854b73303b684615e218a5435c79",
+      "url": "https://www.feeltek.cn/products/3dzhenjing/fr20_xilie/3dqianjujiaodongtaixitong_fr20_f_f20_.html",
+      "title": "动态聚焦 , 焊接振镜 , 3D振镜 , 激光3D打印 , 视觉定位曲面打标-苏州菲镭泰克激光有限公司",
+      "text_chars": 926
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://www.feeltek.cn/products/3dzhenjing/fr20_xilie/3dqianjujiaodongtaixitong_fr20_f_f20_.html",
+      "http": 200,
+      "final_url": "https://www.feeltek.cn/products/3dzhenjing/fr20_xilie/3dqianjujiaodongtaixitong_fr20_f_f20_.html",
+      "result": "网页"
+    }
+  ],
+  "title": "动态聚焦 , 焊接振镜 , 3D振镜 , 激光3D打印 , 视觉定位曲面打标-苏州菲镭泰克激光有限公司",
+  "status": "网页已保存"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "C002",
+  "category": "07_测高闭环_三轴同步与标定",
+  "url": "https://www.scanlab.de/sites/default/files/2020-08/12_RTC6%20control%20boards.pdf",
+  "context": "SCANLAB_RTC6官方规格书",
+  "title": "SCANLAB_RTC6官方规格书",
+  "origins": [
+    "原文器件型号补充检索"
+  ],
+  "files": [
+    {
+      "path": "07_测高闭环_三轴同步与标定\\C002_SCANLAB_RTC6官方规格书.pdf",
+      "type": "PDF",
+      "pages": 2,
+      "bytes": 2265504,
+      "sha256": "1f7baa40a0a42e05b7bbb1d749571ebd73ab756f8354978078b5dce2c30db855",
+      "url": "https://www.scanlab.de/sites/default/files/2020-08/12_RTC6%20control%20boards.pdf",
+      "text_chars": 4131,
+      "title": "RTC6",
+      "preview": "high performance. advanced scan control.\nRTC 6\nRTC6 control boards enable smart and flexible control of scan \nsystems, lasers and peripheral devices in real time. \nKey Features:\n• SCANahead control \n• UltraFastPixelMode (up to 3.2 MHz)\n• Enlarged list memory\n• Standalone functonality for RTC6 Ethernet\nBased on the field-proven RTC5, the RTC6 control board delivers \nnew functionalities to tackle complex control tasks. Examples are \nimproved speed and position-dependent laser control and the \nsync",
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://www.scanlab.de/sites/default/files/2020-08/12_RTC6%20control%20boards.pdf",
+      "http": 200,
+      "final_url": "https://www.scanlab.de/sites/default/files/2020-08/12_RTC6%20control%20boards.pdf",
+      "result": "有效PDF"
+    }
+  ],
+  "status": "PDF已下载"
+}

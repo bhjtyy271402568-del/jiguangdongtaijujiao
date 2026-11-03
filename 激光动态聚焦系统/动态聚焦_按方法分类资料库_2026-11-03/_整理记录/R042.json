@@ -1,0 +1,30 @@
+{
+  "url": "https://www.edmundoptics.com/knowledge-center/application-notes/lasers/gaussian-beam-propagation/",
+  "category": "08_综述与光学基础",
+  "origins": [
+    "激光动态聚焦_来源索引与验证清单_2026-11-03.md"
+  ],
+  "context": "\n- 原始入口：https://www.edmundoptics.com/knowledge-center/application-notes/lasers/gaussian-beam-propagation/",
+  "id": "R042",
+  "files": [
+    {
+      "path": "08_综述与光学基础\\R042_Propagation of a Gaussian Beam Through a Thin Lens _ Edmund Optics.html",
+      "type": "HTML",
+      "bytes": 363431,
+      "sha256": "096b6963f8b0a2bf166e0c6f957f638998dafbfcfb85c0da9019187fba71f10d",
+      "url": "https://www.edmundoptics.com/knowledge-center/application-notes/lasers/gaussian-beam-propagation/",
+      "title": "Propagation of a Gaussian Beam Through a Thin Lens | Edmund Optics",
+      "text_chars": 38338
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://www.edmundoptics.com/knowledge-center/application-notes/lasers/gaussian-beam-propagation/",
+      "http": 200,
+      "final_url": "https://www.edmundoptics.com/knowledge-center/application-notes/lasers/gaussian-beam-propagation/",
+      "result": "网页"
+    }
+  ],
+  "title": "Propagation of a Gaussian Beam Through a Thin Lens | Edmund Optics",
+  "status": "网页已保存"
+}

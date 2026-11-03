@@ -1,0 +1,896 @@
+来源：https://www.nature.com/articles/s41566-020-0684-z
+采集日期：2026-11-03
+
+Variable optical elements for fast focus control | Nature Photonics
+Skip to main content
+Thank you for visiting nature.com. You are using a browser version with limited support for CSS. To obtain
+            the best experience, we recommend you use a more up to date browser (or turn off compatibility mode in
+            Internet Explorer). In the meantime, to ensure continued support, we are displaying the site without styles
+            and JavaScript.
+Advertisement
+View all journals
+Saved research
+Search
+Log in
+Content
+Explore content
+About
+the journal
+Publish
+with us
+Subscribe
+Sign up for alerts
+RSS feed
+nature
+nature photonics
+review articles
+article
+Review Article
+Published:
+25 August 2020
+Variable optical elements for fast focus control
+SeungYeon Kang
+ORCID:
+orcid.org/0000-0003-3331-3866
+1
+nAff3
+,
+Martí Duocastella
+2
+nAff4
+&
+Craig B. Arnold
+1
+Nature Photonics
+volume
+14
+,
+pages
+533–542 (
+2020
+)
+Cite this article
+Save article
+View saved research
+9866
+Accesses
+136
+Citations
+45
+Altmetric
+Metrics
+details
+Abstract
+In this Review, we survey recent developments in the emerging field of high-speed variable-
+z
+-focus optical elements, which are driving important innovations in advanced imaging and materials processing applications. Three-dimensional biomedical imaging, high-throughput industrial inspection, advanced spectroscopies, and other optical characterization and materials modification methods have made great strides forward in recent years due to precise and rapid axial control of light. Three state-of-the-art key optical technologies that enable fast
+z
+-focus modulation are reviewed, along with a discussion of the implications of the new developments in variable optical elements and their impact on technologically relevant applications.
+This is a preview of subscription content,
+access via your institution
+Access options
+Access through your institution
+Access Nature and 54 other Nature Portfolio journals
+Get Nature+, our best-value online-access subscription
+$39.99
+/ 30 days
+cancel any time
+Learn more
+Subscribe to this journal
+Receive 12 print issues and online access
+$259.00
+per year
+only $21.58 per issue
+Learn more
+Buy this article
+Purchase on SpringerLink
+Instant access to the full article PDF.
+USD 39.95
+Prices may be subject to local taxes which are calculated during checkout
+Additional access options:
+Log in
+Learn about institutional subscriptions
+Read our FAQs
+Contact customer support
+Fig. 1: Performance of varifocal optical systems and the three key technologies enabling higher focal-varying speed.
+Fig. 2: Pathways to limit photobleaching and phototoxicity using fast variable optical elements.
+Fig. 3: Examples of volumetric imaging using variable optical elements.
+Fig. 4: Examples of retrieving enhanced quantitative data and laser micromachining via varifocal optics.
+Similar content being viewed by others
+Large-volume focus control at 10 MHz refresh rate via fast line-scanning amplitude-encoded scattering-assisted holography
+Article
+Open access
+08 April 2024
+Optical Fresnel zone plate flat lenses made entirely of colored photoresist through an i-line stepper
+Article
+Open access
+16 January 2025
+Advances in information processing and biological imaging using flat optics
+Article
+28 May 2024
+Explore related subjects
+Discover the latest articles and news in related subjects.
+Applied optics
+Imaging techniques
+Materials for devices
+Materials for optics
+Microscopy
+Tunable Liquid Lens Technologies and Applications
+References
+Bawart, M., Jesacher, A., Zelger, P., Bernet, S. & Ritsch-Marte, M. Modified Alvarez lens for high-speed focusing.
+Opt. Express
+25
+, 29847–29855 (2017).
+ADS
+Google Scholar
+Radhakrishnan, H. & Charman, W. N. Optical characteristics of Alvarez variable-power spectacles.
+Ophthalmic Physiol. Opt.
+37
+, 284–296 (2017).
+Google Scholar
+Zou, Y., Zhang, W., Tian, F., Siong Chau, F. & Zhou, G. Development of miniature tunable multi-element Alvarez lenses.
+IEEE J. Sel. Top. Quantum Electron.
+21
+, 2–9 (2015).
+Google Scholar
+Bernet, S., Harm, W. & Ritsch-Marte, M. Demonstration of focus-tunable diffractive moiré-lenses.
+Opt. Express
+21
+, 4317–4322 (2013).
+Google Scholar
+Mishra, K., van den Ende, D. & Mugele, F. Recent developments in optofluidic lens technology.
+Micromachines
+7
+, 102 (2016).
+Google Scholar
+Choi, J. M., Son, H. M. & Lee, Y. J. Biomimetic variable-focus lens system controlled by winding-type SMA actuator.
+Opt. Express
+17
+, 8152–8164 (2009).
+ADS
+Google Scholar
+Fuh, Y. K., Huang, W. C., Lee, Y. S. & Lee, S. An oscillation-free actuation of fluidic lens for optical beam control.
+Appl. Phys. Lett.
+101
+, 2010–2013 (2012).
+Google Scholar
+Hasan, N., Kim, H. & Mastrangelo, C. H. Large aperture tunable-focus liquid lens using shape memory alloy spring.
+Opt. Express
+24
+, 13334–13342 (2016).
+ADS
+Google Scholar
+Kim, J., Lee, J. & Won, Y. H. Method to reduce the aberration of a polygonal aperture focus-tunable lens array for high fill factor.
+Opt. Lett.
+44
+, 2554–2557 (2019).
+ADS
+Google Scholar
+Cao, J. et al. Bioinspired zoom compound eyes enable variable-focus imaging.
+ACS Appl. Mater. Interfaces
+12
+, 10107–10117 (2020).
+Google Scholar
+Ee, H. S. & Agarwal, R. Tunable metasurface and flat optical zoom lens on a stretchable substrate.
+Nano Lett.
+16
+, 2818–2823 (2016).
+ADS
+Google Scholar
+She, A., Zhang, S., Shian, S., Clarke, D. R. & Capasso, F. Adaptive metalenses with simultaneous electrical control of focal length, astigmatism, and shift.
+Sci. Adv.
+4
+, eaap9957 (2018).
+ADS
+Google Scholar
+Aiello, M. D. et al. Achromatic varifocal metalens for the visible spectrum.
+ACS Photonics
+6
+, 2432–2440 (2019).
+Google Scholar
+Ren, H., Xianyu, H., Xu, S. & Wu, S.-T. Adaptive dielectric liquid lens.
+Opt. Express
+16
+, 14954–14960 (2008).
+ADS
+Google Scholar
+Lu, Y. S., Tu, H., Xu, Y. & Jiang, H. Tunable dielectric liquid lens on flexible substrate.
+Appl. Phys. Lett.
+103
+, 261113 (2013).
+ADS
+Google Scholar
+Jin, B., Ren, H. & Choi, W.-K. Dielectric liquid lens with chevron-patterned electrode.
+Opt. Express
+25
+, 32411–32419 (2017).
+ADS
+Google Scholar
+Miccio, L., Paturzo, M., Grilli, S., Vespini, V. & Ferraro, P. Hemicylindrical and toroidal liquid microlens formed by pyro-electro-wetting.
+Opt. Lett.
+34
+, 1075–1077 (2009).
+ADS
+Google Scholar
+Hao, C. et al. Electrowetting on liquid-infused film (EWOLF): complete reversibility and controlled droplet oscillation suppression for fast optical imaging.
+Sci. Rep.
+4
+, 6846 (2014).
+Google Scholar
+Li, L., Wang, J.-H., Wang, Q.-H. & Wu, S.-T. Displaceable and focus-tunable electrowetting optofluidic lens.
+Opt. Express
+26
+, 25839–25848 (2018).
+ADS
+Google Scholar
+Lee, J., Park, Y. & Chung, S. K. Multifunctional liquid lens for variable focus and aperture.
+Sensors Actuators A
+287
+, 177–184 (2019).
+Google Scholar
+Shin, D., Kim, C., Koo, G. & Won, Y. Depth plane adaptive integral imaging system using a vari-focal liquid lens array for realizing augmented reality.
+Opt. Express
+28
+, 5602–5616 (2020).
+ADS
+Google Scholar
+Xiao, W. & Hardt, S. An adaptive liquid microlens driven by a ferrofluidic transducer.
+J. Micromech. Microeng.
+20
+, 055032 (2010).
+ADS
+Google Scholar
+Cheng, H. C., Xu, S., Liu, Y., Levi, S. & Wu, S. T. Adaptive mechanical-wetting lens actuated by ferrofluids.
+Opt. Commun.
+284
+, 2118–2121 (2011).
+ADS
+Google Scholar
+Oku, H. & Ishikawa, M. High-speed liquid lens with 2 ms response and 80.3 nm root-mean-square wavefront error.
+Appl. Phys. Lett.
+94
+, 2–5 (2009).
+Google Scholar
+Patra, R., Agarwal, S., Kondaraju, S. & Bahga, S. S. Membrane-less variable focus liquid lens with manual actuation.
+Opt. Commun.
+389
+, 74–78 (2017).
+ADS
+Google Scholar
+Dong, L., Agarwal, A. K., Beebe, D. J. & Jiang, H. Adaptive liquid microlenses activated by stimuli-responsive hydrogels.
+Nature
+442
+, 551–554 (2006).
+ADS
+Google Scholar
+Kim, J., Kim, J., Na, J.-H., Lee, B. & Lee, S.-D. Liquid crystal-based square lens array with tunable focal length.
+Opt. Express
+22
+, 3316–3324 (2014).
+ADS
+Google Scholar
+Zhou, Z., Li, X. & Ren, H. Liquid crystal lens with a concave polyimide layer.
+Opt. Eng.
+56
+, 077102 (2017).
+ADS
+Google Scholar
+Kim, S. U., Na, J. H., Kim, C. & Lee, S. D. Design and fabrication of liquid crystal-based lenses.
+Liq. Cryst.
+44
+, 2121–2132 (2017).
+Google Scholar
+Ma, Y. et al. Fast switching ferroelectric liquid crystal Pancharatnam–Berry lens.
+Opt. Express
+27
+, 10079–10086 (2019).
+ADS
+Google Scholar
+Chen, H. et al. A large bistable negative lens by integrating a polarization switch with a passively anisotropic focusing element.
+Opt. Express
+22
+, 13138–13145 (2014).
+ADS
+Google Scholar
+Bharath, M. et al. Compact vari-focal augmented reality display based on ultrathin, polarization-insensitive, and adaptive liquid crystal lens.
+Opt. Lasers Eng.
+128
+, 26–32 (2020).
+Google Scholar
+Yin, S. et al. Nanosecond KTN varifocal lens without electric field induced phase transition.
+Photonic Fiber Cryst. Devices Adv. Mater. Innov. Device Appl. XI
+https://doi.org/10.1117/12.2276511
+(2017).
+Kawamura, S., Tadayuki, I., Miyazu, J., Sakamoto, T. & Kobayashi, J. 2.5-fold increase in lens power of a KTN varifocal lens by employing an octagonal structure.
+Appl. Opt.
+54
+, 4197–4201 (2015).
+ADS
+Google Scholar
+Inagaki, T., Imai, T., Miyazu, J. & Kobayashi, J. Polarization independent varifocal lens using KTN crystals.
+Opt. Lett.
+38
+, 2673–2675 (2013).
+ADS
+Google Scholar
+Shibaguchi, T. & Funato, H. Lead–lanthanum zirconate–titanate (PLZT) electrooptic variable focal-length lens with stripe electrodes.
+Jpn. J. Appl. Phys.
+31
+, 3196–3200 (1992).
+ADS
+Google Scholar
+Mermillod-Blondin, A., McLeod, E. & Arnold, C. B. Acoustic gradient index of refraction lens.
+Opt. Lett.
+33
+, 2146–2148 (2008).
+ADS
+Google Scholar
+Koyama, D., Isago, R. & Nakamura, K. Three-dimensional focus scanning by an acoustic variable-focus optical liquid lens.
+AIP Conf. Proc.
+1474
+, 355–358 (2012).
+ADS
+Google Scholar
+Koyama, D., Isago, R. & Nakamura, K. Ultrasonic variable-focus optical lens using viscoelastic material.
+Appl. Phys. Lett.
+100
+, 091102 (2012).
+ADS
+Google Scholar
+Kaplan, A., Friedman, N. & Davidson, N. Acousto-optic lens with very fast focus scanning.
+Opt. Lett.
+26
+, 1078–1080 (2001).
+ADS
+Google Scholar
+Reddy, G. D. & Saggau, P. Fast three-dimensional laser scanning scheme using acousto-optic deflectors.
+J. Biomed. Opt.
+10
+, 064038 (2005).
+ADS
+Google Scholar
+Boucher, P., Barré, N., Pinel, O., Labroille, G. & Treps, N. Continuous axial scanning of a Gaussian beam via beam steering.
+Opt. Express
+25
+, 23060–23069 (2017).
+ADS
+Google Scholar
+Shain, W. J., Vickers, N. A., Goldberg, B. B., Bifano, T. & Mertz, J. Extended depth-of-field microscopy with a high-speed deformable mirror.
+Opt. Lett.
+42
+, 995–998 (2017).
+ADS
+Google Scholar
+Žurauskas, M., Barnstedt, O., Frade-Rodriguez, M., Waddell, S. & Booth, M. J. Rapid adaptive remote focusing microscope for sensing of volumetric neural activity.
+Biomed. Opt. Express
+8
+, 4369–4379 (2017).
+Google Scholar
+Salter, P. S., Iqbal, Z. & Booth, M. J. Analysis of the three-dimensional focal positioning capability of adaptive optic elements.
+Int. J. Optomechatronics
+7
+, 1–14 (2013).
+ADS
+Google Scholar
+Duocastella, M. & Arnold, C. B. Transient response in ultra-high speed liquid lenses.
+J. Phys. D
+46
+, 075102 (2013).
+ADS
+Google Scholar
+Sato, S. Applications of liquid crystals to variable-focusing lenses.
+Opt. Rev.
+6
+, 471–485 (1999).
+Google Scholar
+Lin, Y., Wang, Y. & Reshetnyak, V. Liquid crystal lenses with tunable focal length.
+Liq. Cryst. Rev.
+5
+, 111–143 (2017).
+Google Scholar
+Rahman, A., Said, S. M. & Balamurugan, S. Blue phase liquid crystal: strategies for phase stabilization and device development.
+Sci. Technol. Adv. Mater.
+16
+, 033501 (2015).
+Google Scholar
+Xu, S. et al. Fast-response liquid crystal microlens.
+Micromachines
+5
+, 300–324 (2014).
+Google Scholar
+Guo, Q., Zhao, X., Zhao, H. & Chigrinov, V. G. Reverse bistable effect in ferroelectric liquid crystal devices with ultra-fast switching at low driving voltage.
+Opt. Lett.
+40
+, 2413–2416 (2015).
+ADS
+Google Scholar
+Sreenilayam, S. P. et al. Spontaneous helix formation in non-chiral bent-core liquid crystals with fast linear electro-optic effect.
+Nat. Commun.
+7
+, 11369 (2016).
+ADS
+Google Scholar
+Basu, R. Effects of graphene on electro-optic switching and spontaneous polarization of a ferroelectric liquid crystal.
+Appl. Phys. Lett.
+105
+, 112905 (2014).
+ADS
+Google Scholar
+Shukla, R. K. et al. Electro-optic and dielectric properties of a ferroelectric liquid crystal doped with chemically and thermally stable emissive carbon dots.
+RSC Adv.
+5
+, 34491–34496 (2015).
+Google Scholar
+Chang, C., Lin, Y., Srivastava, A. K. & Chigrinov, V. G. An optical system via liquid crystal photonic devices for photobiomodulation.
+Sci. Rep.
+8
+, 4251 (2018).
+ADS
+Google Scholar
+Zhang, Z., You, Z. & Chu, D. Fundamentals of phase-only liquid crystal on silicon (LCOS) devices.
+Light Sci. Appl.
+3
+, e213 (2014).
+ADS
+Google Scholar
+Karagyozov, D., Mihovilovic Skanata, M., Lesar, A. & Gershow, M. Recording neural activity in unrestrained animals with 3D tracking two photon microscopy.
+Cell Rep.
+25
+, 1371–1383 (2018).
+Google Scholar
+Kong, L. et al. Continuous volumetric imaging via an optical phase-locked ultrasound lens.
+Nat. Methods
+12
+, 759–762 (2015).
+Google Scholar
+Zong, W. et al. Large-field high-resolution two-photon digital scanned light-sheet microscopy.
+Cell Res.
+25
+, 254–257 (2015).
+Google Scholar
+Grulkowski, I., Szulzycki, K. & Wojtkowski, M. Microscopic OCT imaging with focus extension by ultrahigh-speed acousto-optic tunable lens and stroboscopic illumination.
+Opt. Express
+22
+, 31746–31760 (2014).
+ADS
+Google Scholar
+Wei, M. T. et al. Phase behaviour of disordered proteins underlying low density and high permeability of liquid organelles.
+Nat. Chem.
+9
+, 1118–1125 (2017).
+Google Scholar
+Kang, S., Dotsenko, E., Amrhein, D., Theriault, C. & Arnold, C. B. Ultra-high-speed variable focus optics for novel applications in advanced imaging.
+Proc. SPIE
+10539
+,
+https://doi.org/10.1117/12.2294487
+(2018).
+Duocastella, M. & Arnold, C. B. Enhanced depth of field laser processing using an ultra-high-speed axial scanner.
+Appl. Phys. Lett.
+102
+, 061113 (2013).
+ADS
+Google Scholar
+Chen, T., Fardel, R. & Arnold, C. B. Ultrafast
+z
+-scanning for high-efficiency micro-machining.
+Light Sci. Appl.
+7
+, 17181 (2018).
+ADS
+Google Scholar
+Lopez, C. A. & Hirsa, A. H. Fast focusing using a pinned-contact oscillating liquid lens.
+Nat. Photon.
+2
+, 610–613 (2008).
+Google Scholar
+Murade, C. U., Van Der Ende, D. & Mugele, F. High speed adaptive liquid microlens array.
+Opt. Express
+20
+, 18180–18187 (2012).
+ADS
+Google Scholar
+Laissue, P. P., Alghamdi, R. A., Tomancak, P., Reynaud, E. G. & Shroff, H. Assessing phototoxicity in live fluorescence imaging.
+Nat. Methods
+14
+, 657–661 (2017).
+Google Scholar
+Icha, J., Weber, M., Waters, J. C. & Norden, C. Phototoxicity in live fluorescence microscopy, and how to avoid it.
+BioEssays
+39
+,
+https://doi.org/10.1002/bies.201700003
+(2017).
+Power, R. M. & Huisken, J. Adaptable, illumination patterning light sheet microscopy.
+Sci. Rep.
+8
+, 9615 (2018).
+ADS
+Google Scholar
+Donnert, G., Eggeling, C. & Hell, S. W. Major signal increase in fluorescence microscopy through dark-state relaxation.
+Nat. Methods
+4
+, 81–86 (2007).
+Google Scholar
+Duocastella, M., Vicidomini, G. & Diaspro, A. Simultaneous multiplane confocal microscopy using acoustic tunable lenses.
+Opt. Express
+22
+, 19293–19301 (2014).
+ADS
+Google Scholar
+Fahrbach, F. O., Voigt, F. F., Schmid, B., Helmchen, F. & Huisken, J. Rapid 3D light-sheet microscopy with a tunable lens.
+Opt. Express
+21
+, 21010–21026 (2013).
+ADS
+Google Scholar
+Zuo, C., Chen, Q., Qu, W. & Asundi, A. High-speed transport-of-intensity phase microscopy with an electrically tunable lens.
+Opt. Express
+21
+, 24060–24075 (2013).
+ADS
+Google Scholar
+Jiang, J. et al. Fast 3-D temporal focusing microscopy using an electrically tunable lens.
+Opt. Express
+23
+, 24362–24368 (2015).
+ADS
+Google Scholar
+Lu, R. et al. Video-rate volumetric functional imaging of the brain at synaptic resolution.
+Nat. Neurosci.
+20
+, 620–628 (2017).
+Google Scholar
+Colomb, T. et al. Extended depth-of-focus by digital holographic microscopy.
+Opt. Lett.
+35
+, 1840–1842 (2010).
+ADS
+Google Scholar
+Liu, S. & Hua, H. Extended depth-of-field microscopic imaging with a variable focus microscope objective.
+Opt. Express
+19
+, 353–362 (2011).
+ADS
+Google Scholar
+Piazza, S., Bianchini, P., Sheppard, C., Diaspro, A. & Duocastella, M. Enhanced volumetric imaging in 2-photon microscopy via acoustic lens beam shaping.
+J. Biophotonics
+11
+, e201700050 (2018).
+Google Scholar
+Zheng, J., Zuo, C., Gao, P. & Nienhaus, G. U. Dual-mode phase and fluorescence imaging with a confocal laser scanning microscope.
+Opt. Lett.
+43
+, 5689–5692 (2018).
+ADS
+Google Scholar
+Lu, S.-H. & Hua, H. Imaging properties of extended depth of field microscopy through single-shot focus scanning.
+Opt. Express
+23
+, 10714–10731 (2015).
+ADS
+Google Scholar
+Prevedel, R. et al. Simultaneous whole-animal 3D imaging of neuronal activity using light-field microscopy.
+Nat. Methods
+11
+, 727–730 (2014).
+Google Scholar
+Martínez-Corral, M. & Javidi, B. Fundamentals of 3D imaging and displays: a tutorial on integral imaging, light-field, and plenoptic systems.
+Adv. Opt. Photonics
+10
+, 512–566 (2018).
+ADS
+Google Scholar
+Grewe, B. F., Voigt, F. F., van ’t Hoff, M. & Helmchen, F. Fast two-layer two-photon imaging of neuronal cell populations using an electrically tunable lens.
+Biomed. Opt. Express
+2
+, 2035–2046 (2011).
+Google Scholar
+Sheffield, M. E. J. & Dombeck, D. A. Calcium transient prevalence across the dendritic arbour predicts place field properties.
+Nature
+517
+, 200–204 (2015).
+ADS
+Google Scholar
+Szulzycki, K., Savaryn, V. & Grulkowski, I. Rapid acousto-optic focus tuning for improvement of imaging performance in confocal microscopy.
+Appl. Opt.
+57
+, C14–C18 (2018).
+ADS
+Google Scholar
+Kong, L., Tang, J. & Cui, M. In vivo volumetric imaging of biological dynamics in deep tissue via wavefront engineering.
+Opt. Express
+24
+, 1214–1221 (2016).
+ADS
+Google Scholar
+Kong, L., Tang, J. & Cui, M. Multicolor multiphoton in vivo imaging flow cytometry.
+Opt. Express
+24
+, 6126–6135 (2016).
+ADS
+Google Scholar
+Har-gil, H. et al. PySight: plug and play photon counting for fast intravital microscopy.
+Optica
+5
+, 29–37 (2018).
+Google Scholar
+Yamato, K., Yamashita, T., Chiba, H. & Oku, H. Fast volumetric feedback under microscope by temporally coded exposure camera.
+Sensors
+19
+, 1606 (2019).
+Google Scholar
+Deschout, H. et al. Precisely and accurately localizing single emitters in fluorescence microscopy.
+Nat. Methods
+11
+, 253–266 (2014).
+Google Scholar
+Manzo, C. & Garcia-Parajo, M. F. A review of progress in single particle tracking: from methods to biophysical insights.
+Rep. Prog. Phys.
+78
+, 124601 (2015).
+ADS
+Google Scholar
+Elson, E. L. Fluorescence correlation spectroscopy: past, present, future.
+Biophys. J.
+101
+, 2855–2870 (2011).
+ADS
+Google Scholar
+Duocastella, M., Theriault, C. & Arnold, C. B. Three-dimensional particle tracking via tunable color-encoded multiplexing.
+Opt. Lett.
+41
+, 863–866 (2016).
+ADS
+Google Scholar
+Sancataldo, G. et al. Three-dimensional multiple-particle tracking with nanometric precision over tunable axial ranges.
+Optica
+4
+, 367–373 (2017).
+ADS
+Google Scholar
+Hou, S., Lang, X. & Welsher, K. Robust real-time 3D single-particle tracking using a dynamically moving laser spot.
+Opt. Lett.
+42
+, 2390–2393 (2017).
+ADS
+Google Scholar
+Dertinger, T., Colyer, R., Iyer, G., Weiss, S. & Enderlein, J. Fast, background-free, 3D super-resolution optical fluctuation imaging (SOFI).
+Proc. Natl Acad. Sci. USA
+106
+, 22287–22292 (2009).
+ADS
+Google Scholar
+Agarwal, K. & Macha, R. Multiple signal classification algorithm for super-resolution fluorescence microscopy.
+Nat. Commun.
+7
+, 13752 (2016).
+ADS
+Google Scholar
+Ashdown, G., Owen, D. M., Pereira, P. M., Gustafsson, N. & Henriques, R. Fast live-cell conventional fluorophore nanoscopy with ImageJ through super-resolution radial fluctuation.
+Nat. Commun.
+7
+, 12471 (2016).
+ADS
+Google Scholar
+Hausotte, T., Gröschl, A. & Schaude, J. High-speed focal-distance-modulated fiber-coupled confocal sensor for coordinate measuring systems.
+Appl. Opt.
+57
+, 3907–3914 (2018).
+ADS
+Google Scholar
+Yang, X., Song, X., Jiang, B. & Luo, Q. Multifocus optical-resolution photoacoustic microscope using ultrafast axial scanning of single laser pulse.
+Opt. Express
+25
+, 28192–28200 (2017).
+ADS
+Google Scholar
+Duocastella, M. et al. Fast inertia-free volumetric light-sheet microscope.
+ACS Photonics
+4
+, 1797–1804 (2017).
+Google Scholar
+Sheppard, C. J. R. Limitations of the paraxial Debye approximation.
+Opt. Lett.
+38
+, 1074–1076 (2013).
+ADS
+Google Scholar
+Download references
+Acknowledgements
+We acknowledge financial support from Princeton University. M.D. is a Serra Hunter Fellow. M.D. acknowledges Compagnia di San Paolo, ROL 34704.
+Author information
+Author notes
+SeungYeon Kang
+Present address: Mechanical Engineering, University of Connecticut, Storrs, CT, USA
+Martí Duocastella
+Present address: Department of Applied Physics, Universitat de Barcelona, Barcelona, Spain
+Authors and Affiliations
+Department of Mechanical and Aerospace Engineering and Princeton Institute for the Science and Technology of Materials, Princeton University, Princeton, NJ, USA
+SeungYeon Kang & Craig B. Arnold
+Nanophysics, Isituto Italiano di Tecnologia, Genova, Italy
+Martí Duocastella
+Authors
+SeungYeon Kang
+View author publications
+Search author on:
+PubMed
+Google Scholar
+Martí Duocastella
+View author publications
+Search author on:
+PubMed
+Google Scholar
+Craig B. Arnold
+View author publications
+Search author on:
+PubMed
+Google Scholar
+Corresponding author
+Correspondence to
+Craig B. Arnold
+.
+Ethics declarations
+Competing interests
+The authors declare no competing interests.
+Additional information
+Publisher’s note
+Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.
+Rights and permissions
+Reprints and permissions
+About this article
+Cite this article
+Kang, S., Duocastella, M. & Arnold, C.B. Variable optical elements for fast focus control.
+Nat. Photonics
+14
+, 533–542 (2020). https://doi.org/10.1038/s41566-020-0684-z
+Download citation
+Received
+:
+06 April 2020
+Accepted
+:
+23 July 2020
+Published
+:
+25 August 2020
+Version of record
+:
+25 August 2020
+Issue date
+:
+September 2020
+DOI
+:
+https://doi.org/10.1038/s41566-020-0684-z
+Share this article
+Anyone you share the following link with will be able to read this content:
+Get shareable link
+Sorry, a shareable link is not currently available for this article.
+Copy shareable link to clipboard
+Provided by the Springer Nature SharedIt content-sharing initiative
+Access through your institution
+Buy or subscribe
+Advertisement
+Explore content
+Research articles
+Reviews & Analysis
+News & Comment
+Current issue
+Collections
+Follow us on X
+Subscribe
+Sign up for alerts
+RSS feed
+About the journal
+Aims & Scope
+Journal Information
+Editors
+Journal Metrics
+Research Cross-Journal Editorial Team
+Reviews Cross-Journal Editorial Team
+Our publishing models
+Editorial Values Statement
+Editorial Policies
+Content Types
+Web Feeds
+Contact
+Publish with us
+Submission Guidelines
+For Reviewers
+Language editing services
+Open access funding
+Submit manuscript
+Search
+Search articles by subject, keyword or author
+Show results from
+All journals
+This journal
+Search
+Advanced search
+Quick links
+Explore articles by subject
+Find a job
+Guide to authors
+Editorial policies
+Nature Photonics
+(
+Nat. Photon.
+)
+ISSN
+1749-4893
+(online)
+ISSN
+1749-4885
+(print)
+nature.com footer links
+About Nature Portfolio
+About us
+Press releases
+Press office
+Contact us
+Discover content
+Journals A-Z
+Articles by subject
+protocols.io
+Nature Index
+Publishing policies
+Nature portfolio policies
+Open access
+Author & Researcher services
+Reprints & permissions
+Research data
+Language editing
+Scientific editing
+Nature Masterclasses
+Research Solutions
+Libraries & institutions
+Librarian service & tools
+Librarian portal
+Open research
+Recommend to library
+Advertising & partnerships
+Advertising
+Partnerships & Services
+Media kits
+Branded
+                        content
+Professional development
+Nature Awards
+Nature Careers
+Nature
+Conferences
+Regional websites
+Nature Africa
+Nature China
+Nature India
+Nature Japan
+Nature Middle East
+Privacy
+                Policy
+Use
+                of cookies
+Your privacy choices/Manage cookies
+Legal
+                notice
+Accessibility
+                statement
+Terms & Conditions
+Your US state privacy rights
+© 2026 Springer Nature Limited
+Close banner
+Close
+Sign up for the
+Nature Briefing
+newsletter — what matters in science, free to your inbox daily.
+Email address
+Sign up
+I agree my information will be processed in accordance with the
+Nature
+and Springer Nature Limited
+Privacy Policy
+.
+Close banner
+Close
+Get the most important science stories of the day, free in your inbox.
+Sign up for Nature Briefing

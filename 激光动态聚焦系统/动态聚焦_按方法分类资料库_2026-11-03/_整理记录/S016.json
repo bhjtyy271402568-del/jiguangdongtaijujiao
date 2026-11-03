@@ -1,0 +1,20 @@
+{
+  "id": "S016",
+  "url": "https://ikowb01.ikont.co.jp/technicalservice/ikoc0130.php?FLG=CRWG&from=html&lang=en",
+  "category": "10_执行器_导轨与编码器",
+  "origins": [
+    "补充检索_原文提及条目及有效替代入口"
+  ],
+  "context": "IKO_CRWG交叉滚柱导轨官方目录入口",
+  "title": "IKO_CRWG交叉滚柱导轨官方目录入口",
+  "files": [],
+  "attempts": [
+    {
+      "url": "https://ikowb01.ikont.co.jp/technicalservice/ikoc0130.php?FLG=CRWG&from=html&lang=en",
+      "http": 502,
+      "final_url": "https://ikowb01.ikont.co.jp/technicalservice/ikoc0130.php?FLG=CRWG&from=html&lang=en",
+      "error": "502 Server Error: Bad Gateway for url: https://ikowb01.ikont.co.jp/technicalservice/ikoc0130.php?FLG=CRWG&from=html&lang=en"
+    }
+  ],
+  "status": "未获取"
+}

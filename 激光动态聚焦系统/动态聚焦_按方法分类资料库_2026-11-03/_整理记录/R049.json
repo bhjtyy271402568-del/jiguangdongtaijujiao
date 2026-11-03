@@ -1,0 +1,30 @@
+{
+  "url": "https://www.patent9.com/search.aspx?c=Inventor&k=Zhou+He&t=fmzl",
+  "category": "09_艾思兰及相邻应用",
+  "origins": [
+    "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md"
+  ],
+  "context": "\n- [Patent9 艾思兰/何舟专利列表（含CN111130015A、CN111181117A）](https://www.patent9.com/search.aspx?c=Inventor&k=Zhou+He&t=fmzl)",
+  "id": "R049",
+  "files": [
+    {
+      "path": "09_艾思兰及相邻应用\\R049_Patent9专利在线.html",
+      "type": "HTML",
+      "bytes": 56398,
+      "sha256": "9cd271c0afb02e1f9d4cdb7ce36aa7d68bf011ffba2ecf15c656483dda655dfe",
+      "url": "https://www.patent9.com/search.aspx?c=Inventor&k=Zhou+He&t=fmzl",
+      "title": "Patent9专利在线",
+      "text_chars": 16963
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://www.patent9.com/search.aspx?c=Inventor&k=Zhou+He&t=fmzl",
+      "http": 200,
+      "final_url": "https://www.patent9.com/search.aspx?c=Inventor&k=Zhou+He&t=fmzl",
+      "result": "网页"
+    }
+  ],
+  "title": "Patent9专利在线",
+  "status": "网页已保存"
+}

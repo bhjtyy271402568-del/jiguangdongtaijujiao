@@ -1,0 +1,33 @@
+{
+  "id": "S018",
+  "url": "https://agito-akribis.com/wp-content/uploads/2022/02/AVM-Series-.pdf",
+  "category": "10_执行器_导轨与编码器",
+  "origins": [
+    "补充检索_原文提及条目及有效替代入口"
+  ],
+  "context": "Akribis_AVM音圈电机规格",
+  "title": "Akribis_AVM音圈电机规格",
+  "files": [
+    {
+      "path": "10_执行器_导轨与编码器\\S018_Akribis_AVM音圈电机规格.pdf",
+      "type": "PDF",
+      "pages": 10,
+      "bytes": 10804928,
+      "sha256": "f74be6793384131e5358fdb33a1d352ee4060b57af42a2e5f3d7ec0466d18f02",
+      "url": "https://agito-akribis.com/wp-content/uploads/2022/02/AVM-Series-.pdf",
+      "text_chars": 12303,
+      "title": "",
+      "preview": "ADR360-A150 / ADR360-A215\nContinuous force measured without any additional mounting plate or heat sink on coil\nMeasured at 25 °2\n1\n Specifications （Standard Series）AVM\nAkribis  systems\nIII-05 / III-06\nAVM Series\nmm\nN/A\nV/(m/s)\nN\nN\nohms\nmH\nV\nA\nA\nVdc\nN/Sqrt(W)\nW\nms\nms\nmm\nW\nW/°C\n°C\ng\ng\nAVM 30-15\n15\n7.35\n7.35\n4.63\n29.40\n10.22\n2.63\n40.88\n0.63\n4.00\n60\n2.30\n4.06\n0.26\n6.81\n0.60\n163.52\n0.054\n100\n36.0\n95.6\nAVM 40-20\n20\n12.90\n12.90\n9.93\n58.05\n12.10\n5.12\n54.45\n0.77\n4.50\n60\n3.71\n7.17\n0.42\n4.87\n0.60\n245.03\n0.",
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://agito-akribis.com/wp-content/uploads/2022/02/AVM-Series-.pdf",
+      "http": 200,
+      "final_url": "https://agito-akribis.com/wp-content/uploads/2022/02/AVM-Series-.pdf",
+      "result": "有效PDF"
+    }
+  ],
+  "status": "PDF已下载"
+}

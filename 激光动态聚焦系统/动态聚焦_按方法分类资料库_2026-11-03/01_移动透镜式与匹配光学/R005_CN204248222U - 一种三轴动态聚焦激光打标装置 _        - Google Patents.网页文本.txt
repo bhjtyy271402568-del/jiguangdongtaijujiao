@@ -1,0 +1,688 @@
+来源：https://patents.google.com/patent/CN204248222U/zh
+采集日期：2026-11-03
+
+CN204248222U - 一种三轴动态聚焦激光打标装置 
+        - Google Patents
+CN204248222U - 一种三轴动态聚焦激光打标装置 
+        - Google Patents
+一种三轴动态聚焦激光打标装置
+Download PDF
+Info
+Publication number
+CN204248222U
+CN204248222U
+CN201420521219.1U
+CN201420521219U
+CN204248222U
+CN 204248222 U
+CN204248222 U
+CN 204248222U
+CN 201420521219 U
+CN201420521219 U
+CN 201420521219U
+CN 204248222 U
+CN204248222 U
+CN 204248222U
+Authority
+CN
+China
+Prior art keywords
+axis
+focus lamp
+laser
+dynamic focusing
+servomotor
+Prior art date
+2014-09-11
+Legal status (The legal status is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the status listed.)
+Expired - Lifetime
+Application number
+CN201420521219.1U
+Other languages
+English
+(
+en
+)
+Inventor
+杨海青
+Current Assignee (The listed assignees may be inaccurate. Google has not performed a legal analysis and makes no representation or warranty as to the accuracy of the list.)
+SUZHOU FEILEI TAIKE LASER TECHNOLOGY Co Ltd
+Original Assignee
+SUZHOU FEILEI TAIKE LASER TECHNOLOGY Co Ltd
+Priority date (The priority date is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the date listed.)
+2014-09-11
+Filing date
+2014-09-11
+Publication date
+2015-04-08
+2014-09-11
+Application filed by SUZHOU FEILEI TAIKE LASER TECHNOLOGY Co Ltd
+filed
+Critical
+SUZHOU FEILEI TAIKE LASER TECHNOLOGY Co Ltd
+2014-09-11
+Priority to CN201420521219.1U
+priority
+Critical
+patent/CN204248222U/zh
+2015-04-08
+Application granted
+granted
+Critical
+2015-04-08
+Publication of CN204248222U
+publication
+Critical
+patent/CN204248222U/zh
+2024-09-11
+Anticipated expiration
+legal-status
+Critical
+Status
+Expired - Lifetime
+legal-status
+Critical
+Current
+Links
+Espacenet
+Global Dossier
+Discuss
+238000007639
+printing
+Methods
+0.000
+title
+claims
+abstract
+description
+10
+230000003287
+optical effect
+Effects
+0.000
+claims
+abstract
+description
+22
+CURLTUGMZLYLDI-UHFFFAOYSA-N
+Carbon dioxide
+Chemical group
+O=C=O
+CURLTUGMZLYLDI-UHFFFAOYSA-N
+0.000
+claims
+description
+6
+229910002092
+carbon dioxide
+Inorganic materials
+0.000
+claims
+description
+3
+239000001569
+carbon dioxide
+Substances
+0.000
+claims
+description
+3
+239000006185
+dispersion
+Substances
+0.000
+claims
+description
+3
+239000013307
+optical fiber
+Substances
+0.000
+claims
+description
+3
+239000004065
+semiconductor
+Substances
+0.000
+claims
+description
+3
+238000002834
+transmittance
+Methods
+0.000
+abstract
+description
+4
+238000005516
+engineering process
+Methods
+0.000
+description
+3
+230000001154
+acute effect
+Effects
+0.000
+description
+1
+230000009286
+beneficial effect
+Effects
+0.000
+description
+1
+238000006243
+chemical reaction
+Methods
+0.000
+description
+1
+230000007812
+deficiency
+Effects
+0.000
+description
+1
+230000000694
+effects
+Effects
+0.000
+description
+1
+238000010330
+laser marking
+Methods
+0.000
+description
+1
+238000003754
+machining
+Methods
+0.000
+description
+1
+238000004519
+manufacturing process
+Methods
+0.000
+description
+1
+238000000034
+method
+Methods
+0.000
+description
+1
+235000015096
+spirit
+Nutrition
+0.000
+description
+1
+Landscapes
+Laser Beam Processing
+(
+AREA
+)
+Abstract
+一种基于激光器输出光束的三轴动态聚焦激光打标装置，它包括依次同轴设置的激光器、Z轴动态聚焦镜、第一聚焦镜、第二聚焦镜、X轴振镜、Y轴振镜；该Z轴动态聚焦镜与一第一伺服电机连接而可在该激光器与该第一聚焦镜之间的光轴方向上移动；该X轴振镜和Y轴振镜分别连接第二伺服电机及第三伺服电机，两反射振镜可高速摆动调整镜片与入射光束之间的角度。本实用新型提供的动态聚焦打标装置无需激光扩束准直系统，光束能量损耗低、结构紧凑，可以有效提高系统的光学透过率，提高打标效率，可实现高精度大幅面打标和曲面3D打标。
+Description
+一种三轴动态聚焦激光打标装置
+技术领域
+本实用新型属于激光加工技术领域，特别是一种三轴动态聚焦激光打标装置。
+背景技术
+随着激光加工技术的发展，采用动态光学控制技术的三维动态聚焦系统的出现克服了传统激光打标、雕刻系统存在的加工幅面小和加工光斑不均匀性等局限，广泛应用于高端工业制造、电子、医疗和工艺品等领域的大幅面标刻和三维曲面标刻中。
+现有动态聚焦打标装置中要求对于激光器发射的光束，经过光学扩束准直系统调整成均匀的平行光束。平行光再先后经过Z轴动态聚焦镜、单片聚焦镜、X轴振镜和Y轴振镜扫描后聚焦在需要标刻工件的表面。这种动态聚焦打标装置存在的问题是，对于激光器发射的光束经过光学扩束准直系统后成为平行光束，激光束能量损耗大，同时对扩束后的激光束精细分析后得出，该平行光束也并非理论意义的平行光，动态聚焦后存在光斑发散不均匀等问题。因此在激光打标过程中，存在激光功率不足、打标较浅和打标不精细的问题。
+实用新型内容
+鉴于上述问题，本实用新型的目的是提供一种三轴动态聚焦激光打标装置，其具有结构紧凑，打标效率高、精度高的优点。
+为实现上述目的，本实用新型采取以下技术方案：
+一种三轴动态聚焦激光打标装置，它包括依次同轴设置的激光器、Z轴动态聚焦镜、第一聚焦镜、第二聚焦镜、X轴振镜和Y轴振镜；
+该激光器发出的激光束具有一预定的光斑直径和发散角度；该第一聚焦镜和第二聚焦镜依次排列在所述Z轴动态聚焦镜后面的所述光轴上；
+X轴振镜设置在该第二聚焦镜光轴上；
+该Z轴动态聚焦镜为负焦距透镜，与一第一伺服电机连接而可在该激光器与该第一聚焦镜之间的光轴方向上移动；
+该第一聚焦镜、第二聚焦镜为相对设置的正焦距透镜；
+该X轴振镜和Y轴振镜分别连接第二伺服电机及第三伺服电机，两反射振镜可高速摆动调整镜片与入射光束之间的角度
+进一步的，所述第一聚焦镜、第二聚焦镜非球面正焦距透镜。
+进一步的，所述激光器为二氧化碳激光器、半导体激光器或光纤激光器。
+本实用新型的有益效果是：本实用新型可以有效提高系统的光学透过率，提高打标效率，可实现高精度大幅面打标和曲面3D打标。
+附图说明
+图1是本实用新型的结构示意图。
+具体实施方式
+以下仅以实施例说明本实用新型可能的实施态样，然而并非用以限制本实用新型所欲保护的范畴，先予叙明。
+如图1所示，本实用新型提供一种三轴动态聚焦激光打标装置，它包括依次同轴设置的激光器1、Z轴动态聚焦镜2、第一聚焦镜3、第二聚焦镜4，该第二聚焦镜4后设有X轴振镜5、Y轴振镜6。
+该激光器1可以为二氧化碳激光器、半导体激光器或光纤激光器，其发出的激光束具有一预定的光斑直径D和发散角度α，不需要经过光学扩束准直系统调整成平行光。
+该Z轴动态聚焦镜2为负焦距透镜，与一第一伺服电机7连接，通过运动转换机构71将电机的转动转变成直线运动，而可使该Z轴动态聚焦镜2在该激光器1与该第一聚焦镜3之间的光轴方向上移动，进而改变激光焦距大小。
+该第一聚焦镜3、第二聚焦镜4为相对设置的非球面正焦距透镜。
+该X轴振镜5与该第二聚焦镜4的光轴之间的角度为钝角，该Y轴振镜6与该第二聚焦镜4的光轴之间的角度为锐角，使得该第二聚焦镜4射出的激光束经该X轴振镜5和Y轴振镜6的反射射向下方待打标工件，且激光束聚焦在工件表面。该X轴振镜5和Y轴振镜6分别连接第二伺服电机8及第三伺服电机9，通过电机控制X轴振镜5和Y轴振镜6进行偏转摆动，进而控制激光束的聚焦焦点位置，定位于工件表面，可实现小光斑大幅面打标。
+本实用新型三轴动态聚焦打标装置，其激光器1的输出光束直接射入由Z轴动态聚焦镜2及第一聚焦镜3、第二聚焦镜4组成的动态聚焦光学镜头组，再经过X轴、Y轴两片反射振镜，利用电机带动，可以使得激光束聚焦在待打标工件表面，实现三轴动态聚焦打标。该动态聚焦系统是直接接入激光器的输出光束，系统光学设计中省去了现有技术中的光斑扩束准直镜片组，使得本装置结构紧凑，光学透过率高，能量损失小，同时通过对光学镜片的三轴运动控制，实现了高精度、高效率激光加工。
+本实用新型的三轴动态聚焦打标装置与已有技术相比具有以下积极效果：
+1、本实用新型基于激光器光束特性参数，采用先进的动态光学设计方案，优化光学组件，直接接入激光器输出光束，有效提高了系统的光学透过率，经过双片聚焦镜(第一、第二聚焦镜)提高了打标效率。
+2、本实用新型采用Z轴聚焦镜和X、Y轴振镜联动控制，可实现高精度大幅面打标和曲面3D打标。
+3、在同等配置条件下，本实用新型与目前同类产品相比，能够获得更细的光斑，提高加工效率，更好的全幅面(中心区和边缘区)的均匀度。
+4、采用本实用新型的三轴动态聚焦打标装置，其最大标刻线速度可达350字符/s不变形，标刻精度最小线宽可达0.15mm，重复精度最高可达0.003mm，具有优异的打标性能。
+本实用新型是以所述的权利要求所限定的。但基于此，本领域的普通技术人员可以做出种种显然的变化或改动，都应在本实用新型的主要精神和保护范围之内。
+Claims (
+3
+)
+1.一种三轴动态聚焦激光打标装置，其特征在于，它包括依次同轴设置的激光器、Z轴动态聚焦镜、第一聚焦镜、第二聚焦镜、X轴振镜和Y轴振镜；
+该激光器发出的激光束具有一预定的光斑直径和发散角度；
+该第一聚焦镜和第二聚焦镜依次排列在所述Z轴动态聚焦镜后面的光轴上；
+X轴振镜设置在该第二聚焦镜光轴上；
+该Z轴动态聚焦镜为负焦距透镜，与一第一伺服电机连接而可在该激光器与该第一聚焦镜之间的光轴方向上移动；
+该第一聚焦镜、第二聚焦镜为相对设置的正焦距透镜；
+该X轴振镜和Y轴振镜分别连接第二伺服电机及第三伺服电机，两反射振镜可高速摆动调整镜片与入射光束之间的角度。
+2.根据权利要求1所述的三轴动态聚焦激光打标装置，其特征在于：所述第一聚焦镜、第二聚焦镜非球面正焦距透镜。
+3.根据权利要求1或2所述的三轴动态聚焦激光打标装置，其特征在于：所述激光器为二氧化碳激光器、半导体激光器或光纤激光器。
+CN201420521219.1U
+2014-09-11
+2014-09-11
+一种三轴动态聚焦激光打标装置
+Expired - Lifetime
+CN204248222U
+(
+zh
+)
+Priority Applications (1)
+Application Number
+Priority Date
+Filing Date
+Title
+CN201420521219.1U
+CN204248222U
+(
+zh
+)
+2014-09-11
+2014-09-11
+一种三轴动态聚焦激光打标装置
+Applications Claiming Priority (1)
+Application Number
+Priority Date
+Filing Date
+Title
+CN201420521219.1U
+CN204248222U
+(
+zh
+)
+2014-09-11
+2014-09-11
+一种三轴动态聚焦激光打标装置
+Publications (1)
+Publication Number
+Publication Date
+CN204248222U
+true
+CN204248222U
+              (
+zh
+)
+2015-04-08
+Family
+ID=52952575
+Family Applications (1)
+Application Number
+Title
+Priority Date
+Filing Date
+CN201420521219.1U
+Expired - Lifetime
+CN204248222U
+(
+zh
+)
+2014-09-11
+2014-09-11
+一种三轴动态聚焦激光打标装置
+Country Status (1)
+Country
+Link
+CN
+(
+1
+)
+CN204248222U
+(
+zh
+)
+Cited By (7)
+* Cited by examiner, † Cited by third party
+Publication number
+Priority date
+Publication date
+Assignee
+Title
+CN105750728A
+(
+zh
+)
+*
+2016-04-20
+2016-07-13
+华南理工大学
+一种激光选区零件加工过程变光斑光学扫描方法及装置
+CN106493122A
+(
+zh
+)
+*
+2016-10-27
+2017-03-15
+苏州菲镭泰克激光技术有限公司
+零件的激光精密清洗装置及方法
+CN107252797A
+(
+zh
+)
+*
+2017-06-13
+2017-10-17
+苏州菲镭泰克激光技术有限公司
+宽焦域激光清洗方法及装置
+CN111618424A
+(
+zh
+)
+*
+2019-02-28
+2020-09-04
+深圳市大族数控科技有限公司
+一种三轴振镜共轴调节装置及焦距确认方法
+CN111856712A
+(
+zh
+)
+*
+2020-07-31
+2020-10-30
+南京波长光电科技股份有限公司
+一种扫描幅面可调的新型激光扫描光学系统
+US20220283416A1
+(
+en
+)
+*
+2021-03-04
+2022-09-08
+Ii-Vi Delaware, Inc.
+Dynamic Focus For Laser Processing Head
+CN116460423A
+(
+zh
+)
+*
+2023-04-20
+2023-07-21
+江苏大学
+一种基于衍射光学元件的激光三维动态聚焦系统及工作方法
+2014
+2014-09-11
+CN
+CN201420521219.1U
+patent/CN204248222U/zh
+not_active
+Expired - Lifetime
+Cited By (9)
+* Cited by examiner, † Cited by third party
+Publication number
+Priority date
+Publication date
+Assignee
+Title
+CN105750728A
+(
+zh
+)
+*
+2016-04-20
+2016-07-13
+华南理工大学
+一种激光选区零件加工过程变光斑光学扫描方法及装置
+CN106493122A
+(
+zh
+)
+*
+2016-10-27
+2017-03-15
+苏州菲镭泰克激光技术有限公司
+零件的激光精密清洗装置及方法
+CN107252797A
+(
+zh
+)
+*
+2017-06-13
+2017-10-17
+苏州菲镭泰克激光技术有限公司
+宽焦域激光清洗方法及装置
+CN107252797B
+(
+zh
+)
+*
+2017-06-13
+2019-05-24
+苏州菲镭泰克激光技术有限公司
+宽焦域激光清洗方法及装置
+CN111618424A
+(
+zh
+)
+*
+2019-02-28
+2020-09-04
+深圳市大族数控科技有限公司
+一种三轴振镜共轴调节装置及焦距确认方法
+CN111856712A
+(
+zh
+)
+*
+2020-07-31
+2020-10-30
+南京波长光电科技股份有限公司
+一种扫描幅面可调的新型激光扫描光学系统
+US20220283416A1
+(
+en
+)
+*
+2021-03-04
+2022-09-08
+Ii-Vi Delaware, Inc.
+Dynamic Focus For Laser Processing Head
+US12265207B2
+(
+en
+)
+*
+2021-03-04
+2025-04-01
+Ii-Vi Delaware, Inc.
+Dynamic focus for laser processing head
+CN116460423A
+(
+zh
+)
+*
+2023-04-20
+2023-07-21
+江苏大学
+一种基于衍射光学元件的激光三维动态聚焦系统及工作方法
+Similar Documents
+Publication
+Publication Date
+Title
+CN204122928U
+(
+zh
+)
+2015-01-28
+一种大幅面激光雕刻机
+CN103658975B
+(
+zh
+)
+2017-02-15
+一种激光分束加工装置
+CN203817621U
+(
+zh
+)
+2014-09-10
+一种激光分束振镜扫描加工装置
+CN106001927A
+(
+zh
+)
+2016-10-12
+一种测量加工一体化的激光平整化抛光方法
+CN204122926U
+(
+zh
+)
+2015-01-28
+一种激光标刻控制系统
+CN105149773B
+(
+zh
+)
+2017-11-24
+一种透明玻璃的加工方法及装置
+CN203265914U
+(
+zh
+)
+2013-11-06
+一种大幅面微孔高速钻孔系统
+CN105081586A
+(
+zh
+)
+2015-11-25
+一种激光加工方法和装置
+CN103706946A
+(
+zh
+)
+2014-04-09
+一种激光分束振镜扫描加工装置
+CN203124969U
+(
+zh
+)
+2013-08-14
+基于自适应光学的激光微细加工设备
+CN102990308B
+(
+zh
+)
+2015-05-13
+一种干气密封螺旋槽的激光刻槽加工方法
+CN106773025B
+(
+zh
+)
+2019-07-16
+调焦镜头及振镜式激光扫描系统
+CN102139415A
+(
+zh
+)
+2011-08-03
+一种血管支架切割设备及方法
+CN204894798U
+(
+zh
+)
+2015-12-23
+长尺寸回转体加工件激光旋转打标系统
+CN103100797A
+(
+zh
+)
+2013-05-15
+基于自适应光学的激光微细加工设备和方法
+CN210967462U
+(
+zh
+)
+2020-07-10
+一种可调变的宽带激光加工光学系统
+CN204936518U
+(
+zh
+)
+2016-01-06
+一种3d激光打标机
+CN103418911A
+(
+zh
+)
+2013-12-04
+窄小空间激光打标方法及其打标机
+CN109623161A
+(
+zh
+)
+2019-04-16
+一种多轴数控激光加工设备及其加工方法
+CN107030379A
+(
+zh
+)
+2017-08-11
+一种激光加工头、激光加工装置及其加工方法
+CN105479015A
+(
+zh
+)
+2016-04-13
+一种大幅面激光机
+CN203712073U
+(
+zh
+)
+2014-07-16
+一种激光分束加工装置
+CN105149792A
+(
+zh
+)
+2015-12-16
+一种三维激光雕刻机的控制系统
+CN101497149A
+(
+zh
+)
+2009-08-05
+一种激光飞行聚焦扫描系统
+CN207534187U
+(
+zh
+)
+2018-06-26
+激光打孔装置
+Legal Events
+Date
+Code
+Title
+Description
+2015-04-08
+C14
+Grant of patent or utility model
+2015-04-08
+GR01
+Patent grant
+2024-09-27
+CX01
+Expiry of patent term
+2024-09-27
+CX01
+Expiry of patent term
+Granted publication date
+:
+20150408

@@ -1,0 +1,31 @@
+{
+  "url": "https://www.ezcad.com/products/dlc2-v2/",
+  "category": "07_测高闭环_三轴同步与标定",
+  "origins": [
+    "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+    "用户粘贴_激光动态聚焦深度调研.txt"
+  ],
+  "context": "\n- 原始入口：https://www.ezcad.com/products/dlc2-v2/",
+  "id": "R040",
+  "files": [
+    {
+      "path": "07_测高闭环_三轴同步与标定\\R040_DLC2-V2 USB Laser Marking Control Board _ JCZ.html",
+      "type": "HTML",
+      "bytes": 273299,
+      "sha256": "30bd7173abd8250caea745f1814275fe9d06699e3edbb844a234bbe09642cca6",
+      "url": "https://www.ezcad.com/products/dlc2-v2/",
+      "title": "DLC2-V2 USB Laser Marking Control Board | JCZ",
+      "text_chars": 24988
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://www.ezcad.com/products/dlc2-v2/",
+      "http": 200,
+      "final_url": "https://www.ezcad.com/products/dlc2-v2/",
+      "result": "网页"
+    }
+  ],
+  "title": "DLC2-V2 USB Laser Marking Control Board | JCZ",
+  "status": "网页已保存"
+}

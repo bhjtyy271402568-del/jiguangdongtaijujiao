@@ -1,0 +1,782 @@
+Research Article
+Vol. 34, No. 8 / 20 Apr 2026 / Optics Express 14943
+Doubled Z-axis scanning range and spot-quality
+enhancement in system-level integrated
+co-optimized transmissive 3D laser scanning
+systems
+YUNLI YU,1,† JIAN SHAO,2,† DONGXIN GAO,1 WENYU WANG,1
+YUZHAI PAN,1,3 AND LEIMIN DENG2,4
+1Department of Optoelectronics Science, Harbin Institute of Technology, Weihai 264209, China
+2Huazhong University of Science and Technology, Wuhan 430074, China
+3panyz@hitwh.edu.cn
+4dlm@hust.edu.cn
+†These authors contributed equally.
+Abstract: Transmissive three-dimensional (3D) laser scanning systems are promising for
+precision micro- and nanofabrication, but their scanning range is limited by cumulative optical
+path difference (OPD) induced by large-field angular scanning and dynamic axial focusing.
+We propose a system-level integrated co-optimization (SLICO) strategy in which the dynamic
+focusing module, XY galvanometric scanner, and F-theta telecentric lens are jointly modeled
+and optimized for collaborative aberration compensation as a unified system. Simulations
+demonstrate that, over an 80 mm diameter XY scanning field and with the Z-axis scanning range
+extended from ±10 mm to ±20 mm, the OPD is reduced from 1.0 to 0.25 waves and the Strehl
+ratio (STRH) rises from 0.3 to above 0.96. Experimental validation confirms the strategy’s
+feasibility and performance. This co-optimization strategy significantly enlarges the scanning
+field for a high-quality focal spot and provides a practical solution for high-precision, large-range
+laser fabrication.
+© 2026 Optica Publishing Group under the terms of the Optica Open Access Publishing Agreement
+1.
+Introduction:
+Laser 3D scanning technology, which relies on the rapid movement of the laser focus in the 3D
+space, has found widespread applications in laser material processing [1–4], laser cleaning [5–8],
+and 3D printing [9–12]. In such systems, the coupled operation of the dynamic focusing module,
+XY galvanometer scanner, and F-theta telecentric lens plays a decisive role in determining
+the focal spot quality and the effective scanning range, thereby directly influencing the overall
+processing efficiency and precision. However, in transmissive 3D laser scanning systems, these
+optical components are generally designed and optimized independently, with each module
+minimizing its own optical path difference (OPD). When the modules are integrated into a
+complete system, optical coupling among the subsystems introduces additional system-level
+aberrations and OPD that are not accounted for in the separate designs. Moreover, the lateral
+beam deflection induced by the XY galvanometer scanner further amplifies the OPD across the
+scanning field. As a result, the focal spot quality progressively degrades along both the axial
+and lateral directions. This degradation becomes particularly pronounced over large scanning
+volumes, where the STRH, focal spot circularity and diameter deteriorate significantly, leading to
+reduced processing uniformity and a restricted scanning range.
+In response to the growing demand for high-speed and high-precision 3D laser processing in
+both industrial and scientific applications, various advanced Z-axis dynamic focusing elements
+have been developed, including variable-focus liquid lenses [13–18], tunable acoustic gradient-
+index (TAG) lenses [19–22], and deformable mirrors [23–26]. These devices offer advantages
+#588979
+https://doi.org/10.1364/OE.588979
+Journal © 2026
+Received 7 Jan 2026; revised 21 Feb 2026; accepted 1 Apr 2026; published 13 Apr 2026
+
+
+Research Article
+Vol. 34, No. 8 / 20 Apr 2026 / Optics Express 14944
+in terms of response speed, focal tunability, and system compactness. Despite these advances,
+under large scanning ranges and high-speed dynamic focusing conditions, residual aberrations
+and focal spot distortions [27,28] remain significant challenges. In addition, reflective dynamic
+focusing devices achieve 3D laser processing by converting galvanometer angular motion into
+axial displacement [29–31]. However, such systems typically require four galvanometer scanners,
+which increases system cost and complexity while restricting the achievable 3D scanning range.
+As a result, achieving uniform and high-quality focal spots over an extended 3D scanning range
+remains challenging for existing dynamic focusing schemes, thereby limiting the feasibility
+of large-area, high-precision 3D laser processing and motivating further investigation into
+transmissive 3D laser scanning systems. In contrast, studies on transmissive 3D laser scanning
+systems remain relatively limited, and the interplay between system configuration and aberration
+remains insufficiently understood with a lack of systematic design methodologies.
+In this paper, the mechanisms that limit the scanning range in transmissive 3D laser scanning
+systems are systematically investigated. A system-level integrated co-optimization (SLICO)
+strategy is proposed, in which the dynamic focusing module, XY galvanometer scanner, and
+F-theta telecentric lens are jointly optimized to suppress system-level OPD and expand the
+usable 3D scanning range. A comprehensive simulation model is developed to predict the
+evolution of the STRH, focal spot circularity and diameter throughout the entire scanning space.
+Experimental validation is subsequently performed. The results demonstrate that the proposed
+strategy maintains uniform, high-quality focal spots across the full 3D scanning range, thereby
+significantly improving processing consistency and reliability.
+2.
+Simulation comparison of the conventional transmissive 3D laser scanning
+system and the optimized design
+2.1.
+Description of transmissive 3D laser scanning system
+In the proposed transmissive 3D laser scanning system, the dynamic focusing module functions as
+the Z-axis dynamic focusing module, and its optical configuration is illustrated in Fig. 1(a). The
+theoretical model comprises a movable negative lens P1 and a fixed positive lens P2. Specifically,
+axial translation of P1 modifies in the effective focal length of the laser system, thereby enabling
+continuous adjustment of the focal position along the Z axial direction. In the optical layout, d1,
+d2 and d3 represent the distances between P1 and P2, between P2 and the ideal F-theta telecentric
+lens P3, and between P3 and the image plane (i.e., the working distance), respectively, while D
+represents the beam aperture of the system. Based on imaging theory, the functional relationship
+among the working distance d3, the effective focal length f of the transmissive 3D laser scanning
+system, and the output beam divergence angle α of the dynamic focusing module can be derived.
+The corresponding mathematical expression is provided in Eq. (1). This model provides a
+theoretical basis for predicting the Z-axis focal shift and for optimizing the dynamic focusing
+performance of the scanning system.
+d3 = f3
+f1f2 −d1f2 −d2f1 + d1d2 −d2f2
+f1f2 −d1f2 −d2f1 + d1d2 −d2f2 + f1f3 −d1f3 + f2f3
+f =
+f1f2f3
+f1f2 −d1f2 −d2f1 + d1d2 −d2f2 + f1f3 −d1f3 + f2f3
+α = arctan
+{︃D
+2
+[︃1
+f1
++ 1
+f2
+(︃
+1 −d1
+f1
+)︃]︃}︃
+(1)
+To validate the accuracy of Eq. (1) in predicting the dynamic behavior of the system and
+to evaluate its dynamic focusing performance, numerical simulations were conducted using a
+custom-developed program. The theoretical values for the dynamic focusing performance were
+obtained from Eq. (1) and Eq. (2). For comparison, Zemax simulations were also performed to
+
+
+Research Article
+Vol. 34, No. 8 / 20 Apr 2026 / Optics Express 14945
+Fig. 1. (a) Schematic principle of the dynamic focusing module. (b) Optical layout of
+the transmissive 3D laser scanning system. (c) Analytical vs. simulated dependence of
+the focal shift ∆d3 on the lens displacement ∆d1. (d) Comparison between theoretical and
+simulation results for the maximum working distance shift under a ± 2 mm variation in d1
+across different F-theta lens focal lengths. Solid lines and scatter points denote the theoretical
+derivations and Zemax simulations, respectively.
+generate the corresponding simulation results. The simulations employed lens P1 with a focal
+length of f1 = -26.6 mm, a positive lens P2 with f2 = 45.5 mm, and an ideal F-theta telecentric lens
+P3 with f3 = 167 mm. To compare the theoretical results from Eq. (1) with the simulation results,
+we conducted a side-by-side comparison, as shown in Fig. 1(c). While the theoretical predictions
+(based on Eq. (1)) and the simulation results exhibit a similar linear dependence of the working
+distance d3 on the axial displacement of the negative lens P1, slight differences can be observed.
+Specifically, when P1 was translated by ±2 mm along the optical axis, the working distance d3
+varied by ±20 mm in theory, while the simulation results indicated a small deviation from this
+predicted value. This demonstrates that the system achieves a tenfold Z-axis dynamic focusing
+via an optical lever amplification mechanism, with both the theory and simulations showing
+consistent but slightly differing results. To validate Eq. (2) and compare it with simulation results,
+we include both theoretical predictions and simulations in Fig. 1(d). As shown in the figure,
+both the theoretical model and the simulation results reveal that the Z-axis dynamic focusing
+capability of the system increases with the focal length of the F-theta telecentric lens within
+a certain range. Although there are minor discrepancies between the theory and simulations,
+the trends in the data are in good agreement. This suggests that properly selecting the F-theta
+telecentric lens parameters can further enhance the achievable dynamic focusing range, with the
+theory and simulations showing good overall consistency.
+The geometric optical model of the transmissive 3D laser scanning system is illustrated in
+Fig. 1(b). The system primarily consists of a dynamic focusing module, an XY galvanometer
+scanner, and an F-theta telecentric lens. The X and Y galvanometer mirrors, denoted as G1 and
+G2, rotate about their respective axes, enabling high speed beam scanning within the XY plane.
+The dynamic focusing module consists of three optical lenses, labeled P1, P2, and P3. Collimated
+light first propagates through this module and is subsequently deflected by the galvanometer
+scanner, allowing precise positioning of the focal spot at any point P(x,y,z) in 3D space. Here,
+θx and θy denote the deflection angles of the X and Y galvanometers, respectively; h represents
+the output beam radius of the dynamic focusing module; α is the beam divergence angle. The
+distances dx, dxy, and l10 correspond to the spacing between the dynamic focusing module and the
+
+
+Research Article
+Vol. 34, No. 8 / 20 Apr 2026 / Optics Express 14946
+X galvanometer axis, between the X and Y galvanometer axes, and between the Y galvanometer
+axis and the F-theta telecentric lens, respectively, while f1 is the focal length of the F-theta
+telecentric lens. After passing through the transmissive F-theta telecentric lens, the imaging
+distance is defined as l2. Based on paraxial imaging theory [32], the positional coordinates of the
+system focal point P(x,y,z) can be calculated using the following relationship:
+x = (
+√︁
+z2 + y2 + d1) tan 2θx
+y = z tan 2θy
+z = l10 + l20
+(2)
+where,
+l1 =
+l10
+cos 2θy
+l20 = l2 cos 2θy
+l2 =
+BG cos α
+cos(2θy−α) +l1 tan(2θy−α)+
+BC cos α
+cos(2θy+α) +l1 tan(2θy+α)
+tan(2θy+α)−tan(2θy−α)+ 1
+f1
+(︂
+BG cos α
+cos(2θy−α) +l1 tan(2θy−α)+
+BC cos α
+cos(2θy+α) +l1 tan(2θy+α)
+)︂
+BC = BG = h −dx tan α −
+dxy
+cos 2θx tan α
+(3)
+As indicated in Eq. (2), the system focal position P(x,y,z) is determined jointly by the deflection
+angles of the XY galvanometer scanner and the divergence angle of the output beam emitted from
+the dynamic focusing module. The dynamic focusing module is actuated by a voice coil motor
+and, in combination with an optical lever amplification mechanism, exhibits dynamic response
+characteristics and Z-axis scanning speeds that are compatible with those of the XY galvanometer
+scanner. This configuration ensures high speed, synchronized 3D focusing. Because both the
+galvanometer deflection angles and the output beam divergence can be precisely controlled via
+input voltages, the laser focal spot can be scanned along a predetermined trajectory in 3D space
+by appropriately designing the voltage drive functions, while maintaining the system’s dynamic
+performance under high-speed operation.
+In the proposed 3D scanning system, the incident laser beam can be modeled as a monochromatic
+scalar wave. The electric field distribution E(r, t) at the entrance pupil is governed by the scalar
+wave equation:
+E(r, t) = A(r)exp[i(k · r −ωt + ϕ)]
+(4)
+where A(r) is the amplitude, k is the wave vector, w is the angular frequency, and φ represents the
+phase component. The phase component is intrinsically related to the wavefront function W(ρ,θ)
+as follows:
+ϕ = 2π
+λ W(ρ, θ)
+(5)
+where ρ denotes the normalized pupil coordinate and θ is the azimuthal angle. In conventional
+transmissive 3D laser scanning systems, the aberration correction and the design of focal-plane
+flatness for the F-theta telecentric lens are typically performed under the assumption that the
+beam incident on the entrance pupil constitutes an ideal plane wave, where the wavefront function
+is constant:
+W(ρ, θ) = const
+(6)
+Under this condition, the phase distribution across the aperture is uniform, allowing system
+aberrations, including spherical aberration and coma, to be effectively compensated.
+
+
+Research Article
+Vol. 34, No. 8 / 20 Apr 2026 / Optics Express 14947
+However, the introduction of the dynamic focusing module induces a dynamic divergence
+angle α into the incident beam, transforming the wavefront from a plane wave into a spherical
+wave. This modifies the entrance-pupil wavefront function as follows:
+W′(ρ, θ) = W(ρ, θ) + ∆ϕ(α, ρ)
+(7)
+where ∆ϕ(α, ρ) represents the phase shift introduced by the beam divergence. Consequently, the
+phase distribution deviates from the ideal planar state, disrupting the original aberration balance.
+As a result, the pre-designed correction of the F-theta telecentric lens becomes ineffective, leading
+to focal spot distortion, increased spot diameter, and degraded 3D scanning performance.
+2.2.
+Simulation and analysis of the conventional transmissive 3D laser scanning
+system
+Based on the theoretical analysis, a conventional transmissive 3D laser scanning model with direct
+integration was constructed to further investigate the underlying mechanisms responsible for the
+observed performance degradation. To establish a rigorous comparative baseline in the optical
+simulations, the conventional 3D scanning system was modeled using an equivalent optical
+approach. Because the exact internal prescriptions of the commercial LINOS F-theta lens and the
+Scanlab dynamic focusing unit are proprietary, an equivalent F-theta lens model matching the
+macroscopic specifications of the physical setup (focal length f = 167 mm, operating wavelength
+λ = 1064 nm) was utilized. Furthermore, the conventional dynamic focusing module was modeled
+as an aberration-free paraxial surface with a variable focal length to represent the ideal Z-axis shift.
+During the multi-configuration optimization for the 3D scanning volume, the focal length of this
+paraxial surface was dynamically adjusted within the ranges of (-∞, -1250 mm] and [1450 mm,
+∞). This parameter variation precisely corresponds to a physical working distance shift from
+196.660 mm to 236.367 mm (centered at 216.342 mm), effectively covering the ± 20 mm Z-axis
+scanning range. In this model, the dynamic focusing module is idealized as lenses without
+intrinsic aberrations and is directly integrated with the XY galvanometer scanner and the F-theta
+telecentric lens. System performance was evaluated via numerical simulations using the Physical
+Optics Propagation (POP) method with a Gaussian input beam. The simulations focused on the
+OPD and focusing quality across different Z-axis planes and galvanometer deflection angles. By
+adjusting the focal length of the dynamic focusing module, a Z-axis dynamic focusing range
+of ±20 mm was achieved. The normalized pupil coordinates along the X and Y directions are
+denoted by xp and yp, respectively. The simulation results are presented in Fig. 2. Figure 2(a)-(b)
+illustrate the OPD distributions at different Z-axis positions for the on-axis condition, where (θx,
+θy) = (0, 0) and the corresponding scan-field coordinate is (x, y) = (0 mm, 0 mm). As the Z-axis
+position shifts from Z = 0 mm to Z = ±20 mm, the absolute OPD along the xp and yp directions
+increase monotonically, indicating that larger Z-axis offsets induce greater wavefront deviation,
+particularly for marginal rays. The OPD profiles along the two pupil directions remain nearly
+identical at each Z plane, consistent with the system’s inherent axial symmetry. Under off-axis
+field conditions, the OPD becomes markedly asymmetric. For a galvanometer deflection of (θx,
+θy) = (0, 7), corresponding to (x, y)= (0 mm, 40 mm), the resulting OPD distributions shown in
+Fig. 2(c)-(d) reveal that the OPD along the X direction stays below 0.25 waves, whereas the OPD
+along the Y direction increases significantly with both yp and Z-axis displacement. A comparable
+but orthogonally oriented trend is observed for (θx, θy) = (7, 0), corresponding to (x, y) = (40 mm,
+0 mm), as illustrated in Fig. 2(e)-(f): the OPD along Y remains within 0.25 waves, while the
+OPD along X increases substantially with increasing xp and Z-axis offset.
+Overall, the results in Fig. 2(a)-(f) demonstrate a clear dependence of OPD on both galvanometer
+deflection and axial focusing position. Within the Z-axis range of |Z| ≤10 mm, the OPD remains
+below 0.5 waves across the full scan field, indicating stable wavefront quality. Beyond this range,
+
+
+Research Article
+Vol. 34, No. 8 / 20 Apr 2026 / Optics Express 14948
+Fig. 2. OPD distribution of the directly integrated transmissive 3D laser scanning system as
+a function of normalized pupil coordinates xp, yp and focal depth Z under different scanning
+conditions: (a, b) Axial field with mirror deflection angles (θx, θy) = (0, 0); (c,d) Off-axis
+field along Y direction with (θx, θy) =(0, 7); (e, f) Off-axis field along X direction with(θx,
+θy) = (7, 0).
+the OPD increases significantly, reflecting a degradation in the system’s focusing performance
+and confirming the limitations of directly integrated transmissive configurations.
+To quantitatively evaluate the focusing quality and energy concentration of the system under
+different Z-axis planes and galvanometer deflection conditions, the STRH, focal spot diameter
+and circularity were employed as evaluation metrics. The simulation results are presented in
+Fig. 3(a)-(c). At the focal plane Z = 0 mm, the system exhibits near diffraction limited performance
+within a circular scanning field of 80 mm in diameter: the STRH approaches 1, the focal spot
+circularity remains close to 1, and the focal spot diameter remains stable at approximately 34 µm.
+These results demonstrate high focusing quality and strong energy concentration across the
+scanning field. When the focal plane is offset to Z = ±10 mm, the focusing performance begins to
+degrade: the STRH decreases to approximately 0.8, the focal-spot circularity drops to 80%, and
+the spot diameter increases, leading to reduced focal-spot uniformity. Further displacement to
+Z = ±20 mm results in more pronounced degradation: the STRH falls below 0.8, the circularity
+decreases to approximately 40%, and the focal-spot diameter reaches a maximum of 80 µm,
+accompanied by a significant reduction in spot uniformity. Under these conditions, the system is
+no longer suitable for high-precision laser processing.
+Fig. 3. Focusing performance of the directly integrated transmissive 3D laser scanning
+system across the 3D scanning range: (a) STRH distribution; (b) Focal spot circularity
+distribution; (c) Focal spot diameter distribution.
+The results in Fig. 2 and Fig. 3 indicate that the effective Z-axis scanning range of a conventional
+directly integrated transmissive 3D laser scanning system is limited to approximately ±10 mm.
+
+
+Research Article
+Vol. 34, No. 8 / 20 Apr 2026 / Optics Express 14949
+Beyond this range, system aberrations increase significantly, leading to degradation of the focal
+spot quality. This limitation arises from the optical design of dynamic focusing module and the
+F-theta telecentric lens, which are generally designed and optimized independently. During the
+individual optimization stage, each module minimizes its own OPD under nominal operating
+conditions. When these modules are integrated into a complete system, optical coupling among
+the subsystems is neglected, and additional system-level aberrations and OPD are introduced
+that are not accounted for in the separate designs. During 3D laser scanning, the dynamic
+focusing module inherently modifies the beam divergence, deviating from the parallel-beam
+condition required by the F-theta telecentric lens and thereby introducing additional aberrations.
+Moreover, off-axis beam deflection induced by the XY galvanometer scanner further amplifies
+the OPD across the scanning field. Under such conditions, the aberrations originating from the
+dynamic focusing module and the F-theta telecentric lens cannot be effectively compensated.
+As a result, the focal spot quality progressively degrades along both the axial and lateral
+directions. This degradation becomes particularly pronounced over large scanning volumes,
+where key spot metrics—including the STRH, focal spot circularity and diameter—deteriorate
+significantly. Consequently, the processing uniformity is reduced, the high-quality focusing range
+is substantially narrowed, and the achievable 3D scanning range of the system is severely limited.
+2.3.
+Simulation and analysis of the system-level integrated co-optimized transmissive
+3D laser scanning system
+To overcome this limitation and further extend the scanning range of the transmissive 3D laser
+scanning system, a SLICO strategy is proposed. In this strategy, the dynamic focusing module,
+XY galvanometer scanner, and F-theta telecentric lens are treated as a single, unified optical
+subsystem. Through multi-parameter coordinated design, system-level aberration balance is
+achieved, resulting in a fundamental improvement in focal-spot quality during 3D scanning. The
+systematic workflow of this proposed strategy is detailed in the algorithm flowchart presented in
+Fig. 4. As illustrated, the co-optimization process is fundamentally conducted in two stages: In
+the first stage, the dynamic focusing module and the F-theta telecentric lens are independently
+designed and preliminarily optimized. By adjusting parameters such as lens curvature, element
+thickness, optical material, and inter-element spacing, each module is optimized to minimize
+standalone aberrations. In the second stage, a SLICO model encompassing all three components
+is constructed, and system-level iterative optimization is conducted to achieve coordinated
+performance enhancement across the complete optical path. During this process, evaluation
+functions that simultaneously consider multiple Z-axis positions and a range of galvanometer
+deflection angles are introduced. Key performance metrics, including RMS wavefront error,
+STRH, and spot circularity, are simultaneously constrained. To achieve a system-level aberration
+balance, the SLICO strategy transitions to a co-optimization stage driven by a composite merit
+function (MF) within a multi-configuration environment. The MF is defined as:
+MF =
+√︄∑︁wi(Vi −Ti)2
+∑︁wi
+(8)
+where the Strehl ratio (STRH) and spot circularity (evaluated by the ratio of orthogonal Encircled
+Energy (DENC) using the DIVI operand) are designated as the primary image quality metrics.
+For both STRH and circularity, target values are set to 1.0 with a weight of 1.0 to ensure near-
+diffraction-limited focusing and high beam symmetry. Simultaneously, the effective 3D scanning
+depth is rigorously constrained to a 40 mm range with a weight of 1.0 by calculating the difference
+(DIFF) in back focal lengths (TTHI) between the marginal configurations. The optimization is
+executed using the Damped Least Squares (DLS) algorithm for rapid local convergence, followed
+by Hammer optimization to perform a global search for an optimal aberration balance across
+
+
+Research Article
+Vol. 34, No. 8 / 20 Apr 2026 / Optics Express 14950
+the entire scanning volume. This SLICO strategy enables global aberration balancing across
+the entire scanning field and a substantially expanded Z-axis focusing range, ensuring that the
+system maintains near diffraction limited focusing quality even under large Z-axis excursions.
+Fig. 4. Algorithm flowchart of the two-stage SLICO strategy.
+The SLICO strategy significantly enhances the overall optical performance of the system.
+As shown in Fig. 5(a)-(f), within a circular XY scanning field of 80 mm in diameter and a
+Z-axis focusing range of ±20 mm, the optimized system maintains the OPD below 0.25 waves,
+demonstrating a substantial improvement in wavefront quality. Further analysis of the focal
+spot metrics, presented in Fig. 6(a)–(c), shows that across this extended 3D scanning range, the
+STRH remains above 0.96, the focal-spot diameter is stabilized approximately 33.5 µm, and the
+focal-spot circularity exceeds 98%, closely approaching an ideal circular shape. These results
+confirm that the focal spot quality is significantly improved compared with the pre-optimized
+system. Overall, the simulation results verify that the proposed SLICO methodology effectively
+mitigates aberrations induced by dynamic focusing and XY galvanometer deflection. As a
+result, the system is capable of maintaining near-diffraction-limited focal performance over a
+large-area XY scan and extended Z-axis excursions. Compared with the conventional, directly
+integrated transmissive 3D dynamic focusing system, the optimized design doubles the Z-axis
+scanning range from ±10 mm to ±20 mm. This improvement demonstrates the effectiveness of
+the proposed approach in enhancing optical design robustness, improving focusing performance,
+and expanding the 3D laser processing capability.
+To understand the physical mechanisms behind the performance enhancement of the SLICO
+strategy, a quantitative breakdown of the specific aberrations was performed. Initially, the
+wavefront errors of the systems were decomposed using standard Zernike polynomials. To
+provide the most intuitive physical insight into the asymmetric optical paths caused by the
+inherent physical separation of the X and Y galvanometer mirrors, these low-order Zernike terms
+were directly mapped to their corresponding Seidel aberrations. These primary aberrations
+were systematically evaluated at the maximum deflection fields along both orthogonal axes: (θx,
+θy) = (0, 7) and (7, 0) under extreme Z-axis shifts (Z = ± 20 mm). The quantitative breakdown is
+presented in Table 1.
+In the conventional integrated system, dynamically adjusting the working distance inherently
+breaks the aberration balance of the commercial F-theta lens. Off-axis aberrations dominate
+at the scanning boundaries, particularly astigmatism and field curvature. For example, at (θx,
+θy) = (0, 7) with Z = 20 mm, the astigmatism coefficient for the conventional system reaches
+a substantial value of 0.2309, accompanied by a field curvature of 0.0914. These prominent
+asymmetrical aberrations inevitably lead to severe focal spot distortion, directly explaining the
+drastic drop in spot circularity observed in the previous sections.
+
+
+Research Article
+Vol. 34, No. 8 / 20 Apr 2026 / Optics Express 14951
+Fig. 5. OPD distribution of the directly integrated transmissive 3D laser scanning system as
+a function of normalized pupil coordinates xp, yp and focal depth Z under different scanning
+conditions: (a, b) Axial field with mirror deflection angles (θx, θy) = (0, 0); (c,d) Off-axis
+field along Y direction with (θx, θy) =(0, 7); (e, f) Off-axis field along X direction with(θx,
+θy) = (7, 0).
+Fig. 6. Focusing performance of the SLICO transmissive 3D laser scanning system across
+the 3D range: (a) STRH distribution; (b) Focal spot circularity distribution; (c) Focal spot
+diameter distribution.
+Table 1. Quantitative comparison of the primary aberrations (Zernike Standard coefficients,
+evaluated in waves) between the conventional and optimized SLICO systems. Data are extracted at
+the maximum orthogonal deflection fields (θx, θy) = (0, 7) and (7, 0) under extreme Z-axis scanning
+depths (Z = ±20 mm).
+Conventional
+SLICO
+Material
+z=+20 mm
+z = −20 mm
+z=+20 mm
+z = −20 mm
+(θx, θy) = (0, 7)
+Field Curvature
+0.0914
+-0.0506
+-0.0169
+0.0120
+Astigmatism
+0.2309
+-0.1381
+0.0224
+-0.0261
+Coma
+-0.0010
+-0.0005
+0.0092
+0.0087
+Spherical Aberration
+0.0014
+0.0006
+-0.0029
+0.0020
+Distortion
+-0.0026
+0.0265
+0.0265
+0.0249
+(θx, θy) = (7, 0)
+Field Curvature
+0.0886
+-0.0521
+-0.0147
+0.0120
+Astigmatism
+0.2202
+0.1463
+-0.0222
+-0.0261
+Coma
+0.0036
+0.0018
+-0.0091
+0.0087
+Spherical Aberr.
+0.0011
+0.0005
+-0.0040
+0.0020
+Distortion
+0.0105
+0.0052
+-0.0241
+0.0249
+
+
+Research Article
+Vol. 34, No. 8 / 20 Apr 2026 / Optics Express 14952
+In stark contrast, the proposed SLICO strategy exhibits exceptional capability in aberration
+balancing. Through global multi-parameter coordination, the SLICO system actively suppresses
+these critical off-axis aberrations. Under the identical condition (Z = 20 mm, (θx, θy) = (0, 7)), the
+astigmatism is dramatically reduced to 0.0224 (an approximate 90.3% reduction), and the field
+curvature is minimized to -0.0169. Furthermore, other primary aberrations such as spherical
+aberration and coma are consistently maintained at extremely low levels (near or below 0.03)
+across all evaluated configurations. This rigorous Zernike breakdown unequivocally proves
+that the SLICO strategy fundamentally resolves the severe astigmatism induced by large -axis
+dynamic focusing, thereby ensuring a highly symmetrical, near-diffraction-limited focal spot
+throughout the expanded 3D scanning volume.
+The suppression of these primary off-axis aberrations directly translates to superior contrast
+transfer capabilities. To comprehensively evaluate this, a Modulation Transfer Function (MTF)
+analysis was conducted. Figure 7 and Fig. 8 presents the MTF comparisons between the
+conventional system and the proposed SLICO system at the extreme scanning depths (Z =±
+20 mm).
+Fig. 7. Modulation Transfer Function (MTF) performance of the conventional reference
+system evaluated at extreme axial scanning depths. The top row (a–c) shows the MTF curves
+at a depth of Z = -20 mm, corresponding to field angles of (θx, θy) = (0, 0), (0, 7), and (7, 0),
+respectively. The bottom row (d–f) presents the corresponding MTF results at a depth of
+Z = + 20 mm for the same set of field angles. The dashed curves represent the diffraction
+limit, while the solid lines show the tangential (T) and sagittal (S) MTF response.
+As illustrated in the MTF plots, the conventional integrated system suffers from a severe
+decline in MTF at higher spatial frequencies when deflected to the edge fields. This rapid loss of
+contrast transfer efficiency aligns with the massive accumulation of primary astigmatism and
+field curvature observed in Table 1, indicating a significant degradation in focal sharpness at the
+scanning boundaries. In stark contrast, by globally balancing the off-axis aberrations through
+the co-optimization of the dynamic focusing module and the F-theta lens, the SLICO system
+exhibits MTF curves that closely follow the diffraction limit. Notably, this high contrast transfer
+is maintained uniformly across the center and edge fields, even at the maximum Z =± 20 mm.
+These comprehensive physical simulations conclusively prove that the SLICO strategy ensures
+robust, high-resolution focusing quality and stable spatial frequency response throughout the
+entire extended 3D scanning volume. Based on these theoretical and simulated validations,
+the subsequent section presents the experimental implementation to verify the actual physical
+performance of the proposed system.
+
+
+Research Article
+Vol. 34, No. 8 / 20 Apr 2026 / Optics Express 14953
+Fig. 8. Modulation Transfer Function (MTF) performance of the SLICO system evaluated
+at extreme axial scanning depths. The top row (a–c) shows the MTF curves at a depth of
+Z = -20 mm, corresponding to field angles of (θx, θy) = (0, 0), (0, 7), and (7, 0), respectively.
+The bottom row (d–f) presents the corresponding MTF results at a depth of Z = + 20 mm for
+the same set of field angles. The dashed curves represent the diffraction limit, while the
+solid lines show the tangential (T) and sagittal (S) MTF response.
+3.
+Experimental validation and comparative analysis
+Comparative experiments were carried out to verify the effectiveness of the optimized system,
+and a laser scanning platform incorporating both the conventional directly integrated system
+and the SLICO transmissive 3D laser scanning system was established, as shown in Fig. 9. A
+picosecond fiber laser (YDFLP-E2-20-M7-S-R, JPT) with a wavelength of 1064 nm, a beam
+quality factor of M2 = 1.4 and a maximum average output power of 20 W was employed. To
+enable a rigorous comparison of scanning dynamics and address the hardware kinematic limits,
+the specific hardware configurations of both systems are detailed in Table 2. The X- and Y-axis
+galvanometers, G1 and G2, were configured with maximum deflection angles of ±7° for both
+systems. The focal spot diameter was experimentally determined by analyzing the laser marking
+results on the sample surface. A Keyence Digital Microscopy System (VHX series) was utilized
+to capture high-resolution images of the ablation spots and measure their effective diameters.
+Throughout the measurement trials, the laser power and scanning speed were maintained strictly
+constant. Consequently, the measured diameter, which is defined by the boundary where the laser
+intensity exceeds the material’s ablation threshold, corresponds closely to the 1/e2 beam width.
+The reported data points represent the arithmetic average of these 3 independent measurements,
+with the measurement uncertainty expressed as error bars denoting ± 1 standard deviation.
+Three representative axial planes (Z = 0 mm and Z = ±20 mm) were selected for evaluation. For
+each plane, four circular scanning paths corresponding to 0.3, 0.5, 0.7, and 1.0 times the full
+scanning field were defined, with diameters of Φ=24 mm, Φ=40 mm, Φ=56 mm, and Φ=80 mm,
+respectively. All scans were performed on a conductive-glass substrate (100 × 100 × 1.1 mm3).
+The resulting laser-etched patterns were observed using a laser scanning confocal microscope to
+quantitatively assess the focal-spot quality, effective scanning range, and scanning stability of
+both systems.
+Figure 10(a-1)-(b-1), (a-2)-(b-2), (e-1)-(f-1), (e-2)-(f-2), (i-1)-(j-1), and (i-2)-(j-2) presented
+the simulated STRH and focal spot circularities for the conventional directly integrated system
+and the SLICO transmissive 3D laser scanning system at Z = -20 mm, 0 mm, and 20 mm planes.
+At the Z = 0 mm plane, both systems achieved STRH exceeding 0.97, with focal spot circularities
+
+
+Research Article
+Vol. 34, No. 8 / 20 Apr 2026 / Optics Express 14954
+Fig. 9. Experimental setup for the conventional directly integrated and the integrated
+co-optimized transmissive 3D laser scanning systems.
+Table 2. Comparison of detailed hardware configurations and maximum kinematic capabilities
+between the conventional reference system and the proposed SLCO system
+Core Component
+Parameter /
+Function
+Traditional Directly
+Integrated
+Transmissive System
+SLCO Transmissive
+3D Laser Scanning
+System
+Dynamic
+Focusing
+Module (DFM)
+Model /
+Driver
+Scanlab
+varioSCANde II 20i
+Self-developed
+(Driven by Akribis
+TGV50 voice coil
+motor)
+Function
+Achieves dynamic laser focusing in the Z-axis
+Focal Shift
+Speed
+≤4.48 m/s
+≤9 m/s
+XY
+Galvanometer
+(Scanner)
+Model
+Scanlab SCANcube
+IV 14
+Optics ExtraScan II
+14
+Positioning
+Speed
+14.4 m/s
+(f = 160 mm)
+7 m/s
+F-theta
+Telecentric Lens
+Model
+LINOS
+F-Theta-Ronar Lens
+Self-developed
+Wavelength
+1030 - 1080 nm
+1064 nm
+Focal Length
+(f)
+167 mm
+167 mm
+Scan Area
+85 mm × 85 mm
+80 mm × 80 mm
+
+
+Research Article
+Vol. 34, No. 8 / 20 Apr 2026 / Optics Express 14955
+Fig. 10. STRH, focal spot circularity distributions across the full XY plane, and scanning
+spot images at the outermost field of view for three Z-axis positions. (a-d) Z = -20 mm; (e-h)
+Z = 0 mm; (i-l) Z = 20 mm. Subscript “-1” corresponds to the traditional directly integrated
+transmissive 3D laser scanning system, and “-2” corresponds to the SLCO transmissive 3D
+laser scanning system.
+of 97% and 98%, respectively, indicating nearly ideal focusing performance at the central plane.
+At Z = -20 mm, the conventional system exhibited a STRH of 0.5 and a focal spot circularity of
+60%, while at Z = 20 mm, the conventional system further deteriorates, with STRH decreasing to
+0.3 and circularity dropping to 50%, particularly at the edges of the scanning field. In contrast,
+the SLICO system maintained STRH above 0.97 and focal spot circularities exceeding 96.5%
+across all Z-axis planes, demonstrating robust focusing stability under defocus conditions. The
+edge-field performance was further evaluated by examining laser-etched spots at the extreme
+edges of the X and Y scanning fields, as shown in Fig. 10(c-1)-(d-1), (c-2)-(d-2), (g-1)-(h-1),
+(g-2)-(h-2), (k-1)-(l-1), and (k-2)-(l-2). Quantitative analysis indicates that, for the conventional
+system, the average edge-spot circularities were 33.3%, 83.4%, and 45.4% at Z = -20 mm, 0 mm,
+
+
+Research Article
+Vol. 34, No. 8 / 20 Apr 2026 / Optics Express 14956
+Fig. 11. (a) Experimental results of the focused spot circularity at different Z-axis planes
+and field positions. The vertical axis (Y-axis) corresponds to field positions of 0.3, 0.5,
+0.7, and 1.0 times the full scanning field, representing scanning diameters of Φ = 24 mm,
+Φ = 40 mm, Φ = 56 mm, and Φ = 80 mm, respectively, used to characterize the focused spot
+circularity of the system under different field conditions, subscript “-1” corresponds to the
+traditional directly integrated transmissive 3D laser scanning system, and “-2” corresponds
+to the SLICO transmissive 3D laser scanning system; (b) Dependence of the focus spot
+diameter and working distance variation on the axial displacement of the negative lens
+P1. For the focus spot diameter, each data point represents the arithmetic average of three
+independent experimental measurements. The error bars indicate ±1 standard deviation
+(SD).
+and 20 mm, respectively. In contrast, the SLICO system achieved 83%, 84.2%, and 73.5% under
+the same conditions, confirming substantial improvement in edge-field focusing performance and
+uniformity.
+Figure 11(a) further presents the measured circularity of laser-etched spots across multiple
+scan-field diameters.
+At Z = 0 mm, both systems exhibited circularities above 80%.
+For
+the conventional system, the circularity decreased significantly with increasing Z-axis offset,
+following simulation predictions. Specifically, at Z=±10 mm, the average circularity of the
+edge-field laser-etched spots decreased to 63.5% and 65%, respectively, and further declined
+to 45.4% and 33.3% at Z=±20 mm, effectively limiting the Z-axis scanning range to ±10 mm
+(Fig. 10(c-1)-(d-1) and Fig. 10(k-1)–(l-1)). In contrast, the SLICO system exhibited only a
+marginal reduction in circularity with increasing Z-axis offset, maintaining 76% and 85.1% at
+Z = ±10 mm, and 73.5% and 83% at Z = ±20 mm (Fig. 10(c-2)–(d-2) and Fig. 10(k-2)–(l-2)).
+Although the conventional system demonstrated marginally higher circularity in 0.3 and 0.5 times
+of the full scanning field at Z = 0 mm, the co-optimized system consistently maintained circularity
+above 73.5% across all scanning range, demonstrating a clear performance advantage over the
+conventional design. The stability of the optimized system was further quantified. Figure 11(b)
+showed the fluctuation of the focal spot diameter over a Z-axis scanning-induced working distance
+variation of 44.18 mm. The mean spot diameter was 33.35 µm, with a standard deviation of
+0.32 µm, variance of 0.102 µm2, and a coefficient of variation of 0.96%, demonstrating minimal
+relative fluctuation. In addition, the measured axial displacement of the negative lens P1 varied
+approximately linearly with the system working distance, confirming the accuracy of Eq. (1)
+and validating the simulation results. Collectively, these results confirm that the SLICO 3D
+laser scanning system effectively mitigates the degradation of laser-etched spot circularity with
+increasing Z-axis offset, extending the Z-axis scanning range from ±10 mm to ±20 mm. This
+demonstrates significant enhancement in focal-spot quality, edge-field uniformity, and overall
+3D scanning performance, confirming that the proposed method is for high-precision laser
+microfabrication with stringent requirements for spot uniformity and machining accuracy.
+
+
+Research Article
+Vol. 34, No. 8 / 20 Apr 2026 / Optics Express 14957
+4.
+Conclusion
+In conclusion, this study systematically analyzed the 3D scanning mechanism of a transmissive
+3D laser scanning system The analysis focused on focal-spot degradation and optical aberrations
+introduced by the dynamic focusing module, the XY galvanometer scanner, and the F-theta
+telecentric lens under large-field scanning and Z-axis refocusing conditions. To mitigate the
+additional system-level aberrations and the limited 3D scanning range caused by large-field
+angular scanning and dynamic axial focusing, a SLICO strategy was developed, coordinating
+all optical modules. This method reduces the OPD from 1.0 waves to 0.25 waves, increases the
+STRH from 0.3 to above 0.96, and stabilizes the focal spot diameter across the 3D scanning
+range. Experimental results verify that the average circularity of laser-etched spots is ≥73.5%,
+the relative fluctuation of spot diameter is below 1%, and the effective Z-axis scanning range is
+doubled from ±10 mm to ±20 mm within a circular XY scanning field of 80 mm in diameter.
+The results demonstrate that the SLICO strategy effectively suppresses aberrations, maintains
+high focal spot quality and expands the 3D scanning range. This work not only provides a
+generalizable methodology for high-precision, large-field 3D laser scanning systems but also
+offers a practical engineering solution for precision micro- and nanofabrication.
+Funding. Shandong Province Technology-Based SME Innovation Enhancement Project (2024TSGC0715); Postgrad-
+uate Education Reform Project of Shandong Province (SDYJSJGC2024107); Natural Science Foundation of Shandong
+Province (Grant No. ZR2021MF122); National Natural Science Foundation of China (Grant No.12204132); Guangdong
+Provincial Key Research and Development Program (2023B0909010006); Natural Science Foundation of Wuhan
+(2025040601030123); Wuhan Science and Technology Plan Project.
+Disclosures. The authors declare that they have no known competing financial interests or personal relationships
+that could have appeared to influence the work reported in this paper.
+Data availability. Data underlying the results presented in this paper are not publicly available at this time but may
+be obtained from the authors upon reasonable request.
+References
+1.
+J. Huang, K. Xu, and S. Xu, “Super-resolution laser machining,” International Journal of Machine Tools and
+Manufacture 205, 104246 (2025).
+2.
+B. X. Cao, P. L. Hoang, S. Ahn, et al., “Real-time laser focusing system for high-precision micromachining using
+diffractive beam sampler and advanced image sensor,” Optics and Lasers in Engineering 107, 13–20 (2018).
+3.
+S. Kang, M. Duocastella, and C. B. Arnold, “Variable optical elements for fast focus control,” Nat. Photonics 14(9),
+533–542 (2020).
+4.
+Q. Yang, P. Zhang, Q. Lu, et al., “Application and development of blue and green laser in industrial manufacturing:
+A review,” Opt. Laser Technol. 170, 110202 (2024).
+5.
+Y. Yin, C. Zhang, T. Zhu, et al., “Development of a Laser Scanning Machining System Supporting On-the-Fly
+Machining and Laser Power Follow-Up Adjustment,” Materials 15(16), 5479 (2022).
+6.
+G. Zhu, Z. Xu, Y. Jin, et al., “Mechanism and application of laser cleaning: A review,” Optics and Lasers in
+Engineering 157, 107130 (2022).
+7.
+A. J. López, J. Lamas, J. S. Pozo-Antonio, et al., “Development of processing strategies for 3D controlled laser
+ablation: Application to the cleaning of stonework surfaces,” Optics and Lasers in Engineering 126, 105897 (2020).
+8.
+A. Rodríguez, A. J. López, J. Lamas, et al., “Robot-assisted laser ablation for 3D surfaces. Application for paint
+removal with ultrashort pulse laser,” Optics and Lasers in Engineering 160, 107284 (2023).
+9.
+L. Jonušauskas, D. Gailevičius, S. Rekštyṫe, et al., “Mesoscale laser 3D printing,” Opt. Express 27(11), 15205 (2019).
+10. C. Li, S. Chen, and S. Xu, “Electromagnetic biaxial scanning mirror based on 3D printing and laser patterning,”
+Sensors and Actuators A: Physical 348, 113999 (2022).
+11. A. I. Akash, J. E. Johnson, F. C. Arentz, et al., “Two-color 3D printing for reduction in femtosecond laser printing
+power,” Opt. Express 32(15), 25892 (2024).
+12. A. Selimis, V. Mironov, and M. Farsari, “Direct laser writing: Principles and materials for scaffold 3D printing,”
+Microelectron. Eng. 132, 83–89 (2015).
+13. T. Chen, Q. Hu, X. Shang, et al., “Double-coil driving electrowetting liquid lens with dual-cavity structure,” Opt.
+Lett. 50(8), 2703 (2025).
+14. Y.-R. Zhao, Z.-S. Li, Y. Zheng, et al., “Non-aqueous electrowetting liquid lens with centimeter-level large aperture
+based on dielectric failure suppression principle,” Light Sci Appl 14(1), 120 (2025).
+15. D. Shin, C. Kim, G. Koo, et al., “Depth plane adaptive integral imaging system using a vari-focal liquid lens array for
+realizing augmented reality,” Opt. Express 28(4), 5602 (2020).
+
+
+Research Article
+Vol. 34, No. 8 / 20 Apr 2026 / Optics Express 14958
+16. C. Hao, Y. Liu, X. Chen, et al., “Electrowetting on liquid-infused film (EWOLF): Complete reversibility and
+controlled droplet oscillation suppression for fast optical imaging,” Sci. Rep. 4(1), 6846 (2014).
+17. J. Lee, Y. Park, and S. K. Chung, “Multifunctional liquid lens for variable focus and aperture,” Sens. Actuators, A
+287, 177–184 (2019).
+18. X. Song, H. Zhang, D. Li, et al., “Electrowetting lens with large aperture and focal length tunability,” Sci. Rep. 10(1),
+16318 (2020).
+19. X. Du, C. Florian, and C. B. Arnold, “Multi-focal laser processing in transparent materials using an ultrafast tunable
+acoustic lens,” Opt. Lett. 47(7), 1634 (2022).
+20. X. Yang, B. Jiang, X. Song, et al., “Fast axial-scanning photoacoustic microscopy using tunable acoustic gradient
+lens,” Opt. Express 25(7), 7349 (2017).
+21. A. Mermillod-Blondin, E. McLeod, and C. B. Arnold, “High-speed varifocal imaging with a tunable acoustic gradient
+index of refraction lens,” Opt. Lett. 33(18), 2146 (2008).
+22. P. A. Kirkby, K. M. N. Srinivas Nadella, and R. A. Silver, “A compact acousto-optic lens for 2D and 3D femtosecond
+based 2-photon microscopy,” Opt. Express 18(13), 13720 (2010).
+23. Y. Zhang, S. Poonja, and A. Roorda, “MEMS-based adaptive optics scanning laser ophthalmoscopy,” Opt. Lett.
+31(9), 1268 (2006).
+24. Y. Tian, X. Cheng, and Q. Hao, “Light control and optical path design method for stabilized zoom systems based on
+deformable mirrors,” Opt. Express 32(18), 32506 (2024).
+25. G. Zou, X. Fan, H. Zhao, et al., “Optical design of a 5× zoom afocal telescope with deformable mirrors,” Opt.
+Express 32(20), 34622 (2024).
+26. A. Kashani Ilkhechi, M. Martell, and R. Zemp, “Miniature Deformable MEMS Mirrors for Ultrafast Optical
+Focusing,” Micromachines 14(1), 40 (2022).
+27. P. Zhao, D. Sauter, and H. Zappe, “Tunable fluidic lens with a dynamic high-order aberration control,” Appl. Opt.
+60(18), 5302 (2021).
+28. Z. Liu, Z. Gan, M. Zhang, et al., “Research on image quality enhancement method for compact liquid-zoom vision
+systems based on computational imaging technology,” Opt. Laser Technol. 192, 113692 (2025).
+29. Y. Liu, T. Chen, Y. Qiao, et al., “Optical design and analysis of a high-speed triple galvanometer laser 3D scanning
+system,” Opt. Laser Technol. 181, 111608 (2025).
+30. Y. Liu, Y. Qiao, Y. Ding, et al., “Extending the 3D scanning range of reflective dynamic focusing device-based laser
+scanners,” Opt. Lett. 48(24), 6496 (2023).
+31. L. Yu, K. Yang, and Z. Zhang, “Galvanometer driven optical system for laser dynamic focusing,” Opt. Express 31(1),
+673 (2023).
+32. M. J. Kidger, Fundamental Optical Design (SPIE, 2001, Chap. 3).

@@ -1,0 +1,1018 @@
+ 
+ 
+第 59卷第 19期 
+2023 年 10 月 
+机  械  工  程  学  报 
+JOURNAL OF MECHANICAL ENGINEERING 
+Vol.59  No.19 
+Oct.    2023  
+ 
+DOI：10.3901/JME.2023.19.375 
+激光自身空间维度加工系统综述*①
+ 
+梅雪松 1, 2  李凯林 1, 2  赵万芹 1, 2  刘 斌 1, 2  孙 铮 1, 2  段文强 1, 2 
+王文君 1, 2  崔健磊 1, 2  凡正杰 1, 2 
+(1. 西安交通大学机械工程学院  西安  710049 ； 
+2. 西安交通大学机械制造系统工程国家重点实验室  西安  710049) 
+ 
+摘要：随着智能制造时代的到来，各行业对精细化零部件的加工需求 日益旺盛，激光自身空间维度加工系统具备的调
+控激光束空间维度变化的能力，特别适用于高效、高精度的激光加工，因而具有良好的应用前景和市场需求。激光自
+身空间维度加工系统主要包括点维、一维、二维、三维和“五 +N”维，论述点维到“五 +N”维激光加工系统的光学结
+构，分析光学镜片结构尺寸、安装位置、运动方式等对聚焦激光束空间维度变化的影响，并探讨各维度加工系统中光
+学结构对加工范围和加工精度等的影响，针对各维度激光加工系统，介绍目前工业化应用中的主要产品及其技术参数，
+对比国内外产品技术参数的差异。本研究可为各维度激光加工系统的工业化应用提供指导，对激光高效高精度加工技
+术发展具有长远的影响。  
+关键词：激光加工；空间维度；光学结构  
+中图分类号：V1；TH16 
+ 
+Overview of Laser Self Spatial Dimensional Processing Systems 
+ 
+MEI Xuesong1,2  LI Kailin 1,2  ZHAO Wanqin 1,2  LIU Bin 1,2  SUN Zheng 1, 2 
+DUAN Wenqiang1, 2  WANG Wenjun 1, 2  CUI Jianlei1, 2  FAN Zhengjie 1, 2 
+(1. School of Mechanical Engineering, Xi’an Jiaotong University, Xi’an 710049; 
+2. State Key Laboratory for Manufacturing Systems Engineering, Xi’an Jiaotong University, Xi’an 710049) 
+ 
+Abstract：With the arrival of the era of intelligent manufacturing, the demand for precision parts proce ssing in various industries is 
+becoming increasingly strong. The laser's own spatial dimension processing system has the ability to regulate the changes in th e 
+spatial dimension of the laser beam, which is particularly suit able for efficient and high-prec ision laser processing. Therefor e, it has 
+good application prospects and market demand . The spatial dimension processing system  of laser itself mainly includes point 
+dimension, one-dimensional, two-dime nsional, three-dimensional, and "5+ N" dimensions. The optical structure of laser processing 
+systems from point dimension to "5+ N" dimensions is discussed, and the influence of op tical lens structure size, installation position, 
+motion mode, etc. on the spatial dimension changes of focused la ser beams is analyzed. The influence of optical structure on 
+processing range and accuracy in each dimension processing system is also explored, the main products and their technical parameters 
+in industrial applications for various dimensions of laser processing systems are introduced, and compares the differences in technical 
+parameters between domestic and foreign produ cts. It can provide guidance for the indust rial application of various dimensions of 
+laser processing systems, and has a long-term impact on the development of efficient and high-precision laser processing technology. 
+Key words：laser processing；spatial dimension；optical structure 
+ 
+                                                        
+* 国家科技重大专项(2019-VII-0009-0149)、国家自然科学基金(52105465)、
+航空发动机及燃气轮机基础科学中心(P2022-A-IV-002-003)和中央高校基
+本科研业务费专项资金 (xzd012022084)资助项目。20230311 收到初稿，
+20230706收到修改稿 
+
+ 机  械  工  程  学  报 第 59卷第 19 期期  
+ 
+376 
+0  前言 
+激光加工技术是采用聚焦后的激光束对金属、非
+金属等多种材料进行切割[1]、焊接[2]、打孔[3]、表面
+处理[4]、内部改性[5]等的一种高精密加工技术，具有
+非接触式加工、加工材料范围广、易于聚焦与整形、
+易与自动化系统结合等优点[6-8]，被广泛应用于航空
+航天[9-10]、电子信息[11]，生物医学[12]等领域。为实现
+激光加工系统中聚焦光束的空间运动，一方面可以通
+过调控系统改变聚焦光束自身空间维度，如二/三维
+扫描振镜即是通过调控系统控制自身镜片的偏转使
+聚焦光束在二维/三维空间内运动。进一步地，为满
+足不同领域的加工需求，聚焦光束需要多空间维度的
+调控，如点维空间激光光束可用于芯片隐形切割[13]、
+透明材料内部微流控加工[14]等；三维激光光束常用于
+曲面结构加工等；五维激光光束可以实现倒锥孔[15]、
+异形槽[16]等复杂结构的加工。整体而言，激光自身空
+间维度加工系统主要包括以下几个方面。 
+点维激光加工系统：即激光束通过聚焦系统获
+得聚焦光斑(包括点光斑、线光斑、方形光斑以及多
+种异型光斑等)， 但聚焦光束无法在空间维度上进行
+运动，如需进行空间维度加工需要借助外部辅助机
+构移动聚焦光束或者加工样品。 
+一/二/三维激光加工系统：指聚焦光束在某个空
+间维度(X、Y、Z、α 或 β )/ 两个空间维度(XY、YZ
+或 XZ)/三个空间维度(XYZ)上进行运动。以二维空间
+的聚焦光束调控为例，其激光束只能在两个维度上
+运动，若要实现第三个维度的运动，需要借助外部
+辅助机构(如机床、机械臂等 )扩充空间维度，同时
+可以扩大聚焦光束的空间移动范围，但是外部辅助
+机构的运动速度远小于激光自身空间维度变化的运
+动速度，而误差又大于激光自身空间维度的运动误
+差，故而影响加工速度和精度。 
+“五+N”维激光加工系统：其中“五”即聚焦
+光束可以在五个维度空间运动，包括三维空间的
+XYZ 以及两个偏转维度 α 与 β ，而“N”是指激光
+自身特性如激光能量、激光偏振特性等的调控。 
+另一方面，可借助外部辅助机构(如机床、机械
+臂等)多轴运动装置带动激光加工头实现激光束的
+空间维度变化，且激光加工头可以是能进行自身空
+间维度调控的加工系统，如五轴数控机床系统与二
+维/三维扫描振镜的组合等。然而，借助外部辅助机
+构实现聚焦激光束的调控，其维度的变化主要来源
+于机床、机械臂等多轴运动装置的作用，会因为其
+运动磨损、连续启停等因素限制加工精度与加工速
+度[17-18]。比较而言，激光自身空间维度调控系统的
+加工精度、加工速度均远高于外部辅助机构，以目
+前技术成熟且广泛使用的激光自身空间维度加工系
+统中的二维振镜扫描系统为例，我国大族激光的二
+维振镜(ExtraScan10)，其通过对两反射镜位置的调
+控实现聚焦激光束在 X、Y 二维平面扫描[19]，并可
+以通过调整镜片尺寸、改变镜片材料等手段实现加
+工范围与加工波长等的变化，跟随误差～1 ms，重
+复精度 <1 μrad (大多数在 ±3 μm 间 )，定位速度
+10 m/s，相比于借助外部辅助机构的调控，其运动
+速度更快、加工精度更高，即通过对聚焦光束自身
+维度的调控可以实现更高精度和效率的加工。 
+本文主要综述了点维、一维、二维、三维和    
+“五+N”维激光自身空间维度加工系统，详细论述
+了激光自身空间维度加工系统采取的光学结构，归
+纳总结了光学镜片的结构形状、安装位置，运动方
+式等对激光束各维度变化的影响，简略分析了不同
+维度激光加工系统中影响加工精度的因素，同时，
+针对各维度激光加工系统，介绍了其主要产品及应
+用领域，如一维激光切割头、二维扫描振镜、“五+N”
+维微结构加工系统等，对比了国内外相关产品技术
+参数的差异。本研究可为激光自身空间维度加工系
+统的工业化应用提供指导，对激光加高效高精度加
+工的发展具有长远的影响。 
+1  激光自身点维空间加工系统 
+1.1  激光自身点维空间调控原理及技术 
+激光点维聚焦光斑的形成与调控原理如图 1 所
+示，其中图 1a 所示为激光点维聚焦原理，具体而言，
+激光束通过调控系统、聚焦系统后会聚成一点，从
+广义上可以理解为点光斑，因此可称作点维，但实
+际通过聚焦系统形成的点光斑具有一定的尺寸与形
+状，通常尺寸在微米级别，而形状可通过调控系统
+对激光能量的重新分割进行整形，如图1b 所示，是
+激光光强呈现高斯态与平顶态的分布情况[20]，再者
+利用调控系统还可以将激光束的能量重新分配，以
+便获得如图 1c 所示的月牙光斑、五角星光斑、多点
+光斑等多种类型的光斑。 
+激光束会聚生成一定形状尺寸的光斑是激光加
+工不可或缺的部分，会聚后的能量及形状尺寸更能
+满足多种不同加工需求，因此点维的聚焦是激光自
+身空间加工系统调控的基础，一维、二/三维以及“五
++N”维空间激光加工系统便是基于此发展衍生而
+
+月 2023年 10 月 梅雪松等：激光自身空间维度加工系统综述 
+ 
+377 
+来，且一维到“五+N”的聚焦光斑可以是常规高斯
+态，也可以是呈现多尺寸和形状的异形态。 
+对于点维空间聚焦光斑形状的调控，其方法如
+图 1d 所示，主要包括基于固定光学结构的光束调控
+和基于空间光调制器的光束调控。其中，基于固定
+光学结构的光束调控方法包括折射式、反射式与衍
+射光学元件。折射式原理如图1d 所示，由两非球面
+透镜组成，根据能量守恒定律设计镜片相位函数，
+实现光强的调控[21-22]；反射式原理如图1d 所示，依
+据几何光学与能量守恒定律设计两反射镜进行光强
+的重分配[23-24]；衍射光学元件原理如图1d 所示，利
+用衍射光学元件，调控激光波前变化进行光强的调
+控[25]，此类整形方法成本低、效率高，但由于光路
+结构固定，镜片具有安装与制造误差，并且这种方
+式不适用于动态调节系统参数的场景，如复杂形状
+的激光加工、自适应波前校正等。 
+ 
+图 1  激光点维聚焦光斑的形成与调控原理 
+比较而言，基于空间光调制器的光束调控有可
+变形镜与液晶空间光调制器、数字微镜等，其中可
+变形镜如图 1d 所示，可通过实时操控反射镜形状来
+调制入射光波[26-27]，改变最终光束的能量分布；液
+晶空间光调制器如图 1d 所示，它是采用调控电极对
+间的电压改变液晶分子的折射率，从而调控入射光
+的相位[28-29]；数字微镜如图1d 所示，通过改变输入
+微反射镜的信号，生成一系列明暗像素的二值图实
+现对光束能量的控制[30-31]。这类整形方式速度快，
+效率高，但是对相应材料的灵敏度要求较高且控制
+难度大，且分辨率较低。 
+总之，根据不同的加工需求选择不同尺寸、形
+态的光斑，可提高加工效率，改善加工效果[32]，例
+如用矩形光斑或者方形光斑进行焊接，有助于生成
+高质量焊缝[33]；线光斑进行材料的剥离，可以保证
+加工精度与重复性[34]。因此，需要根据实际需求选
+
+ 机  械  工  程  学  报 第 59卷第 19 期期  
+ 
+378 
+择合理的调控方式进而获得理想的聚焦光斑。 
+1.2  激光自身点维空间加工系统相关产品及应用 
+目前市面上已存在多种点维空间聚焦产品，如
+图 2a 所示是基于折射式固定光学结构制作的奔腾
+科技的激光切割头[35]与大族激光的激光焊接头[36]，
+在实际使用中通常搭配机床或机械臂等完成如图
+2b 所示的多边形、多弧形等异形机械零部件的切割
+与定位轴、方形槽的焊接等，但其加工速度与精度
+受到外部机构的运动速度和误差的影响较大；如图
+2c 所示是基于衍射光学原理研制的以色列 Holo/or
+公司与德国 Asphersio 公司的光束整形镜[37]，该类
+整形镜可用作平顶光发射器、匀化器、涡旋相位板
+等对聚焦光斑进行调控，从而得到多种形状光斑，  
+ 
+图 2  点维激光加工系统相关产品及应用 
+如用做食品包装打孔的多点光斑组、进行玻璃切割
+的贝塞尔光束等[38]；如图 2d 所示是基于空间光调
+制器的液晶空间光调制器，它采用几何掩模对近场
+衍射处的入射光束进行整形，可获得如三角形、圆
+环、方形组、五角星形组等各类型的光斑从而实现
+多形态加工[39-40]；同时基于空间光调制器能实现寻
+址微点加工，使光斑相对于其原始焦点进行平移，
+从而实现非周期性结构的高效制造[41]。 
+2  激光自身一维空间加工系统  
+聚焦光束在一维空间的调控是指激光束经过调
+控系统、聚焦系统后会聚成的光斑可沿着某一维度
+运动，且该运动既可以是如图 3a 所示的沿着某一维
+度(X)移动，也可以是如图 3b 所示绕着某一维度(光
+轴)转动。 
+ 
+图 3  一维空间激光聚焦光束调控原理及方式 
+一维激光加工系统包括调控系统和聚焦系统两
+部分，入射光需先经过调控系统，然后经聚焦系统
+会聚成聚焦光斑，通常聚焦系统在整个光路中是固
+定不动的，光束维度的变化主要通过调控系统来实
+现，调控系统的主体结构以光学镜片为主，即通过
+调控光学镜片改变进入聚焦系统的光束位置，整体
+而言，实现激光一维空间调控的光学结构有如图 3c
+所示的四种，图 3c1 所示，基于光的反射原理实现
+一维调控，通过移动反射镜的位置改变出射光在 X
+轴的位置；如图3c2所示，为改变镜片的运动方式，
+
+月 2023年 10 月 梅雪松等：激光自身空间维度加工系统综述 
+ 
+379 
+偏转反射镜或者如图 3c3 所示旋转多边形棱镜，进
+而改变出射光在某一维度的位置；或者如图 3c4 所
+示，改变光学镜片的形状尺寸，利用光的折射原理，
+让棱镜 1 保持不动，棱镜 2 沿着 Y 方向往复运动，
+由双棱镜的性质可知出射光可在 X 方向上往复运
+动，此外，道威棱镜的平移、平行平板的转动，四
+光楔的移动等光学结构的运动也能实现光束的偏移
+或者转动，同理若是将图 3c1 与 3c4 中的镜片绕某
+一轴进行旋转，最终的聚焦光斑也能绕着某轴转动，
+以此实现某一维度的旋转。 
+上述方式主要是控制调控系统中光学镜片的运
+动，其中镜片结构、镜片的位置与镜片的组合方式
+都具有多样性，既可以是单个的带有反射面的棱镜，
+也可以是多棱镜的组合，然而，虽然上述方式能实
+现聚焦激光束在单个维度上的运动，但光束空间运
+动维度尺度有限，不适用于工业化产品加工的需求，
+但是，一维空间激光的调控方式可是激光多维度空
+间调控的基础，因此有必要明确其调控机理与实现
+方法等。 
+3  激光自身二维空间加工系统 
+3.1  激光自身二维空间调控原理及技术 
+二维空间的激光自身调控通常指聚焦光束在
+XY 平面的运动，调控原理如图 4a 所示，入射光经
+过调控系统产生角度为 θ 的偏转后进入聚焦系统，
+经聚焦系统后在工作平面上沿着 XY 方向扫描，其
+基本原理是入射光进入调控系统后会产生一定角度
+的偏转，导致进入聚焦系统中的光束方向发生改变，
+最终导致聚焦后的光斑位置在 XY 平面变化。 
+ 
+图 4  二维空间激光聚焦光束调控原理及方式 
+由图 4a 可知，光斑位置的改变最主要是对调控
+系统的控制，其原理与一维空间的聚焦光束调控类
+似，聚焦系统保持静止的情况下，入射光经过调控
+系统后能实现激光束在 XY 平面的运动，即进入聚
+焦系统前的光束便能在 XY 平面运动，因此需要研
+究能让光束位置在 XY 平面变化的光学结构，主要
+包括双光楔、双反射镜等光学组合。如图 4b1 所示
+为双光楔偏转示意图，具体是两相同光楔平行放置，
+通过控制两个光楔的旋转角度与旋转速度，让出射
+光与光轴的夹角不同，随着两光楔旋转角度的不断
+变化，光束可在 XY 平面运动；如图 4b2 所示是两
+反射镜偏转调控示意图，即将两个反射镜放置成一
+定的角度，控制反射镜 1 与反射镜 2 的旋转角度，
+让光束在 XY平面运动。 
+总之，无论是选择合适的镜片类型还是调控镜
+片的安装位置均可以实现光束在 XY 平面的偏转，
+进而实现激光二维空间维度的调控。因此，在二维
+空间中可以根据实际的加工需求选择不同的镜片组
+合、设计相应的镜片形状及镜片的安放位置等获得
+所需要调节的光束运动范围。但光束偏转的精度易
+受镜片运动误差的影响，同时镜片的制造误差、安
+装误差等因素会导致光束运动精度低等问题，因此
+针对不同应用，需要结合具体要求确定加工方案。 
+3.2  激光自身二维空间加工系统相关产品及应用 
+实际的激光加工应用中，在二维空间对聚焦光
+束自身调控的运用已经非常成熟，其中最具代表性
+的产品是 2D 振镜，2D 振镜光束扫描原理如图 5a
+所示，主要是利用两电机分别带动两相距一定距离
+的反射镜在一定范围内发生偏转，然后通过聚焦镜
+使光斑在工作平台聚焦，随着振镜 X 与振镜 Y的旋
+转角度不断变化，经过振镜 X 与振镜 Y 的光束不断
+偏转，最终在工件表面的光斑位置在 XY 平面不断
+变化，实现激光束在 XY平面的运动。 
+图 5a 中的振镜 X 与振镜 Y 指的是振镜电机与
+电机头部带动的反射镜，根据选择电机中检测传感
+器的不同，可以分为光栅振镜与光电振镜，相对应
+的是数字信号与模拟信号；电机上安装的反射镜片
+的种类与尺寸不同，可以有不同的加工波长与通光
+孔径；采用的控制策略的不同，最终得到的 2D 振
+镜的加工速度、精度等都有差别。目前经过不懈的
+努力，已经制造出许多性能优异的 2D 振镜产品，
+其中国外企业主要是德国的 SCANLAB 公司、
+RAYLASE公司、美国的 CTI (Cambridge Technology 
+Incorporation，美国剑桥技术)以及 GSI 公司的产品
+占据市场的主导地位，国内主要是上海通用、大族
+激光、菲镭泰克等几家公司的产品突出[42]。如图 5b1
+所示是德国 SCANLAB公司的 SCANcube系列产品
+(Ⅳ Series) ，具有结构紧凑，动态响应快与加工精
+
+ 机  械  工  程  学  报 第 59卷第 19 期期  
+ 
+380 
+度高等优点，其通光孔径在 7～14 mm 间，光斑尺
+寸为 23～46 µm，此外，SCANLAB 还有其他系列
+的 2D 振镜，如 hurrySCAN、cubeSCAN 等系列，
+可以满足多种加工需求[43]。如图 5b2所示是我国大
+族激光的光电振镜 UltraScan系列产品(UltraScan7)，
+它的通光孔径可以在 7～50 mm 间，采用数字驱动
+器，凭借自主研发的控制算法，产品的抗干扰能力
+强，高重复精度，适合精密焊接，同时，大族激光
+还有光栅振镜 ExtraScan 系列，采用全闭环控制系
+统，速度快、精度高，适用于高精密打标、切割及
+焊接[44]。表 1 列举了主要 2D 振镜厂商的几款典型
+产品及其技术参数。 
+ 
+图 5  2D 振镜扫描原理及相关产品 
+表 1  国内外主要 2D 振镜产品及其技术参数表 
+公司 大族 
+激光 
+菲镭泰
+克 SCANLAB RAYLASE
+国家 中国 中国 德国 德国 
+产品名称 ExtraScan Pilot SCANcube  MINISCAN
+扫描角度/(°) ±12.5 ±10 ±20 ±22 
+重复精度/ μrad  ＜1 ＜5 ＜2 ＜2 
+8 h 以上漂移/mrad ＜0.1 ＜0.1 ＜0.05 ＜0.08 
+增益漂移/(ppm/k) ＜8 ＜15 ＜20 ＜15 
+位置漂移/(μrad/k) ＜15 ＜50 ＜20 ＜10 
+由表 1 国内外主要 2D 振镜产品及其技术参数
+可知，2D 振镜的扫描角度有很大不同，且国外振镜
+的扫描角度较大，重复精度小，并在长时间的工作
+中，国外产品的漂移更小，但对于整体增益漂移与
+位置漂移国内外产品差别较小，总体来说长时间运
+转的情况国外的产品的精度维持的实时性更强。还
+需要说明的是，在实际的加工场景中，不论国内外
+的 2D 振镜，都可根据选取镜片的材料不同，进而
+适应于不同的波长，再者，如若需要进行比振镜自
+身视场范围大范围的打孔、切割、打标、雕刻等，
+需要配合外部辅助结构，如机床、机械臂等。如图
+5c 是激光打标设备及应用，激光打标设备是 2D 振
+镜与机床的结合体，可以在玻璃杯上雕刻，在零部
+件上刻蚀。 
+4  激光自身空间三维加工系统 
+4.1  激光自身三维空间调控原理及技术 
+聚焦光束自身在三维空间的调控，包括XYZ三
+个方向的控制，具体为在二维空间调控的 XY 平面
+的基础上增加对 Z 轴的调控，即激光聚焦方向的调
+控。二维空间激光自身调控原理已经在前文论述，
+下面主要介绍激光束在聚焦即 Z 方向的调控原理，
+图 6a 所示为 Z向调控原理简图，其主要通过调控系
+统实现聚焦光束在 Z方向的运动。 
+ 
+图 6  Z向激光调控原理及方式 
+具体而言，对于调控系统的控制，主要是对其
+包含的光学镜片进行控制，如图 6a所示为最常规的
+控制激光焦点移动的方式，在镜片 2 保持固定的情
+况下，控制镜片 1 的移动，由于直接控制镜片移动
+会产生像差影响最终的光斑聚焦效果，因此镜片 2
+的一个很重要的功能是用以补偿镜片 1 移动产生的
+像差，同时镜片 2 可以是非球面镜片或者镜片组，
+弱国采用非球面镜片，可以减少镜片数，缩短整个
+调节机构的长度，镜片 2 如果采用镜片组，则可以
+选择光学长度较短的非线性杠杆结构，亦或是反远
+距型结构[45]，进而实现镜片小范围移动获得焦点在
+
+月 2023年 10 月 梅雪松等：激光自身空间维度加工系统综述 
+ 
+381 
+Z 向大范围移动的效果，此外，多片镜片组成的镜
+片组，也可以移动镜片组中镜片来补偿镜片 1 移动
+产生的像差，目前常用的是前聚焦扫描模式与后聚
+集模式(图 6b)进行补偿[46]。 
+如图 6b1 所示是后聚焦扫描模式的示意图，其
+中，多片透镜组成光学杠杆，使得聚焦镜的焦深的
+变化量 Δz 可以随聚焦透镜位置移动量 Δd 而变化，
+并且焦深的变化远大于聚焦镜的移动，实现动态补
+偿，该方法由于在扫描镜前先进行聚焦，所以被称
+为聚焦后扫描模式。如图 6b2 所示为前聚焦扫描模
+式的示意图，当镜片移动 Δd 时，根据几何光学原
+理可以得到焦点位置的变化幅度为 Δz ，此时在扫描
+镜后安装 F-Theta场镜进行离焦误差的补偿，F-Theta
+场镜可以利用自身的像差对从扫描镜反射过来激光
+束的误差进行光学补偿，实现不同光程下，每个点
+基本落在加工扫描平面上，因其在扫描镜后再进行
+聚焦所以被称为聚焦前扫描模式。 
+结合激光二维自身空间调控和激光 Z 向调控，
+可以得到三维空间激光自身调控系统简图，如图 7
+所示，其主要由动态调焦系统、扫描系统、聚焦系
+统组成，其中动态调焦系统主要是对 Z 向的调节，
+扫描系统主要是 XY的调节。 
+ 
+  
+图 7  三维空间激光自身调控系统简图 
+4.2  激光自身 Z 维调控方法及相关产品 
+无论是前聚焦模式还是后聚焦模式对 Z向的调
+控，均是由光学镜片的移动引起的，且镜片的移动
+范围与误差会影响最终光斑会聚效果，因此研究者
+不仅需要考虑不同的光学镜片的组合，还需对镜片
+的驱动方式进行研究，主要是由于不同的驱动机构
+或者执行机构会有不同的控制效果。传统的移动一
+般采用曲柄滑块，直线电机驱动，但受限于机械结
+构无法获得较大范围的移动，如华中科技大学武汉
+光电实验室通过光学杠杆机构放大透镜移动距离，
+引起大的焦点移动量[47]；长春理工大学根据激光动
+态自聚焦系统的原理，设计了光学杠杆型和反远距
+型 2种动态自聚焦方案，并推导出相应的数学模型；
+利用 ZEMAX 光学设计软件进行仿真实验, 通过比
+较得出响应更加灵敏、结构更加合理的自聚焦系   
+统[48]；复旦大学的采用了动磁技术的聚焦位移装
+置，相比于传统的机械电子结构，减小了阻抗与位
+移时间，增加了位移速度，达到扫描系统高响应的
+需求[49]，然而，上述这些方式均存在结构复杂，控
+制难度大等问题，目前均停留在实验室阶段。 
+面向激光 Z向的产品业内称作动态模组。如图
+8a 所示，为我国菲镭泰克的动态模组，其中，它的
+镜片 1 由小角度高速旋转电机通过连杆与摆动杆与
+移动镜片连接，由连杆带动镜片在高精密线轨上往
+复运动，其中补偿镜片采用的是非球面镜片[50]，如
+图 8b 所示是我国大族激光的动态模组，采用音圈
+电机驱动连杆带动镜片移动，并采用高精度光电传
+感器做反馈，动态性能优越 [44]，如图 8c 是德国
+SCANLAB 的动态模组 vario SCAN Ⅱ，该产品能
+够沿光束方向实现高度动态和异常精确的激光聚焦
+定位，且针对不同的需求设计了多个系列[43]，表 2
+展示了我国大族激光与德国 SCANLAB生产的几款
+主要的动态模组产品。 
+ 
+图 8  相关公司研制的动态模组产品 
+表 2  国内外主要动态模组产品及其技术参数表 
+公司 大族激光 SCANLAB 
+国家 中国 中国 德国 德国 
+产品型号 VCM Z VCM F1 VarioSCAN20 VarioSCAN40
+波长/nm 1 064 1 064 1 064 1 064 
+入口光斑/mm 14 20 4～7 8 ～18 
+出口光斑/mm 14 40 ≤20 ≤40 
+行程/mm ±15 20 ±32 ±20 
+重复精度/µm ＜1 ＜0.5 ＜1 ＜1 
+8 h 后漂移/µm ＜6 ＜3 ＜6 ＜10 
+表 2 所示为国内外主要动态模组产品及其参数
+表，从表可以看出，动态模组的入射光斑直径可在
+
+ 机  械  工  程  学  报 第 59卷第 19 期期  
+ 
+382 
+4～20 mm间变化，重复精度基本都在小于 1 µm左
+右，焦点的变化最大可达 ±32 mm ，但是这些动态
+模组无法单独使用，如果需要实现三维空间激光自
+身的调控，需要配合 2D振镜。  
+4.3  激光自身三维空间加工系统相关产品及应用 
+工业上一般将聚焦系统称作场镜，它可以是单
+片透镜也可以是多片透镜的组合而成的透镜组，且
+透镜既可以是球面透镜也可以是非球面透镜。实际
+应用中，针对不同的加工，对场镜的需求也不同，
+比如聚焦前扫描模式受后端场镜限制加工幅面以小
+幅面为主，特别适用于深雕与小幅面微孔加工等精
+密微加工领域，若是配合远心场镜可以获得更小的
+光斑尺寸进而加工出更加微小的结构；而聚焦后扫
+描模式不受场镜约束，因此可以实现更大的通光孔
+径与幅面，在曲面、超大幅面的加工应用中尤为适
+合，在工业领域，前者被称为2.5D振镜，后者称为
+3D 振镜。 
+对于 2.5D 振镜与 3D 振镜，国内外厂家均有诸
+多系列的产品面世，如图 9a1 是我国菲镭泰克研发
+的 2.5D 振镜(FE系列)，可用于如图 9a2 所示的玻璃
+超硬材料深雕、玻璃钻孔等；图 9b1 是我国菲林泰
+克研制的 3D 振镜(FR 系列)，可用作如图 9b2 所示
+的曲面雕刻、汽车件剥透光漆、大幅面标刻等作    
+业[50]；国外德国 SCANLAB、RAYLASE 等公司生
+产的振镜产品比较有竞争力，如图 9c1 是德国
+SCANLAB研发的 3D振镜(intelliSCAN系列)，可用
+作如图 9c2 所示的微雕刻、打标及 3D 打印等，总
+的来说，这些产品运用广泛，性能优异[43]。表 3 与 
+ 
+图 9  国内外主要 2.5D /3D 振镜产品其加工样品 
+表 4分别列举了国内外主要 2.5D和 3D振镜产品及
+其技术参数，由表 3 与表 4 可知，2.5D 振镜与 3D
+振镜的重复精度、扫描范围差别不大，主要的差别
+在于，2.5D 振镜具有深雕的能力。但无论 2.5D 振
+镜还是 3D 振镜，本质都是控制光学镜片的运动调
+控 XY 方向和 Z 向的加工范围，因此产品的加工范
+围、加工精度等都与光学镜片的制造精度，安装误
+差、镜片的驱动机构以及控制算法等相关，在实际
+的工业应用中需要结合具体情况选择合适的产品。 
+表 3  国内外主要 2.5D 振镜产品及其技术参数表 
+公司 菲镭泰克 SCANLAB RAYLASE 
+国家 中国 德国 德国 
+产品名称 FE10 Intelli- 
+WELD-FT 
+FOCUS- 
+CHIFTER 
+通光孔径/mm ≤10 ≤31 ≤10 
+扫描角度/(°) ±10 ±20 ±22 
+重复精度/ μrad  8 2 2 
+8 h 后漂移/mrad ≤0.2 ＜0.05 ＜0.0.4 
+Z 向范围/mm ±25 ±25 ±19 
+焦距/mm 254 255 250 
+表 4  国内外主要 3D 振镜产品及其参数表 
+公司 菲镭泰克 SCANLAB RAYLASE 
+国家 中国 德国 德国 
+产品名称 FE10 Intelli- 
+WELD-PR 
+AXIAL- 
+SCAN 
+通光孔径/mm ≤10 ≤30 ≤10 
+扫描角度/(°) ±10 ±20 ±22 
+重复精度/ μrad  8 2 2 
+8 h 后漂移/mrad ≤0.2 ＜0.05 ＜0.1 
+5  激光自身“五+N”维空间加工系统 
+5.1  激光自身“五+N”维空间调控原理及技术 
+激光在三维空间的自身调控已经满足基本的三
+维立体图形的加工，但是对于某些特殊的结构如倒
+锥孔、倒锥槽等仍无能为力，急需在三维空间自身
+调控的基础上增加对激光光束自身偏转维度，即 α
+与 β 的调控，进而实现五维空间激光束的调控。 
+如图 10a 所示为两偏转角形成原理简图，入射
+光经过调控系统会产生偏角为 θ 的出射光，经过聚
+焦系统会聚的光束会与光轴形成一定的夹角，偏转
+角的形成与光束在调控系统上偏离光轴的距离 a、
+出射光的偏角 θ 以及聚焦系统与工作平面的间距 f
+
+月 2023年 10 月 梅雪松等：激光自身空间维度加工系统综述 
+ 
+383 
+有关，且 f 在系统确定之后属于不变量，因此主要
+的变化在于调控系统中的变量 a与θ ，其形式有多
+种，主要包括反射镜的移动、棱镜的偏转等[51]。 
+入射光与光轴夹角 θ 的变化可以参照图 4b 所
+示的二维空间激光自身调控的光学结构，即采用
+光学镜片偏转的方法让入射光与光轴的夹角 θ 发
+生变化。对于光束沿着光轴的偏移，可以采用单
+个镜片的移动，如图 3c 所示，即移动反射镜片或
+者棱镜让反射光或者折射光跟随移动，其他能让
+光束产生一定偏移的装置还有平行光板、双光楔
+系统等 [52]，通过保持平行光板或光楔的折射率与
+相对位置，便能实现出射光束平行出射偏离光轴
+或者成一定夹角偏离光轴。此外，利用镜片的不
+同形状，或者采取多种光学镜片的不同组合，都
+可以让光束产生偏移，如图 10b 所示为道威棱镜
+产生偏移的示意图，以及如图 10c 所示的三反射镜
+产生偏移的示意图，上述两种方式均能实现光束
+的偏移，其中，利用道威棱镜的反射特性，可以
+让经过道威棱镜的光束偏离光轴出射，形成一定
+的偏移距离 [53]，同理调整反射镜 1、2、3 的相对
+夹角，可以使光束通过反射镜后可与光轴偏离一
+定距离 [54]，最终偏移的误差与镜片的安装误差、
+制造误差、以及控制误差相关。  
+ 
+图 10  产生偏转角的原理及相应的光学结构 
+“五+N”维激光自身调控系统的“N”的是指对
+激光本身的能量、偏振等特性的调控，由于激光加
+工的效率、质量等与激光本身特性，如峰值功率、
+能量、脉宽、偏振等相关[51]，因此针对不同的需求
+选择适合的激光本身特性非常必要，如研究表明单
+脉冲能量的不同导致每个脉冲的去除厚度不同，继
+而影响加工效率和质量[55]；钻孔直径随着单脉冲能
+量的提高而增大，更短的脉宽会增大材料对激光能
+量的非线性吸收，从而加快材料的去除速度[56]；当
+激光以布儒斯特角入射时，反射光中的 P 偏振光
+完全消失，在金属材料中不同入射角度的 S 偏振
+光和 P 偏振光具有不同的反射率，这种差异会对
+加工产生影响，尤其是对于孔的加工 [57-58]。如线
+偏振光对加工孔的出口形状有很大影响，尤其在
+深径比较大时越发明显，相对而言，采用圆偏振
+光可以获得较好的加工效果 [59-61]。总之，对激光
+能量、脉宽、偏振等的调控也可看作是对激光自
+身维度的调控，其中，对激光脉宽的调控可以通
+过激光器设置完成，对激光能量的调节可以通过
+能量衰减系统完成，对激光偏振的调控可以利用
+半波片或者 1/4 波片进行进而得到相应的线偏振
+光或者圆偏振光。  
+5.2  激光自身“五+N”维加工系统相关产品及应用 
+基于三维空间激光自身调控原理与激光自身空
+间偏转角原理，可以得到其“五+N”维自身空间调
+控系统的组成，如图 11a 所示，其主要偏振调控系
+统、偏移系统、动态调焦系统、扫描系统、聚焦系
+统组成，其中，偏振调控系统主要由光学半波片或
+1/4 波片组成，其作用是控制激光的偏振特性，偏移
+系统控制两偏转维度，动态调焦系统控制 Z 维度，
+扫描系统控制 XY 维度。“五+N”维激光自身空间
+调控系统具有使聚焦光束在多个维度变化的能力，
+可用于多种异形结构的加工，目前国内外已有相关
+公司研制出了“五+N”维激光加工头。 
+如图 11b所示是美国 NOV ANTA的公司的“五
++N”维高精度钻孔头 Elephant2[62]，该产品可以加
+工出不同锥度、锥角和形状的微孔和边缘几何形状，
+并可以生产出完美的圆形、椭圆形和定制形状的微
+孔、微结构，如图 11d 中的碳化物加工与动脉支架
+的切割[63]；图 11c1 是德国 SCANLAB 公司生产的
+微处理设备 PRESYS[64-65]，搭配了可视化用户操作
+界面，可以实现如图 11d 所示的钻孔与复杂图案加
+工[66]；图 11c2是美国 AEROTECH的五轴激光微加
+工扫描仪 AGV5D，其声称该产品是加工精确孔、
+轮廓槽和其他具有完全定义截面的几何形状的最
+快、最灵活和最精确的解决方案，在介入性心血管
+植入、微电子加工方面广泛运用[67]；图11c3是我国
+大族激光研制出五轴微加工系统，处在初步研发阶
+段，相关资料较少。 
+对于“五+N”维激光加工头，目前仅有上述几
+家厂商有产品的报导，整体而言，产品均包含控制
+系统、操作系统、监测系统与冷却系统，其中，控
+制系统通过控制相应指令让光束实现空间五个维度
+的变化；操作系统是基于公司各自的上位机操作界
+
+ 机  械  工  程  学  报 第 59卷第 19 期期  
+ 
+384 
+面开发的，便于使用；检测系统是为了在加工过程
+中实时监测聚焦光斑的空间位置及其与代加工件的
+相对位置等，保证实时加工的有效性；冷却系统以
+水冷为主，为电控系统和光路传输系统服务，保证
+加工的安全性。 
+ 
+图 11  “五+N”维激光加工头 
+表 5为国内外“五+N”维激光加工头及其技术
+参数表，从表中可以发现，目前该产品的加工范围
+普遍较小，在 Z方向的调节尺度约为±1 mm，角度
+偏转最多可实现±9°，总之，目前该产品自身的 XY
+维度的加工范围小，Z 向调控行程小，自身调控的
+两偏转角依旧小，因此如何在保证产品加工精度的
+前提下提升“五 +N”维激光加工头的加工尺度问
+题是未来主要的研究重点。 
+表 5  国内外“五+N”维激光加工头及其技术参数 
+公司 SCANLAB AROTECT NOVANTA 大族激光
+国家 德国 德国 美国 中国 
+产品 PRESYS AGV5D Elephant2 微加工系统
+偏转角/(°) ±7.5 ±9 ±9 ±9 
+频率/Hz 800≤  650≤  600≤  600≤  
+物距/ mm  75 55 60 50 
+轴数 5 5 8 5 
+冷却 水冷 水冷 水冷 水冷 
+Z 行程 / mm ±1 ±2 ±1 ±1 
+XY范围/ mm 5≤  2≤   3≤   1≤   
+精度/ μm  0.5≤  0.2≤   0.2≤   0.5≤   
+6  结论与展望 
+与借助外部辅助机构实现激光束空间维度变化
+比，激光自身空间维度加工系统在加工速度和加工
+精度上均有较大优势，为激光高效高精密加工提供
+了更好的技术解决方案。激光自身空间维度加工系
+统，主要包括点维、一维、二维、三维和“五
++N”维，介绍了各维度激光加工系统的光学结构
+及调控方式。其中，光学结构主要指由光学镜片组
+成的调控系统与聚焦系统，调控方式是指对调控系
+统中光学镜片的结构尺寸、安装位置、运动方式
+等的选择。概括而言，点维是激光束通过光学结
+构形成一定形状尺寸的光斑，整个光学结构的固
+定，导致其不具备空间运动能力，而一维、二
+维、三维与“五 +N”维自身具有调控激光束在
+空间维度变化的能力，一维主要是利用反射镜、
+棱镜等移动或转动实现某一维度的变化，受限于
+运动的维度，不适宜商业化应用；二维是通过镜
+片的安装位置与偏转运动实现 XY 维度的变化，
+但其加工范围有限；三维在二维的基础上改变光
+学镜片的种类与数量，控制镜片的移动，实现了
+Z 维度的调控，且 Z 维度的调控范围受限于镜片
+的移动距离与安装位置，尺度有限；“五 +N”
+维则是在三维的基础上利用不同类型组合的光学
+镜片实现两个偏转维度 α 和 β ，同时增加对激光
+偏转特性的调控，但其各维度调控范围均较小，
+技术壁垒高。  
+以各维度激光加工系统实现方法为基础，针对
+实际需求，应运而生了多种工业化激光加工产品，
+主要包括以点维激光加工系统为基础的激光切割头
+和激光焊接头等，二维 /三维激光加工系统为基础
+
+月 2023年 10 月 梅雪松等：激光自身空间维度加工系统综述 
+ 
+385 
+的 2D/2.5D/3D 扫描振镜，“五+N”激光加工头。
+其中，点维、二维 /三维加工系统应用广泛且产品
+成熟度高，“五 +N”维激光加工头由于其控制难
+度大，装配精度高等难点阻碍了它的研发进程，目
+前仅有美国 NOV ANTA、德国 SCANLAB等公司研
+制了相应产品，但他们的加工范围较小， XY 平面
+加工范围均小于 5 mm，Z向调控范围±1 mm，偏角
+小于 9°，限制其工业化的应用。此外，对比国内外
+各维度的激光加工产品，发现在加工范围、加工速
+度上国内外的产品相差无几，但在加工精度上，国
+外更甚一筹。 
+总之，激光自身空间维度加工系统对激光高效
+高精密加工具有长远的影响。但是针对各个维度激
+光自身空间加工系统均存在一些问题有待进一步解
+决，如异于常规高斯态聚焦光斑的多光斑形态的具
+体应用；实现各维度调控的光学结构的选择、装
+配、加工、控制等对加工范围、加工精度的影响；
+面向复杂异形结构高精密加工的“五 +N”维激光
+加工系统的开发等。 
+参  考  文  献 
+ [1] 张学聪，钱静，付强，等. 皮秒激光切割 PBO 纤维增
+强复合材料[J]. 中国激光，2020，47(10)：63-72. 
+ZHANG Xuecong ， QIAN Jing ， FU Qiang ， et al. 
+Picosecond laser cutting PBO fiber reinforced 
+composites[J]. China Laser，2020，47(10)：63-72. 
+ [2] 刘浩东，戴京涛 . 激光焊接技术的应用研究进展与分  
+析[J]. 电焊机，2022，52(1)：95-102. 
+LIU Haodong ，DAI Jingtao. Progress and analysis of 
+application research of laser welding technology[J]. 
+Electric Welding Machine，2022，52(1)：95-102. 
+ [3] 林加富 . 激光打孔技术在光伏背板玻璃上的应用 [J]. 
+玻璃，2022，49(2)：53-57. 
+LIN Jiafu. Application of laser drilling technolog-y in 
+photovoltaic backplane glass[J]. Glass ，2022，49(2)：
+53-57. 
+ [4] 李文锦，丁茜，原福松，等. 飞秒激光表面处理对氧化
+锆表面特征及弯曲强度的影响 [J]. 北京大学学报，
+2021，53(4)：770-775. 
+LI Wenjin，DING Qian，YUAN Fusong，et al. Effectof 
+femtosecond laser surfa ce treatment on surface 
+characteristics and bending strength of zirconia[J]. Journal 
+of Peking University，2021，53(4)：770-775. 
+ [5] 孙磊，郭雨嘉，张盼盼，等. 激光合金化改性 8YSZ热
+障涂层的抗热腐蚀性能研究[J]. 中国激光，2023，50(4)：
+18-28. 
+SUN Lei，GUO Yujia，ZHANG Panpan，et al. Study on 
+thermal corrosion resistance of laser alloyingmodified 
+8YSZ thermal barrier coating[J]. Chinese Journal of 
+Lasers，2023，50(4)：18-28. 
+ [6] HOLLIS M S. Parameterized design of a supersonic 
+radome[C]//ASME International Mechanical Engineering 
+Congress and Exposition. American Society of 
+Mechanical Engineers，2001，35715：95-103. 
+ [7] 杨建平，陈学康，吴敢，等. 纳秒激光刻蚀复合材料基
+金属薄膜机制研究[J]. 中国激光，2011，38(6)：256-260. 
+YANG Jianping，CHEN Xuekang，WU Gan，et al. Study 
+on the mechanism of nanosecond laser etching of 
+composite matrix metal films[J]. China Laser ，2011，
+38(6)：256-260. 
+ [8] 吴雪峰，梅三林. 飞秒激光加工机理及仿真研究进展[J]. 
+激光与光电子学进展，2021，58(19)：1-17. 
+WU Xuefeng ， MEI Sanlin. Research progress in 
+femtosecond laser processing mechanism and 
+simulation[J]. Progress in Laser and Optoelectronics ，
+2021，58(19)：1-17. 
+ [9] BUNKER R S. A review of shaped hole turbine 
+film-cooling technology[J]. J. Heat Transfer ， 2005，
+127(4)：441-453. 
+[10] 李兴， 管迎春. 浅述几种典型激光加工技术在航空制造
+领域的应用现状[J]. 航空制造技术，2019，62(23)：38-45. 
+LI Xing ， GUAN Yingchun. Brie fly describe the 
+application status of severa l typical laser processing 
+technologies in aviation manufacturing[J]. Aviation 
+Manufacturing Technology，2019，62(23)：38-45. 
+[11] SUN J ，ZHUANG J，JIANG H，et al. Thermal dissipation 
+performance of metal-polymer composite heat exchanger 
+with V-shape microgrooves ： A numerical and 
+experimental study[J]. Applied Thermal Engineering ，
+2017，121：492-500. 
+[12] 邱海霞，李步洪，马辉，等. 我国激光技术医疗应用和
+产业发展战略研究 [J]. 中国工程科学， 2020，22(3)：
+14-20. 
+QIU Haixia，LI Buhong，MA Hui，et al. Research on the 
+medical application and industrial develo-pment strategy 
+of laser technology in China[J]. China Engineering 
+Science，2020，22(3)：14-20. 
+[13] HE K K ，YAN C F，DAI Y T，et al. Study on femtosecond 
+laser stealth cutti ng technology of quartz[C]//2022 IEEE 
+13th International Conference on Mechanical and 
+
+ 机  械  工  程  学  报 第 59卷第 19 期期  
+ 
+386 
+Intelligent Manufacturing Technologies (ICMIMT). 
+IEEE，2022：15-19. 
+[14] HAN Y ，JIAO Z，ZHAO J，et al. A simple approach to 
+fabricate multi-layer glass microfluidic chips based on 
+laser processing and thermocompression bonding[J]. 
+Microfluidics and Nanofluidics，2021，25(9)：77-79. 
+[15] PETTERSSON U ，JACOBSON S. Textured surfaces for 
+improved lubrication at high pressure and low sliding 
+speed of roller/piston in hydraulic motors[J]. Tribology 
+International，2007，40(2)：355-359. 
+[16] 房晓龙，朱荻 . 管电极电解加工关键技术研究 [D]. 南
+京：南京航空航天大学，2013. 
+FANG Xiaolong，ZHU Di. Research on key technologies 
+of tube electrode electrochemical machining[D]. Nanjing：
+Nanjing University of Aeronautics and Astronautics，2013. 
+[17] WANG X ，DUAN J，JIANG M，et al. Study of laser 
+precision ablating texture patterns on large-scale freeform 
+surface[J]. The International Journal of Advanced 
+Manufacturing Technology，2017，92(9)：4571-4581. 
+[18] OVERMYER L ，DUESING J，SUTTMANN O，et al. 
+Laser patterning of thin film sensors on 3-D surfaces[J]. 
+CIRP Annals，2012，61(1)：215-218. 
+[19] 王腾，杨树明，李述胜，等. 振镜激光扫描测量系统误
+差分析与补偿[J]. 光学学报，2020，40(23)：162-174. 
+WANG Teng，Y ANG Shuming，LI Shusheng，et al. Error 
+analysis and compensation of galvanometerlaser scanning 
+measurement system[J]. Acta Optica Sinica ， 2020，
+40(23)：162-174. 
+[20] 林华鑫 . 激光均匀线光斑整形系统的研究与设计 [D]. 
+武汉：华中科技大学，2017. 
+LIN Huaxin. Research and design of laser uniform line 
+spot shaping system[D]. Wuhan：Huazhong University of 
+Science and Technology，2017. 
+[21] HEOFFNAGL J A ，JEFFERSON C M. Beam shaping 
+with a plano-aspheric lens pair[J]. Optical Engineering ，
+2003，42(11)：3090-3099. 
+[22] ZHANG S ，NEIL G，SHING M. Single-element laser 
+beam shaper for uniform flat-top profiles [J]. Optics 
+Express，2003，11(16)：1942-1948. 
+[23] CLARKSON W ，HANNA D. Two-mirror beam-shaping 
+technique for high-power diode  bars[J]. Optics Letters ，
+1996，21(6)：375-377. 
+[24] MALYAK P H. Two-mirror unobscured optical system for 
+reshaping the irradiance distribution of a laser beam[J]. 
+Applied Optics，1992，31(22)：4377-4383. 
+[25] DHOLAKIA K ， CIZMAR T. Shaping the future of 
+manipulation[J]. Nature Photonics，2011，5(6)：335-342. 
+[26] DALIMIER E ，DAINTY C. Comparative analysis of 
+deformable mirrors for ocular adaptive optics[J]. Optics 
+Express，2005，13(11)：4275-4285. 
+[27] BIFANO T. MEMS deform able mirrors[J]. Nature 
+Photonics，2011，5(1)：21-23. 
+[28] KOTLYAR V ，KOV ALEV A，SOFIER V . Asymmetric 
+bessel modes[J]. Optics Letters，2014，39(8)：2395-2398. 
+[29] VETTENBURG T ，DALGARNO H I，NYLK J，et al. 
+Light-sheet microscopy using an Airy beam[J]. Nature 
+Methods，2014，11(5)：541-544. 
+[30] TRA VINSKY A，VOROBIEV D，NINKOV Z，et al. 
+Evaluation of digital micr omirror devices for use in 
+space-based multiobject spectrometer application[J]. 
+Journal of Astronomical Telescopes ，Instruments，and 
+Systems，2017，3(3)：035003. 
+[31] GENG Q ，GU C，CHENG J，et al. Digital micromirror 
+device-based two-photon microscopy for 
+three-dimensional and random-access imaging [J]. 
+Optica，2017，4(6)：674-677. 
+[32] 郭一鸣. 基于计算全息的飞秒激光光束整形[D]. 武汉：
+华中科技大学，2019. 
+GUO Yiming. Femtosecond lase r beam shaping based on 
+CGH[D]. Wuhan：Huazhong University of Science and 
+Technology，2019. 
+[33] ZHANG X ，CAO Z. Effects of pulse shaping on Nd：Y AG 
+laser spot welds in an AZ31 magnesium alloy[J]. Optics 
+and Lasers in Engineering，2019，119：1-8. 
+[34] RA VI‐KUMAR S，LIES B，ZHANG X，et al. Laser 
+ablation of polymers：A review[J]. Polymer International，
+2019，68(8)：1391-1401. 
+[35] PTNTIUM lASER. Product Center[EB/OL]. http ：
+//www.penta666.com/Content/545307.html. 
+[36] HAN'S LASER. laser marking[EB/OL]. https ：
+//www.hanslaser.com/pro-marking.html  
+[37] HEINER OPTICS. Product Center[EB/OL]. https ：
+//www.highlightoptics.com/Product/index.html. 
+[38] XINTE OPTOELECTRONIC. News media[EB/OL]. 
+https：//www.sinteclaser.com/laserwiki/1130.html. 
+[39] LI J ，TANG Y，KUANG Z，et al. Multi imaging-based 
+beam shaping for ultrafast laser-material processing using 
+spatial light modulators[J]. Optics and lasers in 
+engineering，2019，112：59-67. 
+[40] KUANG Z ，LI J，Edwardson S，et al. Ultrafast laser beam 
+shaping for material processing at imaging plane by 
+geometric masks using a spatial light modulator[J]. Optics 
+
+月 2023年 10 月 梅雪松等：激光自身空间维度加工系统综述 
+ 
+387 
+and lasers in engineering，2015，70：1-5. 
+[41] SALTER P S，BOOTH M J. Addressable microlens array 
+for parallel laser microfabrication[J]. Optics Letters ，
+2011，36(12)：2302-2304. 
+[42] 谢小云. 我国激光振镜行业现状及发展趋势[J]. 收藏，
+2020，195(5)：138-139. 
+XIE Xiaoyun. Current situa tion and developmenttrend of 
+laser galvanometer industry in China[J].Collection，2020，
+195(5)：138-139. 
+[43] SCANLAB. SCANLAB innovators for industry[EB/OL]. 
+https：//www.scanlab.de/zh-hans/products. 
+[44] HAN'S LASER. Product Center[EB/OL]. https ：
+//www.hanslaser.com/pro-scanner.html. 
+[45] 李东华 . 激光大尺度三维动态扫描加工系统研究 [D]. 
+武汉：华中科技大学，2015. 
+LI Donghua. Research on laser large-scale 3D dynamic 
+focusing scanning processing system[D].Wuhan ：
+Huazhong University of Science and Technology，2015. 
+[46] 徐志翔， 陈光胜. 三维扫描振镜动态聚焦控制系统建模
+与仿真[J]. 建模与仿真，2021(10)：311-314. 
+XU Zhixiang ， CHEN Guangsheng. Modeling and 
+simulation of 3D scanning galvanometer dynamicfocusing 
+control system[J]. Modeling and Simulation，2021(10)：
+311-314. 
+[47] 李东华，邓磊敏，段军，等 . 激光大尺度 3 维动态聚
+焦扫描加工系统研究 [J]. 激光技术， 2016，40(4)：
+466-471. 
+LI Donghua，DENG Leimin，DUAN Jun，et al. Research 
+on laser large-scale 3D dynamic focusing scanning 
+processing system[J]. Laser Technology，2016，40(4)：
+466-471. 
+[48] 侯茂盛，杨帆，孙明利，等. 应用于激光扫描投影仪器
+的动态聚焦技术研究 [J]. 应用光学， 2018，39(5)：
+605-606. 
+HOU Maosheng，YANG Fan，SUN Mingli，et al. Research 
+on dynamic focusing technology applied to laser scanning 
+projection instrument[J]. Applied Optics，2018，39(5)：
+605-606. 
+[49] 沈可余 . 激光偏转扫描系统动态聚焦模块的研究 [D]. 
+上海：复旦大学，2011. 
+SHEN Keyu. Research on dynamic focusing module of 
+laser deflection scanni ng system[D]. Shanghai ：Fudan 
+University，2011. 
+[50] FEEL TEK. Product Center[EB/OL]. https ：
+//www.feeltek.cn/chanpinzhongxin.html. 
+[51] 阿占文，陈灵灵，吴影，等. 超快激光旋光钻孔孔径和
+锥度的控制[J]. 中国激光，2021，48(8)：194-201. 
+A Zhanwen，CHEN Lingling，WU Ying，et al. Control of 
+aperture and taper of ultra-fast laser rotatory drilling[J]. 
+China Laser，2021，48(8)：194-201. 
+[52] 王珊，赵卫，赵华龙，等. 轨迹可控的大深径比倒锥微
+孔加工系统及应用 [J]. 激光与光电子学进展， 2022，
+59(11)：391-398. 
+WANG Shan ，ZHAO Wei ，ZHAO Hualong ，et al. 
+Trajectory controllable inverted cone micro-pore 
+processing system with large depth-diameter ratio and its 
+application[J]. Progress in  Laser and Optoelectronics ，
+2022，59(11)：391-398. 
+[53] 赵华龙，周仁魁，赵卫，等. 飞秒激光倒锥微孔加工
+的反射式扫描装置设计 [J]. 光子学报， 2014(9) ：
+98-103. 
+ZHAO Hualong，ZHOU Renkui，ZHAO Wei，et al. Design 
+of reflective scanning device for femtosecond laser 
+inverted cone micro hole processing[J]. Journal of 
+Photonics，2014(9)：98-103. 
+[54] 王锋，罗建军，李明. 飞秒激光高精细加工柴油机喷油
+嘴倒锥孔法[J]. 光子学报，2014，43(4)：143-147. 
+WANG Feng，LUO Jianjun，LI Ming. Femtosecondlaser 
+high-precision machining of dies el engine nozzle inverted 
+taper hole method[J]. Journal of Photonics，2014，43 (4)：
+143-147. 
+[55] ZHANG F ，DONG X，YIN K，et al. Temperature effects 
+on the geometry during the formation of micro-holes 
+fabricated by femtosecond laser in PMMA[J]. Optics & 
+Laser Technology，2018，100：256-260. 
+[56] HAASLER D ， FINGER J. Investigation of heat 
+accumulation effects during d eep hole percussion drilling 
+by high power ultrashort pulsed laser 
+radiation[C]//Intelnational Congress on Applications of 
+Lasers & Electro-Optics.AIP Publishing，2018. 
+[57] CHO J H ，NA S J. Theoretical analysis of keyhole 
+dynamics in polarized laser drilling[J]. Journal of Physics 
+D：Applied Physics，2007，40(24)：7638. 
+[58] NOLTE S ，MOMMA C，KAMLAGE G，et al. Polarization 
+effects in ultrashort-pulse laser drilling[J]. Applied 
+Physics A，1999，68(5)：563-567. 
+[59] 王华英，雷家良，王学，等. 基于分束棱镜分光的共路
+离轴数字全息显微术研究[J]. 中国激光，2022，49(13)：
+113-121. 
+WANG Huaying ，LEI Jialiang ，WANG Xue ，et al. 
+Research on common path off-axis digital holographic 
+microscopy based on beam splitting prism[J]. China 
+
+ 机  械  工  程  学  报 第 59卷第 19 期期  
+ 
+388 
+Laser，2022，49 (13)：13-121 
+[60] WANG R，DONG X，WANG K，et al. Polarization effect 
+on hole evolution and periodic microstructures in 
+femtosecond laser drilling of thermal barrier coated 
+superalloys[J]. Applied Surface Science，2021，537. 
+[61] GAUDFRIN K ，LOPEZ J，MISHCHIK K，et al. Fused 
+silica ablation by double femtosecond laser pulses ：
+Influence of polarization state[J]. Optics Express，2020，
+28(10). 
+[62] AGFIUL M B H. Scankopf als teil einer laser bohr- und 
+schneideinrichtung，EP2005783447[P]. 2007-01-17. 
+[63] NOV ANTA. Precession elephant2[EB/OL]. https ：
+//novantaphotonics.com/product/precession-elephant-2/. 
+[64] GMBHS S. Scanning head with integrated beam position 
+sensor and adjustment arrangement for an off-line 
+adjustment，US15736905[P]. 2020-09-15. 
+[65] 邓磊敏，乔亚庆，段军，等. 一种多轴激光扫描光学系
+统，中国，202110530086.9[P]. 2021-08-31. 
+DENG Leimin ，QIAO Yaqing，DUAN Jun ，et al. A 
+multi-axis laser scanning optical system ， China ，
+202110530086.9[P]. 2021-08-31. 
+[66] HE C. High-precision an d complex geometry helical 
+drilling by adapted energy deposition[D]. Dissertation ，
+RWTH Aachen University，2020. 
+[67] AEROTECH. LASE R SCAN HEADS[EB/OL]. 
+https://www.aerotech.com/product/laser-scan-heads/agv5d
+-five-axis-laser-micromachining-precession-scanner/. 
+  
+作者简介：梅雪松，男，1963 年出生，博士，教授，博士研究生导师。
+主要研究方向为激光精密加工与视觉导航，智能工厂与数字孪生，人工
+智能与移动机器人等。 
+E-mail：xsmei@xjtu.edu.cn 
+李凯林，男，1993年出生，博士。主要研究方向为激光光束调控精密加
+工，移动机器人等。 
+E-mail：kailinli@stu.xjtu.edu.cn 
+赵万芹(通信作者)，女，1983年出生，博士，副研究员，硕士研究生导
+师。主要研究方向为激光光束调控精密加工及其监测技术等。 
+E-mail：linazhao@xjtu.edu.cn 
+刘斌，男，1987 年出生，博士，副研究员，硕士研究生导师。主要研究
+方向为超快激光精密加工理论及技术、超精密运动系统控制与应用等。 
+E-mail：liubin1110@xjtu.edu.cn 
+孙铮，男，1981 年出生，博士，副研究员，硕士研究生导师。主要研究
+方向为数控系统核心算法、高精密磁浮运动平台的设计与控制等。 
+E-mail：zheng.sun@xjtu.edu.cn 
+段文强，男，1986年出生，博士，副研究员，硕士研究生导师。主要研
+究方向为激光精密加工技术与理论、特种加工装备设计与集成等。 
+E-mail：debo1128@163.com 
+王文君，女，1977年出生，博士，教授，博士研究生导师。主要研究方
+向为激光加工与维纳制造等。 
+E-mail：wenjunwang@xjtu.edu.cn 
+崔健磊，男，1983年出生，博士，教授，博士生导师。主要研究方向为
+激光先进制造、机器人、智能装备与智能工厂等。 
+E-mail：cjlxjtu@xjtu.edu.cn   
+凡正杰，男，1985年出生，博士，副教授，硕士研究生导师。主要研究
+方向为激光与机器人复合加工技术、激光加工检测与机器视觉技术等。 
+E-mail：fanzhengjie@xjtu.edu.cn 
+ 

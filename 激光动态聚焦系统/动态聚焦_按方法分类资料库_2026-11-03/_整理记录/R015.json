@@ -1,0 +1,50 @@
+{
+  "url": "https://patents.google.com/patent/CN116373177A/zh",
+  "category": "09_艾思兰及相邻应用",
+  "origins": [
+    "Gemini输出.txt",
+    "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md",
+    "苏州艾思兰_动态聚焦资料\\来源清单.csv"
+  ],
+  "context": "原文提到的专利号，补全公开文本入口；标题及相关性待与原件核对",
+  "id": "R015",
+  "files": [
+    {
+      "path": "09_艾思兰及相邻应用\\R015_CN116373177A - 激光洗模机 _        - Google Patents.html",
+      "type": "HTML",
+      "bytes": 188879,
+      "sha256": "fb7cf84bb5851aade7e2d4e882c3181a34ab6c85790321d55d2d81721600af8d",
+      "url": "https://patents.google.com/patent/CN116373177A/zh",
+      "title": "CN116373177A - 激光洗模机 \n        - Google Patents",
+      "text_chars": 27117
+    },
+    {
+      "path": "09_艾思兰及相邻应用\\R015_CN116373177A - 激光洗模机 - Google Patents.pdf",
+      "type": "PDF",
+      "pages": 22,
+      "bytes": 2160960,
+      "sha256": "bc456e0e0c8f828bbbff94547772c191be5cc265af6d1e9f41d7c5e760297d20",
+      "url": "https://patentimages.storage.googleapis.com/df/25/67/b20fc0df98880c/CN116373177A.pdf",
+      "text_chars": 17889,
+      "title": "",
+      "preview": "(19)国家知识产权局\n(12)发明专利申请\n(10)申请公布号 \n(43)申请公布日 \n(21)申请号 202310358665.9\n(22)申请日 2023.04.06\n(71)申请人 苏州艾思兰光电有限公司\n地址 215024 江苏省苏州市工业园区金芳\n路18号东坊创智园地C栋2楼\n(72)发明人 周倩　许路　杨忠英　王建波　\n(74)专利代理机构 苏州谨和知识产权代理事务\n所(特殊普通合伙) 32295\n专利代理师 许冬莹\n(51)Int.Cl.\nB29C 33/72(2006.01)\n \n(54)发明名称\n激光洗模机\n(57)摘要\n本申请提供激光洗模机，涉及激光洗模技术\n领域。激光洗模机包含控制系统、运动系统、防护\n系统和光学系统，所述六轴机器人末端设置有激\n光清洗头，所述第一滑轨对称固接于所述底架 ，\n所述第一齿条固接于所述第一滑轨，所述第一驱\n动电机的输出端和所述第一齿条传动连接，所述\n第二驱动电机和所述顶板传动连接，利用第一驱\n动电机和第一齿条的传动连接，使底板和顶板沿\n着第一齿条位移，使工件得以输送到激光清洗头\n处，利用第二驱动电机和顶板的传动关系 ，对顶\n板上的工件",
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://patents.google.com/patent/CN116373177A/zh",
+      "http": 200,
+      "final_url": "https://patents.google.com/patent/CN116373177A/zh",
+      "result": "网页"
+    },
+    {
+      "url": "https://patentimages.storage.googleapis.com/df/25/67/b20fc0df98880c/CN116373177A.pdf",
+      "http": 200,
+      "final_url": "https://patentimages.storage.googleapis.com/df/25/67/b20fc0df98880c/CN116373177A.pdf",
+      "result": "有效PDF"
+    }
+  ],
+  "title": "CN116373177A - 激光洗模机 - Google Patents",
+  "status": "PDF已下载"
+}

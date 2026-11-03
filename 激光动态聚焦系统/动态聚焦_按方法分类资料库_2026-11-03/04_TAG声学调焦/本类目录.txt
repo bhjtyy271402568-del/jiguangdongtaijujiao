@@ -1,0 +1,49 @@
+﻿04_TAG声学调焦
+
+R023 | Single-lens dynamic $$z$$ -scanning for simultaneous in situ position detection and laser processing focus control | Light: Science & Applications
+状态：PDF已下载
+来源：https://www.nature.com/articles/s41377-023-01303-2
+文件：04_TAG声学调焦\R023_Single-lens dynamic $$z$$ -scanning for simultaneous in situ position detection and laser processing focu.html
+文件：04_TAG声学调焦\R023_TAG_2023_正文.pdf
+文件：04_TAG声学调焦\R023_TAG_2023_补充资料.pdf
+
+R024 | Single-lens dynamic z-scanning_2023_TAG_全文镜像
+状态：PDF已下载
+来源：https://www.newswise.com/pdf_docs/170367637534890_s41377-023-01303-2.pdf
+文件：04_TAG声学调焦\R023_TAG_2023_正文.pdf
+
+R028 | Localized dynamic lensing via collinear light-sound interactions_2026
+状态：全文已由用户补齐 → U007
+来源：https://link.springer.com/article/10.1007/s44258-025-00067-1
+
+
+R070 | Single-lens dynamic z-scanning for simultaneous in situ position detection and laser processing focus control - CityUHK Scholars
+状态：网页已保存
+来源：https://scholars.cityu.edu.hk/en/publications/single-lens-dynamic-z-scanning-for-simultaneous-in-situ-position-/
+文件：04_TAG声学调焦\R070_Single-lens dynamic z-scanning for simultaneous in situ position detection and laser processing focus con.html
+
+A002 | 光声共线调焦_2026_原文PDF
+状态：全文已由用户补齐 → U007
+来源：https://link.springer.com/content/pdf/10.1007/s44258-025-00067-1.pdf
+
+
+D001 | Supporting Video V1 (download MOV )
+状态：补充材料已下载
+来源：https://static-content.springer.com/esm/art%3A10.1038%2Fs41377-023-01303-2/MediaObjects/41377_2023_1303_MOESM2_ESM.mov
+文件：04_TAG声学调焦\D001_Supporting Video V1 (download MOV ).mov
+
+D002 | supporting Video V2 (download MOV )
+状态：补充材料已下载
+来源：https://static-content.springer.com/esm/art%3A10.1038%2Fs41377-023-01303-2/MediaObjects/41377_2023_1303_MOESM3_ESM.mov
+文件：04_TAG声学调焦\D002_supporting Video V2 (download MOV ).mov
+
+D003 | Supporting Video V3 (download MOV )
+状态：补充材料已下载
+来源：https://static-content.springer.com/esm/art%3A10.1038%2Fs41377-023-01303-2/MediaObjects/41377_2023_1303_MOESM4_ESM.mov
+文件：04_TAG声学调焦\D003_Supporting Video V3 (download MOV ).mov
+
+U007 | 2026_共线光声相互作用_局域动态调焦与扩展景深
+状态：PDF已下载
+来源：https://doi.org/10.1007/s44258-025-00067-1
+文件：04_TAG声学调焦\U007_2026_共线光声相互作用_局域动态调焦与扩展景深.pdf
+

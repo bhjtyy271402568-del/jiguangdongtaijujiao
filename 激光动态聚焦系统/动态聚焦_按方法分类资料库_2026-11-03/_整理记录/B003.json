@@ -1,0 +1,30 @@
+{
+  "id": "B003",
+  "category": "07_测高闭环_三轴同步与标定",
+  "url": "https://software.raylase.de/rpi/RAYLASE/spice3/usersmanual/",
+  "context": "RAYLASE_SPICE3_官方在线手册入口",
+  "title": "RAYLASE_SPICE3_官方在线手册入口",
+  "origins": [
+    "原文线索补充及相关中文综述"
+  ],
+  "files": [
+    {
+      "path": "07_测高闭环_三轴同步与标定\\B003_SP-ICE Control Electronics_ SP-ICE 3 User's Manual - Redirect.html",
+      "type": "HTML",
+      "bytes": 1140,
+      "sha256": "4e7255a7f06f122c62c56cad27937cb1c6c6035cee40dbf0be8cdd7e9ea007f8",
+      "url": "https://software.raylase.de/rpi/RAYLASE/spice3/usersmanual/",
+      "title": "SP-ICE Control Electronics: SP-ICE 3 User's Manual - Redirect",
+      "text_chars": 142
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://software.raylase.de/rpi/RAYLASE/spice3/usersmanual/",
+      "http": 200,
+      "final_url": "https://software.raylase.de/rpi/RAYLASE/spice3/usersmanual/",
+      "result": "网页"
+    }
+  ],
+  "status": "在线手册入口已保存_非完整离线手册"
+}

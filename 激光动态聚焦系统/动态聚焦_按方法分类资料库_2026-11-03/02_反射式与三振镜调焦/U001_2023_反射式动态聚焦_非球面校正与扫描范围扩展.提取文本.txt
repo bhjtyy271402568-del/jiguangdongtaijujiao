@@ -1,0 +1,453 @@
+6496
+Vol. 48, No. 24 / 15 December 2023 / Optics Letters
+Letter
+Extending the 3D scanning range of reflective
+dynamic focusing device-based laser scanners
+Yi Liu,† Yaqing Qiao,† Yuhang Ding, Wangrong Lu, Tianting Chen, Haoran Ma, Jun
+Duan, Wei Xiong,
+AND Leimin Deng∗
+Wuhan National Laboratory for Optoelectronics, Huazhong University of Science and Technology, Wuhan 430074, China
+†These authors contributed equally to this Letter.
+*dlm@hust.edu.cn
+Received 18 October 2023; revised 21 November 2023; accepted 21 November 2023; posted 21 November 2023; published 8 December 2023
+Reflective dynamic focusing devices (RDFDs) have shown
+their potential in laser scanning as high-performance laser
+Z-direction focusing devices. However, the scanning range
+of RDFD-based scanners is limited by aberrations dur-
+ing dynamic focusing. An aspheric symmetry correction
+(ASC) method was proposed to extend the effective scan-
+ning range. An aspheric lens was introduced to correct the
+optical path difference (OPD) and optimize aberrations. As
+a result, the scanning range in the three-dimensional (3D)
+space increased by 15.2%. The ASC method has been proven
+to extend the 3D scanning range of RDFD-based scanners
+and may have broad application prospects.
+© 2023 Optica
+Publishing Group
+https://doi.org/10.1364/OL.509656
+Laser three-dimensional (3D) scanning technology, which relies
+on the rapid movement of the laser focus in the 3D space, has
+found widespread applications in microstructure manufacturing
+[1–4], laser cleaning [5–7], and large format texturing [8–11].
+The X and Y positions of the laser focus are typically controlled
+by two-axis galvanometers [12–16], with scanning speeds of
+up to 10 m/s achievable at a working distance of 160 mm [17].
+However, achieving comparable scanning speed for the Z posi-
+tion of the laser focus remains a challenge. It is a crucial factor
+limiting the maximum scanning speed of the laser 3D scanning
+system [18]. The scanning speed of the laser focus along the
+Z direction, when using a moving concave lens, is three orders
+of magnitude slower than that of the X and Y directions [18].
+This is because the parallel movement speed of the concave lens
+lags far behind the deflection speed of two-axis galvanometers
+[19,20]. Methods that manipulate the shape of the lens based on
+the principle of electro-wetting [21,22] or shape-variable lenses
+[23–26] can rapidly shift the Z direction position of the laser
+focus. However, the surface shape of variable lenses is difficult
+to control precisely [27]. Reflective dynamic focusing devices
+(RDFDs) use two highly dynamic characteristic galvanometers
+to convert angular motion into axial motion, increasing the laser
+scanning speed in the Z direction [28,29]. However, when shift-
+ing the focus Z position, RDFDs need to break the symmetry
+of the optical path, which introduces additional optical path dif-
+ference (OPD), affecting the focusing quality. Especially when
+RDFDs are used in conjunction with an XY scanner for 3D scan-
+ning, the XY scanning further amplifies the OPD. This leads to
+a decrease in the focusing quality and uniformity in the central
+area of the scanning field, and even the edge area cannot be used
+for processing. Consequently, the development and application
+of RDFDs was limited.
+In this Letter, the reasons for the limited scanning range of
+RDFD-based 3D laser scanners were discussed. The aberra-
+tions caused by the broken symmetry of the optical path were
+analyzed. An aspheric symmetry correction (ASC) method was
+proposed to optimize OPD and extend the scanning range. An
+aspheric correcting lens (CL) was placed in front of the focal
+point of the second off-axis parabolic mirror to compensate for
+the OPD between the edge rays and the chief ray, and the sym-
+metry of the optical path was improved. Etching experiments
+were performed to verify the effectiveness of the ASC method.
+The optical path of the RDFD-based laser scanner is shown
+in Fig. 1(a). The RDFDs consisted of two off-axis parabolic
+mirrors (PM1 and PM2) and galvanometers (G1 and G2) placed
+at the focal points of PM1 and PM2, respectively. The G1 and
+G2 were rotatable. When the focus Z position was not shifted,
+the angle between the outgoing and incident beam of G1 and
+the angle between the outgoing and incident beam of G2 were
+equal to the off-axis angle θ of the parabolic mirrors. The laser-
+focusing Z (the direction along the optical axis) position was
+controlled by rotating G1 and G2. The rotation angles α of G1
+and G2 were equivalent, the rotation directions were opposite,
+and the rotation angle of the outgoing beam was ∆θ = 2α. When
+G1 and G2 rotated, the primary focus positions between PM1 and
+PM2 were shifted forward or backward, as shown by points A1,
+B1, and C1 in Fig. 1(a). After reflection by G2, it was scanned
+in two dimensions (2D) in the plane perpendicular to the Z
+direction by the XY scanner and focused by the F-theta lens
+(FL), so secondary focus positions (dynamic focusing positions)
+shifted forward or backward, along the Z direction after the FL,
+as shown by points A2, B2, and C2 in Fig. 1(a), and 2D scanning
+can be performed by XY scanner in the Z plane corresponding
+to points A2, B2, and C2. The focus-shift distance ∆Z can be
+derived as
+∆Z = K(R, D)f α,
+(1)
+where K is a factor related to RDFDs and depends on the
+curvature R of PM1 and PM2, the beam diameter D, and the
+0146-9592/23/246496-04 Journal © 2023 Optica Publishing Group
+
+
+Letter
+Vol. 48, No. 24 / 15 December 2023 / Optics Letters
+6497
+Fig. 1.
+Schematic diagram of the aberration generated by the
+RDFD-based laser scanner during the focusing process. G1, G2,
+galvanometers; PM1, PM2, off-axis parabolic mirrors; D, beam
+diameter; R, curvature of PM1 and PM2; L, distance of PM1 and
+PM2; XY scanner, two-axis galvanometers; FL, F-theta lens; FP1,
+FP2, FP3, focal planes; A1, B1, C1, primary focus positions; A2,
+B2, C2, secondary focus positions; IBs, incident beams; θ, off-
+axis angle of PM1 and PM2; α, rotation angle of G1; ∆θ, rotation
+angle of outgoing beam; STRH, Strehl ratio; xp/yp, components of
+the normalized entrance pupil coordinates in the sagittal/tangential
+directions; Z, Z position of the focus. (a) Optical path of a con-
+ventional RDFD-based laser scanner; (b) 3D scanning range of a
+conventional RDFD-based laser scanner; (c) and (d) Variations of
+OPD with xp/yp and Z (D = 8 mm, R = 304.8 mm, θ = 45°, the focal
+length f of FL = 100 mm, L = 410.729 mm).
+focal length f of the FL. In our simulations and experiments,
+K = 0.033/°.
+According to the aberration theory [30] and the Abbe sine
+condition [31], there was no coma in the system when the dis-
+tance between PM1 and PM2 satisfied that the primary focus
+position B1 was located on the symmetry axis of PM1 and PM2.
+In this case, the optical path between G1 and G2 was perfectly
+symmetric, as shown by the solid blue line, with only a small
+amount (−0.017 waves, in our system) of spherical aberration.
+During the dynamic focusing process, G1 and G2 deflected (−Z,
+green; +Z, red) from the initial angle (Z = 0 mm, blue), and the
+symmetrical structure of the optical path was broken by the rota-
+tion of G1 and G2. As depicted by the red and green solid lines
+shown in the rectangular zoom in Fig. 1(a), the laser entering
+the XY scanner was not symmetrical. Consequently, the broken
+symmetry resulted in the formation of mainly coma aberrations
+at the focal planes FP1 and FP3, affecting the focus quality in
+spot diagrams.
+Figures 1(c)–1(d) show the variations of OPD with xp/yp and
+Z, where xp/yp were the components of the normalized entrance
+pupil coordinates in the sagittal/tangential directions with larger
+absolute values closer to the edge of rays [30], and Z was the
+Z direction dynamic focusing position. As shown in Fig. 1(c),
+the absolute values of OPD of the ray in the sagittal direction
+increased from the value 0 as the Z position of the focus moved
+away from Z = 0 mm to Z = −10 mm/Z = 10 mm. The OPD was
+also increased with xp, which indicated that the closer the ray in
+the sagittal plane was to the edge, the larger the OPD between
+it and the chief ray was. When Z = −10 mm and xp = ±1.0, the
+OPD was 0.148 waves, and when Z = 10 mm and xp = ±1, the
+OPD was −0.138 waves. The agreement of the values at different
+Z planes, for xp = ±1.0, xp = ±0.9, xp = ±0.8, and xp = ±0.7, indi-
+cated that this edge effect of rays was symmetric in the sagittal
+plane of the beam.
+As shown in Fig. 1(d), in the tangential plane, the OPD of the
+ray increased to 0.298 waves when Z = −10 mm and yp = −1.0,
+and the OPD of the ray was 0.009 waves when Z = −10 mm
+and yp = 1.0. The OPD of the ray decreased to −0.269 waves
+when Z = 10 mm and yp = -1.0, and the OPD of the ray was -
+0.008 waves when Z = 10 mm and yp = 1.0. The disagreements
+of the values at different Z planes, for yp = ±1.0, yp = ± 0.9,
+yp = ±0.8, and yp = ±0.7 indicated that this edge effect of rays
+was asymmetric in the tangential plane of the beam. However,
+this asymmetry introduced additional coma aberrations, which
+was consistent with the spot diagrams in Fig. 1(a). The asymme-
+try of the beam and increased OPD was combined to introduce
+aberrations.
+The XY scanner scanned the laser-focusing spot in X and
+Y directions at each Z plane. However, it acted as an aberra-
+tion amplifier, further amplifying the aberration at the center
+of each focusing plane [8], so the axial aberration affects the
+3D scanning range of the RDFD-based laser scanner. When the
+diffraction of the ray was considered, the Strehl ratio (STRH)
+reflected the effect of the OPD on the focusing effect in terms
+of energy [32]. Therefore, the STRH was used to evaluate the
+focusing effect within the scanning range, taking the value of
+0 to 1, with closer to 1 indicating better focusing. A STRH
+of ≥0.8 is generally considered to correspond to diffraction-
+limited performance and effective processing. For STRH of
+≤0.3, the behavior of the STRH becomes uncorrelated to the
+processing quality due to large aberrations [32]. The STRH,
+which was simulated by ZEMAX, within the 3D scanning range
+is shown in Fig. 1(b). The optical aperture D was 8 mm, the
+laser wavelength λ was 1064 nm, the curvature R of two off-
+axis parabolic mirrors was 304.8 mm, the focal length f of
+FL was 100 mm, and the distance L of PM1 and PM2 was
+410.729 mm. When Z = 0 mm, the STRH was close to 1 within
+the scanning range of 40 × 40 mm2. However, when the laser
+focus moved backward or forward, the STRH decreased rapidly.
+When Z = ±10 mm, the STRH at the corners of the scanning
+field decreased to only about 0.3, affecting the effective scanning
+range.
+An aspheric symmetry correction (ASC) method was pro-
+posed to extend the 3D scanning range of RDFD-based laser
+scanners. The schematic diagram of the ASC method is shown
+in Fig. 2(a). An aspheric correcting lens with a thicker center
+and thinner sides was inserted between PM2 and G2 to improve
+the symmetry of the optical path to reduce aberrations, and the
+initial focused beam (Z = 0 mm, blue) passed through the center
+of the lens [31]. The aperture of CL and the distance from CL
+to G2 were adjusted so that light within the field of view of G2
+could pass through. By adjusting the OPDC (the optical path dif-
+ference referenced to the chief ray, expressed in wave number)
+and RAED (the angle between the interface normal and the ray
+of light after refraction or reflection on the surface, expressed in
+degrees) operands in ZEMAX so that the edge rays were opti-
+mized towards a symmetric trend when the focusing light path
+with asymmetry passes through the lens, the CL can optimize
+different focusing light paths in different face shape regions due
+to the design of placing the CL between PM2 and G2. As depicted
+by red and green solid lines shown in the rectangular zoom in
+
+
+6498
+Vol. 48, No. 24 / 15 December 2023 / Optics Letters
+Letter
+Table 1.
+Variations of OPD (Wave) with Z and xp/yp
+CL
+Z (mm)
+xp = −1.0
+xp = +1.0
+yp = −1.0
+yp = +1.0
+Without
+Z = −10
+0.148
+0.148
+0.298
+0.009
+Z = 10
+−0.138
+−0.138
+−0.269
+−0.008
+With
+Z = −10
+0.004
+0.004
+0.088
+−0.139
+Z = 10
+0.033
+0.033
+−0.110
+0.089
+Fig. 2.
+Schematic diagram of the correcting lens to optimize
+the aberration generated by the RDFD-based laser scanner during
+the focusing process. G1, G2, galvanometers; PM1, PM2, off-axis
+parabolic mirrors; D, beam diameter; R, curvature of PM1 and
+PM2; L, distance of PM1 and PM2; CL, aspheric correcting lens; XY
+scanner, two-axis galvanometers; FL, F-theta lens; FP1, FP2, FP3,
+focal planes; A1, B1, C1, primary focus positions; A2, B2, C2, sec-
+ondary focus positions; IBs, incident beams; θ, off-axis angle of PM1
+and PM2; α, rotation angle of G1; ∆θ, rotation angle of outgoing
+beam; STRH, Strehl ratio; xp, yp, components of the normal-
+ized entrance pupil coordinates in the sagittal/tangential directions.
+Z, Z position of the focus. (a) Optical path of an RDFD-based
+laser scanner with CL. (b) 3D scanning range of an RDFD-based
+laser scanner with CL. (c) and (d) Variations of OPD with xp/yp
+and Z (D = 8 mm, R = 304.8 mm, θ = 45°, the focal length f of
+FL = 100 mm, L = 410.729 mm).
+Fig. 2(a), the laser entering the XY scanner was symmetrical in
+the XY plane.
+The optimized OPD in the sagittal plane is shown in Fig. 2(c),
+and the maximum OPD value was only 0.033 waves. As in the
+tangential plane, the OPD of the ray was 0.088 waves when
+Z = −10 mm and yp = −1.0, and the OPD of the ray was –0.139
+waves when Z = −10 mm and yp = 1.0, as shown in Fig. 2(d).
+When Z = 10 mm and yp = −1.0, the OPD of the ray was −0.110
+waves, and when Z = 10 mm and yp = 1.0, the OPD of the ray
+was 0.089 waves, which indicated the asymmetry of edge rays
+was optimized. Table 1 shows some of the parameter changes
+in Figs. 1 (without CL) and 2 (with CL) c and d. The OPD
+(xp/yp = ±1.0) of the edge rays decreased and converged to the
+same value in the case with CL compared to the case without
+CL, which indicated that the symmetry of the rays was improved
+in the Z = 10 mm and Z = −10 mm planes. The STRH within
+the 3D scanning range after correction is shown in Fig. 2(b).
+Due to the increase in beam symmetry and the decrease in the
+OPD between the edge and chief rays, the spot uniformity was
+Fig. 3.
+Experimental setup of an RDFD-based laser scanner with
+ASC. Laser, nanosecond fiber laser; G1, G2, galvanometers; PM1,
+PM2, off-axis parabolic mirrors; FL, F-theta lens; XY scanner, two-
+axis galvanometers; CL, aspheric correcting lens.
+significantly improved. The STRH of the scanning field corners
+of the system remained above 0.5 in a 3D scanning range of
+40 × 40 × 20 mm3, and the volume of the area with STRH of
+≥0.8 in the scanning range was expanded by 15.2%.
+An experiment was carried out to verify the effectiveness
+of the ASC, and the experimental setup is shown in Fig. 3.
+A nanosecond fiber laser (YDFLP-100-M8-M-R, JPT) with
+a 3.0 mm (expanded to 8 mm, for observing the experimental
+results more dramatically) beam diameter was adopted for the
+experiment. The wavelength was 1064 nm, the beam quality fac-
+tor M2 was 1.4, and the maximum average power was 100 W. The
+curvature R of the off-axis parabolic mirrors (35588, Edmund)
+was 304.8 mm, and the offset angle was 45°, corresponding to the
+initial state of G1. The G1 and G2 can be deflected by ±12.5°. The
+scanning speed of the XY scanner (ExtraScan II 14, Hans) was
+up to 7 m/s. An F-theta lens with a focal length of 100 mm was
+used to focus the laser, and the working distance was 142 mm.
+An XYZ stage was placed to move the samples. Two typical
+planes of Z = 0 mm and Z = −10 mm were selected to evaluate
+the effectiveness of ASC. An aluminum (1060) plate with a size
+of 50 × 50 × 1 mm3 was used for experiments, and the laser etch-
+ing effect was used as the criterion for evaluating the effective
+scanning range. The laser scanning path was a 40 × 40 mm2 rect-
+angle, with horizontal and vertical crosshatched lines spaced at
+0.5 mm apart. The experimental laser energy was 100 µJ, the
+laser frequency was 85 kHz, and the scanning speed was 2 m/s.
+A laser scanning confocal microscope (VK-X1100, Keyence)
+was used to observe and compare the scanning effect. Table 2
+shows the parameters of the CL. It was a positive lens with an
+even-ordered aspherical surface at the incidence and a standard
+surface at the exit.
+Figure 4 shows the STRH simulation and the laser etching
+results at two dynamic focusing planes. At the Z = 0 mm plane,
+the STRH was close to 1.0 in the range of 40 × 40 mm2 without or
+with the ASC method, as shown in Figs. 4(a) and 4(e). Complete
+and uniform laser-etched rectangles are shown in Figs. 4(c) and
+4(g). The size of laser etching points within the 40 × 40 mm2
+scanning range was uniform, the etching effect was basically
+the same, and the depth profiles were up to 10 µm, as shown in
+Figs. 4(b), 4(d), 4(f), and 4(h).
+
+
+Letter
+Vol. 48, No. 24 / 15 December 2023 / Optics Letters
+6499
+Table 2.
+Parameters of the CL
+Surface
+Radius
+Thickness
+Glass
+Conic
+2nd Order
+Even Asphere
+57.008
+3.596
+F_silica
+-0.191
+4.936E-4
+Standard
+57.014
+63.438
+/
+0.000
+0.000
+Fig. 4.
+STRH simulation and scanning microscopic observations
+of the system at two dynamic focusing planes. (a)–(d) Z = 0 mm,
+without ASC; (e)–(h) Z = 0 mm, with ASC; (i)–(l) Z = −10 mm,
+without ASC; (m)–(p) Z = −10 mm, with ASC.
+At the Z = −10 mm plane, without the ASC method, the STRH
+decreases, and the region with STRH of ≥0.8 was only an ellipse
+in the 40 × 40 mm2 area based on the STRH of the regional center
+of 0.93, as shown in Fig. 4(i). The laser etching result is shown
+in Fig. 4(k), where the laser etching lines could be only observed
+at the center region. However, the size of the laser-etched points
+was reduced, as shown in Fig. 4(j). At the edge region, the laser
+etching lines became less visible and did not form a complete
+laser-etched point, and the depth profile was less than 1 µm, as
+shown in Fig. 4(l). After correction, the region with STRH of
+>0.8 was expanded based on the STRH of the regional center
+increasing to 0.99, as shown in Fig. 4(m). The effective laser
+etching region was also expanded, as shown in Fig. 4(o). The
+etching quality of both the center and edges of the effective
+scanning region was also improved, and the depth profiles were
+up to 10 µm, as shown in Figs. 4(n) and 4(p). The above results
+show that the ASC method extended the effective scanning range
+of RDFD-based laser scanners.
+In conclusion, the off-axis aberrations in RDFD-based laser
+scanners were presented and discussed. Due to the disruption of
+beam symmetry and the increase in the OPD between the edge
+and chief ray, the off-axis aberrations were introduced, and the
+3D scanning range of RDFD-based laser scanners was reduced.
+An ASC method was proposed to optimize the aberration and
+extend the scanning range. The convex lens with an aspherical
+surface improves the symmetry of the beam and reduces the
+OPD between the edge rays and the chief ray. The effectiveness
+of the ASC method was confirmed by laser etching experiments,
+and the 3D scanning range of the RDFD-based laser scanner has
+been increased by 15.2%. The ASC method has the potential to
+be applied in all RDFD-based laser scanners or other off-axis
+systems.
+Funding.
+National Natural Science Foundation of China (51675205,
+52175405).
+Disclosures.
+The authors declare no conflicts of interest.
+Data availability.
+Data underlying the results presented in this paper are
+not publicly available at this time but may be obtained from the authors upon
+reasonable request.
+REFERENCES
+1. Y. Qiao, H. Yang, Y. Ding, et al., Opt. Express 31, 572 (2023).
+2. J. Diaci, D. Braˇcun, A. Gorkiˇc, et al., Opt. Lasers Eng. 49, 195
+(2011).
+3. T. H. Chen, R. Fardel, and C. B. Arnold, Light: Sci. Appl. 7, 17181
+(2018).
+4. K. C. Phillips, H. H. Gandhi, E. Mazur, et al., Adv. Opt. Photonics 7,
+684 (2015).
+5. A. J. López, J. Lamas, J. S. Pozo-Antonio, et al., Opt. Lasers Eng.
+126, 105897 (2020).
+6. A. Rodríguez, A. J. López, J. Lamas, et al., Opt. Lasers Eng. 160,
+107284 (2023).
+7. Z. Tian, J. Feng, X. Chen, et al., J. Laser Appl. 33, 042036 (2021).
+8. X. Wang, J. Duan, M. Jiang, et al., Int. J. Adv. Manuf. Technol. 92,
+4571 (2017).
+9. X. Wang, J. Duan, M. Jiang, et al., Int. J. Adv. Manuf. Technol. 93,
+2963 (2017).
+10. L. Chen, S. Zhao, Y. Zhou, et al., Laser Optoelectron. Prog. 52,
+071406 (2015).
+11. Y. Zhou, S. Zhang, S. Zhao, et al., Adv. Mech. Eng. 6, 681563
+(2014).
+12. D. Franz, T. Häfner, T. Kunz, et al., Appl. Phys. B 128, 55 (2022).
+13. J. Montagu, in Encyclopedia of Optical and Photonic Engineering
+(CRC Press, 2015), pp. 1–22.
+14. G. F. Marshall and G. E. Stutz, Handbook of Optical and Laser
+Scanning (Taylor & Francis, 2012).
+15. V.-F. Duma, Appl. Math. Model. 67, 456 (2019).
+16. G. Sharafutdinova, J. Holdsworth, and D. van Helden, Appl. Opt. 48,
+4389 (2009).
+17. M. Malinauskas, A. Zukauskas, S. Hasegawa, et al., Light: Sci. Appl.
+5, e16133 (2016).
+18. S. Kang, M. Duocastella, and C. B. Arnold, Nat. Photonics 14, 533
+(2020).
+19. N. T. Ersumo, C. Yalcin, N. Antipa, et al., presented at MOEMS and
+Miniaturized Systems XIX (2020).
+20. M. G. Lee, G. Kim, C. W. Lee, et al., Rev. Sci. Instrum. 85, 045104
+(2014).
+21. C. Hao, Y. Liu, X. Chen, et al., Sci. Rep. 4, 6846 (2014).
+22. D. Shin, C. Kim, G. Koo, et al., Opt. Express 28, 5602 (2020).
+23. Z. Jian, Z. Tong, Y. Ma, et al., Opt. Lasers Eng. 126, 105918 (2020).
+24. R. Patra, S. Agarwal, S. Kondaraju, et al., Opt. Commun. 389, 74
+(2017).
+25. S. Verpoort, M. Bittner, and U. Wittrock, Appl. Opt. 59, 6959
+(2020).
+26. H.-C. Cheng, S. Xu, Y. Liu, et al., Opt. Commun. 284, 2118 (2011).
+27. Y. Cheng, J. Cao, and Q. Hao, Opt. Lasers Eng. 146, 106700 (2021).
+28. L. Yu, K. Yang, and Z. Zhang, Opt. Express 31, 673 (2023).
+29. M. Rabe and M. Valentin, “Divergence changing unit for changing
+divergence of e.g. laser light used in material processing, has beam
+deflectors whose angles are adjusted so that position of beam from
+deflectors is adjusted to be independent of a specific angle,” German
+patent, DE102012111091B4 (19November2012).
+30. J. C. Wyant and K. Creath, Appl. Opt. Eng. 6, 1 (1992).
+31. J. Francis and W. Harvey, Fundamentals of Optics Fourth Edition
+(McGraw-Hill, 2001).
+32. H. Ottevaere and H. Thienpont, Encyclopedia of Modern Optics
+(Elsevier, 2005).

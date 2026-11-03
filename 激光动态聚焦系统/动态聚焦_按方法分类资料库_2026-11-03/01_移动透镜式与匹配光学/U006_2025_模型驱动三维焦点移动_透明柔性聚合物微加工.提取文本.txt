@@ -1,0 +1,2442 @@
+Research Article
+Model-driven 3D laser focus shifting for precision fabrication of 
+microstructures in transparent flexible polymers
+Rui Chen a,b
+, Chunjin Wang b,*
+, Tao Luo a, Wenjun Xu a, Qixian Zhang b, Jie Zhou c,  
+Rui Gao b, Chi Fai Cheung b,**
+, Wei Zhou a,***
+a Pen-Tung Sah Institute of Micro-Nano Science and Technology, Xiamen University, Xiamen, 361102, China
+b State Key Laboratory of Ultra-Precision Machining Technology, Department of Industrial and Systems Engineering, The Hong Kong Polytechnic University, Kowloon, 
+Hong Kong, China
+c School of Electrical Engineering and Automation, Xiamen University of Technology, Xiamen, 361024, China
+A R T I C L E I N F O
+Keywords:
+Picosecond laser micromachining
+3D dynamic-focusing
+Ablation depth model
+Complex microstructure
+Precision manufacturing
+A B S T R A C T
+Micro-engineered transparent flexible polymers components play a crucial role in various microsystem fields, 
+such as flexible electronics and microfluidics. However, conventional laser fabrication techniques face significant 
+challenges in overcoming issues of energy deposition inaccuracies and focal mismatch, which hinder the fabri­
+cation of high-fidelity and controllable 3D microstructure in transparent polymer materials. In this study, we 
+propose a universal 3D dynamic-focusing laser (3D-DFL) fabrication strategy using an infrared (IR) picosecond 
+laser. By dynamically adjusting the Z-axis focus in real time, the system effectively compensates for the depth 
+shifts caused by ablation, ensuring consistent energy deposition and stable fabrication quality. High-speed im­
+aging reveals a three-stage ablation mechanism (stabilization, expansion, and contraction) under laser irradia­
+tion. To support the multi-layer dynamic shifting process of the 3D-DFL approach, a universal ablation depth 
+prediction model was established to compensate depth deviations during laser-material interactions. The validity 
+of the model has been proven by its ability to predict ablation depth in different polymer materials with low 
+mean absolute percentage errors (MAPE), achieving 5.99 % for polydimethylsiloxane (PDMS) and 2.68 % for 
+polyethylene terephthalate (PET). The model enables the accurate fabrication of 3D microstructures, achieving 
+normalized peak-to-valley deviations within 8.0 % and normalized root-mean-square deviations below 3.0 %, 
+with an arithmetic surface roughness of approximately 2 μm. The 3D dynamic-focusing laser (3D-DFL) approach 
+enables rapid tailoring of complex geometries, including protruding and recessed microstructures on PDMS and 
+PET substrates. Experimental validation highlights its capability to fabricate functional components such as 
+flexible pressure sensors, microfluidic chips, and ultrasonic droplet manipulation platforms. This study provides 
+an efficient and reliable pathway for the scalable fabricating of high-precision transparent polymers micro- 
+engineered devices and promotes the advancement of research and industry in advanced flexible microsystems.
+1. Introduction
+Transparent polymers are widely used in micro-scale devices and 
+functional materials due to their excellent optical transparency, flexi­
+bility, and biocompatibility. Common examples include poly­
+dimethylsiloxane 
+(PDMS), 
+polyethylene 
+terephthalate 
+(PET), 
+polymethyl methacrylate (PMMA), and silicone rubber (Ecoflex). These 
+materials offer not only high light transmittance but also advantages 
+such as flexibility, low cost, and ease of patterning [1,2]. By introducing 
+functional microstructures on the surface of these polymer, particularly 
+three-dimensional (3D) microstructures can significantly enhance their 
+mechanical properties, optical characteristics, and fluid dynamics, 
+thereby imparting a range of new functionalities to the materials [3,4]. 
+As a result, they are commonly employed in fields such as microfluidic 
+chips [5], flexible electronics [6], functional surfaces [7], and biomed­
+ical engineering [8]. However, the fabrication of high-precision 
+* Corresponding author.
+** Corresponding author.
+*** Corresponding author.
+E-mail addresses: chunjin.wang@polyu.edu.hk (C. Wang), benny.cheung@polyu.edu.hk (C.F. Cheung), weizhou@xmu.edu.cn (W. Zhou). 
+Contents lists available at ScienceDirect
+International Journal of Machine Tools and Manufacture
+journal homepage: www.elsevier.com/locate/ijmactool
+https://doi.org/10.1016/j.ijmachtools.2025.104310
+Received 17 March 2025; Received in revised form 18 June 2025; Accepted 8 July 2025  
+International Journal of Machine Tools & Manufacture 210 (2025) 104310 
+Available online 12 July 2025 
+0890-6955/© 2025 Published by Elsevier Ltd. 
+
+
+microstructures on these soft, transparent polymers presents significant 
+challenges due to their unique material characteristics. Specifically, 
+their low elastic modulus, high deformability, and poor thermal con­
+ductivity often result in issues such as elastic recovery, heat accumula­
+tion, tool adhesion, and structural collapse during mechanical 
+fabricating. These factors collectively impair dimensional accuracy, 
+surface quality, and process repeatability [9]. Therefore, reliable 
+manufacturing of microstructured transparent polymers demands 
+advanced techniques and comprehensive process control strategies to 
+overcome these intrinsic limitations.
+Conventional 
+micro-nano 
+fabrication 
+technologies, 
+such 
+as 
+photolithography-based MEMS processes, enable high-resolution 
+patterning on rigid substrates but are not applicable to flexible mate­
+rials [10]. To address this, photolithography-assisted replica molding 
+has become the most widely used method for microengineering trans­
+parent flexible polymer (name as template method). In this approach, a 
+master mold is first created and then used to cast polymer structures 
+repeatedly [11]. This method provides high precision and scalability. 
+However, its inherently complex workflow, which includes mold fabri­
+cation, casting, curing, demolding, and assembly, leads to high pro­
+duction costs, long fabrication cycles, and strong dependence on manual 
+operations [2]. Additionally, structural fractures and dimensional dis­
+tortions may occur when producing high aspect ratios or complex 
+structures. These drawbacks limit its effectiveness for customized 
+fabrication and rapid design iterations, significantly increasing both 
+time and cost [12]. In addition, several alternative microengineering 
+methods have been developed to overcome the limitations of replica 
+molding. Extrusion-based 3D printing, for example, enables direct 
+microengineering on flexible substrates but suffers from low resolution 
+(over 100 μm) and poor shape fidelity [13]. Two-photon polymerization 
+achieves submicrometer resolution, but its use in polymer structuring is 
+constrained by photocuring limitations and high resin viscosity, limiting 
+the effective fabricating area to under 200 μm [14]. Despite their po­
+tential, these methods still have trade-offs between resolution, scal­
+ability, and material compatibility. Therefore, developing a direct 
+polymer microengineering technology that eliminates multi-step mold­
+ing and enables on-demand, efficient fabrication of 3D microstructures 
+is a critical breakthrough for meeting the growing demand for trans­
+parent flexible polymer-based devices.
+Laser technology has become widely used for fabricating 3D micro­
+structures due to its non-contact, high precision, efficiency, and cus­
+tomizability. This technique shows significant potential in various 
+materials and applications [15]. Traditional laser microengineering uses 
+a fixed-focus system, allowing 3D microstructures to be created by 
+controlling the local energy input. Axinte et al. [16,17] controlled the 
+energy beam using a dwell-time strategy to regulate local energy input. 
+Specifically, they employed a removal rate function to adjust the scan­
+ning speed between different dwell points. By optimizing the dwell time, 
+over ablation was avoided, and the method was successfully applied to 
+fabricate 3D structures in materials such as graphite and titanium alloys, 
+achieving precise single-layer material removal. However, the 
+dwell-time strategy requires machines with high acceleration and 
+deceleration capabilities [16], and excessive acceleration (i.e., abrupt 
+speed changes) may lead to mechanical vibrations and motion errors. 
+Cheng et al. [18] proposed a programmable method for fabricating 
+microstructures on PMMA by applying regional ablation to fabricate 
+pyramid feature. However, the pyramid morphology on transparent 
+materials was found to be unclear and inconsistent. This issue arises 
+because when using a fixed focal plane for laser fabricating, an increase 
+in ablation depth leads to a mismatch between the laser focus and the 
+material surface, resulting in laser defocusing. This defocusing is one of 
+the main factors contributing to reduced fabricating accuracy. Although 
+local energy control (dwell-time) strategies can enable microstructure 
+fabrication, they have several limitations: (1) energy control becomes 
+significantly more complex for intricate structures; (2) performance may 
+be limited when fabricating sharp edges and high-aspect-ratio features; 
+and (3) mismatches between the laser focus and ablation depth are 
+prone to occur. Tu et al. [19] demonstrated that when the laser focus 
+depth is shallow, even slight defocusing can cause the workpiece surface 
+to fall outside the effective laser range, resulting in inaccurate energy 
+deposition and uncontrolled ablation. If the focal point is located 
+beneath the material surface, it may induce subsurface effects such as 
+internal bubble formation and structural distortion [20]. Florian et al. 
+[21] pointed out that when the laser focus is positioned above the 
+sample surface, the resulting structures tend to exhibit irregular de­
+formations. These issues significantly reduce both the geometric accu­
+racy and surface quality of the structures, especially in transparent or 
+semi-transparent materials. This highlights the critical importance of 
+precise focus alignment in the laser fabrication process, as such prob­
+lems cannot be effectively addressed by merely adjusting local energy 
+input or dwell time. Therefore, overcoming the challenges of (1) com­
+plex energy control and (2) abnormal energy deposition caused by 
+defocusing has become a critical issue in the laser fabrication of complex 
+3D microstructures.
+To address the above issues, researchers have explored more 
+advanced 3D laser fabrication techniques. These techniques aim to 
+achieve precise energy deposition, simplify energy control, and effec­
+tively reduce subsurface effects, thereby improving the quality of 
+transparent polymer fabrication. Currently, two primary approaches are 
+used for 3D laser fabrication. The first approach combines a two- 
+dimensional (2D) galvanometer with a high-precision multi-axis mo­
+tion stage, where spatial positioning is achieved by moving either the 
+workpiece or the laser head [22,23]. This approach has a simple struc­
+ture, with stage positioning accuracy reaching sub-micron levels [24]. 
+However, it faces several limitations: (1) the response speed is relatively 
+slow, each adjustment requires several milliseconds for acceleration, 
+positioning, and deceleration, with a focusing frequency below 100 Hz; 
+(2) the system has high inertia, making it not well suited for high-speed 
+or continuous focusing applications; (3) there is a trade-off between 
+motion speed and accuracy, higher speeds typically reduce accuracy, the 
+motion speed is usually limited to below 500 mm/s to maintain accu­
+racy; and (4) coordination between the motion stage and the laser sys­
+tem is complex, and frequent displacements may introduce positioning 
+errors and cumulative inaccuracies, thus reducing processing precision. 
+In comparison, the second approach uses an optical system to adjust the 
+focal position along the Z-axis. This method offers a fast response time in 
+the sub-millisecond range, with modulation frequency exceeding 1 kHz 
+and micron-level focusing accuracy. It enables real-time focal depth 
+adjustment during high-speed scanning and significantly reduces delays 
+from mechanical motion. Under the same vertical motion precision, its 
+effective Z-axis focusing speed is approximately three orders of magni­
+tude higher than that of a mechanical motion stage [26]. This makes it 
+particularly suitable for fabricating continuous curved surfaces, ramp 
+structures, and complex 3D profiles with significant depth variation. In 
+addition to improved fabricating efficiency, the optical system also of­
+fers higher performance in terms of fabrication accuracy, consistency, 
+and system stability.
+Recently, various optical focusing techniques have been explored to 
+meet the demands of high-speed, high-precision focal adjustment. Du 
+et al. [25] used a tunable acoustic gradient (TAG) index lens driven by 
+cylindrical piezoelectric ceramics to achieve high-speed focal point 
+oscillation at kHz-MHz frequencies. The compact system does not 
+require complex synchronization with the laser. However, although it 
+enables rapid Z-axis focusing, it still requires integration with an XY 
+motion stage for full 3D spatial control, which presents challenges. 
+Additionally, controlling lens curvature remains difficult [26]. Cao et al. 
+[27] achieved dynamic focusing by moving a negative lens in combi­
+nation with Y-axis sample movement, enabling depth-adjustable laser 
+ablation that enhanced both efficiency and fabrication quality. Zhang 
+et al. [28] used a dual parabolic mirror and galvanometer to adjust the 
+divergence angle of incident beam, achieving 3-axis focusing control 
+with focus an 80 mm focus-shifting range. However, the optical path 
+R. Chen et al.                                                                                                                                                                                                                                    
+International Journal of Machine Tools and Manufacture 210 (2025) 104310 
+2 
+
+
+design is overly complex, involving many components. Xu et al. [29] 
+employed a spatial light modulator (SLM) to generate multi-focal beams 
+and successfully fabricated 3D microstructures on transparent glass with 
+high accuracy. However, the SLM system is complex and costly. Liquid 
+crystal-based lenses [30] and electro-optic lenses [31] can also achieve 
+focal shift through polarization but require high driving voltages.
+Overall, although 3D laser fabrication technologies have made sig­
+nificant progress, several challenges still persist. Many existing ap­
+proaches rely on complex mechanical systems or intricate optical setups, 
+often lacking flexibility in integration. These limitations highlight the 
+urgent need for simpler, more efficient, and adaptable fabrication stra­
+tegies, particularly for fabricating complex and high-quality 3D micro­
+structures. To the best of our knowledge, systematic research on the 
+laser fabrication of 3D microstructures in transparent polymers, espe­
+cially under dynamic focusing conditions, is still lacking. The ablation 
+behavior and formation mechanisms in such conditions remain poorly 
+understood, and the potential of dynamic focusing to enhance the pre­
+cision and controllability of 3D structuring has not yet been fully 
+explored. Therefore, a key scientific challenge remains: how to achieve 
+high-fidelity and controllable fabrication of 3D microstructures in 
+transparent polymer materials using laser-based approaches, while 
+overcoming common issues such as energy deposition inaccuracy and 
+focal mismatch (Fig. 1). To overcome this challenge, we propose a 
+universal 3D dynamic focusing laser (3D-DFL) fabrication strategy for 
+transparent flexible polymers. This strategy adjusts the focal point in 
+real-time, effectively compensating for the depth shift, ensuring 
+consistent energy deposition and fabrication quality. To support the 3D- 
+DFL process, we established an ablation depth prediction model that 
+simulates ablation depths under various laser parameters. The model 
+corrects focal mismatch issues and addresses depth deviations in laser- 
+material interactions, which is critical for transparent polymers where 
+energy penetration changes non-linearly with depth. The model has no 
+inherent limitations on the materials or lasers used; it only requires a few 
+experiments to determine the ablation threshold of material and ab­
+sorption coefficients for different wavelengths, enabling accurate 
+predictions.
+We used polydimethylsiloxane (PDMS) polymer and polyethylene 
+terephthalate (PET) polymer as examples and conducted a systematic 
+Fig. 1. The key scientific issue is the energy deposition control mechanism of laser in high-transparency flexible polymers and its effect on the morphology fidelity of 
+microstructures.
+R. Chen et al.                                                                                                                                                                                                                                    
+International Journal of Machine Tools and Manufacture 210 (2025) 104310 
+3 
+
+
+investigation to evaluate the impact of key parameters on fabrication 
+performance. We also examined how discrepancies between the pro­
+grammed dynamic shift and the actual ablation depth affect surface 
+formation. By adjusting the fabrication parameters based on predictions 
+from the theoretical model, we achieved fabrication accuracy with a 
+normalized root-mean-square (RMS) deviations below 3.0 % and an 
+arithmetic surface roughness of about 2 μm. The 3D-DFL method dem­
+onstrates exceptional capability in customizing a variety of micro­
+structures, including cones, truncated cones, pyramids, square 
+pyramids, truncated square pyramids, and moir´e patterns, showing its 
+potential for 3D microstructure fabrication in transparent flexible 
+polymer materials. Furthermore, we demonstrated the adaptability of 
+this method in applications such as flexible pressure sensors, droplet 
+suspension manipulation, and microfluidic mixers, proving its scalabil­
+ity and practical application potential. The results from the PDMS case 
+not only serve as a typical example of this strategy in transparent 
+polymer systems but also provide a universal and scalable solution for 
+precision 3D laser manufacturing in other similar materials.
+2. Methodology
+2.1. 3D dynamic-focusing laser fabricating system setup
+The experimental setup for the 3D-DFL fabricating system is shown 
+in Fig. 2. The system uses an infrared picosecond laser (PINE-1064-20, 
+China) with a maximum output power of 20 W, a wavelength of 1064 
+nm, a repetition rate of 100 kHz, and a pulse width of 10 ps. A beam 
+quality factor (M2) of 1.3. The laser beam is expanded by a standard 
+beam expander to reduce the divergence angle and improve beam 
+collimation before it enters the focusing optics. After beam expansion, 
+the input beam diameter is 7.2 mm. Then, the beam is directed to the Z- 
+axis adjustment module via a series of high-reflection mirrors, followed 
+by the XY scanning module, and finally focused onto the sample surface 
+by the F-Theta focusing lens (focal length: 160 mm).
+The basic working principle of the dynamic focusing system is shown 
+in Fig. 2b. The system consists of a concave-convex lens pair in the Z-axis 
+focusing module. The laser beam first passes through the concave lens 
+group, where it is diverged, and then through the convex lens group to 
+converge, before entering the XY galvanometer scanner and the field 
+lens. The core of the Z-axis focusing module is to control the axial (Z 
+direction) displacement of the final focusing position by adjusting the 
+divergence angle and beam diameter of the incident laser beam. Spe­
+cifically, the Z-axis focusing module includes adjustable optical com­
+ponents (such as movable lens groups or adaptive optical elements), 
+which can move along the optical axis to alter the divergence of the 
+output beam. When the focusing module moves toward the field lens, 
+the divergence angle of the incident beam increases, causing the focus to 
+move forward (closer to the field lens); conversely, when the module 
+moves away, the focus shifts backward (further from the field lens). This 
+small change in divergence angle is converted into axial displacement of 
+the focus point by the field lens, thus achieving non-contact dynamic 
+focusing without moving the sample.
+Before entering the field lens, the laser beam is deflected along the X 
+and Y directions by two high-speed scanning mirrors. This design allows 
+the laser beam to perform two-dimensional dynamic deflection near the 
+optical axis, enabling rapid pattern drawing. The beam finally enters the 
+F-theta lens, which is composed of multiple optimized spherical or 
+aspherical lens. This lens corrects aberrations and compensates for focal 
+Fig. 2. 3D dynamic-focusing laser fabricating system. (a) Schematic diagram of the 3D dynamic-focusing laser fabricating system setup. The Z-axis adjustment 
+module adjusts the beam divergence angle before the field lens. By controlling the displacement of the concave lens, the focal position shifts along the optical axis (Z- 
+direction) within a range of ±10 mm. The inset photo is a Z-axis adjustment module. (b) The working principle of the dynamic focusing. State 1 shows the focused 
+condition before focus shift, while State 2 shows the focused condition after focus shift, with the focal point shifted backward. (c) Optical path simulation results of 
+the 3-axis laser scanning system based on the proposed laser fabrication setup. The magnified insets highlight the Z-axis dynamic focusing module (right) and the 
+simulated focal positions at varying focal plane heights (left). Colored beams represent 1064 nm wavelength, with color indicating different XY scan positions and 
+focal depths along the Z-axis.
+R. Chen et al.                                                                                                                                                                                                                                    
+International Journal of Machine Tools and Manufacture 210 (2025) 104310 
+4 
+
+
+shifts caused by off-axis incidence, ensuring that the focused spot re­
+mains nearly constant in size and quality across the entire scanning field 
+[32]. Therefore, moderate off-axis deviations during scanning do not 
+significantly affect beam quality or fabricating accuracy within the 
+lens’s designed field of view.
+In Fig. 2b, f1 is the focal length of the concave lens, f2 is the focal 
+length of the convex lens, d represents the physical distance between the 
+two lenses, and Hʹ is the image plane of the combined system. Therefore, 
+fʹ is the effective focal length of the system, and Lʹ
+1 is the distance from 
+the system’s focus to the convex lens. According to the optical system’s 
+focal length calculation formula [33], the effective focal length fʹ is: 
+fʹ = −
+f1 × f2
+d −fʹ
+1 + fʹ
+2
+(1) 
+where f1 is the focal length of the concave lens, f2 is the focal length of 
+the convex lens, fʹ
+1 and fʹ
+2 are the image distances of the concave and 
+convex lenses, and d is the physical distance between the two lenses.
+Fig. 3. Conventional 2D laser and 3D dynamic-focusing laser fabricating method. (a) The mechanism of laser fabricating microstructure. 3D microstructure for­
+mation is achieved by layer-by-layer removal of PDMS material from top to bottom through the shifting of the focal plane. (b) Schematic diagram of 2D laser 
+fabricating process with fixed focal plane. (c) Schematics of the planar fabricating trajectory (left) and the 3D view (right) of tapered microstructures produced by 2D 
+laser fabricating. The color scales on the left and right sides represent energy density and height of microstructure, respectively. (d) SEM images of the 2D laser 
+highlighting the stepped morphology of the microstructure. (e) Schematic diagram of 3D dynamic-focusing laser focal plane shifting process with variable focal 
+plane. (f) Schematics of the 3D dynamic-focusing fabricating trajectory (left) and the 3D view (right) of tapered microstructures produced by 3D laser fabricating. The 
+color scales on the left and right sides represent energy density and microstructure height, respectively. (g) SEM images of the 3D laser highlighting the sharp-edge 
+morphology of the microstructure.
+R. Chen et al.                                                                                                                                                                                                                                    
+International Journal of Machine Tools and Manufacture 210 (2025) 104310 
+5 
+
+
+The distance from the focus to convex lens: 
+Lʹ
+f = fʹ
+(
+1 −d
+f1
+)
+(2) 
+when concave lens is positioned at Z, the distance between concave lens 
+and convex lens is d. By combining equations (1) and (2), the distance 
+from the focus to concave lens, Lʹ
+f can be calculated as: 
+Lʹ
+f = −
+f1 × f2
+d −fʹ
+1 + fʹ
+2
+(
+1 −d
+f1
+)
+(3) 
+At this point, the laser focus is at point F.
+When convex lens is positioned at Zʹ, the distance between concave 
+lens and convex lens is dʹ, and by substituting this into equation (3), the 
+current focus distance from concave lens is: 
+Lʹ
+f = −
+f1 × f2
+dʹ −fʹ
+1 + fʹ
+2
+(
+1 −dʹ
+f1
+)
+(4) 
+At this point, the focus of the 3D dynamic focusing mirror converges 
+at point Fʹ. When the concave lens is rapidly moved between positions Z 
+and Zʹ by a high-speed linear motor at a velocity of 300 mm/s, the focus 
+of the dynamic focusing mirror shifts quickly along the optical axis be­
+tween points F and Fʹ, reaching a speed of up to 2000 mm/s. This sig­
+nificant difference between the lens velocity and the focal point velocity 
+is due to the optical lever amplification of the optical system [34]. In this 
+system, the theoretical model establishes a relationship between the 
+movement of the concave lens and the axial shift of the focal point be­
+tween F and Fʹ. The imaging position is determined by the focal length f1 
+of the concave lens and the separation distance d between the two len­
+ses. By adjusting these parameters, precise control over the focus posi­
+tion can be achieved.
+To evaluate the 3D dynamic-focusing capability of the system, an 
+optical model was constructed based on the designed 3D laser fabri­
+cating configuration. The model incorporates a Z-axis focusing lens 
+group, an XY galvanometer scanner, and a focusing F-theta lens group. 
+Using the system’s design parameters, we simulated the focusing per­
+formance at various focal positions. As shown in Fig. 2c, the simulation 
+results demonstrate that by adjusting the position of the Z-axis focusing 
+module, a focal shift range of ±10 mm can be achieved along the optical 
+axis. These results confirm the feasibility and effectiveness of the pro­
+posed optical design for enabling dynamic Z-axis focusing.
+2.2. 2D laser and 3D dynamic-focusing laser fabricating method
+The subtractive fabricating process for three-dimensional (3D) mi­
+crostructures typically employs a layer-by-layer material removal 
+strategy. As shown in Fig. 3a, the working principle of the laser-based 
+method for fabricating 3D microstructure arrays involves sequentially 
+removing material from the substrate in a top-down manner. After each 
+layer is fabricated, the laser focal spot is shifted downward to machine 
+the subsequent layer. This approach is akin to sculpting, where each 
+successive layer is precisely removed until the desired 3D architecture is 
+formed.
+2.2.1. 2D laser fabricating method
+Different scanning strategies have a considerable impact on micro­
+structure formation. Traditional laser fabricating (2D laser) uses a fixed- 
+focus system, where the laser focal point is maintained at a constant 
+height, the laser energy is concentrated near the focal region, while the 
+defocused zones on both sides of the focal plane exhibit a rapid decrease 
+in energy density due to the Gaussian distribution of the laser. There­
+fore, removing microstructures at different depths relies on precise 
+control of laser energy (local energy control strategy), as shown in 
+Fig. 3b. This energy attenuation, coupled with thermal effects in the 
+defocused regions, reduces fabrication precision.
+Fig. 3c shows the schematic of the scanning trajectory. By 
+segmenting the scanning area and controlling the laser energy distri­
+bution, the designed 3D microstructure can be achieved. The laser en­
+ergy density is gradually increased from the central region to the outer 
+region, removing more material toward the periphery and yielding a 
+shape with a higher center and lower edges. This fabrication process 
+requires a complex spatial energy modulation strategy to attain specific 
+ablation depths in designated regions. However, the 2D laser approach 
+faces a fundamental trade-off in segmentation resolution: coarser 
+regional divisions lead to terraced-edge structures, whereas finer di­
+visions significantly increase the complexity of ablation depth control. 
+Consequently, achieving smooth transitional interfaces becomes 
+considerably more difficult.
+To fabricate tapered microstructure, the substrate was segmented 
+into five distinct regions (Fig. A1), with a total of five layers fabricated. 
+We performed extensive trial-and-error optimization of each layer 
+parameter in the 2D laser fabricating experiments, including variables 
+such as scanning speed, laser power, and scanning times. The laser 
+scanning speed and number of scans for each region were individually 
+regulated, with detail fabricating parameters provided in Table A1. The 
+resulting tapered microstructure fabricated by the 2D laser method ex­
+hibits a terraced-edge structure, as shown in Fig. 3c. The scanning 
+electron microscope (SEM) side-view in Fig. 3d further confirms the 
+pronounced 
+terraced-edge 
+morphology 
+of 
+2D-laser-fabricated 
+microstructures.
+2.2.2. 3D dynamic-focusing laser fabricating method
+In contrast, Fig. 3e shows the 3D dynamic focusing and real-time 
+laser focal plane shifting mechanism. During fabrication, the galvo 
+system controls the laser beam’s motion along a predefined trajectory, 
+while the Z-axis dynamic focusing module simultaneously adjusts the 
+focal plane height (range: ±10 mm) to compensate for defocusing ef­
+fects induced by material surface topography variations. This synchro­
+nized approach ensures that as the focal point dynamically shifts 
+downward, the energy density delivered to the sample surface remains 
+consistent, a critical advantage over conventional 2D laser processing. 
+By integrating high-speed XY-plane scanning with adaptive Z-axis ad­
+justments, this method achieves layer-by-layer (a total of 15 layers) 
+fabrication of complex 3D microstructures, as shown in Fig. 3f.
+Notably, tapered microstructures fabricated by 3D-DFL method 
+exhibit no pronounced terraced-edge morphology, in stark contrast to 
+their 2D-laser-processed counterparts. This improvement arises from the 
+real-time downward shifting of the laser focal point after each 
+completed layer, which adapts to the evolving fabricating plane height 
+and sustains optimal laser energy distribution. Such dynamic focal 
+control eliminates the energy density gradients inherent to fixed-plane 
+2D laser method, where Gaussian beam decay along the Z-axis leads 
+to non-uniform ablation and thermal accumulation. Consequently, as 
+the number of fabricated layers increases, the 3D profile contours pro­
+gressively smooth and sharp (Fig. 3f), demonstrating enhanced geo­
+metric fidelity. Precise regulation of the laser’s dynamic shifting 
+distance is thus pivotal to minimizing edge roughness and enhancing 
+accuracy. The SEM image shown in Fig. 3g further validates the supe­
+riority of 3D-DFL, showcasing sharp defect-free edges and geometric 
+consistency.
+2.2.3. Comparison between 2D laser and 3D laser methods
+The experiments show that, although we thoroughly optimized the 
+laser process parameters in the 2D laser fabricating experiment and 
+achieved microstructure removal at different depths by precisely con­
+trolling the laser energy (local energy control strategy), including 
+scanning speed, power, and scanning times, the process remains time- 
+consuming. However, the pyramid microstructures fabricated still 
+show terraced-edge structure. For sharp or complex structures, the 
+limitations of the fixed-focus 2D laser system in controlling the focal 
+point led to a slow and costly process, as well as issues like complex 
+ablation control and uneven structure morphology. In contrast, the 3D 
+R. Chen et al.                                                                                                                                                                                                                                    
+International Journal of Machine Tools and Manufacture 210 (2025) 104310 
+6 
+
+
+laser approach can focus at different depths, making it suitable for more 
+complex 3D structures. This is particularly beneficial for structures with 
+sharp edges or spatial variations, as the focus adaptability of 3D laser 
+greatly improves both the accuracy and efficiency of the fabricated 
+structures.
+To further clarify the suitability of different laser processes, we 
+conducted a comprehensive comparison between the 2D laser and 3D 
+laser (motion stage and optical galvanometer) methods. The comparison 
+covered aspects such as focusing strategy, focusing speed, focusing ac­
+curacy, system complexity, and application scenarios. The detailed 
+comparison results can be found in Table A2.
+2.3. Sample preparation and characterization
+The PDMS used in this study (Sylgard 184) was purchased from Dow 
+Corning, USA. The preparation process of PDMS commenced with the 
+mixing of the prepolymer and curing agent in a mass ratio of 10:1, fol­
+lowed by thorough mixing for 20 min. To remove air bubbles from the 
+mixture, it was then placed in a vacuum drying oven for evacuation. 
+Subsequently, the mixture was poured into molds and cured at a con­
+stant temperature of 80 ◦C for 2 h. Finally, the PDMS film was peeled off 
+from the molds.
+The samples were observed with a scanning electron microscope 
+(SEM) instrument (SUPRA55 SAPPHIRE, Zeiss Corporation, Germany) 
+equipped with an energy dispersive spectrometer (EDS) was used to 
+characterize the structure and morphology of the microstructure. The 
+3D spatial morphology of the microstructures was characterized by 3D 
+laser confocal microscopy (VK-X1000, Keyence, Japan). The elemental 
+analysis of the sample was performed using an X-ray Photoelectron 
+Spectroscopy (XPS) instrument (Thermo Scientific K-Alpha, USA) 
+equipped with an Al K alpha (1486.6 eV) X-ray source.
+3. Ablation mechanism
+3.1. Mechanism and observation of material removal during infrared 
+laser ablation of polydimethylsiloxane polymer
+The interaction mechanism between a picosecond infrared (IR) laser 
+and PDMS was investigated. The photon energy E (J) was calculated 
+using the equation: 
+E = hc
+λ
+(5) 
+The determined photon energy (1.86 × 10−19 J, equivalent to 1.17 
+eV) is substantially lower than the bond dissociation energies of Si-O 
+(>4 eV) and C-H (>4 eV) in PDMS. This confirms that direct photo­
+chemical bond cleavage via single-photon absorption is thermodynam­
+ically infeasible. Consequently, material removal predominantly occurs 
+through a photothermal ablation mechanism mediated by nonlinear 
+processes, such as multiphoton absorption [35].
+To validate this mechanism, in-situ monitoring of the spatiotemporal 
+evolution of surface topography during PDMS laser fabricating was 
+implemented, as shown in Fig. 4a. The ablation dynamics were moni­
+tored in situ using a high-speed camera (Phantom VEO 1010L, USA) 
+synchronized with a high-power pulsed illumination system (Cavitar HF 
+280W, Finland). The Cavitar system delivered 280 W high-frequency 
+pulsed illumination, enabling precise visualization of transient high- 
+temperature phenomena. The Phantom camera operated at a 
+maximum frame rate of 320,000 fps, significantly exceeding the laser 
+repetition rate (100 kHz), as shown in Fig. 4b.
+Fig. 4c shows sequential snapshots of PDMS ablation captured at 
+97,000 fps under optimized fabricating parameters of 1500 mm/s 
+scanning speed, 100 kHz repetition rate, and 9.5 W laser power. Four 
+distinct energy accumulation and material removal cycles were 
+observed, each lasting approximately 1 ms, resulting in a 50 μm-wide 
+ablation trench within a 4 ms fabricating window. The ablation 
+Fig. 4. Online observation experiment of the polydimethylsiloxane material removal process. (a) Schematic diagram of the high-speed camera online observation 
+system. (b) The experiment setup of the high-speed camera online observation and 3D view of the sample morphology (top) and arithmetic surface roughness 
+(bottom). (c) Surface morphologies of PDMS samples observed during the laser ablation fabricating using a high-speed camera.
+R. Chen et al.                                                                                                                                                                                                                                    
+International Journal of Machine Tools and Manufacture 210 (2025) 104310 
+7 
+
+
+fabricates exhibited three characteristic stages (stable, expansion, and 
+contraction) with a total cycle duration of about 0.7 ms. Further analysis 
+revealed that the low thermal conductivity of PDMS promotes localized 
+heat accumulation at the surface, inducing thermal expansion and edge 
+bulking. At critical energy densities, thermal decomposition of PDMS 
+generates gaseous byproducts, elevating internal pressure and driving 
+material expansion. Subsequent laser pulses further increase surface 
+temperature until surpassing the ablation threshold, triggering instan­
+taneous volumetric expansion and explosive material ejection [36]. This 
+mechanism facilitates the detachment of atomic/molecular clusters 
+from the surface, confirming photothermal ablation as the dominant 
+material removal pathway. The contraction stage occurs after the laser 
+pulse ceases. The surface heat source disappears, and the ablated region 
+undergoes contraction driven by the elastic recovery and surface tension 
+of PDMS. Simultaneously, the expulsion of ablation material causes a 
+rapid pressure drop, releasing a strong inward compression wave [37]. 
+As a result, the previously expanded structure collapses due to the loss of 
+internal support. Following the contraction, the material enters the 
+stable stage, during which energy dissipation and the intrinsic visco­
+elastic resistance suppress deformation until the next energy accumu­
+lation cycle begins. This stage-expansion-contraction cycle reflects the 
+dynamic interplay between transient thermal input and the inherent 
+mechanical-thermal response of the material.
+3.2. Effect of laser focal position shift on surface morphology and ablation 
+behavior
+Fig. 5a shows the relationship between laser focal conditions 
+(negative defocus, in-focus, and positive defocus), focal shift increments, 
+and ablation depth (defined as Depth). The surface morphology varies 
+significantly depending on the focal shift: a negative defocus condition 
+occurs when the laser shift is smaller than the ablation depth (d >
+Depth), an in-focus condition at d = Depth, and a positive defocus 
+condition at d < Depth.
+The observation regions, as shown in Fig. 5b, include the cutting 
+sidewall (define as ABCD plane) and the ablated bottom surface (define 
+as CDEF plane). Ablation depth and arithmetic surface roughness were 
+quantified using a Keyence profilometer, while SEM and EDS analyses 
+were performed to characterize morphology and elemental composition.
+3.2.1. Bottom surface morphology analysis
+To evaluate the influence of focal conditions on surface quality, a 
+series of experiments were conducted under negative defocus (−500 μm, 
+−250 μm), in-focus, and positive defocus (+500 μm, +250 μm) condi­
+tions, with laser laser powers ranging from 2.81 W to 3.96 W. Three 
+samples were fabricated for each parameter set, and the corresponding 
+surface morphology and arithmetic surface roughness (Ra) results of the 
+CDEF plane are shown in Fig. 6.
+At a laser power of 2.81 W, insufficient laser energy under defocused 
+condition resulted in non-uniform ablation, producing coarse particles 
+on surface. These particles were randomly distributed and exhibited 
+smooth surfaces, indicating the presence of partially ablated PDMS 
+residues. Increasing the power to 3.79 W reduced incomplete ablation, 
+resulting in finer particle and reducing arithmetic surface roughness 
+(Ra) from 5 μm to 2 μm (Fig. 6b). However, further increasing the laser 
+power to 4.45 W did not further reduce surface roughness; instead, a 
+slight increase in roughness was observed (Fig. A2). At this higher 
+power, the heat delivered per unit area exceeded the material’s optimal 
+processing window, leading to over-ablation. This is attributed to the 
+excessive heat input exceeding the material’s optimal fabricating 
+threshold, leading to over-ablation. The high energy density likely 
+triggered phase explosion phenomena, causing the redeposition of 
+molten debris and consequently increasing surface roughness. Addi­
+tionally, at a power of 2.3 W and a negative defocus of 700 μm, signif­
+icant subsurface bubble-like ablative structures were observed within 
+the PDMS (Fig. A3), exhibiting morphologies distinctly different from 
+those produced under in-focus conditions.
+Overall, the experimental results indicate that in-focus fabrication 
+consistently achieves lower surface roughness compared to defocused 
+conditions. This further highlights the importance of accurate focus 
+alignment for high-precision microfabrication.
+3.2.2. Sidewall morphology analysis
+To further study the influence of defocus on surface quality, exper­
+iments were conducted with a laser scanning speed of 800 mm/s, a line 
+spacing of 7 μm, and a power of 3.79W (ablation depth approximately 
+40 μm). A dynamic shifting ranging from 0 to 100 μm (incremented by 
+20 μm) was applied to ablate PDMS, with SEM and EDS analysis on the 
+ABCD surface.
+As shown in Fig. 7a and b, the fabricated surface exhibited pores, 
+which primarily originated from the rapid pyrolysis and volatilization of 
+organic groups (such as Si-OCH3 or -CH3) in PDMS during laser ablation. 
+Volatile gases (such as CH4 and CO2) escaped, forming pore structures 
+[38]. These pores were accompanied by the deposition of nanoparticles, 
+originating from the recondensation of high-temperature molten mate­
+rial after thermal vaporization or pyrolysis [39]. Most of the pores were 
+distributed vertically, with fewer horizontal pores, as shown in Fig. 7b 
+(left). This is because in laser fabricating, the energy density is highly 
+concentrated along the laser propagation direction (vertical direction), 
+causing the spatial energy distribution to show significant anisotropy. 
+The material’s thermal response tends to develop more along this di­
+rection. Under the action of the laser, the gas generated by laser ablation 
+Fig. 5. The relationship between dynamic shift and focus conditions. (a) Schematic diagram of the focal increments and the focus conditions for three possible 
+configurations: positive defocus, focused, and negative defocus. (b) Characterization of PDMS bottom quality and surface quality fabricated at different laser focal 
+configurations.
+R. Chen et al.                                                                                                                                                                                                                                    
+International Journal of Machine Tools and Manufacture 210 (2025) 104310 
+8 
+
+
+usually released along the opposite direction of laser propagation. This 
+recoil force further promotes the formation of vertical pores. Under 
+positive defocus (0 μm, 20 μm), the pores were smaller and more evenly 
+distributed, as the laser energy was concentrated in the surface region, 
+allowing for a more uniform pyrolysis process. Volatile gases were able 
+to escape smoothly, resulting in smaller and evenly distributed pores. In 
+the focused condition (40 μm), the laser energy distribution was uni­
+form, leading to sufficient ablation and the deepest fabricating depth. 
+The sidewall pores were fewer, more evenly distributed, and the surface 
+was smoother, indicating the best fabricating quality. Under negative 
+defocus (60 μm, 100 μm), as the scanning depth increased, the laser 
+defocus grew, causing a rapid decrease in energy, preventing effective 
+interaction with PDMS. This resulted in insufficient material melting 
+and pyrolysis, significantly reducing the fabricating depth. Simulta­
+neously, sidewall pores increased in size and density, and arithmetic 
+surface roughness increased, reflecting inadequate ablation.
+A recast layer was observed in the upper region of the 20 μm positive 
+defocus, while no distinct recast layer was detected under other shift 
+distances. The recast layer formation was due to molten PDMS migrating 
+toward the surface [40], as shown in Fig. 7b (middle). When the ejected 
+molten material met the laser again, part of it condensed and deposited 
+on the sidewall, forming a recast layer. Under the positive defocus 
+Fig. 6. The effects of different power and focus conditions on bottom surface fabrication. (a) SEM images of the bottom surface fabricated under positive defocus, 
+focused, and negative defocus conditions at different power levels. (b) Arithmetic surface roughness of the bottom surface fabricated with positive defocus, focused, 
+and negative defocus at different powers. Error bars represent ± standard deviation (SD) from the mean (n = 3).
+Fig. 7. The effects of different focus conditions on sidewall morphology. (a) SEM images of cut surface fabricated at different laser focal plane positions. (b) SEM 
+images showing vertical holes, recast layers, and wrinkled structures.
+R. Chen et al.                                                                                                                                                                                                                                    
+International Journal of Machine Tools and Manufacture 210 (2025) 104310 
+9 
+
+
+condition with a fixed focal plane (dynamic shifting = 0), the impact of 
+ejected particles was less pronounced compared to that under the 20 μm 
+positive defocus condition. Under negative defocus conditions (dynamic 
+shift >40 μm), the laser focus moves farther from the PDMS surface, 
+reducing the surface energy density. This lower energy limits surface 
+melting and weakens molten material ejection, which in turn reduces 
+recast layer formation.
+A wrinkled structure was observed approximately 300 μm from the 
+top surface, with the wrinkling being more pronounced after negative 
+defocus fabricating, gradually shifting toward the shallower surface 
+region, as shown in Fig. 7b (right). The formation of these wrinkles is 
+related to thermal expansion and cooling contraction. The thermal ef­
+fects of laser fabrication are concentrated in specific regions, where high 
+temperatures cause material melting. The molten material flows under 
+the influence of surface tension and thermal gradients. Meanwhile, the 
+material in the cooler regions remains unchanged, creating a significant 
+thermal stress gradient. After the laser focus moves away, the material 
+quickly cools, and the flowing molten layer solidifies again, leading to 
+spatially differential deformation of the material, which ultimately 
+forms the wrinkled structure.
+As a result, mismatched focal shifts and ablation depths can lead to 
+surface damage and residue adhesion, compromising surface smooth­
+ness and structural integrity. These results clearly demonstrate that 
+improper focal shifts and ablation depths can cause recast layers, surface 
+damage, and oxidation particles, severely affecting surface morphology.
+3.2.3. Sidewall elemental analysis
+The primary elements of PDMS are carbon (C), oxygen (O), and sil­
+icon (Si) [41]. To investigate the effects of laser focusing conditions on 
+the elemental distribution along the fabricated sidewalls, the ablation 
+removal process, and the oxidation process, both the top and bottom 
+surfaces were analyzed. The corresponding results are presented in 
+Fig. 8. The initial contents of C, O, and Si were 53.04 %, 25.14 %, and 
+21.83 %, respectively, which are in good agreement with the theoretical 
+values (Fig. 8a–c) [42].
+First, material decomposition behavior was analyzed by examining 
+changes in C content. Compared to the pristine state, carbon content 
+decreased after ablation. As the dynamic focus distance increased, car­
+bon content first fell and then rose. Under in-focus conditions, laser 
+energy is concentrated at the surface, causing a localized temperature 
+rise that trigger intense ablation and decomposition of organic struc­
+tures. Consequently, C-C bonds in PDMS break, and some carbon is 
+converted to CO2 or CO and volatilized, reducing the residual carbon. In 
+contrast, under positive or negative defocus conditions, lower power 
+density weakens ablation, leading to incomplete carbon removal and 
+enrichment of residual carbonaceous organics, which increases the 
+Fig. 8. Elemental analysis of the top and bottom surfaces fabricated with different laser dynamic shifts. Variations in the contents of (a) carbon, (b) oxygen, and (c) 
+silicon elements. O 1s XPS spectra of the top region and bottom region for laser shifting of (d, e) 20 μm, (f, g) 40 μm, and (h, i) 60 μm. The 532.5 eV peak is assigned to 
+Si-OH (hydroxyl groups). The 532.5 eV peak is assigned to Si-OH (hydroxyl groups), while the 533 eV peak corresponds to Si-O-Si (siloxane bonds).
+R. Chen et al.                                                                                                                                                                                                                                    
+International Journal of Machine Tools and Manufacture 210 (2025) 104310 
+10 
+
+
+measured carbon content. Notably, carbon content at the top surface 
+remains consistently lower than at the bottom. This is attributed to 
+smaller focus mismatch at the top, which yields more complete ablation. 
+At greater depths, focus deviation increases, energy density decays, and 
+material removal efficiency decreases. Incompletely decomposed car­
+bon structures tend to remain at the bottom, resulting in higher carbon 
+content in that region compared to the top.
+To analyze the oxidation behavior of the material, we examined the 
+O content. After ablation, the O content generally increased compared to 
+the pristine state, exhibiting a trend of first increasing and then 
+decreasing. This indicates that under in-focus conditions, the concen­
+tration of laser energy caused intense ablation. Although some O-related 
+chemical bonds (such as Si-O bonds) were broken, silicon free radicals or 
+silicon vapor generated during the laser ablation rapidly reacted with 
+oxygen in the air, forming oxides such as SiO2, which then deposited on 
+the surface, leading to an increase in O content. In contrast to C, the O 
+content in the top region was higher than that in the bottom region. This 
+is because the top region is closer to the laser focus, where the ablation 
+and oxidation reactions are more complete, resulting in a stronger 
+oxidation effect. At the bottom, due to focal mismatch, the ablation ef­
+fect weakens and the intensity of the oxidation reaction decreases, 
+resulting in lower O content at the bottom compared to the top. 
+Furthermore, the weakened ablation process limits the complete frac­
+ture of Si-O-Si bonds, leaving more reactive Si sites. These unreacted Si 
+sites are more likely to react with moisture in the air during the cooling, 
+generating stable Si-OH structures, which leads to an enhanced -OH 
+component in the O 1s spectrum (Fig. 8d–i). Laser ablation can break C 
+and O-related chemical bonds, reducing the content of both C and O 
+elements. However, the re-deposition after oxidation increases the total 
+O content. This phenomenon suggests that during the ablation process, 
+the behavior of O elements follows a competitive mechanism between 
+“material removal” and “oxidative re-deposition”, with re-deposition 
+being the dominant process.
+By analyzing the differences in the C and O elements content be­
+tween the top and bottom regions, the results show that under in-focus 
+conditions, the differences in C and O content between the top and 
+bottom regions are minimal, indicating relatively uniform ablation and 
+oxidation processes.
+3.2.4. Average ablation depth with various dynamic shifting and processed 
+layer numbers
+Fig. 9 shows the average ablation depth for fabricating two to six 
+layers (increasing by 2 layers) with a laser scanning speed of 800 mm/s, 
+a line spacing of 7 μm, and a power of 3.79 W, with dynamic shifts 
+ranging from 1 to 300 μm. Three samples were fabricated for each set of 
+parameters. Under the current laser parameters, the ablation depth is 
+approximately 40 μm. Therefore, a dynamic shift less than 40 μm cor­
+responds to positive defocus, while a shift greater than 40 μm corre­
+sponds to negative defocus. In the case of positive defocus, the ablation 
+depth sharply decreases with the increase of the number of layers, 
+especially when the offset exceeds 100 μm. This is because as the 
+number of layers increases, the mismatch of focus becomes increasingly 
+severe. Resulting in a sharp decrease in laser energy density, the mate­
+rial’s absorption becomes less efficient, and the ablation performance in 
+deeper layers is reduced.
+When fabricating relatively shallow structures only a few layers are 
+required (for example, less than six layers), and the advantage of focus 
+adjustment may not be very pronounced. However, such feature struc­
+tures are not the primary target application of the 3D-DFL method. Our 
+approach is specifically designed for deeper structures (200–500 μm) 
+such as micro-channels, stepped features, and inclined surfaces, more 
+than 10–30 fabricating layers are required to obtain a smooth and 
+continuous feature profile.
+4. Results and discussion
+4.1. Modeling of universal laser ablation model for predicting machining 
+depth
+Focus matching is critical for achieving high-quality structures in 
+laser fabrication. A comprehensive analysis reveals that ablation depth 
+results from complex interactions among multiple laser parameters. To 
+quantitatively describe these relationships, a theoretical model is 
+established based on the Gaussian beam energy distribution. This model 
+takes into account key factors such as laser energy density, pulse overlap 
+rate, laser scanning parameters, ablation threshold, and the absorption 
+coefficient of the material. During laser fabricating, the spatial distri­
+bution of laser energy density follows a Gaussian decay, as expressed in 
+Eq. (6) [43]: 
+F(r) = F0exp
+(
+−2r2
+ω2
+)
+(6) 
+where F0 is the energy density at the beam center (J/cm2), ω is the beam 
+radius (μm), α is the absorption coefficient of the material (cm−1), r is 
+radial distance from the center of the beam. The energy decays expo­
+nentially in radial (r) directions, and this distribution strongly influences 
+the uniformity of the ablation depth.
+During parallel scanning, there is overlap of laser spots in the scan­
+ning direction (lateral) and also between adjacent scanning lines (lon­
+gitudinal). The distance between adjacent scanning lines is dline, which 
+affects the overlap rate in the longitudinal direction. The scanning speed 
+v and repetition rate f jointly determine the lateral (scanning direction) 
+pulse overlap rate. The number of pulses [44] delivered to one spot is 
+expressed as Eq. (7): 
+Nx =
+⎧
+⎨
+⎩
+2ωf
+v , v < 2ωf
+1, v ≥2ωf
+(7) 
+The line spacing dline affects the longitudinal overlap rate. The 
+number of pulses per spot in the longitudinal direction is given by Eq. 
+(8): 
+Ny =
+⎧
+⎪
+⎨
+⎪
+⎩
+2ω
+dline
+, dline < 2ω
+1, dline ≥2ω
+(8) 
+Considering both lateral and longitudinal overlaps, the total number 
+of pulses N can be written as Eq. (9): 
+N = Nx × Ny
+(9) 
+Fig. 9. Average ablation depth under dynamic focus shifts ranging from 0 to 
+300 μm across different numbers of fabricated layer (from 2 to 16 layers). A 
+shift distance less than 40 μm is defined as positive defocus, while a shift dis­
+tance greater than 40 μm is defined as negative defocus. The inset indicates the 
+ablation depth distribution for shifts from 0 to 50 μm. Error bars represent ±
+standard deviation (SD) from the mean (n = 3).
+R. Chen et al.                                                                                                                                                                                                                                    
+International Journal of Machine Tools and Manufacture 210 (2025) 104310 
+11 
+
+
+In laser processing, single-pulse ablation depth depends on both laser 
+energy density and the ablation threshold of the material. This rela­
+tionship can be described by Refs. [45,46]: 
+z = 1
+α ln
+(F0
+Fth
+)
+(10) 
+where Fth is the ablation threshold (J/cm2). The energy density at the 
+beam center F0 is given by Ref. [47]: 
+F0 = P
+fS
+(11) 
+where P is the laser power (W) and S is the beam spot area (μm2).
+For a multi-pulse scanning process, the total ablation depth of the 
+microstructure can be determined by combining the single-pulse abla­
+tion depth and the number of pulses. By combining Eq. (7) through (11), 
+the total ablation depth h is expressed in Eq. (12): 
+h = ξ 4ω2f
+vdlineα ln
+(
+P
+fπω2Fth
+)
+(12) 
+where ξ is a correction factor to account for deviations between the 
+idealized model and real conditions.
+This theoretical model is applicable to various materials and laser 
+types. It only requires determining the material’s ablation threshold and 
+absorption coefficient at different wavelengths. Once these parameters 
+are known, the model can predict the ablation depth under different 
+laser conditions based on the specific fabricating parameters.
+4.2. The influence of laser process parameters on ablation depth and 
+surface quality
+To investigate the influence of various laser parameters on PDMS, a 
+transparent polymer material, we conducted systematic ablation ex­
+periments. Both the ablation depth and surface quality were measured 
+under different processing conditions. These experimental results were 
+then compared with the predictions of the theoretical model. Specif­
+ically, we varied the laser power (from 2.57 W to 5.89 W, constant speed 
+= 800 mm/s, and constant scanning spacing = 7 μm), scanning line 
+spacing (from 5 μm to 12 μm, in 1 μm increments, constant speed = 800 
+mm/s, and constant power = 3.79 W), and scanning speed (from 400 
+mm/s to 1200 mm/s, in 100 mm/s increments, constant scanning 
+spacing = 7 μm, and constant power = 3.79 W) to evaluate their effects 
+on the ablation depth and arithmetic surface roughness of PDMS, as 
+shown in Fig. 10a. Three samples were fabricated for each parameter set. 
+Detailed experimental parameters are provided in Table A3.
+Fig. 10. The influence of laser parameters on ablation depth and surface quality. (a) Schematic diagram of the effects of laser power, speed, and scanning spacing on 
+ablation depth. The inset formula represents the ablation depth prediction model. (b)–(c) The effects of laser power on ablation depth and arithmetic surface 
+roughness, the inset figure shows the fine surface in power lager than 3.7 W. (d)–(e) The effects of laser scanning speed on ablation depth and arithmetic surface 
+roughness. (f)–(g) The effects of laser scanning spacing on ablation depth and arithmetic surface roughness. Error bars represent ± standard deviation (SD) from the 
+mean (n = 3).
+R. Chen et al.                                                                                                                                                                                                                                    
+International Journal of Machine Tools and Manufacture 210 (2025) 104310 
+12 
+
+
+The results indicate that the ablation depth is positively correlated 
+with laser power (Fig. 10b) and exhibits a nonlinear negative correlation 
+with both scanning line spacing (Fig. 10d) and scanning speed (Fig. 10f). 
+Insufficient laser power results in incomplete ablation, leading to a 
+deterioration in surface quality and a significant increase in roughness- 
+up to 3–6 times higher. When the laser power is increased to around 5 W, 
+the arithmetic surface roughness can be reduced to below 2 μm 
+(Fig. 10c). Both scanning line spacing and speed have a non-monotonic 
+effect on arithmetic surface roughness (Fig. 10e–g). If the scanning line 
+spacing is too small (<5 μm), repeated scans cause local over-ablation 
+and thermal accumulation, which may lead to defects such as melting 
+or microcracks, thereby increasing roughness. Conversely, if the spacing 
+is too large (>10 μm), the incomplete overlap between scanning tracks 
+results in residual material steps that also increase roughness. A line 
+spacing of 6–8 μm produces relatively lower arithmetic surface rough­
+ness (Ra<2 μm) while maintaining high processing efficiency. Similarly, 
+the arithmetic surface roughness shows a non-monotonic behavior with 
+respect to scanning speed; a moderate speed of 700–800 mm/s achieves 
+a balance between ablation depth and surface quality, with arithmetic 
+surface roughness (Ra) approximately 1–2 μm. Considering all these 
+parameters, an optimized process window can be established that en­
+sures high ablation efficiency while achieving excellent surface quality 
+(Ra <2 μm). Specifically, a combination of a laser power of 4–5 W, a 
+scanning line spacing of 6–8 μm, and a scanning speed of 700–800 mm/s 
+typically results in an ablation depth of 30–40 μm with arithmetic sur­
+face roughness maintained below 2 μm, representing an optimal 
+compromise.
+4.3. Validation of the universal ablation depth prediction model
+To verify the accuracy and universal applicability of the established 
+theoretical model for predicting laser ablation depth, validation exper­
+iments were conducted using two representative transparent polymer 
+materials: polydimethylsiloxane (PDMS) and polyethylene tere­
+phthalate (PET). These materials differ in their physical properties, 
+providing a robust basis for evaluating the model’s adaptability across 
+different substrates. By comparing the experimentally measured abla­
+tion depths under various laser fabricating conditions with the model’s 
+predictions, the reliability and predictive performance of the model can 
+be systematically assessed.
+4.3.1. The D2 ablation threshold of polydimethylsiloxane (PDMS) polymer
+The ablation threshold is defined as the minimum laser energy 
+density required to undergo deformation or damage, which depends on 
+absorption mechanisms, material properties, surface morphology, and 
+laser parameters such as wavelength and pulse duration [48]. For 
+organic polymers, the ablation threshold is usually in the range of 
+0.5–2.0 J/cm2 [49]. In this study, the ablation threshold Fth for IR 
+picosecond laser was calculated by combining theoretical models with 
+experiments.
+Based on the Gaussian distribution of picosecond laser pulse energy, 
+the energy density of a single pulse as a function of the radial distance at 
+the focal point is given by Eq. (6). The relationship between the incident 
+average laser power and the peak energy density is expressed as Eq. (11). 
+By combining Eq. (6) and Eq. (11), the relation between the ablation 
+area diameter, the laser energy density, and the material removal 
+threshold is derived as [43]: 
+D2 = 2ω2 ln
+(F0
+Fth
+)
+(13) 
+where D represents the diameter of the ablation area (μm) and the Fth is 
+ablation threshold of the material (J/cm2). Substituting Eq. (10) into Eq. 
+(13) yields: 
+D2 = 2ω2 ln
+(p0
+pth
+)
+= 2ω2(ln p0 −ln pth)
+(14) 
+where pth denotes the average power threshold for material removal 
+(W).
+As laser pulses accumulate, an energy accumulation effect occurs 
+during processing, leading to a gradual decrease in both the average 
+power threshold for material removal and the threshold itself. When the 
+energy from one pulse has not fully dissipated, the energy from the 
+subsequent pulse adds on, resulting in a continuous increase in the 
+material temperature. With an increasing number of pulses, this energy 
+accumulation becomes more pronounced, thereby lowering the average 
+power and threshold required for material removal. Under multi-pulse 
+conditions, the relationship between the single-pulse and multi-pulse 
+thresholds can be expressed as [50]: 
+Fth(N) = Fth(∞) + [Fth(1) −Fth(∞)]e[−k(N−1)]
+(15) 
+where N is the number of pulses; k is the accumulation factor; and Fth is 
+the saturation threshold (J/cm2).
+Eq. (14) indicates that the natural logarithm (ln p0) of the incident 
+average laser power and the square of the ablation area diameter (D2) 
+exhibit a linear relationship. Therefore, this experiment drilled holes on 
+the PDMS surface under various laser parameters, measured the di­
+ameters of the resulting circular holes, and applied the least squares 
+method for linear fitting of the data. If the fitting meets the required 
+conditions y = a(x −
+b), the beam radius can be obtained from: 
+ω =̅̅̅
+a
+2
+√
+(16) 
+Furthermore, the average power threshold for material removal is 
+calculated as: 
+pth = eb
+(17) 
+and the material ablation threshold is given by: 
+Fth = pth
+fπw2
+0
+(18) 
+In the experiments, the laser parameters were set as follows: a repetition 
+frequency of 100 kHz, a power range from 3.96 W to 11.75 W, and pulse 
+number of 1, 50, 150, 250, and 500. For each set of parameters, two 
+groups of drilling experiments were performed. Table A4 shows the 
+ablation area diameters of PDMS under different laser power and pulse 
+conditions. The relationship between the natural logarithm of the inci­
+dent laser power (ln(P)) and the square of the ablation diameter (D2) 
+was fitted using the least squares method, with the fitting results pre­
+sented in Fig. 11a.
+It can be observed from the figure that for pulse counts of 1, 50, 150, 
+250, and 500, the slopes of the fitted lines are similar. The intersection of 
+each fitted line with the horizontal axis corresponds to the average laser 
+power threshold for that pulse count. According to Eq. (16) through 
+(18), when the horizontal coordinate is zero, the beam waist radius and 
+the corresponding material removal threshold can be determined. The 
+results are summarized in Table A5 and Fig. 11b. Specifically, when the 
+pulse counts are 1, 50, 150, 250, and 500, the beam waist radius are 
+19.90, 19.75, 20.16, 20.53, and 20.70 μm, and the material removal 
+thresholds are 2.11, 0.46, 0.19, 0.09, and 0.02 J/cm2, respectively. As 
+the number of pulses increases, the ablation threshold decreases and 
+eventually stabilizes, a phenomenon known as the incubation effect 
+[51].
+4.3.2. Model validation for polydimethylsiloxane (PDMS)
+In actual laser fabricating, the cumulative effect of pulse overlap can 
+induce laser-induced accumulation, which lowers the effective ablation 
+threshold of material. This effect is typically described by the following 
+R. Chen et al.                                                                                                                                                                                                                                    
+International Journal of Machine Tools and Manufacture 210 (2025) 104310 
+13 
+
+
+equation [43]: 
+Fth(N) = Fth(1)⋅N−α
+(19) 
+where N is the effective number of accumulated pulses, and α is the 
+incubation coefficient related to the material properties. For polymers 
+like PDMS, α typically ranges from 0.3 to 0.5. Under our fabricating 
+conditions (100 kHz repetition rate and scanning speeds of 800–1200 
+mm/s), each point on the material receives approximately 3.26–4.89 
+pulses. According to the laser incubation effect, this level of pulse 
+accumulation (N = 3 to 5) typically reduces the effective ablation 
+threshold by 20–35 %. Therefore, we use Fth = 1.4 J/cm2 as the effective 
+ablation threshold.
+The waist radius (ω) of the laser can be calculated according to Eq. 
+(20): 
+ω = 4 × M2 × λ × flens
+π × D
+(20) 
+where flens = 160 mm, λ = 1064 nm, M2 = 1.3, and D = 7.2 mm. The 
+beam waist radius ω is approximately 19.55 μm.
+The absorption coefficient (α) of PDMS at a wavelength of 1064 nm is 
+0.3 cm−1 [52]. The ablation depth results from the experiments shown 
+in Section 4.2 are compared with the predicted values from the theo­
+retical model. The correction factor is determined by minimizing the 
+difference between the theoretical predictions and the experimental 
+results. It remains constant across all experimental conditions used in 
+this study. When ξ = 0.48, the predicted ablation depth closely matches 
+the experimental data, as shown in Fig. 12a–c and Table A6.
+Based on the comparison between the model’s predictions and 
+experimental results, the model shows good predictive accuracy under 
+most parameter conditions, with relative errors ranging from 1.3 % to 
+12.7 %. We found that larger errors mainly occurred at the boundaries of 
+the parameter range. For example, when the scanning spacing was 6 μm, 
+the high overlap between adjacent scan lines may cause nonlinear 
+thermal accumulation and material damage, leading to deviations be­
+tween predicted and actual ablation depths. Similarly, at a spacing of 11 
+μm, higher prediction errors were also observed and should be avoided. 
+In addition, at low scanning speeds (e.g. 400 mm/s), prolonged heat 
+Fig. 11. Experimental results of ablation threshold. (a) The linear relationship between ln(P) and D2 under various power and pulse conditions. Error bars represent 
+± standard deviation (SD) from the mean (n = 3). (b) The effect of effective pulse number on the material ablation threshold.
+Fig. 12. Comparison between theoretical model predictions and experimental results for ablation depth in polymer materials. Ablation depth and predicted values of 
+PDMS polymer material under different laser (a) power, (b) scanning speed, and (c) scan line spacing, along with the relative error. Ablation depth and predicted 
+values of PET polymer material under different laser (d) power, (e) scanning speed, and (f) scan line spacing, along with the relative error. Error bars represent ±
+standard deviation (SD) from the mean (n = 3).
+R. Chen et al.                                                                                                                                                                                                                                    
+International Journal of Machine Tools and Manufacture 210 (2025) 104310 
+14 
+
+
+exposure results in more complex thermal conduction and changes in 
+material properties (e.g. phase explosion), which can further reduce 
+prediction accuracy.
+Overall, the model demonstrates good agreement with experimental 
+results across all cases examined. Within the primary parameter range 
+(scanning speed: 600–1000 mm/s; line spacing: 6–9 μm; laser power: 
+3.5–5 W), the predicted ablation depths closely align with the measured 
+values. The relative error remains generally below 8 %, and the mean 
+absolute percentage error (MAPE) is calculated to be 5.99 %.
+4.3.3. Model validation for polyethylene terephthalate (PET)
+To further verify the universality of the model across different 
+polymer substrates, polyethylene terephthalate (PET) was selected for 
+subsequent validation. As a commonly used transparent polymer, PET 
+exhibits distinct optical and thermal properties compared to PDMS, of­
+fering a meaningful contrast for evaluating the model’s adaptability to 
+varying material characteristics. In this section, a series of laser ablation 
+experiments were conducted on PET, and the predicted ablation depths 
+were systematically compared with experimental results to assess the 
+robustness of the model.
+Previous studies report that the absorption coefficient of PET at a 
+wavelength of 1064 nm is approximately 0.133 cm−1 [52], which is 
+significantly lower than that of PDMS. Consequently, PET absorbs less 
+laser energy under identical conditions, making effective ablation more 
+challenging. Its single-pulse ablation threshold under 1064 nm IR 
+picosecond laser irradiation is reported to be 3.46 J/cm2 [53], which is 
+higher than that of PDMS and consistent with its lower absorption 
+capacity.
+To accommodate the material-specific properties of PET, laser pa­
+rameters were systematically varied. Laser power ranged from 3.68 W to 
+4.95 W, with a constant scanning speed of 800 mm/s and a fixed line 
+spacing of 7 μm. Line spacing was further adjusted from 5 μm to 10 μm in 
+1 μm increments, with the laser power set at 4.54 W and the scanning 
+speed held constant at 800 mm/s. In addition, the scanning speed was 
+varied from 600 mm/s to 1200 mm/s in 200 mm/s increments, under a 
+constant power of 4.54 W and a fixed line spacing of 7 μm. The corre­
+sponding ablation depth results are presented in Fig. 12d–f, and the 
+detailed experimental parameters are listed in Table A7.
+Based on the analysis in Section 4.3.2 and considering the laser in­
+cubation effect, an effective ablation fluence of 2.4 J/cm2 was adopted. 
+This value corresponds to approximately 70 % of the single-pulse 
+ablation threshold. A correction factor (ξ) of 0.28 was applied in the 
+model. Under these conditions, the maximum relative prediction error 
+was 4.37 %, and the mean absolute percentage error (MAPE) was 
+calculated to be 2.68 % (see Fig. 12d–f and Table A7). These results 
+indicate that the predicted values closely match the experimental data, 
+with minimal relative deviation, thereby confirming the reliability and 
+accuracy of the theoretical model.
+The experimental results indicate that the correction factors required 
+for accurate ablation depth prediction vary between different polymer 
+materials. For PDMS, the optimal correction factor was determined to be 
+0.48, while for PET it was 0.28. These differences arise from the com­
+bined influence of material properties and laser parameters. The 
+correction factor is influenced by several factors, such as the material’s 
+thermal conductivity, optical absorption, and the laser’s wavelength and 
+pulse duration. Therefore, proper calibration is essential when applying 
+the theoretical model across different polymer substrates to ensure 
+predictive accuracy.
+In summary, the established theoretical model demonstrates reliable 
+and accurate predictive capability for laser ablation depth in both PDMS 
+and PET polymer substrates. The predicted results show good agreement 
+with experimental data across a wide range of fabricating parameters 
+and material types. For PDMS, the mean absolute percentage error 
+(MAPE) was 5.99 %, while for PET it was reduced to 2.68 %. Despite the 
+distinct optical and thermal properties of PDMS and PET, the model 
+remains robust and adaptable. Notably, the prediction errors observed 
+in this study are closely with those reported for metal materials in pulsed 
+laser ablation, where average errors typically remain below 10 % [54]. 
+These experiments confirm the model’s applicability to different poly­
+mer materials and suggest its strong potential for extension to a broader 
+class of materials in laser micromachining applications.
+4.4. Model-guided determination of dynamic shifting distance in laser 
+fabrication
+Based on the dynamic-focusing scanning fabrication strategy, we use 
+the theoretical model to predict the ablation depth and determine the 
+laser dynamic shifting parameters. After each layer is processed, the 
+laser beam is refocused to maintain stable fabrication conditions. We 
+fabricated tapered microstructures with a target height of 400 μm and 
+width of 300 μm using nine different fabrication parameter sets. The 
+predicted ablation depths from the theoretical model were used to 
+determine the required number of fabrication layers, as detailed in 
+Table A8. The 3D morphology of a representative tapered microstruc­
+ture is shown in Fig. 13a. Cross-sectional profiles were measured at three 
+distinct positions, and the corresponding 2D contour curves showed 
+excellent consistency (Fig. 13b).
+Furthermore, statistical analysis of the height and width of the mi­
+crostructures fabricated under the nine parameter sets revealed high 
+dimensional stability. The measured height consistently remained close 
+to 400 μm (Fig. 13c), while the width showed minimal deviation from 
+the nominal 300 μm, with an average of 298 μm (Fig. 13d). Additionally, 
+we quantified the volume of individual tapered microstructures and 
+found that the variations were within an acceptable range, with a rela­
+tive error of less than 3 % (Fig. 13e). These findings demonstrate the 
+reliability, consistency, and precision of the proposed laser fabrication 
+method.
+4.5. Fabrication accuracy and form deviation analysis: example of 3D 
+pyramid structure design
+To quantitatively evaluate the dimensional and form accuracy of 
+laser-fabricated microstructures, a series of pyramid structures were 
+designed as representative test geometries. Eight combinations were 
+evaluated by varying two base widths (300 μm and 350 μm) with four 
+structure heights (500, 400, 300, and 200 μm). Fabrication employed 
+fixed laser parameters: 3.8 W power, 100 kHz repetition rate, 1000 mm/ 
+s scanning speed, and 8 μm scanning spacing. We extracted the cross- 
+sectional profiles of the fabricated pyramid microstructures (Fig. A4), 
+and the measured profiles were compared with the corresponding 
+design profiles to evaluate the fabrication accuracy.
+Fig. 14 presents the measured and designed profiles across varying 
+sizes. The left column (Fig. 14a–c, e, g) shows results for the 300 μm base 
+width structures, while the right column (Fig. 14b–d, f, h) corresponds to 
+the 350 μm base width. Each subfigure pair corresponds to a different 
+structure height (500 μm, 400 μm, 300 μm, and 200 μm, respectively). 
+Six cross-sectional profiles were extracted from each group, and form 
+accuracy was evaluated using peak-to-valley (PV) and root-mean-square 
+(RMS) deviation metrics. The results show a clear trend: form deviation 
+increases with structure height. For the 300 μm base width group, the PV 
+increased from 15.2 μm to 29.5 μm, while the RMS increased from 5.8 
+μm to 14.4 μm. For the 350 μm group, the PV increased from 12.0 μm to 
+26.5 μm, and the RMS from 4.3 μm to 13.8 μm. Across all groups, the PV 
+remained below 30 μm, and RMS values below 15 μm. The significant 
+increase in form deviation with height is mainly due to the cumulative 
+effect of absolute errors in the vertical direction.
+To account the influence of height on absolute deviation magnitude, 
+all deviation metrics were normalized by the corresponding structure 
+height (H). As shown in Table 1, the normalized PV (PV/H) remained 
+within 8.0 %, and the normalized RMS (RMS/H) below 3.0 %. After 
+normalization, the monotonic trend of absolute error disappeared. These 
+results demonstrate that the overall fabrication accuracy deviation is 
+R. Chen et al.                                                                                                                                                                                                                                    
+International Journal of Machine Tools and Manufacture 210 (2025) 104310 
+15 
+
+
+small, with most regions exhibiting good form uniformity. The ampli­
+fication of absolute error with increasing height suggests a cumulative 
+effect, but the disappearance of this trend after normalization confirms 
+that the laser fabrication process maintains excellent relative accuracy 
+regardless of scale.
+In previous studies using nanosecond pulsed laser ablation, a fabri­
+cation accuracy with an average relative error of 6–8 % was reported 
+[16], which is considered a commendable level of precision in 
+laser-based 3D microstructure fabricating. In contrast, our method, 
+utilizing the advantages of picosecond laser technology, achieves an 
+average relative error of approximately 3 %, resulting in higher fabri­
+cation accuracy. Additionally, the potential use of femtosecond lasers in 
+future work holds promise for further enhancing fabrication accuracy, 
+offering even greater potential for scaling up the process. These results 
+confirm that the proposed 3D dynamic focusing laser fabrication process 
+delivers high precision and excellent scalability, with strong dimen­
+sional accuracy and adaptability for manufacturing transparent, flexible 
+polymer microstructures.
+4.6. Fabrication of various types of 3D microstructures
+4.6.1. Fabrication on polydimethylsiloxane (PDMS) substrate
+To demonstrate the flexibility and versatility of the 3D-DFL method, 
+a variety of 3D microstructures were fabricated on PDMS substrates, as 
+shown in Figs. 15 and 16. Fig. 15a–h illustrate tapered structures and 
+frustum structures with triangular, quadrilateral, pentagonal, and 
+conical geometries. According to the fabricating results, it was found 
+that the laser shutdown delay affects the bottom ablation characteristics 
+of microstructures. Appropriate shutdown delay can significantly reduce 
+over ablation, as shown in Fig. A5. SEM images confirm the high geo­
+metric fidelity and dimensional uniformity of these protruding features. 
+These results demonstrate the method’s ability to precisely tailor 
+microstructure dimensions through the combined control of structural 
+design and laser fabricating parameters.
+In addition to fabricating protruding structures, the 3D-DFL method 
+was also employed to fabricate recessed microstructures, which present 
+additional challenges such as ensuring stable depth modulation and 
+avoiding over-ablation or geometric distortion. Arrays of recessed 
+conical, triangular, quadrilateral, and pentagonal pyramid microstruc­
+tures were successfully fabricated, as shown in Fig. 15i–l. The 3D mor­
+phologies clearly reveal that the inner surfaces of the recessed structures 
+are smooth and the geometries are sharply defined. These recessed ar­
+chitectures are particularly promising for applications in micro-mold 
+fabrication, where surface quality and dimensional accuracy are critical.
+To expand the design versatility of the 3D-DFL approach, we fabri­
+cated complex microstructures with functional configurations. Moir´e- 
+patterned arrays (Fig. 16a and b), which show potential for optical 
+modulation [32], were successfully generated with high geometric 
+precision. Multi-scale tapered arrays and rhombic pyramid structures 
+(Fig. 16c–f) were also fabricated, demonstrating potential applications 
+in flexible electronics due to their scalable geometry and tunable surface 
+topology. The methodology was further extended to fabricate 
+MEMS-challenging 3D microstructures, including bidirectional alter­
+nating wave structures, trident-shaped features, and other intricate 
+forms (Fig. 16g–l). Such structures have potential applications in surface 
+engineering, including microfluidics, directional wetting, and super­
+hydrophobic surfaces.
+Collectively, these results highlight the exceptional capability of the 
+3D-DFL method in fabricating diverse structural typologies and pre­
+cisely controlled feature dimensions. The approach enables high- 
+fidelity, multi-scale, and application-oriented fabrication of advanced 
+3D microsystems.
+4.6.2. Fabrication on polyethylene terephthalate (PET) substrate
+Following the successful fabrication of 3D microstructures on a 
+PDMS substrate, similar microengineering experiments were conducted 
+on PET substrates to further validate the adaptability of the 3D-DFL 
+method across different material systems. PET differs significantly 
+from PDMS in terms of its optical and thermal properties; it is trans­
+parent and has a higher hardness than PDMS, posing a more challenging 
+test for process stability and model transferability.
+Fig. 17a shows the microstructure fabricated on the PET substrate, 
+with a large-area pyramid array (3000 × 1600 μm2) with a 300 μm 
+period fabricated within a 30-min. 3D laser confocal microscopy was 
+used to characterize the surface morphology. The results show that the 
+bottom surface of the fabricated microgrooves exhibits good flatness and 
+Fig. 13. Verification of the material removal depth model and analysis of the microstructure morphology. (a) 3D surface morphology images of samples fabricated 
+using 7# of laser parameters. The tapered microstructure is designed with a width of 300 μm and a height of 400 μm. (b) Surface profiles at different positions of the 
+tapered microstructure array. Measurement results of (c) height, (d) width, and (e) volume and relative volume error for tapered microstructures fabricated using 9 
+different sets of laser parameters. Error bars represent ± standard deviation (SD) from the mean (n = 3).
+R. Chen et al.                                                                                                                                                                                                                                    
+International Journal of Machine Tools and Manufacture 210 (2025) 104310 
+16 
+
+
+surface quality, with an average surface roughness of Sa = 1.27 μm and a 
+maximum height difference of Sz = 16.1 μm (see Fig. 17b). Additionally, 
+a series of 3D microstructures, including triangular, quadrilateral, and 
+pentagonal pyramids, were successfully fabricated on the PET substrate, 
+as shown in Fig. 17c–e. We also fabricated micro-cone arrays (Fig. 17f), 
+gradient pyramid microstructure arrays of different sizes (Fig. 17g), and 
+concentric circular microchannels (Fig. 17h).
+The successful fabrication of complex 3D microstructures on the PET 
+substrate demonstrates that the proposed model-driven 3D-DFL method 
+maintains high precision and structural fidelity, even when applied to 
+materials with significantly different optical and mechanical properties. 
+These results validate the method’s adaptability and robustness, con­
+firming that it can be effectively extended to a broader range of trans­
+parent polymer materials with minimal parameter adjustment.
+4.7. Fabrication and application of representative PDMS devices
+To further demonstrate the practical feasibility of the proposed 
+Fig. 14. Form deviation comparison between the fabricated and design profiles of pyramid structures. Height = 500 μm, base widths of (a) 300 μm and (b) 350 μm. 
+Height = 400 μm, base widths of (c) 300 μm and (d) 350 μm. Height = 300 μm, base widths of (e) 300 μm and (f) 350 μm. Height = 200 μm, base widths of (g) 300 
+μm and (h) 350 μm. PV: Peak-to-Valley deviation, RMS: Root-Mean-Square form deviation.
+R. Chen et al.                                                                                                                                                                                                                                    
+International Journal of Machine Tools and Manufacture 210 (2025) 104310 
+17 
+
+
+method, we present several representative examples of microstructure 
+applications. Although the main focus of this study is on laser processing 
+mechanisms and process optimization, these examples help highlight 
+the method’s scalability and adaptability to real-world engineering 
+scenarios. This section serves as a bridge between fundamental research 
+and practical application, showcasing the potential industrial value of 
+the method in areas such as device fabricating, microfluidics, and 
+functional surfaces, as shown in Fig. 18.
+4.7.1. Highly sensitive flexible pressure sensor
+Flexible pressure sensors typically require high sensitivity (>10 
+kPa−1) and a wide linear range (R2 > 0.99) to meet the demands of 
+dexterous robotic applications. Microstructures can significantly 
+enhance sensor performance. The microstructured sensor designed in 
+this study is shown in Fig. A6, based on a surface conduction sensing 
+mechanism. The detailed working principle is shown in Fig. A7, as 
+detailed in Appendix 10. Fig. 18a presents the image of a flexible pres­
+sure sensor, with insets displaying SEM images of the pressure-sensing 
+layers of two fabricated pressure sensors: pyramid-shaped microstruc­
+tures and square frustum microstructures. The sensing performance of 
+both sensors was evaluated. The pyramid-shaped microstructure pres­
+sure sensor demonstrated an ultra-high linear sensitivity of 102.4 kPa−1 
+within the 400 kPa range (R2 = 0.993), while the square frustum 
+microstructure sensor exhibited a much lower sensitivity of 1.3 kPa−1 
+(Fig. 18b). Additionally, the response recovery time of the pyramid- 
+shaped microstructure was measured, showing ultra-fast response 
+Table 1 
+Form deviation metrics for structures with varying sizes.
+Design structure
+PV (μm)
+PV/H (%)
+RMS (μm)
+RMS/H (%)
+W300-H500
+29.5
+5.90
+14.4
+2.88
+W300-H400
+28.8
+7.20
+11.8
+2.95
+W300-H300
+24.0
+8.00
+9.0
+3.00
+W300-H200
+15.2
+7.75
+5.8
+2.90
+W350-H500
+26.5
+5.30
+13.8
+2.76
+W350-H400
+25.3
+6.33
+9.4
+2.35
+W350-H300
+17.6
+5.87
+7.0
+2.33
+W350-H200
+12.0
+6.00
+4.3
+2.15
+Fig. 15. Laser fabrication of various tapered structures and frustum structures on polydimethylsiloxane (PDMS) substrate. SEM images of top view (left) and side 
+views (right) of a (a) triangular pyramid, (b) square pyramid, (c) pentagonal pyramid, and (d) conical structures. SEM images of top view (left) and side views (right) 
+of a (e) triangular frustum, (f) square frustum, (g) pentagonal frustum, and (h) conical frustums. SEM images (top) and 3D views (bottom) of negative patterns of (i) a 
+cone, (j) a triangular pyramid, (k) a square pyramid, and (l) a pentagonal pyramid.
+R. Chen et al.                                                                                                                                                                                                                                    
+International Journal of Machine Tools and Manufacture 210 (2025) 104310 
+18 
+
+
+times of 34/39 ms (Fig. 18c). The 3D-DFL method provides a reliable 
+technical foundation for the customized fabrication of these sensors.
+4.7.2. Microfluidic chips for rapid mixing of liquids
+In microfluidics, liquid mixing is widely used to improve reaction 
+efficiency, enhance measurement accuracy, and ensure uniformity of 
+components. Fig. 18d shows a Y-shaped microfluidic mixer chip with 
+serpentine channels, fabricated by laser fabricating on a PDMS substrate 
+and plasma bonding to a glass substrate. The magnified views in Fig. 18e 
+and f shows serpentine microchannels with and without disturbance 
+plates. The smooth internal surfaces of the microchannels facilitate 
+laminar flow. Red and blue liquids were pumped into the microchannel 
+at a flow rate of 1 mL/h, and pixel analysis of the grayscale values at the 
+outlet was performed to assess whether mixing occurred. In the micro­
+channel without a disturbance plate, the liquid followed laminar flow, 
+with no mixing observed. The grayscale value at the outlet decreased 
+from 180 to 110, indicating clear layering and a lack of significant 
+mixing (Fig. 18e and Video S1). However, the addition of a disturbance 
+plate structure weakened the laminar flow, creating local flow 
+obstruction and inducing flowline curvatures, vortices, or recirculation 
+zones around the plate. The image at the outlet of the microchannel in 
+Fig. 18f and Video S2 show clear evidence of mixing, with grayscale 
+values between 140 and 120, confirming that the disturbance plate 
+enhanced the mixing effect.
+4.7.3. Ultrasonic droplet manipulation
+Ultrasonic droplet manipulation technology has broad applications 
+in biomedicine, drug delivery, and chemical synthesis. Fig. 18g shows 
+the principle of ultrasonic droplet manipulation, wherein the key tech­
+nology involves utilizing ultrasonic energy on a laser-fabricated super­
+hydrophobic surface to generate an upward acoustic radiation force, 
+enabling the levitation of a droplet from the superhydrophobic surface. 
+Fig. 18h shows the experimental process of droplet manipulation. The 
+ultrasonic transducer is moved to the left, positioned above the red- 
+colored droplet. Upon activation of the ultrasound, the 30 μL droplet 
+becomes suspended. The transducer then moves 30 mm to the right, 
+with the red-colored droplet following the transducer. When the droplet 
+comes into contact with the blue-colored droplet, the two droplets mix, 
+turning brown, while maintaining suspension, as depicted in Video S3.
+5. Conclusion
+This study addresses the challenges in fabricating 3D functional 
+microstructures on transparent polymers, aiming to enhance machining 
+precision and tailoring capabilities. By employing a 3D dynamic- 
+focusing laser (3D-DFL) approach with an IR picosecond laser, we ach­
+ieved high-precision microfabrication of transparent polymer. The ma­
+terial removal mechanisms under IR femtosecond laser ablation were 
+revealed. A comprehensive analysis of the impact of focus increment 
+was conducted, investigating both the macroscopic structural evolution 
+during the fabrication process and the microstructural characteristics of 
+the resulting surfaces. A theoretical model for material removal during 
+laser-material interactions was presented. For the first time, 3D micro­
+structures with high geometric accuracy and consistency were success­
+fully fabricated on a transparent polymer, using polydimethylsiloxane 
+(PDMS) and polyethylene terephthalate (PET) as a case study. The main 
+conclusions are as follows. 
+1. A customized IR picosecond 3D dynamic-focusing laser process was 
+presented for fabricating transparent flexible polymer materials. The 
+laser fabrication process was observed online using a high-speed 
+camera, revealing the material’s three-stage ablation process of 
+“stabilization”, “expansion”, and “contraction” under laser ablation, 
+offering new insights into thermomechanical responses in trans­
+parent soft materials under ultrafast laser irradiation.
+2. The mismatch between focus increments and actual ablation depths 
+was identified as a critical factor affecting ablation quality. Positive 
+defocusing promotes the formation of recast layers and an increase in 
+Fig. 16. SEM images of 3D ordered microstructure array. (a) Top view and (b) side view of 3D microstructure array featuring moir´e patterns. (c) the top view and (d) 
+the side view of a tapered microstructure array with variable sizes. SEM images of (e) the top view and (f) the side view of an asymmetric pyramidal structures array. 
+SEM images of (g) the top view and (h) the side view of anti-phase alternating wave structures. SEM images of (i) the top view and (j) the side view of trident features. 
+SEM images of (k) the top view and (l) the side view of freeform geometries.
+R. Chen et al.                                                                                                                                                                                                                                    
+International Journal of Machine Tools and Manufacture 210 (2025) 104310 
+19 
+
+
+hole size, while negative defocusing results in uneven ablation and 
+irregular deposition of oxide particles. By using the 3D-DFL method 
+to match the focus increments with actual ablation depths ensures 
+uniform energy distribution across the surface, minimizing defects 
+and resulting in superior surface quality. These results provide 
+important insights into the fundamental mechanism of how focus 
+shifting affects ablation behavior. By achieving precise match be­
+tween focal shifts and actual ablation depths, the 3D-DFL method 
+improves inaccurate energy deposition and uncontrolled ablation, 
+laying a solid foundation for advancing high-quality laser fabrication 
+of transparent polymer materials.
+3. A theoretical model for predicting ablation depth was established to 
+achieve accurate matching between dynamic focus and the actual 
+ablation depth. The model is not limited by specific materials or laser 
+types. It requires only minimal experimental input, such as the 
+ablation threshold of materials and their absorption coefficients at 
+different wavelengths. The validity of the model was further 
+confirmed through experiments on two representative polymer ma­
+terials, polydimethylsiloxane (PDMS) and polyethylene tere­
+phthalate (PET), yielding mean absolute percentage errors (MAPE) 
+of 5.99 % and 2.68 %, respectively. The model was applied to guide 
+laser fabrication and evaluate fabrication error, achieving normal­
+ized peak-to-valley deviations within 8.0 % and normalized root- 
+mean-square deviations below 3.0 %, demonstrating high accuracy 
+in guiding laser fabrication. The model-driven approach enables 
+precise control in laser micromachining and ensures high-fidelity 
+fabrication of complex 3D microstructures on PDMS and PET sub­
+strates, including both protruding and recessed features.
+4. The versatility of 3D dynamic-focusing laser method was demon­
+strated through the successful fabrication of various 3D functional 
+microstructures, such as pressure-sensing layer with microstructure 
+arrays for flexible pressure sensors, enhancing sensor sensitivity by 
+nearly two orders of magnitude; customized microchannel fabrica­
+tion for microfluidic chips, improving the fluid mixing efficiency; 
+and applications in ultrasonic droplet manipulation stage for non- 
+contact liquid control. These examples demonstrate the method’s 
+scalability and adaptability, highlighting its potential to impact 
+diverse fields such as flexible electronics, optics, microfluidics, and 
+biomaterials engineering.
+These findings demonstrate that 3D dynamic focal control provides a 
+versatile strategy for addressing key challenges in laser fabrication of 
+transparent materials. The proposed laser-based approach not only en­
+ables high-fidelity fabrication of complex 3D microstructures in flexible 
+polymers, but also shows potential for broader applications involving 
+semitransparent ceramics, biomaterials, and other hard-to-machine 
+substrates. Further experimental studies are needed to determine 
+whether the model can be extended to a wider range of materials, such 
+Fig. 17. Various 3D Microstructure fabricated on polyethylene terephthalate (PET) substrate. (a) Photograph displaying a centimeter-scale PET sample (3000 ×
+1600 μm2) featuring a surface micro-pyramid array. The inset showcases a SEM image of the sample in side view. (b) 3D topography image and surface roughness 
+measurement of PET microgrooves. 3D topography image of (c) triangular pyramid, (d) square pyramid, (e) pentagonal pyramid. (f) Micro-needle array. (g) Multi- 
+level pyramid array. (h) Concentric channel.
+R. Chen et al.                                                                                                                                                                                                                                    
+International Journal of Machine Tools and Manufacture 210 (2025) 104310 
+20 
+
+
+as metals or fully opaque ceramics.
+CRediT authorship contribution statement
+Rui Chen: Writing – review & editing, Writing – original draft, 
+Visualization, Methodology, Conceptualization. Chunjin Wang: 
+Writing – review & editing, Supervision, Funding acquisition, Concep­
+tualization. Tao Luo: Writing – review & editing, Investigation, Funding 
+acquisition. Wenjun Xu: Visualization, Methodology. Qixian Zhang: 
+Investigation. Jie Zhou: Software, Investigation. Rui Gao: Methodol­
+ogy, Investigation. Chi Fai Cheung: Writing – review & editing, Inves­
+tigation. Wei Zhou: Writing – review & editing, Supervision, Funding 
+acquisition, Conceptualization.
+Declaration of competing interest
+The authors declare that they have no known competing financial 
+interests or personal relationships that could have appeared to influence 
+the work reported in this paper.
+Acknowledgments
+This work was supported by the National Key R&D Program of China 
+(No.2023YFB4604600), the National Natural Science Foundation of 
+China (No.52325507, No.U21A20136, No.52205606), and the funding 
+support from the Hong Kong Polytechnic University (Project Code:1- 
+W383, 4-ZZSA, RMAN). We acknowledge Mr. Yao Ma from Xiamen 
+University for his technical support.
+Fig. 18. Applications of microstructure fabricated using the 3D-DFL method. (a) The photo of a resistive pressure sensor and the inset SEM images showing the 
+pressure-sensing layers featuring microstructure arrays of pyramid and square frustum. (b) Pressure-dependent relative current changes in the pressure sensor with 
+different microstructures. The inset showing the microstructure figures of pressure-sensing layer. (c) Response time of pyramid microstructure sensor. (d) The photo 
+of microfluidic chips. (e) The photo of microchannels without microstructures and the inlet and outlet microchannels (top), the inset show the microchannel figure of 
+the inlet and outlet. The grayscale intensity distribution of the outlet (bottom). (f) The photo of microchannels with microstructures and the inlet and outlet 
+microchannels (top), the inset show the microchannel figure of the inlet and outlet. The grayscale intensity distribution of the outlet (bottom). (g) Schematic of an 
+ultrasonic standing wave formed between an ultrasound transducer and a superhydrophobic surface. When the acoustic radiation force exceeds the combined 
+gravitational and adhesive forces on the droplet, the droplet levitates from the surface. (h) Experimental procedure of droplet manipulation.
+R. Chen et al.                                                                                                                                                                                                                                    
+International Journal of Machine Tools and Manufacture 210 (2025) 104310 
+21 
+
+
+Appendix 1. Scanning area segmenting and fabricating parameters of 2D laser method
+Fig. A1. Scanning area segmentation for the 2D laser method, divided into five regions and fabricated using five different sets of laser parameters.
+Table A1 
+2D laser method fabricating parameters
+Region
+Power (W)
+Speed (mm/s)
+Scanning times
+Spacing (μm)
+1 (purple)
+3.7
+2000
+1
+8
+2 (blue)
+3.7
+2000
+2
+8
+3 (green)
+3.7
+1200
+2
+8
+4 (red)
+3.7
+900
+3
+8
+5 (black)
+3.7
+800
+3
+8
+Appendix 2. Detailed comparison and supplement of traditional 2D laser and 3D laser method
+Conventional 2D laser systems use a fixed-focus configuration, which is suitable for shallow surface fabrication but not for complex 3D structures. 
+Although adjusting laser energy can remove material at different depths, this approach often lacks precision and efficiency in complex scenarios. In 
+contrast, 3D laser systems use either motorized Z-axis stage or dynamic lens-based focusing to quickly adjust the focal position for intricate structures. 
+Traditional Z-axis focusing requires mechanical movement of the workpiece, which results in slow response, lower efficiency, and potential 
+R. Chen et al.                                                                                                                                                                                                                                    
+International Journal of Machine Tools and Manufacture 210 (2025) 104310 
+22 
+
+
+positioning errors. The dynamic focusing method used in this study achieves axial focal shifts by adjusting the beam’s divergence angle, avoiding 
+sample movement and greatly reducing system inertia and response time. Additionally, the galvanometer-based system is more compact and easier to 
+integrate.
+Table A2 
+Comparison of traditional 2D laser and 3D laser method
+Focusing method
+2D laser (fixed focal 
+plane)
+3D laser (motion stage)
+3D laser (dynamic beam control)
+Setup
+XY galvo scanner
+XY galvo canner + motorized Z stage
+XYZ galvo scanner
+Focusing 
+mechanism
+Fixed focal plane
+Sample or laser head moves along the Z-axis
+Beam divergence controls focal plane
+Z-axis peed
+N/A
+<300 mm/s (ref: Newport XMS100)
+2000 mm/s
+Response
+N/A
+30–100 ms (ref: Newport XMS100)
+<1 ms (sub-ms level)
+Positioning 
+accuracy
+N/A
+sub-μm level
+μm level
+Characteristics
+Simple; no Z-axis 
+module
+Heavy; high inertia
+Compact; no sample movement
+Workpiece
+Small
+Large
+Small
+Inertia and volume
+Low
+High
+Low
+System complexity
+Low
+Medium to high (collaborative control of galvanometer and 
+motion stage)
+Low to medium (collaborative control of galvanometer and 
+focusing lens)
+Limitation
+High aspect ratio 
+structure
+Accumulated error; vibration at high speeds
+Fabricating range
+References
+[18]
+[24]
+[25,28]
+Appendix 3. The influence of bottom morphology, laser power, and defocusing fabricating
+Fig. A2. Arithmetic surface roughness of the bottom surface fabricated with positive defocus, focused, and negative defocus powers of 3.7W, 3.96W, and 4.45W. 
+Error bars represent ± standard deviation (SD) from the mean (n = 3).
+Fig. A3. The laser power is 2.3W, and negative defocusing of 700 μm is used to fabricate the transparent flexible polymers (PDMS), resulting in significant subsurface 
+effects. The transparent flexible polymers (PDMS) produce ablative bubbles and rough inner surfaces.
+R. Chen et al.                                                                                                                                                                                                                                    
+International Journal of Machine Tools and Manufacture 210 (2025) 104310 
+23 
+
+
+Appendix 4. Detailed parameter table for laser fabricating
+We varied the laser power (2.57–5.89 W), scanning line spacing (5–12 μm, in increments of 1 μm), and scanning speed (400–1200 mm/s, in 
+increments of 100 mm/s) to assess their effects on the ablation depth and arithmetic surface roughness of PDMS, as shown in Table A3.
+Table A3 
+Laser parameters used for experiments on the influence of surface quality and ablation depth
+Speed (mm/s)
+Power (W)
+Spacing (μm)
+800
+2.52, 2.81, 3.04, 3.34, 3.70, 3.79, 3.96, 4.39, 4.64, 4.96, 5.27, 5.58, 5.89
+7
+400, 500, 600, 700, 800, 900, 1000, 1100, 1200
+3.79
+7
+800
+3.79
+5, 6, 7, 8, 9, 10, 11, 12
+Appendix 5. Experimental study on ablation threshold of PDMS materials
+Table A4 
+Ablation area diameter (μm)
+Pulse number
+Power (W)
+3.96
+4.93
+5.96
+7.18
+8.43
+9.52
+10.76
+11.75
+1
+21.0
+26.2
+29.7
+28.9
+30.4
+31.7
+35.6
+36.9
+50
+40.8
+42.8
+44.3
+44.8
+47.8
+47.6
+48.2
+50.1
+150
+49.6
+51.9
+52.3
+53.9
+54.2
+54.8
+57.5
+57.7
+250
+56.4
+58.3
+60.6
+59.5
+61.1
+61.9
+63.4
+64.2
+500
+63.9
+66.4
+69.9
+70.7
+73.2
+73.2
+74.5
+76.0
+Table A5 
+Fitted beam radius and material removal threshold at different pulse counts
+Pulse number
+y = a(x −
+b)
+ω(μm)
+Pth(W)
+Fth
+(
+J /cm2)
+1
+y = 792.04(x −
+0.892)
+19.90
+2.45
+2.11
+50
+y = 780.17(x + 0.6419)
+19.75
+0.53
+0.46
+150
+y = 812.61(x + 1.538)
+20.16
+0.22
+0.19
+250
+y = 843.14(x + 2.317)
+20.53
+0.10
+0.09
+500
+y = 856.86(x + 3.786)
+20.70
+0.02
+0.02
+Appendix 6. Comparison between model prediction and experimental results
+Table A6 
+Comparison between predictions and experimental values of PDMS.
+Sample
+Speed (mm/s)
+Power (W)
+Spacing (μm)
+Predictive value (μm)
+Experiment value (μm)
+Relative error (%)
+1
+800
+2.57
+7
+19.18
+19.71
+−2.7
+2
+800
+2.81
+7
+23.14
+25.60
+−9.6
+3
+800
+3.04
+7
+26.72
+28.61
+−6.6
+4
+800
+3.34
+7
+31.07
+30.42
+2.1
+5
+800
+3.70
+7
+35.69
+33.49
+6.6
+6
+800
+3.79
+7
+36.74
+34.24
+7.3
+7
+800
+3.96
+7
+38.72
+38.03
+1.8
+8
+800
+4.39
+7
+43.34
+41.46
+4.5
+9
+800
+4.64
+7
+45.83
+44.94
+2.0
+10
+800
+4.96
+7
+48.89
+47.18
+3.6
+11
+800
+5.27
+7
+51.60
+48.91
+5.5
+12
+800
+5.58
+7
+54.19
+51.69
+4.8
+13
+800
+5.89
+7
+56.66
+54.10
+4.7
+14
+400
+3.79
+7
+73.47
+66.12
+11.1
+15
+500
+3.79
+7
+58.78
+54.55
+7.7
+16
+600
+3.79
+7
+48.98
+45.16
+8.5
+17
+700
+3.79
+7
+41.98
+39.32
+6.8
+18
+800
+3.79
+7
+36.74
+34.26
+7.2
+19
+900
+3.79
+7
+32.65
+31.95
+2.2
+20
+1000
+3.79
+7
+29.39
+30.36
+−3.2
+21
+1100
+3.79
+7
+26.72
+27.82
+−4.0
+(continued on next page)
+R. Chen et al.                                                                                                                                                                                                                                    
+International Journal of Machine Tools and Manufacture 210 (2025) 104310 
+24 
+
+
+Table A6 (continued)
+Sample 
+Speed (mm/s) 
+Power (W) 
+Spacing (μm) 
+Predictive value (μm) 
+Experiment value (μm) 
+Relative error (%)
+22
+1200
+3.79
+7
+24.49
+26.77
+−8.5
+23
+800
+3.79
+6
+42.86
+38.01
+12.7
+24
+800
+3.79
+7
+36.74
+34.60
+6.2
+25
+800
+3.79
+8
+32.14
+31.73
+1.3
+26
+800
+3.79
+9
+28.57
+30.16
+−5.3
+27
+800
+3.79
+10
+25.71
+28.29
+−9.1
+28
+800
+3.79
+11
+23.38
+25.51
+−8.3
+Mean Absolute Percentage Error (MAPE): 5.99 %.
+Table A7 
+Comparison between predictions and experimental values of PET.
+Sample
+Speed (mm/s)
+Power (W)
+Spacing (μm)
+Predictive value (μm)
+Experiment value (μm)
+Relative error (%)
+1
+600
+4.54
+7
+34.83
+33.56
+−3.78
+2
+800
+4.54
+7
+26.12
+25.66
+−1.79
+3
+1000
+4.54
+7
+20.90
+20.29
+−3.02
+4
+1200
+4.54
+7
+17.42
+17.84
+2.35
+5
+800
+3.68
+7
+14.05
+14.65
+4.09
+6
+800
+4
+7
+18.85
+19.44
+3.04
+7
+800
+4.54
+7
+26.12
+25.66
+−1.79
+8
+800
+4.95
+7
+31.09
+31.22
+0.40
+9
+800
+4.54
+6
+30.48
+29.52
+−3.24
+10
+800
+4.54
+7
+26.12
+25.66
+−1.79
+11
+800
+4.54
+8
+22.86
+23.37
+2.21
+12
+800
+4.54
+9
+20.32
+20.96
+3.06
+13
+800
+4.54
+10
+18.29
+19.12
+4.37
+Mean Absolute Percentage Error (MAPE): 2.68 %.
+Appendix 7. Theoretical model prediction results
+The predicted ablation depths from the theoretical model were employed to determine the required number of fabricating layers, as detailed in 
+Table A8.
+Table A8 
+Predicted ablation depth and processed layer predicted by the ablation depth theoretical model
+No.
+P (W)
+v (mm/s)
+dline (μm)
+h (μm)
+Number of layers
+1#
+3.05
+800
+7
+25.75
+15.4 (15 layers)
+2#
+3.34
+800
+7
+29.67
+13.4 (13 layers)
+3#
+3.73
+800
+7
+34.45
+11.6 (12 layers)
+4#
+3.05
+1000
+7
+20.60
+19.4 (19 layers)
+5#
+3.34
+1000
+7
+23.74
+16.8 (17 layers)
+6#
+3.73
+1000
+7
+27.56
+14.4 (14 layers)
+7#
+3.05
+800
+5
+36.05
+11.1 (11 layers)
+8#
+3.34
+800
+5
+41.55
+9.6 (10 layers)
+9#
+3.73
+800
+5
+48.23
+8.3 (8 layers)
+R. Chen et al.                                                                                                                                                                                                                                    
+International Journal of Machine Tools and Manufacture 210 (2025) 104310 
+25 
+
+
+Appendix 8. Fabrication accuracy and form deviation analysis
+Fig. A4. Cross-sectional profiles of the fabricated pyramid microstructures.
+Appendix 9. Analysis of over ablation at the bottom of microstructure
+Laser shutdown delay affects the ablation characteristics of microstructures, particularly at the bottom. If the delay time is too short, the material is 
+insufficiently ablated; if the delay is too long, over-etching can occur, as shown in Fig. A5. When the shutdown delay is set to 120 μs, over-etching is 
+significantly reduced.
+Fig. A5. The relationship between laser shutdown delay time and over material ablation.
+R. Chen et al.                                                                                                                                                                                                                                    
+International Journal of Machine Tools and Manufacture 210 (2025) 104310 
+26 
+
+
+Appendix 10. The structure design and the working principle of the sensor
+The sensor structure is illustrated in Fig. A6. It comprises interdigital electrodes, a conductive sensing layer with a pyramid microstructure, and 
+protective packaging layers. The sensing layer is sprayed with carbon black (CB)/polyethylene oxide (PEO) conductive material. A polyimide (PI) film 
+is applied to form a “sandwich” packaging configuration, which securely bonds the sensing layer to the interdigital electrodes. Furthermore, the PI film 
+protects the sensor from humidity and environmental fluctuations, thereby enhancing its stability.
+Sensitivity is a key parameter of sensor performance. The sensitivity is calculated as follow: 
+S = d(ΔI/I0)
+d(Δp)
+(S1) 
+Where S is the sensitivity of the pressure sensor, defined as the slope of the electrical response curve, ΔI is the amount of change in the output signal of 
+the pressure sensor, I0 is the initial value of the current of the pressure sensor in the absence of external pressure, which is generally determined by the 
+preparation process and the material, and Δp is the amount of change in the external pressure at the time of the change in the output of ΔI from the 
+pressure sensor. From Eq. (S1), to improve the sensitivity, the change in the resistance of the pressure sensor under a certain pressure input needs to be 
+increased.
+The total resistance (Rt) of the sensor consists of the interdigital electrode resistance (Rm), the microstructure sensing layer resistance (Rh) and the 
+contact resistance (Rc) constituting the total, as shown in equation (S2): 
+Rt = Rm + Rh + Rc
+(S2) 
+The contact resistance (Rc) can be expressed as: 
+Rc =
+1
+1
+Rc1 +
+1
+Rc2 + … + 1
+Rcx
+(S3) 
+The total contact resistance (Rc) between the interdigital electrodes and the pyramid-shaped sensing layer is calculated as the sum of the contact 
+resistances at each contact point (Rcx), where x denotes the total number of contact points. The corresponding equivalent circuit model is illustrated in 
+Fig. A7a. The sensing mechanism of the pyramid microstructure is shown in Fig. A7b. Upon the application of external pressure, the pyramid 
+structures gradually deform, leading to an increase in the area between the sensing layer and the electrode surface. This change effectively reduces the 
+overall contact resistance and enhances the sensor’s pressure sensitivity. Additionally, the interdigital electrodes are made of highly conductive metal, 
+resulting in negligible internal resistance (Rm). Consequently, the total resistance (Rt) decreases with increasing applied pressure, following the 
+deformation of the pyramid microstructures.
+Fig. A6. Structural design of piezoresistive sensor.
+Fig. A7. Sensitivity mechanism of pressure sensor. (a) Equivalent circuit model of the sensing layer. (b) Sensitization mechanisms of the pyramid microstruc­
+ture sensor.
+Appendix A. Supplementary data
+Supplementary data to this article can be found online at https://doi.org/10.1016/j.ijmachtools.2025.104310.
+R. Chen et al.                                                                                                                                                                                                                                    
+International Journal of Machine Tools and Manufacture 210 (2025) 104310 
+27 
+
+
+Data availability
+Data will be made available on request.
+References
+[1] H. Getu, J. Spelt, M. Papini, Thermal analysis of cryogenically assisted abrasive jet 
+micromachining of PDMS, Int. J. Mach. Tool Manufact. 51 (2011) 721–730.
+[2] J.C. McDonald, G.M. Whitesides, Poly (dimethylsiloxane) as a material for 
+fabricating microfluidic devices, Acc. Chem. Res. 35 (2002) 491–499.
+[3] F. He, X. You, W. Wang, T. Bai, G. Xue, M. Ye, Recent progress in flexible 
+microstructural pressure sensors toward human-machine interaction and 
+healthcare applications, Small Methods 5 (2021) 2001041.
+[4] L. Heepe, S.N. Gorb, Biologically inspired mushroom-shaped adhesive 
+microstructures, Annu. Rev. Mater. Res. 44 (2014) 173–203.
+[5] E. Berthier, E.W. Young, D. Beebe, Engineers are from PDMS-land, biologists are 
+from polystyrenia, Lab Chip 12 (2012) 1224–1237.
+[6] Y. Zhang, J. Yang, X. Hou, G. Li, L. Wang, N. Bai, M. Cai, L. Zhao, Y. Wang, 
+J. Zhang, Highly stable flexible pressure sensors with a quasi-homogeneous 
+composition and interlinked interfaces, Nat. Commun. 13 (2022) 1317.
+[7] Y. Zhang, D. Wu, Y. Zhang, Y. Bian, C. Wang, J. Li, J. Chu, Y. Hu, Femtosecond 
+laser direct writing of functional stimulus-responsive structures and applications, 
+Int. J. Extrem. Manuf. 5 (2023) 042012.
+[8] J. Li, H. Jia, J. Zhou, X. Huang, L. Xu, S. Jia, Z. Gao, K. Yao, D. Li, B. Zhang, X. Ma, 
+X. Yu, Thin, soft, wearable system for continuous wireless monitoring of artery 
+blood pressure, Nat. Commun. 14 (2023) 5009.
+[9] D.J. Guckenberger, T.E. De Groot, A.M. Wan, D.J. Beebe, E.W. Young, 
+Micromilling: a method for ultra-rapid prototyping of plastic microfluidic devices, 
+Lab Chip 15 (2015) 2364–2378.
+[10] S.H. Kim, D.B. Asay, M.T. Dugger, Nanotribology and MEMS, Nano Today 2 (2007) 
+22–29.
+[11] Y. Xia, G.M. Whitesides, Soft lithography, Angew. Chem. Int. Ed. 37 (1998) 
+550–575.
+[12] N. Bhattacharjee, A. Urrios, S. Kang, A. Folch, The upcoming 3D-printing 
+revolution in microfluidics, Lab Chip 16 (2016) 1720–1742.
+[13] M. Dong, Y. Han, X.P. Hao, H.C. Yu, J. Yin, M. Du, Q. Zheng, Z.L. Wu, Digital light 
+processing 3D printing of tough supramolecular hydrogels with sophisticated 
+architectures as impact-absorption elements, Adv. Mater. 34 (2022) 2204333.
+[14] M. Pawlicki, H.A. Collins, R.G. Denning, H.L. Anderson, Two-photon absorption 
+and the design of two-photon dyes, Angew. Chem. Int. Ed. 48 (2009) 3244–3266.
+[15] Y. Zhang, Y. Jiao, C. Li, C. Chen, J. Li, Y. Hu, D. Wu, J. Chu, Bioinspired micro/ 
+nanostructured surfaces prepared by femtosecond laser direct writing for multi- 
+functional applications, Int. J. Extrem. Manuf. 2 (2020) 032002.
+[16] D. Axinte, J. Billingham, A. Bilbao Guillerna, New models for energy beam 
+machining enable accurate generation of free forms, Sci. Adv. 3 (2017) e1701201.
+[17] G. Cadot, D.A. Axinte, J. Billingham, Continuous trench, pulsed laser ablation for 
+micro-machining applications, Int. J. Mach. Tool Manufact. 107 (2016) 8–20.
+[18] R. Yang, A. Dutta, B. Li, N. Tiwari, W. Zhang, Z. Niu, Y. Gao, D. Erdely, X. Xin, T. Li, 
+Iontronic pressure sensor with high sensitivity over ultra-broad linear range 
+enabled by laser-induced gradient micro-pyramids, Nat. Commun. 14 (2023) 2907.
+[19] G. Chang, Y. Tu, The threshold intensity measurement in the femtosecond laser 
+ablation by defocusing, Opt Laser. Eng. 50 (2012) 767–771.
+[20] Y. Toba, Y. Hanada, 3D microfabrication by applying the laser-induced bubble 
+method to the thermoset polymer PDMS using a conventional nanosecond laser, 
+Opt. Lett. 47 (2022) 6436–6439.
+[21] C. Florian, F. Caballero-Lucas, J. Fern´andez-Pradas, J. Morenza, P. Serra, Surface 
+ablation of transparent polymers with femtosecond laser pulses, Appl. Surf. Sci. 
+302 (2014) 226–230.
+[22] P. Butler-Smith, D. Axinte, M. Daine, Preferentially oriented diamond micro-arrays: 
+a laser patterning technique and preliminary evaluation of their cutting forces and 
+wear characteristics, Int. J. Mach. Tool Manufact. 49 (2009) 1175–1184.
+[23] A. Bogatyrev, Z. Liao, D. Axinte, A. Norton, Femtosecond laser ablation of zirconia- 
+based ceramic materials: from ablation mechanism to modelling of large-scale 
+processing, J. Mater. Process. Technol. 335 (2025) 118668.
+[24] X. Zhao, J.J. Nivas, B. Zhao, W. Du, Y. Lun, S. Amoruso, X. Wang, Ultrasensitive 
+SERS platform of Si ripples substrates fabricated by femtosecond laser, Opt. Laser 
+Technol. 183 (2025) 112331.
+[25] X. Du, C. Florian, C.B. Arnold, Single-lens dynamic z-scanning for simultaneous in 
+situ position detection and laser processing focus control, Light Sci. Appl. 12 
+(2023) 274.
+[26] H.-C. Cheng, S. Xu, Y. Liu, S. Levi, S.-T. Wu, Adaptive mechanical-wetting lens 
+actuated by ferrofluids, Opt. Commun. 284 (2011) 2118–2121.
+[27] L.P. Hoang, P.T. Nguyen, T.K. Cuc Nguyen, T.T. Vu, X.B. Cao, Study on real-time z- 
+scanning of multiple-pulse laser ablation of metal applied in roll-printed 
+electronics, Opt. Mater. Express 11 (2021) 509–523.
+[28] L. Yu, K. Yang, Z. Zhang, Galvanometer driven optical system for laser dynamic 
+focusing, Opt. Express 31 (2022) 673–683.
+[29] L. Yao, K. Xu, L. Huang, P. Huang, Z. Li, P. Wang, S. Xu, Dynamic multi-focus laser 
+sculpting of freeform 3D glass microstructures, Opt Laser. Eng. 180 (2024) 108278.
+[30] M.B. Kumar, D. Kang, J. Jung, H. Park, J. Hahn, M. Choi, J.-H. Bae, H. Kim, J. Park, 
+Compact vari-focal augmented reality display based on ultrathin, polarization- 
+insensitive, and adaptive liquid crystal lens, Opt Laser. Eng. 128 (2020) 106006.
+[31] M.B. Kumar, D. Kang, M.A. Adeshina, S. Kim, T. Kim, J. Park, Electro-optic 
+diffractive multifocal lens with electrically reconfigurable multifocal planes, Opt 
+Laser. Eng. 139 (2021) 106459.
+[32] W.-C. Kim, W.-Y. Cho, N.-C. Park, J. Lim, Analysis of the diffracted field near the 
+focal region due to the birefringence of the field flattening lens of the laser 
+scanning system, Polym. Test. 66 (2018) 221–227.
+[33] K. Iizuka, Engineering Optics, Springer, 2013.
+[34] D.F. Schaack, Variation of magnification with focus, Appl. Opt. 41 (2002) 
+1282–1290.
+[35] G.S. He, L.-S. Tan, Q. Zheng, P.N. Prasad, Multiphoton absorbing materials: 
+molecular designs, characterizations, and applications, Chem. Rev. 108 (2008) 
+1245–1330.
+[36] P. Zhang, L. Chen, J. Chen, Y. Tu, Material removal effect of microchannel 
+processing by femtosecond laser, Opt Laser. Eng. 98 (2017) 69–75.
+[37] M.V. Shugaev, M. He, Y. Levy, A. Mazzi, A. Miotello, N.M. Bulgakova, L.V. Zhigilei, 
+Laser-induced thermal processes: heat transfer, generation of stresses, melting and 
+solidification, vaporization, and phase explosion, in: Handbook of Laser Micro-and 
+Nano-Engineering, Springer, 2021, pp. 83–163.
+[38] J. Xu, G. Zhang, Y. Rong, Y. Huang, Study on the ultraviolet nanosecond laser 
+ablation and heat-affected zone of polydimethylsiloxane films based on 
+comprehensive surface analysis, Opt. Laser Technol. 167 (2023) 109769.
+[39] G. Camino, S. Lomakin, M. Lageard, Thermal polydimethylsiloxane degradation. 
+Part 2. The degradation mechanisms, Polymer 43 (2002) 2011–2015.
+[40] M. Psarski, J. Marczak, J. Grobelny, G. Celichowski, Superhydrophobic surface by 
+replication of laser micromachined pattern in epoxy/alumina nanoparticle 
+composite, J. Nanomater. 2014 (2014) 547895.
+[41] D. Qi, K. Zhang, G. Tian, B. Jiang, Y. Huang, Stretchable electronics based on PDMS 
+substrates, Adv. Mater. 33 (2021) 2003155.
+[42] M.B. Kant, S.D. Shinde, D. Bodas, K. Patil, V. Sathe, K. Adhi, S. Gosavi, Surface 
+studies on benzophenone doped PDMS microstructures fabricated using KrF 
+excimer laser direct write lithography, Appl. Surf. Sci. 314 (2014) 292–300.
+[43] Y. Lim, P. Boukany, D. Farson, L.J.J.o.M. Lee, Microengineering, direct-write 
+femtosecond laser ablation and DNA combing and imprinting for fabrication of a 
+micro/nanofluidic device on an ethylene glycol dimethacrylate polymer, 
+J. Micromech. Microeng. 21 (2010) 015012.
+[44] H. Han, H. Liu, J. Huang, P. Qiu, J. Li, B. Zhang, S. Xu, Atomic-level insight into 
+sequential evolution of nanocomposite carbon structures in femtosecond laser 
+processing of diamond, Int. J. Mach. Tool Manufact. (2025) 104247.
+[45] A. Lisfi, M. Guyot, R. Krishnan, V. Cagan, Measurement and calculation of the 
+Fe2O3 ablation depth, Appl. Surf. Sci. 96 (1996) 66–70.
+[46] A. ˇZemaitis, M. Gaidys, M. Brikas, P. Geˇcys, G. Raˇciukaitis, M. Gedvilas, Advanced 
+laser scanning for highly-efficient ablation and ultrafast surface structuring: 
+experiment and model, Sci. Rep. 8 (2018) 1–14.
+[47] G. Li, R. Fan, Y. Long, Z. Zhou, S. Ding, Material removal mechanism and surface 
+quality in low-fluence femtosecond laser ablation of polycrystalline diamonds, 
+J. Mater. Process. Technol. (2025) 118731.
+[48] S. Mishra, V. Yadava, Laser beam micromachining (LBMM)-a review, Opt Laser. 
+Eng. 73 (2015) 89–122.
+[49] A.F. Obilor, M. Pacella, A. Wilson, V.V. Silberschmidt, Micro-texturing of polymer 
+surfaces using lasers: a review, Int. J. Adv. Manuf. Technol. 120 (2022) 103–135.
+[50] Y. Dong, P. Molian, Femtosecond pulsed laser ablation of 3CSiC thin film on 
+silicon, Appl. Phys. A 77 (2003) 839–846.
+[51] H. Liang, S. Zhao, H. Wang, Z. Zhang, Z. Dong, Y. Zhou, X. Lin, The ablation 
+threshold and incubation effect in picosecond laser surface treatment of CFRP, Opt. 
+Laser Technol. 177 (2024) 111055.
+[52] X. Zhang, J. Qiu, X. Li, J. Zhao, L. Liu, Complex refractive indices measurements of 
+polymers in visible and near-infrared bands, Appl. Opt. 59 (2020) 2337–2344.
+[53] T. Zhou, Z. Fang, W. Perrie, Y. Fei, S. Edwardson, G. Dearden, Experimental and 
+numerical modelling of picosecond laser ablation of thin aluminium polyethylene 
+terephthalate (PET) films, Opt. Laser Technol. 151 (2022) 107976.
+[54] D. Cha, D. Axinte, J. Billingham, Geometrical modelling of pulsed laser ablation of 
+high performance metallic alloys, Int. J. Mach. Tool Manufact. 141 (2019) 78–88.
+R. Chen et al.                                                                                                                                                                                                                                    
+International Journal of Machine Tools and Manufacture 210 (2025) 104310 
+28 

@@ -1,0 +1,25 @@
+{
+  "url": "https://www.sciencedirect.com/science/article/pii/S0030399224010661",
+  "category": "02_反射式与三振镜调焦",
+  "origins": [
+    "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+    "用户粘贴_激光动态聚焦深度调研.txt",
+    "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md",
+    "苏州艾思兰_动态聚焦资料\\来源清单.csv"
+  ],
+  "context": "\n- 原始入口：https://www.sciencedirect.com/science/article/pii/S0030399224010661",
+  "id": "R021",
+  "files": [],
+  "attempts": [
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0030399224010661",
+      "http": 403,
+      "final_url": "https://www.sciencedirect.com/science/article/pii/S0030399224010661",
+      "error": "403 Client Error: Forbidden for url: https://www.sciencedirect.com/science/article/pii/S0030399224010661"
+    }
+  ],
+  "status": "全文已由用户补齐 → U004",
+  "title": "Optical design and analysis of a high-speed triple galvanometer laser 3D scanning system_2025",
+  "resolved_by": "U004",
+  "resolution_note": "此前网络获取未完成；现已由用户提供正式版全文补齐。保留历史请求记录。"
+}

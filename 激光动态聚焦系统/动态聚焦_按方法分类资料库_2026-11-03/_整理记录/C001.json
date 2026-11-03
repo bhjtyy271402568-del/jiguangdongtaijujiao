@@ -1,0 +1,20 @@
+{
+  "id": "C001",
+  "category": "10_执行器_导轨与编码器",
+  "url": "https://www.ikont.com/catalogs/linear-motion-rolling-guide-series/red/1561E_CrossRollerWay.pdf",
+  "context": "IKO_CRWG_防保持架蠕变交叉滚柱导轨",
+  "title": "IKO_CRWG_防保持架蠕变交叉滚柱导轨",
+  "origins": [
+    "原文器件型号补充检索"
+  ],
+  "files": [],
+  "attempts": [
+    {
+      "url": "https://www.ikont.com/catalogs/linear-motion-rolling-guide-series/red/1561E_CrossRollerWay.pdf",
+      "http": 404,
+      "final_url": "https://ikont.com/catalogs/linear-motion-rolling-guide-series/red/1561E_CrossRollerWay.pdf",
+      "error": "404 Client Error: Not Found for url: https://ikont.com/catalogs/linear-motion-rolling-guide-series/red/1561E_CrossRollerWay.pdf"
+    }
+  ],
+  "status": "未获取"
+}

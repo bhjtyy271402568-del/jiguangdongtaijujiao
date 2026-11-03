@@ -1,0 +1,1129 @@
+Article https://doi.org/10.1038/s41467-024-47009-w
+Large-volume focus control at 10 MHz
+refresh rate via fast line-scanning amplitude-
+encoded scattering-assisted holography
+Atsushi Shibukawa1,R y o t aH i g u c h i1, Gookho Song 2, Hideharu Mikami 1 ,
+Yuki Sudo 3 & Mooseok Jang 2
+The capability of focus control has been central to optical technologies that
+require both high temporal and spatial resolutions. However, existing varifocal
+lens schemes are commonly limited to the response time on the microsecond
+timescale and share the fundamental trade-off between the response time and
+the tuning power. Here, we propose an ultrafast holographic focusing method
+enabled by translating the speed of a fast 1D beam scanner into the speed of
+the complex wavefront modulation of a relatively slow 2D spatial light mod-
+ulator. Using a pair of a digital micromirror device and a resonant scanner, we
+demonstrate an unprecedented refresh rate of focus control of 31 MHz, which
+is more than 1,000 times faster than the switching rate of a digital micromirror
+device. We also show that multiple micrometer-sized focal spots can be
+independently addressed in a range of over 1 MHz within a large volume of
+5 mm × 5 mm × 5.5 mm, validating the superior spatiotemporal characteristics
+of the proposed technique – high temporal and spatial precision, high tuning
+power, and random accessibility in a three-dimensional space. The demon-
+strated scheme offers a new route towards three-dimensional light manip-
+ulation in the 100 MHz regime.
+High-speed and precision optical focus control has long
+served as a basis to construct optical systems with high temporal and
+spatial resolutions. 3D laser-scanning microscopy 1,2 and laser
+micromachining3 are prominent examples where a high spatio-
+temporal resolution plays a critical role when observing fast sub-
+cellular dynamics and achieving high-throughput material processing.
+Traditionally, 3D focus control has been implemented with a 2D beam
+scanner (e.g., galvanometer scanner1,2, acousto-optic deﬂector (AOD)4)
+and an objective lens driven by a piezo actuator1,2,5.I nt h i st r a d i t i o n a l
+scheme, the speed of axial focus control is typically much slower
+(typically < 1 kHz) than that of transversal control (typically ~1 MHz), as
+it involves precise mechanical positioning of bulky focusing optics.
+Many varifocal lens schemes have been proposed to overcome
+this speed discrepancy 6. Their working principles are broadly
+categorized into mechanical, electro-optic (EO), and acousto-optic
+(AO) modulation. In the mechanical type, the shapes of varifocal ele-
+ments are directly modulated through electrostatic 7,8 or mechanical
+forces9– 11; however, due to the necessity of precise physical position-
+ing, the operation speed is typically limited to 10 kHz. In contrast, EO12-
+and AO 13,14-based approaches directly modulate the refractive index
+proﬁle of a ﬁxed medium via electric or acoustic ﬁeld, achieving con-
+trol speeds of up to 1 MHz. However, considering the fundamental
+limiting factors, i.e., the ﬁnite capacitance of EO ceramics and the
+speed of sound in AO materials, realizing operation speeds beyond
+1 MHz is highly challenging. Moreover, the axial scan power (i.e., tuning
+power) is restricted to ~10 m −1 because the materials ’ responses to
+applied ﬁelds, characterized as the Kerr coef ﬁcient or piezo-optic
+coefﬁcient, are often very small6, thereby limiting the axial scan range
+Received: 30 May 2023
+Accepted: 11 March 2024
+Check for updates
+1Research Institute for Electronic Science, Hokkaido University, Sapporo 001-0020, Japan.2Department of Bio and Brain Engineering, Korea Advanced
+Institute of Science and Technology, Daejeon 34141, Republic of Korea.3Faculty of Medicine, Dentistry and Pharmaceutical Sciences, Okayama University,
+Okayama 700-8530, Japan. e-mail: hmikami@es.hokudai.ac.jp; sudo@okayama-u.ac.jp; mooseok@kaist.ac.kr
+Nature Communications|         (2024) 15:2926 1
+1234567890():,;
+1234567890():,;
+
+in 3D multiphoton microscopy 13,15 and laser micromachining 14.F u r -
+thermore, the effects of the speed-limiting factors become more
+pronounced with the varifocal elements of larger apertures, resulting
+in the fundamental trade-off between the response time and the tun-
+ing power.
+Another route towards active focus control is the use of pro-
+grammable spatial light modulators (SLM), (e.g., liquid crystal on sili-
+con; LCoS 16,17, digital micromirror device; DMD 18,19,a n dd e f o r m a b l e
+mirror; DM 20). The ability to arbitrarily recon ﬁgure a complex 2D
+wavefront allows not only transverse control but also axial control in a
+random-access fashion, unlike conventional varifocal elements. The
+random-access capability allows for the selective illumination of
+desired points in a 3D space, leading to, for example, reduced pho-
+todamage to a given specimen in biological microscopy15,21 and high-
+throughput laser micromachining 22. Unfortunately, despite these
+capabilities, the tuning power of SLMs is even worse to less than 10 m−1
+due to their limited spatial degrees of freedom (DOF) (i.e., the number
+of independently controllable pixels). We note that, recently, the
+method of utilizing multiple AODs modulated with chirped sinusoidal
+signals13,15,21 has also been widely used in fast 3D random-access scan-
+ning, but its tuning power is limited to the similar value as for
+the SLMs6.
+Interestingly, in conjunction with a scattering medium, SLM-
+based approaches have been shown to provide superior spatial char-
+acteristics— high-NA focusing and an extremely broad 3D scan range—
+regardless of the magnitude of their intrinsic spatial DOF23,24.H o w e v e r ,
+the focus control speed is inherently limited by their temporal DOF
+(i.e., the refresh rate) of conventional SLMs (e.g., LCoS and DMD),
+which is typically orders of magnitude lower (i.e., ranging from 10 Hz
+to 20 kHz) compared to those of EO- and AO-based varifocal lenses.
+Only recently has the use of a grating light valve (GLV) enabled 1D
+wavefront modulation and holographic optical focusing at 350 kHz25.
+Some novel designs for EO-based SLMs have shown response times
+shorter than 1 μs26– 28, albeit with a handful of spatial DOFs which is
+insufﬁcient for 3D focus control.
+In this work, we propose a novel ultrafast wavefront modulation
+method that effectively transforms a 2D-SLM into an ultrafast 1D-SLM
+via line-beam scanning. Through the process of reallocating the spatial
+DOF to the temporal DOF, our method ampli ﬁes the speed of wave-
+front modulation by the factor of upto a few thousands, surpassing the
+current speed limit of 1D-SLMs (e.g., GLV) by two orders of magnitude.
+Using a scattering medium as a holographic focusing element, we
+further develop a 3D focus control technique, termed fast line-
+scanning amplitude-encoded scattering-assisted holographic (FLASH)
+focusing, and achieve record-high speeds of up to 31 MHz for 3D focus
+control. Using the FLASH focusing technique, we also demonstrate
+random-access control of micrometer-sized focal spots over an axial
+range of 0.01– 10 mm (i.e., tuning power of around 100,000 m−1)a n da
+transverse range of 5 mm × 5 mm at refresh rates higher than 10 MHz,
+opening up new opportunities for optical interrogation with extremely
+high spatial complexity and fast dynamics.
+Principle
+Figure 1 represents the principle of the proposed method. First, to
+achieve ultrafast wavefront modulation, a resonant scanner (RS) per-
+forms transverse scanning of a line beam on a 2D-DMD through a
+cylindrical lens. During the oscillatory scanning, the amplitude proﬁle
+of the line beam is sequentially modulated by independent binary
+patterns on each DMD region illuminated by the line beam. The
+amplitude-encoded line beam then reverses the incident path and is
+expanded back into a circular beam with a striped pattern such that its
+projected area isﬁxed regardless of the line beam position on the DMD
+(i.e., scanning position of the RS). The RS and the DMD can be replaced
+by any 1D beam scanner and 2D-SLM to implement the proposed high-
+speed wavefront modulation technique.
+There are four important parameters that determine the overall
+performance of our wavefront modulation technique: the line-scan
+frequency in bidirectional scanning of the beam scanner ( fscan), the
+number of pixels on the SLM ( N×M ;w h e r eN and M denote the
+numbers of rows and columns along the major and minor axes of the
+line beam, respectively), and the number of columns illuminated with a
+single line beam (Mcol). The wavefront of the line beam is encoded by
+the illuminated columns on the SLM with the spatial DOF, DOFspatial,o f
+N×M col. For a single line-scan over the SLM which is performed within
+1=f scan, the line beam scans across M/Mcol independent wavefront-
+modulating columns, resulting in a refresh rate of the wavefront
+modulation of
+f mod = f scan × κ, ð1Þ
+where κ = M
+Mcol
+is the speed gain.
+In general, the spatiotemporal DOFs (DOF spatiotemporal)o fw a v e -
+front modulation techniques can be dictated by the product of the
+number of spatially independent wavefronts (DOF spatial)a n dt h e
+number of independent time points within the unit time (DOFtemporal)
+that can be addressed with the SLM,
+DOFspatiotemporal=D O Fspatial ×D O Ftemporal: ð2Þ
+Practically, DOFspatial is identical to the number of independently
+controllable pixels on the SLM and DOF temporal is identical to the
+intrinsic refresh rate of the SLM,fSLM, or the number of independently
+controllable frequencies per unit time using the SLM. In this regard,
+with an assumption of f scan ≥ f SLM, our method provides a simple but
+powerful way to implement the gain in DOFtemporal (i.e., speed gain,κ)
+at the cost of DOF spatial under the trade-off relationship,
+DOFspatial× κ = N×M , the intrinsic DOFspatial of the SLM. For example, if
+we set Mcol to 1, the speed gain κ is maximized to M while DOFspatial is
+minimized toN. In this setting, assuming a standard DMD withN and M
+Fig. 1 | Schematic of the FLASH focusing.A resonant scanner and a cylindrical lens
+achieve fast line beam scanning across a digital micromirror device (DMD). As the
+line beam moves across the DMD columns, its amplitude proﬁle is sequentially
+modulated with different pre-calibrated binary patterns on the DMD. The
+amplitude-encoded line beam is then expanded back into a 2D striped beam and
+projected onto aﬁxed area on a scattering medium regardless of the motion of the
+resonant scanner. Finally, as the line beam oscillates on the DMD, the time-varying
+amplitude-modulated beam is holographically focused onto different 3D positions
+beyond the scattering medium in a random-access manner.
+Article https://doi.org/10.1038/s41467-024-47009-w
+Nature Communications|         (2024) 15:2926 2
+
+over 1,000 and a RS with fscan equal to fSLM (typically over 10 kHz), we
+can expect a refresh rate (i.e., DOF temporal = κ × f SLM)o fo v e r1 0 M H z
+(i.e., κ > 1,000) with DOFspatial of ~1000. We note that various techni-
+ques have been previously developed to extend a view angle of a 3D
+holographic display system based on the similar components, such as
+2D SLMs, cylindrical lens, and actuators29,30. In contrary to the FLASH
+technique, those existing approaches have been proposed to increase
+DOFspatial at the expense of DOFtemporal.
+Another important feature of the proposed method is its cap-
+ability toﬂexibly reallocate DOFspatiotemporalby tuningMcol to address a
+wide range of DOF temporal and DOFspatial. Ideally, standard LCoS and
+DMD provide the DOF spatiotemporal of ~10 8 and ~10 10 from Eq. ( 2)
+respectively. Therefore, one may purposefully set Mcol or fscan to
+address a spatiotemporal domain within the range where
+DOFtemporal>1 06 and DOFspatial>1 02, which cannot be easily addressed
+with existing wavefront modulation techniques (see Supplementary
+Fig. 1 for the comparison).
+The FLASH focusing technique is implemented using the pro-
+posed wavefront modulation method for random-access holographic
+focus control through a scattering medium. To create scattering-
+assisted focal spots, the wavefront solutions can be pre-calibrated
+using previously developed wavefront shaping techniques that are
+based on iterative methods 31,32, optical phase conjugation 33,o rt h e
+transmission matrix (TM) formalism34,35.A se v e r yMcol columns of the
+SLM can be optimized for different focal positions (i.e.,M
+Mcol
+focal spots
+can be addressed within the single line-scan), the rate of focus control,
+fspot, is equal to that of wavefront modulation fmod in Eq. (1). As holo-
+graphic focusing involves a process of constructive interference of
+many speckleﬁelds contributed by different spatial input modes36,t h e
+focal contrast η, quantiﬁed as the peak-to-background intensity ratio,
+is proportional to DOFspatial, as follows:
+η = β ×D O Fspatial, ð3Þ
+where β is a focusing ﬁdelity factor that depends on the type of
+wavefront modulation (e.g.,π/4 for phase-only36 and 1/(2π) for binary-
+amplitude modulation37). Therefore, similar to the trade-off in our
+wavefront modulation scheme, the focal contrast and the refresh rate
+of focus control are in a trade-off relationship.
+Results
+Validation of the FLASH focusing technique
+To implement the setup for fast wavefront shaping, we used RS and
+DMD withfscan and fSLM both at 24 kHz. A line beam was projected onto
+the DMD through a 4× objective lens. A volume holographic grating
+was placed in front of the DMD to construct a retrore ﬂective conﬁg-
+uration in which the tilt angle of each DMD micromirror is offset by the
+ﬁrst-order diffraction angle of an incident beam (see Methods and
+Supplementary Fig. 2a for details about the experimental setup). The
+active numbers of columns and rows on the DMD,M and N,w e r es e tt o
+340 and 352, respectively, considering the ﬁeld of view (FOV) of the
+objective lens (see Supplementary Text 1 for the optimal conﬁguration
+of the FLASH system to increaseM and N and Supplementary Fig. 3 for
+line beam width over the active DMD columns). We projected the
+amplitude-encoded striped beam on an opal diffusing glass with the
+area of 4 mm × 4 mm. We chose opal glass with a thickness of 0.45 mm
+among other scattering media owing to its isotropic scattering proﬁle
+(see Supplementary Fig. 4 for the angular scattering pro ﬁle), high
+stability (see Supplementary Fig. 5 for the temporal decorrelation
+proﬁle), and high transmittance (~30 %).
+To validate that line beam scanning effectively converts the spa-
+tial array of columns on the 2D-DMD into a temporal array of 1D binary
+patterns, we characterized the correlation matrix between the striped
+intensity patterns on the projection plane while illuminating different
+columns with the same periodic binary pattern (Fig.2a, b). A 1D binary
+pattern on the DMD was shown to be projected into a high-deﬁnition
+stripe pattern and the correlation values for every column pair were
+close to 1, conﬁrming that the optical intensity response from everyM
+column was ﬁxed regardless of the line beam position (i.e., the RS
+scanning position).
+Although an illumination pattern was highly asymmetric, the tar-
+get plane behind the scattering medium can be addressed with a
+spatially isotropic resolving power. In our conﬁguration, each on-state
+pixel on a column is projected as a single thin stripe. This thin stripe
+caused a spatially elongated speckle ﬁeld due to the short-range
+angular correlation of the medium (Fig.2c, d; see Supplementary Fig. 6
+for the short-range correlation proﬁle). However, when multiple pixels
+were set in the on-state, interference between the elongated speckle
+ﬁelds resulted in a circularly symmetric autocorrelation function
+(Fig. 2e, f), serving as a basis to address the target plane
+holographically.
+We then validated the focusing capability of the FLASH techni-
+que based on the procedure described in Fig. 2g. First, we measured
+the input-output response of the medium by displaying many dif-
+ferent random binary patterns, Sin = fs1, ... ,sNin
+g on a single DMD
+column, and measuring the complex amplitude of the speckle pat-
+terns generated on the target plane, Uout = fu1, ... ,uNin
+g using phase-
+shifting digital holography with a reference beam. Next, with basis
+transformation using the pseudo-inverse matrix of Sin,Uout × S +
+in ,w e
+constructed the TM K of the position basis from which a binarized
+amplitude pattern of the phase-conjugated ﬁeld for a desired focus
+is computed (i.e., turning on only elements whose phase is between
+0 and π in a desired column of K*) and displayed on a DMD column19.
+Figure 2h shows a focal spot reconstructed on the target plane of
+z = 2 mm from the medium. The focal spot presented a circular shape
+with a full-width at half-maximum (FWHM) of around 400 nm, which
+corresponds to a numerical aperture (NA) of 0.68. The measured
+focal contrast η of 40 was consistent with the expected value of ~56
+from Eq. ( 3) (i.e., N=ð2πÞ for Mcol = 1). Lastly, with correction of the
+column-wise wavefront distortion, the focal contrast was shown to
+be preserved regardless of the line beam position, implying that
+every DMD column is treated identically in terms of the intensity and
+phase response for complex wavefront shaping (see Methods and
+Supplementary Fig. 7 for details).
+Spatial and temporal performances
+We experimentally tested the spatial performance of the FLASH
+focusing technique in terms of the spot size and addressable 3D
+volume (Fig.3a). When the spot was transversely scanned fromx =0t o
+2.5 mm at aﬁxed target plane ofz = 1.5 mm, the FWHM spot sizes of the
+reconstructed foci increased from 410 nm to 560 nm, corresponding
+to NA values ranging from 0.66 to 0.48 (Fig. 3b). When the spot was
+axially scanned from z =0 . 0 1 t o z = 10 mm along the optical axis,
+FLASH focusing provided effective NAs of 0.8– 0.21, corresponding to
+FWHM spot sizes of 340– 1290 nm, respectively (Fig.3c). Note that we
+repeatedly measured TMs to address focal spots at different axial
+positions (see Supplementary Text 2 for available approaches for 3D
+focal scanning without multiple TM measurements).
+This extremely large tuning range corresponds to a tuning power
+of around 100,000 m −1, more than two orders of magnitude higher
+than those of conventional varifocal lenses. For 3D volumetric focusing
+capability, an effective NA larger than 0.45 was maintained over the 3D
+cylindrical space with a diameter of 5 mm and height of 2 mm (Sup-
+plementary Fig. 8), far exceeding the lateral FOV of ~1 mm and the
+depth of ﬁeld for a commercial objective lens with 0.45 NA. This vali-
+dates the feasibility of the FLASH focusing technique for use in appli-
+cation areas such as 3D laser-scanning microscopy and laser
+micromachining, where a large 3D scan range is critical.
+Next, we experimentally tested the temporal performance of the
+proposed FLASH focusing technique. In our con ﬁguration with
+Article https://doi.org/10.1038/s41467-024-47009-w
+Nature Communications|         (2024) 15:2926 3
+
+f scan =2 4k H z ,M =3 4 0 ,a n dMcol = 1, the refresh ratefmod is expected to
+be around 8 MHz based on Eq. ( 1), ideally for a constant scanning
+speed of the line beam on the DMD plane, and the line-scan range
+exactly matched the active DMD area ofM = 340. However, as the DMD
+requires a ﬁnite time of around 26μs to update the 2D binary patterns
+on the active area, we set the scanning angle range of the RS to be
+~2.7 times larger than the ideal range to ensure necessary time for the
+continuous updating of the binary patterns on the DMD with every
+directional change of line beam scanning. Also, considering the sinu-
+soidal proﬁle of the RS ’s scan speed, the maximum local refresh rate
+( i . e . ,t h ei n v e r s eo ft h et i m er e q u i r e dt os c a nt h ep i x e lp i t c ho f1 3 . 7μm)
+is expected to be around 30 MHz with a maximum scanning speed of
+the line beam of 474 m/s. With these settings, at the expense of an
+improvement in the local refresh rate and continuous modulation
+capability, the duty cycleD,d eﬁned as the percentage of the period for
+active wavefront modulation relative to the total period of the single
+line-scan, expectedly decreases to ~24%. However, it should be noted
+that DOF temporal is given as a ﬁxed value of ~8 MHz from Eq. ( 1)
+regardless of the value of the duty cycle or the angle scan range of the
+RS, considering that the fundamental DOFtemporalcan be determined as
+the product of the duty cycle and the averaged local refresh rate
+during active modulation.
+Figure 3e shows the on/off modulation signal acquired with a
+photomultiplier tube (PMT) during line beam scanning over DMD
+columns alternatively encoding optimized and random binary patterns
+(Fig. 3d). The contrast of on/off signals lower than the theoretical value
+from Eq. (3) and the considerableﬂuctuation of the peak intensity (i.e.,
+the signal level at the‘on’state) were observed, which can be attributed
+to a large collection area (i.e., pinhole area) used in conjunction with
+the PMT (see Methods for the detailed experimental setup) and the
+intrinsic statistical ﬂuctuation in associated TM (see Supplementary
+Text 3 and Supplementary Fig. 9 for the detailed description and the
+simulation result for the intrinsic statistical ﬂuctuation). It should be
+noted that, with the collection area larger than the diffraction-limited
+spot, many background modes (i.e., speckle granules) were collected
+together with the focal spot and therefore the measured signal for PMT
+does not re ﬂect the actual spot contrast. From the sinusoidal ﬁtting
+shown in Fig. 3f, the on/off switching time for the focal spot was
+measured to be 32.5 ns at the central columns, corresponding to a
+refresh rate of 31 MHz. For the entire period of active modulation in
+Sin={s1, ..., sNin} Uout={u1, ..., uNin}K KK sspot
+espotuspot
+sspot uspot
+Uout×Sin
+a
+b
+Intensity
+10
+Correlation
+10 . 5
+η = 40
+FWHM = 400nm
+c
+d
+eh
+f
+g
+Unknown TM Output TMInput TM OutputInput
+Focusing
+K*
+=×
+Computer
+Scattering medium
+CameraReference beamOur fast SLM
+Binarized
+arg(espot)>0
+Conjugated
+transpose
+Basis
+conversion
+1
+1
+340Column #
+Column #
+340
+Display
++
+Fig. 2 | Validation of the FLASH focusing technique. a Intensity proﬁle of a 2D
+stripe beam on the projection plane located at the input surface of a scattering
+medium. The illuminated DMD column was modulated with a 1D binary pattern
+with eight-pixel period. Scale bar: 100μm. b Correlation matrix of intensity proﬁles
+between every column pair. The intensity proﬁle projected from each DMD column
+was separately recorded while the same binary pattern with two-pixel period was
+displayed on every DMD column. c, e Speckle intensity distributions on the target
+plane of z = 2 mm when the binary patterns shown in the insets are respectively
+displayed on the DMD. Scale bar: 1 μm. d, f 2D autocorrelation function of the
+speckle distribution in (c, e). Scale bar: 1 μm. g Schematic diagram of holographic
+focusing through a scattering medium based on the transmission matrix (TM)
+approach. Here,Nin, S +
+in and K* denote the number of input binary patterns for the
+TM measurement, the pseudo-inverse matrix ofSin and conjugated transpose of
+K,r e s p e c t i v e l y .h Focal spot reconstructed onz = 2 mm based on the measured TM
+of the medium.
+Article https://doi.org/10.1038/s41467-024-47009-w
+Nature Communications|         (2024) 15:2926 4
+
+Fig. 3e, the local refresh rate ranged from 25 to 31 MHz due to the
+sinusoidal proﬁle of the RS scan speed. This value of the refresh rate
+(or response time) testi ﬁes an improvement of at least one or two
+orders of magnitude over state-of-the-art varifocal elements 12,14 or
+wavefront shaping techniques for optical focusing25.M o r e o v e r ,w i t h
+the angle scan range purposefully set such that it exceeds the active
+DMD area, the binary patterns on the DMD could be synchronously
+refreshed during any directional change of line beam scanning.
+Accordingly, the number of independently addressable foci was not
+limited to the number of active columns M on the DMD (Supplemen-
+tary Fig. 10 and see Continuous Ultrafast Spatial Modulation in the
+Methods section).
+Control of spatial and temporal degrees of freedom
+We demonstrated the tunability of the FLASH focusing technique in
+setting the focal contrast and the refresh rate under the trade-off
+relationship in Eq. ( 2) by simply varying the number of illuminated
+columns, Mcol (see Methods for details). Figure4a– c present the focus
+control results with Mcol = 2a n d4 .A se x p e c t e df r o mE q s .(1)– (3), the
+focal contrast increased nearly proportionally to 64 and 140 while the
+local on/off refresh rate around the central column correspondingly
+decreased to 15.6 MHz and 7.6 MHz for Mcol = 2 and 4 as shown in
+Fig. 4d. The DOF spatiotemporal for different values of Mcol were experi-
+mentally characterized as the product of ηexp=β and f exp × D, repre-
+senting the experimental DOFspatial and DOFtemporal,r e s p e c t i v e l y .ηexp
+and fexp are the measured focal contrast and the averaged local refresh
+a
+bc
+df
+e
+‘Focusing’ ‘Random’
+ON/OFF modulation of focusing
+b1
+b2
+c1
+c2e
+x
+zy
+PD
+0 0.5 1 1.5 2 2.5
+x (mm)
+0.2
+0.3
+0.4
+0.5
+0.6FWHM (μm)
+02468 1 0
+z (mm)
+0
+0.4
+0.8
+1.2FWHM (μm)
+04 81 2 1 6
+Time (μs)
+0
+0.2
+0.4
+0.6
+0.8
+1
+Signal (a. u.)
+Signal
+Scanner velocity
+‘Active’‘Inactive’
+7.95 8 8.05
+164 165 166
+DMD column #
+0
+0.2
+0.4
+0.6
+0.8
+1
+Signal
+Fitting
+g
+tt
+DMD
+c1 c2b1 b2
+Fig. 3 | Spatial and temporal performances of the FLASH focusing technique.
+a Schematic of the production of focal spots over a large 3D space. A photo-
+multiplier tube (PMT) is used for recording ultrafast modulation of the focal spot.
+b Measured full-width at half-maximum (FWHM) of foci for differentx positions on
+ap l a n eo fz = 1.5 mm. b1-b2, Measured intensity proﬁles of foci at x = 0 and 2.5 mm.
+Scale bar: 1 μm. c Measured FWHM of foci for differentz planes at x =0m m . c1-c2,
+Measured intensity proﬁl e so ff o c ia tz = 1 and 5 mm. Scale bar: 1μm. d Schematic of
+periodic on/off focusing modulation. The line beam is scanned across the DMD,
+where ‘Focusing’pattern and ‘Random’pattern are alternatively encoded into each
+single column. e Optical signals acquired with the PD shown in (a)d u r i n gas i n g l e
+line-scan of the line beam. ‘Active’time and ‘Inactive’time indicate the time for
+serial wavefront modulation using 340 columns and the time for the update of the
+DMD frame, respectively. The velocity signal from the scanner board is plotted for
+reference in black line.f Close-up of the signals in the dotted orange box shown in
+(e) with the sinusoidal curve ﬁtting in dotted black line.
+ab
+de
+c
+Mcol = 2 Mcol = 4
+1234
+Mcol
+20
+60
+100
+140Focal contrast
+1
+10
+20
+30 Ref
+res
+h rate (MHz)
+Contrast
+Local
+Effective
+00 . 5 1 1.5 22 . 5
+Time (μs)
+0
+0.4
+0.8Signal (a. u.)
+Mcol = 2
+Mcol = 4
+c
+c
+140 160 180 200 Column #
+Frequency (MHz)
+48 1 20
+0.4
+0.8
+102 104
+~10
+10~2×1
+09
+106102
+104
+106
+108
+~22222×2×××11
+~
+×1
+00
+~11
+100
+~11
+100
+~1
+100
+001100
+10
+099000009900000000000001010101010101010111111010101010101010101111111111×1×1×1×1×1×1××××1111×1×1×1×1×1×1×××××××××2×2×2×2222 0001001011000~~~ 00101011111010111111~1~1~1~1~~~~~~~~~~~~~~~~~~~
+AO
+DM
+GLV
+LCoS Multi
+Ferro
+Grating DMD
+Ideal DOF (DMD)
+Experimental DOF
+DOFspatial
+DOFtemporal
+Ferroelectric-SLM, DM
+Alvarez, electro-wetting lens
+AO-, EO-lens
+Mcol = 2 Mcol = 4
+η ~ 64 η ~ 140
+Mcol = 2
+Mcol = 4
+Fig. 4 | Control of spatial and temporal degrees of freedom for wavefront
+modulation. a Illustration of how a line beam is illuminated on a DMD with the
+setting of Mcol = 2 and 4. b Intensity proﬁl e so ff o c a ls p o t sf o rMcol = 2 and 4,
+respectively. Scale bar: 1μm. c Optical signals for the periodic on/off modulation of
+the focal spot forMcol = 2 and 4, respectively. The inset plot indicates the frequency
+spectrums of the modulated signals around the central column.d Contrast and
+refresh rate of focal spots for different values ofMcol. The effective refresh rate was
+calculated from the product of the experimental duty cycle and the averaged local
+refresh rate. e Flexible reallocation of DOFspatial and DOFtemporal by tuning Mcol in
+our wavefront modulation method. Pink stars indicate the experimentally
+demonstrated DOFs for Mcol =1 – 4. Dotted blue lines indicate ideal addressable
+DOFs using our methods based on DMD. Orange, blue, and green ﬁlled areas
+denote three representative categories of conventional varifocal lenses in terms of
+DOFtemporal (i.e., the response speed) (see details in Ref. 6).
+Article https://doi.org/10.1038/s41467-024-47009-w
+Nature Communications|         (2024) 15:2926 5
+
+rate. As shown in Fig. 4e, the experimental DOFspatiotemporal was esti-
+mated to be ~2 × 10 9 regardless of Mcol, which is consistent with the
+theoretical DOFspatiotemporal of N×M×f SLM at around 2.8 × 10 9.T h e
+discrepancy may be attributed to practical imperfections in phase
+conjugation process that degrade the focal contrast38. It is worth not-
+ing that the experimentally demonstrated DOFs (pink stars in Fig.4e)
+cannot be addressed with existing modulation techniques such as the
+LCoS-, MEMS-, and AO-based SLM types and also the demonstrated
+focus control speed (i.e., DOFtemporal) exceeds those of the state-of-the-
+art varifocal lenses (as shown in Fig. 4ea n dR e f .6). With the optimal
+implementation of the FLASH technique using an objective lens with
+lower magniﬁcation and a DMD with a higher resolution (i.e., with
+larger N and M), the gap between our experimental DOF and the ideal
+DOF for a DMD can be even narrowed.
+Demonstration of > 10 MHz random-access focusing
+To demonstrate the 3D random-access capability of the FLASH
+focusing technique, ﬁrst we demonstrated focus control over two
+separate planes within 1 μs. The DMD was programmed in such a way
+that every two columns are individually optimized to scan focal spots
+in elliptic patterns on the two planes ofz = 3 mm and 3.2 mm (shown in
+Fig. 5a and Supplementary Fig. 2b). As the expected refresh rate of
+~16 MHz (with the setting of Mcol = 2) greatly exceeds the maximum
+frame rate of a standard camera, we instead counted the number of
+focal spots that can be captured over the short exposure time of 1 μs.
+Consistently, we observed in total 17 focal spots from the two camera
+images as shown in Fig. 5b, conﬁrming the capability of 3D random-
+access focus control at more than 10 MHz.
+Secondly, to demonstrate the versatility of the FLASH technique
+on the basis of the superposition principle, we performed the
+frequency-multiplexed modulation of two distant focal spots as shown
+in Fig. 5c. Speci ﬁcally, we encoded the frequency information as a
+column period of an optimal wavefront for a certain spot location such
+that the modulation frequency is set to fspot divided by the column
+period. Then, we superposed and binarized the wavefronts for indivi-
+dual spots and locations to simultaneously address multiple fre-
+quencies and spot locations. Figure5d, e present the temporal proﬁles
+of optical intensities and the corresponding frequency spectra as
+measured through two single-mode ﬁbers placed at ( x, y, z)=
+(0, 2.5, 2) mm and (0, 0, 2) mm. As the column periodicity for the two
+positions were respectively set to 4 and 8, the local modulation fre-
+quencies were distinctly measured to be 8 and 4 MHz, respectively. We
+have also demonstrated a single spot modulation over a large volume
+of 5 mm × 5 mm × 5.5 mm as shown in Supplementary Fig. 11. The
+reduced contrast of on/off signals in Fig.5d and Supplementary Fig. 11
+as compared with the expected value from Eq. ( 3) is due to the col-
+lection area of theﬁber tip (i.e., mode-ﬁeld diameter of theﬁber) that is
+larger than the diffraction-limited size of the focal spot and the sur-
+rounding speckle granules. Those random-access focusing results
+indicate that the FLASH focusing technique unlocks a spatiotemporal
+domain that is inaccessible using conventional optics with extreme
+ﬂexibility, practically enabling frequency-encoded imaging 39 or
+frequency-multiplexed switching over unprecedentedly large volumes
+and bandwidths.
+Discussion
+In this study, we proposed a method to reallocate the large DOFspatialof
+the 2D-SLM to the DOF in the spatiotemporal domain in a tunable
+manner, thereby achieving ultrafast spatial light modulation with a
+refresh rate of around 10 MHz and a DOF spatial value exceeding 100.
+Our method, without a scattering medium, can serve as a general-
+purpose 1D-SLM such as a GLV, albeit with a much higher refresh rate.
+Therefore, it can be broadly used in high-de ﬁnition panoramic
+display40, maskless lithography41, and spectral shaping42 applications.
+Combined with scattering media, the FLASH focusing technique
+achieves random-access control of micrometer-sized focal spots over a
+large addressable volume of 5 mm × 5 mm × 5.5 mm at a maximum
+refresh rate of 31 MHz. The demonstrated results represent an
+improvement of more than one order of magnitude over existing
+varifocal lens schemes in terms of the refresh rate and tuning power.
+Fig. 5 | Ultrafast random-access focus control in a large 3D space. a Simpliﬁed
+experimental schematic for ultrafast 3D focus control using two cameras (CAM1 and
+CAM2) located on axially separated target planes ofz = 3 mm and 3.2 mm. Within a
+camera exposure time of 1μs, the line beam scans over ~30 columns and undergoes
+serial wavefront modulation in the setting ofMcol =2 . b Focal spots reconstructed
+from serial wavefront modulation on the two planes within the time period of 1μs.
+Contrast of focal spots in these images was improved due to the nine-fold averaging
+by physically translating the scattering medium and by using the previously devel-
+oped digital backgroundcancellation method51. Note that the actual instantaneous
+focal contrast is as shown in the left panel of Fig.4b. Scale bar: 5 μm. c Simpliﬁed
+experimental schematic for large-volume and frequency-modulated focus control
+with two single-mode opticalﬁbers (SMF1 and SMF2). Focal spots coupled into
+optical ﬁbers are detected by photomultiplier tubes (PMT1 and PMT2)d Optical
+signals for focal spots simultaneously modulated at different frequencies that were
+measured through SMF1 and SMF2 placed at (x, y, z)=( 0 ,2 . 5 ,2 )m ma n d( 0 ,0 ,2 )m m ,
+respectively.e Frequency spectrum of the optical signals in (d).
+Article https://doi.org/10.1038/s41467-024-47009-w
+Nature Communications|         (2024) 15:2926 6
+
+However, unlike conventional lenses, the scattering-assisted lens
+does not directly form the image of the entire 2D plane at a desired
+depth, preventing their use in single-shot imaging applications such as
+bright-ﬁeld microscopy. In addition, in contrast to conventional var-
+ifocal lenses, the scattering-assisted holographic focusing is typically
+associated with background intensity ﬂuctuations and lower trans-
+mittance. Because the FLASH technique increases the modulation
+speed at the cost of DOF spatial, it intrinsically yields a small focal con-
+trast (i.e., the peak-to-background ratio), which would be a limiting
+factor in imaging applications (see Supplementary Text 4 for the
+implication of the small focal contrast). More speci ﬁcally, the aggre-
+gated background signals from the speckle granules around a focal
+s p o td e t e r i o r a t et h ei m a g ec o n t r a s t( s e eS u p p l e m e n t a r yT e x t5a n d
+Supplementary Fig. 12 for the demonstration of scanningﬂuorescence
+imaging based on the FLASH technique).
+Nevertheless, the holographic focusing scheme provides dis-
+tinctive advantages over conventional varifocal lenses, including
+random-access focusing, high tuning power, and a large transversal
+FOV24. Considering that the FLASH focusing technique can selectively
+scan target positions without wasting time on continuous scanning
+(e.g., raster scanning), it would be well suited for non-imaging appli-
+cations in which the regions (or spots) of interest are sparsely dis-
+tributed in a large volume, such as in laser micromachining3,22,o p t i c a l
+tweezers43, and cell-targeted activity monitoring and stimulation
+processes44. In particular, when nonlinear characteristics of materials
+and biological molecules are involved such as in optogenetic
+stimulation45 and tissue ablation46, a speciﬁc region in a large volume
+can be addressed at time with high spatial selectivity even with the
+existence of background speckle granules (see Supplementary Text 4
+for the detailed description on the potential applications of the FLASH
+technique).
+The FLASH technique, as a versatile holographic display, is
+broadly applicable to various light manipulation techniques, such as
+for complex point spread function engineering47, for non-mechanical
+wide-angle beam steering for LiDAR 48. For instance, with the FLASH
+technique, interferometric beam steering methods can simultaneously
+p r o v i d ew i d ea n g u l a rr a n g ea n du l t r a f a s ts t e e r i n gs p e e d ,a l b e i tw i t ht h e
+reduced beam throughput (e.g., the energy ef ﬁciency of 10 −6 in the
+previous demonstration based on a disorder-engineered
+metasurface48). The demonstrated scheme of binarized TM measure-
+ments also paves the way toward achieving real-time closed-loop
+wavefront shaping through a highly dynamic scattering medium, only
+requiring 100 μs to characterize a TM with ~1000 input modes. For
+comparison, state-of-the-art wavefront shaping systems require more
+than 1 ms for TM measurements of the same size49,50.
+The energy ef ﬁciency of the FLASH focusing technique was
+measured to be on the order of 10−5. This low energy efﬁciency can be
+easily improved by one order of magnitude by using a wider-FOV
+objective lens and 4K-resolution DMD (i.e., by using larger N). More-
+over, the use of a pulsed laser can signiﬁcantly reduce the energy loss
+and the undesired interference effect within the transient time of a line
+beam traveling across neighboring columns. Additionally, the spatial
+characteristics and energy efﬁciency could be greatly improved using
+an engineered scattering medium instead of the opal diffuser glass
+used in this work 24. In particular, using metasurface technology, the
+scattering pro ﬁle can be precisely controlled to achieve optimal
+transformation for speciﬁc manipulation tasks while also realizing the
+beneﬁts of high transmittance and long-term stability. The focus
+control speed can be enhanced as well by incorporating a telecentric
+F-theta lens for line beam projections and a faster 1D scanner such as a
+polygon scanner. Assuming the scan rate of a typical 24-facets polygon
+mirror, fscan = 60 kHz, and the number of columnsM of 2,000 with the
+extended FOV, the proposed scheme can practically achieve a mod-
+ulation speed of 120 MHz (see Supplementary Text 1 for the detailed
+description on the optimal implementation of the FLASH technique).
+To conclude, the present work has demonstrated that the con-
+ventional speed limit in spatial light modulator technology can be
+bypassed by exchanging the spatial DOF for the gain in the temporal
+DOF. We anticipate that the ability to handle DOFs in two domains in an
+interchangeable and tunable manner will pave the way for novel
+opportunities to investigate or manipulate systems that exhibit high
+spatial and temporal (or equivalently, spectral) complexity.
+Methods
+Detailed experimental setup
+The overall experimental setup is depicted in Supplementary Fig. 2a.
+We used a 532 nm green laser (Verdi G5 SLM, Coherent) as the laser
+source. A collimated laser beam was split into two laser beams with a
+beam splitter. A laser beam traveling downward served as the refer-
+ence beam for measuring the TM of a scattering medium using a
+phase-shifting holography technique. The reference beam’s phase was
+controlled by a DMD (V-7001, Vialux). Meanwhile, a laser beam tra-
+veling to the right was employed for wavefront shaping. This beam was
+initially converted into a line beam using a cylindrical lens (ACY254-
+100-A, Thorlabs) and then relayed onto another DMD (V-7001, Vialux)
+through an achromatic lens and a 4x objective lens (PLN4X, Olympus).
+The RS used here was positioned on the back focal plane of the
+objective lens to undertake the scan of the line beam on the DMD. We
+introduced a volume holographic grating (WP-360/550-25.4, Wasatch
+Photonics) between the objective lens and the DMD to establish a
+retroreﬂective con ﬁguration. where the tilt angle of each DMD
+micromirror was offset by the ﬁrst-order diffraction angle of the line
+beam. It is worth noting that the diffraction efﬁciency of theﬁrst-order
+beam diffracted through the holographic grating was measured and
+found to be ~75% at perpendicular incidence. After binary modulation
+of illuminated columns of the DMD, the modulated line beam propa-
+gated backward along the incident optical path and was expanded
+back into the collimated beam through the cylindrical lens and RS,
+ensuring aﬁxed projected area regardless of the line beam position on
+the DMD. Here, the measured light utilization ef ﬁciency of our mod-
+ulation method, deﬁned as the ratio of the input power to the output
+power, was found to be around 10%. The input power was measured on
+the left side of the polarized beam splitter, while the output power was
+measured on the projection plane at the scattering medium’ss u r f a c e .
+Spatial ﬁltering took place between two achromatic lenses (L2 and L3)
+to remove unwanted diffracted beams from the DMD. The holo-
+graphically focused beam behind the scattering medium with wave-
+front shaping was imaged on a CMOS camera (acA1440-220um, Basler)
+using a microscopic setup consisting of a 60x objective lens (MPLA-
+PON60X, Olympus) and a tube lens (TTL200, Thorlabs). For the
+demonstration of MHz modulation speed in Figs.3e, 4c, a pinhole with
+a diameter of 2 μm was positioned at the target plane of 2 mm behind
+the scattering medium and the transmitted beam through the pinhole
+was detected by the PMT (PMT1001, Thorlabs) placed in the conjugate
+plane of the camera. The analog voltage signal from the PMT was
+recorded by an oscilloscope (Tektronix, TBS2102B). The all-voltage
+signals shown in this work were low-pass ﬁltered with a cutoff fre-
+quency of 40 MHz to eliminate spike-like noise signals due to
+stray light.
+Alignment of the line beam on the DMD
+We detail the process for implementing the precise alignment of the
+line beam onto a speciﬁc column of the DMD. First, we constructed an
+alignment unit comprising a pellicle beam splitter, a 4× objective lens,
+and a camera within the experimen tal setup to visually monitor the
+amplitude-modulated line beam generated by the DMD. Using this
+alignment unit, we performed spatial mapping between the DMD
+plane and the camera plane. During this process, the cylindrical lens
+was temporarily removed from the setup, allowing a collimated beam
+to illuminate the entire region of the DMD. The mapping between the
+Article https://doi.org/10.1038/s41467-024-47009-w
+Nature Communications|         (2024) 15:2926 7
+
+two planes was achieved by displaying a speciﬁc binary pattern on the
+DMD and physically adjusting the spatial position and tip/tilt of the
+camera device using goniometric and translational stages. Upon
+completing the mapping, the cylindrical lens was reinserted into the
+setup to illuminate the line beam on the DMD. To ensure precise
+alignment of the line beam, the cylindrical lens was physically rotated
+with a rotation stage until the line beam was accurately aligned parallel
+to the center column on the DMD. By operating the RS, we conﬁrmed
+that the scanned line beam could be parallel to every DMD column.
+Precise implementation of this alignment procedure is essential for
+accurately achieving 1D spatial modulation from a single DMD column
+without unwanted 1D modulation from neighboring columns.
+Width of the line beam scanned on the DMD
+To achieve 1D modulation by a single DMD column forMcol =1w i t h o u t
+unwanted modulation (i.e., crosstalk) from adjacent columns, the
+width of the line beam in the scanning direction must be narrower than
+the DMD pixel size. To verify that this condition is ful ﬁlled, we mon-
+itored the intensity proﬁl eo ft h el i n eb e a mo nt h eD M Dp l a n eu s i n ga
+microscopic setup (Supplementary Fig. 3a, b). Supplementary Fig. 3c
+shows the FWHM for the 1D pro ﬁle of the line beam in the scanning
+direction. The FWHMs of the line beam were conﬁrmed to be narrower
+than each micromirror pitch of 13.7 μm across the entire scanning
+range of around ± 2.5 mm (i.e., the physical width of all active DMD
+columns). For Mcol values higher than 1, the width of the line beam
+illuminated on the DMD was properly adjusted by controlling the
+diameter of the incident beam onto the 4× objective lens in front of
+the DMD.
+Correction of column-wise wavefront distortion
+We describe here the process of correcting column-dependent wave-
+front distortions. Each modulated beam from individual DMD columns
+propagates along different optical paths between the RS and the DMD.
+Moreover, there is wavefront curvature across the entire DMD surface.
+Due to these factors, the modulated beam experiences column-
+dependent wavefront distortion. In this experiment, we corrected
+these wavefront distortions using a typical iterative optimization
+method based on Zernike modes. Initially, we measured the TM of the
+scattering medium using the centralmth column of the DMD without
+running the RS. We then calculated the phase patternφm based on the
+measured TM and displayed its binary amplitude pattern Am on the
+(m + 1)th column for focusing at a speci ﬁc position behind the med-
+ium. Upon starting the RS, we would observe a focal spot with a slightly
+lower peak intensity compared to that for the mth column, as the
+(m + 1)th DMD column introduces a small amount of wavefront dis-
+tortion. To correct this distortion and recover the degraded peak
+intensity, we optimized the correction pattern Cm +1 using several
+Zernike modes to maximize the spot intensity at a speciﬁc position on
+the camera or on the photodetector. We only used ﬁrst-order and
+second-order Zernike modes representing‘defocus’and ‘astigmatism’
+aberrations along the major axis of the line beam (i.e., modulation
+direction). After correcting the distortion on the (m +1 ) t hc o l u m n ,t h e
+amplitude pattern Am +1 , converted from the superposition of the
+focusing pattern φm and the correction pattern Cm +1 , was displayed
+on the (m + 2) th column. Similarly, the correction patternCm +2 on the
+(m + 2)th column was optimized using two aberration modes to offset
+the wavefront distortion. By repeating this type of optimization for
+every column, we eventually acquired a set of wavefront correction
+patterns C1,C2,C3, ... ,CM
+/C8/C9
+for all columns. In practice, as correction
+patterns between neighboring columns are highly correlated, it was
+not necessary to calibrate all columns individually. Instead, we mea-
+sured wavefront correction patterns C1,C11,C21 ... ,CM
+/C8/C9
+for every ten
+columns and calculated other correction patterns by means of
+interpolation.
+Continuous ultrafast spatial modulation
+Here, we describe the process of synchronously updating DMD pat-
+terns in accordance with the movement of the RS for continuous
+spatial modulation. First, it is crucial to note that the DMD needs a
+ﬁnite time to refresh the frames. Speciﬁcally, since the DMD controller
+operates at a 400 MHz clock speed and takes 40 ns to load a single row
+with 16 clocks, loading a binary image consisting of all 352 rows in the
+active DMD area requires ~14μs. After loading, each micromirror takes
+around 4 μs to change its state and an additional 8 μst om e c h a n i c a l l y
+settle down. Considering all these time intervals, a complete frame
+refresh requires a total of about 26 μs. To allocate sufﬁcient time for
+the continuous updating of DMD frames upon every directional
+change of the RS, we set the RS angular range to be ~2.7 times broader
+than the minimum angular range precisely matched to the active DMD
+area of M = 340. With this setting, we can safely reserve around 30μs,
+which is longer than the DMD frame refresh time (26 μs).
+Supplementary Fig. 10a, b show the system control diagram and
+the electrical signal ﬂow diagram, respectively. The analog voltage
+output from channel 1 (CH1) of the function generator (Tektronix,
+AFG1062) controls the amplitude (i.e., angular range) of the RS. The
+synchronization signal with a frequency of 12 kHz from the RS con-
+troller is input to the trigger input terminal of the function generator
+(FG). Upon detecting the rising edge of the synchronization signal
+from the RS, CH2 of the FG outputs a 24 kHz pulse train to the trigger
+input terminal of the DMD. In this experiment, the time delay between
+the RS synchronization signal and the pulse train is adjusted to 30μs,
+enabling the DMD to start refreshing as the RS passes through the
+DMD active area. Once the DMD detects the rising edge of the pulsed
+signal from the FG, it spends the ﬁrst 26 μso nac o m p l e t er e f r e s h ,
+which is followed by stable projection time for the next 13 μs. CH2 of
+the FG is also connected to the trigger input terminal of the oscillo-
+scope (Tektronix, TBS2102B) to control the timing of the acquisition of
+the analog voltage signal from the PMT. The output of the PMT is
+connected to CH1 of the oscilloscope to record the voltage signal
+waveform.
+Lastly, we consider the available number of 1D patterns for con-
+tinuous modulation under the current setting. A DMD module can only
+achieve an update rate of around 24 kHz when using binary frames
+stored in on-board memory. Thus, the total number of available 1D
+patterns can be calculated as the product of the number of prestored
+binary frames and the number of active columns on each frame. In the
+current setting, as a total of 175,000 binary frames can be prestored
+with 16 GB of on-board memory, each containing 340 columns, the
+total number of available 1D patterns is around 60 million. This total
+number could be further improved by streaming new frames from the
+computer into the on-board memory while sequentially displaying the
+prestored frames on the DMD from memory.
+Data availability
+The data that support the plots and other ﬁndings in this study are
+available from the corresponding authors upon request.
+Code availability
+The MATLAB codes used in this work are available from the corre-
+sponding authors upon request.
+References
+1 . G ö b e l ,W . ,K a m p a ,B .M .&H e l m c h e n ,F .I m a g i n gc e l l u l a rn e t w o r k
+dynamics in three dimensions using fast 3D laser scanning.Nat.
+Methods 4,7 3– 79 (2007).
+2. Kim, K. H., Buehler, C. & So, P. T. C. High-speed, two-photon
+scanning microscope.Appl. Opt. 38,6 0 0 4– 6009 (1999).
+3. Sugioka, K., Cheng, Y. & Midorikawa, K. Three-dimensional micro-
+machining of glass using femtosecond laser for lab-on-a-chip
+Article https://doi.org/10.1038/s41467-024-47009-w
+Nature Communications|         (2024) 15:2926 8
+
+device manufacture.A p p l .P h y s .AM a t e r .S c i .P r o c e s s .81,
+1– 10 (2005).
+4. Lechleiter, J. D., Lin, D. T. & Siene art, U. Multi-photon laser scanning
+microscopy using an acoustic optical deﬂector. Biophys. J. 83,
+2292– 2299 (2002).
+5. Helmchen, F., Fee, M. S., Tank, D. W. & Denk, W. A miniature head-
+mounted two-photon microscope: high-resolution brain imaging in
+freely moving animals.Neuron 31,9 0 3– 912 (2001).
+6. Kang, S. Y., Duocastella, M. & Arnold, C. B. Variable optical elements
+for fast focus control. Nat. Photon. 14,5 3 3– 542 (2020).
+7. Ren, H., Xianyu, H., Xu, S. & Wu, S.-T. Adaptive dielectric liquid lens.
+Opt. Express 16, 14954– 14960 (2008).
+8. Hao, C. et al. Electrowetting on liquid-infused ﬁlm (EWOLF): Com-
+plete reversibility and controlled droplet oscillation suppression for
+fast optical imaging.Sci. Rep. 4,6 8 4 6( 2 0 1 4 ) .
+9. Bernet, S., Harm, W. & Ritsch-Marte, M. Demonstration of focus-
+tunable diffractive Moire-lenses.Opt. Express 21,
+6955– 6966 (2013).
+1 0 . O k u ,H .&I s h i k a w a ,M .H i g h - s p e e dl i q u i dl e n sw i t h2 m sr e s p o n s e
+and 80.3 nm root-mean-square wavefront error.Appl. Phys. Lett.
+94, 221108 (2009).
+11. Ee, H. S. & Agarwal, R. Tunable metasurface and ﬂat optical
+zoom lens on a stretchable substrate. Nano Lett. 16,
+2818– 2823 (2016).
+12. Imai, T. et al. Fast response var ifocal lenses using KTa1-xNbxO3
+crystals and a simulation method withelectrostrictive calculations.
+Appl. Opt. 51,1 5 3 2– 1539 (2012).
+13. Duemani Reddy, G., Kelleher, K., Fink, R. & Saggau, P. Three-
+dimensional random access multiphoton microscopy for
+functional imaging of neuronal activity.Nat. Neurosci. 11,
+713– 720 (2008).
+14. Chen, T. H., Fardel, R. & Arnold, C. B. Ultrafast z-scanning for high-
+efﬁciency laser micro-machining.Light Sci. Appl. 7, e17181 (2018).
+1 5 . N a d e l l a ,K .M .N .S .e ta l .R a n d o m - a c c e s ss c a n n i n gm i c r o s c o p yf o r
+3D imaging in awake behaving animals.Nat. Methods 13,
+1001– 1004 (2016).
+16. Reutsky-Gefen, I. et al. Holographic optogenetic stimulation of
+patterned neuronal activity for vision restoration.Nat. Commun. 4,
+1509 (2013).
+17. Packer, A. M., Russell, L. E., Dalgleish, H. W. P. & Häusser, M.
+Simultaneous all-optical manipulation and recording of neural cir-
+cuit activity with cellular resolution in vivo.Nat. Methods 12,
+140– 146 (2015).
+18. Guo, Z. V., Hart, A. C. & Ramanathan, S. Optical interrogation of
+neural circuits in Caenorhabditis elegans.Nat. Methods 6,
+891– 896 (2009).
+19. Conkey, D. B., Caravaca-Aguirre, A. M. & Piestun, R. High-speed
+scattering medium characterization with application to focusing
+light through turbid media.Opt. Express 20,1 7 3 3– 1740 (2012).
+20. Perreault, J. A., Bifano, T. G., Levine, B. M. & Horenstein, M. N.
+Adaptive optic correction using microelectromechanical deform-
+able mirrors. Opt. Eng. 41,5 6 1– 566 (2002).
+21. Reddy, G. D. & Saggau, P. Fast three-dimensional laser scanning
+scheme using acousto-optic deﬂectors. J. Biomed. Opt. 10,
+064038 (2005).
+22. Malinauskas, M. et al. Ultrafast laser processing of materials: from
+science to industry. Light Sci. Appl. 5, e16133 (2016).
+2 3 . Y u ,H . ,L e e ,K . ,P a r k ,J .&P a r k ,Y .U l t r a h i g h - d eﬁnition dynamic 3D
+holographic display by active control of volume speckleﬁelds. Nat.
+Photon. 11,1 8 6– 192 (2017).
+24. Jang, M. et al. Wavefront shaping with disorder-engineered meta-
+surfaces. Nat. Photon. 12,8 4– 90 (2018).
+2 5 . T z a n g ,O .e ta l .W a v e f r o n ts h a p i n gi nc o m p l e xm e d i aw i t ha3 5 0k H z
+modulator via a 1D-to-2D transform.Nat. Photon.13,7 8 8– 793 (2019).
+26. Smolyaninov, A., El Amili, A., Vallini, F., Pappert, S. & Fainman, Y.
+Programmable plasmonic phase modulation of free-space wave-
+fronts at gigahertz rates. Nat. Photon. 13,4 3 1– 435 (2019).
+27. Benea-Chelmus, I. C. et al. Electro-optic spatial light modulator
+from an engineered organic layer.Nat. Commun. 12, 5928 (2021).
+28. Panuski, C. L. et al. A full degree-of-freedom spatiotemporal light
+modulator. Nat. Photon. 16,8 3 4– 842 (2022).
+29. Teng, D. et al. Spatiotemporal multiplexing for holographic display
+with multiple planar aligned spatial-light-modulators.Opt. Express
+22,1 5 7 9 1– 15803 (2014).
+30. Takaki, Y. & Okada, N. Hologram generation by horizontal scanning
+of a high-speed spatial light modulator.Appl. Opt. 48,
+3255– 3260 (2009).
+31. Vellekoop, I. M. & Mosk, A. P. Phase control algorithms for
+focusing light through turbid media. Opt. Commun. 281,
+3071– 3080 (2008).
+3 2 . C o n k e y ,D .B . ,B r o w n ,A .N . ,C a r a v a c a - A g u i r r e ,A .M .&P i e s t u n ,R .
+Genetic algorithm optimizationfor focusing through turbid media
+in noisy environments.Opt. Express 20,4 8 4 0– 4849 (2012).
+33. Cui, M. & Yang, C. Implementation of a digital optical phase con-
+jugation system and its application to study the robustness of tur-
+bidity suppression by phase conjugation.Opt. Express 18,
+3444– 3455 (2010).
+34. Popoff, S. M., Lerosey, G., Fink, M., Boccara, A. C. & Gigan, S.
+Controlling light through optical disordered media: Transmission
+matrix approach.N. J. Phys. 13,1 2 3 0 2 1( 2 0 1 1 ) .
+35. Kim, M., Choi, W., Choi, Y., Yoon, C. & Choi, W. Transmission matrix
+of a scattering medium and its applications in biophotonics.Opt.
+Express 23, 12648– 12668 (2015).
+36. Vellekoop, I. M. & Mosk, A. P. Focusing coherent light through
+opaque strongly scattering media.Opt. Lett. 32,2 3 0 9– 2311 (2007).
+37. Akbulut, D., Huisman, T. J., Van Putten, E. G., Vos, W. L. & Mosk, A. P.
+Focusing light through turbid media by binary amplitude modula-
+tion. Opt. Express 19,4 0 1 7– 4029 (2011).
+38. Jang, M., Ruan, H., Zhou, H., Judkewitz, B. & Yang, C. Method for
+auto-alignment of digital optical phase conjugation systems based
+on digital propagation.Opt. Express 22,1 4 0 5 4– 14071 (2014).
+39. Ducros, M., Houssen, Y. G., Bradley, J., De Sars, V. & Charpak, S.
+Encoded multisite two-photon microscopy.Proc. Natl Acad. Sci.
+USA. 110, 13138– 13143 (2013).
+4 0 . K i k u c h i ,H .&M e m b e r ,S .I .D .H i g h - p i x e l - r a t eg r a t i n g - l i g h t - v a l v e
+laser projector.J. Soc. Inf. Disp. 17,2 6 3– 269 (2012).
+41. Kim, K. R. et al. SLM-based maskless lithography for TFT-LCD. Appl.
+Surf. Sci. 255,7 8 3 5– 7840 (2009).
+42. Frumker, E. & Silberberg, Y. Femtosecond pulse shaping using a
+two-dimensional liquid-crystal spatial light modulator.Opt. Lett.32,
+1384– 1386 (2007).
+4 3 . L e i t e ,I .T .e ta l .T h r e e - d i m e n s i o n al holographic optical manipulation
+through a high-numerical-aperture soft-glass multimodeﬁbre. Nat.
+Photon. 12,3 3– 39 (2018).
+44. Packer, A. M., Roska, B. & Häuser, M. Targeting neurons and photons
+for optogenetics.Nat. Neurosci. 16,8 0 5– 815 (2013).
+45. Ruan, H. et al. Deep tissue optical focusing and optogenetic mod-
+ulation with time-reversed ultrasonically encoded light.Sci. Adv. 3,
+eaao5520 (2017).
+46. Kakkava, E. et al. Selective femtosecond laser ablation via two-
+photon ﬂuorescence imaging through a multimodeﬁber. Biomed.
+Opt. Express 10,4 2 3– 433 (2019).
+47. Boniface, A., Mounaix, M., Blochet, B., Piestun, R. & Gigan, S.
+Transmission-matrix-based point-spread-function engineering
+through a complex medium. Optica 4,5 4– 59 (2017).
+48. Xu, J. et al. Wide-angular-range a nd high-resolution beam steering
+by a metasurface-coupled phased array.Opt. Lett. 43,
+5255– 5258 (2018).
+Article https://doi.org/10.1038/s41467-024-47009-w
+Nature Communications|         (2024) 15:2926 9
+
+49. Feldkhun, D., Tzang, O., Wagner, K. H. & Piestun, R. Focusing and
+scanning through scattering media in microseconds.Optica 6,
+72– 75 (2019).
+5 0 . W e i ,X .e ta l .R e a l - t i m ef r e q u e n c y - e n c o d e ds p a t i o t e m p o r a l
+focusing through scattering media using a programmable
+2D ultraﬁne optical frequency comb. Sci. Adv. 6, eaay1192
+(2020).
+51. Wang, Y. M., Judkewitz, B., Dimarzio, C. A. & Yang, C. Deep-tissue
+focal ﬂuorescence imaging with digitally time-reversed ultrasound-
+encoded light. Nat. Commun. 3, 928 (2012).
+Acknowledgements
+This work was supported by JST-FOREST (Grant No. JPMJFR205E) to A.S.
+and JST-CREST (Grant No. JPMJCR1656) to Y.S., by JSPS KAKENHI (Grant
+No. JP21H00404 and JP21H02446 to Y.S. and JP21H01393 to A.S.), by the
+Nakajima Foundation to A.S., the Research Foundation of Opto-Science
+and Technology to A.S., by KonicaMinolta Science and Technology
+Foundation to A.S., by the Ozawa and Yoshikawa Memorial Electronics
+Research Foundation to A.S., by the Cooperative Research Project of
+Research Center for Biomedical Engineering to A.S., by the National
+Research Foundation of Korea (NRF) grants funded by the Korea govern-
+ment (MSIT) (Grant No. NRF-2021R1A5A1032937 to G.S. and M.J. and
+2021R1C1C1011307 to G.S. and M.J.), by the Samsung Research Funding
+and Incubation Center of Samsung Electronics grant SRFC-IT2002-03 to
+G.S. and M.J., by the LG Electronics-KAIST Digital Healthcare Research
+Center to M.J., by the Korea Agency for Infrastructure Technology
+Advancement (KAIA) grant funded by the Ministry of Land, Infrastructure
+and Transport (grant RS-2021-KA163379) to M.J., by the Photo-excitonix
+Project in Hokkaido University to H.M., and by Crossover Alliance to Create
+t h eF u t u r ew i t hP e o p l e ,I n t e l l i g e n c ea n dM a t e r i a l sf r o mM E X Tt oA . S .a n d
+H.M. We are grateful to the Nikon Imaging Center at Hokkaido University
+for the preparation of biological specimens in scanningﬂuorescence
+imaging.
+Author contributions
+A.S. and M.J. conceived of the initial idea. A.S. and M.J. expanded and
+developed the concept. A.S. and M.J. developed the theoretical model
+and designed the experiments. A.S. carried out all experimental pro-
+c e s s e sa n da n a l y z e dt h ee x p e r i m e n t a ld a t aw i t ht h eh e l po fR . H .a n dM . J .
+A.S. and M.J. wrote the manuscript with the help of R.H., G.S., H.M., and
+Y.S. H.M., Y.S., and M.J. supervised the project.
+Competing interests
+The authors declare no competing interests.
+Additional information
+Supplementary informationThe online version contains
+supplementary material available at
+https://doi.org/10.1038/s41467-024-47009-w.
+Correspondenceand requests for materials should be addressed to
+Hideharu Mikami, Yuki Sudo or Mooseok Jang.
+Peer review informationNature Communicationsthanks Ruizhi Cao,
+and the other, anonymous, reviewer(s)for their contribution to the peer
+review of this work. A peer review ﬁle is available.
+Reprints and permissions informationis available at
+http://www.nature.com/reprints
+Publisher’s note Springer Nature remains neutral with regard to jur-
+isdictional claims in published maps and institutional afﬁliations.
+Open Access This article is licensed under a Creative Commons
+Attribution 4.0 International License, which permits use, sharing,
+adaptation, distribution and reproduction in any medium or format, as
+long as you give appropriate credit to the original author(s) and the
+source, provide a link to the Creative Commons licence, and indicate if
+changes were made. The images or other third party material in this
+article are included in the article’s Creative Commons licence, unless
+indicated otherwise in a credit line to the material. If material is not
+included in the article’s Creative Commons licence and your intended
+use is not permitted by statutory regulation or exceeds the permitted
+use, you will need to obtain permission directly from the copyright
+holder. To view a copy of this licence, visithttp://creativecommons.org/
+licenses/by/4.0/.
+© The Author(s) 2024
+Article https://doi.org/10.1038/s41467-024-47009-w
+Nature Communications|         (2024) 15:2926 10

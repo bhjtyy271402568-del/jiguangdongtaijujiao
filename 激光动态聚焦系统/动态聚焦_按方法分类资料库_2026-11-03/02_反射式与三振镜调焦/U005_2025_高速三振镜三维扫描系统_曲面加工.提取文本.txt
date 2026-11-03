@@ -1,0 +1,552 @@
+Research Article
+Vol. 33, No. 6 / 24 Mar 2025 / Optics Express 14314
+Processing curved surface with a high-speed
+triple galvanometer laser 3D scanning system
+YI LIU,1,† XINKE XU,1,† YUNFEI ZHANG,1 ZIQIANG DAN,2
+YAQING QIAO,3 JIAN SHAO,1 PIN ZHANG,4 YAGUANG YE,1
+TIANTING CHEN,1 HAORAN MA,1 GUIYANG YANG,1
+AND LEIMIN DENG1,*
+1Wuhan National Laboratory for Optoelectronics, Huazhong University of Science and Technology, Wuhan,
+Hubei 430074, China
+2National Key Laboratory of Laser Spatial Information, Harbin Institute of Technology, Harbin,
+Heilongjiang 150080, China
+3School of Physics, Changchun University of Science and Technology, Changchun, Jilin 130022, China
+4The Aeronautical Science Key Lab for High Performance Electromagnetic Windows, The Research
+Institute for Special Structures of Aeronautical Composite AVIC, Ji’nan, Shandong 250023, China
+†These authors contributed equally.
+*dlm@hust.edu.cn
+Abstract: High-speed laser processing of curved surfaces is limited by laser three-dimensional
+(3D) scanning equipment. It is difficult to balance efficiency and uniformity during processing.
+In this paper, a self-developed high-speed triple galvanometer laser 3D scanning system (TGLSS)
+was used. The equations for the laser energy distribution and the spatial spot overlap rate at
+different positions of the curved surface were derived. The laser interaction mechanism with
+curved materials and the ablation effect were investigated. Scanning experiments on cylindrical
+surfaces were conducted to verify the processing differences of the laser at different positions of
+the curved surface, and the processing quality of the surface was improved by using a variable
+speed filling method.
+© 2025 Optica Publishing Group under the terms of the Optica Open Access Publishing Agreement
+1.
+Introduction
+As an environmentally friendly technology, lasers are widely used in material processing such
+as microstructure engraving [1–3], coating removal [4–6], drilling [7–9], and texturing [10,11].
+To process planar materials, an XY two-dimensional (2D) galvanometer is often used to scan
+the laser focus in two mutually orthogonal directions (X- and Y-directions) perpendicular to
+the optical axis. This method allows scanning speeds of up to 10 m/s at a focal length of
+160 mm [12]. As production and application requirements escalate to three-dimensional (3D)
+space, the angle of incidence at which the laser is focused on the curved surface may affect the
+manufacturing efficiency of the product, the precise shaping of the structure, and the effectiveness
+of the functional surface [13]. Higher scanning speeds of the laser focus along the optical axis
+(Z-direction) are required for the study of this effect. The conventional method achieves efficient
+processing of curved parts by combining a 2D galvanometer with a multi-axis CNC, utilizing
+the high speed of the galvanometer and the flexibility of a multi-axis system [14,15]. However,
+the Z-direction focusing capability of the multi-axis CNC is difficult to match the dynamic
+performance of the galvanometer. This limits the 3D scanning speed of the system and its ability
+to process curved parts, and limits the study of the scanning process of the laser along the contour
+of the surface.
+The focus scanning speed in the Z-direction can be increased by moving the negative lens
+along the optical axis, but the Z-focusing speed in this method is largely limited by the speed at
+which the optics and their accessories can be moved, which is up to three orders of magnitude
+#557541
+https://doi.org/10.1364/OE.557541
+Journal © 2025
+Received 20 Jan 2025; revised 5 Mar 2025; accepted 10 Mar 2025; published 20 Mar 2025
+
+
+Research Article
+Vol. 33, No. 6 / 24 Mar 2025 / Optics Express 14315
+slower than in the X- and Y-directions [16–18]. Manipulating the shape of the lens according
+to the electrical wetting [19,20] method or the shape-variable lens [21,22] principle allows the
+Z-direction position of the laser focus to be moved faster. However, the surface shape of a variable
+lens is difficult to control precisely. Alvarez lenses [23–25] shift focus by moving the position of
+the lens, but it is difficult to meet the need for continuous and linear focusing. A high-speed triple
+galvanometer laser 3D scanning system (TGLSS) achieves the same scanning capability in the
+X-, Y-, and Z-directions using three highly dynamic characteristic galvanometers, as described in
+our previous work [26,27]. The high-speed TGLSS improves the processing efficiency of curved
+parts at a similar cost and provides the ability to scan the laser focus directly along the surface
+contour, which is difficult to achieve at high speeds with conventional systems.
+In this paper, a self-developed TGLSS was used, which could increase the laser scanning
+speed in the Z-direction to the same speed as that in the X- and Y-directions, providing sufficient
+conditions for realizing the efficient processing of curved parts. Compared with our previous
+work, we further derive the spot energy distribution of the laser focus on curved surfaces with
+different incidence angles. Equations for the spatial spot overlap rate at different incidence
+angles and speeds when scanning along a curved surface contour were derived. The effects of
+incidence angle and scanning speed on ablation under 3D scanning were verified by simulation
+and experiment. Based on the spot overlap rate at different incidence angles, a variable-speed
+laser 3D scanning filling method was developed based on the TGLSS to balance the scanning
+efficiency and uniformity of curved parts. Parts with cylindrical surfaces were processed using
+the system, and the efficient 3D scanning capability of the system was verified.
+2.
+Experimental system and materials
+2.1.
+High-speed triple galvanometer laser 3D scanning system
+The TGLSS used to perform laser scanning experiments was shown in Fig. 1(a). It consisted
+of two off-axis parabolic mirrors PM1 and PM2 (35588, Edmund), three galvanometers G1,
+G2, and G3 (ExtraScan II 14, Hans), and an F-theta lens. The PMs had a focal length f of
+152.4 mm and an off-axis angle of 45°. The G1, G2, and G3 could be rotated by ±12.5°. The
+F-theta lens with a focal length f FL of 100 mm was used to focus the laser. A nanosecond fiber
+laser (YDFLP-100-M8-M-R, JPT) with a beam diameter of 3.0 mm (expanded to 4.5 mm), a
+wavelength λ of 1064 nm, a beam quality factor M2 of 1.4, and a maximum average power of
+100 W was used for the experiments. The system could scan at speeds of up to 10 m/s in the X-,
+Y- and Z-directions. As shown in Figs. 1(b) and (c), a cylindrical sample was used to test the
+focusing effect of the laser scanning along the surface contour. The radius R of the cylindrical
+surface was 25 mm, and the scanning path was varied along the surface (based on the TGLSS’s
+high-speed Z-focusing capability) with a centroid angle ∆α of 45°. A round trip fill mode with
+line spacing s of 200 µm was used.
+2.2.
+Materials and experimental parameters
+In the experiments, commercial aluminum films were tested in the experiment by attaching them
+to the sample, as shown in Fig. (d). In order to investigate the effect of position of the curved
+surface on the laser processing, orthogonal experiments were carried out using four different
+incidence angles α: 0°/15°30°/45° and speed from 1 m/s to 5 m/s. The laser scanning path
+was a rectangle on a cylindrical plane with a line spacing of 200 µm. The experimental laser
+power was 50 W, and the laser pulse frequency was 150 kHz, and the experimental laser scanning
+parameters were shown in Table 1. The scanning effects and depth profiles were observed and
+compared using a laser scanning confocal microscope (VK-X1100, Keyence). Micrographs of
+sample ablation were observed using a scanning electron microscope (Nova NanoSEM 450, FEI).
+
+
+Research Article
+Vol. 33, No. 6 / 24 Mar 2025 / Optics Express 14316
+Fig. 1. Diagram of the experiment device. (a) Self-developed high-speed TGLSS; (b)
+Cylindrical sample; (c) Scanning path (d) Sample with aluminum film
+Table 1. Main process parameters
+of laser scanning
+Main parameter
+Value
+Wavelength λ (nm)
+1064
+Laser power P (W)
+50
+Pulse frequency f (kHz)
+150
+Incidence angles α (°)
+0,15,30,45
+Speed v (m/s)
+1,2,3,4,5
+Spot radius w0 (µm)
+19
+Line spacing s (µm)
+200
+3.
+Analysis and discussion
+3.1.
+Effect of curved parts on laser energy distribution
+In space, the angle between the laser beam incident on the surface of a curved surface and the
+normal to the sample was the angle of incidence α. In order to characterize the energy distribution
+of the incident laser beam at different positions on the curved surface, the optical axis coordinate
+system X-Y-Z and the sample coordinate system XS-YS-ZS are established, as shown in Fig. 2(a),
+with the Z-axis as the optical axis and the ZS-axis as the direction normal to the sample. The XY
+plane was a horizontal plane perpendicular to the Z-axis, and the XSYS plane was the sample
+surface perpendicular to the ZS-axis.
+For a single mode Gaussian beam, its energy distribution incident on a curved surface could
+be described by the XS-YS-ZS coordinate system. We could consider the focused surface area as
+a plane tangent to the surface, the spot on which the laser was focused was no longer circular but
+was projected as an ellipse, and its energy distribution could be expressed as Eq. (1) [28].
+FS(xS, yS, 0) =
+2ES cos α
+f πw02
+√︂
+1 + ( λxS sin α
+πw02 )
+2 exp
+⎛⎜⎜⎜⎜
+⎝
+−2
+⎛⎜⎜⎜⎜
+⎝
+xS2cos2α
+w02
+(︃
+1 +
+(︂
+λxS sin α
+πw02
+)︂2)︃+ yS2
+w02
+⎞⎟⎟⎟⎟
+⎠
+⎞⎟⎟⎟⎟
+⎠
+(1)
+where xS and yS were the coordinate values on the XS-YS-ZS coordinate system, Es was the laser
+single pulse energy, α was the laser incidence angle, f was the pulse frequency, w0 was the spot
+radius, and λ was the laser wavelength.
+The energy distributions according to Eq. (1) were shown in Fig. 2(b) (as an example of
+experimental parameters in Table 1), with the color bar indicating the normalized energy
+
+
+Research Article
+Vol. 33, No. 6 / 24 Mar 2025 / Optics Express 14317
+Fig. 2. Distribution of laser energy on a curved surface (a) Definition of incident angle in
+the X-Y-Z and XS-YS-ZS coordinate systems; (b) Normalized energy intensity for Gaussian
+beams at different incidence angles α; (c) Normalized energy intensity in XS-direction and
+YS-direction
+magnitude. The cases at incidence angles α = 0°, 15°, 30°, and 45° were represented by Figs. 3(c-
+1), (c-2), (c-3), and (c-4), respectively. As the incidence angle increases, the peak energy at
+the center decreased and the concentration of the energy distribution along the XS-direction
+decreased, while the concentration of the energy distribution along the YS-direction remained
+constant.
+Fig. 3. (a) Variation of the overlap rate UPS of a laser beam incident on a curved surface
+with α and v; (b) Variation curve between α and v for the same UPS
+
+
+Research Article
+Vol. 33, No. 6 / 24 Mar 2025 / Optics Express 14318
+3.2.
+Spot overlap on curved parts
+When the Gaussian beam was incident perpendicularly, the overlap rate of laser spots UP could
+be expressed as Eq. (2) [29]
+UP = (1 −v
+fd) × 100%
+(2)
+where v was the scanning speed, f was the pulse frequency, and d was the length of the laser spot.
+For a laser beam incident on a curved surface, the length dS of the spot ellipse varied with the
+angle of laser incidence. The spatial overlap rate of the laser spot UPS could be derived as
+UPS = (1 −v cos α
+2fw0
+) × 100%
+(3)
+The variation of the UPS of a laser beam incident on a curved surface with α and v (as an
+example of experimental parameters in Table 1) was shown in Fig. 3(a). At the same scanning
+speed, the spatial spot overlap increased with the laser incidence angle α, this trend became more
+obvious as the v increased. When processing curved parts, it was necessary to scan different
+positions of the curved part uniformly. Consequently, it was necessary to satisfy the same overlap
+rate at different positions. Figure 3(b) showed the variation curve between incidence angles α
+and speed v for the same overlap rate UPS.
+Part of the data was shown in Table 2. At v = 1 m/s, the UPS increased from 82.5% to 87.6% as
+α increased from 0° to 45°; at v = 2 m/s, the UPS increased from 64.9% to 75.2% as α increased
+from 0° to 45°; at v = 3 m/s, the UPS increased from 47.4% to 62.8% as α increased from 0° to
+45°; at v = 4 m/s, the UPS increased from 29.8% to 50.4% as α increased from 0° to 45°; and at
+v = 5 m/s, the UPS increased from 12.3% to 30.8% as α increased from 0° to 45°. This was due
+to the fact that the length dS of the spot along the v-direction increased as α increased. At lower
+speed (v < w0×f), this overlap did not change significantly with α. At higher speed (v ≥w0×f),
+this trend became more obvious.
+Table 2. Variation of UPS (%) with α and v for beam incident on a curved surface
+v = 1 m/s
+v = 2 m/s
+v = 3 m/s
+v = 4 m/s
+v = 5 m/s
+α=0°
+82.5
+64.9
+47.4
+29.8
+12.3
+α=15°
+83.1
+66.1
+49.2
+32.2
+15.3
+α=30°
+84.8
+69.6
+54.4
+39.2
+24.0
+α=45°
+87.6
+75.2
+62.8
+50.4
+38.0
+3.3.
+Thermal ablation analyses and discussions
+According to Eq. (1), it could be derived that when the laser was incident on a point on the curved
+surface, the energy accumulated at that point on the scanning trajectory was
+FS(xS, yS, 0) =
+m
+∑︂
+i=−n
+2ES cos α
+f πw02
+√︃
+1 + (
+λ(xS+i v
+f ) sin α
+πw02
+)
+2 exp
+⎛⎜⎜⎜⎜
+⎝
+−2
+⎛⎜⎜⎜⎜
+⎝
+(xS + i v
+f )2cos2α
+w02
+(︃
+1 +
+(︂λ(xS+i v
+f ) sin α
+πw02
+)︂2)︃+ yS2
+w02
+⎞⎟⎟⎟⎟
+⎠
+⎞⎟⎟⎟⎟
+⎠
+(4)
+where xS and yS were the coordinate values on the XS-YS-ZS coordinate system, Es was the
+laser single pulse energy, α was the laser incidence angle, f was the pulse frequency, w0 was the
+spot radius, λ was the laser wavelength, v was the scanning speed, m and n were the number of
+scanning points along the scanning direction and in the opposite direction, respectively.
+
+
+Research Article
+Vol. 33, No. 6 / 24 Mar 2025 / Optics Express 14319
+The scanning path at different scanning speeds v and different incidence angles α were shown
+in Fig. 4, and the energy accumulations along the path were normalized. Figure 4 showed that the
+accumulation of energy decreased with increasing scanning speed at the same α, which was due
+to the decrease in the number of scanning points on the path. At the lower scanning speeds (v < 3
+m/s), the distributions of energy along the scanning path did not change obvious with increasing
+α. At the higher scanning speeds (v ≥3 m/s), the accumulations of energy along the scanning
+path changed more significantly with increasing α, which was consistent with the conclusions of
+the derivation of the overlap rate UPS in Section 3.2.
+Fig. 4. Simulation results of scanning paths at different α and v
+Thermofluidic analysis of laser ablation and molten metal flow on curved surfaces were
+performed using COMSOL Multiphysics software. Convective heat transfer was considered
+by combining the unified heat transfer equation with the dynamic mesh method. Pulsed laser
+ablation of aluminum with scanning speeds v from 1 m/s to 5 m/s were simulated, and the laser
+incidence angles α varied from 0° to 45° to simulate the laser focusing at different locations
+on the curved surfaces. The laser energy distributions on the aluminum surface were based on
+Eq. (1), the scanning parameters were based on Table 1, and the heat transfer equations were as
+follows:
+ρCp
+∂T
+∂t + ρCpu · ∇T + ∇· (−k∇T)=Q
+(5)
+where ρ was the density of aluminum, Cp was the heat capacity, T was the temperature, t was the
+time, u was the velocity of the field, Q was the energy input of the laser heat source, and k was
+the thermal conductivity.
+Figure 5 showed the simulation results of scanlines processing with a region of 50 µm selected,
+in which the angle of incidence was assumed to be constant over this selected region. A lower
+scanning speed focused more spots on the aluminum, resulting in more heat accumulation and
+a deeper line depth. This was due to the fact that a larger α resulted in a lower peak energy
+distribution and a higher spot overlap UPS. The simulation results were consistent with those in
+Figs. 3 and 4. However, at α = 45°, the line depth became shallower because the peak focal energy
+
+
+Research Article
+Vol. 33, No. 6 / 24 Mar 2025 / Optics Express 14320
+decreased with increasing α and the time that the aluminum surface was above the ablation
+threshold became shorter.
+Fig. 5. Simulation analysis results of laser ablation and molten metal flow
+Fig. 6. The results of surface morphology microscopy under laser at different α and v
+
+
+Research Article
+Vol. 33, No. 6 / 24 Mar 2025 / Optics Express 14321
+4.
+Results and discussion
+4.1.
+Surface morphology at different incidence angles and scanning speed
+The effect of laser beam processing on curved surface morphology was investigated at different
+angles of incidence and scanning speeds. The experimental parameters were shown in Table 1.
+The results of surface morphology microscopy under laser at different incidence angles and
+scanning speeds were shown in Fig. 6. When the angle of incidence α was constant, the depths of
+the scan line decreased with the increase in v from 1 m/s to 5 m/s. This was due to the decrease in
+the accumulation time of the laser energy and the number of pulses. As v increased from 1 m/s to
+5 m/s, the spot spacing became dispersed from continuous due to a decrease in spot overlap UPS.
+When the scanning speed v was constant, the depths of the scan line were almost constant
+as α increased from 0° to 30°. This was due to the fact that the change in the α did not change
+the accumulation of the laser energy on the curved surface. At α = 45°, the line depth became
+shallower, which validated the simulation analysis in Fig. 5. The data and variations in specific
+scan line depths were shown in Fig. 7 and Table 3. In the region of lower scanning speed (v = 1
+m/s), the depth of the scan line showed longer error bars. This was due to the higher energy
+accumulation in this region, which produced more surface oxidation and ablation debris.
+Fig. 7. Variations of scan line depth with α and v
+4.2.
+Microscopic ablation effects at different incidence angles and scanning directions
+The magnified SEM micrographs of the ablation effect on curved surfaces by laser beam
+processing at different incidence angles and scanning speeds were shown in Fig. 8. As shown in
+Figs. 8(a-1) ∼(a-5), (b-1) ∼(b-5), (c-1) ∼(c-5), and (d-1) ∼(d-5), surface oxides and ablation
+debris were observed when v = 1 m/s, and the scan line became shallower as the laser scanning
+speed v increased. At higher magnification (5000 ×) to observe the ablation morphology at the
+intersection of the focusing spots, it could be observed that the high-pressure steam continued to
+force the liquid metal at the bottom of the pit to drain around the molten keyhole [30], and the
+surface oxides and ablation debris became sparse and there were fewer flowing metals and plumes
+as the scanning speed increased. This was due to the shorter time for energy accumulation.
+The reasons for the difference in ablation morphologies with changes in α and v were that
+higher α increased the spatial spot overlap rate but decreased the energy peak at focusing, resulting
+in a shorter time for the aluminum surface to be above the ablation threshold. An increase in v
+decreased the spatial spot overlap and the time for energy to accumulate on the curved surface.
+
+
+Research Article
+Vol. 33, No. 6 / 24 Mar 2025 / Optics Express 14322
+Fig. 8. Magnified SEM micrographs of the ablation effects at different α and v
+
+
+Research Article
+Vol. 33, No. 6 / 24 Mar 2025 / Optics Express 14323
+4.3.
+Laser variable speed processing curved surfaces to improve uniformity
+As a result of the above analysis, the effect of laser processing on curved surfaces was influenced
+by the combined effect of the processing position on the curved surface and the scanning speed.
+By decreasing the scanning speed at the higher incidence speed. By decreasing the scanning
+speed at higher incidence angle positions, the spot accumulate time in this region could be
+increased to compensate for the decrease in the peak laser value, thus improving the uniformity
+of the laser scanning on curved surfaces.
+The results and depth profiles of laser scanning on cylindrical samples were shown in Fig. 9.
+The scanning line spacing was 10 µm and the laser wavelength λ, power P and pulse frequency f
+were shown in Table 1. As shown in Fig. 9(a-2), when the uniform scanning method was used,
+the scanning speed v was kept constant at 3 m/s, and the scan line depth decreased with the
+increase of the laser incidence angle α. As shown in Fig. 9(b-2), when variable speed scanning
+method was used, the scanning speed v decreased from 3 m/s to 2 m/s with the incident angle α
+from 0° (top of the cylindrical sample) to 45° (edges of the cylindrical sample), and the scan line
+depth was almost unchanged with the increase of the α, which indicated that the uniformity of
+the processing was improved. Compared to the conventional method of rotating the scanning
+head through a rotary table to compensate for spot shape changes and peak energy reduction, this
+method was easier, faster. In addition, this method did not have the problem of focus drift caused
+by the inertia of the rotary table.
+Fig. 9. Results and depth profiles of laser scanning on cylindrical samples (a) Uniform
+speed method; (b) Variable speed method
+5.
+Conclusion
+In this paper, the effect of different positions and different speeds of laser 3D processing of curved
+surface on infrared nanosecond laser ablation of aluminum was systematically investigated. The
+energy distribution of the laser incident on a curved surface and the spatial spot overlap rate
+in scanning along the curved surface contour were derived and modeled. The thermal effects
+of laser ablation of curved aluminum at different incidence angles and speeds were simulated,
+experimented and analyzed. The scanning uniformity of the laser on curved materials was
+improved by developing a filling method with variable speed scanning to compensate for the
+low peak energy of the laser in regions with high angles of incidence. A reference was provided
+for the further development of laser technology for efficient and uniform processing of curved
+surfaces. The technology and equipment were expected to be integrated and applied in aerospace,
+
+
+Research Article
+Vol. 33, No. 6 / 24 Mar 2025 / Optics Express 14324
+automotive and precision manufacturing [31–33]. The industrialized scanning head can be
+mounted on the multi-axis mechanism, replacing the conventional laser scanning head (XY
+galvanometer and Z-dynamic focusing), and improving the efficiency and accuracy of laser 3D
+scanning processing. The main conclusions were as follows:
+(1) Based on the method of approximating smaller curved surface areas as inclined planar areas,
+the conversion of laser incidence to different positions on the surface to laser incidence on
+the plane at different angles of incidence. Combined with the energy distribution equations
+of Gaussian beam, the energy distribution model of the laser incident at different positions
+of the curved surface was established. As the angle of incidence increased, the peak
+energy at the center decreased and the concentration of the energy distribution along the
+direction of the curved surface contour decreased, while the concentration of the energy
+distribution along the other orthogonal direction remained constant. It should be noted that
+for high curvature regions, we can further reduce the length of the approximation region to
+minimize the error and thus improve the overall modeling accuracy.
+(2) The equations for the spatial spot overlap rate as a function of incident angle and scanning
+speed for laser scanning along a curved surface contour were derived. Since the projection
+of the spot on the surface was elongated with increasing angle of incidence, the spatial spot
+overlap increased with increasing angle of incidence. This trend changed more significantly
+at higher scanning speed (> spot radius w0 × pulse frequency f).
+(3) The ablation effect of laser scanning at different speeds at different positions on curved
+aluminum surfaces were simulated by COMSOL software. It was found that the depth of
+the scan line decreased significantly when the laser scanned the higher incidence angle
+(α=45°) region of the curved surface, which was due to the decrease of the peak laser
+energy resulting in a shorter time for the material to be above the ablation threshold. In
+accordance with the conclusion of (2), the spatial spot overlap rate was higher in the higher
+incidence angle region, but at α = 45°, the increase in the spatial spot overlap rate could
+not compensate for the decrease in the focal peak energy. The above simulations were
+confirmed by experiments and microscopic observations.
+(4) Summarizing the above analysis, we found that the processing effect of laser on curved
+surfaces was affected by the combination of incidence angle and scanning speed. Therefore,
+processing curved samples with conventional uniform scanning speed method inevitably
+posed problems of processing uniformity. A filling method with variable speed scanning
+was designed to reduce the scanning speed at the higher incidence angle position of
+the curved surface to compensate for the decrease of peak energy at the focus. The
+improvement of uniformity by variable speed scanning was confirmed by performing
+uniform (speed = 3 m/s) scanning and variable speed scanning (speed changed from 3 m/s
+to 2 m/s) on cylindrical samples, respectively.
+Funding. China Postdoctoral Science Foundation (GZB20240241, 2024M750993); Postdoctoral Science Foundation
+of Hubei Province (2024HBBHCXB010).
+Acknowledgment. Thanks to the China Postdoctoral Science Foundation and the Postdoctor Project of Hubei
+Province for help identifying collaborators for this work.
+Disclosures. The authors declare no conflicts of interest.
+Data availability. Data underlying the results presented in this paper are not publicly available at this time but may
+be obtained from the authors upon reasonable request.
+
+
+Research Article
+Vol. 33, No. 6 / 24 Mar 2025 / Optics Express 14325
+References
+1.
+P. Wongwasuratthakul, W. Aumpalop, C. Chakaja, et al., “Fabrication of Al/Au hybrid SERS substrate using laser
+engraving for rapid detection of melamine and its analogues by hand-held Raman spectrometer,” Microchem. J. 200,
+110396 (2024).
+2.
+S. Rout, S. K. Patel, D. Dhupal, et al., “Experimental investigation during pulsed fiber laser micro-engraving act on
+high-performance ceramic: Statistical study followed by surface morphology,” Opt. Laser Technol. 168, 109887
+(2024).
+3.
+E. Kažukauskas, S. Butkus, V. Jukna, et al., “Surface roughness control in deep engraving of fused silica using
+femtosecond laser ablation,” Surf. Interfaces 50, 104471 (2024).
+4.
+W. Li, Y. Jin, J. Gu, et al., “Critical surface characteristics for coating adhesion and friction behavior of aluminum
+alloys after laser cleaning,” J. Mater. Process. Technol. 332, 118549 (2024).
+5.
+Z. He, S. Zheng, Y. Shen, et al., “Laser-induced layer-by-layer removal and thermo-mechanical action mechanisms of
+FeCo-based multilayer wave-absorbing coatings,” J. Mater. Sci. Technol. 190, 10–23 (2024).
+6.
+Y. Hu, R. Jiang, C. Huang, et al., “Simulation and experimental study of femtosecond laser ablation mechanisms of
+NiCoCrAlY coatings,” Surf. Coat. Technol. 494, 131469 (2024).
+7.
+Y. Qiao, T. Chen, H. Ma, et al., “Experimental study on the sidewall quality of femtosecond laser drilling CFRP,”
+Composites, Part B 266, 110972 (2023).
+8.
+Z. Gu, Y. He, J. Ji, et al., “Reducing the taper and heat-affected zone in nanosecond laser drilling of CFRP plate
+using backside sacrificial layer,” Optics and Lasers in Engineering 185, 108735 (2025).
+9.
+H. Zhu, W. Xie, W. Du, et al., “Fabrication and quality improvement of film cooling holes via picosecond laser
+drilling assisted by waterjet and post-electrochemical machining,” Opt. Laser Technol. 182, 112162 (2025).
+10. Y. Zhou, Q. Zhang, X. Li, et al., “Mechanical performance of laser-textured metallic surface,” J. Mater. Res. Technol.
+33, 6084–6089 (2024).
+11. K. Li, J. Lu, Y. Deng, et al., “Mechanism of selective texturing of CFRP by femtosecond laser,” Composites, Part B
+291, 112000 (2025).
+12. M. Malinauskas, A. Žukauskas, S. Hasegawa, et al., “Ultrafast laser processing of materials: from science to industry,”
+Light: Sci. Appl. 5(8), e16133 (2016).
+13. T. Karkantonis, P. Penchev, V. Nasrollahi, et al., “Laser micro-machining of freeform surfaces: Accuracy, repeatability
+and reproducibility achievable with multi-axis processing strategies,” Precis. Eng. 78, 233–247 (2022).
+14. W. Wang, Q. Jiang, W. Liu, et al., “Effect of laser fluence on the cleaning quality and surface properties of TA15
+titanium alloy surface paint layer,” Opt. Laser Technol. 181, 112032 (2025).
+15. W. Ma, T. Hu, C. Zhang, et al., “Adaptive remanufacturing for freeform surface parts based on linear laser scanner
+and robotic laser cladding,” Robotics and Computer-Integrated Manufacturing 91, 102855 (2025).
+16. X. Du, C. Florian, and C. B. Arnold, “Single-lens dynamic z-scanning for simultaneous in situ position detection and
+laser processing focus control,” Light: Sci. Appl. 12(1), 274 (2023).
+17. S. Kang, M. Duocastella, and C. B. Arnold, “Variable optical elements for fast focus control,” Nat. Photonics 14(9),
+533–542 (2020).
+18. M. G. Lee, G. Kim, C.-W. Lee, et al., “Design of voice coil motor dynamic focusing unit for a laser scanner,” Rev.
+Sci. Instrum. 85(4), 045104 (2014).
+19. C. Hao, Y. Liu, X. Chen, et al., “Electrowetting on liquid-infused film (EWOLF): Complete reversibility and
+controlled droplet oscillation suppression for fast optical imaging,” Sci. Rep. 4(1), 6846 (2014).
+20. J. Lee, Y. Park, and S. K. Chung, “Multifunctional liquid lens for variable focus and aperture,” Sensors and Actuators
+A: Physical 287, 177–184 (2019).
+21. Z. Jian, Z. Tong, Y. Ma, et al., “Laser beam modulation with a fast focus tunable lens for speckle reduction in laser
+projection displays,” Optics and Lasers in Engineering 126, 105918 (2020).
+22. R. Patra, S. Agarwal, S. Kondaraju, et al., “Membrane-less variable focus liquid lens with manual actuation,” Opt.
+Commun. 389, 74–78 (2017).
+23. H. Radhakrishnan and W. N. Charman, “Optical characteristics of Alvarez variable-power spectacles,” Ophthalmic
+Physiol. Opt. 37(3), 284–296 (2017).
+24. M. Bawart, A. Jesacher, P. Zelger, et al., “Modified Alvarez lens for high-speed focusing,” Opt. Express 25(24),
+29847 (2017).
+25. Z. Yongchao, Z. Wei, T. Feng, et al., “Development of Miniature Tunable Multi-Element Alvarez Lenses,” IEEE J.
+Sel. Top. Quantum Electron. 21(4), 100–107 (2015).
+26. Y. Liu, T. Chen, Y. Qiao, et al., “Optical design and analysis of a high-speed triple galvanometer laser 3D scanning
+system,” Opt. Laser Technol. 181, 111608 (2025).
+27. Y. Liu, Y. Qiao, Y. Ding, et al., “Extending the 3D scanning range of reflective dynamic focusing device-based laser
+scanners,” Opt. Lett. 48(24), 6496 (2023).
+28. J. Chen, X. Chen, X. Zhang, et al., “Effect of laser incidence angle on the femtosecond laser ablation characteristics
+of silicon carbide ceramics,” Optics and Lasers in Engineering 172, 107849 (2024).
+29. C. Yi, X. Chen, Y. Zhou, et al., “Effects of scanning speed and scanning times on surface quality of line spot laser
+polishing of nickel-based superalloys,” J. Mater. Res. Technol. 26, 2179–2190 (2023).
+30. C. M. Grohol and Y. C. Shin, “On the predictive accuracy and sensitivity to property variations in the high-fidelity
+modeling of the molten pool dynamics in laser melting of metals,” Int. J. Heat Mass Transfer 232, 125894 (2024).
+
+
+Research Article
+Vol. 33, No. 6 / 24 Mar 2025 / Optics Express 14326
+31. J. M. Vazquez-Martinez, I. D. Sol Illana, E. Ukar Arrien, et al., “Laser surface texturing as a finishing process for
+aerospace alloys,” in Advanced Machining and Finishing (2021), pp. 643–666.
+32. A. L. Rominiyi and P. M. Mashinini, “Processing and machining of aerospace metals,” in Aerospace Materials
+(2025), pp. 135–158.
+33. M. S. Khan, S. Ali, D. Westerbaan, et al., “The effect of laser impingement angle on the optimization of melt pool
+geometry to improve process stability during high-speed laser welding of thin-gauge automotive steels,” Journal of
+Manufacturing Processes 78, 242–253 (2022).

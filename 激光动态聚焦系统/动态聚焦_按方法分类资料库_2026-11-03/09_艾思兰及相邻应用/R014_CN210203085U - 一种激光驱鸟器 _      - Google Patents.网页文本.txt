@@ -1,0 +1,582 @@
+来源：https://patents.google.com/patent/CN210203085U/zh
+采集日期：2026-11-03
+
+CN210203085U - 一种激光驱鸟器 
+      - Google Patents
+CN210203085U - 一种激光驱鸟器 
+      - Google Patents
+一种激光驱鸟器
+Download PDF
+Info
+Publication number
+CN210203085U
+CN210203085U
+CN201920637556.XU
+CN201920637556U
+CN210203085U
+CN 210203085 U
+CN210203085 U
+CN 210203085U
+CN 201920637556 U
+CN201920637556 U
+CN 201920637556U
+CN 210203085 U
+CN210203085 U
+CN 210203085U
+Authority
+CN
+China
+Prior art keywords
+laser
+bird
+tilt
+controller
+electric pan
+Prior art date
+2019-05-07
+Legal status (The legal status is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the status listed.)
+Active
+Application number
+CN201920637556.XU
+Other languages
+English
+(
+en
+)
+Inventor
+Qian Zhou
+周倩
+Jian Zhou
+周键
+Zhou He
+何舟
+Current Assignee (The listed assignees may be inaccurate. Google has not performed a legal analysis and makes no representation or warranty as to the accuracy of the list.)
+Suzhou Ai Silan Photoelectric Co Ltd
+Original Assignee
+Suzhou Ai Silan Photoelectric Co Ltd
+Priority date (The priority date is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the date listed.)
+2019-05-07
+Filing date
+2019-05-07
+Publication date
+2020-03-31
+2019-05-07
+Application filed by Suzhou Ai Silan Photoelectric Co Ltd
+filed
+Critical
+Suzhou Ai Silan Photoelectric Co Ltd
+2019-05-07
+Priority to CN201920637556.XU
+priority
+Critical
+patent/CN210203085U/zh
+2020-03-31
+Application granted
+granted
+Critical
+2020-03-31
+Publication of CN210203085U
+publication
+Critical
+patent/CN210203085U/zh
+Status
+Active
+legal-status
+Critical
+Current
+2029-05-07
+Anticipated expiration
+legal-status
+Critical
+Links
+Espacenet
+Global Dossier
+Discuss
+230000001846
+repelling effect
+Effects
+0.000
+claims
+abstract
+description
+22
+230000001681
+protective effect
+Effects
+0.000
+claims
+abstract
+description
+6
+230000000694
+effects
+Effects
+0.000
+abstract
+description
+6
+241000271566
+Aves
+Species
+0.000
+description
+9
+238000012544
+monitoring process
+Methods
+0.000
+description
+4
+230000006872
+improvement
+Effects
+0.000
+description
+3
+230000005611
+electricity
+Effects
+0.000
+description
+2
+238000012986
+modification
+Methods
+0.000
+description
+2
+230000004048
+modification
+Effects
+0.000
+description
+2
+241000272184
+Falconiformes
+Species
+0.000
+description
+1
+230000009471
+action
+Effects
+0.000
+description
+1
+238000005276
+aerator
+Methods
+0.000
+description
+1
+239000003245
+coal
+Substances
+0.000
+description
+1
+238000010586
+diagram
+Methods
+0.000
+description
+1
+230000009545
+invasion
+Effects
+0.000
+description
+1
+230000007246
+mechanism
+Effects
+0.000
+description
+1
+238000000034
+method
+Methods
+0.000
+description
+1
+230000002035
+prolonged effect
+Effects
+0.000
+description
+1
+230000002940
+repellent
+Effects
+0.000
+description
+1
+239000005871
+repellent
+Substances
+0.000
+description
+1
+230000000007
+visual effect
+Effects
+0.000
+description
+1
+Images
+Landscapes
+Catching Or Destruction
+(
+AREA
+)
+Abstract
+本实用新型公开了一种激光驱鸟器，包括底座、固定于所述底座上的支架、固定于所述支架顶部的电动云台、固定于所述电动云台上安装有激光驱鸟组件、驱动所述电动云台的控制器；所述激光驱鸟组件由出射孔的保护罩、设置于所述保护罩内的激光器和扩束镜构成。激光器发射出的激光通过扩束镜，形成激光光束从出射孔射出；激光驱鸟组件在电动云台的带动下在水平和垂直方向循环往复转动，从而达到全方位驱鸟的效果。
+Description
+一种激光驱鸟器
+技术领域
+本实用新型涉及驱鸟技术领域，尤其是一种激光驱鸟器。
+背景技术
+农场、果园、风力发电厂、军民用机场等一切防止有害鸟类侵入而危害到自己劳动成果或设备安全的手段都叫驱鸟。随着国内外生态环境的改善，人们保护鸟类意识的提高，鸟类越来越多，这给世界航空、电力、农业带来了一定的难题。
+为了保护航空安全、农场主的财产、电力安全等，人们采取了各种各样的驱鸟措施，如驱鸟稻草人、充气人、炮竹弹、爆音驱鸟、煤气炮、驱鸟剂、驱鸟枪、驱鸟猎鹰、驱鸟车、探鸟雷达等。这些手段在应用初期效果明显，但随着时间延长，鸟类逐渐适应了这种环境，驱鸟效果渐渐降低，直到无驱鸟效果。
+实用新型内容
+针对上述问题，本实用新型提供一种激光驱鸟器，无需人为干预，省时省力，驱鸟效果好且具有持续性。
+一种激光驱鸟器，包括底座、固定于所述底座上的支架、固定于所述支架顶部的电动云台、固定于所述电动云台上安装有激光驱鸟组件、驱动所述电动云台的控制器；所述激光驱鸟组件由出射孔的保护罩、设置于所述保护罩内的激光器和扩束镜构成，所述激光器发射出的激光通过所述扩束镜，形成激光光束从所述出射孔射出。
+进一步的，所述激光器发射出的激光波长为520nm绿光，光束直径在40-50mm。
+进一步的，所述电动云台在水平方向上0-350°转动，在垂直方向上±35°转动。
+进一步的，所述支架一侧通过支撑架固定有太阳能板，所述太阳能板通过所述控制器连接有蓄电池，所述蓄电池设置于所述底座内，为所述控制器、电动云台、激光器供电。
+进一步的，所述控制器和所述蓄电池均设置于防水箱体内部，所述电动云台具有防水性能。
+本实用新型的有益效果：激光器发射出的激光通过扩束镜，形成激光光束从出射孔射出；激光驱鸟组件在电动云台的带动下在水平和垂直方向循环往复转动，从而达到全方位驱鸟的效果。
+附图说明
+图1为激光驱鸟器的结构示意图。
+具体实施方式
+下面结合附图和具体实施方式对本实用新型作进一步详细的说明。本实用新型的实施例是为了示例和描述起见而给出的，而并不是无遗漏的或者将本实用新型限于所公开的形式。很多修改和变化对于本领域的普通技术人员而言是显而易见的。选择和描述实施例是为了更好说明本实用新型的原理和实际应用，并且使本领域的普通技术人员能够理解本实用新型从而设计适于特定用途的带有各种修改的各种实施例。
+实施例1
+一种激光驱鸟器，如图1所示，包括底座1、固定于所述底座上的支架2、固定于所述支架顶部的电动云台3、固定于所述电动云台上安装有激光驱鸟组件、驱动所述电动云台的控制器9；所述激光驱鸟组件由出射孔的保护罩4、设置于所述保护罩内的激光器5和扩束镜6构成。
+工作原理：激光器发射出的激光通过扩束镜，形成激光光束从出射孔射出；激光驱鸟组件在电动云台的带动下在水平和垂直方向循环往复转动，从而达到全方位驱鸟的效果。
+云台原本为安装、固定摄像机的支撑设备，分为固定和电动云台两种。固定云台适用于监视范围不大的情况，在固定云台上安装好摄像机后可调整摄像机的水平和俯仰的角度，达到最好的工作姿态后只要锁定调整机构就可以了。电动云台适用于对大范围进行扫描监视，它可以扩大摄像机的监视范围。电动云台高速姿态是由两台执行电动机来实现，电动机接受来自控制器的信号精确地运行定位。在控制信号的作用下，云台上的摄像机既可自动扫描监视区域，也可在监控中心值班人员的操纵下跟踪监视对象。在本实施例中将其直接运用于激光驱鸟组件的大范围活动支撑，因此其控制方式也属于现有技术，不是本申请涉及的改进点。
+所述激光器发射出的激光优选波长为520nm的绿光，光束直径在40-50mm。鸟类视觉最为敏感，尤其是对于波长为520nm的绿色激光。激光器发射出波长为520nm的“棒状”绿色激光模拟生物产生视觉反射的条件，绿色激光棒扫射过来时，鸟类犹如看到一根绿色大棒，以此达到驱鸟效果。
+在本实施例中，选择的电动云台可在水平方向上0-350°转动，在垂直方向上±35°转动，从而获得较大的驱鸟范围。
+为了解决供电问题，所述支架2一侧通过支撑架7固定有太阳能板8，所述太阳能板8通过所述控制器9连接有蓄电池10，所述蓄电池10设置于所述底座1内，为所述控制器9、电动云台3、激光器5供电。
+控制器9连接在太阳能板与蓄电池之间起到的作用：控制太阳能板的输出电压,保护蓄电池不被过充；同时也可以防止太阳能板不发电时发生蓄电池内的电倒流的情况。在太阳能板和蓄电池之间设置控制器防止上述两种情况的发生，也属于常规技术，不是本申请涉及的改进点。
+考虑到户外防水性能，所述控制器和所述蓄电池均设置于防水箱体内部，所述电动云台具有防水性能。本实施例中，所述底座应当具有防水效果，控制器9设置于防水盒11内，所述防水盒11固定于所述支架2上。太阳能板与控制器、控制器与蓄电池、控制器与电动云台之间的走线均位于支架2内部。
+显然，所描述的实施例仅仅是本实用新型的一部分实施例，而不是全部的实施例。基于本实用新型中的实施例，本领域及相关领域的普通技术人员在没有作出创造性劳动的前提下所获得的所有其他实施例，都应属于本实用新型保护的范围。
+Claims (
+4
+)
+1.一种激光驱鸟器，其特征在于：包括底座、固定于所述底座上的支架、固定于所述支架顶部的电动云台、固定于所述电动云台上安装有激光驱鸟组件、驱动所述电动云台的控制器，激光驱鸟组件在电动云台的带动下在水平和垂直方向循环往复转动；
+所述激光驱鸟组件由出射孔的保护罩、设置于所述保护罩内的激光器和扩束镜构成，所述激光器发射出的激光通过所述扩束镜，形成激光光束从所述出射孔射出；所述激光器发射出的激光波长为520nm绿光，光束直径在40-50mm。
+2.根据权利要求1所述的激光驱鸟器，其特征在于：所述电动云台在水平方向上0-350°转动，在垂直方向上±35°转动。
+3.根据权利要求1或2所述的激光驱鸟器，其特征在于：所述支架一侧通过支撑架固定有太阳能板，所述太阳能板通过所述控制器连接有蓄电池，所述蓄电池设置于所述底座内，为所述控制器、电动云台、激光器供电。
+4.根据权利要求3所述的激光驱鸟器，其特征在于：所述控制器和所述蓄电池均设置于防水箱体内部，所述电动云台具有防水性能。
+CN201920637556.XU
+2019-05-07
+2019-05-07
+一种激光驱鸟器
+Active
+CN210203085U
+(
+zh
+)
+Priority Applications (1)
+Application Number
+Priority Date
+Filing Date
+Title
+CN201920637556.XU
+CN210203085U
+(
+zh
+)
+2019-05-07
+2019-05-07
+一种激光驱鸟器
+Applications Claiming Priority (1)
+Application Number
+Priority Date
+Filing Date
+Title
+CN201920637556.XU
+CN210203085U
+(
+zh
+)
+2019-05-07
+2019-05-07
+一种激光驱鸟器
+Publications (1)
+Publication Number
+Publication Date
+CN210203085U
+true
+CN210203085U
+              (
+zh
+)
+2020-03-31
+Family
+ID=69924873
+Family Applications (1)
+Application Number
+Title
+Priority Date
+Filing Date
+CN201920637556.XU
+Active
+CN210203085U
+(
+zh
+)
+2019-05-07
+2019-05-07
+一种激光驱鸟器
+Country Status (1)
+Country
+Link
+CN
+(
+1
+)
+CN210203085U
+(
+zh
+)
+Cited By (3)
+* Cited by examiner, † Cited by third party
+Publication number
+Priority date
+Publication date
+Assignee
+Title
+CN111869651A
+(
+zh
+)
+*
+2020-07-21
+2020-11-03
+国网江苏省电力有限公司检修分公司
+一种铁塔激光驱鸟器
+CN113697104A
+(
+zh
+)
+*
+2021-09-01
+2021-11-26
+浙江科顿科技有限公司
+一种可控激光光路的驱鸟无人机系统
+CN114794075A
+(
+zh
+)
+*
+2022-03-23
+2022-07-29
+湖北鑫英泰系统技术股份有限公司
+Ai自动识别智能双色激光驱鸟云台
+2019
+2019-05-07
+CN
+CN201920637556.XU
+patent/CN210203085U/zh
+active
+Active
+Cited By (3)
+* Cited by examiner, † Cited by third party
+Publication number
+Priority date
+Publication date
+Assignee
+Title
+CN111869651A
+(
+zh
+)
+*
+2020-07-21
+2020-11-03
+国网江苏省电力有限公司检修分公司
+一种铁塔激光驱鸟器
+CN113697104A
+(
+zh
+)
+*
+2021-09-01
+2021-11-26
+浙江科顿科技有限公司
+一种可控激光光路的驱鸟无人机系统
+CN114794075A
+(
+zh
+)
+*
+2022-03-23
+2022-07-29
+湖北鑫英泰系统技术股份有限公司
+Ai自动识别智能双色激光驱鸟云台
+Similar Documents
+Publication
+Publication Date
+Title
+CN210869602U
+(
+zh
+)
+2020-06-30
+一种输电线路综合驱鸟装置
+KR102003610B1
+(
+ko
+)
+2019-07-24
+가변 음파 및 광 발생 구조의 이동 객체 퇴치 장치
+US20030101634A1
+(
+en
+)
+2003-06-05
+Pest deterrent
+CN104982416A
+(
+zh
+)
+2015-10-21
+日夜用智能化视频激光驱鸟装置及其使用方法
+CN105451548A
+(
+zh
+)
+2016-03-30
+用于通过激光来驱鸟的设备和方法
+CN212992280U
+(
+zh
+)
+2021-04-16
+光伏电站用激光驱鸟设备
+WO2018027666A1
+(
+zh
+)
+2018-02-15
+一种高压输电塔驱鸟装置
+WO2018027673A1
+(
+zh
+)
+2018-02-15
+一种高压输电塔驱鸟装置
+KR102421330B1
+(
+ko
+)
+2022-07-15
+농작물의 피해 방지를 위한 추적형 야생동물 퇴치장치
+CN103404504A
+(
+zh
+)
+2013-11-27
+一种生物驱赶器
+CN102396447A
+(
+zh
+)
+2012-04-04
+一种光电目标识别驱鸟器及驱鸟方法
+WO2018027671A1
+(
+zh
+)
+2018-02-15
+一种高压输电塔驱鸟装置
+CN203399639U
+(
+zh
+)
+2014-01-22
+一种生物驱赶器
+CN215629835U
+(
+zh
+)
+2022-01-25
+一种海洋工程作业平台
+CN208403033U
+(
+zh
+)
+2019-01-22
+一种具有监控设备可360°旋转的驱鸟仪
+CN204837707U
+(
+zh
+)
+2015-12-09
+日夜用智能化视频激光驱鸟装置
+CN208590474U
+(
+zh
+)
+2019-03-12
+一种手持声光驱鸟系统
+CN204499250U
+(
+zh
+)
+2015-07-29
+激光驱鸟器
+CN217564720U
+(
+zh
+)
+2022-10-14
+机场智能激光驱击鸟系统
+CN115088706B
+(
+zh
+)
+2025-07-25
+一种用于输电线路的驱鸟装置
+CN200938816Y
+(
+zh
+)
+2007-08-29
+新型多功能复合电磁辐射驱鸟装置
+CN106538507A
+(
+zh
+)
+2017-03-29
+一种超声波驱鸟器
+CN212911398U
+(
+zh
+)
+2021-04-09
+机场驱鸟车
+CN215142944U
+(
+zh
+)
+2021-12-14
+一种具有自清洁功能的风力反光驱鸟器
+CN218977837U
+(
+zh
+)
+2023-05-09
+一种基于激光动画闪烁的激光驱鸟系统
+Legal Events
+Date
+Code
+Title
+Description
+2020-03-31
+GR01
+Patent grant
+2020-03-31
+GR01
+Patent grant

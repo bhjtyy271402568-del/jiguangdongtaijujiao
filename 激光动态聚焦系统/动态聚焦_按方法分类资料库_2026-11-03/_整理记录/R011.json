@@ -1,0 +1,50 @@
+{
+  "url": "https://patents.google.com/patent/CN103157904B/zh",
+  "category": "01_移动透镜式与匹配光学",
+  "origins": [
+    "Gemini输出.txt",
+    "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md",
+    "苏州艾思兰_动态聚焦资料\\来源清单.csv"
+  ],
+  "context": "原文提到的专利号，补全公开文本入口；标题及相关性待与原件核对",
+  "id": "R011",
+  "files": [
+    {
+      "path": "01_移动透镜式与匹配光学\\R011_CN103157904B - 一种基于动态聚焦的激光加工装置 _        - Google Patents.html",
+      "type": "HTML",
+      "bytes": 125515,
+      "sha256": "616977425c5c0c36d8e1b111fa2120836ca4f63a662d4f91fd9c4efd390b97b5",
+      "url": "https://patents.google.com/patent/CN103157904B/zh",
+      "title": "CN103157904B - 一种基于动态聚焦的激光加工装置 \n        - Google Patents",
+      "text_chars": 22482
+    },
+    {
+      "path": "01_移动透镜式与匹配光学\\R011_CN103157904B - 一种基于动态聚焦的激光加工装置 - Google Patents.pdf",
+      "type": "PDF",
+      "pages": 12,
+      "bytes": 987303,
+      "sha256": "006215ae7d85d95577457e5171d7c4cb130278e2fc5b20ba82de36b5a9f0ede5",
+      "url": "https://patentimages.storage.googleapis.com/07/fe/95/58e829bc4c4d4f/CN103157904B.pdf",
+      "text_chars": 22,
+      "title": "",
+      "preview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://patents.google.com/patent/CN103157904B/zh",
+      "http": 200,
+      "final_url": "https://patents.google.com/patent/CN103157904B/zh",
+      "result": "网页"
+    },
+    {
+      "url": "https://patentimages.storage.googleapis.com/07/fe/95/58e829bc4c4d4f/CN103157904B.pdf",
+      "http": 200,
+      "final_url": "https://patentimages.storage.googleapis.com/07/fe/95/58e829bc4c4d4f/CN103157904B.pdf",
+      "result": "有效PDF"
+    }
+  ],
+  "title": "CN103157904B - 一种基于动态聚焦的激光加工装置 - Google Patents",
+  "status": "PDF已下载"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "S007",
+  "url": "https://opg.optica.org/oe/viewmedia.cfm?uri=oe-33-6-14314&seq=0",
+  "category": "02_反射式与三振镜调焦",
+  "origins": [
+    "补充检索_原文提及条目及有效替代入口"
+  ],
+  "context": "三振镜曲面加工_2025_出版社PDF入口",
+  "title": "三振镜曲面加工_2025_出版社PDF入口",
+  "files": [],
+  "attempts": [
+    {
+      "url": "https://opg.optica.org/oe/viewmedia.cfm?uri=oe-33-6-14314&seq=0",
+      "http": 200,
+      "final_url": "https://validate.perfdrive.com/?ssa=3f6ddf37-f307-cf78-853d-2a8cf6bcff75&ssb=61328291074&ssc=https%3A%2F%2Fopg.optica.org%2Foe%2Fviewmedia.cfm%3Furi%3Doe-33-6-14314%26seq%3D0&ssi=15eb0731-d3hy-37d4-3ca7-e436bd900640&ssk=botmanager_support@radware.com&ssm=17389140643481075108519224623820&ssn=80fbc88689f37e72743c39d2b1f97d625d973a223ff3-27a8-87e0-6ef962&sso=44a6ce0-61c1-7dac346a7e38c9a97297d71d32e5681e74890c37d5f6b631&ssp=46440973151793665567179367806169600&ssq=46321377601279378019576012962549548927740&ssr=MjMuMTcyLjIwMC44OQ==&sst=Mozilla%2F5.0%20%28compatible%3B%20ResearchDocumentCollection%2F1.0%29&ssv=&ssw=",
+      "result": "网页"
+    },
+    {
+      "url": "https://validate.perfdrive.com/?ssa=3f6ddf37-f307-cf78-853d-2a8cf6bcff75&ssb=61328291074&ssc=https%3A%2F%2Fopg.optica.org%2Foe%2Fviewmedia.cfm%3Furi%3Doe-33-6-14314%26seq%3D0&ssi=15eb0731-d3hy-37d4-3ca7-e436bd900640&ssk=botmanager_support@radware.com&ssm=17389140643481075108519224623820&ssn=80fbc88689f37e72743c39d2b1f97d625d973a223ff3-27a8-87e0-6ef962&sso=44a6ce0-61c1-7dac346a7e38c9a97297d71d32e5681e74890c37d5f6b631&ssp=46440973151793665567179367806169600&ssq=46321377601279378019576012962549548927740&ssr=MjMuMTcyLjIwMC44OQ==&sst=Mozilla%2F5.0%20%28compatible%3B%20ResearchDocumentCollection%2F1.0%29&ssv=&ssw=",
+      "error": "终检排除：Radware Captcha Page"
+    }
+  ],
+  "status": "全文已由用户补齐 → U005",
+  "resolved_by": "U005",
+  "resolution_note": "此前网络获取未完成；现已由用户提供正式版全文补齐。保留历史请求记录。"
+}

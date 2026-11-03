@@ -1,0 +1,26 @@
+{
+  "id": "S003",
+  "url": "https://opg.optica.org/oe/viewmedia.cfm?seq=0&uri=oe-31-1-673",
+  "category": "02_反射式与三振镜调焦",
+  "origins": [
+    "补充检索_原文提及条目及有效替代入口"
+  ],
+  "context": "振镜驱动动态聚焦_2023_出版社PDF入口",
+  "title": "振镜驱动动态聚焦_2023_出版社PDF入口",
+  "files": [],
+  "attempts": [
+    {
+      "url": "https://opg.optica.org/oe/viewmedia.cfm?seq=0&uri=oe-31-1-673",
+      "http": 200,
+      "final_url": "https://validate.perfdrive.com/?ssa=08e8669c-4581-075f-d3cf-25f6447bfea7&ssb=05079284888&ssc=https%3A%2F%2Fopg.optica.org%2Foe%2Fviewmedia.cfm%3Fseq%3D0%26uri%3Doe-31-1-673&ssi=737c3580-d3hy-3429-b40a-171439c13392&ssk=botmanager_support@radware.com&ssm=33128662603976319108714986774373&ssn=38c6caf8e3da5f9216d88ae55c99ef06262767468515-0ae6-f461-495482&sso=422cf61-40a6-18460a9aff471d8e4c60c94262d5d28e39ad3e6323a1b80c&ssp=26442588641793686163179364737379506&ssq=53260887601182529505176011012749606097794&ssr=MjMuMTcyLjIwMC44OQ==&sst=Mozilla%2F5.0%20%28compatible%3B%20ResearchDocumentCollection%2F1.0%29&ssv=&ssw=",
+      "result": "网页"
+    },
+    {
+      "url": "https://validate.perfdrive.com/?ssa=08e8669c-4581-075f-d3cf-25f6447bfea7&ssb=05079284888&ssc=https%3A%2F%2Fopg.optica.org%2Foe%2Fviewmedia.cfm%3Fseq%3D0%26uri%3Doe-31-1-673&ssi=737c3580-d3hy-3429-b40a-171439c13392&ssk=botmanager_support@radware.com&ssm=33128662603976319108714986774373&ssn=38c6caf8e3da5f9216d88ae55c99ef06262767468515-0ae6-f461-495482&sso=422cf61-40a6-18460a9aff471d8e4c60c94262d5d28e39ad3e6323a1b80c&ssp=26442588641793686163179364737379506&ssq=53260887601182529505176011012749606097794&ssr=MjMuMTcyLjIwMC44OQ==&sst=Mozilla%2F5.0%20%28compatible%3B%20ResearchDocumentCollection%2F1.0%29&ssv=&ssw=",
+      "error": "终检排除：Radware Captcha Page"
+    }
+  ],
+  "status": "全文已由用户补齐 → U002",
+  "resolved_by": "U002",
+  "resolution_note": "此前网络获取未完成；现已由用户提供正式版全文补齐。保留历史请求记录。"
+}

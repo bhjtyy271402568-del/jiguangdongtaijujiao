@@ -1,0 +1,20 @@
+{
+  "id": "S013",
+  "url": "https://www.mdpi.com/2072-666X/16/4/482/pdf?version=1745050038",
+  "category": "05_MEMS与全息调焦",
+  "origins": [
+    "补充检索_原文提及条目及有效替代入口"
+  ],
+  "context": "MEMS综述_出版社PDF",
+  "title": "MEMS综述_出版社PDF",
+  "files": [],
+  "attempts": [
+    {
+      "url": "https://www.mdpi.com/2072-666X/16/4/482/pdf?version=1745050038",
+      "http": 403,
+      "final_url": "https://www.mdpi.com/2072-666X/16/4/482/pdf?version=1745050038",
+      "error": "403 Client Error: Forbidden for url: https://www.mdpi.com/2072-666X/16/4/482/pdf?version=1745050038"
+    }
+  ],
+  "status": "未获取"
+}

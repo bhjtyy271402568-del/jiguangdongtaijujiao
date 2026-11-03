@@ -1,0 +1,31 @@
+{
+  "url": "https://www.scanlab.de/en/products/scan-systems",
+  "category": "01_移动透镜式与匹配光学",
+  "origins": [
+    "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md",
+    "苏州艾思兰_动态聚焦资料\\来源清单.csv"
+  ],
+  "context": "\n2. **Scanlab intelliSCAN / varioSCAN系列**：典型振镜扫描头与动态聚焦模块组合，面向激光打标、焊接和3D加工。建议采购时核实具体波长、口径、Z行程和控制协议。 [厂商官网](https://www.scanlab.de/en/products/scan-systems)",
+  "id": "R060",
+  "files": [
+    {
+      "path": "01_移动透镜式与匹配光学\\R060_Scan Systems _ Scanlab.html",
+      "type": "HTML",
+      "bytes": 144029,
+      "sha256": "5bd67ceb54a5caf463b3759bf389ae1b1018877a27feb25aba637460fe93be07",
+      "url": "https://www.scanlab.de/en/products/scan-systems",
+      "title": "Scan Systems | Scanlab",
+      "text_chars": 6680
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://www.scanlab.de/en/products/scan-systems",
+      "http": 200,
+      "final_url": "https://www.scanlab.de/en/products/scan-systems",
+      "result": "网页"
+    }
+  ],
+  "title": "Scan Systems | Scanlab",
+  "status": "网页已保存"
+}

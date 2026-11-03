@@ -1,0 +1,34 @@
+{
+  "url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=935084",
+  "category": "07_测高闭环_三轴同步与标定",
+  "origins": [
+    "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+    "用户粘贴_激光动态聚焦深度调研.txt"
+  ],
+  "context": "\n- 原始入口：https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=935084",
+  "id": "R041",
+  "files": [
+    {
+      "path": "07_测高闭环_三轴同步与标定\\R041_NIST_Methodologies and Implementation of Laser Powder-Bed Fusion Process Control_2023.pdf",
+      "type": "PDF",
+      "pages": 9,
+      "bytes": 1255547,
+      "sha256": "22f04c2d14a3637c8ef36eef44fdae8fb6740e71a3184104549198d8db10971c",
+      "url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=935084",
+      "text_chars": 42893,
+      "title": "Methodologies and Implementation of Laser Powder-Bed Fusion Process Control",
+      "preview": "Methodologies and Implementation of\nLaser Powder-Bed Fusion\nProcess Control\nHo Yeung, National Institute of Standards and Technology (NIST)\nPART QUALITY in additive manufacturing\n(AM) is highly dependent on process control,\nbut there is a lack of adequate AM control\nmethods and standards. In particular, a stan-\ndard programing language (such as G-code/\nM-code for traditional machine tools) is not\nwell deﬁned, and there is no uniform/transpar-\nent way of implementing laser scan strategies\namong t",
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=935084",
+      "http": 200,
+      "final_url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=935084",
+      "result": "有效PDF"
+    }
+  ],
+  "status": "PDF已下载",
+  "title": "NIST_Methodologies and Implementation of Laser Powder-Bed Fusion Process Control_2023"
+}

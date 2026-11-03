@@ -1,0 +1,106 @@
+来源：https://diposit.ub.edu/items/c5405db1-7249-4964-abb3-89c9d150361f/full
+采集日期：2026-11-03
+
+Variable optical elements for fast focus control
+Saltar al contingut principal
+Comunitats i col·leccions
+Navega per tot el DD
+Estadístiques
+Com publicar
+Contacte
+English
+Español
+Català
+Iniciar sessió
+Iniciar sessió
+Nou Usuari? Feu clic aquí per registrar-se
+Has oblidat la teva contrasenya?
+Identificació UB
+Inici
+Recerca
+Física Aplicada
+Articles publicats en revistes (Física Aplicada)
+Variable optical elements for fast focus control
+Variable optical elements for fast focus control
+Vista senzilla d'ítem
+dc.contributor.author
+Kang, SeungYeon
+dc.contributor.author
+Duocastella, Martí
+dc.contributor.author
+Arnold, Craig B.
+dc.date.accessioned
+2023-01-26T17:56:24Z
+dc.date.available
+2023-01-26T17:56:24Z
+dc.date.issued
+2020-09-01
+dc.date.updated
+2023-01-26T17:56:24Z
+dc.description.abstract
+In this Review, we survey recent developments in the emerging field of high-speed variable-z-focus optical elements, which are driving important innovations in advanced imaging and materials processing applications. Three-dimensional biomedical imaging, high-throughput industrial inspection, advanced spectroscopies, and other optical characterization and materials modification methods have made great strides forward in recent years due to precise and rapid axial control of light. Three state-of-the-art key optical technologies that enable fast z-focus modulation are reviewed, along with a discussion of the implications of the new developments in variable optical elements and their impact on technologically relevant applications.
+dc.format.extent
+10 p.
+dc.format.mimetype
+application/pdf
+dc.identifier.idgrec
+704304
+dc.identifier.issn
+1749-4885
+dc.identifier.uri
+https://hdl.handle.net/2445/192696
+dc.language.iso
+eng
+dc.publisher
+Springer Nature
+dc.relation.isformatof
+Versió postprint del document publicat a: https://doi.org/10.1038/s41566-020-0684-z
+dc.relation.ispartof
+Nature Photonics, 2020, vol. 14, num. 9, p. 533-542
+dc.relation.uri
+https://doi.org/10.1038/s41566-020-0684-z
+dc.rights
+(c) Kang, SeungYeon et al., 2020
+dc.rights.accessRights
+info:eu-repo/semantics/openAccess
+dc.source
+Articles publicats en revistes (Física Aplicada)
+dc.subject.classification
+Òptica
+dc.subject.classification
+Visualització tridimensional
+dc.subject.classification
+Fotònica
+dc.subject.other
+Optics
+dc.subject.other
+Three-dimensional display systems
+dc.subject.other
+Photonics
+dc.title
+Variable optical elements for fast focus control
+dc.type
+info:eu-repo/semantics/article
+dc.type
+info:eu-repo/semantics/acceptedVersion
+Fitxers
+Paquet original
+Mostrant
+1 - 1 de 1
+Carregant...
+Nom:
+704304.pdf
+Mida:
+1.47 MB
+Format:
+Adobe Portable Document Format
+Descarregar
+Col·leccions
+Articles publicats en revistes (Física Aplicada)
+Coordinació:
+CRAI UB
+Avís legal
+Metadades subjectes a:
+Configuració de cookies
+Política de privadesa
+Acord d'usuari final

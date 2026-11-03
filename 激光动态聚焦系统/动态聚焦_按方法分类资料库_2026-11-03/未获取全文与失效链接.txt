@@ -1,0 +1,73 @@
+﻿重点缺口更新（2026-11-03）
+
+此前列出的8篇缺失论文现已全部由用户提供PDF补齐，并完成标题、DOI及文件有效性检查。
+
+已补齐：
+U001 2023_反射式动态聚焦_非球面校正与扫描范围扩展
+02_反射式与三振镜调焦\U001_2023_反射式动态聚焦_非球面校正与扫描范围扩展.pdf
+U002 2023_清华_振镜驱动反射式动态聚焦
+02_反射式与三振镜调焦\U002_2023_清华_振镜驱动反射式动态聚焦.pdf
+U003 2026_Z镜组_XY振镜_场镜系统联合优化
+01_移动透镜式与匹配光学\U003_2026_Z镜组_XY振镜_场镜系统联合优化.pdf
+U004 2025_高速三振镜三维扫描系统_光学设计与分析
+02_反射式与三振镜调焦\U004_2025_高速三振镜三维扫描系统_光学设计与分析.pdf
+U005 2025_高速三振镜三维扫描系统_曲面加工
+02_反射式与三振镜调焦\U005_2025_高速三振镜三维扫描系统_曲面加工.pdf
+U006 2025_模型驱动三维焦点移动_透明柔性聚合物微加工
+01_移动透镜式与匹配光学\U006_2025_模型驱动三维焦点移动_透明柔性聚合物微加工.pdf
+U007 2026_共线光声相互作用_局域动态调焦与扩展景深
+04_TAG声学调焦\U007_2026_共线光声相互作用_局域动态调焦与扩展景深.pdf
+U008 2016_激光大尺度3维动态聚焦扫描加工系统研究
+01_移动透镜式与匹配光学\U008_2016_激光大尺度3维动态聚焦扫描加工系统研究.pdf
+
+仍缺PDF版本（已有全文HTML）：MEMS Varifocal Optical Elements for Focus Control；CN120928524B、CN121245003A、CN121742097A。
+
+以下是其他失败入口的历史请求记录。部分已有同资料的有效替代入口；它们不代表核心论文仍然缺失。
+
+R034 RAYLASE_FOCUSSHIFTER_RD14_旧版失效链接
+https://www.raylase.de/_Resources/Persistent/8/3/8/2/8382e9d0599c27104c9f8316603afbaa4d944558/03119_Datenblatt_FOCUSSHIFTER%20RD-14_EN.pdf
+404 Client Error: Not Found for url: https://www.raylase.de/_Resources/Persistent/8/3/8/2/8382e9d0599c27104c9f8316603afbaa4d944558/03119_Datenblatt_FOCUSSHIFTER%20RD-14_EN.pdf
+
+R055 Experimental investigation of 3D scanheads_ORCA机构库入口
+https://orca.cardiff.ac.uk/id/eprint/114207/
+403 Client Error: Forbidden for url: https://orca.cardiff.ac.uk/id/eprint/114207/
+
+R059 Three-dimensional random-access confocal microscopy_2024
+https://pmc.ncbi.nlm.nih.gov/articles/PMC11555065/
+验证/错误页面或正文过短: Checking your browser - reCAPTCHA
+
+R061 Aerotech激光加工产品总入口_返回异常内容
+https://www.aerotech.com/product-category/laser-processing/
+终检排除：非网页内容
+
+S001 Variable optical elements for fast focus control_机构库作者稿
+https://diposit.ub.edu/dspace/bitstream/2445/192696/1/704304.pdf
+404 Client Error: Not found for url: https://diposit.ub.edu/dspace/bitstream/2445/192696/1/704304.pdf
+
+S010 RAYLASE_AXIALSCAN30_Digital_II_HP
+https://www.raylase.de/_Resources/Persistent/6/7/1/2/6712ab165f7dce513a0c934c651708e7256f153a/RAYLASE_AXIALSCAN-30%20DIGITAL%20II%20HP_en.pdf
+404 Client Error: Not Found for url: https://www.raylase.de/_Resources/Persistent/6/7/1/2/6712ab165f7dce513a0c934c651708e7256f153a/RAYLASE_AXIALSCAN-30%20DIGITAL%20II%20HP_en.pdf
+
+S013 MEMS综述_出版社PDF
+https://www.mdpi.com/2072-666X/16/4/482/pdf?version=1745050038
+403 Client Error: Forbidden for url: https://www.mdpi.com/2072-666X/16/4/482/pdf?version=1745050038
+
+S014 MEMS综述_出版社网页
+https://www.mdpi.com/2072-666X/16/4/482
+403 Client Error: Forbidden for url: https://www.mdpi.com/2072-666X/16/4/482
+
+S016 IKO_CRWG交叉滚柱导轨官方目录入口
+https://ikowb01.ikont.co.jp/technicalservice/ikoc0130.php?FLG=CRWG&from=html&lang=en
+502 Server Error: Bad Gateway for url: https://ikowb01.ikont.co.jp/technicalservice/ikoc0130.php?FLG=CRWG&from=html&lang=en
+
+S019 Akribis音圈电机使用手册
+https://www.akribis-sys.eu/uploads/files/website/Voice_coil_motor_user_manual.pdf
+HTTPSConnectionPool(host='www.akribis-sys.eu', port=443): Max retries exceeded with url: /uploads/files/website/Voice_coil_motor_user_manual.pdf (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))
+
+B002 RAYLASE_SPICE3_官方规格书
+https://www.raylase.de/_Resources/Persistent/b/a/6/6/ba66d25112e3d91511322aa417caae73c916557b/Datasheet_SP-ICE-3.pdf
+404 Client Error: Not Found for url: https://www.raylase.de/_Resources/Persistent/b/a/6/6/ba66d25112e3d91511322aa417caae73c916557b/Datasheet_SP-ICE-3.pdf
+
+C001 IKO_CRWG_防保持架蠕变交叉滚柱导轨
+https://www.ikont.com/catalogs/linear-motion-rolling-guide-series/red/1561E_CrossRollerWay.pdf
+404 Client Error: Not Found for url: https://ikont.com/catalogs/linear-motion-rolling-guide-series/red/1561E_CrossRollerWay.pdf

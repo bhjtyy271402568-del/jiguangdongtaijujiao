@@ -1,0 +1,34 @@
+{
+  "url": "https://www.scanlab.de/sites/default/files/2026-03/SCANLAB-varioSCANII-eBox-EN.pdf",
+  "category": "01_移动透镜式与匹配光学",
+  "origins": [
+    "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+    "用户粘贴_激光动态聚焦深度调研.txt"
+  ],
+  "context": "\n- 核查范围与注意事项：已核查PDF表格。FT与PR两类；0.5 μm重复性是电机/移动单元指标。当前PDF：https://www.scanlab.de/sites/default/files/2026-03/SCANLAB-varioSCANII-eBox-EN.pdf",
+  "id": "R030",
+  "files": [
+    {
+      "path": "01_移动透镜式与匹配光学\\R030_SCANLAB_varioSCAN_II_eBox_官方规格书.pdf",
+      "type": "PDF",
+      "pages": 4,
+      "bytes": 786993,
+      "sha256": "a714528a9fb9cb55d68b56142cce0ff405a66d624b7e4e2c576c9524fcf0085d",
+      "url": "https://www.scanlab.de/sites/default/files/2026-03/SCANLAB-varioSCANII-eBox-EN.pdf",
+      "text_chars": 6359,
+      "title": "varioSCAN II",
+      "preview": "dynamic and precise laser focussing\nvariovarioSCANSCAN II II\nThe varioSCAN II focusing unit enables highly dynamic and  \nexceptionally precise positioning of the laser focus along the  \nbeam direction.\nThe z-axes enable 2D scan systems to execute 3D processing or \nreplace costly objectives for providing a plane focusing surface.\nThe product series offers a wide range of different sizes, optics \ndesigns and functional upgrades (e.g. integrated encoder).  \nThe system design is tailor-made for the ",
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://www.scanlab.de/sites/default/files/2026-03/SCANLAB-varioSCANII-eBox-EN.pdf",
+      "http": 200,
+      "final_url": "https://www.scanlab.de/sites/default/files/2026-03/SCANLAB-varioSCANII-eBox-EN.pdf",
+      "result": "有效PDF"
+    }
+  ],
+  "status": "PDF已下载",
+  "title": "SCANLAB_varioSCAN_II_eBox_官方规格书"
+}

@@ -1,0 +1,34 @@
+{
+  "url": "https://www.raylase.de/_Resources/Persistent/b/9/a/f/b9afb6124b7834b86df20625625e58d8316dbf82/2026-03-16_Datenblatt_AXIALSCAN%20RD-14_EN_v2.0.pdf",
+  "category": "01_移动透镜式与匹配光学",
+  "origins": [
+    "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+    "用户粘贴_激光动态聚焦深度调研.txt"
+  ],
+  "context": "\n- 核查范围与注意事项：无F-theta预聚焦系统；支持200–600 mm方形场的不同配置。不能把所有配置的最大场幅、Z范围和最小光斑拼成同一指标。PDF：https://www.raylase.de/_Resources/Persistent/b/9/a/f/b9afb6124b7834b86df20625625e58d8316dbf82/2026-03-16_Datenblatt_AXIALSCAN%20RD-14_EN_v2.0.pdf",
+  "id": "R036",
+  "files": [
+    {
+      "path": "01_移动透镜式与匹配光学\\R036_RAYLASE_AXIALSCAN_RD14_官方规格书_2026.pdf",
+      "type": "PDF",
+      "pages": 6,
+      "bytes": 1523708,
+      "sha256": "56231456c30cf3a4aef71c0d50b7f1381c01880b3743039152a707ac036da80b",
+      "url": "https://www.raylase.de/_Resources/Persistent/b/9/a/f/b9afb6124b7834b86df20625625e58d8316dbf82/2026-03-16_Datenblatt_AXIALSCAN%20RD-14_EN_v2.0.pdf",
+      "text_chars": 11693,
+      "title": "03119_Datenblatt_AXIALSCAN RD-14.indd",
+      "preview": "www.raylase.com\nHIGH DYNAMICS IN LARGE WORKING FIELDS \nThe AXIALSCAN RD-14 was developed to be able to efficiently process large workpieces. It combines the \nhigh dynamics of a MINISCAN III with the advantages of dynamic pre-focusing. In contrast to a solution \nwith an F-Theta lens, the laser is focused in front of the scan mirrors, allowing the deflection angle to be fully \nutilized. This means that larger processing fields are possible and even large components can be processed \nwith a single ",
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://www.raylase.de/_Resources/Persistent/b/9/a/f/b9afb6124b7834b86df20625625e58d8316dbf82/2026-03-16_Datenblatt_AXIALSCAN%20RD-14_EN_v2.0.pdf",
+      "http": 200,
+      "final_url": "https://www.raylase.de/_Resources/Persistent/b/9/a/f/b9afb6124b7834b86df20625625e58d8316dbf82/2026-03-16_Datenblatt_AXIALSCAN%20RD-14_EN_v2.0.pdf",
+      "result": "有效PDF"
+    }
+  ],
+  "status": "PDF已下载",
+  "title": "RAYLASE_AXIALSCAN_RD14_官方规格书_2026"
+}

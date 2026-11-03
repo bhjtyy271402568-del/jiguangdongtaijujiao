@@ -1,0 +1,33 @@
+{
+  "id": "S008",
+  "url": "https://halaser.systems/manuals/e1803_manual.pdf",
+  "category": "07_测高闭环_三轴同步与标定",
+  "origins": [
+    "补充检索_原文提及条目及有效替代入口"
+  ],
+  "context": "HALaser_E1803D控制卡完整手册",
+  "title": "HALaser_E1803D控制卡完整手册",
+  "files": [
+    {
+      "path": "07_测高闭环_三轴同步与标定\\S008_HALaser_E1803D控制卡完整手册.pdf",
+      "type": "PDF",
+      "pages": 173,
+      "bytes": 4651333,
+      "sha256": "bed0b3c8e6c7c39780daaebfa9a146f381e19ec39b05ab4f40a3e857fa84d1b1",
+      "url": "https://halaser.systems/manuals/e1803_manual.pdf",
+      "text_chars": 521398,
+      "title": "",
+      "preview": "E1803D All-In-One Scanner Controller\nXY2-100, XY2-200,\nXY2-100E, XY2-200E,\nXY3-100\nSL2-100, NX-02, SDP optionally\nUsers Manual\n© 2016-2026 by HALaser Systems GmbH\n1\n\nTable of Contents\n1  Copyright.........................................................................................................................................................................................................4\n2  History...........................................................................................",
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://halaser.systems/manuals/e1803_manual.pdf",
+      "http": 200,
+      "final_url": "https://halaser.systems/manuals/e1803_manual.pdf",
+      "result": "有效PDF"
+    }
+  ],
+  "status": "PDF已下载"
+}

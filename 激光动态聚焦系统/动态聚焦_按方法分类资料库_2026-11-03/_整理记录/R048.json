@@ -1,0 +1,32 @@
+{
+  "url": "https://patents.google.com/patent/CN121245003A/zh",
+  "category": "07_测高闭环_三轴同步与标定",
+  "origins": [
+    "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+    "用户粘贴_激光动态聚焦深度调研.txt",
+    "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md"
+  ],
+  "context": "\n- 原始入口：https://patents.google.com/patent/CN121245003A/en",
+  "id": "R048",
+  "files": [
+    {
+      "path": "07_测高闭环_三轴同步与标定\\R048_CN121245003A - 一种基于光学系统景深分层的动态对焦打印方法 _        - Google Patents.html",
+      "type": "HTML",
+      "bytes": 57782,
+      "sha256": "2c815b0dbead749e69ddccb68fedb25638696bf7454297b8ce6971a2864c2cbb",
+      "url": "https://patents.google.com/patent/CN121245003A/zh",
+      "title": "CN121245003A - 一种基于光学系统景深分层的动态对焦打印方法 \n        - Google Patents",
+      "text_chars": 8829
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://patents.google.com/patent/CN121245003A/zh",
+      "http": 200,
+      "final_url": "https://patents.google.com/patent/CN121245003A/zh",
+      "result": "网页"
+    }
+  ],
+  "title": "CN121245003A - 一种基于光学系统景深分层的动态对焦打印方法 - Google Patents",
+  "status": "专利全文网页已保存_无PDF附件"
+}

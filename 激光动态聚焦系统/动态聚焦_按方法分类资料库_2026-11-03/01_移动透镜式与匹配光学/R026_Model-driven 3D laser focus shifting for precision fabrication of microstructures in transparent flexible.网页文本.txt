@@ -1,0 +1,82 @@
+来源：https://ira.lib.polyu.edu.hk/handle/10397/115461
+采集日期：2026-11-03
+
+Model-driven 3D laser focus shifting for precision fabrication of microstructures in transparent flexible polymers | PolyU Institutional Research Archive
+Skip navigation
+Home
+Collections
+Research Outputs
+Patents
+Theses
+Open Educational Resources
+Outstanding Work by Students
+Research Impact Stories
+Departments and Schools
+Facilities
+About
+Search
+Back to results list
+Please use this identifier to cite or link to this item:
+http://hdl.handle.net/10397/115461
+Title:
+Model-driven 3D laser focus shifting for precision fabrication of microstructures in transparent flexible polymers
+Authors:
+Chen, R
+Wang, C
+Luo, T
+Xu, W
+Zhang, Q
+Zhou, J
+Gao, R
+Cheung, CF
+Zhou, W
+Issue Date:
+Aug-2025
+Source:
+International journal of machine tools and manufacture, Aug. 2025, v. 210, 104310
+Abstract:
+Micro-engineered transparent flexible polymers components play a crucial role in various microsystem fields, such as flexible electronics and microfluidics. However, conventional laser fabrication techniques face significant challenges in overcoming issues of energy deposition inaccuracies and focal mismatch, which hinder the fabrication of high-fidelity and controllable 3D microstructure in transparent polymer materials. In this study, we propose a universal 3D dynamic-focusing laser (3D-DFL) fabrication strategy using an infrared (IR) picosecond laser. By dynamically adjusting the Z-axis focus in real time, the system effectively compensates for the depth shifts caused by ablation, ensuring consistent energy deposition and stable fabrication quality. High-speed imaging reveals a three-stage ablation mechanism (stabilization, expansion, and contraction) under laser irradiation. To support the multi-layer dynamic shifting process of the 3D-DFL approach, a universal ablation depth prediction model was established to compensate depth deviations during laser-material interactions. The validity of the model has been proven by its ability to predict ablation depth in different polymer materials with low mean absolute percentage errors (MAPE), achieving 5.99 % for polydimethylsiloxane (PDMS) and 2.68 % for polyethylene terephthalate (PET). The model enables the accurate fabrication of 3D microstructures, achieving normalized peak-to-valley deviations within 8.0 % and normalized root-mean-square deviations below 3.0 %, with an arithmetic surface roughness of approximately 2 μm. The 3D dynamic-focusing laser (3D-DFL) approach enables rapid tailoring of complex geometries, including protruding and recessed microstructures on PDMS and PET substrates. Experimental validation highlights its capability to fabricate functional components such as flexible pressure sensors, microfluidic chips, and ultrasonic droplet manipulation platforms. This study provides an efficient and reliable pathway for the scalable fabricating of high-precision transparent polymers micro-engineered devices and promotes the advancement of research and industry in advanced flexible microsystems.
+Keywords:
+3D dynamic-focusing
+Ablation depth model
+Complex microstructure
+Picosecond laser micromachining
+Precision manufacturing
+Publisher:
+Elsevier
+Journal:
+International journal of machine tools and manufacture
+ISSN:
+0890-6955
+EISSN:
+1879-2170
+DOI:
+10.1016/j.ijmachtools.2025.104310
+Appears in Collections:
+Journal/Magazine Article
+PIRA download icon_1.1
+View/Download Full Text
+Open Access Information
+Status
+embargoed access
+Embargo End Date
+2027-08-31
+Access
+View full-text via PolyU eLinks
+Show full item record
+SCOPUS
+TM
+Citations
+4
+Citations as of Apr 3, 2026
+Google Scholar
+TM
+Check
+Altmetric
+Items in DSpace are protected by copyright, with all rights reserved, unless otherwise indicated.
+About
+|
+Privacy Policy Statement
+|
+Copyright & Restrictions
+@Pao Yue-kong Library, The Hong Kong Polytechnic University. All Rights Reserved.

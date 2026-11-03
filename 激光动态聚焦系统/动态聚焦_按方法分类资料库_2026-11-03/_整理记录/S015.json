@@ -1,0 +1,33 @@
+{
+  "id": "S015",
+  "url": "https://www.renishaw.com/resourcecentre/download/data-sheet-atom-dx-miniature-encoder-system--142831?userLanguage=en",
+  "category": "10_执行器_导轨与编码器",
+  "origins": [
+    "补充检索_原文提及条目及有效替代入口"
+  ],
+  "context": "Renishaw_ATOM_DX数据表",
+  "title": "Renishaw_ATOM_DX数据表",
+  "files": [
+    {
+      "path": "10_执行器_导轨与编码器\\S015_Renishaw_ATOM_DX数据表.pdf",
+      "type": "PDF",
+      "pages": 27,
+      "bytes": 1700576,
+      "sha256": "6b99e5ce393265e50a926f3f5e942172df1523981c919b9e3b73c4b4d1180aec",
+      "url": "https://www.renishaw.com/resourcecentre/download/data-sheet-atom-dx-miniature-encoder-system--142831?userLanguage=en",
+      "text_chars": 28063,
+      "title": "ATOM DX™ miniature encoder system data sheet",
+      "preview": "#renishaw\nATOM DX™ miniature encoder system\nwww.renishaw.com/atomdxdownloads\nData sheet\nL-9517-9736-05-A\nThe ATOM DX™ encoder series is \nRenishaw’s smallest incremental optical \nencoder with digital output direct from the \nreadhead, providing positional feedback, \nonboard interpolation, and filtering optics all \nin a miniature package.\nATOM DX incorporates the market proven filtering optical \nsystem of the ATOM™ encoder series, and integrates \nRenishaw’s high-performance interpolation technology",
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://www.renishaw.com/resourcecentre/download/data-sheet-atom-dx-miniature-encoder-system--142831?userLanguage=en",
+      "http": 200,
+      "final_url": "https://www.renishaw.com/resourcecentre/download/data-sheet-atom-dx-miniature-encoder-system--142831?userLanguage=en",
+      "result": "有效PDF"
+    }
+  ],
+  "status": "PDF已下载"
+}

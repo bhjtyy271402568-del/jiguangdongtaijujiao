@@ -1,0 +1,198 @@
+来源：https://scholars.cityu.edu.hk/en/publications/single-lens-dynamic-z-scanning-for-simultaneous-in-situ-position-/
+采集日期：2026-11-03
+
+Single-lens dynamic z-scanning for simultaneous in situ position detection and laser processing focus control
+      -  CityUHK Scholars
+Skip to main navigation
+Skip to search
+Skip to main content
+CityUHK Scholars Home
+Researcher Login
+Link opens in a new tab
+Search content at CityUHK Scholars
+Home
+Researchers
+Research units
+Research output
+Projects
+Activities
+Prizes
+Student theses
+Datasets
+Impacts
+Press/Media
+Single-lens dynamic z-scanning for simultaneous in situ position detection and laser processing focus control
+Xiaohan Du
+, Camilo Florian
+, Craig B. Arnold
+*
+*
+Corresponding author for this work
+Department of Systems Engineering
+Research output
+:
+Journal Publications and Reviews
+›
+RGC 21 - Publication in refereed journal
+›
+peer-review
+31
+Link opens in a new tab
+Citations
+(Scopus)
+63
+Downloads (CityUHK Scholars)
+Overview
+Fingerprint
+Abstract
+Existing auto-focusing methods in laser processing typically include two independent modules, one for surface detection and another for z-axis adjustment. The latter is mostly implemented by mechanical z stage motion, which is up to three orders of magnitude slower than the lateral processing speed. To alleviate this processing bottleneck, we developed a single-lens approach, using only one high-speed z-scanning optical element, to accomplish both in situ surface detection and focus control quasi-simultaneously in a dual-beam setup. The probing beam scans the surface along the z-axis continuously, and its reflection is detected by a set of confocal optics. Based on the temporal response of the detected signal, we have developed and experimentally demonstrated a dynamic surface detection method at 140–350 kHz, with a controlled detection range, high repeatability, and minimum linearity error of 1.10%. Sequentially, by synchronizing at a corresponding oscillation phase of the z-scanning lens, the fabrication beam is directed to the probed z position for precise focus alignment. Overall, our approach provides instantaneous surface tracking by collecting position information and executing focal control both at 140–350 kHz, which significantly accelerates the axial alignment process and offers great potential for enhancing the speed of advanced manufacturing processes in three-dimensional space. © 2023, The Author(s).
+Original language
+English
+Article number
+274
+Journal
+Light: Science & Applications
+Volume
+12
+Online published
+17 Nov 2023
+DOIs
+https://doi.org/10.1038/s41377-023-01303-2
+Publication status
+Published -
+2023
+UN SDGs
+This output contributes to the following UN
+Sustainable Development Goals (SDGs)
+SDG 9
+Industry, Innovation, and Infrastructure
+Publisher's Copyright Statement
+This full text is made available under CC-BY 4.0. https://creativecommons.org/licenses/by/4.0/
+Access Output
+10.1038/s41377-023-01303-2
+173284711.pdf
+Final Published version, 1.64 MB
+Licence:
+CC BY
+Other Access Options
+Check CityUHK Library
+Permanent Link
+Right click to copy link
+Other Files and Links
+https://www.scopus.com/pages/publications/85176923685
+https://www.scopus.com/pages/publications/85176923685#tab=impact
+Fingerprint
+Dive into the research topics of 'Single-lens dynamic z-scanning for simultaneous in situ position detection and laser processing focus control'. Together they form a unique fingerprint.
+Lens
+Physics
+100%
+Optics
+Physics
+33%
+Optical Element
+Physics
+33%
+View full fingerprint
+Cite this
+APA
+Author
+BIBTEX
+Harvard
+Standard
+RIS
+Vancouver
+Du, X.
+, Florian, C., & Arnold, C. B. (2023).
+Single-lens dynamic z-scanning for simultaneous in situ position detection and laser processing focus control
+.
+Light: Science & Applications
+,
+12
+, Article 274.
+https://doi.org/10.1038/s41377-023-01303-2
+Du, Xiaohan
+; Florian, Camilo ; Arnold, Craig B. /
+Single-lens dynamic z-scanning for simultaneous in situ position detection and laser processing focus control
+. In:
+Light: Science & Applications
+. 2023 ; Vol. 12.
+@article{f385ef0795b34982878115e2f1dfab50,
+title     = "Single-lens dynamic z-scanning for simultaneous in situ position detection and laser processing focus control",
+abstract  = "Existing auto-focusing methods in laser processing typically include two independent modules, one for surface detection and another for z-axis adjustment. The latter is mostly implemented by mechanical z stage motion, which is up to three orders of magnitude slower than the lateral processing speed. To alleviate this processing bottleneck, we developed a single-lens approach, using only one high-speed z-scanning optical element, to accomplish both in situ surface detection and focus control quasi-simultaneously in a dual-beam setup. The probing beam scans the surface along the z-axis continuously, and its reflection is detected by a set of confocal optics. Based on the temporal response of the detected signal, we have developed and experimentally demonstrated a dynamic surface detection method at 140–350 kHz, with a controlled detection range, high repeatability, and minimum linearity error of 1.10\%. Sequentially, by synchronizing at a corresponding oscillation phase of the z-scanning lens, the fabrication beam is directed to the probed z position for precise focus alignment. Overall, our approach provides instantaneous surface tracking by collecting position information and executing focal control both at 140–350 kHz, which significantly accelerates the axial alignment process and offers great potential for enhancing the speed of advanced manufacturing processes in three-dimensional space. {\textcopyright} 2023, The Author(s).",
+author    = "Xiaohan Du and Camilo Florian and Arnold, \{Craig B.\}",
+year      = "2023",
+doi       = "10.1038/s41377-023-01303-2",
+language  = "English",
+volume    = "12",
+journal   = "Light: Science \& Applications",
+issn      = "2095-5545",
+publisher = "Nature Publishing Group",
+}
+Du, X
+, Florian, C & Arnold, CB 2023, '
+Single-lens dynamic z-scanning for simultaneous in situ position detection and laser processing focus control
+',
+Light: Science & Applications
+, vol. 12, 274.
+https://doi.org/10.1038/s41377-023-01303-2
+Single-lens dynamic z-scanning for simultaneous in situ position detection and laser processing focus control.
+/
+Du, Xiaohan
+; Florian, Camilo; Arnold, Craig B.
+In:
+Light: Science & Applications
+, Vol. 12, 274, 2023.
+Research output
+:
+Journal Publications and Reviews
+›
+RGC 21 - Publication in refereed journal
+›
+peer-review
+TY  - JOUR
+T1  - Single-lens dynamic z-scanning for simultaneous in situ position detection and laser processing focus control
+AU  - Du, Xiaohan
+AU  - Florian, Camilo
+AU  - Arnold, Craig B.
+PY  - 2023
+Y1  - 2023
+N2  - Existing auto-focusing methods in laser processing typically include two independent modules, one for surface detection and another for z-axis adjustment. The latter is mostly implemented by mechanical z stage motion, which is up to three orders of magnitude slower than the lateral processing speed. To alleviate this processing bottleneck, we developed a single-lens approach, using only one high-speed z-scanning optical element, to accomplish both in situ surface detection and focus control quasi-simultaneously in a dual-beam setup. The probing beam scans the surface along the z-axis continuously, and its reflection is detected by a set of confocal optics. Based on the temporal response of the detected signal, we have developed and experimentally demonstrated a dynamic surface detection method at 140–350 kHz, with a controlled detection range, high repeatability, and minimum linearity error of 1.10%. Sequentially, by synchronizing at a corresponding oscillation phase of the z-scanning lens, the fabrication beam is directed to the probed z position for precise focus alignment. Overall, our approach provides instantaneous surface tracking by collecting position information and executing focal control both at 140–350 kHz, which significantly accelerates the axial alignment process and offers great potential for enhancing the speed of advanced manufacturing processes in three-dimensional space. © 2023, The Author(s).
+AB  - Existing auto-focusing methods in laser processing typically include two independent modules, one for surface detection and another for z-axis adjustment. The latter is mostly implemented by mechanical z stage motion, which is up to three orders of magnitude slower than the lateral processing speed. To alleviate this processing bottleneck, we developed a single-lens approach, using only one high-speed z-scanning optical element, to accomplish both in situ surface detection and focus control quasi-simultaneously in a dual-beam setup. The probing beam scans the surface along the z-axis continuously, and its reflection is detected by a set of confocal optics. Based on the temporal response of the detected signal, we have developed and experimentally demonstrated a dynamic surface detection method at 140–350 kHz, with a controlled detection range, high repeatability, and minimum linearity error of 1.10%. Sequentially, by synchronizing at a corresponding oscillation phase of the z-scanning lens, the fabrication beam is directed to the probed z position for precise focus alignment. Overall, our approach provides instantaneous surface tracking by collecting position information and executing focal control both at 140–350 kHz, which significantly accelerates the axial alignment process and offers great potential for enhancing the speed of advanced manufacturing processes in three-dimensional space. © 2023, The Author(s).
+UR  - https://www.scopus.com/pages/publications/85176923685
+UR  - https://www.scopus.com/pages/publications/85176923685#tab=impact
+U2  - 10.1038/s41377-023-01303-2
+DO  - 10.1038/s41377-023-01303-2
+M3  - RGC 21 - Publication in refereed journal
+C2  - 37978285
+SN  - 2095-5545
+VL  - 12
+JO  - Light: Science & Applications
+JF  - Light: Science & Applications
+M1  - 274
+ER  -
+Du X
+, Florian C, Arnold CB.
+Single-lens dynamic z-scanning for simultaneous in situ position detection and laser processing focus control
+.
+Light: Science & Applications
+. 2023;12:274. Epub 2023 Nov 17. doi: 10.1038/s41377-023-01303-2
+Powered by
+Pure
+Link opens in a new tab
+,
+Scopus
+Link opens in a new tab
+&
+Elsevier Fingerprint Engine™
+Link opens in a new tab
+All content on this site: Copyright © 2026 CityUHK Scholars, its licensors, and contributors. All rights are reserved, including those for text and data mining, AI training, and similar technologies. For all open access content, the relevant licensing terms apply
+We use cookies to help provide and enhance our service and tailor content. By continuing you agree to the
+use of cookies
+Log in to CityUHK Scholars
+Link opens in a new tab
+CityUHK Scholars data protection policy
+Link opens in a new tab
+About web accessibility
+Link opens in a new tab
+Report vulnerability
+Link opens in a new tab

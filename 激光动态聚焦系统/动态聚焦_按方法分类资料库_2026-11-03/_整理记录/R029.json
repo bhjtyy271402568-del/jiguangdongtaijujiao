@@ -1,0 +1,32 @@
+{
+  "url": "https://www.scanlab.de/en/products/z-axes-3d-add-ons/varioscan-ii",
+  "category": "01_移动透镜式与匹配光学",
+  "origins": [
+    "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+    "用户粘贴_激光动态聚焦深度调研.txt",
+    "苏州艾思兰_动态聚焦资料\\设备自研方案与选型表.md"
+  ],
+  "context": "\n- 原始入口：https://www.scanlab.de/en/products/z-axes-3d-add-ons/varioscan-ii",
+  "id": "R029",
+  "files": [
+    {
+      "path": "01_移动透镜式与匹配光学\\R029_varioSCAN II _ Scanlab.html",
+      "type": "HTML",
+      "bytes": 105938,
+      "sha256": "9aec6c3a55b2f6a0d63ee39816b00c7e19ddf7c987096c67551d20e0869d8271",
+      "url": "https://www.scanlab.de/en/products/z-axes-3d-add-ons/varioscan-ii",
+      "title": "varioSCAN II | Scanlab",
+      "text_chars": 5374
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://www.scanlab.de/en/products/z-axes-3d-add-ons/varioscan-ii",
+      "http": 200,
+      "final_url": "https://www.scanlab.de/en/products/z-axes-3d-add-ons/varioscan-ii",
+      "result": "网页"
+    }
+  ],
+  "title": "varioSCAN II | Scanlab",
+  "status": "网页已保存"
+}

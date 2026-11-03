@@ -1,0 +1,30 @@
+{
+  "url": "https://www.raylase.de/en/products/prefocusing-deflection-units/axialscan-rd-14.html",
+  "category": "01_移动透镜式与匹配光学",
+  "origins": [
+    "激光动态聚焦_来源索引与验证清单_2026-11-03.md"
+  ],
+  "context": "\n- 原始入口：https://www.raylase.de/en/products/prefocusing-deflection-units/axialscan-rd-14.html",
+  "id": "R035",
+  "files": [
+    {
+      "path": "01_移动透镜式与匹配光学\\R035_AXIALSCAN RD-14 - raylase.html",
+      "type": "HTML",
+      "bytes": 64176,
+      "sha256": "efe08eae63662acaa5f8ae05fb9ff1bd835c40c0e82f25c55fa30eb4e3561473",
+      "url": "https://www.raylase.de/en/products/prefocusing-deflection-units/axialscan-rd-14.html",
+      "title": "AXIALSCAN RD-14 - raylase",
+      "text_chars": 10004
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://www.raylase.de/en/products/prefocusing-deflection-units/axialscan-rd-14.html",
+      "http": 200,
+      "final_url": "https://www.raylase.de/en/products/prefocusing-deflection-units/axialscan-rd-14.html",
+      "result": "网页"
+    }
+  ],
+  "title": "AXIALSCAN RD-14 - raylase",
+  "status": "网页已保存"
+}

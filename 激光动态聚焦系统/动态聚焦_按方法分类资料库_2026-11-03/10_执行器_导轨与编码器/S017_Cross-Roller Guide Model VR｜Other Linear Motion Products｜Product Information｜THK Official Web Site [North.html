@@ -1,0 +1,1233 @@
+<!DOCTYPE html><html lang="en"><head><script>
+    // 実行完了待ち
+    window.addEventListener('message', function (event) {
+        // オリジン判定
+        if (event.origin != EVENT_ORIGIN) {
+            return;
+        }
+        let data = event.data;
+        // 送信先判定(1件登録の時)
+        let target = data.TARGET;
+        if (target != 'bookmarkProd') {
+            return;
+        }
+        // イベント判定（適用ボタン時）
+        let eventFlag = data.EVENTFLG;
+        if (eventFlag == '1') {
+            bookmarkProdCheck();
+        }
+    });
+    /**
+     * お気に入り登録
+     * para_url空の場合、現在のurl（クエリやフラグメントを含まない）を取得
+     * para_title空の場合、現在のページのタイトルを取得
+     * @param {string} para_url 　登録するURL（デフォルトは空文字）
+     * @param {string} para_title 登録するURLのタイトル名（デフォルトは空文字）
+     */
+    function bookmarkProdRegist(para_url = '', para_title = '') {
+        let data_url = para_url;
+        let data_title = para_title;
+        if (!data_url && !data_title) {
+            // 現在のurl（クエリやフラグメントを含まない）を取得
+            const currentUrl = decodeURIComponent(window.location.href);
+            const url = new URL(currentUrl);
+            data_url = new URL(url.origin + url.pathname).toString();
+            data_title = document.title;
+        }
+        // 連携データID
+        let dataId = 0;
+        // 連携データ設定
+        let wkurl = '/favorite/regist';
+        // 連携データを一時テーブルに登録して、連携データIDを取得する
+        $.ajax({
+            type: 'POST',
+            url: wkurl, // サービス側の連携用情報登録API実行メソッド(2-3-2)のパス
+            dataType: 'json',
+            data: { url: data_url, title: data_title },
+            async: false,
+            cache: false,
+            success: function (response) {
+                if (response.Result == 0) {
+                    dataId = response.TempDataId;
+                }
+            },
+        });
+        // ポップアップ画面を呼び出すメソッド
+        my_bookmark_prod_reg({ LinkedDataId: dataId, TargetType: 1 });
+    }
+</script>
+    <script>
+    /**
+     * URLパラメータ付きコピー
+     * @param {string} param ジャンプタグ（#以降の情報）のパラメータ
+     */
+    function urlCopy(param) {
+        // 現在のurl（クエリやフラグメントを含まない）を取得
+        let currentUrl = decodeURIComponent(window.location.href);
+        let url = new URL(currentUrl);
+        let copyUrl = new URL(url.origin + url.pathname);
+        // paramの値をジャンプタグ（#以降の情報）として付与
+        copyUrl = copyUrl.toString() + '#' + param;
+        clipboard_copy(copyUrl, true);
+    }
+</script>
+<script>
+    /**
+     * 指定されたURLをクリップボードにコピーする
+     * @param {string} copyUrl コピーする値を指定
+     * @param {boolean} showAlert trueの場合アラート表示、false（デフォルト）の場合非表示
+     */
+    function clipboard_copy(copyUrl, showAlert = false) {
+        navigator.clipboard
+            .writeText(copyUrl.toString())
+            .then(() => {
+                // コピー成功時
+                if (showAlert) {
+                    // 独自ダイアログを作成して表示
+                    const dialog = document.createElement('div');
+                    dialog.innerHTML = 'Success: Copied<br>' + copyUrl.toString();
+                    // スタイルをJavaScript内で指定
+                    dialog.style.position = 'fixed'; // 固定位置
+                    dialog.style.top = '0%'; // 画面上部
+                    dialog.style.left = '50%'; // 画面中央
+                    dialog.style.transform = 'translateX(-50%)'; // 水平方向で中央揃え
+                    dialog.style.padding = '20px';
+                    dialog.style.backgroundColor = '#000'; // 背景色を黒に設定
+                    dialog.style.color = '#fff'; // 文字色を白に設定
+                    dialog.style.border = '1px solid #fff'; // 枠線を白に設定
+                    dialog.style.zIndex = '10001'; // 他の要素より前面に表示するため、重なり順序を指定。値が大きいほど前面に表示される
+                    // 長いURL対応の追加スタイル
+                    dialog.style.boxSizing = 'border-box'; // paddingとborderを含めたサイズ計算にする
+                    dialog.style.maxWidth = '90vw'; // 画面幅の90%を最大幅に
+                    dialog.style.maxHeight = '80dvh'; // ダイアログの最大高さを画面高さの80%に制限
+                    dialog.style.wordWrap = 'break-word'; // 長い単語を折り返し
+                    // ダイアログをページに追加
+                    document.body.appendChild(dialog);
+                    // 2秒後にダイアログを削除
+                    setTimeout(() => {
+                        document.body.removeChild(dialog);
+                    }, 2000);
+                }
+            })
+            .catch(() => {
+                // コピー失敗時
+                if (showAlert) {
+                    alert('Error: Unable to copy');
+                }
+            });
+    }
+</script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        scrollToTarget();
+    });
+    window.addEventListener('hashchange', function () {
+        scrollToTarget();
+    });
+    /**
+     * ヘッダー要素がDOMに挿入されるのを監視し、見つかり次第コールバック関数を実行する。
+     * 一定回数までリトライを行い、それでも見つからない場合は null を渡してコールバックを実行する。
+     *
+     * @param {function(HTMLElement|null): void} callback - ヘッダー要素が見つかった場合に呼ばれるコールバック関数。見つからなければ null が渡される。
+     * @param {number} [maxAttempts=100] - ヘッダーを探す最大試行回数。
+     * @param {number} [interval=100] - 各試行の間隔（ミリ秒）。
+     * @param {number} [attempt=0] - 現在の試行回数（内部利用のため通常は指定不要）。
+     */
+    function waitForHeader(callback, maxAttempts = 100, interval = 100, attempt = 0) {
+        // ヘッダー要素を取得
+        const header = document.querySelector('.l-header');
+        if (header) {
+            callback(header);
+        } else if (attempt < maxAttempts) {
+            // ヘッダー要素取得リトライ
+            setTimeout(() => waitForHeader(callback, maxAttempts, interval, attempt + 1), interval);
+        } else {
+            // リトライしてもヘッダー要素が取得できない場合、ヘッダーの高さを計算せずにスクロール
+            callback(null);
+        }
+    }
+    /**
+     * ヘッダー高さを考慮してスクロール処理を行う関数
+     *
+     * @param {string} targetId - スクロール先のターゲットID（省略可能）。指定がない場合、window.location.hashを使用。
+     */
+    function scrollToTarget(targetId) {
+        // 引数が指定されていない場合は、window.location.hashを使う
+        const id = targetId || window.location.hash;
+        // id が空、または "#" の場合は処理をスキップ
+        if (!id || id === '#') {
+            return;
+        }
+        // ヘッダーが読み込まれるのを待ってからスクロール処理を実行
+        waitForHeader((header) => {
+            // ヘッダーの高さを取得
+            const headerHeight = header ? header.offsetHeight : 0;
+            // ターゲット要素を取得
+            const target = $(id);
+            // ターゲットが存在する場合のみ処理を実行
+            if (target.length) {
+                const position = target.offset().top - headerHeight;
+                $('html, body').animate({
+                    scrollTop: position,
+                });
+            }
+        });
+    }
+</script>
+        
+            
+                <script class="gtm-head-script"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', function () {
+        let pathParts = location.pathname.split("/");
+        let localeLangs = `/${pathParts[1]}/${pathParts[2]}`;
+        let hostname = location.hostname;
+        let gtmHeadScriptEnv = '';
+        if (hostname === 'products.thk.com' || hostname === 'www.thk.com') {
+            gtmHeadScriptEnv = 'prod';
+        } else if (hostname.includes('stg-')) {
+            gtmHeadScriptEnv = 'stg';
+        }
+        if (gtmHeadScriptEnv) {
+            const tmpGtmScriptFilePath = 'gtm-env.json';
+            const gtmScriptFilePath = `${localeLangs}/${tmpGtmScriptFilePath.replace("env", gtmHeadScriptEnv)}`;
+            fetch(gtmScriptFilePath)
+                .then(response => response.json())
+                .then(data => {
+                    if (window.jQuery && $('.gtm-head-script').length) {
+                      $('.gtm-head-script').prepend(data.head);
+                      return;
+                    }
+                    const target = document.querySelector('.gtm-head-script');
+                    if (target) {
+                      target.insertAdjacentHTML('afterbegin', data.head);
+                    } else {
+                      console.warn('gtm-head-script要素が見つかりませんでした');
+                    }
+                })
+                .catch(error => console.error('Error loading the GTM json file:', error));
+        } else {
+            $('.gtm-head-script').prepend('<!-- No Tag -->');
+        }
+    });
+</script>
+                <meta charset="utf-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width">
+                <meta name="format-detection" content="telephone=no">
+                <title>Cross-Roller Guide Model VR｜Other Linear Motion Products｜Product Information｜THK Official Web Site [North America]</title>
+                 <meta name="description" content="In model VR, precision rollers are orthogonally aligned one after another in a roller cage that is combined with a dedicated rail having a raceway cut into a V-shape groove. When two units of the Cross-Roller Guide are mounted in parallel, the guide system is capable of receiving loads in the four directions. In addition, since the Cross-Roller Guide can be given a preload, a clearance-free, highly rigid and smooth slide mechanism is achieved."> 
+                <meta property="og:title" content="Cross-Roller Guide Model VR｜Other Linear Motion Products｜Product Information｜THK Official Web Site [North America]">
+                <meta property="og:type" content="article">
+                <meta property="og:url" content="https://www.thk.com/us/en/products/other_linear_motion_guides/cross_roller_guide_ball_guide/vr/">
+                <meta property="og:site_name" content="THK">
+                <meta property="og:image" content="https://www.thk.com/us/assets/images/products/cross_roller_guide_ball_guide_vr.png">
+                <link rel="canonical" href="https://www.thk.com/us/en/products/other_linear_motion_guides/cross_roller_guide_ball_guide/vr/">
+                <link rel="icon" href="https://www.thk.com/us/assets/images/favicon.ico">
+                <link rel="stylesheet" href="https://www.thk.com/common/assets/css/style_common.css">
+                <link rel="stylesheet" href="https://www.thk.com/common/assets/css/en/style_en.css"> 
+            </head>
+            <body class="p-en">
+                <script class="gtm-body-script"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', function () {
+        let pathParts = location.pathname.split("/");
+        let localeLangs = `/${pathParts[1]}/${pathParts[2]}`;
+        let hostname = location.hostname;
+        let gtmHeadScriptEnv = '';
+        if (hostname === 'products.thk.com' || hostname === 'www.thk.com') {
+            gtmHeadScriptEnv = 'prod';
+        } else if (hostname.includes('stg-')) {
+            gtmHeadScriptEnv = 'stg';
+        }
+        if (gtmHeadScriptEnv) {
+            const tmpGtmScriptFilePath = 'gtm-env.json';
+            const gtmScriptFilePath = `${localeLangs}/${tmpGtmScriptFilePath.replace("env", gtmHeadScriptEnv)}`;
+            fetch(gtmScriptFilePath)
+                .then(response => response.json())
+                .then(data => {
+                    if (window.jQuery && $('.gtm-body-script').length) {
+                      $('.gtm-body-script').prepend(data.body);
+                      return;
+                    }
+                    const target = document.querySelector('.gtm-body-script');
+                    if (target) {
+                      target.insertAdjacentHTML('afterbegin', data.body);
+                    } else {
+                      console.warn('gtm-body-script要素が見つかりませんでした');
+                    }
+                })
+                .catch(error => console.error('Error loading the GTM json file:', error));
+        } else {
+            $('.gtm-body-script').prepend('<!-- No Tag -->');
+        }
+    });
+</script>
+                <div id="header_en" class="js-include"></div>
+                <main class="l-container">
+                    <div class="p-kv">
+                        <div class="p-kv__inner">
+                            <div class="p-breadcrumb-wrapper">
+                                <ol class="p-breadcrumb">
+                                    <li class="p-breadcrumb__item">
+                                        <a href="https://www.thk.com/us/en/">Home</a>
+                                    </li>
+                                    <li class="p-breadcrumb__item">
+                                        <a href="https://www.thk.com/us/en/products/">Product Information</a>
+                                    </li>
+                                    <li class="p-breadcrumb__item">
+                                        <a href="https://www.thk.com/us/en/products/other_linear_motion_guides/">Other Linear Motion Products</a>
+                                    </li>
+                                    <li class="p-breadcrumb__item">
+                                        <a href="https://www.thk.com/us/en/products/other_linear_motion_guides/cross_roller_guide_ball_guide/">Cross-Roller Guide/Ball Guide</a>
+                                    </li>
+                                    <li class="p-breadcrumb__item">Cross-Roller Guide Model VR</li>
+                                </ol>
+                            </div>
+                            <div class="p-kv__main">
+                                <div class="p-kv__text">
+                                    <h1 class="c-heading-lv1">
+                                        <span class="c-heading-lv1__sub">Cross-Roller Guide/Ball Guide</span>
+                                        <span class="c-heading-lv1__main">Cross-Roller Guide Model VR</span>
+                                    </h1>
+                                    <p class="p-kv__lead">
+                                        In model VR, precision rollers are orthogonally aligned one after another in a roller cage that is combined with a dedicated rail having a raceway cut into a V-shape groove. When two units of the Cross-Roller Guide are mounted in parallel, the guide system is capable of receiving loads in the four directions. In addition, since the Cross-Roller Guide can be given a preload, a clearance-free, highly rigid and smooth slide mechanism is achieved.
+                                    </p>
+                                    <div class="p-kv__tags">
+                                        <ul class="p-tag-group">
+                                                <li class="p-tag-group__item">
+                                                    <span class="c-tag">High rigidity</span>
+                                                </li>
+                                                <li class="p-tag-group__item">
+                                                    <span class="c-tag">High corrosion resistance</span>
+                                                </li>
+                                                <li class="p-tag-group__item">
+                                                    <span class="c-tag">Long service life</span>
+                                                </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="p-kv__image">
+                                    <img src="https://www.thk.com/us/assets/images/products/cross_roller_guide_ball_guide_vr.png">
+                                </div>
+                            </div>
+                            <div class="p-kv__nav">
+                                <div class="p-page-nav--kv">
+                                    <div class="p-page-nav__links">
+                                        <nav>
+                                            <ul class="p-page-nav__item-group">
+                                                    <li class="p-page-nav__item">
+                                                        <a href="#type" class="p-page-nav__category js-page-nav-accordion">Types</a>
+                                                        <ul class="p-page-nav__anchor">
+                                                            <li class="p-page-nav__anchor-item u-sp">
+                                                                <a href="#type">Types</a>
+                                                            </li>
+                                                                            <li class="p-page-nav__anchor-item">
+                                                                                <a href="#type-1" class="js-page-nav-current">Model VR (VR1)</a>
+                                                                            </li>
+                                                                            <li class="p-page-nav__anchor-item">
+                                                                                <a href="#type-2" class="js-page-nav-current">Model VR (VR2)</a>
+                                                                            </li>
+                                                                            <li class="p-page-nav__anchor-item">
+                                                                                <a href="#type-3" class="js-page-nav-current">Model VR (VR3)</a>
+                                                                            </li>
+                                                                            <li class="p-page-nav__anchor-item">
+                                                                                <a href="#type-4" class="js-page-nav-current">Model VR (VR4)</a>
+                                                                            </li>
+                                                                            <li class="p-page-nav__anchor-item">
+                                                                                <a href="#type-5" class="js-page-nav-current">Model VR (VR6)</a>
+                                                                            </li>
+                                                                            <li class="p-page-nav__anchor-item">
+                                                                                <a href="#type-6" class="js-page-nav-current">Model VR (VR9)</a>
+                                                                            </li>
+                                                                            <li class="p-page-nav__anchor-item">
+                                                                                <a href="#type-7" class="js-page-nav-current">Model VR (VR12)</a>
+                                                                            </li>
+                                                                            <li class="p-page-nav__anchor-item">
+                                                                                <a href="#type-8" class="js-page-nav-current">Model VR (VR15)</a>
+                                                                            </li>
+                                                                            <li class="p-page-nav__anchor-item">
+                                                                                <a href="#type-9" class="js-page-nav-current">Model VR (VR18)</a>
+                                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="p-page-nav__item">
+                                                        <a href="#detail" class="p-page-nav__category js-page-nav-accordion">Detailed information</a>
+                                                        <ul class="p-page-nav__anchor">
+                                                                <li class="p-page-nav__anchor-item">
+                                                                    <a href="#detail-1" class="js-page-nav-current"> Dimensional drawing/Dimensional table </a>
+                                                                </li>
+                                                        </ul>
+                                                    </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                    <div class="p-page-nav__search-box">
+                                        <form action="https://www.thk.com/us/en/products/search/" method="get">
+                                            <p class="p-page-nav__search-box-heading">Product Search</p>
+                                            <div class="c-input-search">
+                                                <input type="text" name="q" id="q" placeholder="Enter Keyword" class="c-input-search__form">
+                                                <button class="c-input-search__button">Search</button>
+                                            </div>
+                                            <a href="https://www.thk.com/us/en/products/search/tag/" class="c-button-search">Click Here for Product Tag Search</a>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                                <p class="p-kv__link">
+                                    <a href="https://www.thk.com/us/en/products/other_linear_motion_guides/cross_roller_guide_ball_guide/precautions/" class="c-link">Handling Precautions</a>
+                                </p>
+                        </div>
+                    </div>
+                    <div class="l-content js-page-nav-content">
+                        <div class="p-block-lv2 js-page-nav-lv2" id="type">
+                                <div class="c-heading-bookmark">
+                                    <h2 class="c-heading-lv2">Types</h2>
+                                    <div class="c-heading-bookmark__button-group">
+                                        <div class="c-heading-bookmark__button-wrapper">
+                                            <button class="c-heading-bookmark__button c-heading-bookmark__button--type1" onclick="urlCopy('type')"></button>
+                                            <div class="c-heading-bookmark__button-tooltip">
+                                                <span>Copy item link</span>
+                                            </div>
+                                        </div>
+                                        <div class="c-heading-bookmark__button-wrapper">
+                                            <div class="include-not-member">
+                                                <a href="https://www.thk.com/us/en/auth/login?redirect_link_path=https%3A%2F%2Fwww.thk.com%2Fus%2Fen%2Fproducts%2Fother_linear_motion_guides%2Fcross_roller_guide_ball_guide%2Fvr%2F%23type" class="be-tts-link">
+                                                    <button class="c-heading-bookmark__button c-heading-bookmark__button--type2"></button>
+                                                </a>
+                                            </div>
+                                            
+                                            <div class="c-heading-bookmark__button-tooltip">
+                                                <span>Add item to favorites</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="p-link-list-2">
+                                        <li class="p-link-list-2__item">
+                                            <a href="https://www.thk.com/us/en/products/other_linear_motion_guides/cross_roller_guide_ball_guide/model_number/" target="_blank">Model Number</a>
+                                        </li>
+                                        <li class="p-link-list-2__item">
+                                            <a href="https://www.thk.com/us/en/products/other_linear_motion_guides/cross_roller_guide_ball_guide/selection/" target="_blank">Selection Criteria</a>
+                                        </li>
+                                        <li class="p-link-list-2__item">
+                                            <a href="https://www.thk.com/us/en/products/other_linear_motion_guides/cross_roller_guide_ball_guide/design/" target="_blank">Design Highlights</a>
+                                        </li>
+                                        <li class="p-link-list-2__item">
+                                            <a href="https://www.thk.com/us/en/products/other_linear_motion_guides/cross_roller_guide_ball_guide/maintenance/" target="_blank">Mounting Procedure and Maintenance</a>
+                                        </li>
+                                        <li class="p-link-list-2__item">
+                                            <a href="https://www.thk.com/us/en/products/other_linear_motion_guides/cross_roller_guide_ball_guide/options/" target="_blank">Options</a>
+                                        </li>
+                                </ul>
+                                <div class="p-block-lv3--bg">
+                                    <p class="c-heading-lv5">Highlight feature tags</p>
+                                    <div class="p-block__body">
+                                        <ul class="p-tag-group">
+                                                <li class="p-tag-group__item">
+                                                    <span class="c-tag--l js-highlight-tag-select" data-feature-id="11.34161">High rigidity</span>
+                                                </li>
+                                                <li class="p-tag-group__item">
+                                                    <span class="c-tag--l js-highlight-tag-select" data-feature-id="461.34206">High corrosion resistance</span>
+                                                </li>
+                                                <li class="p-tag-group__item">
+                                                    <span class="c-tag--l js-highlight-tag-select" data-feature-id="991.34259">Long service life</span>
+                                                </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            <div class="c-grid">
+                                <div class="c-grid__row">
+                                                    <div class="c-grid__col" data-col="6" data-sp-col="12">
+                                                        <div class="p-card js-page-nav-lv3" id="type-1">
+                                                            <a href="https://www.thk.com/us/en/products/other_linear_motion_guides/cross_roller_guide_ball_guide/vr/vr1/">
+                                                                <div class="p-card__header">
+                                                                    <span class="p-card__header-icon"></span>
+                                                                    <span>Model VR (VR1)</span>
+                                                                </div>
+                                                            </a>
+                                                            <div class="p-card__body">
+                                                                <div class="p-card__body-inner">
+                                                                    <div class="p-card__image js-modal-image">
+                                                                        <img src="https://www.thk.com/us/assets/images/products/vr_vr1.png" alt="" width="664" height="443">
+                                                                    </div>
+                                                                    <div class="p-card__text-group">
+                                                                        <ul class="p-tag-group">
+                                                                                <li class="p-tag-group__item">
+                                                                                    <span class="c-tag js-highlight-tag" data-feature-id="11.34161">High rigidity</span>
+                                                                                </li>
+                                                                                <li class="p-tag-group__item">
+                                                                                    <span class="c-tag js-highlight-tag" data-feature-id="461.34206">High corrosion resistance</span>
+                                                                                </li>
+                                                                                <li class="p-tag-group__item">
+                                                                                    <span class="c-tag js-highlight-tag" data-feature-id="991.34259">Long service life</span>
+                                                                                </li>
+                                                                        </ul>
+                                                                            <p class="p-kv__note">
+                                                                                Basic load rating (per roller) (kN): Basic dynamic load rating 0.152 / Basic static load rating 0.153
+                                                                            </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-grid__col" data-col="6" data-sp-col="12">
+                                                        <div class="p-card js-page-nav-lv3" id="type-2">
+                                                            <a href="https://www.thk.com/us/en/products/other_linear_motion_guides/cross_roller_guide_ball_guide/vr/vr2/">
+                                                                <div class="p-card__header">
+                                                                    <span class="p-card__header-icon"></span>
+                                                                    <span>Model VR (VR2)</span>
+                                                                </div>
+                                                            </a>
+                                                            <div class="p-card__body">
+                                                                <div class="p-card__body-inner">
+                                                                    <div class="p-card__image js-modal-image">
+                                                                        <img src="https://www.thk.com/us/assets/images/products/vr_vr2.png" alt="" width="664" height="443">
+                                                                    </div>
+                                                                    <div class="p-card__text-group">
+                                                                        <ul class="p-tag-group">
+                                                                                <li class="p-tag-group__item">
+                                                                                    <span class="c-tag js-highlight-tag" data-feature-id="11.34161">High rigidity</span>
+                                                                                </li>
+                                                                                <li class="p-tag-group__item">
+                                                                                    <span class="c-tag js-highlight-tag" data-feature-id="461.34206">High corrosion resistance</span>
+                                                                                </li>
+                                                                                <li class="p-tag-group__item">
+                                                                                    <span class="c-tag js-highlight-tag" data-feature-id="991.34259">Long service life</span>
+                                                                                </li>
+                                                                        </ul>
+                                                                            <p class="p-kv__note">
+                                                                                Basic load rating (per roller) (kN): Basic dynamic load rating 0.276 / Basic static load rating 0.271
+                                                                            </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-grid__col" data-col="6" data-sp-col="12">
+                                                        <div class="p-card js-page-nav-lv3" id="type-3">
+                                                            <a href="https://www.thk.com/us/en/products/other_linear_motion_guides/cross_roller_guide_ball_guide/vr/vr3/">
+                                                                <div class="p-card__header">
+                                                                    <span class="p-card__header-icon"></span>
+                                                                    <span>Model VR (VR3)</span>
+                                                                </div>
+                                                            </a>
+                                                            <div class="p-card__body">
+                                                                <div class="p-card__body-inner">
+                                                                    <div class="p-card__image js-modal-image">
+                                                                        <img src="https://www.thk.com/us/assets/images/products/vr_vr3.png" alt="" width="664" height="443">
+                                                                    </div>
+                                                                    <div class="p-card__text-group">
+                                                                        <ul class="p-tag-group">
+                                                                                <li class="p-tag-group__item">
+                                                                                    <span class="c-tag js-highlight-tag" data-feature-id="11.34161">High rigidity</span>
+                                                                                </li>
+                                                                                <li class="p-tag-group__item">
+                                                                                    <span class="c-tag js-highlight-tag" data-feature-id="461.34206">High corrosion resistance</span>
+                                                                                </li>
+                                                                                <li class="p-tag-group__item">
+                                                                                    <span class="c-tag js-highlight-tag" data-feature-id="991.34259">Long service life</span>
+                                                                                </li>
+                                                                        </ul>
+                                                                            <p class="p-kv__note">
+                                                                                Basic load rating (per roller) (kN): Basic dynamic load rating 0.639 / Basic static load rating 0.611
+                                                                            </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-grid__col" data-col="6" data-sp-col="12">
+                                                        <div class="p-card js-page-nav-lv3" id="type-4">
+                                                            <a href="https://www.thk.com/us/en/products/other_linear_motion_guides/cross_roller_guide_ball_guide/vr/vr4/">
+                                                                <div class="p-card__header">
+                                                                    <span class="p-card__header-icon"></span>
+                                                                    <span>Model VR (VR4)</span>
+                                                                </div>
+                                                            </a>
+                                                            <div class="p-card__body">
+                                                                <div class="p-card__body-inner">
+                                                                    <div class="p-card__image js-modal-image">
+                                                                        <img src="https://www.thk.com/us/assets/images/products/vr_vr4.png" alt="" width="664" height="443">
+                                                                    </div>
+                                                                    <div class="p-card__text-group">
+                                                                        <ul class="p-tag-group">
+                                                                                <li class="p-tag-group__item">
+                                                                                    <span class="c-tag js-highlight-tag" data-feature-id="11.34161">High rigidity</span>
+                                                                                </li>
+                                                                                <li class="p-tag-group__item">
+                                                                                    <span class="c-tag js-highlight-tag" data-feature-id="461.34206">High corrosion resistance</span>
+                                                                                </li>
+                                                                                <li class="p-tag-group__item">
+                                                                                    <span class="c-tag js-highlight-tag" data-feature-id="991.34259">Long service life</span>
+                                                                                </li>
+                                                                        </ul>
+                                                                            <p class="p-kv__note">
+                                                                                Basic load rating (per roller) (kN): Basic dynamic load rating 1.38 / Basic static load rating 1.35
+                                                                            </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-grid__col" data-col="6" data-sp-col="12">
+                                                        <div class="p-card js-page-nav-lv3" id="type-5">
+                                                            <a href="https://www.thk.com/us/en/products/other_linear_motion_guides/cross_roller_guide_ball_guide/vr/vr6/">
+                                                                <div class="p-card__header">
+                                                                    <span class="p-card__header-icon"></span>
+                                                                    <span>Model VR (VR6)</span>
+                                                                </div>
+                                                            </a>
+                                                            <div class="p-card__body">
+                                                                <div class="p-card__body-inner">
+                                                                    <div class="p-card__image js-modal-image">
+                                                                        <img src="https://www.thk.com/us/assets/images/products/vr_vr6.png" alt="" width="664" height="443">
+                                                                    </div>
+                                                                    <div class="p-card__text-group">
+                                                                        <ul class="p-tag-group">
+                                                                                <li class="p-tag-group__item">
+                                                                                    <span class="c-tag js-highlight-tag" data-feature-id="11.34161">High rigidity</span>
+                                                                                </li>
+                                                                                <li class="p-tag-group__item">
+                                                                                    <span class="c-tag js-highlight-tag" data-feature-id="461.34206">High corrosion resistance</span>
+                                                                                </li>
+                                                                                <li class="p-tag-group__item">
+                                                                                    <span class="c-tag js-highlight-tag" data-feature-id="991.34259">Long service life</span>
+                                                                                </li>
+                                                                        </ul>
+                                                                            <p class="p-kv__note">
+                                                                                Basic load rating (per roller) (kN): Basic dynamic load rating 3.78 / Basic static load rating 3.78
+                                                                            </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-grid__col" data-col="6" data-sp-col="12">
+                                                        <div class="p-card js-page-nav-lv3" id="type-6">
+                                                            <a href="https://www.thk.com/us/en/products/other_linear_motion_guides/cross_roller_guide_ball_guide/vr/vr9/">
+                                                                <div class="p-card__header">
+                                                                    <span class="p-card__header-icon"></span>
+                                                                    <span>Model VR (VR9)</span>
+                                                                </div>
+                                                            </a>
+                                                            <div class="p-card__body">
+                                                                <div class="p-card__body-inner">
+                                                                    <div class="p-card__image js-modal-image">
+                                                                        <img src="https://www.thk.com/us/assets/images/products/vr_vr9.png" alt="" width="664" height="443">
+                                                                    </div>
+                                                                    <div class="p-card__text-group">
+                                                                        <ul class="p-tag-group">
+                                                                                <li class="p-tag-group__item">
+                                                                                    <span class="c-tag js-highlight-tag" data-feature-id="11.34161">High rigidity</span>
+                                                                                </li>
+                                                                                <li class="p-tag-group__item">
+                                                                                    <span class="c-tag js-highlight-tag" data-feature-id="461.34206">High corrosion resistance</span>
+                                                                                </li>
+                                                                                <li class="p-tag-group__item">
+                                                                                    <span class="c-tag js-highlight-tag" data-feature-id="991.34259">Long service life</span>
+                                                                                </li>
+                                                                        </ul>
+                                                                            <p class="p-kv__note">
+                                                                                Basic load rating (per roller) (kN): Basic dynamic load rating 9.53 / Basic static load rating 9.48
+                                                                            </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-grid__col" data-col="6" data-sp-col="12">
+                                                        <div class="p-card js-page-nav-lv3" id="type-7">
+                                                            <a href="https://www.thk.com/us/en/products/other_linear_motion_guides/cross_roller_guide_ball_guide/vr/vr12/">
+                                                                <div class="p-card__header">
+                                                                    <span class="p-card__header-icon"></span>
+                                                                    <span>Model VR (VR12)</span>
+                                                                </div>
+                                                            </a>
+                                                            <div class="p-card__body">
+                                                                <div class="p-card__body-inner">
+                                                                    <div class="p-card__image js-modal-image">
+                                                                        <img src="https://www.thk.com/us/assets/images/products/vr_vr12.png" alt="" width="664" height="443">
+                                                                    </div>
+                                                                    <div class="p-card__text-group">
+                                                                        <ul class="p-tag-group">
+                                                                                <li class="p-tag-group__item">
+                                                                                    <span class="c-tag js-highlight-tag" data-feature-id="11.34161">High rigidity</span>
+                                                                                </li>
+                                                                                <li class="p-tag-group__item">
+                                                                                    <span class="c-tag js-highlight-tag" data-feature-id="461.34206">High corrosion resistance</span>
+                                                                                </li>
+                                                                                <li class="p-tag-group__item">
+                                                                                    <span class="c-tag js-highlight-tag" data-feature-id="991.34259">Long service life</span>
+                                                                                </li>
+                                                                        </ul>
+                                                                            <p class="p-kv__note">
+                                                                                Basic load rating (per roller) (kN): Basic dynamic load rating 17.6 / Basic static load rating 17.2
+                                                                            </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-grid__col" data-col="6" data-sp-col="12">
+                                                        <div class="p-card js-page-nav-lv3" id="type-8">
+                                                            <a href="https://www.thk.com/us/en/products/other_linear_motion_guides/cross_roller_guide_ball_guide/vr/vr15/">
+                                                                <div class="p-card__header">
+                                                                    <span class="p-card__header-icon"></span>
+                                                                    <span>Model VR (VR15)</span>
+                                                                </div>
+                                                            </a>
+                                                            <div class="p-card__body">
+                                                                <div class="p-card__body-inner">
+                                                                    <div class="p-card__image js-modal-image">
+                                                                        <img src="https://www.thk.com/us/assets/images/products/vr_vr15.png" alt="" width="664" height="443">
+                                                                    </div>
+                                                                    <div class="p-card__text-group">
+                                                                        <ul class="p-tag-group">
+                                                                                <li class="p-tag-group__item">
+                                                                                    <span class="c-tag js-highlight-tag" data-feature-id="11.34161">High rigidity</span>
+                                                                                </li>
+                                                                                <li class="p-tag-group__item">
+                                                                                    <span class="c-tag js-highlight-tag" data-feature-id="461.34206">High corrosion resistance</span>
+                                                                                </li>
+                                                                                <li class="p-tag-group__item">
+                                                                                    <span class="c-tag js-highlight-tag" data-feature-id="991.34259">Long service life</span>
+                                                                                </li>
+                                                                        </ul>
+                                                                            <p class="p-kv__note">
+                                                                                Basic load rating (per roller) (kN): Basic dynamic load rating 27.9 / Basic static load rating 26.8
+                                                                            </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-grid__col" data-col="6" data-sp-col="12">
+                                                        <div class="p-card js-page-nav-lv3" id="type-9">
+                                                            <a href="https://www.thk.com/us/en/products/other_linear_motion_guides/cross_roller_guide_ball_guide/vr/vr18/">
+                                                                <div class="p-card__header">
+                                                                    <span class="p-card__header-icon"></span>
+                                                                    <span>Model VR (VR18)</span>
+                                                                </div>
+                                                            </a>
+                                                            <div class="p-card__body">
+                                                                <div class="p-card__body-inner">
+                                                                    <div class="p-card__image js-modal-image">
+                                                                        <img src="https://www.thk.com/us/assets/images/products/vr_vr18.png" alt="" width="664" height="443">
+                                                                    </div>
+                                                                    <div class="p-card__text-group">
+                                                                        <ul class="p-tag-group">
+                                                                                <li class="p-tag-group__item">
+                                                                                    <span class="c-tag js-highlight-tag" data-feature-id="11.34161">High rigidity</span>
+                                                                                </li>
+                                                                                <li class="p-tag-group__item">
+                                                                                    <span class="c-tag js-highlight-tag" data-feature-id="461.34206">High corrosion resistance</span>
+                                                                                </li>
+                                                                                <li class="p-tag-group__item">
+                                                                                    <span class="c-tag js-highlight-tag" data-feature-id="991.34259">Long service life</span>
+                                                                                </li>
+                                                                        </ul>
+                                                                            <p class="p-kv__note">
+                                                                                Basic load rating (per roller) (kN): Basic dynamic load rating 40.9 / Basic static load rating 38.8
+                                                                            </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-block-lv2 js-page-nav-lv2" id="feature">
+                                            <div class="p-block-lv3 js-page-nav-lv3">
+                                                <div class="p-block__body"></div>
+                                            </div>
+                        </div>
+                        <div class="p-block-lv2 js-page-nav-lv2" id="detail">
+                                <div class="c-heading-bookmark">
+                                    <h2 class="c-heading-lv2">Detailed information for each model number</h2>
+                                    <div class="c-heading-bookmark__button-group">
+                                        <div class="c-heading-bookmark__button-wrapper">
+                                            <button class="c-heading-bookmark__button c-heading-bookmark__button--type1" onclick="urlCopy('detail')"></button>
+                                            <div class="c-heading-bookmark__button-tooltip">
+                                                <span>Copy item link</span>
+                                            </div>
+                                        </div>
+                                        <div class="c-heading-bookmark__button-wrapper">
+                                            <div class="include-not-member">
+                                                <a href="https://www.thk.com/us/en/auth/login?redirect_link_path=https%3A%2F%2Fwww.thk.com%2Fus%2Fen%2Fproducts%2Fother_linear_motion_guides%2Fcross_roller_guide_ball_guide%2Fvr%2F%23detail" class="be-tts-link">
+                                                    <button class="c-heading-bookmark__button c-heading-bookmark__button--type2"></button>
+                                                </a>
+                                            </div>
+                                            
+                                            <div class="c-heading-bookmark__button-tooltip">
+                                                <span>Add item to favorites</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-table-nav-wrap js-table-nav-wrap">
+                                    <div class="p-table-nav js-table-nav">
+                                        <div class="p-table-nav__inner">
+                                            <p class="p-table-nav__heading">
+                                                <span class="p-table-nav__heading-default">Toggle chart</span>
+                                                <span class="p-table-nav__heading-table js-table-nav-heading"></span>
+                                            </p>
+                                            <ul class="p-table-nav__items">
+                                                                    <li class="p-table-nav__item js-switch-trigger is-active" data-model="vr1">
+                                                                        Model VR (VR1)
+                                                                    </li>
+                                                                    <li class="p-table-nav__item js-switch-trigger " data-model="vr2">
+                                                                        Model VR (VR2)
+                                                                    </li>
+                                                                    <li class="p-table-nav__item js-switch-trigger " data-model="vr3">
+                                                                        Model VR (VR3)
+                                                                    </li>
+                                                                    <li class="p-table-nav__item js-switch-trigger " data-model="vr4">
+                                                                        Model VR (VR4)
+                                                                    </li>
+                                                                    <li class="p-table-nav__item js-switch-trigger " data-model="vr6">
+                                                                        Model VR (VR6)
+                                                                    </li>
+                                                                    <li class="p-table-nav__item js-switch-trigger " data-model="vr9">
+                                                                        Model VR (VR9)
+                                                                    </li>
+                                                                    <li class="p-table-nav__item js-switch-trigger " data-model="vr12">
+                                                                        Model VR (VR12)
+                                                                    </li>
+                                                                    <li class="p-table-nav__item js-switch-trigger " data-model="vr15">
+                                                                        Model VR (VR15)
+                                                                    </li>
+                                                                    <li class="p-table-nav__item js-switch-trigger " data-model="vr18">
+                                                                        Model VR (VR18)
+                                                                    </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="js-table-nav-content">
+                                    <div class="p-block-lv3 js-page-nav-lv3" id="detail-1">
+                                            <div class="c-heading-bookmark">
+                                                <h3 class="c-heading-lv3">Dimensional drawing/Dimensional table</h3>
+                                                <div class="c-heading-bookmark__button-group">
+                                                    <div class="c-heading-bookmark__button-wrapper">
+                                                        <button class="c-heading-bookmark__button c-heading-bookmark__button--type1" onclick="urlCopy('detail-1')"></button>
+                                                        <div class="c-heading-bookmark__button-tooltip">
+                                                            <span>Copy item link</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-heading-bookmark__button-wrapper">
+                                                        <div class="include-not-member">
+                                                            <a href="https://www.thk.com/us/en/auth/login?redirect_link_path=https%3A%2F%2Fwww.thk.com%2Fus%2Fen%2Fproducts%2Fother_linear_motion_guides%2Fcross_roller_guide_ball_guide%2Fvr%2F%23detail-1" class="be-tts-link">
+                                                                <button class="c-heading-bookmark__button c-heading-bookmark__button--type2"></button>
+                                                            </a>
+                                                        </div>
+                                                        
+                                                        <div class="c-heading-bookmark__button-tooltip">
+                                                            <span>Add item to favorites</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </main>
+                <div class="p-page-nav--fixed js-page-nav">
+                    <div class="p-page-nav--fixed__inner">
+                        <div class="p-page-nav__tab">
+                            <ul class="p-page-nav__tab-head">
+                                    <li class="p-page-nav__tab-item js-page-nav-tab is-active">
+                                        <a href="#type" class="p-page-nav__category js-page-nav-current">Types</a>
+                                    </li>
+                                    <li class="p-page-nav__tab-item js-page-nav-tab">
+                                        <a href="#detail" class="p-page-nav__category js-page-nav-current">Detailed information</a>
+                                    </li>
+                            </ul>
+                            <div class="p-page-nav__tab-body">
+                                    <div class="p-page-nav__tab-content js-page-nav-tab-content is-active">
+                                        <ul class="p-page-nav__anchor">
+                                                            <li class="p-page-nav__anchor-item">
+                                                                <a href="#type-1" class="js-page-nav-current">Model VR (VR1)</a>
+                                                            </li>
+                                                            <li class="p-page-nav__anchor-item">
+                                                                <a href="#type-2" class="js-page-nav-current">Model VR (VR2)</a>
+                                                            </li>
+                                                            <li class="p-page-nav__anchor-item">
+                                                                <a href="#type-3" class="js-page-nav-current">Model VR (VR3)</a>
+                                                            </li>
+                                                            <li class="p-page-nav__anchor-item">
+                                                                <a href="#type-4" class="js-page-nav-current">Model VR (VR4)</a>
+                                                            </li>
+                                                            <li class="p-page-nav__anchor-item">
+                                                                <a href="#type-5" class="js-page-nav-current">Model VR (VR6)</a>
+                                                            </li>
+                                                            <li class="p-page-nav__anchor-item">
+                                                                <a href="#type-6" class="js-page-nav-current">Model VR (VR9)</a>
+                                                            </li>
+                                                            <li class="p-page-nav__anchor-item">
+                                                                <a href="#type-7" class="js-page-nav-current">Model VR (VR12)</a>
+                                                            </li>
+                                                            <li class="p-page-nav__anchor-item">
+                                                                <a href="#type-8" class="js-page-nav-current">Model VR (VR15)</a>
+                                                            </li>
+                                                            <li class="p-page-nav__anchor-item">
+                                                                <a href="#type-9" class="js-page-nav-current">Model VR (VR18)</a>
+                                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="p-page-nav__tab-content js-page-nav-tab-content">
+                                        <ul class="p-page-nav__anchor">
+                                                <li class="p-page-nav__anchor-item">
+                                                    <a href="#detail-1" class="js-page-nav-current"> Dimensional drawing/Dimensional table </a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="p-page-nav__search">
+                            <div class="p-page-nav__search-open js-page-nav-search-open">Product Search</div>
+                            <div class="p-page-nav__search-content js-page-nav-search">
+                                <form action="https://www.thk.com/us/en/products/search/" method="get" class="p-page-nav__search-inner">
+                                    <p class="p-page-nav__search-heading">Product Search</p>
+                                    <div class="c-input-search">
+                                        <input type="text" name="q" id="q" placeholder="Enter Keyword" class="c-input-search__form">
+                                        <button class="c-input-search__button">Search</button>
+                                    </div>
+                                </form>
+                                <div class="p-page-nav__search-close js-page-nav-search-close">Close</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="footer_en" class="js-include"></div>
+                <nav class="p-toolbar js-toolbar is-open include-not-member">
+    <ul class="p-toolbar__items">
+        <li class="p-toolbar__item--login">
+            <a href="/us/en/auth/login/" class="p-toolbar__item-inner">
+                <span class="p-toolbar__item-icon"><img src="https://www.thk.com/us/assets/images/icon/icon_login_01.png" alt=""></span>
+                <span class="p-toolbar__item-text">Login</span>
+            </a>
+        </li>
+                <li class="p-toolbar__item">
+                    <a href="https://www.thk.com/us/en/auth/login?redirect_link_path=" class="p-toolbar__item-inner be-tts-link" target="_self">
+                        <span class="p-toolbar__item-icon"><img src="/us/assets/images/icon/icon_favorite_01.png" alt=""></span>
+                        <span class="p-toolbar__item-text">Add to Favorites</span>
+                    </a>
+                </li>
+                <li class="p-toolbar__item">
+                    <a href="https://www.thk.com/us/en/auth/login?redirect_link_path=https%3A%2F%2Fonline.thk.com%2Ftools%2Fdesigner%2Fstd%2Fus%2Fen%2FSOP%2FModel%2F%3Fmode%3DCRG" class="p-toolbar__item-inner be-tts-link" target="_blank">
+                        <span class="p-toolbar__item-icon"><img src="/us/assets/images/icon/icon_setting_01.png" alt=""></span>
+                        <span class="p-toolbar__item-text">Designer</span>
+                    </a>
+                </li>
+                <li class="p-toolbar__item">
+                    <a href="https://www.thk.com/us/en/auth/login?redirect_link_path=https%3A%2F%2Fonline.thk.com%2Ftools%2Fcad%2Fus%2Fen%2F%3FlanguageIso%3Den%26info%3Dthk%2Flinear_motion_systems%2Fcross_roller_ball_guide%2F" class="p-toolbar__item-inner be-tts-link" target="_blank">
+                        <span class="p-toolbar__item-icon"><img src="/us/assets/images/icon/icon_cad_01.png" alt=""></span>
+                        <span class="p-toolbar__item-text">2D/3D CAD</span>
+                    </a>
+                </li>
+                <li class="p-toolbar__item">
+                    <a href="https://www.thk.com/us/en/products/tools/designer/life_calculator/" class="p-toolbar__item-inner" target="_blank">
+                        <span class="p-toolbar__item-icon"><img src="/us/assets/images/icon/icon_calc_01.png" alt=""></span>
+                        <span class="p-toolbar__item-text">Life Calculator</span>
+                    </a>
+                </li>
+                <li class="p-toolbar__item">
+                    <a href="https://catalog-na.thk.com/General-Catalog-Cross-Roller-GuideBall-Guide/A7-1/" class="p-toolbar__item-inner" target="_blank">
+                        <span class="p-toolbar__item-icon"><img src="/us/assets/images/icon/icon_catalog_01.png" alt=""></span>
+                        <span class="p-toolbar__item-text">Catalog</span>
+                    </a>
+                </li>
+                <li class="p-toolbar__item">
+                    <a href="https://catalog-na.thk.com/BookshelfView/" class="p-toolbar__item-inner" target="_blank">
+                        <span class="p-toolbar__item-icon"><img src="/us/assets/images/icon/icon_download_01.png" alt=""></span>
+                        <span class="p-toolbar__item-text">Manual</span>
+                    </a>
+                </li>
+                    <li class="p-toolbar__item--trigger js-toolbar-expand">
+                        <a href="" class="p-toolbar__item-inner" target="_blank">
+                            <span class="p-toolbar__item-icon"><img src="https://www.thk.com/us/assets/images/icon/icon_arrow_right_01.png" alt=""></span>
+                            <span class="p-toolbar__item-text">
+                                <span class="p-toolbar__item-text-close">Close</span>
+                                <span class="p-toolbar__item-text-open">See more</span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="p-toolbar__items js-toolbar-expand-content">
+                <li class="p-toolbar__item--top">
+                    <a href="https://www.thk.com/us/en/products/faq/" class="p-toolbar__item-inner" target="_blank">
+                        <span class="p-toolbar__item-icon"><img src="/us/assets/images/icon/icon_faq_02.png" alt=""></span>
+                        <span class="p-toolbar__item-text">FAQ</span>
+                            <div class="p-toolbar__item-tooltip"><span>to FAQ</span></div>
+                    </a>
+                </li>
+                <li class="p-toolbar__item">
+                    <a href="https://store-na.thk.com/" class="p-toolbar__item-inner" target="_blank">
+                        <span class="p-toolbar__item-icon"><img src="/us/assets/images/icon/icon_online-store.png" alt=""></span>
+                        <span class="p-toolbar__item-text">THK Online Store</span>
+                            <div class="p-toolbar__item-tooltip"><span>Continue to THK Online Store</span></div>
+                    </a>
+                </li>
+        </ul>
+    <div class="p-toolbar__close js-toolbar-close">
+        <img src="https://www.thk.com/us/assets/images/icon/icon_tool_close_01.png" alt="">
+    </div>
+</nav>
+            
+        
+<div class="p-toolbar__open js-toolbar-open"><img src="https://www.thk.com/us/assets/images/icon/icon_tool_open_01_en.png" alt=""></div>
+<script data-ot-ignore="" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script data-ot-ignore="" src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/smoothness/jquery-ui.css">
+<script type="text/javascript" src="https://online.thk.com/mypage/js/Bookmark/BookmarkProdEdit.js?20220512"></script>
+<link rel="stylesheet" href="https://online.thk.com/mypage/css/Bookmark/BookmarkProdEditDialog.css?20220512">
+<div id="my_bmprodedit_div1">
+    <div id="my_bmprodedit_div2">
+        <iframe id="my_bmprodedit_iframe"></iframe>
+    </div>
+</div>
+<script>
+    // 実行完了待ち
+    window.addEventListener('message', function (event) {
+        // オリジン判定
+        if (event.origin != EVENT_ORIGIN) {
+            return;
+        }
+        let data = event.data;
+        // 送信先判定(1件登録の時)
+        let target = data.TARGET;
+        if (target != 'bookmarkProd') {
+            return;
+        }
+        // イベント判定（適用ボタン時）
+        let eventFlag = data.EVENTFLG;
+        if (eventFlag == '1') {
+            bookmarkProdCheck();
+        }
+    });
+    /**
+     * お気に入り登録
+     * para_url空の場合、現在のurl（クエリやフラグメントを含まない）を取得
+     * para_title空の場合、現在のページのタイトルを取得
+     * @param {string} para_url 　登録するURL（デフォルトは空文字）
+     * @param {string} para_title 登録するURLのタイトル名（デフォルトは空文字）
+     */
+    function bookmarkProdRegist(para_url = '', para_title = '') {
+        let data_url = para_url;
+        let data_title = para_title;
+        if (!data_url && !data_title) {
+            // 現在のurl（クエリやフラグメントを含まない）を取得
+            const currentUrl = decodeURIComponent(window.location.href);
+            const url = new URL(currentUrl);
+            data_url = new URL(url.origin + url.pathname).toString();
+            data_title = document.title;
+        }
+        // 連携データID
+        let dataId = 0;
+        // 連携データ設定
+        let wkurl = '/favorite/regist';
+        // 連携データを一時テーブルに登録して、連携データIDを取得する
+        $.ajax({
+            type: 'POST',
+            url: wkurl, // サービス側の連携用情報登録API実行メソッド(2-3-2)のパス
+            dataType: 'json',
+            data: { url: data_url, title: data_title },
+            async: false,
+            cache: false,
+            success: function (response) {
+                if (response.Result == 0) {
+                    dataId = response.TempDataId;
+                }
+            },
+        });
+        // ポップアップ画面を呼び出すメソッド
+        my_bookmark_prod_reg({ LinkedDataId: dataId, TargetType: 1 });
+    }
+</script>
+<!-- ログイン中 -->
+
+                <script>
+    (async () => {
+        // 寸法図寸法表と詳細情報のJSONファイル読み込み
+        if ($('#detail-1').length) {
+            let own_details = {};
+            let own_dimensiontables = {};
+            let pathName;
+            let words;
+            pathName = location.pathname.replace('/index.html', '');
+            words = pathName.split('/');
+            if (!words[words.length - 1]) {
+                words.pop();
+            }
+            let MT_OWN_LV3_PATH = '';
+            for (let i = 1; i <= words.length - 1; i++) {
+                MT_OWN_LV3_PATH += '/' + words[i];
+            }
+            // Setを用いて重複排除、filterを用いて空白文字を排除したLv4のラベル一覧取得
+            const lv4LabelList = Array.from(new Set('vr1|vr2|vr3|vr4|vr6|vr9|vr12|vr15|vr18|'.split('|'))).filter((v) => v);
+            // 寸法図寸法表のJSON一覧を取得
+            // script_common.jsの読み込みより先にHTML上に寸法図寸法表のHTMLが無いとJSON表がうまく展開されないので、同期的読み込み
+            for (const label of lv4LabelList) {
+                $.ajax({
+                    url: MT_OWN_LV3_PATH + '/' + label + '/dimensiontable.json',
+                    type: 'GET',
+                    async: false,
+                    contentType: 'application/json',
+                    dataType: 'json',
+                    success: function (result) {
+                        // 寸法図寸法表のJSON保持
+                        own_dimensiontables[label] = result?.dimensiontable;
+                    },
+                    error: function () {
+                        // エラー
+                        console.log(`ERROR DIMENTIONTABLE ${label}`);
+                    },
+                });
+            }
+            // ここから寸法図寸法表表示部分の処理
+            let body = '';
+            let isActive = 'is-active';
+            // JSONデータをループ処理
+            // key:Lv4識別ラベル value:寸法図寸法表のコンテンツHTML
+            for (const [key, value] of Object.entries(own_dimensiontables)) {
+                body += `
+                        <div class="js-switch-content ${isActive}" data-model-content="${key}">
+                            ${value || ''}
+                        </div>
+                        `;
+                isActive = '';
+            }
+            if (body) {
+                // 寸法図寸法表を出力
+                $(`
+                    <div class="p-block__body">
+                        ${body}
+                    </div>
+                `).insertAfter('#detail-1 > .c-heading-bookmark');
+            }
+            // ここから詳細情報の処理
+            // 詳細情報のJSONを取得
+            await $.ajax({
+                url: MT_OWN_LV3_PATH + '/detail.json',
+                type: 'GET',
+                async: true,
+                contentType: 'application/json',
+                dataType: 'json',
+            }).then(
+                (result) => {
+                    // 詳細情報のJSON保持
+                    own_details = result;
+                },
+                () => {
+                    // エラー
+                    console.log('ERROR DETAIL');
+                }
+            );
+            // JSONデータをループ処理
+            // key:詳細情報のContentID value:詳細情報のコンテンツHTMLを保持する連想配列
+            for (const [key, value] of Object.entries(own_details)) {
+                // JSONから取得したHTMLを付加するための基準になるDIV この要素の直後に付加する
+                const $targetDiv = $(`#detail-${key} > .c-heading-bookmark`);
+                if ($targetDiv.length) {
+                    $(`
+                        <div class="p-block__body">${value?.contents}</div>
+                    `).insertAfter($targetDiv);
+                }
+            }
+        }
+    })();
+</script>
+                <script src="https://www.thk.com/common/assets/js/script_common.js"></script>
+                <script>
+    // 画面表示時
+    $(document).ready(function () {
+        // ページタイトルを取得
+        const pageTitle = document.title;
+        // ログイン/未ログイン要素取得
+        const notMemberElement = document.querySelector('.include-not-member');
+        // ログイン画面のURL生成
+        const loginURL = "https://www.thk.com/us/en/auth/login?redirect_link_path=";
+        // h4タグが存在する場合に処理を実行
+        $('h4').each(function () {
+            // 最も近い親のh3のidを取得
+            const parentH3 = $(this).closest('.js-page-nav-lv3');
+            const parentId = parentH3.attr('id');
+            // 同じh3内での現在のh4の順番を取得（1から開始）
+            const h4Index = parentH3.find('h4').index(this) + 1;
+            // 新しいIDを生成（例：feature-1-1）
+            const newId = `${parentId}-${h4Index}`;
+            // リダイレクトに設定するURLをエンコード
+            const redirectEncodeURL = encodeURIComponent("https://www.thk.com/us/en/products/other_linear_motion_guides/cross_roller_guide_ball_guide/vr/#" + newId);
+            // h4のテキストを取得
+            const h4Text = $(this).text().trim();
+            const h4BookmarkRegexReplaceTitle = h4Text.replace(/<[^>]*>/g, '');
+            // h4タグの前にbookmarkクラスでラップする
+            $(this).wrap(`<div class="c-heading-bookmark" id="${newId}">`);
+            // h4タグの後ろにボタングループを追加（wrapで作成したdivの中に入る）
+            $(this).after(`
+                <div class="c-heading-bookmark__button-group">
+                    <div class="c-heading-bookmark__button-wrapper">
+                        <button class="c-heading-bookmark__button c-heading-bookmark__button--type1"
+                                onclick="urlCopy('${newId}')"></button>
+                        <div class="c-heading-bookmark__button-tooltip">
+                            <span>Copy item link</span>
+                        </div>
+                    </div>
+                    <div class="c-heading-bookmark__button-wrapper">
+                        ${
+                            notMemberElement
+                                ? `
+                            <div class="include-not-member">
+                                <a href="${loginURL}${redirectEncodeURL}" class="be-tts-link">
+                                    <button class="c-heading-bookmark__button c-heading-bookmark__button--type2">
+                                    </button>
+                                </a>
+                            </div>
+                        `
+                                : `
+                            <div class="include-member">
+                                <span>
+                                    <button class="c-heading-bookmark__button c-heading-bookmark__button--type2"
+                                            onclick="bookmarkProdRegist(\`https://www.thk.com/us/en/products/other_linear_motion_guides/cross_roller_guide_ball_guide/vr/#${newId}\`,\`${h4BookmarkRegexReplaceTitle}｜${pageTitle}\`)">
+                                    </button>
+                                </span>
+                            </div>
+                        `
+                        }
+                        <div class="c-heading-bookmark__button-tooltip">
+                            <span>Add item to favorites</span>
+                        </div>
+                    </div>
+                </div>
+            `);
+        });
+        // h4の処理が完了した後、URLにハッシュがあれば該当位置にジャンプ
+        const hash = window.location.hash;
+        if (hash) {
+            // -が含まれている場合
+            if (hash.includes('-')) {
+                // 三段階の階層構造（例：detail-123-1やoption-456-1）の場合
+                const parts = hash.split('-');
+                if (parts.length === 3) {
+                    window.location.hash = '';
+                    window.location.hash = hash;
+                }
+            }
+        }
+    });
+</script>
+                <script src="https://www.thk.com/common/assets/js/en/script_en.js"></script>
+                                <script src="https://www.thk.com/common/assets/js/en/script_autologout.js"></script>
+            
+        
+
+<script id="user_properties">(function(){
+                        var uchar = "";
+                        var MailAddress = "";
+                        var LastName = "";
+                        var FirstName = "";
+                        var CompanyName = "";
+                        })()</script></body></html>

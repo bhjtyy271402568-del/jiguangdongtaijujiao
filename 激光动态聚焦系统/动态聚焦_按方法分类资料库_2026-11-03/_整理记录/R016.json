@@ -1,0 +1,36 @@
+{
+  "url": "https://www.nature.com/articles/s41566-020-0684-z",
+  "category": "08_综述与光学基础",
+  "origins": [
+    "激光动态聚焦_来源索引与验证清单_2026-11-03.md"
+  ],
+  "context": "\n- 原始入口：https://www.nature.com/articles/s41566-020-0684-z",
+  "id": "R016",
+  "files": [
+    {
+      "path": "08_综述与光学基础\\R016_Variable optical elements for fast focus control _ Nature Photonics.html",
+      "type": "HTML",
+      "bytes": 389996,
+      "sha256": "79eddc80a1f4cc9ca9da40f850985ffe27a42a9ffe95f648cae5868f5462d12d",
+      "url": "https://www.nature.com/articles/s41566-020-0684-z",
+      "title": "Variable optical elements for fast focus control | Nature Photonics",
+      "text_chars": 24959
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://www.nature.com/articles/s41566-020-0684-z",
+      "http": 200,
+      "final_url": "https://www.nature.com/articles/s41566-020-0684-z",
+      "result": "网页"
+    },
+    {
+      "url": "https://www.nature.com/articles/s41566-020-0684-z.pdf",
+      "http": 200,
+      "final_url": "https://www.nature.com/articles/s41566-020-0684-z",
+      "result": "网页"
+    }
+  ],
+  "title": "Variable optical elements for fast focus control | Nature Photonics",
+  "status": "摘要或元数据网页已保存"
+}

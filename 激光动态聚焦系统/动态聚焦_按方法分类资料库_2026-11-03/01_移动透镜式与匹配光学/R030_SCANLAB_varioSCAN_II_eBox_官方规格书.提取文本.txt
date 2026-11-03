@@ -1,0 +1,233 @@
+dynamic and precise laser focussing
+variovarioSCANSCAN II II
+The varioSCAN II focusing unit enables highly dynamic and  
+exceptionally precise positioning of the laser focus along the  
+beam direction.
+The z-axes enable 2D scan systems to execute 3D processing or 
+replace costly objectives for providing a plane focusing surface.
+The product series offers a wide range of different sizes, optics 
+designs and functional upgrades (e.g. integrated encoder).  
+The system design is tailor-made for the customer’s application. 
+Typical applications
+• 3D micromachining
+• Additive manufacturing
+• Laser cutting
+• Laser marking
+• Microstructuring
+Key features
+• Any mounting orientation
+• Compact construction in high quality design
+• Diffraction limited imaging
+• Wide range of optical configurations for all typical  
+laser wavelengths
+• Configurations suited for high power lasers
+
+variovarioSCANSCANdede II 40i II 40i variovarioSCANSCANdede II 40i FLEX II 40i FLEX
+variovarioSCANSCANdede II 20i II 20i
+variovarioSCANSCAN II II
+• Fast dynamics 
+• Compact design 
+• Wavelengths down to the UV
+• Optional: water-cooled entrance aperture
+• Highest laser powers
+• Water-cooled entrance aperture
+• Air cooling for optics chamber
+• Low-absorption optics
+• Variable adjustment of image field size 
+and working distance
+• Integration of the electronic cards in the  
+FLEX housing
+Typical applications
+• Laser marking
+• 3D micromachining
+Typical applications
+• Additive manufacturing
+• Laser cutting
+Typical applications
+• Textile processing
+• Laser cutting
+varioSCAN II z-axes shift the laser focus 
+along the optical axis. This is done by 
+the moving optics, which expands the 
+incoming laser beam. Then the laser beam 
+is either collimated or focused by the fixed 
+optics.
+This results in two optics configurations: 
+Type FT (F-Theta) or Type PR (PRefocus). 
+Therefore the varioSCAN II can be used in 
+systems configurations with or without an 
+F-Theta objective.
+Functional Principle z-axis
+Fixed
+optics 
+Motor 
+block
+Optical axis
+Watercooled 
+entrance aperture 
+(optional)
+Moving
+optics
+Beam shape FT
+Beam shape PR
+iDRIVE Technology varioSCAN II eBox
+The digital varioSCANde II systems 
+utilize iDRIVE technology. This 
+enables real-time readback of the 
+actual position and other status 
+states.
+More information and 
+application examples:
+varioSCAN II Video
+• Electronic cards in a compact box
+• Flat design that creates flexible 
+integration options
+• Rear drilling pattern also suitable for 
+upright installation
+• EMC and RoHS compliant
+• Improved thermal management
+• SL2-100 and XY2-100 variants 
+available
+
+varioSCANde II 20i
+varioSCANde II 40i
+varioSCANde II 40i FLEX
+220
+140
+43
+all dimensions in mm
+Technical DrawingsTechnical Drawings
+varioSCAN II eBox (optional)
+(Variant SL2-100, connector positions differ for variant XY2-100)
+Clamping surface
+Tolerance of the clamping surface diameter 44h6:
+44 +0,00 mm
+44 -0.016 mm
+Water-cooled aperture 
+(optional)
+3435.5
+43
+approx. 100 - 175
+(depending on the version)
+Ø 43.8
+22
+19
+Ø44
+Water-cooled aperture 
+(optional)
+Standard: aluminum
+Optional: stainless steel
+3370.525
+approx. 175 - 190 
+(depending on the version)
+Ø 59.8
+Ø 60h6
+Ø 88
+10 8
+Clamping surface
+Tolerance of the clamping surface diameter 60h6:
+60 + 0,00 mm
+60 - 0.019 mm
+74
+5°
+3 x 120°
+M4 
+- 10 deep (3x)
+Water-cooled aperture 
+Standard: aluminum
+Optional: stainless steel
+Water-cooled aperture 
+Beam entrance
+18 22
+97.9
+226.2
+182.5
+195
+126
+99
+47.43
+M6 (3x)
+
+Google Play App Store
+SCANcalc App
+SCANLAB America, Inc. · 100 Illinois St · St. Charles, IL 60174 · USA  
+Tel. +1 630 797-2044 · info@scanlab-america.com · www.scanlab-america.com
+SCANLAB GmbH · Siemensstr. 2a · 82178 Puchheim · Germany  
+Tel. +49 89 800 746-0 · info@scanlab.de · www.scanlab.de
+SpecificationsSpecifications
+  09 / 2025 Information is subject to change without notice. 
+  Product photos are non-binding and may show customized features.
+Dynamic- and motor
+varioSCANde II 20i varioSCANde II 40i (FLEX)
+Tracking error [ms] 0.55 0.70
+Motor(1)
+Max. travel of the moving lens [mm] ± 2  ± 3
+Typ. speed of the moving lens [mm/s] ≤ 280 ≤ 140
+Long-term drift (> 8h) [µm] < 3 < 3
+Repeatability [µm] < 0.5 < 0.5
+Example applications
+Laser marking Micromaterial-
+processing
+Additive 
+Manufacturing
+Textile processing
+Configuration
+Typ. scan head aperture [mm] 10 14 30 30
+varioSCAN II type 20-20 FT 20-133 FT 40-116 PR 40-89-PR (FLEX)
+Aperture diameter [mm] 5 7 16 16
+Beam expansion factor 2.8 2.0 2.0 2.0 – 2.5
+Coating: Wavelength [nm] 1020 – 1090 1020 – 1090 1030 – 1090 10600
+FT: Objective focal length [mm] 
+PR: medium back focal length [mm] 163 100 850 370 – 2015
+Square image field 
+edge length [mm] 95 50 500 180 – 1400
+Focus shift / mm [mm] 17.1 2.2 23.5 11. – 600
+Focus shift (for varioSCANde II) [mm] ± 32 ± 4 ± 20 ± 0
+Electronics and general
+varioSCANde II 20i 
+varioSCANde II 40i FLEX
+varioSCANde II 40i
+Power supply  
+(requirements for the  
+power supply unit)
+30 V DC (29 - 33 V), 
+min. 1.5 A
+available variants: 
+30 V DC (29 - 33 V) and 48 V DC, 
+max. 1.5 A each
+Interfaces SL2-100,  
+XY2-100 Enhanced
+SL2-100,  
+XY2-100 Enhanced
+Installation Clamping, electrically insulated, thermally connected
+Operating temperature 25°C ± 10°C
+(1)  All specifications mentioned refer exclusively to the motor only. The influence of these specifications on the actual positioning of the 
+laser beam in the processing field/volume depends on the specific optical configuration.
+(2) A specific type design is defined from the specifications given.
+(3) Coatings for double & multiple wavelengths are available on request.
+(4) Higher laser powers are dependent on laser beam diameter, beam quality and cooling options.
+Optics and mechanics
+varioSCANde II 20i varioSCANde II 40i varioSCANde II 40i FLEX
+Common optics(2) 
+Aperture [mm] 4 – 7 8 – 18 16
+Typ. exit beam diameter [mm] ≤ 20 ≤ 40 ≤ 40
+Typ. wavelengths [nm] (3)
+257 – 266, 335 – 360,  
+1020 – 1090, 10600
+515 – 532, 
+1030 – 1090, 
+9400, 10600
+9300, 10600
+Beam expansion factor 2 – 5 1.4 – 3.8 2 – 2.5
+Max. laser power cw [W](4) 75 (UV), 150 (green), 
+250 (IR), 250 (CO2)
+1000 (green), 3000 (IR),  
+2000 (CO2) 1000 (CO2)
+Mechanics
+Weight [kg] 0.5 – 0.7 approx. 2.4 approx. 4.4
+System cooling Optional: water cooled  
+entrance aperture
+Air cooling & water cooled  
+entrance aperture
+Air cooling & water cooled  
+entrance aperture

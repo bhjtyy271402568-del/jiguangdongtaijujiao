@@ -1,0 +1,481 @@
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Patent9专利在线</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script type="text/javascript" src="/js/main.js"></script>
+    <link href="/css/main.css" rel="stylesheet" />
+    <script type="text/javascript">
+        // ==================== 排序切换（已移除了伪造参数的拼接） ====================
+        function sortChange(obj) {
+            var url;
+            if (isAdvancedMode) {
+                url = "/search.aspx?t=fmzl&adv=&sort=" + obj.value + "&p=1";
+            } else {
+                url = "/search.aspx?k=Zhou%20He&c=Inventor&t=fmzl&sort=" + obj.value + "&p=1";
+            }
+            window.location.href = url;
+        }
+    </script>
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <nav class="top-nav">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="/">
+                    <img src="/head.png" alt="Patent9专利在线" />
+                    <span>Patent9 专利在线</span>
+                </a>
+            </div>
+            <div class="nav-search-mini">
+                <form action="search.aspx" method="post" style="display:flex;gap:8px;align-items:center;width:100%;">
+                    
+                    <input name="k" type="text" placeholder="搜索专利..." size="30" maxlength="200" value="Zhou He" style="flex:1;padding:8px 12px;border:1px solid rgba(255,255,255,0.3);border-radius:6px;background:rgba(255,255,255,0.95);outline:none;color:#333;" />
+                    <input type="hidden" name="c" value="Inventor" />
+                    
+                    <input type="hidden" name="t" value="fmzl" />
+                    <input type="submit" value="搜索" class="btn btn-sm btn-search" style="padding:8px 18px;" />
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 搜索页面主体 -->
+    <div class="search-page">
+        <div class="container">
+            <!-- 搜索表单区 -->
+            <div class="search-header">
+                <form action="search.aspx" method="post" id="searchForm">
+    <!-- 普通搜索区 -->
+    <div id="normalSearchArea">
+        <div class="normal-search-row">
+            <img src="so.gif" alt="" style="height:24px;opacity:0.5;" />
+            <input name="k" id="searchKeyword" type="text" placeholder="请输入关键词..." size="50" maxlength="200" value="Zhou He" />
+            <input type="submit" value="搜 索" onclick="return prepareSubmit()" />
+            <a href="javascript:void(0)" onclick="toggleAdvanced()" class="adv-toggle-inline">高级搜索 &#9660;</a>
+        </div>
+
+        <div class="patent-field-select">
+            <label class="field-option">
+                <input type="checkbox" class="field-chk" value="PatentNo"  />
+                <span>申请号或专利号</span>
+            </label>
+            <label class="field-option">
+                <input type="checkbox" class="field-chk" value="PublicationNumber"  />
+                <span>公开号</span>
+            </label>
+            <label class="field-option">
+                <input type="checkbox" class="field-chk" value="PatentName"  />
+                <span>专利名称</span>
+            </label>
+            <label class="field-option">
+                <input type="checkbox" class="field-chk" value="Abstract"  />
+                <span>专利摘要</span>
+            </label>
+            <label class="field-option">
+                <input type="checkbox" class="field-chk" value="Applicant"  />
+                <span>申请人</span>
+            </label>
+            <label class="field-option">
+                <input type="checkbox" class="field-chk" value="Inventor" checked="checked" />
+                <span>发明人</span>
+            </label>
+        </div>
+
+    </div>
+
+    <!-- 专利类型选择（普通搜索和高级搜索共享） -->
+    <div class="patent-type-select">
+        <label class="type-option">
+            <input type="radio" name="t" value="all"  />
+            <span>全部专利</span>
+        </label>
+        <label class="type-option">
+            <input type="radio" name="t" value="fmzl" checked="checked" />
+            <span>发明专利</span>
+        </label>
+        <label class="type-option">
+            <input type="radio" name="t" value="syxx"  />
+            <span>实用新型专利</span>
+        </label>
+        <label class="type-option">
+            <input type="radio" name="t" value="wgsj"  />
+            <span>外观设计专利</span>
+        </label>
+    </div>
+
+    <!-- 高级搜索面板（初始折叠） -->
+    <div id="advancedPanel" style="display:none;">
+        <div class="advanced-search-panel">
+            <div class="panel-title">高级搜索 - 多字段组合检索</div>
+
+            <!-- 条件列表 -->
+            <div id="conditionList"></div>
+
+            <!-- 操作按钮 -->
+            <div class="condition-actions">
+                <button type="button" class="btn-add-condition" onclick="addCondition()">+ 增加条件</button>
+            </div>
+
+            <!-- 查询语句预览 -->
+            <div class="lucene-preview-box">
+                <label class="preview-label">查询语句：</label>
+                <div id="lucenePreview" class="preview-text">（请输入搜索条件）</div>
+            </div>
+
+            <!-- 提交按钮 -->
+            <div class="advanced-submit-row">
+                <input type="submit" value="高级搜索" class="btn-advanced-search" onclick="return prepareAdvancedSubmit()" />
+                <a href="javascript:void(0)" onclick="toggleAdvanced()" class="adv-toggle-back">普通搜索</a>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- 隐藏字段 -->
+    <input type="hidden" name="c" id="searchFields" value="Inventor" />
+    <input type="hidden" name="adv" id="advQuery" value="" />
+    <!-- 初始条件存储（用于JS恢复） -->
+    <input type="hidden" id="initialAdvConditions" value="" />
+</form>
+
+<script type="text/javascript">
+    // ==================== 字段复选框互斥逻辑 ====================
+    document.addEventListener("DOMContentLoaded", function () {
+        var checkboxes = document.querySelectorAll('.field-chk');
+        for (var i = 0; i < checkboxes.length; i++) {
+            checkboxes[i].addEventListener('change', function () {
+                if (this.checked && (this.value === 'PatentNo' || this.value === 'PublicationNumber')) {
+                    var currentTarget = this;
+                    for (var j = 0; j < checkboxes.length; j++) {
+                        if (checkboxes[j] !== currentTarget) {
+                            checkboxes[j].checked = false;
+                        }
+                    }
+                }
+                else if (this.checked) {
+                    for (var k = 0; k < checkboxes.length; k++) {
+                        if (checkboxes[k].value === 'PatentNo' || checkboxes[k].value === 'PublicationNumber') {
+                            checkboxes[k].checked = false;
+                        }
+                    }
+                }
+            });
+        }
+    });
+
+    function prepareSubmit() {
+        var checkboxes = document.querySelectorAll('.field-chk');
+        var selectedValues = [];
+        for (var i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].checked) {
+                selectedValues.push(checkboxes[i].value);
+            }
+        }
+        if (selectedValues.length === 0) {
+            alert('请至少选择一个检索字段（如专利名称或摘要等）！');
+            return false;
+        }
+        document.getElementById('searchFields').value = selectedValues.join(',');
+        // 清空高级搜索字段
+        document.getElementById('advQuery').value = '';
+        return true;
+    }
+
+    // ==================== 高级搜索逻辑 ====================
+    var advConditions = [];
+    var maxConditions = 10;
+    var isAdvancedMode = false;
+
+    // 字段中文映射
+    var fieldNameMap = {
+        'PatentName': '专利名称',
+        'Abstract': '专利摘要',
+        'Applicant': '申请人',
+        'Inventor': '发明人'
+    };
+
+    document.addEventListener("DOMContentLoaded", function () {
+        // 初始化条件
+        var initialEl = document.getElementById('initialAdvConditions');
+        if (initialEl && initialEl.value) {
+            try {
+                var decoded = decodeURIComponent(escape(atob(initialEl.value)));
+                advConditions = JSON.parse(decoded);
+            } catch (e) {
+                advConditions = [{ field: 'PatentName', value: '', op: 'AND' }];
+            }
+        } else {
+            advConditions = [{ field: 'PatentName', value: '', op: 'AND' }];
+        }
+
+        renderConditions();
+        updateLucenePreview();
+
+        // 如果是高级搜索模式，自动展开面板
+        if (isAdvancedMode) {
+            showAdvancedPanel();
+        }
+    });
+
+    function toggleAdvanced() {
+        var panel = document.getElementById('advancedPanel');
+        var normalArea = document.getElementById('normalSearchArea');
+        if (panel.style.display === 'none') {
+            // 展开高级搜索，隐藏普通搜索
+            panel.style.display = 'block';
+            if (normalArea) normalArea.style.display = 'none';
+            document.getElementById('advToggleText').textContent = '普通搜索';
+            document.getElementById('advToggleIcon').innerHTML = '&#9660;';
+            // 将当前普通搜索关键词填入第一个高级条件
+            var keyword = document.getElementById('searchKeyword').value;
+            if (keyword && advConditions.length > 0 && !advConditions[0].value) {
+                advConditions[0].value = keyword;
+                renderConditions();
+                updateLucenePreview();
+            }
+        } else {
+            // 收起高级搜索，显示普通搜索
+            panel.style.display = 'none';
+            if (normalArea) normalArea.style.display = 'block';
+            document.getElementById('advToggleText').textContent = '高级搜索';
+            document.getElementById('advToggleIcon').innerHTML = '&#9660;';
+        }
+    }
+
+    function showAdvancedPanel() {
+        var panel = document.getElementById('advancedPanel');
+        var normalArea = document.getElementById('normalSearchArea');
+        panel.style.display = 'block';
+        if (normalArea) normalArea.style.display = 'none';
+        document.getElementById('advToggleText').textContent = '普通搜索';
+        document.getElementById('advToggleIcon').innerHTML = '&#9660;';
+    }
+
+    function addCondition() {
+        if (advConditions.length >= maxConditions) {
+            alert('最多添加' + maxConditions + '个条件');
+            return;
+        }
+        advConditions.push({ field: 'PatentName', value: '', op: 'AND' });
+        renderConditions();
+        updateLucenePreview();
+    }
+
+    function removeCondition(index) {
+        if (advConditions.length <= 1) {
+            alert('至少保留一个条件');
+            return;
+        }
+        advConditions.splice(index, 1);
+        renderConditions();
+        updateLucenePreview();
+    }
+
+    function updateCondition(index, key, val) {
+        if (advConditions[index]) {
+            advConditions[index][key] = val;
+            updateLucenePreview();
+        }
+    }
+
+    function renderConditions() {
+        var container = document.getElementById('conditionList');
+        var html = '';
+        var fields = [
+            { value: 'PatentName', text: '专利名称' },
+            { value: 'Abstract', text: '专利摘要' },
+            { value: 'Applicant', text: '申请人' },
+            { value: 'Inventor', text: '发明人' }
+        ];
+
+        for (var i = 0; i < advConditions.length; i++) {
+            var cond = advConditions[i];
+            html += '<div class="condition-row" data-index="' + i + '">';
+
+            // 逻辑运算符（第一行显示占位符）
+            if (i > 0) {
+                html += '<select class="condition-op" onchange="updateCondition(' + i + ', \'op\', this.value)">';
+                html += '<option value="AND"' + (cond.op === 'AND' ? ' selected' : '') + '>AND</option>';
+                html += '<option value="OR"' + (cond.op === 'OR' ? ' selected' : '') + '>OR</option>';
+                html += '</select>';
+            } else {
+                html += '<span class="condition-op-placeholder">WHERE</span>';
+            }
+
+            // 字段选择
+            html += '<select class="condition-field" onchange="updateCondition(' + i + ', \'field\', this.value)">';
+            for (var j = 0; j < fields.length; j++) {
+                html += '<option value="' + fields[j].value + '"' + (cond.field === fields[j].value ? ' selected' : '') + '>' + fields[j].text + '</option>';
+            }
+            html += '</select>';
+
+            // 关键词输入
+            html += '<input type="text" class="condition-value" placeholder="请输入关键词..." value="' + escapeHtml(cond.value) + '" oninput="updateCondition(' + i + ', \'value\', this.value)" />';
+
+            // 删除按钮
+            html += '<button type="button" class="btn-remove-condition" onclick="removeCondition(' + i + ')" title="\u5220\u9664\u6B64\u6761\u4EF6">&#10005;</button>';
+
+            html += '</div>';
+        }
+        container.innerHTML = html;
+    }
+
+    function updateLucenePreview() {
+        var preview = buildLuceneSyntax();
+        var el = document.getElementById('lucenePreview');
+        el.textContent = preview || '（请输入搜索条件）';
+        el.className = preview ? 'preview-text has-content' : 'preview-text';
+    }
+
+    function buildLuceneSyntax() {
+        var parts = [];
+        for (var i = 0; i < advConditions.length; i++) {
+            var c = advConditions[i];
+            var val = (c.value || '').trim();
+            if (!val) continue;
+            var cnField = fieldNameMap[c.field] || c.field;
+            var part = cnField + ':(' + val + ')';
+            if (i > 0 && c.op) {
+                part = c.op + ' ' + part;
+            }
+            parts.push(part);
+        }
+        return parts.join(' ');
+    }
+
+    function escapeLuceneQuery(text) {
+        var result = '';
+        for (var i = 0; i < text.length; i++) {
+            var c = text.charCodeAt(i);
+            if (c === 92 || c === 34) {
+                result += String.fromCharCode(92) + String.fromCharCode(c);
+            } else {
+                result += String.fromCharCode(c);
+            }
+        }
+        return result;
+    }
+
+    function escapeHtml(text) {
+        if (!text) return '';
+        var div = document.createElement('div');
+        div.appendChild(document.createTextNode(text));
+        return div.innerHTML;
+    }
+
+    function prepareAdvancedSubmit() {
+        // 收集有效条件
+        var validConditions = [];
+        for (var i = 0; i < advConditions.length; i++) {
+            var val = (advConditions[i].value || '').trim();
+            if (val) {
+                validConditions.push({
+                    field: advConditions[i].field,
+                    value: val,
+                    op: advConditions[i].op || 'AND'
+                });
+            }
+        }
+
+        if (validConditions.length === 0) {
+            alert('请至少输入一个搜索条件！');
+            return false;
+        }
+
+        // 编码为Base64 JSON
+        var json = JSON.stringify(validConditions);
+        var base64 = btoa(unescape(encodeURIComponent(json)));
+        document.getElementById('advQuery').value = base64;
+
+        // 清空普通搜索字段
+        document.getElementById('searchKeyword').value = '';
+        document.getElementById('searchFields').value = '';
+
+        return true;
+    }
+</script>
+            </div>
+
+            <!-- 搜索结果区 -->
+            <form method="post" action="./search.aspx?c=Inventor&amp;k=Zhou+He&amp;t=fmzl" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTUwNzcxMTg0NWRkres1XIutsamTKnX7X/FCztctDygdlAqMcCrrZR5pydU=" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="BBBC20B8" />
+</div>
+                <div class="view" style="display: flex; justify-content: space-between; align-items: center;"><span>当前查询到<span style="color:#FF0000">3332</span>条专利与查询词 "<span style="color:#FF0000">Zhou He</span>"相关，搜索用时0.0625231秒!</span><span>排序方式：<select id="sort" onchange="sortChange(this)" name="SortRules" style="vertical-align:middle"><option value="0" selected>按相关度排序</option><option value="1" >按申请日升序↑</option><option value="2" >按申请日降序↓</option><option value="3" >按公开日升序↑</option><option value="4" >按公开日降序↓</option></select></span></div><div><span class="direct current">发明专利：<a href="/search.aspx?k=Zhou%20He&c=Inventor&t=fmzl&p=1">1759</a></span><span class="direct">实用新型: <a href="/search.aspx?k=Zhou%20He&c=Inventor&t=syxx&p=1">1429</a></span><span class="direct">外观设计: <a href="/search.aspx?k=Zhou%20He&c=Inventor&t=wgsj&p=1">144</a></span></div><div style="height:40px;line-height:40px">共 <span style="color:#FF0000">1759</span> 条，当前第 <span style="color:#FF0000">1-10</span> 条 <a href="/search.aspx?k=Zhou%20He&c=Inventor&t=fmzl&sort=0&p=2">下一页</a> <a href="/search.aspx?k=Zhou%20He&c=Inventor&t=fmzl&sort=0&p=176">最后一页</a> <a href="/">返回搜索页</a></div><div class="title">1：<span style="color:#0000FF">[发明]</span> <a href="javascript:post('PatentDetails.aspx',{PatentNo:'201911292088.8'})">【中文】一种骨科用腿部恢复自由训练装置
+【EN】Shank resumes free trainer for orthopedics</a></div><div class="application">申请号：<a href="javascript:post('PatentDetails.aspx',{PatentNo:'201911292088.8'})" class="links">201911292088.8</a>  公开号：CN110935139A  主分类号：A63B23/04</a></div><div class="application">申请人：<a href="/search.aspx?k=%E3%80%90%E4%B8%AD%E6%96%87%E3%80%91%E4%BD%95%E8%88%9F%E3%80%90EN%E3%80%91He%20Zhou&c=Applicant&t=fmzl">【中文】何舟【EN】He Zhou</a>  申请日:2019.12.16  公开日：2020.03.31</div><div class="application">发明人：<a href="/search.aspx?k=%E3%80%90%E4%B8%AD%E6%96%87%E3%80%91%E4%BD%95%E8%88%9F%E3%80%90EN%E3%80%91He%20Zhou&c=Inventor&t=fmzl">【中文】何舟【EN】He Zhou</a></div><div class="text">摘要：【中文】本发明涉及骨科辅助设备技术领域，且公开了一种骨科用腿部恢复自由训练装置，包括底座，所述第一转柱的外侧设置有第一金属球，第二转柱的外部设置有第二金属球，第一调节板连接有第一导向筒，第一导向筒的左侧连接有第一导向杆，第二导向杆的下部连接有第二导向筒，支架连接有大齿轮，大齿轮的外侧设置有金属片组，大齿轮连接有小齿轮。通过连通第三驱动装置和第四驱动装置分别与第二金属片组和第一金属片组的电路，第一金属球和第二金属球分别在第二金属片组和第一金属片组的偏移角度不同，从而使得不正常肢体移动的角度与正常肢体移动的角度相同，这一结构解决了现有的腿部恢复训练装置不能自由选择训练轨迹的问题。【EN】The invention relates to the technical field of orthopedic auxiliary equipment and discloses a leg recovery free training device for orthopedics, which comprises a base, wherein a first metal ball is arranged on the outer side of a first rotary column, a second metal ball is arranged on the outer side of a second rotary column, a first adjusting plate is connected with a first guide cylinder, the left side of the first guide cylinder is connected with a first guide rod, the lower part of the second guide rod is connected with a second guide cylinder, a bracket is connected with a large gear, a metal sheet group is arranged on the outer side of the large gear, and the large gear is connected with a small gear. Through the circuit communicated with the third driving device and the fourth driving device and the second metal sheet group and the first metal sheet group respectively, the offset angles of the first metal balls and the second metal balls in the second metal sheet group and the first metal sheet group are different, so that the angle of movement of abnormal limbs is the same as the angle of movement of normal limbs, and the problem that the conventional leg recovery training device cannot freely select a training track is solved by the structure.</div><div><a href="javascript:post('PatentDetails.aspx',{PatentNo:'201911292088.8'})" class="links">详细信息</a> <a href="http://www2.drugfuture.com/cnpat/verify.aspx?cnpatentno=201911292088.8" target="_blank" class="links">下载全文<img src="pdf.jpg" width="15" align="absmiddle" border="0" ></a></div><br /><div class="title">2：<span style="color:#0000FF">[发明]</span> <a href="javascript:post('PatentDetails.aspx',{PatentNo:'201911292587.7'})">【中文】一种腰间盘突出患者的新型牵引设备
+【EN】Novel traction equipment for patient with lumbar disc herniation</a></div><div class="application">申请号：<a href="javascript:post('PatentDetails.aspx',{PatentNo:'201911292587.7'})" class="links">201911292587.7</a>  公开号：CN110960393A  主分类号：A61H1/00</a></div><div class="application">申请人：<a href="/search.aspx?k=%E3%80%90%E4%B8%AD%E6%96%87%E3%80%91%E4%BD%95%E8%88%9F%E3%80%90EN%E3%80%91He%20Zhou&c=Applicant&t=fmzl">【中文】何舟【EN】He Zhou</a>  申请日:2020.02.25  公开日：2020.04.07</div><div class="application">发明人：<a href="/search.aspx?k=%E3%80%90%E4%B8%AD%E6%96%87%E3%80%91%E4%BD%95%E8%88%9F%E3%80%90EN%E3%80%91He%20Zhou&c=Inventor&t=fmzl">【中文】何舟【EN】He Zhou</a></div><div class="text">摘要：【中文】本发明公开一种腰间盘突出患者的新型牵引设备，包括支架，所述支架的顶部固定连接有上身支撑块，所述上身支撑块的顶部穿插设置有腋托支杆，所述支架的顶部穿插设置有齿轮，所述齿轮的顶部啮合连接诶有牵引板，所述齿轮的内部设置有绕线圈，所述阻挡板的内部设置有限位斜杆，所述阻挡板的上方设置有十字杆，所述按压块的内部设置有凸轮，所述凸轮的表面转动连接有承接杆，所述按压板的顶部固定连接有按摩弹簧，所述阻挡板的右侧设置有压力杆，所述压力杆的上方设置有夹脚板。该腰间盘突出患者的新型牵引设备，通过按压块与阻挡板的配合使用，从而达到了在牵引时根据牵引力大小而控制腰椎按摩力度，防止伤害腰椎的效果。【EN】The invention discloses novel traction equipment for patients with lumbar disc herniation, which comprises a support, wherein the top of the support is fixedly connected with an upper body supporting block, the top of the upper body supporting block is provided with an armpit supporting rod in an inserting manner, the top of the support is provided with a gear in an inserting manner, the top of the gear is meshed and connected with a traction plate, a winding coil is arranged inside the gear, a limiting inclined rod is arranged inside a blocking plate, a cross rod is arranged above the blocking plate, a cam is arranged inside a pressing block, the surface of the cam is rotatably connected with a bearing rod, the top of the pressing plate is fixedly connected with a massage spring, the right side of the blocking plate is provided with a pressure rod, and a foot clamping plate is arranged above the pressure rod. This novel traction equipment of lumbar disc herniation patient uses through the cooperation of pressing the piece and the barrier plate to reached and controlled the lumbar vertebrae massage dynamics according to traction force size when pulling, prevented the effect of injury lumbar vertebrae.</div><div><a href="javascript:post('PatentDetails.aspx',{PatentNo:'201911292587.7'})" class="links">详细信息</a> <a href="http://www2.drugfuture.com/cnpat/verify.aspx?cnpatentno=201911292587.7" target="_blank" class="links">下载全文<img src="pdf.jpg" width="15" align="absmiddle" border="0" ></a></div><br /><div class="title">3：<span style="color:#0000FF">[发明]</span> <a href="javascript:post('PatentDetails.aspx',{PatentNo:'201911323872.0'})">【中文】一种定距追踪激光清洗设备
+【EN】Laser cleaning equipment is tracked to distance</a></div><div class="application">申请号：<a href="javascript:post('PatentDetails.aspx',{PatentNo:'201911323872.0'})" class="links">201911323872.0</a>  公开号：CN110976436A  主分类号：B08B7/00</a></div><div class="application">申请人：<a href="/search.aspx?k=%E3%80%90%E4%B8%AD%E6%96%87%E3%80%91%E8%8B%8F%E5%B7%9E%E8%89%BE%E6%80%9D%E5%85%B0%E5%85%89%E7%94%B5%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E3%80%90EN%E3%80%91SUZHOU%20USILAND%20OPTOELECTRONIC%20Co.%2CLtd.&c=Applicant&t=fmzl">【中文】苏州艾思兰光电有限公司【EN】SUZHOU USILAND OPTOELECTRONIC Co.,Ltd.</a>  申请日:2019.12.20  公开日：2020.04.10</div><div class="application">发明人：<a href="/search.aspx?k=%E3%80%90%E4%B8%AD%E6%96%87%E3%80%91%E4%BD%95%E8%88%9F&c=Inventor&t=fmzl">【中文】何舟</a>;<a href="/search.aspx?k=%E5%91%A8%E5%80%A9&c=Inventor&t=fmzl">周倩</a>;<a href="/search.aspx?k=%E5%91%A8%E5%81%A5%E3%80%90EN%E3%80%91He%20Zhou&c=Inventor&t=fmzl">周健【EN】He Zhou</a>;<a href="/search.aspx?k=Zhou%20Qian&c=Inventor&t=fmzl">Zhou Qian</a>;<a href="/search.aspx?k=Zhou%20Jian&c=Inventor&t=fmzl">Zhou Jian</a></div><div class="text">摘要：【中文】本发明公开了一种定距追踪激光清洗设备，涉及激光清洗技术领域，所述激光清洗设备包括三轴平台、激光器、清洗头、吸尘器、激光测距仪，控制器，所述激光器通过光纤与清洗头连接。所述清洗头固定在三轴平台的Z轴滑块上，所述吸尘器通过波纹管固定在清洗头的吸尘口上；所述激光测距仪与清洗头同高固定在三轴平台的Z轴滑块上，所述控制器通过通信线与三轴平台相连。本发明可以解决工件表面是曲面的激光清洗问题。提供一种搭载激光清洗头的三轴平台，可以带动激光清洗头在Z轴上，根据工件曲面高低变化而上下浮动调节，实现曲面工件的自动化激光清洗。【EN】The invention discloses distance tracking laser cleaning equipment, and relates to the technical field of laser cleaning. The cleaning head is fixed on a Z-axis sliding block of the three-axis platform, and the dust collector is fixed on a dust collection port of the cleaning head through a corrugated pipe; the laser range finder and the cleaning head are fixed on a Z-axis sliding block of the three-axis platform at the same height, and the controller is connected with the three-axis platform through a communication line. The invention can solve the problem of laser cleaning of the curved surface of the workpiece. The three-axis platform can drive the laser cleaning head to float up and down on a Z axis according to the height change of the curved surface of a workpiece, and automatic laser cleaning of the curved surface workpiece is achieved.</div><div><a href="javascript:post('PatentDetails.aspx',{PatentNo:'201911323872.0'})" class="links">详细信息</a> <a href="http://www2.drugfuture.com/cnpat/verify.aspx?cnpatentno=201911323872.0" target="_blank" class="links">下载全文<img src="pdf.jpg" width="15" align="absmiddle" border="0" ></a></div><br /><div class="title">4：<span style="color:#0000FF">[发明]</span> <a href="javascript:post('PatentDetails.aspx',{PatentNo:'201911323871.6'})">【中文】一种基于机器视觉的主动激光驱鸟器
+【EN】Initiative laser drives bird ware based on machine vision</a></div><div class="application">申请号：<a href="javascript:post('PatentDetails.aspx',{PatentNo:'201911323871.6'})" class="links">201911323871.6</a>  公开号：CN111011353A  主分类号：A01M29/10</a></div><div class="application">申请人：<a href="/search.aspx?k=%E3%80%90%E4%B8%AD%E6%96%87%E3%80%91%E8%8B%8F%E5%B7%9E%E8%89%BE%E6%80%9D%E5%85%B0%E5%85%89%E7%94%B5%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E3%80%90EN%E3%80%91SUZHOU%20USILAND%20OPTOELECTRONIC%20Co.%2CLtd.&c=Applicant&t=fmzl">【中文】苏州艾思兰光电有限公司【EN】SUZHOU USILAND OPTOELECTRONIC Co.,Ltd.</a>  申请日:2019.12.20  公开日：2020.04.17</div><div class="application">发明人：<a href="/search.aspx?k=%E3%80%90%E4%B8%AD%E6%96%87%E3%80%91%E4%BD%95%E8%88%9F&c=Inventor&t=fmzl">【中文】何舟</a>;<a href="/search.aspx?k=%E5%91%A8%E5%80%A9&c=Inventor&t=fmzl">周倩</a>;<a href="/search.aspx?k=%E5%91%A8%E5%81%A5%E3%80%90EN%E3%80%91He%20Zhou&c=Inventor&t=fmzl">周健【EN】He Zhou</a>;<a href="/search.aspx?k=Zhou%20Qian&c=Inventor&t=fmzl">Zhou Qian</a>;<a href="/search.aspx?k=Zhou%20Jian&c=Inventor&t=fmzl">Zhou Jian</a></div><div class="text">摘要：【中文】本发明公开了一种基于机器视觉的主动激光驱鸟器，包括底座、第一调节机构、第二调节机构和驱鸟组件，第一调节机构包括支撑箱、第一电机和连接轴，第二调节机构包括支撑座、转轴、连接座和第二电机，驱鸟组件包括可见光相机、激光器和嵌入式鸟类识别系统，可见光相机用于拍摄视线范围内的图像，嵌入式鸟类识别系统根据图像识别出鸟类位置并发给激光器打鸟的信号。本发明通过第一电机带动连接轴转动能够使支撑箱水平方向旋转，通过第二电机带动转轴和连接座转动，通过连接座的转动能够调节壳体的角度，从而使壳体能够进行多角度的调节，进而提高该驱鸟器的作业区，从而提高驱鸟效果。【EN】The invention discloses an active laser bird dispeller based on machine vision, which comprises a base, a first adjusting mechanism, a second adjusting mechanism and a bird dispelling component, wherein the first adjusting mechanism comprises a supporting box, a first motor and a connecting shaft, the second adjusting mechanism comprises a supporting seat, a rotating shaft, a connecting seat and a second motor, the bird dispelling component comprises a visible light camera, a laser and an embedded bird recognition system, the visible light camera is used for shooting images in a sight range, and the embedded bird recognition system recognizes the position of birds according to the images and sends a bird beating signal to the laser. According to the bird repeller, the first motor drives the connecting shaft to rotate, so that the supporting box can rotate in the horizontal direction, the second motor drives the rotating shaft and the connecting seat to rotate, and the angle of the shell can be adjusted through the rotation of the connecting seat, so that the shell can be adjusted at multiple angles, the operation area of the bird repeller is further improved, and the bird repelling effect is further improved.</div><div><a href="javascript:post('PatentDetails.aspx',{PatentNo:'201911323871.6'})" class="links">详细信息</a> <a href="http://www2.drugfuture.com/cnpat/verify.aspx?cnpatentno=201911323871.6" target="_blank" class="links">下载全文<img src="pdf.jpg" width="15" align="absmiddle" border="0" ></a></div><br /><div class="title">5：<span style="color:#0000FF">[发明]</span> <a href="javascript:post('PatentDetails.aspx',{PatentNo:'202010098928.3'})">【中文】一种轮胎模具自动化激光清洗机
+【EN】Automatic laser cleaning machine for tire molds</a></div><div class="application">申请号：<a href="javascript:post('PatentDetails.aspx',{PatentNo:'202010098928.3'})" class="links">202010098928.3</a>  公开号：CN111215397A  主分类号：B08B7/00</a></div><div class="application">申请人：<a href="/search.aspx?k=%E3%80%90%E4%B8%AD%E6%96%87%E3%80%91%E8%8B%8F%E5%B7%9E%E8%89%BE%E6%80%9D%E5%85%B0%E5%85%89%E7%94%B5%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E3%80%90EN%E3%80%91SUZHOU%20USILAND%20OPTOELECTRONIC%20Co.%2CLtd.&c=Applicant&t=fmzl">【中文】苏州艾思兰光电有限公司【EN】SUZHOU USILAND OPTOELECTRONIC Co.,Ltd.</a>  申请日:2020.02.18  公开日：2020.06.02</div><div class="application">发明人：<a href="/search.aspx?k=%E3%80%90%E4%B8%AD%E6%96%87%E3%80%91%E4%BD%95%E8%88%9F&c=Inventor&t=fmzl">【中文】何舟</a>;<a href="/search.aspx?k=%E5%91%A8%E5%80%A9&c=Inventor&t=fmzl">周倩</a>;<a href="/search.aspx?k=%E5%91%A8%E5%81%A5%E3%80%90EN%E3%80%91He%20Zhou&c=Inventor&t=fmzl">周健【EN】He Zhou</a>;<a href="/search.aspx?k=Zhou%20Qian&c=Inventor&t=fmzl">Zhou Qian</a>;<a href="/search.aspx?k=Zhou%20Jian&c=Inventor&t=fmzl">Zhou Jian</a></div><div class="text">摘要：【中文】本发明公开了一种轮胎模具自动化激光清洗机，包括框架和导轨,框架内设置有导轨，导轨固定安装在框架内的底部，且导轨的一侧穿出框架，导轨上传动连接有移动平台，框架内设置有机器人，六轴机器人上设置有用于清洗轮胎的清洗头，清洗头包括第一安装件和第一管道，第一安装件固定安装在机器人的底端，第一管道设置在第一安装件上，第一管道与第一安装件的中部穿插固定。本发明利用移动平台实现轮胎的进出和中心位置矫正，降低了劳动强度，提高了清洗效率；本发明通过清洗头对轮胎进行清洗，降低了清洗成本；本发明轮胎模具清洗机自动化集成度高，工作只需一人操作即可，节省人员，提升效率，提高加工质量。【EN】The invention discloses an automatic laser cleaning machine for a tire mold, which comprises a frame and a guide rail, wherein the guide rail is arranged in the frame, the guide rail is fixedly arranged at the bottom in the frame, one side of the guide rail penetrates out of the frame, a moving platform is connected onto the guide rail in a transmission manner, a robot is arranged in the frame, a cleaning head for cleaning a tire is arranged on a six-axis robot, the cleaning head comprises a first mounting piece and a first pipeline, the first mounting piece is fixedly arranged at the bottom end of the robot, the first pipeline is arranged on the first mounting piece, and the first pipeline and the middle part of the first mounting piece are fixedly inserted and penetrated. The invention realizes the in-and-out and center position correction of the tire by utilizing the mobile platform, thereby reducing the labor intensity and improving the cleaning efficiency; the tire is cleaned by the cleaning head, so that the cleaning cost is reduced; the tire mold cleaning machine disclosed by the invention is high in automation integration level, only one person is needed for working, personnel are saved, the efficiency is improved, and the processing quality is improved.</div><div><a href="javascript:post('PatentDetails.aspx',{PatentNo:'202010098928.3'})" class="links">详细信息</a> <a href="http://www2.drugfuture.com/cnpat/verify.aspx?cnpatentno=202010098928.3" target="_blank" class="links">下载全文<img src="pdf.jpg" width="15" align="absmiddle" border="0" ></a></div><br /><div class="title">6：<span style="color:#0000FF">[发明]</span> <a href="javascript:post('PatentDetails.aspx',{PatentNo:'202010098927.9'})">【中文】一种一字激光除冰装置
+【EN】Line laser defroster</a></div><div class="application">申请号：<a href="javascript:post('PatentDetails.aspx',{PatentNo:'202010098927.9'})" class="links">202010098927.9</a>  公开号：CN111181117A  主分类号：H02G7/16</a></div><div class="application">申请人：<a href="/search.aspx?k=%E3%80%90%E4%B8%AD%E6%96%87%E3%80%91%E8%8B%8F%E5%B7%9E%E8%89%BE%E6%80%9D%E5%85%B0%E5%85%89%E7%94%B5%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E3%80%90EN%E3%80%91SUZHOU%20USILAND%20OPTOELECTRONIC%20Co.%2CLtd.&c=Applicant&t=fmzl">【中文】苏州艾思兰光电有限公司【EN】SUZHOU USILAND OPTOELECTRONIC Co.,Ltd.</a>  申请日:2020.02.18  公开日：2020.05.19</div><div class="application">发明人：<a href="/search.aspx?k=%E3%80%90%E4%B8%AD%E6%96%87%E3%80%91%E4%BD%95%E8%88%9F&c=Inventor&t=fmzl">【中文】何舟</a>;<a href="/search.aspx?k=%E5%91%A8%E5%80%A9&c=Inventor&t=fmzl">周倩</a>;<a href="/search.aspx?k=%E5%91%A8%E5%81%A5%E3%80%90EN%E3%80%91He%20Zhou&c=Inventor&t=fmzl">周健【EN】He Zhou</a>;<a href="/search.aspx?k=Zhou%20Qian&c=Inventor&t=fmzl">Zhou Qian</a>;<a href="/search.aspx?k=Zhou%20Jian&c=Inventor&t=fmzl">Zhou Jian</a></div><div class="text">摘要：【中文】本发明公开了一种一字激光除冰装置，包括支架和底座，其特征在于，支架的顶端固定安装有电动转台，电动转台的顶端固定安装有激光出射头，激光出射头的背面固定安装有控制器。该种一字激光除冰装置，通过在支架上设置激光出射头以及通过控制器来控制激光出射头，使得激光出射头射出水平一字型光斑，从而完成除冰的效果，采用该种方式可以远程、“地对空”进行作业，除冰过程无需接触，过程安全，取代了机械除冰等需要接触式操作的方式；同时可带电作业，减少断电带来的经济损失，由于智能化特性强，采用相机进行识别与反馈线缆或塔架等及其覆冰覆雪，有利于促进与完善除冰工作的执行。【EN】The invention discloses a line laser deicing device which comprises a support and a base and is characterized in that an electric rotary table is fixedly installed at the top end of the support, a laser emitting head is fixedly installed at the top end of the electric rotary table, and a controller is fixedly installed on the back face of the laser emitting head. According to the in-line laser deicing device, the laser emitting head is arranged on the support and is controlled by the controller, so that the laser emitting head emits horizontal in-line light spots, and the deicing effect is achieved; meanwhile, live working can be carried out, economic loss caused by power failure is reduced, and due to the fact that the intelligent characteristic is strong, a camera is adopted to recognize and feed back cables or towers and the like and the icing and snow covering of the cables or towers are beneficial to promoting and perfecting the execution of deicing work.</div><div><a href="javascript:post('PatentDetails.aspx',{PatentNo:'202010098927.9'})" class="links">详细信息</a> <a href="http://www2.drugfuture.com/cnpat/verify.aspx?cnpatentno=202010098927.9" target="_blank" class="links">下载全文<img src="pdf.jpg" width="15" align="absmiddle" border="0" ></a></div><br /><div class="title">7：<span style="color:#0000FF">[发明]</span> <a href="javascript:post('PatentDetails.aspx',{PatentNo:'202010098925.X'})">【中文】一种激光除障仪
+【EN】Laser obstacle removing instrument</a></div><div class="application">申请号：<a href="javascript:post('PatentDetails.aspx',{PatentNo:'202010098925.X'})" class="links">202010098925.X</a>  公开号：CN111130015A  主分类号：H02G1/02</a></div><div class="application">申请人：<a href="/search.aspx?k=%E3%80%90%E4%B8%AD%E6%96%87%E3%80%91%E8%8B%8F%E5%B7%9E%E8%89%BE%E6%80%9D%E5%85%B0%E5%85%89%E7%94%B5%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E3%80%90EN%E3%80%91SUZHOU%20USILAND%20OPTOELECTRONIC%20Co.%2CLtd.&c=Applicant&t=fmzl">【中文】苏州艾思兰光电有限公司【EN】SUZHOU USILAND OPTOELECTRONIC Co.,Ltd.</a>  申请日:2020.02.18  公开日：2020.05.08</div><div class="application">发明人：<a href="/search.aspx?k=%E3%80%90%E4%B8%AD%E6%96%87%E3%80%91%E4%BD%95%E8%88%9F&c=Inventor&t=fmzl">【中文】何舟</a>;<a href="/search.aspx?k=%E5%91%A8%E5%80%A9&c=Inventor&t=fmzl">周倩</a>;<a href="/search.aspx?k=%E5%91%A8%E5%81%A5%E3%80%90EN%E3%80%91He%20Zhou&c=Inventor&t=fmzl">周健【EN】He Zhou</a>;<a href="/search.aspx?k=Zhou%20Qian&c=Inventor&t=fmzl">Zhou Qian</a>;<a href="/search.aspx?k=Zhou%20Jian&c=Inventor&t=fmzl">Zhou Jian</a></div><div class="text">摘要：【中文】本发明公开了一种激光除障仪，包括光纤激光器、控制云台、三脚架、瞄准控制器、电池组、电源线、激光发射器和无线遥控，光纤激光器通过光纤与激光发射器连接，电池组通过电源线与光纤激光器连接，激光发射器通过快装板固定在控制云台上。本发明激光除障仪，可以远程、“地对空”进行作业，除冰过程无需接触，过程安全，取代了登高梯，人工攀爬等需要接触式操作的方式，且可带电作业，减少断电带来的经济损失，采用光纤激光器，电光转换效率高、整机的耗电功率低，集成化程度高，采用目标显示、方向控制与激光控制集成一体的遥控键盘进行瞄准、云台方向调节、激光功率调节和出光控制，极大的降低了的操作人员的工作安全风险。【EN】The invention discloses a laser obstacle removing instrument which comprises a fiber laser, a control holder, a tripod, an aiming controller, a battery pack, a power line, a laser transmitter and a wireless remote controller, wherein the fiber laser is connected with the laser transmitter through an optical fiber, the battery pack is connected with the fiber laser through the power line, and the laser transmitter is fixed on the control holder through a quick-mounting plate. The laser obstacle removing instrument can be used for remotely operating in a ground-to-air mode, does not need to contact in the deicing process, is safe in process, replaces modes of contact operation such as climbing stairs and manual climbing, can be used for live working, reduces economic loss caused by power failure, is high in electro-optical conversion efficiency, low in power consumption of the whole machine and high in integration degree by adopting the optical fiber laser, aims, adjusts the direction of a holder, adjusts the laser power and controls light emission by adopting a remote control keyboard integrating target display, direction control and laser control, and greatly reduces the work safety risk of operators.</div><div><a href="javascript:post('PatentDetails.aspx',{PatentNo:'202010098925.X'})" class="links">详细信息</a> <a href="http://www2.drugfuture.com/cnpat/verify.aspx?cnpatentno=202010098925.X" target="_blank" class="links">下载全文<img src="pdf.jpg" width="15" align="absmiddle" border="0" ></a></div><br /><div class="title">8：<span style="color:#0000FF">[发明]</span> <a href="javascript:post('PatentDetails.aspx',{PatentNo:'201911163207.X'})">【中文】一种移动式大型瓜果分级清洁设备及其使用方法
+【EN】Movable large-scale melon and fruit grading and cleaning equipment and using method thereof</a></div><div class="application">申请号：<a href="javascript:post('PatentDetails.aspx',{PatentNo:'201911163207.X'})" class="links">201911163207.X</a>  公开号：CN110946296A  主分类号：A23N12/06</a></div><div class="application">申请人：<a href="/search.aspx?k=%E3%80%90%E4%B8%AD%E6%96%87%E3%80%91%E6%B7%B1%E5%9C%B3%E5%B8%82%E9%A1%BA%E7%9B%9B%E5%86%9C%E4%B8%9A%E7%A7%91%E6%8A%80%E5%8F%91%E5%B1%95%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E3%80%90EN%E3%80%91Shenzhen%20Shunsheng%20Agricultural%20Technology%20Development%20Co.%2C%20Ltd.&c=Applicant&t=fmzl">【中文】深圳市顺盛农业科技发展有限公司【EN】Shenzhen Shunsheng Agricultural Technology Development Co., Ltd.</a>  申请日:2019.11.25  公开日：2020.04.03</div><div class="application">发明人：<a href="/search.aspx?k=%E3%80%90%E4%B8%AD%E6%96%87%E3%80%91%E8%B4%BA%E6%96%87%E4%BF%AA&c=Inventor&t=fmzl">【中文】贺文俪</a>;<a href="/search.aspx?k=%E8%B4%BA%E4%BA%AE&c=Inventor&t=fmzl">贺亮</a>;<a href="/search.aspx?k=%E5%91%A8%E6%B6%9B%E3%80%90EN%E3%80%91He%20Wenli&c=Inventor&t=fmzl">周涛【EN】He Wenli</a>;<a href="/search.aspx?k=He%20Liang&c=Inventor&t=fmzl">He Liang</a>;<a href="/search.aspx?k=Zhou%20Tao&c=Inventor&t=fmzl">Zhou Tao</a></div><div class="text">摘要：【中文】本发明公开了一种移动式大型瓜果分级清洁设备及其使用方法，包括工作架，所述工作架的内侧壁上固定连接有清洁桶，所述清洁桶的上端口转动连接有转动杆，所述转动杆的圆周侧壁上固定连接有多个第一清洁毛，所述工作架上固定连接有用于驱动转动杆转动的驱动机构；所述工作架的内侧壁上固定连接有弧形板，所述弧形板的两侧分别设置有第一转筒和第二转筒，所述第一转筒和第二转筒的圆周侧壁上均固定连接有多个第二清洁毛，所述第一转筒的两端均转动连接在工作架的内侧壁上，所述工作架上固定连接有用于驱动第二转筒转动连接的第一伺服电机，本发明实现了对瓜果的清洗，同时便于对清洗后瓜果的吹干。【EN】The invention discloses a movable large-scale melon and fruit grading cleaning device and a using method thereof, and the movable large-scale melon and fruit grading cleaning device comprises a working frame, wherein a cleaning barrel is fixedly connected to the inner side wall of the working frame, the upper port of the cleaning barrel is rotatably connected with a rotating rod, a plurality of first cleaning bristles are fixedly connected to the circumferential side wall of the rotating rod, and a driving mechanism for driving the rotating rod to rotate is fixedly connected to the working frame; the melon and fruit cleaning machine is characterized in that an arc-shaped plate is fixedly connected to the inner side wall of the working frame, a first rotary drum and a second rotary drum are respectively arranged on two sides of the arc-shaped plate, a plurality of second cleaning hairs are fixedly connected to the circumferential side walls of the first rotary drum and the second rotary drum, two ends of the first rotary drum are rotatably connected to the inner side wall of the working frame, and a first servo motor for driving the second rotary drum to rotatably connect is fixedly connected to the working frame.</div><div><a href="javascript:post('PatentDetails.aspx',{PatentNo:'201911163207.X'})" class="links">详细信息</a> <a href="http://www2.drugfuture.com/cnpat/verify.aspx?cnpatentno=201911163207.X" target="_blank" class="links">下载全文<img src="pdf.jpg" width="15" align="absmiddle" border="0" ></a></div><br /><div class="title">9：<span style="color:#0000FF">[发明]</span> <a href="javascript:post('PatentDetails.aspx',{PatentNo:'201911292081.6'})">【中文】一种减少创口面积的钢板螺钉内固定术设备
+【EN】Reduce steel sheet screw internal fixation art equipment of wound area</a></div><div class="application">申请号：<a href="javascript:post('PatentDetails.aspx',{PatentNo:'201911292081.6'})" class="links">201911292081.6</a>  公开号：CN110974381A  主分类号：A61B17/68</a></div><div class="application">申请人：<a href="/search.aspx?k=%E3%80%90%E4%B8%AD%E6%96%87%E3%80%91%E4%BD%95%E8%88%9F%E3%80%90EN%E3%80%91He%20Zhou&c=Applicant&t=fmzl">【中文】何舟【EN】He Zhou</a>  申请日:2019.12.16  公开日：2020.04.10</div><div class="application">发明人：<a href="/search.aspx?k=%E3%80%90%E4%B8%AD%E6%96%87%E3%80%91%E4%BD%95%E8%88%9F&c=Inventor&t=fmzl">【中文】何舟</a>;<a href="/search.aspx?k=%E5%91%A8%E8%8A%B3%E3%80%90EN%E3%80%91He%20Zhou&c=Inventor&t=fmzl">周芳【EN】He Zhou</a>;<a href="/search.aspx?k=Zhou%20Fang&c=Inventor&t=fmzl">Zhou Fang</a></div><div class="text">摘要：【中文】本发明涉及骨外科钢板螺钉固定技术领域，且公开了一种减少创口面积的钢板螺钉内固定术设备，包括螺杆，所述螺杆的两端均活动连接有推杆，推杆远离螺杆的一端活动连接有滑块，滑块的背部固定连接有弹性刀，弹性刀的表面活动连接有导轨，所述螺杆的内部活动连接有弹簧杆，弹簧杆的表面活动连接有爪钩，爪钩的内部活动连接有啮合轮。弹性刀被挤压会产生轻微形变，且此形变范围刚好覆盖消毒件，故其内部的盐水袋会被弹性刀划开，另一部分从导流管流向爪钩内部的液流槽中，后被因螺杆挤压的弹簧杆从爪钩与切口表面的一端流出，且此过程中发生在由螺杆与推杆构成的密封空间中，从而达到了在密封空间中对患者的伤口进行处理消费的效果。【EN】The invention relates to the technical field of bone surgery steel plate screw fixation, and discloses steel plate screw internal fixation equipment for reducing wound area. The elastic knife is slightly deformed when being extruded, and the deformation range just covers the disinfection piece, so that the saline bag in the elastic knife can be cut open, the other part of the saline bag flows into a liquid flow groove in the claw hook from the flow guide pipe, then the saline bag flows out from one end of the claw hook and the cut surface due to the spring rod extruded by the screw rod, and the saline bag in the process flows out from the sealed space formed by the screw rod and the push rod, so that the effect of treating and consuming the wound of a patient in the sealed space is achieved.</div><div><a href="javascript:post('PatentDetails.aspx',{PatentNo:'201911292081.6'})" class="links">详细信息</a> <a href="http://www2.drugfuture.com/cnpat/verify.aspx?cnpatentno=201911292081.6" target="_blank" class="links">下载全文<img src="pdf.jpg" width="15" align="absmiddle" border="0" ></a></div><br /><div class="title">10：<span style="color:#0000FF">[发明]</span> <a href="javascript:post('PatentDetails.aspx',{PatentNo:'202010212868.3'})">【中文】一种和胃解毒胶囊在制备镇痛药物、促胃排空药物或促肠道运动药物方面的应用
+【EN】Application of capsule for harmonizing stomach and detoxifying in preparation of analgesic, gastric emptying-promoting or intestinal tract movement-promoting medicines</a></div><div class="application">申请号：<a href="javascript:post('PatentDetails.aspx',{PatentNo:'202010212868.3'})" class="links">202010212868.3</a>  公开号：CN111202781A  主分类号：A61K36/752</a></div><div class="application">申请人：<a href="/search.aspx?k=%E3%80%90%E4%B8%AD%E6%96%87%E3%80%91%E6%B9%96%E5%8D%97%E6%96%B0%E6%B1%87%E5%88%B6%E8%8D%AF%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E3%80%90EN%E3%80%91Hunan%20Xinhui%20Pharmaceutical%20Co.%2CLtd.&c=Applicant&t=fmzl">【中文】湖南新汇制药股份有限公司【EN】Hunan Xinhui Pharmaceutical Co.,Ltd.</a>  申请日:2020.03.24  公开日：2020.05.29</div><div class="application">发明人：<a href="/search.aspx?k=%E3%80%90%E4%B8%AD%E6%96%87%E3%80%91%E4%BD%95%E8%BF%B0%E9%87%91&c=Inventor&t=fmzl">【中文】何述金</a>;<a href="/search.aspx?k=%E5%91%A8%E4%BB%A3%E4%BF%8A&c=Inventor&t=fmzl">周代俊</a>;<a href="/search.aspx?k=%E4%BD%95%E6%89%BF%E4%B8%9C%E3%80%90EN%E3%80%91He%20Shujin&c=Inventor&t=fmzl">何承东【EN】He Shujin</a>;<a href="/search.aspx?k=Zhou%20Daijun&c=Inventor&t=fmzl">Zhou Daijun</a>;<a href="/search.aspx?k=He%20Chengdong&c=Inventor&t=fmzl">He Chengdong</a></div><div class="text">摘要：【中文】本发明涉及一种和胃解毒胶囊在制备镇痛药物、促胃排空药物或促肠道运动药物方面的应用，通过实验发现，和胃解毒胶囊对冰醋酸所致小鼠扭体反应具有明显的抑制作用，并且能够促进胃排空与肠推进；相较于阳性对照药参莲胶囊，中剂量的和胃解毒胶囊(6g生药/kg，相当于剂量1.26g/kg)药效作用优于剂量为2.34g/kg参莲胶囊。【EN】The invention relates to an application of a capsule for harmonizing stomach and detoxifying in the preparation of analgesic drugs, drugs for promoting gastric emptying or drugs for promoting intestinal tract movement, and experiments show that the capsule for harmonizing stomach and detoxifying has an obvious inhibiting effect on mouse writhing reaction caused by glacial acetic acid and can promote gastric emptying and intestinal propulsion; compared with the positive control medicine, the Shenlian capsule has better drug effect (6g crude drug/kg, equivalent to 1.26g/kg) than the Shenlian capsule with 2.34 g/kg.</div><div><a href="javascript:post('PatentDetails.aspx',{PatentNo:'202010212868.3'})" class="links">详细信息</a> <a href="http://www2.drugfuture.com/cnpat/verify.aspx?cnpatentno=202010212868.3" target="_blank" class="links">下载全文<img src="pdf.jpg" width="15" align="absmiddle" border="0" ></a></div><br /><div style="height:40px;line-height:40px">共 <span style="color:#FF0000">1759</span> 条，当前第 <span style="color:#FF0000">1-10</span> 条 <a href="/search.aspx?k=Zhou%20He&c=Inventor&t=fmzl&sort=0&p=2">下一页</a> <a href="/search.aspx?k=Zhou%20He&c=Inventor&t=fmzl&sort=0&p=176">最后一页</a> <a href="/">返回搜索页</a></div>
+
+                <!-- 底部组件 -->
+                
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <!-- 品牌介绍 -->
+            <div>
+                <div class="footer-brand">Patent9 专利在线</div>
+                <div class="footer-desc">
+                    快捷、高效的中国专利搜索、分析和下载平台。数据库涵盖自1985年至今的全部中国专利，支持发明专利、实用新型专利、外观设计专利的检索与下载。
+                </div>
+            </div>
+            <!-- 快捷入口 -->
+            <div>
+                <div class="footer-title">快捷入口</div>
+                <div class="footer-links">
+                    <a href="/">专利搜索</a>
+                    <a href="/latest.aspx">最新公布</a>
+                    <a href="/about.aspx#help">检索技巧</a>
+                </div>
+            </div>
+            <!-- 相关链接 -->
+            <div>
+                <div class="footer-title">相关链接</div>
+                <div class="footer-links">
+                    <a href="/about.aspx#about-us">关于我们</a>
+                    <a href="/about.aspx#help">使用帮助</a>
+                    <a href="/about.aspx#contact">联系方式</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            Copyright &copy; <a href="//www.patent9.com" style="color:#888;text-decoration:none;">Patent9专利在线</a>. All Rights Reserved.
+        </div>
+    </div>
+    <div> <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script><script>LA.init({ id: "JeYGFzNXOyg2JqHb", ck: "JeYGFzNXOyg2JqHb" })</script></div>
+</footer>
+
+            </form>
+
+            <!-- 广告位 -->
+            <div class="ad-slot">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <ins class="adsbygoogle"
+                     style="display:inline-block;width:970px;height:90px"
+                     data-ad-client="ca-pub-1490375427745779"
+                     data-ad-slot="5662387031"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

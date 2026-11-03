@@ -1,0 +1,21 @@
+{
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11555065/",
+  "category": "01_移动透镜式与匹配光学",
+  "origins": [
+    "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md",
+    "苏州艾思兰_动态聚焦资料\\来源清单.csv"
+  ],
+  "context": "\n1. **Sino-Galvo（苏州/中国）3D动态聚焦振镜**：公开论文案例使用FL8220-3D-500进行3D随机访问共焦显微；适合作为集成式3D扫描头对标。 [论文中的设备记录](https://pmc.ncbi.nlm.nih.gov/articles/PMC11555065/)",
+  "id": "R059",
+  "files": [],
+  "attempts": [
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11555065/",
+      "http": 200,
+      "final_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11555065/",
+      "error": "验证/错误页面或正文过短: Checking your browser - reCAPTCHA"
+    }
+  ],
+  "status": "未获取",
+  "title": "Three-dimensional random-access confocal microscopy_2024"
+}

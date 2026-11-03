@@ -1,0 +1,60 @@
+# 给其他AI的搜索词（直接复制）
+
+请围绕“自研一台激光动态聚焦设备”进行技术调研，优先引用专利全文、论文原文、厂商规格书和官方产品页，输出中文表格并标注来源链接、发布日期、申请人/作者、关键参数和可验证性。研究对象为：1064 nm光纤激光器 + XY振镜 + Z动态聚焦模块 + F-Theta场镜的三轴扫描头，应用于曲面打标、深雕、激光清洗或精密加工。
+
+## 中文搜索词
+
+激光动态聚焦 振镜 Z轴 调焦模块 专利
+三维动态聚焦 激光扫描头 移动透镜组
+动态聚焦振镜 XY2-100 Z轴 规格书
+激光动态聚焦 光学设计 F-theta 场镜 远心
+三轴激光扫描头 动态聚焦 模块 供应商
+激光加工 焦点动态跟踪 高度测量 闭环补偿
+激光动态聚焦 Z轴 阶跃响应 跟踪误差 重复精度
+三维激光打标 动态聚焦 标定方法 畸变校正
+反射式动态聚焦 三振镜 光程差 像差校正
+激光清洗 曲面 动态调焦 光束整形
+
+## 英文搜索词
+
+dynamic focusing laser scan head patent
+3D galvanometer scanner dynamic focus module
+laser dynamic focus moving lens group XY2-100
+varioSCAN dynamic focusing unit specifications
+AGV3D three-axis laser scan head dynamic focusing
+reflective dynamic focusing device laser scanner
+three galvanometer 3D laser scanning optical design
+laser focus tracking curved surface height sensor
+laser processing dynamic focus Z-axis tracking error
+F-theta telecentric lens dynamic focusing scan field
+laser dynamic focusing calibration distortion compensation
+voice coil moving lens laser focus shifter
+variable divergence laser dynamic focus welding
+
+## 专利检索组合
+
+site:patents.google.com/patent "dynamic focus" laser processing head
+site:patents.google.com/patent "dynamic focusing" galvanometer laser
+site:patents.google.com/patent "三维动态聚焦" 振镜
+site:patents.google.com/patent "动态聚焦" 激光加工
+申请人 + 动态聚焦 + 激光 + 振镜
+
+## 让AI重点回答的问题
+
+1. 移动透镜、可变发散角、三振镜反射式动态聚焦各自的光路、优缺点和适用场景是什么？
+2. 100×100、200×200、500×500 mm幅面下，焦距、入射光斑、振镜口径和Z行程如何匹配？
+3. Z轴要达到±10 μm、±50 μm和±100 μm焦点重复精度，机械、编码器和控制周期需要什么等级？
+4. XY2-100如何与Z轴、激光器功率调制和外部触发同步？
+5. 动态聚焦设备应如何做XY畸变标定、Z焦点标定、动态跟随标定和热漂移补偿？
+6. 哪些专利权利要求覆盖移动透镜组、三振镜、可变发散角和高度闭环？
+7. Sino-Galvo、SCANLAB、Aerotech、RAYLASE、Haas Laser Technologies等设备的公开参数、价格区间和交付内容是什么？
+8. 针对曲面打标、深雕、激光清洗和焊接，哪一种动态聚焦架构最适合做第一台样机？
+
+## 输出格式要求
+
+请输出：
+- 专利表：公开号、标题、申请人、优先权日、法律状态、独立权利要求要点、与本设备的相关性；
+- 论文表：DOI、作者、期刊、年份、实验系统、关键指标、可复现信息；
+- 设备表：厂商、型号、波长、幅面、Z范围、速度、精度、接口、链接；
+- 自研建议：光路框图、器件BOM、控制流程、标定流程、主要风险；
+- 每条结论都给原始链接，区分“厂商宣称”“论文实测”和“推断”。

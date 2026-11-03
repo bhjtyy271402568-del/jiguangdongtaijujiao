@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CN116534252A - 一种基于ai识别的无人机激光障碍物清除装置及方法 
+        - Google Patents</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="referrer" content="origin-when-crossorigin">
+    <link rel="canonical" href="https://patents.google.com/patent/CN116534252A/zh">
+    <meta name="description" content="
+     本发明公开了一种基于AI识别的无人机激光障碍物清除装置及方法，所述装置包括：无人机以及搭载在无人机上的边缘计算模块、小型化激光设备以及相机，所述无人机与遥控器远程通信连接，所述边缘计算模块分别与所述小型化激光设备以及相机电性连接。所述方法通过机载边缘计算模块分别识别悬挂异物和输电线路，并反馈给遥控器系统主界面，分别以红色方框标记悬挂异物，绿色线条标记输电线路，对准目标，开启激光器，实现异物的清除。本发明设计小型化激光器将其固定安装于无人机上，通过AI障碍物识别，生成无人机激光切割最优路径，激光动作切割障碍物，提高障碍物的清除效率，同时激光清除降低了着火的可能性。 
+     
+   
+   ">
+    <meta name="DC.type" content="patent">
+    <meta name="DC.title" content="一种基于ai识别的无人机激光障碍物清除装置及方法 
+       ">
+    <meta name="DC.date" content="2023-05-08" scheme="dateSubmitted">
+    <meta name="DC.description" content="
+     本发明公开了一种基于AI识别的无人机激光障碍物清除装置及方法，所述装置包括：无人机以及搭载在无人机上的边缘计算模块、小型化激光设备以及相机，所述无人机与遥控器远程通信连接，所述边缘计算模块分别与所述小型化激光设备以及相机电性连接。所述方法通过机载边缘计算模块分别识别悬挂异物和输电线路，并反馈给遥控器系统主界面，分别以红色方框标记悬挂异物，绿色线条标记输电线路，对准目标，开启激光器，实现异物的清除。本发明设计小型化激光器将其固定安装于无人机上，通过AI障碍物识别，生成无人机激光切割最优路径，激光动作切割障碍物，提高障碍物的清除效率，同时激光清除降低了着火的可能性。 
+     
+   
+   ">
+    <meta name="citation_patent_application_number" content="CN:202310506672.9A">
+    <meta name="citation_pdf_url" content="https://patentimages.storage.googleapis.com/50/0c/b6/3bdea5d9398cf5/CN116534252A.pdf">
+    <meta name="citation_patent_publication_number" content="CN:116534252:A">
+    <meta name="DC.date" content="2023-08-04">
+    <meta name="DC.contributor" content="周倩" scheme="inventor">
+    <meta name="DC.contributor" content="杨忠英" scheme="inventor">
+    <meta name="DC.contributor" content="赵凌曦" scheme="inventor">
+    <meta name="DC.contributor" content="丁志伟" scheme="inventor">
+    <meta name="DC.contributor" content="Suzhou Usiland Optronics Co ltd" scheme="assignee">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Product+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700">
+
+    <style>
+      
+      #gb { position: absolute; top: 6px; left: auto; right: 0; width: auto; min-width: 135px !important; }   
+      body { transition: none; }
+    </style>
+    <script></script>
+
+    <script>
+      window.version = 'patent-search.search_20261019_RC00';
+
+      function sendFeedback() {
+        userfeedback.api.startFeedback({
+          'productId': '713680',
+          'bucket': 'patent-search-web',
+          'productVersion': window.version,
+        });
+      }
+
+      window.experiments = {};
+      window.experiments.patentCountries = "ae,ag,al,am,ao,ap,ar,at,au,aw,az,ba,bb,bd,be,bf,bg,bh,bj,bn,bo,br,bw,bx,by,bz,ca,cf,cg,ch,ci,cl,cm,cn,co,cr,cs,cu,cy,cz,dd,de,dj,dk,dm,do,dz,ea,ec,ee,eg,em,ep,es,fi,fr,ga,gb,gc,gd,ge,gh,gm,gn,gq,gr,gt,gw,hk,hn,hr,hu,ib,id,ie,il,in,ir,is,it,jo,jp,ke,kg,kh,km,kn,kp,kr,kw,kz,la,lc,li,lk,lr,ls,lt,lu,lv,ly,ma,mc,md,me,mg,mk,ml,mn,mo,mr,mt,mw,mx,my,mz,na,ne,ng,ni,nl,no,nz,oa,om,pa,pe,pg,ph,pl,pt,py,qa,ro,rs,ru,rw,sa,sc,sd,se,sg,si,sk,sl,sm,sn,st,su,sv,sy,sz,td,tg,th,tj,tm,tn,tr,tt,tw,tz,ua,ug,us,uy,uz,vc,ve,vn,wo,yu,za,zm,zw";
+      
+      
+      window.experiments.keywordWizard = true;
+      
+      
+      
+      window.experiments.definitions = true;
+      window.experiments.plogs = true;
+
+      window.Polymer = {
+        dom: 'shady',
+        lazyRegister: true,
+      };
+    </script>
+
+    <script src="//www.gstatic.com/patent-search/frontend/patent-search.search_20261019_RC00/scs/compiled_dir/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <link rel="import" href="//www.gstatic.com/patent-search/frontend/patent-search.search_20261019_RC00/scs/compiled_dir/search-app-vulcanized.html">
+  </head>
+  <body unresolved>
+    
+    
+    <script></script>
+    <script src="//www.gstatic.com/patent-search/frontend/patent-search.search_20261019_RC00/scs/compiled_dir/search-app-vulcanized.js"></script>
+    <search-app>
+      
+      
+
+      <article class="result" itemscope itemtype="http://schema.org/ScholarlyArticle">
+  <h1 itemprop="pageTitle">CN116534252A - 一种基于ai识别的无人机激光障碍物清除装置及方法 
+        - Google Patents</h1>
+  <span itemprop="title">一种基于ai识别的无人机激光障碍物清除装置及方法 
+       </span>
+
+  <meta itemprop="type" content="patent">
+  <a href="https://patentimages.storage.googleapis.com/50/0c/b6/3bdea5d9398cf5/CN116534252A.pdf" itemprop="pdfLink">Download PDF</a>
+  <h2>Info</h2>
+
+  <dl>
+    <dt>Publication number</dt>
+    <dd itemprop="publicationNumber">CN116534252A</dd>
+    <meta itemprop="numberWithoutCodes" content="116534252">
+    <meta itemprop="kindCode" content="A">
+    <meta itemprop="publicationDescription" content="Unexaminded application">
+    <span>CN116534252A</span>
+    <span>CN202310506672.9A</span>
+    <span>CN202310506672A</span>
+    <span>CN116534252A</span>
+    <span>CN 116534252 A</span>
+    <span>CN116534252 A</span>
+    <span>CN 116534252A</span>
+    <span>  </span>
+    <span> </span>
+    <span> </span>
+    <span>CN 202310506672 A</span>
+    <span>CN202310506672 A</span>
+    <span>CN 202310506672A</span>
+    <span>CN 116534252 A</span>
+    <span>CN116534252 A</span>
+    <span>CN 116534252A</span>
+
+    <dt>Authority</dt>
+    <dd itemprop="countryCode">CN</dd>
+    <dd itemprop="countryName">China</dd>
+
+    <dt>Prior art keywords</dt>
+    <dd itemprop="priorArtKeywords" repeat>laser</dd>
+    <dd itemprop="priorArtKeywords" repeat>unmanned aerial</dd>
+    <dd itemprop="priorArtKeywords" repeat>aerial vehicle</dd>
+    <dd itemprop="priorArtKeywords" repeat>transmission line</dd>
+    <dd itemprop="priorArtKeywords" repeat>power transmission</dd>
+
+    <dt>Prior art date</dt>
+    <dd><time itemprop="priorArtDate" datetime="2023-05-08">2023-05-08</time></dd>
+
+    <dt>Legal status (The legal status is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the status listed.)</dt>
+    <dd itemprop="legalStatusIfi" itemscope>
+      <span itemprop="status">Pending</span>
+    </dd>
+  </dl>
+
+  <dt>Application number</dt>
+  <dd itemprop="applicationNumber">CN202310506672.9A</dd>
+
+  <dt>Other languages</dt>
+  <dd itemprop="otherLanguages" itemscope repeat>
+    <a href="/patent/CN116534252A/en">
+      <span itemprop="name">English</span> (<span itemprop="code">en</span>)
+    </a>
+  </dd>
+
+  
+
+  <dt>Inventor</dt>
+  <dd itemprop="inventor" repeat>周倩</dd>
+  <dd itemprop="inventor" repeat>杨忠英</dd>
+  <dd itemprop="inventor" repeat>赵凌曦</dd>
+  <dd itemprop="inventor" repeat>丁志伟</dd>
+
+  <dt>Current Assignee (The listed assignees may be inaccurate. Google has not performed a legal analysis and makes no representation or warranty as to the accuracy of the list.)</dt>
+  <dd itemprop="assigneeCurrent" repeat>
+    Suzhou Usiland Optronics Co ltd
+  </dd>
+
+  <dt>Original Assignee</dt>
+  <dd itemprop="assigneeOriginal" repeat>Suzhou Usiland Optronics Co ltd</dd>
+
+  <dt>Priority date (The priority date is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the date listed.)</dt>
+  <dd><time itemprop="priorityDate" datetime="2023-05-08">2023-05-08</time></dd>
+
+  <dt>Filing date</dt>
+  <dd><time itemprop="filingDate" datetime="2023-05-08">2023-05-08</time></dd>
+
+  <dt>Publication date</dt>
+  <dd><time itemprop="publicationDate" datetime="2023-08-04">2023-08-04</time></dd>
+
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2023-05-08">2023-05-08</time>
+    <span itemprop="title">Application filed by Suzhou Usiland Optronics Co ltd</span>
+    <span itemprop="type">filed</span>
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    <span itemprop="assigneeSearch">Suzhou Usiland Optronics Co ltd</span>
+  </dd>
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2023-05-08">2023-05-08</time>
+    <span itemprop="title">Priority to CN202310506672.9A</span>
+    <span itemprop="type">priority</span>
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    <span itemprop="documentId">patent/CN116534252A/zh</span>
+    
+  </dd>
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2023-08-04">2023-08-04</time>
+    <span itemprop="title">Publication of CN116534252A</span>
+    <span itemprop="type">publication</span>
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    <span itemprop="documentId">patent/CN116534252A/zh</span>
+    
+  </dd>
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date">Status</time>
+    <span itemprop="title">Pending</span>
+    <span itemprop="type">legal-status</span>
+    <span itemprop="critical" content="true" bool>Critical</span>
+    <span itemprop="current" content="true" bool>Current</span>
+    
+    
+    
+  </dd>
+
+  <h2>Links</h2>
+  <ul>
+    
+
+    <li itemprop="links" itemscope repeat>
+        <meta itemprop="id" content="espacenetLink">
+        <a href="https://worldwide.espacenet.com/publicationDetails/biblio?CC=CN&amp;NR=116534252A&amp;KC=A&amp;FT=D" itemprop="url" target="_blank"><span itemprop="text">Espacenet</span></a>
+      </li>
+      
+
+    
+
+    <li itemprop="links" itemscope repeat>
+      <meta itemprop="id" content="globalDossierLink">
+      <a href="https://globaldossier.uspto.gov/result/application/CN/202310506672/1" itemprop="url" target="_blank"><span itemprop="text">Global Dossier</span></a>
+    </li>
+
+    
+
+      
+
+      
+
+      
+      <li itemprop="links" itemscope repeat>
+        <meta itemprop="id" content="stackexchangeLink">
+        <a href="https://patents.stackexchange.com/questions/tagged/CN116534252A" itemprop="url"><span itemprop="text">Discuss</span></a>
+      </li>
+  </ul>
+
+  
+
+  
+
+  <section>
+    <h2>Classifications</h2>
+    <ul>
+      <li>
+        <ul itemprop="classifications" itemscope repeat>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">H</span>&mdash;<span itemprop="Description">ELECTRICITY</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">H04</span>&mdash;<span itemprop="Description">ELECTRIC COMMUNICATION TECHNIQUE</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">H04L</span>&mdash;<span itemprop="Description">TRANSMISSION OF DIGITAL INFORMATION, e.g. TELEGRAPHIC COMMUNICATION</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">H04L67/00</span>&mdash;<span itemprop="Description">Network arrangements or protocols for supporting network services or applications</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">H04L67/01</span>&mdash;<span itemprop="Description">Protocols</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">H04L67/10</span>&mdash;<span itemprop="Description">Protocols in which an application is distributed across nodes in the network</span>
+            <meta itemprop="Leaf" content="true"><meta itemprop="FirstCode" content="true"><meta itemprop="IsCPC" content="true">
+          </li>
+        </ul>
+      </li>
+      <li>
+        <ul itemprop="classifications" itemscope repeat>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B</span>&mdash;<span itemprop="Description">PERFORMING OPERATIONS; TRANSPORTING</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B23</span>&mdash;<span itemprop="Description">MACHINE TOOLS; METAL-WORKING NOT OTHERWISE PROVIDED FOR</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B23K</span>&mdash;<span itemprop="Description">SOLDERING OR UNSOLDERING; WELDING; CLADDING OR PLATING BY SOLDERING OR WELDING; CUTTING BY APPLYING HEAT LOCALLY, e.g. FLAME CUTTING; WORKING BY LASER BEAM</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B23K26/00</span>&mdash;<span itemprop="Description">Working by laser beam, e.g. welding, cutting or boring</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B23K26/36</span>&mdash;<span itemprop="Description">Removing material</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B23K26/38</span>&mdash;<span itemprop="Description">Removing material by boring or cutting</span>
+            <meta itemprop="Leaf" content="true"><meta itemprop="IsCPC" content="true">
+          </li>
+        </ul>
+      </li>
+      <li>
+        <ul itemprop="classifications" itemscope repeat>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B</span>&mdash;<span itemprop="Description">PERFORMING OPERATIONS; TRANSPORTING</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B23</span>&mdash;<span itemprop="Description">MACHINE TOOLS; METAL-WORKING NOT OTHERWISE PROVIDED FOR</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B23K</span>&mdash;<span itemprop="Description">SOLDERING OR UNSOLDERING; WELDING; CLADDING OR PLATING BY SOLDERING OR WELDING; CUTTING BY APPLYING HEAT LOCALLY, e.g. FLAME CUTTING; WORKING BY LASER BEAM</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B23K26/00</span>&mdash;<span itemprop="Description">Working by laser beam, e.g. welding, cutting or boring</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B23K26/70</span>&mdash;<span itemprop="Description">Auxiliary operations or equipment</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B23K26/702</span>&mdash;<span itemprop="Description">Auxiliary equipment</span>
+            <meta itemprop="Leaf" content="true"><meta itemprop="IsCPC" content="true">
+          </li>
+        </ul>
+      </li>
+      <li>
+        <ul itemprop="classifications" itemscope repeat>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B</span>&mdash;<span itemprop="Description">PERFORMING OPERATIONS; TRANSPORTING</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B64</span>&mdash;<span itemprop="Description">AIRCRAFT; AVIATION; COSMONAUTICS</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B64C</span>&mdash;<span itemprop="Description">AEROPLANES; HELICOPTERS</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B64C39/00</span>&mdash;<span itemprop="Description">Aircraft not otherwise provided for</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B64C39/02</span>&mdash;<span itemprop="Description">Aircraft not otherwise provided for characterised by special use</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B64C39/024</span>&mdash;<span itemprop="Description">Aircraft not otherwise provided for characterised by special use of the remote controlled vehicle type, i.e. RPV</span>
+            <meta itemprop="Leaf" content="true"><meta itemprop="IsCPC" content="true">
+          </li>
+        </ul>
+      </li>
+      <li>
+        <ul itemprop="classifications" itemscope repeat>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B</span>&mdash;<span itemprop="Description">PERFORMING OPERATIONS; TRANSPORTING</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B64</span>&mdash;<span itemprop="Description">AIRCRAFT; AVIATION; COSMONAUTICS</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B64D</span>&mdash;<span itemprop="Description">EQUIPMENT FOR FITTING IN OR TO AIRCRAFT; FLIGHT SUITS; PARACHUTES; ARRANGEMENT OR MOUNTING OF POWER PLANTS OR PROPULSION TRANSMISSIONS IN AIRCRAFT</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B64D47/00</span>&mdash;<span itemprop="Description">Equipment not otherwise provided for</span>
+            <meta itemprop="Leaf" content="true"><meta itemprop="IsCPC" content="true">
+          </li>
+        </ul>
+      </li>
+      <li>
+        <ul itemprop="classifications" itemscope repeat>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B</span>&mdash;<span itemprop="Description">PERFORMING OPERATIONS; TRANSPORTING</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B64</span>&mdash;<span itemprop="Description">AIRCRAFT; AVIATION; COSMONAUTICS</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B64U</span>&mdash;<span itemprop="Description">UNMANNED AERIAL VEHICLES [UAV]; EQUIPMENT THEREFOR</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B64U10/00</span>&mdash;<span itemprop="Description">Type of UAV</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B64U10/10</span>&mdash;<span itemprop="Description">Rotorcrafts</span>
+            <meta itemprop="Leaf" content="true"><meta itemprop="IsCPC" content="true">
+          </li>
+        </ul>
+      </li>
+      <li>
+        <ul itemprop="classifications" itemscope repeat>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B</span>&mdash;<span itemprop="Description">PERFORMING OPERATIONS; TRANSPORTING</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B64</span>&mdash;<span itemprop="Description">AIRCRAFT; AVIATION; COSMONAUTICS</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B64U</span>&mdash;<span itemprop="Description">UNMANNED AERIAL VEHICLES [UAV]; EQUIPMENT THEREFOR</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B64U20/00</span>&mdash;<span itemprop="Description">Constructional aspects of UAVs</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B64U20/80</span>&mdash;<span itemprop="Description">Arrangement of on-board electronics, e.g. avionics systems or wiring</span>
+            <meta itemprop="Leaf" content="true"><meta itemprop="IsCPC" content="true">
+          </li>
+        </ul>
+      </li>
+      <li>
+        <ul itemprop="classifications" itemscope repeat>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">G</span>&mdash;<span itemprop="Description">PHYSICS</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">G06</span>&mdash;<span itemprop="Description">COMPUTING OR CALCULATING; COUNTING</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">G06N</span>&mdash;<span itemprop="Description">COMPUTING ARRANGEMENTS BASED ON SPECIFIC COMPUTATIONAL MODELS</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">G06N3/00</span>&mdash;<span itemprop="Description">Computing arrangements based on biological models</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">G06N3/02</span>&mdash;<span itemprop="Description">Neural networks</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">G06N3/04</span>&mdash;<span itemprop="Description">Architecture, e.g. interconnection topology</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">G06N3/0464</span>&mdash;<span itemprop="Description">Convolutional networks [CNN, ConvNet]</span>
+            <meta itemprop="Leaf" content="true"><meta itemprop="IsCPC" content="true">
+          </li>
+        </ul>
+      </li>
+      <li>
+        <ul itemprop="classifications" itemscope repeat>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">G</span>&mdash;<span itemprop="Description">PHYSICS</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">G06</span>&mdash;<span itemprop="Description">COMPUTING OR CALCULATING; COUNTING</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">G06V</span>&mdash;<span itemprop="Description">IMAGE OR VIDEO RECOGNITION OR UNDERSTANDING</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">G06V10/00</span>&mdash;<span itemprop="Description">Arrangements for image or video recognition or understanding</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">G06V10/70</span>&mdash;<span itemprop="Description">Arrangements for image or video recognition or understanding using pattern recognition or machine learning</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">G06V10/82</span>&mdash;<span itemprop="Description">Arrangements for image or video recognition or understanding using pattern recognition or machine learning using neural networks</span>
+            <meta itemprop="Leaf" content="true"><meta itemprop="IsCPC" content="true">
+          </li>
+        </ul>
+      </li>
+      <li>
+        <ul itemprop="classifications" itemscope repeat>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">G</span>&mdash;<span itemprop="Description">PHYSICS</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">G06</span>&mdash;<span itemprop="Description">COMPUTING OR CALCULATING; COUNTING</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">G06V</span>&mdash;<span itemprop="Description">IMAGE OR VIDEO RECOGNITION OR UNDERSTANDING</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">G06V20/00</span>&mdash;<span itemprop="Description">Scenes; Scene-specific elements</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">G06V20/10</span>&mdash;<span itemprop="Description">Terrestrial scenes</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">G06V20/17</span>&mdash;<span itemprop="Description">Terrestrial scenes taken from planes or by drones</span>
+            <meta itemprop="Leaf" content="true"><meta itemprop="IsCPC" content="true">
+          </li>
+        </ul>
+      </li>
+      <li>
+        <ul itemprop="classifications" itemscope repeat>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">H</span>&mdash;<span itemprop="Description">ELECTRICITY</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">H02</span>&mdash;<span itemprop="Description">GENERATION; CONVERSION OR DISTRIBUTION OF ELECTRIC POWER</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">H02G</span>&mdash;<span itemprop="Description">INSTALLATION OF ELECTRIC CABLES OR LINES, OR OF COMBINED OPTICAL AND ELECTRIC CABLES OR LINES</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">H02G1/00</span>&mdash;<span itemprop="Description">Methods or apparatus specially adapted for installing, maintaining, repairing or dismantling electric cables or lines</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">H02G1/02</span>&mdash;<span itemprop="Description">Methods or apparatus specially adapted for installing, maintaining, repairing or dismantling electric cables or lines for overhead lines or cables</span>
+            <meta itemprop="Leaf" content="true"><meta itemprop="IsCPC" content="true">
+          </li>
+        </ul>
+      </li>
+      <li>
+        <ul itemprop="classifications" itemscope repeat>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B</span>&mdash;<span itemprop="Description">PERFORMING OPERATIONS; TRANSPORTING</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B64</span>&mdash;<span itemprop="Description">AIRCRAFT; AVIATION; COSMONAUTICS</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B64U</span>&mdash;<span itemprop="Description">UNMANNED AERIAL VEHICLES [UAV]; EQUIPMENT THEREFOR</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B64U2101/00</span>&mdash;<span itemprop="Description">UAVs specially adapted for particular uses or applications</span>
+            <meta itemprop="Leaf" content="true"><meta itemprop="Additional" content="true"><meta itemprop="IsCPC" content="true">
+          </li>
+        </ul>
+      </li>
+      <li>
+        <ul itemprop="classifications" itemscope repeat>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B</span>&mdash;<span itemprop="Description">PERFORMING OPERATIONS; TRANSPORTING</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B64</span>&mdash;<span itemprop="Description">AIRCRAFT; AVIATION; COSMONAUTICS</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B64U</span>&mdash;<span itemprop="Description">UNMANNED AERIAL VEHICLES [UAV]; EQUIPMENT THEREFOR</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B64U2101/00</span>&mdash;<span itemprop="Description">UAVs specially adapted for particular uses or applications</span>
+            <meta itemprop="IsCPC" content="true">
+          </li>
+          <li itemprop="classifications" itemscope repeat>
+            <span itemprop="Code">B64U2101/30</span>&mdash;<span itemprop="Description">UAVs specially adapted for particular uses or applications for imaging, photography or videography</span>
+            <meta itemprop="Leaf" content="true"><meta itemprop="Additional" content="true"><meta itemprop="IsCPC" content="true">
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  
+
+  
+
+  
+
+  <section>
+    <h2>Landscapes</h2>
+    <ul>
+      <li itemprop="landscapes" itemscope repeat>
+        <span itemprop="name">Engineering &amp; Computer Science</span>
+        (<span itemprop="type">AREA</span>)
+      </li>
+      <li itemprop="landscapes" itemscope repeat>
+        <span itemprop="name">Physics &amp; Mathematics</span>
+        (<span itemprop="type">AREA</span>)
+      </li>
+      <li itemprop="landscapes" itemscope repeat>
+        <span itemprop="name">Theoretical Computer Science</span>
+        (<span itemprop="type">AREA</span>)
+      </li>
+      <li itemprop="landscapes" itemscope repeat>
+        <span itemprop="name">Aviation &amp; Aerospace Engineering</span>
+        (<span itemprop="type">AREA</span>)
+      </li>
+      <li itemprop="landscapes" itemscope repeat>
+        <span itemprop="name">Mechanical Engineering</span>
+        (<span itemprop="type">AREA</span>)
+      </li>
+      <li itemprop="landscapes" itemscope repeat>
+        <span itemprop="name">Evolutionary Computation</span>
+        (<span itemprop="type">AREA</span>)
+      </li>
+      <li itemprop="landscapes" itemscope repeat>
+        <span itemprop="name">Remote Sensing</span>
+        (<span itemprop="type">AREA</span>)
+      </li>
+      <li itemprop="landscapes" itemscope repeat>
+        <span itemprop="name">General Physics &amp; Mathematics</span>
+        (<span itemprop="type">AREA</span>)
+      </li>
+      <li itemprop="landscapes" itemscope repeat>
+        <span itemprop="name">General Health &amp; Medical Sciences</span>
+        (<span itemprop="type">AREA</span>)
+      </li>
+      <li itemprop="landscapes" itemscope repeat>
+        <span itemprop="name">Software Systems</span>
+        (<span itemprop="type">AREA</span>)
+      </li>
+      <li itemprop="landscapes" itemscope repeat>
+        <span itemprop="name">Artificial Intelligence</span>
+        (<span itemprop="type">AREA</span>)
+      </li>
+      <li itemprop="landscapes" itemscope repeat>
+        <span itemprop="name">Plasma &amp; Fusion</span>
+        (<span itemprop="type">AREA</span>)
+      </li>
+      <li itemprop="landscapes" itemscope repeat>
+        <span itemprop="name">Computing Systems</span>
+        (<span itemprop="type">AREA</span>)
+      </li>
+      <li itemprop="landscapes" itemscope repeat>
+        <span itemprop="name">Optics &amp; Photonics</span>
+        (<span itemprop="type">AREA</span>)
+      </li>
+      <li itemprop="landscapes" itemscope repeat>
+        <span itemprop="name">Multimedia</span>
+        (<span itemprop="type">AREA</span>)
+      </li>
+      <li itemprop="landscapes" itemscope repeat>
+        <span itemprop="name">Health &amp; Medical Sciences</span>
+        (<span itemprop="type">AREA</span>)
+      </li>
+      <li itemprop="landscapes" itemscope repeat>
+        <span itemprop="name">Biophysics</span>
+        (<span itemprop="type">AREA</span>)
+      </li>
+      <li itemprop="landscapes" itemscope repeat>
+        <span itemprop="name">General Engineering &amp; Computer Science</span>
+        (<span itemprop="type">AREA</span>)
+      </li>
+      <li itemprop="landscapes" itemscope repeat>
+        <span itemprop="name">Biomedical Technology</span>
+        (<span itemprop="type">AREA</span>)
+      </li>
+      <li itemprop="landscapes" itemscope repeat>
+        <span itemprop="name">Medical Informatics</span>
+        (<span itemprop="type">AREA</span>)
+      </li>
+      <li itemprop="landscapes" itemscope repeat>
+        <span itemprop="name">Computational Linguistics</span>
+        (<span itemprop="type">AREA</span>)
+      </li>
+      <li itemprop="landscapes" itemscope repeat>
+        <span itemprop="name">Data Mining &amp; Analysis</span>
+        (<span itemprop="type">AREA</span>)
+      </li>
+      <li itemprop="landscapes" itemscope repeat>
+        <span itemprop="name">Molecular Biology</span>
+        (<span itemprop="type">AREA</span>)
+      </li>
+      <li itemprop="landscapes" itemscope repeat>
+        <span itemprop="name">Life Sciences &amp; Earth Sciences</span>
+        (<span itemprop="type">AREA</span>)
+      </li>
+      <li itemprop="landscapes" itemscope repeat>
+        <span itemprop="name">Mathematical Physics</span>
+        (<span itemprop="type">AREA</span>)
+      </li>
+      <li itemprop="landscapes" itemscope repeat>
+        <span itemprop="name">Databases &amp; Information Systems</span>
+        (<span itemprop="type">AREA</span>)
+      </li>
+      <li itemprop="landscapes" itemscope repeat>
+        <span itemprop="name">Computer Vision &amp; Pattern Recognition</span>
+        (<span itemprop="type">AREA</span>)
+      </li>
+      <li itemprop="landscapes" itemscope repeat>
+        <span itemprop="name">Signal Processing</span>
+        (<span itemprop="type">AREA</span>)
+      </li>
+      <li itemprop="landscapes" itemscope repeat>
+        <span itemprop="name">Computer Networks &amp; Wireless Communication</span>
+        (<span itemprop="type">AREA</span>)
+      </li>
+      <li itemprop="landscapes" itemscope repeat>
+        <span itemprop="name">Microelectronics &amp; Electronic Packaging</span>
+        (<span itemprop="type">AREA</span>)
+      </li>
+      <li itemprop="landscapes" itemscope repeat>
+        <span itemprop="name">Control Of Position, Course, Altitude, Or Attitude Of Moving Bodies</span>
+        (<span itemprop="type">AREA</span>)
+      </li>
+    </ul>
+  </section>
+
+
+  <section itemprop="abstract" itemscope>
+    <h2>Abstract</h2>
+    
+    <div itemprop="content" html><abstract mxw-id="PA612312575" lang="ZH" load-source="patent-office">
+    <div num="0001" class="abstract">本发明公开了一种基于AI识别的无人机激光障碍物清除装置及方法，所述装置包括：无人机以及搭载在无人机上的边缘计算模块、小型化激光设备以及相机，所述无人机与遥控器远程通信连接，所述边缘计算模块分别与所述小型化激光设备以及相机电性连接。所述方法通过机载边缘计算模块分别识别悬挂异物和输电线路，并反馈给遥控器系统主界面，分别以红色方框标记悬挂异物，绿色线条标记输电线路，对准目标，开启激光器，实现异物的清除。本发明设计小型化激光器将其固定安装于无人机上，通过AI障碍物识别，生成无人机激光切割最优路径，激光动作切割障碍物，提高障碍物的清除效率，同时激光清除降低了着火的可能性。</div>
+    </abstract>
+  </div>
+  </section>
+
+  <section itemprop="description" itemscope>
+    <h2>Description</h2>
+    
+    <div itemprop="content" html><div mxw-id="PDES424793223" lang="ZH" load-source="patent-office" class="description">
+    <invention-title lang="ZH" id="title1">一种基于AI识别的无人机激光障碍物清除装置及方法</invention-title>
+    <technical-field>
+      <div id="p0001" class="description-paragraph">技术领域</div>
+      <div id="p0002" num="0001" class="description-paragraph">本发明涉及无人机技术领域，特别是涉及一种基于AI识别的无人机激光障碍物清除装置及方法。</div>
+    </technical-field>
+    <background-art>
+      <div id="p0003" class="description-paragraph">背景技术</div>
+      <div id="p0004" num="0002" class="description-paragraph">随着我国经济的不断发展，电能在生产、生活中发挥着越来越大的作用,我国电网规模也有了极大的增长。附着在输电线路上的各类障碍物成为输电设备尤其是高压输电线路安全工作、电力系统稳定运行的巨大威胁。常见的线路障碍物包括塑料薄膜、鸟窝、覆冰树障等。塑料薄膜等电网悬挂异物会缠绕导线与地线，可能引发相间短路故障；树障会使得高压线绝缘距离减小，可能造成放电，引起林区火灾；这些障碍物不仅会引发停电事故，造成电网损坏，还可能造成更大的间接经济损失。</div>
+      <div id="p0005" num="0003" class="description-paragraph">目前，已有的障碍物处理方式包括停电作业法，利用绝缘软梯、屏蔽服、绝缘操作杆等简易工具的人工处理法及吊车处理法等。这些处理方法各有缺点，比如停电作业法会造成大量经济损失且有时间限制；人工处理法有较高的安全隐患且操作困难，处理过程受天气与线路结构影响；吊车处理法对道路条件要求较高，不适合在复杂地形中使用。</div>
+      <div id="p0006" num="0004" class="description-paragraph">而多旋翼无人机由于操作灵活、不受气候以及地理环境的限制等众多优点为清除输电线路漂浮异物提供了新途径，众多研究学者在无人机设备上搭载喷火装置或发热丝装置，对高空中的障碍物体进行清除。针对输电线路异物清除目前采取技术如下：技术一，无人机搭载喷火装置在高空中对于异物进行清除作业，迅速燃烧的大面积异物会随着空气中的气流到处飘散，增加了发生火灾的概率；技术二，无人机搭载发热丝装置由于设备近距离靠近输电线路易受到电磁干扰，无人机易失去控制，增加了无人机坠毁的风险。因此，亟需一种更加安全可靠的无人机障碍清除技术。</div>
+    </background-art>
+    <disclosure>
+      <div id="p0007" class="description-paragraph">发明内容</div>
+      <div id="p0008" num="0005" class="description-paragraph">本发明的目的是提供一种基于AI识别的无人机激光障碍物清除装置及方法，设计小型化激光器，将其固定安装于无人机上，通过AI障碍物识别，生成无人机激光切割最优路径，激光动作切割障碍物，提高障碍物的清除效率，同时激光清除降低了着火的可能性。</div>
+      <div id="p0009" num="0006" class="description-paragraph">为实现上述目的，本发明提供了如下方案：</div>
+      <div id="p0010" num="0007" class="description-paragraph">一种基于AI识别的无人机激光障碍物清除装置，该装置包括无人机以及搭载在无人机上的边缘计算模块、小型化激光设备以及相机，所述无人机与遥控器远程通信连接，所述边缘计算模块分别与所述小型化激光设备以及相机电性连接，所述边缘计算模块用于AI识别悬挂异物及输电线路，所述小型化激光设备用于发射激光清除悬挂异物。</div>
+      <div id="p0011" num="0008" class="description-paragraph">进一步地，所述小型化激光设备包括依次连接的中间固定件、电池仓、上外壳、激光器外壳固定架以及下外壳，所述无人机和所述小型化激光设备通过所述中间固定件连接；所述电池仓用于放置激光器的远程控制模块和电源模块，所述上外壳连接在电池仓的下方，所述下外壳通过所述激光器外壳固定架与所述上外壳连接，所述上外壳和下外壳构成立体存放空间，用于存放激光器，所述远程控制模块和电源模块与所述激光器电性连接，所述远程控制模块与所述边缘计算模块连接。</div>
+      <div id="p0012" num="0009" class="description-paragraph">进一步地，所述电池仓采用侧面抽拉式结构；所述立体存放空间采取三面镂空式结构。</div>
+      <div id="p0013" num="0010" class="description-paragraph">进一步地，所述相机为云台相机，所述小型化激光设备的激光出光口设置在所述云台相机的下端面。</div>
+      <div id="p0014" num="0011" class="description-paragraph">进一步地，所述小型化激光设备的激光出光口通过嵌入式的T型结构嵌入到所述云台相机的下端面。</div>
+      <div id="p0015" num="0012" class="description-paragraph">本发明提供的一种基于AI识别的无人机激光障碍物清除方法，应用于上述的基于AI识别的无人机激光障碍物清除装置，包括以下步骤：</div>
+      <div id="p0016" num="0013" class="description-paragraph">无人机沿输电线路进行巡检，当发现输电线路上悬挂异物，操控无人机飞行至指定位置；</div>
+      <div id="p0017" num="0014" class="description-paragraph">通过相机采集输电线路及悬挂异物的图像，并传输给边缘计算模块；</div>
+      <div id="p0018" num="0015" class="description-paragraph">基于采集的图像，边缘计算模块对于悬挂异物进行图像识别，待发现悬挂异物后，用红框标记悬挂异物，并反馈给遥控器的系统主界面；</div>
+      <div id="p0019" num="0016" class="description-paragraph">基于采集的图像，边缘计算模块对于输电线路进行识别，待发现输电线路后，用绿色线条标记输电线路，并反馈给遥控器的系统主界面；</div>
+      <div id="p0020" num="0017" class="description-paragraph">基于红框标记的悬挂异物以及绿色线条标记的输电线路，确定激光清除目标位置，开启小型化激光设备，发射激光，进行悬挂异物的清除。</div>
+      <div id="p0021" num="0018" class="description-paragraph">进一步地，所述边缘计算模块对于悬挂异物进行图像识别，具体为：</div>
+      <div id="p0022" num="0019" class="description-paragraph">所述边缘计算模块基于YOLOv3算法对于悬挂异物进行图像识别。</div>
+      <div id="p0023" num="0020" class="description-paragraph">进一步地，所述边缘计算模块对于输电线路进行识别，具体为：</div>
+      <div id="p0024" num="0021" class="description-paragraph">所述边缘计算模块基于霍夫变换对于输电线路进行识别。</div>
+      <div id="p0025" num="0022" class="description-paragraph">进一步地，所述指定位置为输电线路平行方向距离输电线路6-11米的位置。</div>
+      <div id="p0026" num="0023" class="description-paragraph">根据本发明提供的具体实施例，本发明公开了以下技术效果：本发明提供的基于AI识别的无人机激光障碍物清除装置及方法，实现基于AI识别无人机激光清障一体化，在结构上，小型化激光器的设计较为紧凑，采取镂空式的结构设计，充分保证了散热以及无人机的有限负荷，保障了飞行的稳定性。设计小型化激光器，并将其固定安装于无人机上，通过AI障碍物识别，生成无人机激光切割最优路径，激光动作切割障碍物。AI识别和最优路径可以提高障碍物的清除效率，而由于激光束可以做到和接触物体的点接触，接触面积小，造成异物可燃面积小，极大地降低了着火的可能性。</div>
+    </disclosure>
+    <description-of-drawings>
+      <div id="p0027" class="description-paragraph">附图说明</div>
+      <div id="p0028" num="0024" class="description-paragraph">为了更清楚地说明本发明实施例或现有技术中的技术方案，下面将对实施例中所需要使用的附图作简单地介绍，显而易见地，下面描述中的附图仅仅是本发明的一些实施例，对于本领域普通技术人员来讲，在不付出创造性劳动性的前提下，还可以根据这些附图获得其他的附图。</div>
+      <div id="p0029" num="0025" class="description-paragraph">图1为本发明基于AI识别的无人机激光障碍物清除装置的结构示意图；</div>
+      <div id="p0030" num="0026" class="description-paragraph">图2为本发明小型化激光设备的结构示意图；</div>
+      <div id="p0031" num="0027" class="description-paragraph">图3为本发明云台相机的结构示意图；</div>
+      <div id="p0032" num="0028" class="description-paragraph">图4为本发明基于AI识别的无人机激光障碍物清除方法的流程图；</div>
+      <div id="p0033" num="0029" class="description-paragraph">图5为本发明悬挂异物识别及清除的控制原理图；</div>
+      <div id="p0034" num="0030" class="description-paragraph">图6为本发明YOLO-V3算法的网络结构示意图。</div>
+      <div id="p0035" num="0031" class="description-paragraph">附图标记说明：1、边缘计算模块；2、无人机；3、小型化激光设备；4、相机；</div>
+      <div id="p0036" num="0032" class="description-paragraph">31、中间固定件；32、电池仓；33、上外壳；34、激光器外壳固定架；35、下外壳；</div>
+      <div id="p0037" num="0033" class="description-paragraph">41、前端相机；42、嵌入式的T型结构；43、激光出光口。</div>
+    </description-of-drawings>
+    <mode-for-invention>
+      <div id="p0038" class="description-paragraph">具体实施方式</div>
+      <div id="p0039" num="0034" class="description-paragraph">下面将结合本发明实施例中的附图，对本发明实施例中的技术方案进行清楚、完整地描述，显然，所描述的实施例仅仅是本发明一部分实施例，而不是全部的实施例。基于本发明中的实施例，本领域普通技术人员在没有做出创造性劳动前提下所获得的所有其他实施例，都属于本发明保护的范围。</div>
+      <div id="p0040" num="0035" class="description-paragraph">需要说明，本发明实施例中所有方向性指示(诸如上、下、左、右、前、后……)仅用于解释在某一特定姿态(如附图所示)下各部件之间的相对位置关系、运动情况等，如果该特定姿态发生改变时，则该方向性指示也相应地随之改变。</div>
+      <div id="p0041" num="0036" class="description-paragraph">在本发明中，除非另有明确的规定和限定，术语“连接”、“固定”等应做广义理解，例如，“固定”可以是固定连接，也可以是可拆卸连接，或成一体；可以是机械连接，也可以是电连接，还可以是物理连接或无线通信连接；可以是直接相连，也可以通过中间媒介间接相连，可以是两个元件内部的连通或两个元件的相互作用关系，除非另有明确的限定。对于本领域的普通技术人员而言，可以根据具体情况理解上述术语在本发明中的具体含义。</div>
+      <div id="p0042" num="0037" class="description-paragraph">本发明的目的是提供一种基于AI识别的无人机激光障碍物清除装置及方法，设计小型化激光器，将其固定安装于无人机上，通过AI障碍物识别，生成无人机激光切割最优路径，激光动作切割障碍物，提高障碍物的清除效率，同时激光清除降低了着火的可能性。</div>
+      <div id="p0043" num="0038" class="description-paragraph">为使本发明的上述目的、特征和优点能够更加明显易懂，下面结合附图和具体实施方式对本发明作进一步详细的说明。</div>
+      <div id="p0044" num="0039" class="description-paragraph">如图1所示，本发明提供的基于AI识别的无人机激光障碍物清除装置包括无人机2以及搭载在无人机2上的边缘计算模块1、小型化激光设备3以及相机4，所述无人机2与遥控器远程通信连接，所述边缘计算模块1分别与所述小型化激光设备3以及相机4电性连接，所述边缘计算模块用于AI识别悬挂异物及输电线路，所述小型化激光设备用于发射激光清除悬挂异物。所述边缘计算模块1的主要作用有二，其一，基于YOLOv3算法对于输电线路悬挂异物进行图像识别，待发现异物后，用红框标记异物，并反馈给遥控器的系统主界面；其二，基于霍夫变换对于输电线路进行识别，待发现输电线路后，用绿色线条进行标记，并反馈给遥控器的系统主界面。</div>
+      <div id="p0045" num="0040" class="description-paragraph">示例地，所述无人机可以采用大疆M300无人机。</div>
+      <div id="p0046" num="0041" class="description-paragraph">具体地，如图2所示，所述小型化激光设备3包括依次连接的中间固定件31、电池仓32、上外壳33、激光器外壳固定架34以及下外壳35，所述无人机2和所述小型化激光设备3之间通过所述中间固定件31连接；所述电池仓32用于放置激光器的远程控制模块和电源模块，所述上外壳33连接在电池仓的下方，所述下外壳35通过所述激光器外壳固定架34与所述上外壳33连接，所述上外壳33和下外壳35构成立体存放空间，用于存放激光器，所述远程控制模块和电源模块与所述激光器电性连接，所述远程控制模块与所述边缘计算模块连接。示例地，所述激光器可以选用60W连续光纤激光器，立体存放空间内存放着60W连续光纤激光器的控制电路和光路部分。</div>
+      <div id="p0047" num="0042" class="description-paragraph">所述电池仓32采用侧面抽拉式结构，方便抽拉使用；所述立体存放空间采取三面镂空式结构，即上外壳33和下外壳35上设置孔洞，用于减轻设备自身重量的同时，增大散热面积。</div>
+      <div id="p0048" num="0043" class="description-paragraph">如图3所示，所述相机4为云台相机，所述小型化激光设备3的激光出光口43设置在所述云台相机的下端面。具体地，所述小型化激光设备的激光出光口43通过嵌入式的T型结构42嵌入到所述云台相机的下端面。所述云台相机的主要作用在于通过前端相机41，采集输电线路以及悬挂异物图像，并发送至机载边缘计算模块1，进行数据的处理，通过遥控器控制无人机飞行至指定位置，微调左右手柄，打开激光器的控制按钮，发射激光光束清除障碍物。示例地，所述相机可以采用H20相机。</div>
+      <div id="p0049" num="0044" class="description-paragraph">如图4和图5所示，本发明提供的一种基于AI识别的无人机激光障碍物清除方法，应用于上述的基于AI识别的无人机激光障碍物清除装置，包括以下步骤：</div>
+      <div id="p0050" num="0045" class="description-paragraph">无人机沿输电线路进行巡检，当发现输电线路上悬挂异物，操控无人机飞行至指定位置；所述指定位置为输电线路平行方向距离输电线路6-11米的位置；</div>
+      <div id="p0051" num="0046" class="description-paragraph">通过相机采集输电线路及悬挂异物的图像，并传输给边缘计算模块；</div>
+      <div id="p0052" num="0047" class="description-paragraph">基于采集的图像，边缘计算模块对于悬挂异物进行图像识别，待发现悬挂异物后，用红框标记悬挂异物，并反馈给遥控器的系统主界面；</div>
+      <div id="p0053" num="0048" class="description-paragraph">基于采集的图像，边缘计算模块对于输电线路进行识别，待发现输电线路后，用绿色线条标记输电线路，并反馈给遥控器的系统主界面；</div>
+      <div id="p0054" num="0049" class="description-paragraph">基于红框标记的悬挂异物以及绿色线条标记的输电线路，确定激光清除目标位置，开启小型化激光设备，发射激光，进行悬挂异物的清除。</div>
+      <div id="p0055" num="0050" class="description-paragraph">具体地，所述边缘计算模块对于悬挂异物进行图像识别，具体为：</div>
+      <div id="p0056" num="0051" class="description-paragraph">所述边缘计算模块基于YOLOv3算法对于悬挂异物进行图像识别。</div>
+      <div id="p0057" num="0052" class="description-paragraph">其中，YOLOV3算法的基本思想可以分成两部分：</div>
+      <div id="p0058" num="0053" class="description-paragraph">(1)按一定规则在图片上产生一系列的候选区域，然后根据这些候选区域与图片上物体真实框之间的位置关系对候选区域进行标注。跟真实框足够接近的那些候选区域会被标注为正样本，同时将真实框的位置作为正样本的位置目标。偏离真实框较大的那些候选区域则会被标注为负样本，负样本不需要预测位置或者类别。</div>
+      <div id="p0059" num="0054" class="description-paragraph">(2)使用卷积神经网络提取图片特征并对候选区域的位置和类别进行预测。这样每个预测框就可以看成是一个样本，根据真实框相对它的位置和类别进行了标注而获得标签值，通过网络模型预测其位置和类别，将网络预测值和标签值进行比较，就可以建立起损失函数。</div>
+      <div id="p0060" num="0055" class="description-paragraph">YOLO-V3网络如图6所示：在训练过程中对于每幅输入图像，yolov3会预测三个不同大小的3Dtensor，对应着三个不同的scale，设计这三个scale的目的是为了能检测出不同大小的物体。以13*13的tensor为例，对于这个scale，原始输入图像会被分割成13×13的gridcell，每个gridcell对应着3Dtensor中的1×1×255这样一个长条形voxel。255是由3×(4+1+80)而来，由图6可知，公式N×N×[3×(4+1+80)]中N×N表示的是scalesize例如上面提到的13×13。3表示的是eachgridpredict3boxes。4表示的是坐标值即(tx，ty，tw，th)。1表示的是置信度，80表示的是类别数目。</div>
+      <div id="p0061" num="0056" class="description-paragraph">如果训练集中某一个groundtruth对应的boundingbox中心恰好落在了输入图像的摸一个gridcell中，那么这个gridcell就负责预测此物体的bounding box，于是这个gridcell所对应的置信度为1，其他gridcell的置信度为0。每个gridcell都会被赋予3个不同大小的priorbox，开发过程中，这个gridcell如何选择哪个大小的priorbox。定义只选择与groundtruthboundingbox的IOU重合度最高的priorbox。</div>
+      <div id="p0062" num="0057" class="description-paragraph">上面说到的3个预设的不同大小的priorbox，首先在训练前，将coco数据集中的所有bbox使用k-meansclustering分成9个类别，每3个类别对应一个scale，故总共3个scale，这种关于box大小的先验信息帮助网络准确预测每个box的offset和coordinate。从直观上，大小合适的box会使得网络更精准的学习。</div>
+      <div id="p0063" num="0058" class="description-paragraph">具体地，所述边缘计算模块对于输电线路进行识别，具体为：</div>
+      <div id="p0064" num="0059" class="description-paragraph">所述边缘计算模块基于霍夫变换对于输电线路进行识别。</div>
+      <div id="p0065" num="0060" class="description-paragraph">霍夫变换(HoughTransform)是图像处理中检测是否存在直线的重要算法，通过将图像中的像素在一个空间坐标系中变换到另一个坐标空间坐标系中，使得在原空间中具有形同特性的曲线或者直线映射到另一个空间中形成峰值，从而把检测任意形状的问题转化为统计峰值的问题。</div>
+      <div id="p0066" num="0061" class="description-paragraph">霍夫变换通过构建检测形状的数学解析式将图像中像素点映射到参数空间中，例如，检测两个像素点所在的直线，需要构建直线的数学解析式。在图像空间x-y直角坐标系中，对于直线可以用如下所示的解析式来表示：</div>
+      <div id="p0067" num="0062" class="description-paragraph">y＝kx+b</div>
+      <div id="p0068" num="0063" class="description-paragraph">其中，k是直线的斜率，b是直线的截距。</div>
+      <div id="p0069" num="0064" class="description-paragraph">霍夫变换算法检测图像中的直线主要分为4个步骤：</div>
+      <div id="p0070" num="0065" class="description-paragraph">(1)将参数空间的坐标轴窝散化，例如θ＝0°，10°，20°....·r＝0.1，0.2，0.3.....</div>
+      <div id="p0071" num="0066" class="description-paragraph">(2)将图像中每个非0像素通过映射关系求取在参数空间通过的方格；</div>
+      <div id="p0072" num="0067" class="description-paragraph">(3)统计参数空间内每个方格出现的次数，选取次数大于某一阈值的方格作为表示直线的方格；</div>
+      <div id="p0073" num="0068" class="description-paragraph">(4)将参数空间中表示直线的方格的参数作为图像中直线的参数。</div>
+      <div id="p0074" num="0069" class="description-paragraph">霍夫变换具有抗干扰能力强，对图像中直线的残缺部分、噪声以及其它共存的非直线结构不敏感，能容忍特征边界描述中的间隙，并且相对不受图像噪声影响等优点。</div>
+      <div id="p0075" num="0070" class="description-paragraph">利用霍夫变换可以准确识别输电线路，提高识别精度。</div>
+      <div id="p0076" num="0071" class="description-paragraph">本发明设计小型化激光器将其固定安装于无人机上，通过AI障碍物识别，生成无人机激光切割最优路径，激光动作切割障碍物。AI识别和最优路径可以提高障碍物的清除效率，而由于激光束可以做到和接触物体的点接触，接触面积小，造成异物可燃面积小，极大地降低了着火的可能性。</div>
+      <div id="p0077" num="0072" class="description-paragraph">本文中应用了具体个例对本发明的原理及实施方式进行了阐述，以上实施例的说明只是用于帮助理解本发明的方法及其核心思想；同时，对于本领域的一般技术人员，依据本发明的思想，在具体实施方式及应用范围上均会有改变之处。综上所述，本说明书内容不应理解为对本发明的限制。</div>
+    </mode-for-invention>
+  </div>
+  </div>
+  </section>
+
+  <section itemprop="claims" itemscope>
+    <h2>Claims (<span itemprop="count">9</span>)</h2>
+    
+    <div itemprop="content" html><div mxw-id="PCLM420624357" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div id="zh-cl0001" num="0001" class="claim">
+      <div class="claim-text">1.一种基于AI识别的无人机激光障碍物清除装置，其特征在于，包括无人机以及搭载在无人机上的边缘计算模块、小型化激光设备以及相机，所述无人机与遥控器远程通信连接，所述边缘计算模块分别与所述小型化激光设备以及相机电性连接，所述边缘计算模块用于AI识别悬挂异物及输电线路，所述小型化激光设备用于发射激光清除悬挂异物。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="zh-cl0002" num="0002" class="claim">
+      <div class="claim-text">
+        <claim-ref idref="zh-cl0001"> </claim-ref>
+      </div>
+      <div class="claim-text">2.根据权利要求1所述的基于AI识别的无人机激光障碍物清除装置，其特征在于，所述小型化激光设备包括依次连接的中间固定件、电池仓、上外壳、激光器外壳固定架以及下外壳，所述无人机和所述小型化激光设备通过所述中间固定件连接；所述电池仓用于放置激光器的远程控制模块和电源模块，所述上外壳连接在电池仓的下方，所述下外壳通过所述激光器外壳固定架与所述上外壳连接，所述上外壳和下外壳构成立体存放空间，用于存放激光器，所述远程控制模块和电源模块与所述激光器电性连接，所述远程控制模块与所述边缘计算模块连接。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="zh-cl0003" num="0003" class="claim">
+      <div class="claim-text">
+        <claim-ref idref="zh-cl0002"> </claim-ref>
+      </div>
+      <div class="claim-text">3.根据权利要求2所述的基于AI识别的无人机激光障碍物清除装置，其特征在于，所述电池仓采用侧面抽拉式结构；所述立体存放空间采取三面镂空式结构。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="zh-cl0004" num="0004" class="claim">
+      <div class="claim-text">
+        <claim-ref idref="zh-cl0001"> </claim-ref>
+      </div>
+      <div class="claim-text">4.根据权利要求1所述的基于AI识别的无人机激光障碍物清除装置，其特征在于，所述相机为云台相机，所述小型化激光设备的激光出光口设置在所述云台相机的下端面。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="zh-cl0005" num="0005" class="claim">
+      <div class="claim-text">
+        <claim-ref idref="zh-cl0004"> </claim-ref>
+      </div>
+      <div class="claim-text">5.根据权利要求4所述的基于AI识别的无人机激光障碍物清除装置，其特征在于，所述小型化激光设备的激光出光口通过嵌入式的T型结构嵌入到所述云台相机的下端面。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="zh-cl0006" num="0006" class="claim">
+      <div class="claim-text">6.一种基于AI识别的无人机激光障碍物清除方法，应用于权利要求1-5任一所述的基于AI识别的无人机激光障碍物清除装置，其特征在于，包括以下步骤：</div>
+      <div class="claim-text">无人机沿输电线路进行巡检，当发现输电线路上悬挂异物，操控无人机飞行至指定位置；</div>
+      <div class="claim-text">通过相机采集输电线路及悬挂异物的图像，并传输给边缘计算模块；</div>
+      <div class="claim-text">基于采集的图像，边缘计算模块对于悬挂异物进行图像识别，待发现悬挂异物后，用红框标记悬挂异物，并反馈给遥控器的系统主界面；</div>
+      <div class="claim-text">基于采集的图像，边缘计算模块对于输电线路进行识别，待发现输电线路后，用绿色线条标记输电线路，并反馈给遥控器的系统主界面；</div>
+      <div class="claim-text">基于红框标记的悬挂异物以及绿色线条标记的输电线路，确定激光清除目标位置，开启小型化激光设备，发射激光，进行悬挂异物的清除。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="zh-cl0007" num="0007" class="claim">
+      <div class="claim-text">
+        <claim-ref idref="zh-cl0006"> </claim-ref>
+      </div>
+      <div class="claim-text">7.根据权利要求6所述的基于AI识别的无人机激光障碍物清除方法，其特征在于，所述边缘计算模块对于悬挂异物进行图像识别，具体为：</div>
+      <div class="claim-text">所述边缘计算模块基于YOLOv3算法对于悬挂异物进行图像识别。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="zh-cl0008" num="0008" class="claim">
+      <div class="claim-text">
+        <claim-ref idref="zh-cl0006"> </claim-ref>
+      </div>
+      <div class="claim-text">8.根据权利要求6所述的基于AI识别的无人机激光障碍物清除方法，其特征在于，所述边缘计算模块对于输电线路进行识别，具体为：</div>
+      <div class="claim-text">所述边缘计算模块基于霍夫变换对于输电线路进行识别。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="zh-cl0009" num="0009" class="claim">
+      <div class="claim-text">
+        <claim-ref idref="zh-cl0006"> </claim-ref>
+      </div>
+      <div class="claim-text">9.根据权利要求6所述的基于AI识别的无人机激光障碍物清除方法，其特征在于，所述指定位置为输电线路平行方向距离输电线路6-11米的位置。</div>
+    </div>
+  </div> </div>
+  </div>
+  </section>
+
+  <section itemprop="application" itemscope>
+
+    <section itemprop="metadata" itemscope>
+      <span itemprop="applicationNumber">CN202310506672.9A</span>
+      <span itemprop="priorityDate">2023-05-08</span>
+      <span itemprop="filingDate">2023-05-08</span>
+      <span itemprop="title">一种基于ai识别的无人机激光障碍物清除装置及方法 
+       </span>
+      <span itemprop="ifiStatus">Pending</span>
+      
+      <a href="/patent/CN116534252A/zh">
+        <span itemprop="representativePublication">CN116534252A</span>
+        (<span itemprop="primaryLanguage">zh</span>)
+      </a>
+    </section>
+
+    <h2>Priority Applications (1)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Application Number</th>
+          <th>Priority Date</th>
+          <th>Filing Date</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="priorityApps" itemscope repeat>
+          <td>
+            <span itemprop="applicationNumber">CN202310506672.9A</span>
+            
+            <a href="/patent/CN116534252A/zh">
+              <span itemprop="representativePublication">CN116534252A</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+            </a>
+          </td>
+          <td itemprop="priorityDate">2023-05-08</td>
+          <td itemprop="filingDate">2023-05-08</td>
+          <td itemprop="title">一种基于ai识别的无人机激光障碍物清除装置及方法 
+       </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Applications Claiming Priority (1)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Application Number</th>
+          <th>Priority Date</th>
+          <th>Filing Date</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="appsClaimingPriority" itemscope repeat>
+          <td>
+            <span itemprop="applicationNumber">CN202310506672.9A</span>
+            <a href="/patent/CN116534252A/zh">
+              <span itemprop="representativePublication">CN116534252A</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+            </a>
+          </td>
+          <td itemprop="priorityDate">2023-05-08</td>
+          <td itemprop="filingDate">2023-05-08</td>
+          <td itemprop="title">一种基于ai识别的无人机激光障碍物清除装置及方法 
+       </td>
+        </tr>
+      </tbody>
+    </table>
+
+    
+
+    
+
+    <h2>Publications (1)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Publication Number</th>
+          <th>Publication Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="pubs" itemscope repeat>
+          <td>
+            <span itemprop="publicationNumber">CN116534252A</span>
+            
+            <span itemprop="thisPatent">true</span>
+            <a href="/patent/CN116534252A/zh">
+              CN116534252A
+              (<span itemprop="primaryLanguage">zh</span>)
+            </a>
+          </td>
+          <td itemprop="publicationDate">2023-08-04</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </section>
+
+  <section itemprop="family" itemscope>
+    <h1>Family</h1>
+    <h2>ID=87446552</h2>
+
+    <h2>Family Applications (1)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Application Number</th>
+          <th>Title</th>
+          <th>Priority Date</th>
+          <th>Filing Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="applications" itemscope repeat>
+          <td>
+            <span itemprop="applicationNumber">CN202310506672.9A</span>
+            <span itemprop="ifiStatus">Pending</span>
+            
+            <a href="/patent/CN116534252A/zh">
+              <span itemprop="representativePublication">CN116534252A</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+            </a>
+          </td>
+          <td itemprop="priorityDate">2023-05-08</td>
+          <td itemprop="filingDate">2023-05-08</td>
+          <td itemprop="title">一种基于ai识别的无人机激光障碍物清除装置及方法 
+       </td>
+        </tr>
+      </tbody>
+    </table>
+
+    
+
+    
+
+    <h2>Country Status (1)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Country</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="countryStatus" itemscope repeat>
+          <td>
+            <span itemprop="countryCode">CN</span>
+            (<span itemprop="num">1</span>)
+            <meta itemprop="thisCountry" content="true">
+          </td>
+          <td>
+            <a href="/patent/CN116534252A/zh">
+              <span itemprop="representativePublication">CN116534252A</span>
+              (<span itemprop="primaryLanguage">zh</span>)
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Cited By (2)</h2>
+    <table>
+      <caption>* Cited by examiner, † Cited by third party</caption>
+      <thead>
+        <tr>
+          <th>Publication number</th>
+          <th>Priority date</th>
+          <th>Publication date</th>
+          <th>Assignee</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="forwardReferencesOrig" itemscope repeat>
+          <td>
+            <a href="/patent/CN118572557A/zh">
+              <span itemprop="publicationNumber">CN118572557A</span>
+              (<span itemprop="primaryLanguage">zh</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2024-05-15</td>
+          <td itemprop="publicationDate">2024-08-30</td>
+          <td><span itemprop="assigneeOriginal">武汉巨合科技有限公司</span></td>
+          <td itemprop="title">一种车载智能激光清障仪及清障方法 
+       </td>
+        </tr>
+        <tr itemprop="forwardReferencesOrig" itemscope repeat>
+          <td>
+            <a href="/patent/CN119068363A/zh">
+              <span itemprop="publicationNumber">CN119068363A</span>
+              (<span itemprop="primaryLanguage">zh</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2024-08-21</td>
+          <td itemprop="publicationDate">2024-12-03</td>
+          <td><span itemprop="assigneeOriginal">江苏三变科技有限公司</span></td>
+          <td itemprop="title">一种无人机输电线路异物智能识别及远程快速清除方法 
+       </td>
+        </tr>
+      </tbody>
+    </table>
+
+    
+
+    
+
+    
+
+    <ul>
+      <li itemprop="applicationsByYear" itemscope repeat>
+        <span itemprop="year">2023</span>
+        <ul>
+          <li itemprop="application" itemscope repeat>
+            <span itemprop="filingDate">2023-05-08</span>
+            <span itemprop="countryCode">CN</span>
+            <span itemprop="applicationNumber">CN202310506672.9A</span>
+            <a href="/patent/CN116534252A/zh"><span itemprop="documentId">patent/CN116534252A/zh</span></a>
+            <span itemprop="legalStatusCat">active</span>
+            <span itemprop="legalStatus">Pending</span>
+            <span itemprop="thisApp" content="true" bool></span>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    </section>
+
+  
+
+  
+
+  <h2>Cited By (3)</h2>
+  <table>
+    <caption>* Cited by examiner, † Cited by third party</caption>
+    <thead>
+      <tr>
+        <th>Publication number</th>
+        <th>Priority date</th>
+        <th>Publication date</th>
+        <th>Assignee</th>
+        <th>Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr itemprop="forwardReferences" itemscope repeat>
+        <td>
+          <a href="/patent/CN118572557A/zh">
+            <span itemprop="publicationNumber">CN118572557A</span>
+            (<span itemprop="primaryLanguage">zh</span>)
+          </a>
+          <span itemprop="examinerCited">*</span>
+          
+        </td>
+        <td itemprop="priorityDate">2024-05-15</td>
+        <td itemprop="publicationDate">2024-08-30</td>
+        <td><span itemprop="assigneeOriginal">武汉巨合科技有限公司</span></td>
+        <td itemprop="title">一种车载智能激光清障仪及清障方法 
+       </td>
+      </tr>
+      <tr itemprop="forwardReferences" itemscope repeat>
+        <td>
+          <a href="/patent/CN118572557B/zh">
+            <span itemprop="publicationNumber">CN118572557B</span>
+            (<span itemprop="primaryLanguage">zh</span>)
+          </a>
+          <span itemprop="examinerCited">*</span>
+          
+        </td>
+        <td itemprop="priorityDate">2024-05-15</td>
+        <td itemprop="publicationDate">2025-05-13</td>
+        <td><span itemprop="assigneeOriginal">武汉巨合科技有限公司</span></td>
+        <td itemprop="title">一种车载智能激光清障仪及清障方法 
+       </td>
+      </tr>
+      <tr itemprop="forwardReferences" itemscope repeat>
+        <td>
+          <a href="/patent/CN119068363A/zh">
+            <span itemprop="publicationNumber">CN119068363A</span>
+            (<span itemprop="primaryLanguage">zh</span>)
+          </a>
+          <span itemprop="examinerCited">*</span>
+          
+        </td>
+        <td itemprop="priorityDate">2024-08-21</td>
+        <td itemprop="publicationDate">2024-12-03</td>
+        <td><span itemprop="assigneeOriginal">江苏三变科技有限公司</span></td>
+        <td itemprop="title">一种无人机输电线路异物智能识别及远程快速清除方法 
+       </td>
+      </tr>
+    </tbody>
+  </table>
+
+  
+
+  <section>
+    <h2>Similar Documents</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Publication</th>
+          <th>Publication Date</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN111198004A/zh">
+                <span itemprop="publicationNumber">CN111198004A</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2020-05-26">2020-05-26</time>
+            
+            
+          </td>
+          <td itemprop="title">一种基于无人机的电力巡查信息采集系统 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN115185292B/zh">
+                <span itemprop="publicationNumber">CN115185292B</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2024-06-14">2024-06-14</time>
+            
+            
+          </td>
+          <td itemprop="title">基于地空一体化的空气污染智能监测方法及平台 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN112101088A/zh">
+                <span itemprop="publicationNumber">CN112101088A</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2020-12-18">2020-12-18</time>
+            
+            
+          </td>
+          <td itemprop="title">一种无人机电力自动巡检方法、装置及系统 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN105743017B/zh">
+                <span itemprop="publicationNumber">CN105743017B</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2017-12-08">2017-12-08</time>
+            
+            
+          </td>
+          <td itemprop="title">输电线路无人机巡检地面测控运输保障系统 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN118803433B/zh">
+                <span itemprop="publicationNumber">CN118803433B</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2024-11-22">2024-11-22</time>
+            
+            
+          </td>
+          <td itemprop="title">一种森林防火监测报警方法及装置 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN114115317A/zh">
+                <span itemprop="publicationNumber">CN114115317A</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2022-03-01">2022-03-01</time>
+            
+            
+          </td>
+          <td itemprop="title">一种基于人工智能的变电站无人机巡检方法 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN112684806A/zh">
+                <span itemprop="publicationNumber">CN112684806A</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2021-04-20">2021-04-20</time>
+            
+            
+          </td>
+          <td itemprop="title">一种基于双重避障和智能识别的电力巡检无人机系统 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN117649785A/zh">
+                <span itemprop="publicationNumber">CN117649785A</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2024-03-05">2024-03-05</time>
+            
+            
+          </td>
+          <td itemprop="title">一种无人机多运行人分布式协同冲突化解方法及系统 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN109901618A/zh">
+                <span itemprop="publicationNumber">CN109901618A</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2019-06-18">2019-06-18</time>
+            
+            
+          </td>
+          <td itemprop="title">电力巡线系统及方法 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN118210328B/zh">
+                <span itemprop="publicationNumber">CN118210328B</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2024-09-13">2024-09-13</time>
+            
+            
+          </td>
+          <td itemprop="title">基于模型轻量化技术的无人机自主导航系统 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN112947588A/zh">
+                <span itemprop="publicationNumber">CN112947588A</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2021-06-11">2021-06-11</time>
+            
+            
+          </td>
+          <td itemprop="title">无人机电网巡线系统 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN112615301A/zh">
+                <span itemprop="publicationNumber">CN112615301A</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2021-04-06">2021-04-06</time>
+            
+            
+          </td>
+          <td itemprop="title">一种无人机电力巡检视像识别激光清障系统 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN117629217A/zh">
+                <span itemprop="publicationNumber">CN117629217A</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2024-03-01">2024-03-01</time>
+            
+            
+          </td>
+          <td itemprop="title">一种基于北斗网格码的电力巡检实时防碰撞方法 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN109270957A/zh">
+                <span itemprop="publicationNumber">CN109270957A</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2019-01-25">2019-01-25</time>
+            
+            
+          </td>
+          <td itemprop="title">一种植保系统及其飞行器控制方法和装置 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN118798643A/zh">
+                <span itemprop="publicationNumber">CN118798643A</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2024-10-18">2024-10-18</time>
+            
+            
+          </td>
+          <td itemprop="title">一种风机叶片运输防碰撞预警方法及系统 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN120949807A/zh">
+                <span itemprop="publicationNumber">CN120949807A</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2025-11-14">2025-11-14</time>
+            
+            
+          </td>
+          <td itemprop="title">一种基于地形评估与进近成本分析的无人机自主择址方法 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN208384644U/zh">
+                <span itemprop="publicationNumber">CN208384644U</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2019-01-15">2019-01-15</time>
+            
+            
+          </td>
+          <td itemprop="title">无人机电力巡检系统 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN116700357A/zh">
+                <span itemprop="publicationNumber">CN116700357A</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2023-09-05">2023-09-05</time>
+            
+            
+          </td>
+          <td itemprop="title">一种架空输电线路无人机编队智能巡检方法 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN118610939A/zh">
+                <span itemprop="publicationNumber">CN118610939A</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2024-09-06">2024-09-06</time>
+            
+            
+          </td>
+          <td itemprop="title">一种基于无人机的输电系统危险物清除方法及系统 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN121785354B/zh">
+                <span itemprop="publicationNumber">CN121785354B</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2026-05-19">2026-05-19</time>
+            
+            
+          </td>
+          <td itemprop="title">一种基于无人机的高压输电线仿线巡检系统 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN120161858A/zh">
+                <span itemprop="publicationNumber">CN120161858A</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2025-06-17">2025-06-17</time>
+            
+            
+          </td>
+          <td itemprop="title">服务区作为地面低空保障站点的低空保障方法 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN120560324A/zh">
+                <span itemprop="publicationNumber">CN120560324A</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2025-08-29">2025-08-29</time>
+            
+            
+          </td>
+          <td itemprop="title">基于激光点云的变电站无人机局域网自动巡检方法及系统 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN114021906A/zh">
+                <span itemprop="publicationNumber">CN114021906A</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2022-02-08">2022-02-08</time>
+            
+            
+          </td>
+          <td itemprop="title">无人值守的风力发电运维管理方法及系统 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN115063953A/zh">
+                <span itemprop="publicationNumber">CN115063953A</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2022-09-16">2022-09-16</time>
+            
+            
+          </td>
+          <td itemprop="title">输电线路智能防护预警方法、装置、系统以及电子设备 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN120523214A/zh">
+                <span itemprop="publicationNumber">CN120523214A</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2025-08-22">2025-08-22</time>
+            
+            
+          </td>
+          <td itemprop="title">一种基于多传感器融合与智能识别的电网线路无人机巡检系统 
+       </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Legal Events</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Code</th>
+          <th>Title</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2023-08-04">2023-08-04</time></td>
+          <td itemprop="code">PB01</td>
+          <td itemprop="title">Publication</td>
+          <td>
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2023-08-04">2023-08-04</time></td>
+          <td itemprop="code">PB01</td>
+          <td itemprop="title">Publication</td>
+          <td>
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2023-08-22">2023-08-22</time></td>
+          <td itemprop="code">SE01</td>
+          <td itemprop="title">Entry into force of request for substantive examination</td>
+          <td>
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2023-08-22">2023-08-22</time></td>
+          <td itemprop="code">SE01</td>
+          <td itemprop="title">Entry into force of request for substantive examination</td>
+          <td>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+</article>
+
+    </search-app>
+    
+    <script></script>
+    <script type="text/javascript" src="//www.gstatic.com/feedback/api.js"></script>
+    <script type="text/javascript" src="//www.gstatic.com/feedback/js/help/prod/service/lazy.min.js"></script>
+    <script type="text/javascript">
+      if (window.help && window.help.service) {
+        helpApi = window.help.service.Lazy.create(0, {apiKey: 'AIzaSyDTEI_0tLX4varJ7bwK8aT-eOI5qr3BmyI', locale: 'en-US'});
+        window.requestedSurveys = new Set();
+        window.requestSurvey = function(triggerId) {
+          if (window.requestedSurveys.has(triggerId)) {
+            return;
+          }
+          window.requestedSurveys.add(triggerId);
+          helpApi.requestSurvey({
+            triggerId: triggerId,
+            enableTestingMode: false,
+            callback: (requestSurveyCallbackParam) => {
+              if (!requestSurveyCallbackParam.surveyData) {
+                return;
+              }
+              helpApi.presentSurvey({
+                productData: {
+                  productVersion: window.version,
+                  customData: {
+                    "experiments": "",
+                  },
+                },
+                surveyData: requestSurveyCallbackParam.surveyData,
+                colorScheme: 1,
+                customZIndex: 10000,
+              });
+            }
+          });
+        };
+
+        window.requestSurvey('YXTwAsvoW0kedxbuTdH0RArc9VhT');
+      }
+    </script>
+    <script src="/sw/null_loader.js"></script>
+  </body>
+</html>

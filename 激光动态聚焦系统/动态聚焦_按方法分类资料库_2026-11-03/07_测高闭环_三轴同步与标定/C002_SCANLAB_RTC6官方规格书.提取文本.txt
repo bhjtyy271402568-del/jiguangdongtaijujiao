@@ -1,0 +1,120 @@
+high performance. advanced scan control.
+RTC 6
+RTC6 control boards enable smart and flexible control of scan 
+systems, lasers and peripheral devices in real time. 
+Key Features:
+• SCANahead control 
+• UltraFastPixelMode (up to 3.2 MHz)
+• Enlarged list memory
+• Standalone functonality for RTC6 Ethernet
+Based on the field-proven RTC5, the RTC6 control board delivers 
+new functionalities to tackle complex control tasks. Examples are 
+improved speed and position-dependent laser control and the 
+synchronization of the usually faster x/y scan axes with the slower 
+z-axis. This allows more precise results in 3D processing.
+Complete incorporation of all RTC5 functions ensures quick, easy 
+migration to the new RTC6 board.
+
+RTC 6
+SCANLAB GmbH · Siemensstr. 2a · 82178 Puchheim · Germany  
+Tel. +49 (89) 800 746-0 · Fax +49 (89) 800 746-199 
+info@scanlab.de · www.scanlab.de
+SCANLAB America, Inc. · 100 Illinois St · St. Charles, IL 60174 · USA  
+Tel. +1 (630) 797-2044 · Fax +1 (630) 797-2001 
+info@scanlab-america.com · www.scanlab-america.com
+System Integration
+• PCIe bus interface, Ethernet interface 
+•  Up to 255 RTC6 control boards per PC 
+• Master/slave synchronization
+• Drivers for  Windows 10 /8 / 7  
+(32-bit and 64-bit)
+• Multi threading, multi processing
+Scan System Control
+• SL2-100 transfer protocol 
+(control of scan systems with 
+XY2-100 transfer protocol via an 
+optional converter)
+• 20-bit positioning resolution
+• Virtual processing field (29 bit)
+• 10 µs output period
+• Synchronization of the 10 µs RTC clock 
+to an external laser clock signal 
+• Galvanically isolated signals
+• Tuning selection
+• Vector and jump mode, 
+tuning auto-switching
+• Scan-system diagnosis
+• Reading back actual-position values
+Laser Control
+• 15-pin D-Sub connector
+• Laser signals with 15 ns resolution and 
+20 mA output current
+• Various laser modes for controlling all 
+typical lasers
+• Bitmap mode with pixel frequencies up 
+to 3.2 MHz, 0-100% laser pulse width 
+(15 ns resolution), additional digital-
+ports as output ports
+• RS232 interface
+• Speed- and position-dependent laser 
+control
+Control of Peripheral Equipment
+• 16-bit digital output and input
+• 8-bit digital output
+• 2-bit digital output and input
+• 12-bit analog output (0...10 V)
+• McBSP interface
+• Stepper motor signals
+Command Management
+• Configurable list buffers with more than 
+8 million list positions, protected memo-
+ry area definable
+• Lists and subroutines
+• “Short” list commands for changing 
+(laser) output signals without 
+interrupting polygonal traversal or laser 
+switch-off
+• Download verification
+• Enhanced list and list execution status
+• Definable and selectable 
+character sets
+• Marking of dates, times and serial 
+numbers
+• Marking of circles and ellipses
+• Sky writing
+• Conditional execution of all list 
+commands possible
+Options
+• SCANahead
+• Control of 3-axis scan systems
+• Processing-on-the-fly functionality for 
+objects in motion (two encoder inputs 
+with 32-bit counter, up to 8 objects 
+between trigger and marking position, 
+etc.)
+• Simultaneous control of two  
+scan systems
+• Customer-specific software extensions 
+possible
+• UltraFastPixelMode (UFPM) for 
+frequencies higher than 800 kHz
+• Spot Distance Control (SDC) 
+(only with SCANahead and with special 
+pulse-on-demand lasers)
+Accessories
+•  
+  07/ 2021 Information is subject to change without notice. -
+  Product photos are non-binding and may show customized features.
+Comparison of RTC6 – RTC5
+RTC 6 RTC5
+PC Interface PCIe, Ethernet PCI, PCIe
+SCANahead control for controlling excelliSCAN (optional) no
+Synchronization (scan system control) 10 µs RTC clock synchronization output synchronization
+Pixel frequency (bitmap mode) 800 kHz maximum 308 kHz maximum
+UltraFastPixelMode (UFPM) 3.2 MHz maximum (optional) no
+List memory 8 million list positions 1 million list positions
+3D correction files  up to eight 3D correction files up to two 3D correction files
+Output period 10 µs 10 µs
+Transfer protocol SL2-100 SL2-100
+Software drivers drivers for Windows 10 /8 / 7 (32-Bit and 64-Bit) drivers for  Windows 10 /8 / 7  (32-Bit and 64-Bit) 
+Vista / XP (ab SP2)

@@ -1,0 +1,30 @@
+{
+  "id": "S017",
+  "url": "https://www.thk.com/us/en/products/other_linear_motion_guides/cross_roller_guide_ball_guide/vr/",
+  "category": "10_执行器_导轨与编码器",
+  "origins": [
+    "补充检索_原文提及条目及有效替代入口"
+  ],
+  "context": "THK_VR交叉滚柱导轨",
+  "title": "THK_VR交叉滚柱导轨",
+  "files": [
+    {
+      "path": "10_执行器_导轨与编码器\\S017_Cross-Roller Guide Model VR｜Other Linear Motion Products｜Product Information｜THK Official Web Site [North.html",
+      "type": "HTML",
+      "bytes": 90530,
+      "sha256": "f2e6a0042e41f28d029a3ad6e0e3a4faf5a68ff18e3d23d66de2c9df5f2ada89",
+      "url": "https://www.thk.com/us/en/products/other_linear_motion_guides/cross_roller_guide_ball_guide/vr/",
+      "title": "Cross-Roller Guide Model VR｜Other Linear Motion Products｜Product Information｜THK Official Web Site [North America]",
+      "text_chars": 3556
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://www.thk.com/us/en/products/other_linear_motion_guides/cross_roller_guide_ball_guide/vr/",
+      "http": 200,
+      "final_url": "https://www.thk.com/us/en/products/other_linear_motion_guides/cross_roller_guide_ball_guide/vr/",
+      "result": "网页"
+    }
+  ],
+  "status": "网页已保存"
+}

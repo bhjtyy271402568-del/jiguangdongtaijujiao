@@ -1,0 +1,154 @@
+来源：https://haaslti.com/products/tailored-solutions/dynamic-focus-system
+采集日期：2026-11-03
+
+Dynamic Focus System
+Skip to main content
+Products
+Laser Beam Delivery Components
+Laser Delivery Optics
+Lenses
+Mirrors
+Beam Combiners
+Beam Splitters
+Phase Retarders
+Windows
+Cell Mounted Lenses
+Laser Beam Diagnostics
+BA-CAM
+BWA-CAM
+BWA PRO Software
+Diagnostics Camera Overview
+Tailored Solutions
+Custom Laser Systems
+Beam Delivery Components
+Services
+Resources
+BWA Customer Portal
+Research & Innovation Center
+Legal Disclaimer
+Privacy Policy
+Product Terms & Conditions
+Optical Configuration Worksheets
+Company
+Careers
+About Us
+Locations
+Contact Details
+Contact Us
+Products
+Laser Beam Delivery
+Laser Delivery Optics
+Laser Beam Diagnostics
+Tailored Solutions
+Custom Laser Systems
+Laser Beam Delivery
+Beam Dumps
+Terminate or stop the laser beam
+Beam Benders & Splitters
+Turning, switching and splitting the beam
+Process Heads
+Focus the beam on the work piece
+Process Head Accessories
+Crash detection, nozzles and stages
+Beam Tubes
+Protect the beam path
+Beam Enhancement
+Expanding, collimating and polarizing
+Shutters
+Controlled beam blocking
+Beam Position Viewing
+View the position of the laser beam
+Additional Products & Accessories
+Cleaning kits, alignment components and more
+All Products
+View all beam delivery products
+Laser Delivery Optics
+Lenses
+Product Catalog for Optical Lens
+Cell Mounted Lenses
+Product Catalog for Cell Mounted Lenses
+Mirrors
+Product Catalog for all Mirrors
+Beam Combiners
+Product Catalog for all Beam Combiners
+Beam Splitters
+Product Catalog for all Beam Splitters
+Phase Retarders
+Product Catalog for Phase Retrarders
+Windows
+Product Catalog for all Windows
+Laser Beam Diagnostics
+Diagnostic Camera Overview
+Learn more about the BA-CAM and BWA-CAM
+BA-CAM
+Ideal for measuring a single location along the beam path
+BWA-CAM
+Ideal for measuring multiple spots in the beam path with no moving parts and small form factor
+BWA-PRO Software
+Free control software included with the purchase of either a BA-CAM or BWA-CAM
+Tailored Solutions
+Specialized modifications to existing laser systems and components
+Tailored Solutions
+View all Tailored Solutions
+Custom Laser Systems
+Custom-designed, engineered, and manufactured laser enclosures and delivery systems, built to any specification
+Custom Laser Systems
+View all Custom Laser Systems
+Services
+Resources
+BWA-PRO Software Portal
+Download BWA-CAM software and user manuals
+Research & Innovation Center
+White Papers, Publications and Application Notes
+Blog
+How-To's, Product Releases, Overviews and more
+Optical Configuration Worksheets
+Provide additional information for orders
+Optic Cleaning Guide
+Free guide on how to clean optics
+Company
+About Us
+Contact Details
+Contact us
+Locations
+Careers
+Quick Search
+Search by name, part number or description
+Submit RFQ
+Tailored Solutions
+Dynamic Focus System
+Can be designed for any wavelength. The laser beam enters into the 90º Kinematic bending mirror assembly and directs the laser beam to the process head. The folded CCD camera system with X-Y axis and tip-tilt adjustments look at the workpiece through a zoom lens assembly.
+Ultra-low light CCD camera transmits image to an adjustable crosshair generator and monitor. Laser beam, after being reflected by the kinematic bending mirror, is projected onto the Dynamic Focus Module which provides independent movement of focus lens via DC Servo Motor. The system is capable of speeds up to 250mm/sec and has provision for a 2.0" Dia. Focus lens.
+Translation speed for 2mm travel range is under 100ms. An additional Z-axis slide provides focus position control with capacitive height sensing. Includes DC servo motors, amplifiers, interface control electronics, and all needed cables. Custom configurations available
+Contact us for information about this product
+Contact us
+Interested in a Tailored Solution?
+Learn more about our extensive industrial laser applications experience and how we can engineer a system to any set of requirements.
+Learn More
+View other Tailored Solutions
+50mm Laser Process Head Assembly
+25mm Micro Machining Head Assembly
+Custom Capacitive Auto-Focus Nozzle Tip Assembly
+Beam Splitter with Dual Shutters
+FCTH-20 Form Cutting Trepan Head System
+Internal Aperture Wheel Assembly
+RLWS-10 Laser Wire Stripping System
+6X Beam Splitter System
+Cassegrain Telescope
+Laser Enclosure with Articulated Arm System
+As we have shown since 1992, we are committed to offering you, our customers, products that define and lead industry standards which conform to our high standards of innovation, reliability, and quality.
+Ready to submit a PO or ask a question?
+Get in Touch
+Products & Services
+Beam Delivery Components
+Optics
+Diagnostic Cameras
+Services
+Company & Resources
+About
+Contact
+Legal Disclaimer
+Privacy Policy
+Product Terms & Conditions
+Sitemap
+© 2025 Copyright Haas Laser Technologies, Inc. All rights reserved.

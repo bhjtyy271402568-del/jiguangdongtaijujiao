@@ -1,0 +1,965 @@
+#renishaw
+ATOM DX™ miniature encoder system
+www.renishaw.com/atomdxdownloads
+Data sheet
+L-9517-9736-05-A
+The ATOM DX™ encoder series is 
+Renishaw’s smallest incremental optical 
+encoder with digital output direct from the 
+readhead, providing positional feedback, 
+onboard interpolation, and filtering optics all 
+in a miniature package.
+ATOM DX incorporates the market proven filtering optical 
+system of the ATOM™ encoder series, and integrates 
+Renishaw’s high-performance interpolation technology, 
+reducing system size and removing the need for additional 
+adaptors and interfaces. This makes ATOM DX suitable 
+for the most space constrained applications where 
+performance cannot be compromised.
+Constructed with Renishaw’s integrated set-up LED for 
+an intuitive and simple installation process based on the 
+well-established auto-calibration routine, ATOM DX is ready to 
+install straight from the box. It is compatible with the optional 
+ADTi-100 Advanced Diagnostic Tool and ADT View software 
+to give in-depth advanced diagnostic information to aid 
+optimisation of encoder installation and in-field fault finding to 
+satisfy the most demanding motion control applications. 
+ATOM DX can be used with the ATOM series of linear, partial 
+arc and rotary scales to meet most application requirements.
+• Miniature, all-in-one, digital output optical encoder 
+with resolutions down to 2.5 nm
+• Class leading signal stability and dirt immunity due to 
+filtering optics
+• Long-term stability provided by integral Auto Gain 
+Control (AGC) and Auto Offset Control (AOC)
+• Low sub-divisional error (SDE) and jitter 
+• Integrated set-up LED for ease of installation
+• Maximum speed up to 20 m/s 
+(3.63 m/s @ 0.1 μm resolution)
+• Available in 20 μm and 40 μm scale pitch versions
+• Range of high accuracy linear, partial arc and 
+rotary scales with auto-phase bi-directional optical 
+reference mark
+• Optional Advanced Diagnostic Tool ADTi-100 to 
+optimize set-up and assist with system diagnostics
+• Available in two variants; cabled and top exit, for the 
+most demanding space constrained installations
+
+
+2
+ATOM DX™ miniature encoder system
+System features
+High performance
+• Performance in speed
+ATOM DX encoders offer maximum speeds up to 20 m/s and a range of high-speed interpolation options.
+• Performance in scale
+ATOM DX offers linear tape scales with specified overall accuracy to ±5 μm/m @20 °C, reducing the need for 
+2-point compensation.
+• Performance in velocity control
+ATOM DX incorporates Renishaw’s latest interpolation technology with updated signal processing algorithms to reduce 
+sub-divisional error (SDE). This helps to reduce velocity ripple and improve closed loop feedback in motion control systems.
+• Performance in a miniature head
+ATOM DX fits in to the smallest applications with heights as low as 7.85 mm. The top exit variant offers all the benefits and 
+features of the cabled ATOM DX encoder, but in an even smaller package. The top exit variant is a component encoder with 
+the cable assembly integrated separately to the readhead, making the ATOM DX top exit suitable for the smallest spaces.
+• Performance over contamination
+ATOM DX features the proven filtering optics of the ATOM encoder range. This optical scheme is tuned to a specific spatial 
+frequency, so it rejects other harmonics, including those caused by dirt or other contaminants. The result is a Lissajous with 
+high purity, that retains its fidelity even when the scale is exposed to contamination: ideal for applications where reliability 
+is critical.
+Optional Advanced Diagnostic Tool ADTi-100
+The ATOM DX encoder system is compatible with the Advanced Diagnostic Tool ADTi-100 and ADT View software, which provides 
+comprehensive real-time encoder data feedback to aid more challenging installations and diagnostics. The intuitive software interface 
+can be used for:
+• Remote calibration
+• Signal optimization over the entire axis length
+• Reference mark indication
+• Digital readout of encoder position (relative to scale)
+• Monitoring velocity
+• Exporting and saving data
+
+
+3
+ATOM DX™ miniature encoder system
+Compatible scales
+• Stainless-steel tape scale (RKLF):
+Self-adhesive mounted stainless steel tape scales that can 
+be wrapped around drums, arcs or shafts with radii down 
+to 26 mm.
+• Stainless-steel tape scale (RTLF):
+High-accuracy scales with graduations directly marked 
+onto the steel tape surface. Available on reels for 
+cut-to-length convenience.
+• Glass linear spars (RCLC):
+Conventional glass spars, available in lengths up to 130 mm.
+• Glass discs (RCDM):
+High-accuracy rotary scales with outer diameters down 
+to 17 mm.
+
+
+4
+ATOM DX™ miniature encoder system
+6.45
+1.4 (40 µm version) 
+1.9 (20 µm version)
+20.5
+16.5
+10.25
+12.7 8.7
+2
+4.15
+4.85 1 
+3 mounting holes Ø2.5 minimum through
+Ø9 maximum
+Set-up LED
+Mounting face
+Readhead datum faces
+5 minimum
+R > 20 dynamic bend radius 
+R > 10 static bend radius
+2
+Readhead/scale orientation
+Identification marks for readhead manufacture only. 
+Notches will vary depending on readhead type.
+1 Not the optical centreline.
+3
+11.7
+ATOM DX cabled readhead dimensions
+Dimensions and tolerances in mm
+Ø3.5 maximum
+
+
+5
+ATOM DX™ miniature encoder system
+ATOM DX top exit readhead dimensions
+Dimensions and tolerances in mm
+Set-up LED
+2Readhead datum faces
+2
+16.5
+20.5
+6.45
+4.15
+1.4 (40 µm version) 
+1.9 (20 µm version)
+10.25
+4.85 1
+3 mounting holes Ø2.5 minimum through
+Ø9 maximum
+12.7 8.7
+2.8
+10.45
+11
+8.37
+Mounting face
+1 Not the optical centreline.
+Readhead/scale orientation
+Identification marks for readhead manufacture only. 
+Notches will vary depending on readhead type.
+
+
+6
+ATOM DX™ miniature encoder system
+General specifications
+Power supply 5 V −5% /+10% Typically < 200 mA fully terminated
+Power from a 5 Vdc supply complying with the requirements for SELV of 
+standard IEC 60950-1
+Ripple 200 mVpp maximum@frequency up to 500 kHz
+Temperature Storage −20 °C to +70 °C
+Operating 0 °C to +70 °C
+Humidity 95% relative humidity (non-condensing) to IEC 60068-2-78
+Sealing IP40
+Acceleration  (system) Operating 400 m/s², 3 axes
+Shock (system) Operating 500 m/s², 11 ms, ½ sine, 3 axes
+Vibration Operating 100 m/s² max @ 55 Hz to 2000 Hz, 3 axes
+Mass Cabled readhead 3.2 g
+Top exit readhead 2.9 g
+Cable 18 g/m
+EMC compliance IEC 61326-1 (cabled readhead variant only)
+Cable Cabled readhead 10 core, high flex, EMI screened cable, outside diameter 3.5 mm maximum
+Flex life > 20 × 106 cycles at 20 mm bend radius, maximum length 3 m
+(Extension cable up to 25 m when using Renishaw approved extension cable)
+UL recognised component 
+Top exit readhead Cables available in lengths from 0.5 m to 3 m with 15-way D-type 
+or 10-way JST (SH) connector options
+Connector options Cabled readhead 9-way D-type
+15-way D-type (standard and alternative pin-out)
+10-way JST (SH)
+Top exit readhead 10-way JST (SUR)
+Typical sub-divisional 
+error (SDE)
+20 μm version < ±75 nm
+40 μm version < ±120 nm
+
+
+7
+ATOM DX™ miniature encoder system
+RKLF tape scale installation drawing
+Dimensions and tolerances in mm
+0.36
+0.18
+(Roll tolerance ±1°)
+40 µm version
+( Y aw tolerance ±1°)
+20 µm version 
+( Y aw tolerance ±0.5°)
+Scale datum edge
+Reference mark
+Set-up LED
+50
+Scale thickness 0.15
+(including adhesive)
+0.36
+(Pitch tolerance ±1°)
+Calibration rideheight:
+  2.5 ±0.08    (40 µm version) 
+2.5 ±0.04    (20 µm version)
+Operating rideheight: 
+2.5 ±0.11    (40 µm version) 
+2.5 ±0.055  (20 µm version)
+Forward direction of readhead 
+relative to scale
+0.22
+Readhead/scale orientation
+15
+30
+13
+6Reference mark
+Offset 2.02 ±0.25
+50
+End clamp (Pair A-9523-4015)
+NOTE: ATOM DX cabled 
+readhead variant shown. 1
+For further information on the use of RKLF scale for partial arc applications, refer to the RKL partial arc scale data sheet (Renishaw part no. L-9517-9897).
+1 For readhead dimensions see pages 4 and 5.  
+
+
+8
+ATOM DX™ miniature encoder system
+RKLF tape scale technical specifications
+Material Hardened and tempered martensitic stainless steel fitted with a  
+self-adhesive backing tape
+Form (height × width) 0.15 mm × 6 mm (including adhesive)
+Scale pitch 1 20 μm and 40 μm
+Reference mark Auto-phase optical reference mark repeatable to unit of resolution 
+throughout specified speed and temperature range
+Customer de-selectable reference marks at 50 mm spacing 2
+Reference mark in the centre of scale for lengths < 100 mm
+Accuracy (at 20 °C) RKLF20-S/RKLF40H-S ±5 μm/m
+RKLF40-S ±15 μm/m
+Linearity (at 20 °C) RKLF20-S/RKLF40H-S ±2.5 μm/m achievable with two-point error correction
+RKLF40-S ±3 μm/m achievable with two-point error correction
+Installation temperature 3 +10 °C to +35 °C
+Coefficient of thermal expansion (at 20 °C) Matches that of substrate material when scale ends fixed by epoxy 
+mounted end clamp
+Length 4 20 mm to 1 m in 10 mm increments
+1 m to 10 m in 1 m increments
+Overall length = measuring length + 70 mm
+Scale length = measuring length + 40 mm
+Mass 4.6 g/m
+End fixing Epoxy mounted end clamps (A-9523-4015)
+Approved epoxy adhesive (A-9531-0342)
+Scale end movement typically < 1 μm 5
+1 20 μm RKLF scale is not suitable for partial arc applications.
+2 Only the selected reference mark is bi-directionally repeatable.
+3 Ensure that the scale and end clamps are installed following the installation process described in the ATOM DX™ linear encoder systems installation 
+guide (Renishaw part no. M-9414-9446).
+4 The maximum recommended axis length is 1 m for 20 μm RKLF systems.
+5 To limit the maximum tension in the scale (CTEsubstrate − CTEscale) × (Tuse extreme − Tinstall) ≤ 550 μm/m where CTEscale = ~ 10.1 μm/m/°C.
+
+
+9
+ATOM DX™ miniature encoder system
+RTLF tape scale installation drawing
+Dimensions and tolerances in mm
+0.36
+0.18 0.22
+(Roll tolerance ±1°)
+40 µm version 
+(Y aw tolerance ±1°)
+20 µm version 
+(Y aw tolerance ±0.5°)
+8
+4.5 12
+Scale thickness 0.41
+Scale datum edge
+Reference mark
+Reference mark
+Datum clamp
+Set-up LED
+Offset 1.02 ±0.25
+0.36
+(Pitch tolerance ±1°)
+5050
+Forward direction of readhead 
+relative to scale
+Readhead/scale orientation
+Calibration rideheight:
+  2.5 ±0.08    (40 µm version) 
+2.5 ±0.04    (20 µm version)
+Operating rideheight: 
+2.5 ±0.11    (40 µm version) 
+2.5 ±0.055  (20 µm version)
+NOTE: ATOM DX cabled 
+readhead variant shown. 1
+1 For readhead dimensions see pages 4 and 5.  
+
+
+10
+ATOM DX™ miniature encoder system
+RTLF tape scale technical specifications
+Material Hardened and tempered martensitic stainless steel fitted with a 
+self-adhesive backing tape
+Form (height × width) 0.41 mm × 8 mm (including adhesive)
+Scale pitch 20 μm and 40 μm
+Datum fixing Adhesive datum clamp A-9585-0028 secured with Loctite® 435
+Reference mark Auto-phase optical reference mark repeatable to unit of resolution 
+throughout specified speed and temperature range
+Customer deselectable reference marks at 50 mm spacing 1
+Reference mark in the centre of scale for lengths < 100 mm
+Accuracy (at 20 °C) RTLF20-S/RTLF40H-S ±5 μm/m
+RTLF40-S ±15 μm/m
+Coefficient of thermal expansion (at 20 °C) 2 10.1 ±0.2 μm/m/°C
+Length 3 20 mm to 1 m in 10 mm increments
+1 m to 10 m in 1 m increments
+Scale length = measuring length + 6 mm (without optional end covers)
+Mass 12.2 g/m
+1 Only the selected reference mark is bi-directionally repeatable.
+2 The substrate coefficient of thermal expansion does not need to match that of the scale.
+3 The maximum recommended axis length is 1 m for 20 μm RTLF systems.
+
+
+11
+ATOM DX™ miniature encoder system
+RCLC glass spar installation drawing
+Dimensions and tolerances in mm
+A-9404-4018
+0.36
+0.18
+0.22
+(Roll tolerance ±1°)
+40 µm version
+(Y aw tolerance ±1°)
+20 µm version
+(Y aw tolerance ±0.5°)
+6.35
+Offset 6.82 ±0.25
+Scale thickness 1.1
+Scale datum edge
+Readhead datum face
+Set-up LED
+0.36
+(Pitch tolerance ±1°)
+End reference mark 
+head orientation
+Mid reference mark 
+head orientation
+L/2
+Offset 1.42 ±0.25
+Adhesive datum clamp ( length 8 - 16, width 1 - 5 )
+5
+Forward direction of readhead 
+relative to scale
+Forward direction of readhead 
+relative to scale
+Reference mark
+Reference mark
+Readhead/scale orientation
+Calibration rideheight:
+  2.5 ±0.08    (40 µm version) 
+2.5 ±0.04    (20 µm version)
+Operating rideheight: 
+2.5 ±0.11    (40 µm version) 
+2.5 ±0.055  (20 µm version)
+NOTE: ATOM DX cabled 
+readhead variant shown. 1
+1 For readhead dimensions see pages 4 and 5.  
+
+
+12
+ATOM DX™ miniature encoder system
+RCLC glass spar technical specifications
+Material Soda-lime glass fitted with a self-adhesive backing tape
+Form (height × width) 1.1 mm × 6.35 mm (including adhesive)
+Pitch 20 μm and 40 μm
+Datum fixing Fillet of adhesive (A-9531-0342) on one side of the scale
+Reference mark Auto-phase optical reference mark repeatable to unit of resolution throughout specified 
+speed and temperature range
+Either mid or one end of travel; determined by orientation of the readhead
+Accuracy (at 20 °C) ±3 μm
+Coefficient of thermal expansion ~8 μm/m/°C
+Mass 13.9 g/m
+RCLC glass spar lengths
+Overall length L (mm) Measuring length ML (mm)
+10 7
+18 15
+30 27
+55 52
+80 77
+100 97
+105 102
+130 127
+
+
+13
+ATOM DX™ miniature encoder system
+RCDM rotary disc installation drawing
+Dimensions and tolerances in mm
+10.25 ±F 1
+Set-up LED
+Alignment band
+Reference mark
+D3 1
+D2 1
+0.22
+(Roll tolerance ±1°)
+A ±E 1
+0.36
+(Pitch tolerance ±1°)
+2.3 ±0.1
+Glass disc
+Black screen printing on reverse 
+of disc underneath incremental 
+and reference track
+Forward direction of disc 
+(increasing count)
+Centre of alignment band
+Centre of alignment band
+Calibration rideheight :
+2.5 ±0.08   (40 µm version)
+2.5 ±0.04   (20 µm version)
+Operating rideheight:
+2.5 ±0.11   (40 µm version)
+2.5 ±0.055 (20 µm version)
+D1 1
+1 The dimensions and tolerances are defined on page 14.
+2 For readhead dimensions see pages 4 and 5. 
+NOTE: ATOM DX cabled 
+readhead variant shown. 2
+
+
+14
+ATOM DX™ miniature encoder system
+RCDM rotary disc dimensions and tolerances
+20 μm discs
+Optical 
+diameter 
+(mm)
+Line 
+count
+Nominal outer 
+diameter (mm) 1
+D1 
+(mm)
+D2 
+(mm)
+D3  
+(mm)
+A  
+(mm)
+Radial tolerance 
+E (mm)
+Longitudinal 
+tolerance F 
+(mm)
+26.08 4 096 30 12.8 21.15 29.9 17.15 0.1 0.075
+31.83 5 000 36 12.8 26.9 35.9 20.03 0.125 0.075
+45.84 7 200 50 25.5 40.9 49.9 27.03 0.125 0.075
+52.15 8 192 56 25.5 47.25 55.9 30.19 0.125 0.1
+63.66 10 000 68 25.5 58.55 67.9 35.94 0.15 0.125
+104.3 16 384 108 50.9 99.2 107.9 56.26 0.2 0.225
+40 μm discs
+Optical 
+diameter 
+(mm)
+Line 
+count
+Nominal outer 
+diameter (mm) 1
+D1 
+(mm)
+D2 
+(mm)
+D3  
+(mm)
+A  
+(mm)
+Radial tolerance 
+E 
+(mm)
+Longitudinal 
+tolerance F 
+(mm)
+13.04 1 024 17 3.275 8.1 16.9 10.63 0.1 0.1
+15.92 1 250 20 3.275 11 19.9 12.07 0.1 0.1
+21.01 1 650 25 6.46 16.1 24.9 14.62 0.125 0.1
+22.92 1 800 27 9.625 18 26.9 15.57 0.125 0.1
+26.08 2 048 30 12.8 21.15 29.9 17.15 0.125 0.1
+31.83 2 500 36 12.8 26.9 35.9 20.03 0.175 0.15
+45.84 3 600 50 25.5 40.9 49.9 27.03 0.2 0.2
+52.15 4 096 56 25.5 47.25 55.9 30.19 0.2 0.2
+63.66 5 000 68 25.5 58.55 67.9 35.94 0.2 0.3
+104.3 8 192 108 50.9 99.2 107.9 56.26 0.2 0.3
+1 Special disc sizes are available on request
+
+
+15
+ATOM DX™ miniature encoder system
+RCDM rotary disc technical specifications
+Material Soda-lime glass
+Form 2.3 mm thick
+Pitch 20 μm and 40 μm
+Reference mark Single reference mark
+Coefficient of thermal expansion ~8 μm/m/°C
+RCDM rotary disc graduation accuracy
+Optical diameter (mm) Nominal outer diameter (mm) Graduation accuracy (arc seconds)
+13.04 17 15.81
+15.92 20 12.95
+21.01 25 9.82
+22.92 27 9
+26.08 30 7.91
+31.83 36 6.49
+45.84 50 4.5
+52.15 56 3.95
+63.66 68 3.24
+104.3 108 2.78
+
+
+16
+ATOM DX™ miniature encoder system
+Speed
+20 μm encoder
+Clocked output option
+Maximum speed (m/s)
+Minimum edge separation 1 Readhead type
+(MHz) D X Z W Y H (ns)
+(5 μm) (1 μm) (0.5 μm) (0.2 μm) (0.1 μm) (50 nm)
+50 10 10 10 7.25 3.63 1.813 25.1
+40 10 10 10 5.80 2.90 1.450 31.6
+25 10 10 9.06 3.63 1.81 0.906 51.0
+20 10 10 8.06 3.22 1.61 0.806 57.5
+12 10 10 5.18 2.07 1.04 0.518 90.0
+10 10 8.53 4.27 1.71 0.85 0.427 109
+08 10 6.91 3.45 1.38 0.69 0.345 135
+06 10 5.37 2.69 1.07 0.54 0.269 174
+04 10 3.63 1.81 0.73 0.36 0.181 259
+01 4.53 0.91 0.45 0.18 0.09 0.045 1038
+Clocked output option
+Maximum speed (m/s)
+Minimum edge separation 1 Readhead type
+(MHz) M I O Q R (ns)
+(40 nm) (20 nm) (10 nm) (5 nm) (2.5 nm)
+50 1.450 0.725 0.363 0.181 0.091 25.1
+40 1.160 0.580 0.290 0.145 0.073 31.6
+25 0.725 0.363 0.181 0.091 0.045 51.0
+20 0.645 0.322 0.161 0.081 0.040 57.5
+12 0.414 0.207 0.104 0.052 0.026 90.0
+10 0.341 0.171 0.085 0.043 0.021 109
+08 0.276 0.138 0.069 0.035 0.017 135
+06 0.215 0.107 0.054 0.027 0.013 174
+04 0.145 0.073 0.036 0.018 0.009 259
+01 0.036 0.018 0.009 0.005 0.002 1038
+Angular speed depends on disc optical diameter. Use the following equation to convert to rev/min.
+Angular speed (rev/min) =
+V × 1000 × 60
+Where V = maximum linear speed (m/s) and D = optical diameter of chosen disc in mm
+π D
+1 For a readhead with a 1 m cable
+
+
+17
+ATOM DX™ miniature encoder system
+40 μm encoder
+Clocked output option
+Maximum speed (m/s)
+Minimum edge separation 1 Readhead type
+(MHz) T D G X Z W (ns)
+(10 μm) (5 μm) (2 μm) (1 μm) (0.5 μm) (0.2 μm)
+50 20 20 20 20 18.13 7.25 25.1
+40 20 20 20 20 14.50 5.80 31.6
+25 20 20 20 18.13 9.06 3.63 51.0
+20 20 20 20 16.11 8.06 3.22 57.5
+12 20 20 20 10.36 5.18 2.07 90.0
+10 20 20 17.06 8.53 4.27 1.71 109
+08 20 20 13.81 6.91 3.45 1.38 135
+06 20 20 10.74 5.37 2.69 1.07 174
+04 20 18.13 7.25 3.63 1.81 0.73 259
+01 9.06 4.53 1.81 0.91 0.45 0.18 1038
+Clocked output option
+Maximum speed (m/s)
+Minimum edge separation 1 Readhead type
+(MHz) Y H M I O Q (ns)
+(0.1 μm) (50 nm) (40 nm) (20 nm) (10 nm) (5 nm)
+50 3.63 1.813 1.450 0.725 0.363 0.181 25.1
+40 2.90 1.450 1.160 0.580 0.290 0.145 31.6
+25 1.81 0.906 0.725 0.363 0.181 0.091 51.0
+20 1.61 0.806 0.645 0.322 0.161 0.081 57.5
+12 1.04 0.518 0.414 0.207 0.104 0.052 90.0
+10 0.85 0.427 0.341 0.171 0.085 0.043 109
+08 0.69 0.345 0.276 0.138 0.069 0.035 135
+06 0.54 0.269 0.215 0.107 0.054 0.027 174
+04 0.36 0.181 0.145 0.073 0.036 0.018 259
+01 0.09 0.045 0.036 0.018 0.009 0.005 1038
+Angular speed depends on disc optical diameter. Use the following equation to convert to rev/min.
+Angular speed (rev/min) =
+V × 1000 × 60
+Where V = maximum linear speed (m/s) and D = optical diameter of chosen disc in mm
+π D
+1 For a readhead with a 1 m cable
+
+
+18
+ATOM DX™ miniature encoder system
+Output signals
+Cabled Top Exit
+Function Signal Colour 9-way D-type 15-way D-type 
+15-way D-type 
+alternative 
+pin-out
+10-way JST 1 10-way JST 2 †
+(A) (D) (H) (K) (Z)
+Power 5 V Brown 5 7, 8 4, 12 10 10
+0 V White 1 2, 9 2, 10 2 9
+Incremental
+A + Red 2 14 1 9 5
+− Blue 6 6 9 7 6
+B + Y ellow 4 13 3 4 8
+− Green 8 5 11 1 7
+Reference mark Z + Violet 3 12 14 8 4
+− Grey 7 4 7 5 3
+Alarm E − Orange - 3 13 6 2
+Remote CAL 3 CAL Clear 9 1 5 3 1
+Shield - Screen Case Case Case Ferrule -
+NOTE: Top exit cables are terminated with the ‘K’ pin-out or the ‘D’ pin-out dependent upon which top-exit readhead cable is used. 
+See available top exit readhead cables on page 26. 
+1 PCB mount mating connectors: Top entry (BM10B-SRSS-TB); Side entry (SM10B-SRSS-TB).
+2 Connector on top exit readhead only: Mating connector (10SUR - 32S).
+3 Remote CAL line must be connected for use with the ADTi-100.
+
+
+19
+ATOM DX™ miniature encoder system
+Electrical connections
+Grounding and shielding
+Cabled readhead
+Shield
+Output signals
+5 VReadhead termination  / connector
+0 V
+Customer electronics
+IMPORTANT: The shield should be connected to the machine earth (Field Ground). For JST variants the ferrule should be connected 
+to the machine earth.
+Top exit readhead
+Customer electronics
+For more information on top exit readheads refer to the relevant ATOM DX installation guide.
+Maximum readhead cable length: 3 m
+Maximum extension cable length: Dependent on cable type, readhead cable length and clock speed.
+Contact your local Renishaw representative for more information.
+NOTE: The maximum cable length between the readhead and the ADTi-100 is 3 m.
+Shield
+5 V
+0 V
+Output signals
+
+
+20
+ATOM DX™ miniature encoder system
+Recommended signal termination
+Digital outputs
+Remote CAL operation
+CAL
+0 V
+Remote system calibration (CAL) is possible via the CAL pin.
+Standard RS422A line receiver circuitry.
+The capacitors are recommended for improved noise immunity.
+Readhead
+A B Z+
+Cable Z0 = 120R
+Customer 
+electronics
+A B Z−
+120R
+220 pF
+220 pF
+0 V
+0 V
+Single ended alarm signal termination
+(Not available with ‘A’ cable termination)
+Readhead
+Customer 
+electronics
+5 V
+1k8
+4k7
+4k7 100nF
+100R
+E−
+
+
+21
+ATOM DX™ miniature encoder system
+Output specifications
+Digital output signals
+Form – Square wave differential line driver to EIA RS422A
+Incremental 1  
+2 channels A and B in quadrature (90° phase shifted)
+Reference 1
+Signal period P
+Resolution S
+A
+B
+Z
+Synchronised pulse Z, duration as resolution.
+Bi-directionally repeatable. 4
+Resolution option code P (μm) S (μm)
+  T 2 40 10
+D 20 5
+  G 2 8 2
+X 4 1
+Z 2 0.5
+W 0.8 0.2
+Y 0.4 0.1
+H 0.2 0.05
+M 0.16 0.04
+I 0.08 0.02
+O 0.04 0.01
+Q 0.02 0.005
+  R 3 0.01 0.0025
+1 For clarity, the inverse signals are not shown.
+² 40 μm ATOM DX only
+3 20 μm ATOM DX only
+4 Only the calibrated reference mark is bi-directionally repeatable.
+> 15 ms
+E−
+or 3-state alarm
+Differentially transmitted signals forced open circuit for > 15 ms when alarm conditions valid.
+Alarm
+Line driven (Asynchronous pulse)
+(Not available with ‘A’ cable termination)
+Alarm asserted when:
+• Signal amplitude <  20% or > 135%
+• Readhead speed too high for reliable operation
+
+
+22
+ATOM DX™ miniature encoder system
+ATOM DX 20 μm part numbers
+Series
+A2 - 20 μm ATOM DX
+Variant
+A - Cabled
+L - Top exit (‘00’ cable length and ‘Z’ cable termination only)
+Scale type compatibility
+Linear
+Rotary
+RCDM20 glass disc
+Optical diameter
+0 - RTLF20 1 - ≥ 77 mm
+0 - RKLF20 1 2 - ≥ 42.4 mm to < 77 mm
+1 - RCLC20 glass spar 3 - ≥ 31.4 mm to < 42.4 mm
+- 4 - ≥ 26 mm to < 31.4 mm
+Resolution
+D - 5 μm Y - 0.1 μm O - 10 nm
+X - 1 μm H - 50 nm Q - 5 nm
+Z - 0.5 μm M - 40 nm R - 2.5 nm
+W - 0.2 μm I - 20 nm
+Cable length
+00 - no cable (‘L ’ variant and ‘Z’ cable termination only) 15 - 1.5 m
+02 - 0.2 m 20 - 2.0 m
+05 - 0.5 m 30 - 3.0 m
+10 - 1.0 m
+Cable termination
+A - 9-way D-type K - 10-way JST
+D - 15-way D-type (standard pin-out) Z - 10-way JST readhead connector (‘L ’ variant and ‘00’ cable length only)
+H - 15-way D-type (alternative pin-out)
+Clocked output option 2
+50 - 50 MHz 12 - 12 MHz 04 - 4 MHz
+40 - 40 MHz 10 - 10 MHz 01 - 1 MHz
+25 - 25 MHz 08 - 8 MHz
+20 - 20 MHz 06 - 6 MHz
+Alarm format
+B - Line driven alarm 3
+F - 3-state alarm
+A2 A 0 X 10 D 50 B
+NOTE: Not all the combinations are valid. Check valid configurations online at www.renishaw.com/epc.
+1 RKLF20 is not suitable for partial arc applications.
+2 Additional clocked output options available. Contact your local Renishaw representative for further details.
+3 No alarm output on readheads with ‘A’ cable termination
+
+
+23
+ATOM DX™ miniature encoder system
+ATOM DX 40 μm part numbers
+Series
+A4 - 40 μm ATOM DX
+Variant
+A - Cabled
+L - Top exit (‘00’ cable length and ‘Z’ cable termination only)
+Scale type compatibility
+Linear
+Rotary
+RCDM40 glass disc
+Optical diameter
+0 - RTLF40 1 - ≥ 30.6 mm
+0 - RKLF40 2 - ≥ 19.7 mm to < 30.6 mm
+1 - RCLC40 glass spar 3 - ≥ 15.2 mm to < 19.7 mm
+- 4 - ≥ 13.0 mm to < 15.2 mm
+Resolution
+T - 10 μm Z - 0.5 μm M - 40 nm
+D - 5 μm W - 0.2 μm I - 20 nm
+G - 2 μm Y - 0.1 μm O - 10 nm
+X - 1 μm H - 50 nm Q - 5 nm
+Cable length
+00 - no cable (‘L ’ variant and ‘Z’ cable termination only) 15 - 1.5 m
+02 - 0.2 m 20 - 2.0 m
+05 - 0.5 m 30 - 3.0 m
+10 - 1.0 m
+Cable termination
+A - 9-way D-type K - 10-way JST
+D - 15-way D-type (standard pin-out) Z - 10-way JST readhead connector (‘L ’ variant and ‘00’ cable length only)
+H - 15-way D-type (alternative pin-out)
+Clocked output option 1
+50 - 50 MHz 12 - 12 MHz 04 - 4 MHz
+40 - 40 MHz 10 - 10 MHz 01 - 1 MHz
+25 - 25 MHz 08 - 8 MHz
+20 - 20 MHz 06 - 6 MHz
+Alarm format
+B - Line driven alarm 2
+F - 3-state alarm
+A4 A 0 X 10 D 50 B
+NOTE: Not all the combinations are valid. Check valid configurations online at www.renishaw.com/epc.
+1 Additional clocked output options available. Contact your local Renishaw representative for further details.
+2 No alarm output on readheads with ‘A’ cable termination
+
+
+24
+ATOM DX™ miniature encoder system
+Linear scale part numbers
+RTLF tape scale
+Scale type Scale pitch Length Increments Part number
+(where xxxx is the length in cm) 1*
+ATOM DX readhead 
+scale type  
+compatibility
+RTLF20-S 20 µm
+20 mm to 1 m 10 mm
+A-9406-xxxx 0
+1 m to 10 m 2 1 m
+RTLF40H-S 40 µm 
+(high accuracy)
+20 mm to 1 m 10 mm
+A-9408-xxxx 0
+1 m to 10 m 2 1 m
+RTLF40-S 40 µm
+20 mm to 1 m 10 mm
+A-9407-xxxx 0
+1 m to 10 m 2 1 m
+RKLF mastered tape scale
+Scale type Scale pitch Length Increments Part number
+(where xxxx is the length in cm) 3 
+ATOM DX readhead 
+scale type  
+compatibility
+RKLF20-S 20 µm 4 20 mm to 1 m 10 mm
+A-6767-xxxx 0
+1 m to 10 m 1 m
+RKLF40H-S 40 µm 
+(high accuracy) 4
+20 mm to 1 m 10 mm
+A-6771-xxxx 0
+1 m to 10 m 1 m
+RKLF40 40 µm
+20 mm to 1 m 10 mm
+A-6769-xxxx 0
+1 m to 10 m 1 m
+RCLC glass spar
+Length (mm) 20 µm 40 µm ATOM DX readhead scale 
+type compatibility
+10 A-9404-2010 A-9404-4010 1
+18 A-9404-2018 A-9404-4018 1
+30 A-9404-2030 A-9404-4030 1
+55 A-9404-2055 A-9404-4055 1
+80 A-9404-2080 A-9404-4080 1
+100 A-9404-2100 A-9404-4100 1
+105 A-9404-2105 A-9404-4105 1
+130 A-9404-2130 A-9404-4130 1
+1 Ordering A-9408-0070 for example will result in a 70 cm length of RTLF40H-S scale.
+2 Lengths greater than 10 m are available on request.
+3 Ordering A-6767-0070 for example will result in a 70 cm length of RKLF20-S scale.
+4 Not recommended for partial arc applications. 
+
+
+25
+ATOM DX™ miniature encoder system
+Rotary disc part numbers
+RCDM rotary discs (20 μm version)
+Optical diameter (mm) Nominal outer diameter 
+(mm) Part number ATOM DX readhead 
+scale type compatibility
+26.08 30 A-9405-2030 4
+31.83 36 A-9405-2036 3
+45.84 50 A-9405-2050 2
+52.15 56 A-9405-2056 2
+63.66 68 A-9405-2068 2
+104.3 108 A-9405-2108 1
+RCDM rotary discs (40 μm version)
+Optical diameter (mm) Nominal outer diameter 
+(mm) Part number ATOM DX readhead 
+scale type compatibility
+13.04 17 A-9405-4017 4
+15.92 20 A-9405-4020 3
+21.01 25 A-9405-4025 2
+22.92 27 A-9405-4027 2
+26.08 30 A-9405-4030 2
+31.83 36 A-9405-4036 1
+45.84 50 A-9405-4050 1
+52.15 56 A-9405-4056 1
+63.66 68 A-9405-4068 1
+104.3 108 A-9405-4108 1
+NOTE: Other disc diameters are available; contact your local Renishaw representative for more information.
+
+
+26
+ATOM DX™ miniature encoder system
+Top exit readhead cable part numbers
+Cable length (m) Cable termination Part number
+0.5
+15-way D-type connector 1
+A-9414-1223
+1.0 A-9414-1225
+1.5 A-9414-1226
+3.0 A-9414-1228
+0.5
+10-way JST connector 2
+A-9414-1233
+1.0 A-9414-1235
+1.5 A-9414-1236
+3.0 A-9414-1238
+1 Provided with ‘D’ pin-out
+2 Provided with ‘K’ pin-out
+
+
+#renishaw
+© 2017–2025 Renishaw plc. All rights reserved. This document may not be copied or reproduced in whole or in part, or transferred to any other 
+media or language by any means, without the prior written permission of Renishaw.
+RENISHAW® and the probe symbol are registered trade marks of Renishaw plc. Renishaw product names, designations and the mark 
+‘apply innovation’ are trade marks of Renishaw plc or its subsidiaries. Other brand, product or company names are trade marks of their 
+respective owners. 
+WHILE CONSIDERABLE EFFORT WAS MADE TO VERIFY THE ACCURACY OF THIS DOCUMENT AT PUBLICATION, ALL WARRANTIES, 
+CONDITIONS, REPRESENTATIONS AND LIABILITY , HOWSOEVER ARISING, ARE EXCLUDED TO THE EXTENT PERMITTED BY LAW. 
+RENISHAW RESERVES THE RIGHT TO MAKE CHANGES TO THIS DOCUMENT AND TO THE EQUIPMENT, AND/OR SOFTWARE AND 
+THE SPECIFICATION DESCRIBED HEREIN WITHOUT OBLIGATION TO PROVIDE NOTICE OF SUCH CHANGES.
+Renishaw plc. Registered in England and Wales. Company no: 1106260. Registered office: New Mills, Wotton-under-Edge, Glos, GL12 8JR, UK.
+www.renishaw.com/contact
++44 (0) 1453 524524 uk@renishaw.com
+Issued: 05.2025
+Part no.: L-9517-9736-05-A
+Optional Advanced 
+Diagnostic Tool 
+ADTi-100 (A-6195-0100)
+RTLF-S self-adhesive tape scale
+RCLC glass spar
+RCDM glass disc
+RKLF-S self-adhesive mastered tape scale
+RKLF40-S partial arc scale
+ATOM DX compatible products:

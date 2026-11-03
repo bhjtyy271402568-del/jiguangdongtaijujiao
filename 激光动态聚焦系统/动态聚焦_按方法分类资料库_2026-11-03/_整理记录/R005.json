@@ -1,0 +1,48 @@
+{
+  "url": "https://patents.google.com/patent/CN204248222U/zh",
+  "category": "01_移动透镜式与匹配光学",
+  "origins": [
+    "Gemini输出.txt"
+  ],
+  "context": "原文提到的专利号，补全公开文本入口；标题及相关性待与原件核对",
+  "id": "R005",
+  "files": [
+    {
+      "path": "01_移动透镜式与匹配光学\\R005_CN204248222U - 一种三轴动态聚焦激光打标装置 _        - Google Patents.html",
+      "type": "HTML",
+      "bytes": 69357,
+      "sha256": "b1e442a41d5609d21eea275334aecbf5ca22b0b5508ccadd6e59e3e16d07eb60",
+      "url": "https://patents.google.com/patent/CN204248222U/zh",
+      "title": "CN204248222U - 一种三轴动态聚焦激光打标装置 \n        - Google Patents",
+      "text_chars": 9678
+    },
+    {
+      "path": "01_移动透镜式与匹配光学\\R005_CN204248222U - 一种三轴动态聚焦激光打标装置 - Google Patents.pdf",
+      "type": "PDF",
+      "pages": 5,
+      "bytes": 295300,
+      "sha256": "e61d762a721908bff4ece5d768e69e6df3c5c63ea0763ff944cb322cfd105e54",
+      "url": "https://patentimages.storage.googleapis.com/f1/10/2f/387aa81ff57412/CN204248222U.pdf",
+      "text_chars": 8,
+      "title": "",
+      "preview": "\n\n\n\n\n\n\n\n",
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://patents.google.com/patent/CN204248222U/zh",
+      "http": 200,
+      "final_url": "https://patents.google.com/patent/CN204248222U/zh",
+      "result": "网页"
+    },
+    {
+      "url": "https://patentimages.storage.googleapis.com/f1/10/2f/387aa81ff57412/CN204248222U.pdf",
+      "http": 200,
+      "final_url": "https://patentimages.storage.googleapis.com/f1/10/2f/387aa81ff57412/CN204248222U.pdf",
+      "result": "有效PDF"
+    }
+  ],
+  "title": "CN204248222U - 一种三轴动态聚焦激光打标装置 - Google Patents",
+  "status": "PDF已下载"
+}

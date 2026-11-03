@@ -1,0 +1,49 @@
+{
+  "url": "https://patents.google.com/patent/CN111130015A/zh",
+  "category": "09_艾思兰及相邻应用",
+  "origins": [
+    "Gemini输出.txt",
+    "苏州艾思兰_动态聚焦资料\\来源清单.csv"
+  ],
+  "context": "原文提到的专利号，补全公开文本入口；标题及相关性待与原件核对",
+  "id": "R007",
+  "files": [
+    {
+      "path": "09_艾思兰及相邻应用\\R007_CN111130015A - 一种激光除障仪 _        - Google Patents.html",
+      "type": "HTML",
+      "bytes": 102600,
+      "sha256": "fa86f71dadc4ca1ea474461fbab6f04ef17a59b47f768bf44720ad32699f7014",
+      "url": "https://patents.google.com/patent/CN111130015A/zh",
+      "title": "CN111130015A - 一种激光除障仪 \n        - Google Patents",
+      "text_chars": 13798
+    },
+    {
+      "path": "09_艾思兰及相邻应用\\R007_CN111130015A - 一种激光除障仪 - Google Patents.pdf",
+      "type": "PDF",
+      "pages": 8,
+      "bytes": 501328,
+      "sha256": "1ac4aeb725a7497e69858d3c68cd9a6cfbdac03330689fba0d09fd2cb5f280eb",
+      "url": "https://patentimages.storage.googleapis.com/af/c0/83/5896edf21c4fbc/CN111130015A.pdf",
+      "text_chars": 5558,
+      "title": "",
+      "preview": "(19)中华人民共和国国家知识产权局\n(12)发明专利申请\n(10)申请公布号 \n(43)申请公布日 \n(21)申请号 202010098925.X\n(22)申请日 2020.02.18\n(71)申请人 苏州艾思兰光电有限公司\n地址 215000 江苏省苏州市工业园区金芳\n路18号东坊创智园地C栋2楼\n(72)发明人 何舟　周倩　周健　\n(74)专利代理机构 苏州衡创知识产权代理事务\n所(普通合伙) 32329\n代理人 张芹\n(51)Int.Cl.\nH02G 1/02(2006.01)\nH02G 7/16(2006.01)\n \n(54)发明名称\n一种激光除障仪\n(57)摘要\n本发明公开了一种激光除障仪， 包括光纤激\n光器、 控制云台、 三脚架、 瞄准控制器、 电池组、 电\n源线、 激光发射器和无线遥控， 光纤激光器通过\n光纤与激光发射器连接， 电池组通过电源线与光\n纤激光器连接， 激光发射器通过快装板固定在控\n制云台上。 本发明激光除障仪， 可以远程、“地对\n空”进行作业， 除冰过程无需接触， 过程安全， 取\n代了登高梯， 人工攀爬等需要接触式操作的方\n式， 且可带电作业， 减少断电带",
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://patents.google.com/patent/CN111130015A/zh",
+      "http": 200,
+      "final_url": "https://patents.google.com/patent/CN111130015A/zh",
+      "result": "网页"
+    },
+    {
+      "url": "https://patentimages.storage.googleapis.com/af/c0/83/5896edf21c4fbc/CN111130015A.pdf",
+      "http": 200,
+      "final_url": "https://patentimages.storage.googleapis.com/af/c0/83/5896edf21c4fbc/CN111130015A.pdf",
+      "result": "有效PDF"
+    }
+  ],
+  "title": "CN111130015A - 一种激光除障仪 - Google Patents",
+  "status": "PDF已下载"
+}

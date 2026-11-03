@@ -1,0 +1,20 @@
+{
+  "id": "B002",
+  "category": "07_测高闭环_三轴同步与标定",
+  "url": "https://www.raylase.de/_Resources/Persistent/b/a/6/6/ba66d25112e3d91511322aa417caae73c916557b/Datasheet_SP-ICE-3.pdf",
+  "context": "RAYLASE_SPICE3_官方规格书",
+  "title": "RAYLASE_SPICE3_官方规格书",
+  "origins": [
+    "原文线索补充及相关中文综述"
+  ],
+  "files": [],
+  "attempts": [
+    {
+      "url": "https://www.raylase.de/_Resources/Persistent/b/a/6/6/ba66d25112e3d91511322aa417caae73c916557b/Datasheet_SP-ICE-3.pdf",
+      "http": 404,
+      "final_url": "https://www.raylase.de/_Resources/Persistent/b/a/6/6/ba66d25112e3d91511322aa417caae73c916557b/Datasheet_SP-ICE-3.pdf",
+      "error": "404 Client Error: Not Found for url: https://www.raylase.de/_Resources/Persistent/b/a/6/6/ba66d25112e3d91511322aa417caae73c916557b/Datasheet_SP-ICE-3.pdf"
+    }
+  ],
+  "status": "未获取"
+}

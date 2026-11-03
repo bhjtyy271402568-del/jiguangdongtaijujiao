@@ -1,0 +1,305 @@
+ 
+ 
+University of Birmingham
+Experimental Investigation of 3D Scanheads for
+Laser Micro ProcessingDimov, Stefan; Penchev, Pavel; Bhaduri, Debajyoti
+DOI:
+10.1016/j.optlastec.2016.01.035
+License:
+Creative Commons: Attribution-NonCommercial-NoDerivs (CC BY-NC-ND)
+Document Version
+Peer reviewed version
+Citation for published version (Harvard):
+Dimov, S, Penchev, P & Bhaduri, D 2016, 'Experimental Investigation of 3D Scanheads for Laser Micro
+Processing', Optics & Laser Technology, vol. 81, pp. 55-59. https://doi.org/10.1016/j.optlastec.2016.01.035
+Link to publication on Research at Birmingham portal
+Publisher Rights Statement:
+After an embargo period this document is subject to a CC-BY-NC-ND license
+Checked Feb 2016
+General rights
+Unless a licence is specified above, all rights (including copyright and moral rights) in this document are retained by the authors and/or the
+copyright holders. The express permission of the copyright holder must be obtained for any use of this material other than for purposes
+permitted by law.
+•Users may freely distribute the URL that is used to identify this publication.
+•Users may download and/or print one copy of the publication from the University of Birmingham research portal for the purpose of private
+study or non-commercial research.
+•User may use extracts from the document in line with the concept of ‘fair dealing’ under the Copyright, Designs and Patents Act 1988 (?)
+•Users may not further distribute the material nor use it for the purposes of commercial gain.
+Where a licence is displayed above, please note the terms and conditions of the licence govern your use of this document.
+When citing, please reference the published version.
+Take down policy
+While the University of Birmingham exercises care and attention in making items available there are rare occasions when an item has been
+uploaded in error or has been deemed to be commercially or otherwise sensitive.
+If you believe that this is the case for this document, please contact UBIRA@lists.bham.ac.uk providing details and we will remove access to
+the work immediately and investigate.
+Download date: 03. Nov. 2026
+
+ 
+ 
+1 
+ 
+Experimental Investigation of 3D Scanheads for Laser Micro Processing 
+Pavel Penchev1, Stefan Dimov1, Debajyoti Bhaduri1  
+1 (School of Mechanical Engineering), University of Birmingham, UK 
+Corresponding author: Pavel Penchev, School of Mechanical Engineering, University of Birmingham, 
+Edgbaston, Birmingham B15 2TT, UK, Email:pxp931@bham.ac.uk. 
+Abstract 
+The broader use of laser micro processing technology increases the demand for executing complex 
+machining and joining operations on free-from (3D) workpieces. To satisfy these growing 
+requirements it is necessary to utilise 3D scanheads that integrate beam deflectors (X and Y optical 
+axes) and Z modules with high dynamics. The research presented in this communication proposes an 
+experimental technique to quantify the dynamic capabilities of Z modules, also called Dynamic 
+Focusing Modules (DFM), of such 3D scanheads that are essential for efficient, accurate and 
+repeatable laser micro processing of free form surfaces. The proposed experimental technique is 
+validated on state-of-art laser micro-machining platform and the results show that the DFM dynamic 
+capabilities are substantially inferior than those of X and Y beam deflectors, in particular the 
+maximum speed of the Z module is less than 10% of the maximum speeds achievable with X and Y 
+optical axes of the scanhead. Thus, the DFM dynamics deficiencies can become a major obstacle for 
+the broader use of high frequency laser sources that necessitate high dynamics 3D scanheads for 
+executing cost effectively free-form surface processing operations.  
+Keywords: laser micro processing; 3D scanheads; dynamic focusing module; dynamic capabilities 
+1. Introduction 
+Laser micromachining (LMM) has attracted a significant industrial interest due to its intrinsic 
+machining advantages such as non -contact processing of free -from (3D) workpieces in a wide range 
+of materials [1]. Thus, the demands fo r complex laser machining and also joining operations, which 
+require the synchronized utilization of optical axes (X, Y, and Z) with high dynamics capabilities, are 
+
+ 
+ 
+2 
+ 
+exponentially growing [2]. A literature review reveals that the dynamics capabilities of X and Y beam 
+deflectors of 3D scanheads have been thoughtfully studied, but those of their Z modules, also called 
+Dynamic Focusing Modules (DFM), have been overlooked. To the authors’ knowledge, investigations 
+of DFM dynamics capabilities have not been reported, with the exception of one laser scanhead  
+manufacturer that has provided some information about product dependent dynamics specifications 
+of a Z module [3].  
+DFMs are built in two different configurations, which are schematically presented in Figure 1. Fi gure 
+1a shows a beam expander DFM configuration, which  consists of a diverging optic that  can be 
+translated coaxially along the optical beam path via a linear motor, and a stationary focusing optic. 
+In contrast, Figure 1b shows a beam condenser DFM configu ration, which includes a converging 
+optic and a stationary focusing optic. Choice of a suitable DFM configuration for a particular laser 
+system is dependent on the laser beam characteristics of the used laser source such as beam waist 
+diameter and collimation, because DFM optics are selected to give minimum laser beam aberrations. 
+Examples of laser beam aberrations caused by a lens that have to be taken into account when 
+selecting a DFM configuration include spherical aberrations, chromatic aberrations and aperture 
+diffraction [ 4]. Even though, DFM s are supplied in two different configurations, their working 
+principles are the same. In particular, movements of the diverging or converging optics during a laser 
+processing operation changes the relative distance between the moveable and the stationary optics, 
+which causes changes in laser system’s focal length and thus the laser beam spot can be focussed at 
+different planes along its propagation axis ( z axis) [3].  
+The aim of this research is to design an experimental technique  that can evaluate the dynamic 
+capabilities of DFMs  and thus to judge about their negative effects  in laser mi cro-processing of 
+complex free-form (3D) surfaces. The next section int roduces the proposed experimental technique  
+and then experimental results are discussed and conclusions are drawn. 
+ 
+
+ 
+ 
+3 
+ 
+ 
+Figure 1. DFM configurations: (a) beam expander DFM and (b) beam condenser DFM. 
+2. Experimental 
+2.1 Equipment 
+Experiments were performed on a state-of-art laser micromachining (LMM) platform that 
+incorporates a 3D scanhead for focusing a beam with high dynamics within 35 mm (X) x 35 mm (Y) x 
+7.7 mm (Z) processing envelop defined by a 100 mm telecentric lens. The LMM platform utilizes a 
+state-of-art representative beam condenser DFM configuration that has a beam condensation factor 
+of 0.75. Furthermore, the LMM platform is equipped with three linear and two rotary stages that 
+can be used for precise repositioning of 3D scanhead processing envelop within the laser system’s 
+working envelop , in particular their positioning resolutions  are 0.25 µm and 45 µrad, respectively 
+[5,6]. The accuracy, repeatability and reproducibility (ARR) achievable with the X and Y optical beam 
+deflectors of the 3D scanhead has been studied and they are better than +/- 5 µm across the full 
+range of achievable scanning speeds (up to 4m/s for the used focusing lens)  [7]. The LMM platform 
+integrates a SPI redENERGY G4 S-type 50 W nanosecond (ns) fibre laser that has a central 
+wavelength of 1064 nm and supports repetitions rates up to 1 MHz and pulse durations in the range 
+from 15 ns to 220 ns.  The beam quality factor (M2) of this laser source is better than 1.2.  
+The spatial profile of the laser beam is characterized by utilizing a Dataray Beam R2 scanning slit 
+beam profiler that can be used to measure tightly focused laser beams [8]. 
+The experimental results were analysed on a Focus Variation (FV) optical microscope, namely 
+Alicona G5 [9], while the analytical procedure was repeated five times for each laser machining trial. 
+
+
+ 
+ 
+4 
+ 
+The measurements were performed using a x20 magnification lens that has measurement 
+uncertainty of 0.01 µm [9] and the Alicona Profile tool was employed to process the acquired data.  
+2.2 Methodology 
+Figure 2 presents the test sample used to evaluate the DFM dynamics capabilities. In particular, the 
+experiments involved the machining of 30 mm long tracks with dimples produced on two SS 316 
+samples with different scanning speeds, V1, V2 …Vn, one sample is normal and the other is tilted at 
+15⁰ in regards to the incident beam. Table 1 provides the laser parameters utilized to machine the 
+laser tracks. Twelve laser tracks were produced at different scanning speeds, but it should be noted 
+that each laser track is produced with constant scanning speed. The title angle of 15⁰ was selected in 
+order to fit the machined area on the sample within the focusing envelop of the used 3D scanner 
+and focusing lens, in particular within the enveloped defined by the DFM Z range (7.7 mm) and the 
+focusing lens’s field of view (35 x 35 mm) as mentioned in Section 2. The sample was tilted by 
+employing the rotary stage, which rotates the sample about the x axis of the workpiece and thus the 
+tilt is along its y axis as shown in Figure 2. Thus, the laser tracks on the tilted sample were produced 
+along its y axis. In this way the movements along the tilted axis have components both along the y 
+and z axes and thus DFM has to be utilized in combination with the X-Y optical beam deflector 
+system. The steps between the dimples along the laser tracks are 100 µm, while the step-over 
+distance between the laser tracks was set to 150 µm. Furthermore, the dimple diameter was 
+determined by the laser beam spot diameter, because there was no overlapping of pulses in each 
+laser scan. The tracks were produced by 15 repeated scans and thus each dimple was created by a 
+sequence of 15 laser pulses. In this way the target dimple depth of 12 µm was achieved.  Also, it 
+should be noted that the laser tracks both on the tilted and the normal samples were produced with 
+an offset from the focal plane that is equal to the Rayleigh length (zR) as shown in Figure 3, where zR 
+can be calculated using Equation 1. Furthermore, to account for any laser beam focus aberrations 
+caused by the optics,  the offset from the focal plane was also experimentally determined by 
+
+ 
+ 
+5 
+ 
+measuring the distance at which the beam spot diameter is equal to sqrt(2)*w0 (Rayleigh length 
+criterion) by utilizing the beam analyser. 
+ 
+𝑧𝑅 =
+𝜋×𝑤02
+𝜆×𝑀2  Equation 1 
+ 
+where: w0 is the focused beam spot radius, λ - the wavelength of the laser beam and M2 - the laser 
+beam quality factor. 
+ The DFM dynamic capabilities were assessed by analysing the depth profiles’ differences of the 
+dimples produced on the tilted and the normal plates to the incident beam. 
+ 
+Figure 2. The test sample used to evaluate the DFM dynamic capabilities. 
+Note: The laser tracks are produced along the tilted Y axis of the workpiece, while laser beam 
+repositioning movements before the machining of each laser tracks (non-machining movements) are 
+executed along the x-axis of the workpiece. 
+Table 1. Laser parameters for the experimental tests 
+Laser track 1  2 3 4 5 6 7 8 9 10 11 12 
+Average Power [W] 40 
+Pulse duration [ns] 220 
+Beam diameter at focus [µm] 63 
+Frequency [kHz] 1 5 10 12 13 14 15 16 17 18 19 20 
+Scanning Speed [m/s] 0.1 0.5 1.0 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 2.0 
+ 
+
+
+ 
+ 
+6 
+ 
+ 
+Figure 3. Rayleigh length criterion 
+3. Results and Discussions 
+Figure 4 shows that the laser beam spot diameter at the focal plane and at an offset distance equal 
+to the Rayleigh length above the focal plane are 63 µm and 89 µm, respectively. The offset distance 
+calculated using Equation 1 was 2.45 mm and it resulted in a laser beam Depth of Focus (DOF) of 5.9 
+mm, twice the Rayleigh range (see Figure 3). Since, DOF is comparable to the DFM Z range, it greatly 
+impairs the deterministic evaluation of the DFM dynamic capability. This is because DOF 
+compensates the “lagging” of the laser beam movement along the z-axis that is due to the DFM 
+insufficient dynamics capability. Thus, the depth profiles of the produced dimples will be similar, 
+because the changes of energy density (fluence) can be considered negligible within the beam DOF. 
+Therefore, it is necessary to reduce substantially and even to eliminate the DOF compensation 
+effects on dimples’ depth profiles. This can be achieved by producing the laser tracks at an offset 
+distance equal to Rayleigh length, 2.45 mm in our case, and thus any further displacements of the 
+laser beam from the focal plane due to insufficient DFM dynamic capabilities to lead to a significant 
+difference of energy densities and as a consequence of this to dimples’ depth profiles. 
+Figure 5a shows a 3D view of all produced laser tracks on the sample normal to the incident beam 
+(no movements with DFM along the Z axis), while Figure 5b provides a magnified top view of the 
+area at the end of the tracks. It can be judged visually in Figure 5b that the dimples have very similar 
+
+
+ 
+ 
+7 
+ 
+profiles regardless of the scanning speeds. In addition, Figure 5c provides the depths of the dimples 
+produced at all processing speeds and they are very similar, approximately 12 µm. Also, it can be 
+seen in Figure 5b that there are small errors/differences in the laser tracks produced at different 
+scanning speeds. They can be explained with the fact that any small variations of the scanning 
+speeds caused by torsional resonance, heat dissipation, drift, nonlinearities, noise and calibration 
+routines [7], are amplified since the there is no pulse overlapping and each dimple is the results of 
+15 pulses. Thus, even small beam positional errors are revealed and accumulated along the 30 mm 
+long tracks even though they do not affect the overall accuracy of the 3D scanhead in executing the 
+machining vectors.  In particular, if there is a pulse overlap any small variations of scanning speeds in 
+producing the dimples will not be noticeable at the end of the tracks.  
+Figure 6 depicts the carried out measurements of the dimples produced on the tilted sample. It can 
+be clearly see in Figure 6b that the topography of the dimples changes with the increase of the 
+scanning speed. For example, the dimples are barely visible at a speed of 2 m/s (the rightmost laser 
+track in Figure 6b). Furthermore, Figure 6c provides the depth profiles of the dimples produced at all 
+processing speeds. It can be clearly seen that at processing speeds above 1500 mm/s, the dimples do 
+not have the expected depth of 12 µm. This should be attributed to the DFM inability to follow 
+closely the surface that is not normal to the incident beam along the z axis with the required 
+dynamics. A comparison of the results in Figure 5 and Figure 6 reveals that the DFM dynamics is 
+sufficient only up to a scanning speed of 1500 mm/s. In particular, DFM can execute beam 
+movements along the Z axis without lags, synchronously with X and Y movements, only if the 
+required speed does not exceed 388 mm/s (sin Θ * V) and thus it is less than 10 % of the maximum V 
+achievable with the X and Y beam deflectors of the investigated system in this research, in particular 
+4 m/s. 
+
+ 
+ 
+8 
+ 
+ 
+Figure 4. Laser beam energy profiles (a) at the focal plane (z=0) and at an offset distance of 2.45 mm 
+above the focal plane (z=+2.45 mm). 
+ 
+Figure 5. Laser tracks produced at different scanning speeds on the SS 316 sample when it is normal 
+to the incident beam: (a) 3D view of the produced laser tracks; (b) magnified view of the area at the 
+
+
+ 
+ 
+9 
+ 
+end of the laser tracks (the scanning speed is increasing from left to right); (c) depth profile of 
+dimples at the end of the laser tracks. 
+ 
+Figure 6. Laser Tracks produced at different scanning speeds on the SS 316 sample at Θ=15⁰ to the 
+incident beam: (a) 3D view of the produced laser tracks; (b) magnified view of the area at the end of 
+the laser tracks (the scanning speed is increasing from left to right); (c) depth profile of dimples at 
+the end of the laser tracks. 
+4. Conclusions 
+The presented research proposes an experimental technique to assess the DFM’s dynamic 
+capabilities. The results show that at high speeds of the X and Y beam deflectors the depth of focus 
+of the used laser micro processing setups may not be sufficient to compensate the lag in executing 
+the necessary Z movements when processing free form surfaces.  In such cases it will be necessary to 
+reduce the X and Y beam deflectors’ speeds of the 3D scanheads and thus to operate below the max 
+speeds achievable by any given DFM when performing laser structuring or texturing operation on  
+
+
+ 
+ 
+10 
+ 
+free form surfaces in order to achieve the required accuracy and repeatability. This DFM deficiency 
+can become a major obstacle for the broader use of high frequency laser sources that necessitate 
+high dynamics 3D scanheads for executing cost effectively surface processing operations.   
+Acknowledgements 
+The research reported in this paper was supported by the FP7 NMP programmes “High Performance 
+Production Line for Small Series Metal Parts” (HYPROLINE) and “High throughput integrated 
+technologies for multi -material functional Micro  Components” (HINMICO), the INTERREG IVB NEW 
+programme “ECO -efficient LASER technology for FACTories of the future (ECO -LASERFACT) and a 
+project funded by Korean Government on “Laser-Based Modules for Functional Surface Texturing”. 
+References 
+[1]  Mishra S, Yadava V. Laser Beam MicroMachining (LBMM) – A review. Optics and Lasers in 
+Engineering 2015; 73: 89–122. 
+[2] Penchev P, Shang X, Dimov S and Lancaster M. Novel manufacturing route for scale up 
+production of THz technology devices. Submitted to ASME Journal of Micro- and Nano- 
+manufacturing: August 2015. 
+[3] Scanlab VarioScan brochure. 
+[4]  Siegman A. Defining and measuring laser beam quality. In: Inguscio M and Wallenstein R 
+(eds) Solid State Lasers: New Developments and Applications. USA: Plenum Press, 1993, pp. 
+13-29. 
+ [5] Aerotech. PRO165LM Series Stage User’s Manual P/N: EDS142 (Revision 1.06.00), 2010. 
+[6]  Aerotech. ADRS Series Stage User’s Manual P/N: EDS108 (Revision 1.02.00), 2011. 
+
+ 
+ 
+11 
+ 
+[7] Penchev P, Dimov S, Bhaduri D, Soo SL and Crickboom B. Generic software tool for 
+counteracting the dynamics effects of optical beam delivery systems. Proceedings of the 
+Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture 2015 
+(published online) 
+[8] Dataray. Scan Slit Beam Profilers User manual REV0805A, 2008. 
+[9] Alicona. Alicona Focus Variation magazine: Form and roughness in one system. Edition 5, 
+2015 

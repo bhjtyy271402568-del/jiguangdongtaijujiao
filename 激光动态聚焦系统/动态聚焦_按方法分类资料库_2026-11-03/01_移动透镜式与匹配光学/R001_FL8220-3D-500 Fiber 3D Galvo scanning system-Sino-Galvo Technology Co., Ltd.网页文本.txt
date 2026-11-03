@@ -1,0 +1,280 @@
+来源：https://www.sino-galvo.com/Products_detail/7.html
+采集日期：2026-11-03
+
+FL8220-3D-500 Fiber 3D Galvo scanning system-Sino-Galvo Technology Co., Ltd
+Home
+About
+About
+Company Profile
+History
+Certificate
+Employee Activities
+Culture
+Blog
+Contact us
+服务支持
+联系我们
+AM：8:00 ~ PM5:00
+400-055-8805
+Product
+Product
+2-Axis Galvo Scanner
+3D Dynamic Focusing
+Laser Beauty System
+Encoder Galvo Scanner
+Laser Control System
+Laser Cleaning System
+Laser Source
+Galvanometer Scanner
+High-Power Galvo System
+服务支持
+联系我们
+AM：8:00 ~ PM5:00
+400-055-8805
+Application
+Application
+Laser Marking
+Laser Cleaning
+Laser Welding
+Precision Machining
+LiDAR
+服务支持
+联系我们
+AM：8:00 ~ PM5:00
+400-055-8805
+Download
+Contact
+Language
+简体中文
+English
+日本語
+Search
++
+Product Features
+■ Adopted advanced optical design scheme, it is characterized by small light loss, small volume, high positioning accuracy, fast marking speed and strong anti-interference ability, etc. It is suitable for laser fine processing of various large surface, complex surface and deep carving.
+■ High speed system, meets above 1500mm/s precision hatch speed.
+■ Maximum scan field up to 500x500mm, meets large scan field engraving requirements, according to customer requirement 400x400mm is optional.
+■ Maximum marking height up to 80mm, which exceeds the industry height standard of 80mm.
+■ Precisely control the focal length position of laser marking machine, automatically adjust Z-axis for 3D deep marking process, keep the spot size to minimum, ensure the uniform graphic effect after marking on the object.
+■ Adopted MM3D/Marking Mate 3D software system to support various file formats, vector, bitmap and text bar code import, which is easy to learn and operate.
+■ Built-in concave and convex circular tube, concave and convex sphere, slope, cone, polygon and other basic models, the operator can easily and rapidly set the marking.
+■ 3D models can be imported; 2D graphics can be directly cladded or projected on built-in curve surface.
+■ The whole system adopted the optimization designing of electromagnetic compatibility, with high signal-to-noise ratio and strong anti-interference ability.
+Technical Parameters
+Laser Type
+1064nm fiber laser source
+Printing Field (Adjustable)
+400*400mm~500*500mm
+Input Beam Size
+6mm~7.5mm
+X&Y Axes Mirrors   Aperture Size
+20mm
+Speed
+Marking Speed
+2000mm/s
+Writing Speed
+124cps
+Step Response Time(1% of   full scale)
+708us
+Step Response Time(10% of   full scale)
+1320us
+Tracking Error Time
+≤374us
+Precision and Error
+Linearity
+99.9%
+Repeatability (RMS)
+＜8μRad
+Gain Error
+＜5mRad
+Zero Offset
+＜5mRad
+Long-term Drift Over 8   Hours
+＜0.5mRad
+Scale Drift
+＜40PPM/℃
+Zero Drift
+＜15μRad/℃
+Water-Cooling System
+Water temperature
+25±3℃
+Maximum water pressure
+＜3bar
+Water flow
+>1L/min
+Water pipe specification
+Outer diameter φ6mm    Inner diameter φ4mm
+Power and Signal
+Input Voltage
+±24VDC
+Rated Current
+4A
+Interface Signal
+Digital
+XY2-100
+Machinery Scan Angle
+±12.5°
+Working Current, Temperature, Dimension
+Working Temperature
+0℃~45℃
+Storage Temperature
+-10℃~60℃
+Galvanometer Scanner   Dimension
+325x148x149mm (LxWxH)
+Galvanometer Scanner   Weight
+≈6.85Kg
+Examples of Field Size, Working Distance,   and Spot Size Configurations
+Field Size
+400mmX400mm
+500mmX500mm
+Working Distance
+470mm
+590mm
+Spot Size
+0.034mm
+0.04mm
+Keywords: FL8220-3D-500 Fiber 3D Galvo scanning system
++
+FL8220-3D-500 Fiber 3D Galvo scanning system
+FL8220-3D-500 Dynamic Focusing Galvo Scanner has compact design, high positioning accuracy, higher marking speed, and strong anti-interference ability. In the process of dynamic marking, the marking line has high precision, distortion free, power uniform; pattern without distortion, the overall performance has reached the international leading level in the field.
+Contact us
+info@sino-galvo.com
+400-055-8805
+Classification
+3D Dynamic Focusing
+Product Inquiry
+Related Products
++
+Product Features
+■ Adopted advanced optical design scheme, it is characterized by small light loss, small volume, high positioning accuracy, fast marking speed and strong anti-interference ability, etc. It is suitable for laser fine processing of various large surface, complex surface and deep carving.
+■ High speed system, meets above 1500mm/s precision hatch speed.
+■ Maximum scan field up to 500x500mm, meets large scan field engraving requirements, according to customer requirement 400x400mm is optional.
+■ Maximum marking height up to 80mm, which exceeds the industry height standard of 80mm.
+■ Precisely control the focal length position of laser marking machine, automatically adjust Z-axis for 3D deep marking process, keep the spot size to minimum, ensure the uniform graphic effect after marking on the object.
+■ Adopted MM3D/Marking Mate 3D software system to support various file formats, vector, bitmap and text bar code import, which is easy to learn and operate.
+■ Built-in concave and convex circular tube, concave and convex sphere, slope, cone, polygon and other basic models, the operator can easily and rapidly set the marking.
+■ 3D models can be imported; 2D graphics can be directly cladded or projected on built-in curve surface.
+■ The whole system adopted the optimization designing of electromagnetic compatibility, with high signal-to-noise ratio and strong anti-interference ability.
+Technical Parameters
+Laser Type
+1064nm fiber laser source
+Printing Field (Adjustable)
+400*400mm~500*500mm
+Input Beam Size
+6mm~7.5mm
+X&Y Axes Mirrors   Aperture Size
+20mm
+Speed
+Marking Speed
+2000mm/s
+Writing Speed
+124cps
+Step Response Time(1% of   full scale)
+708us
+Step Response Time(10% of   full scale)
+1320us
+Tracking Error Time
+≤374us
+Precision and Error
+Linearity
+99.9%
+Repeatability (RMS)
+＜8μRad
+Gain Error
+＜5mRad
+Zero Offset
+＜5mRad
+Long-term Drift Over 8   Hours
+＜0.5mRad
+Scale Drift
+＜40PPM/℃
+Zero Drift
+＜15μRad/℃
+Water-Cooling System
+Water temperature
+25±3℃
+Maximum water pressure
+＜3bar
+Water flow
+>1L/min
+Water pipe specification
+Outer diameter φ6mm    Inner diameter φ4mm
+Power and Signal
+Input Voltage
+±24VDC
+Rated Current
+4A
+Interface Signal
+Digital
+XY2-100
+Machinery Scan Angle
+±12.5°
+Working Current, Temperature, Dimension
+Working Temperature
+0℃~45℃
+Storage Temperature
+-10℃~60℃
+Galvanometer Scanner   Dimension
+325x148x149mm (LxWxH)
+Galvanometer Scanner   Weight
+≈6.85Kg
+Examples of Field Size, Working Distance,   and Spot Size Configurations
+Field Size
+400mmX400mm
+500mmX500mm
+Working Distance
+470mm
+590mm
+Spot Size
+0.034mm
+0.04mm
+Keywords: FL8220-3D-500 Fiber 3D Galvo scanning system
+Get a quote
+Please leave your contact information, and our experts will reach out to you as soon as possible!
+Submit
+Related Products
+SG7110 High-Speed Galvo Scanner
+SG7220-V1 High-Speed Galvo Scanner
+SG7220-Plus High-Speed Galvo Scanner
+SG2207-EX Galvo Scanner
+Sino-Galvo (Jiangsu) Technology Co., Ltd.
+No. 33 Hengtong Road, Economic Development District, Zhenjiang, Jiangsu, China. 212000
++86 18052811717
+info@sino-galvo.com
+Home
+About
+Company Profile
+History
+Certificate
+Employee Activities
+Culture
+Blog
+Contact us
+Product
+2-Axis Galvo Scanner
+3D Dynamic Focusing
+Laser Beauty System
+Encoder Galvo Scanner
+Laser Control System
+Laser Cleaning System
+Laser Source
+Galvanometer Scanner
+High-Power Galvo System
+Application
+Laser Marking
+Laser Cleaning
+Laser Welding
+Precision Machining
+LiDAR
+Download
+Contact
+Follow us
+Copyright © 2025 Sino-Galvo (Jiangsu) Technology Co., Ltd..  Pv6, IPv4
+www.300.cn
+%E7%AC%AC%E4%B8%80%EF%BC%8C%E6%9C%80%EF%BC%8C%E4%BC%98%E7%A7%80%EF%BC%8C%E5%A2%9E%E5%BC%BA%EF%BC%8C%E4%B8%80%E6%B5%81%EF%BC%8C%E5%8D%93%E8%B6%8A%EF%BC%8C%E9%A2%86%E5%85%88%EF%BC%8C%E5%85%88%E8%BF%9B%EF%BC%8C%E5%BC%95%E9%A2%86
+Sorry，当前栏目暂无内容!
+您可以查看其他栏目或返回
+首页
+Sorry，The current column has no content!
+You can view other columns or return
+Home

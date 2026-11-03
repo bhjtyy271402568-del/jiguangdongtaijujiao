@@ -1,0 +1,30 @@
+{
+  "url": "https://www.scanneroptics.com/products/3d-laser-scanning-head/",
+  "category": "01_移动透镜式与匹配光学",
+  "origins": [
+    "苏州艾思兰_动态聚焦资料\\设备自研方案与选型表.md"
+  ],
+  "context": "\n- [Scanner Optics 3D扫描头](https://www.scanneroptics.com/products/3d-laser-scanning-head/)：3D扫描头和动态轴的产品参数线索。",
+  "id": "R068",
+  "files": [
+    {
+      "path": "01_移动透镜式与匹配光学\\R068_3D Laser Scanning Head.html",
+      "type": "HTML",
+      "bytes": 85587,
+      "sha256": "5116c1e11d331044741b28b20e58ecc13ff31d38dc59acbb7620f7382d84f40e",
+      "url": "https://www.scanneroptics.com/products/3d-laser-scanning-head/",
+      "title": "3D Laser Scanning Head",
+      "text_chars": 7519
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://www.scanneroptics.com/products/3d-laser-scanning-head/",
+      "http": 200,
+      "final_url": "https://www.scanneroptics.com/products/3d-laser-scanning-head/",
+      "result": "网页"
+    }
+  ],
+  "title": "3D Laser Scanning Head",
+  "status": "网页已保存"
+}

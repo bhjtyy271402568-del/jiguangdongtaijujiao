@@ -1,0 +1,2047 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CN109894748B - 激光三维飞行打标方法、装置、计算机设备和存储介质 
+      - Google Patents</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="referrer" content="origin-when-crossorigin">
+    <link rel="canonical" href="https://patents.google.com/patent/CN109894748B/zh">
+    <meta name="description" content="
+     本申请涉及一种激光三维飞行打标方法、装置、计算机设备和存储介质。所述方法包括：根据三维打标图像的三维激光点在聚焦深度方向的坐标，确定所述三维激光点所处的焦平面；其中，所述焦平面与所述聚焦深度方向垂直；根据所述三维激光点所处的焦平面，对所述三维激光点进行径向畸变校正以及非线性失真校正，得到第一校正激光点；对所述第一校正激光点进行位移补偿校正，得到第二校正激光点；根据所述第二校正激光点对所述工件进行打标。采用本方法能够实现三维曲面准确打标。 
+     
+   
+   ">
+    <meta name="DC.type" content="patent">
+    <meta name="DC.title" content="激光三维飞行打标方法、装置、计算机设备和存储介质 
+     ">
+    <meta name="DC.date" content="2019-02-22" scheme="dateSubmitted">
+    <meta name="DC.description" content="
+     本申请涉及一种激光三维飞行打标方法、装置、计算机设备和存储介质。所述方法包括：根据三维打标图像的三维激光点在聚焦深度方向的坐标，确定所述三维激光点所处的焦平面；其中，所述焦平面与所述聚焦深度方向垂直；根据所述三维激光点所处的焦平面，对所述三维激光点进行径向畸变校正以及非线性失真校正，得到第一校正激光点；对所述第一校正激光点进行位移补偿校正，得到第二校正激光点；根据所述第二校正激光点对所述工件进行打标。采用本方法能够实现三维曲面准确打标。 
+     
+   
+   ">
+    <meta name="citation_patent_application_number" content="CN:201910132341.7A">
+    <meta name="citation_pdf_url" content="https://patentimages.storage.googleapis.com/a8/4b/72/5f3bfaf96f488f/CN109894748B.pdf">
+    <meta name="citation_patent_number" content="CN:109894748:B">
+    <meta name="DC.date" content="2021-02-23" scheme="issue">
+    <meta name="DC.contributor" content="李启程" scheme="inventor">
+    <meta name="DC.contributor" content="刘伟" scheme="inventor">
+    <meta name="DC.contributor" content="盛辉" scheme="inventor">
+    <meta name="DC.contributor" content="黄小龙" scheme="inventor">
+    <meta name="DC.contributor" content="周威" scheme="inventor">
+    <meta name="DC.contributor" content="张凯" scheme="inventor">
+    <meta name="DC.contributor" content="周红林" scheme="inventor">
+    <meta name="DC.contributor" content="贾长桥" scheme="inventor">
+    <meta name="DC.contributor" content="刘文慧" scheme="inventor">
+    <meta name="DC.contributor" content="Shenzhen Tete Laser Technology Co Ltd" scheme="assignee">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Product+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700">
+
+    <style>
+      
+      #gb { position: absolute; top: 6px; left: auto; right: 0; width: auto; min-width: 135px !important; }   
+      body { transition: none; }
+    </style>
+    <script></script>
+
+    <script>
+      window.version = 'patent-search.search_20261019_RC00';
+
+      function sendFeedback() {
+        userfeedback.api.startFeedback({
+          'productId': '713680',
+          'bucket': 'patent-search-web',
+          'productVersion': window.version,
+        });
+      }
+
+      window.experiments = {};
+      window.experiments.patentCountries = "ae,ag,al,am,ao,ap,ar,at,au,aw,az,ba,bb,bd,be,bf,bg,bh,bj,bn,bo,br,bw,bx,by,bz,ca,cf,cg,ch,ci,cl,cm,cn,co,cr,cs,cu,cy,cz,dd,de,dj,dk,dm,do,dz,ea,ec,ee,eg,em,ep,es,fi,fr,ga,gb,gc,gd,ge,gh,gm,gn,gq,gr,gt,gw,hk,hn,hr,hu,ib,id,ie,il,in,ir,is,it,jo,jp,ke,kg,kh,km,kn,kp,kr,kw,kz,la,lc,li,lk,lr,ls,lt,lu,lv,ly,ma,mc,md,me,mg,mk,ml,mn,mo,mr,mt,mw,mx,my,mz,na,ne,ng,ni,nl,no,nz,oa,om,pa,pe,pg,ph,pl,pt,py,qa,ro,rs,ru,rw,sa,sc,sd,se,sg,si,sk,sl,sm,sn,st,su,sv,sy,sz,td,tg,th,tj,tm,tn,tr,tt,tw,tz,ua,ug,us,uy,uz,vc,ve,vn,wo,yu,za,zm,zw";
+      
+      
+      window.experiments.keywordWizard = true;
+      
+      
+      
+      window.experiments.definitions = true;
+      window.experiments.plogs = true;
+
+      window.Polymer = {
+        dom: 'shady',
+        lazyRegister: true,
+      };
+    </script>
+
+    <script src="//www.gstatic.com/patent-search/frontend/patent-search.search_20261019_RC00/scs/compiled_dir/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <link rel="import" href="//www.gstatic.com/patent-search/frontend/patent-search.search_20261019_RC00/scs/compiled_dir/search-app-vulcanized.html">
+  </head>
+  <body unresolved>
+    
+    
+    <script></script>
+    <script src="//www.gstatic.com/patent-search/frontend/patent-search.search_20261019_RC00/scs/compiled_dir/search-app-vulcanized.js"></script>
+    <search-app>
+      
+      
+
+      <article class="result" itemscope itemtype="http://schema.org/ScholarlyArticle">
+  <h1 itemprop="pageTitle">CN109894748B - 激光三维飞行打标方法、装置、计算机设备和存储介质 
+      - Google Patents</h1>
+  <span itemprop="title">激光三维飞行打标方法、装置、计算机设备和存储介质 
+     </span>
+
+  <meta itemprop="type" content="patent">
+  <a href="https://patentimages.storage.googleapis.com/a8/4b/72/5f3bfaf96f488f/CN109894748B.pdf" itemprop="pdfLink">Download PDF</a>
+  <h2>Info</h2>
+
+  <dl>
+    <dt>Publication number</dt>
+    <dd itemprop="publicationNumber">CN109894748B</dd>
+    <meta itemprop="numberWithoutCodes" content="109894748">
+    <meta itemprop="kindCode" content="B">
+    <meta itemprop="publicationDescription" content="Granted patent for invention">
+    <span>CN109894748B</span>
+    <span>CN201910132341.7A</span>
+    <span>CN201910132341A</span>
+    <span>CN109894748B</span>
+    <span>CN 109894748 B</span>
+    <span>CN109894748 B</span>
+    <span>CN 109894748B</span>
+    <span>  </span>
+    <span> </span>
+    <span> </span>
+    <span>CN 201910132341 A</span>
+    <span>CN201910132341 A</span>
+    <span>CN 201910132341A</span>
+    <span>CN 109894748 B</span>
+    <span>CN109894748 B</span>
+    <span>CN 109894748B</span>
+
+    <dt>Authority</dt>
+    <dd itemprop="countryCode">CN</dd>
+    <dd itemprop="countryName">China</dd>
+
+    <dt>Prior art keywords</dt>
+    <dd itemprop="priorArtKeywords" repeat>dimensional</dd>
+    <dd itemprop="priorArtKeywords" repeat>laser</dd>
+    <dd itemprop="priorArtKeywords" repeat>correction</dd>
+    <dd itemprop="priorArtKeywords" repeat>laser point</dd>
+    <dd itemprop="priorArtKeywords" repeat>marking</dd>
+
+    <dt>Prior art date</dt>
+    <dd><time itemprop="priorArtDate" datetime="2019-02-22">2019-02-22</time></dd>
+
+    <dt>Legal status (The legal status is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the status listed.)</dt>
+    <dd itemprop="legalStatusIfi" itemscope>
+      <span itemprop="status">Active</span>
+    </dd>
+  </dl>
+
+  <dt>Application number</dt>
+  <dd itemprop="applicationNumber">CN201910132341.7A</dd>
+
+  <dt>Other languages</dt>
+  <dd itemprop="otherLanguages" itemscope repeat>
+    <a href="/patent/CN109894748B/en">
+      <span itemprop="name">English</span> (<span itemprop="code">en</span>)
+    </a>
+  </dd>
+
+  <dt>Other versions</dt>
+  <dd itemprop="directAssociations" itemscope repeat>
+    <a href="/patent/CN109894748A/zh">
+      <span itemprop="publicationNumber">CN109894748A</span>
+      (<span itemprop="primaryLanguage">zh</span>
+    </a>
+  </dd>
+
+  <dt>Inventor</dt>
+  <dd itemprop="inventor" repeat>李启程</dd>
+  <dd itemprop="inventor" repeat>刘伟</dd>
+  <dd itemprop="inventor" repeat>盛辉</dd>
+  <dd itemprop="inventor" repeat>黄小龙</dd>
+  <dd itemprop="inventor" repeat>周威</dd>
+  <dd itemprop="inventor" repeat>张凯</dd>
+  <dd itemprop="inventor" repeat>周红林</dd>
+  <dd itemprop="inventor" repeat>贾长桥</dd>
+  <dd itemprop="inventor" repeat>刘文慧</dd>
+
+  <dt>Current Assignee (The listed assignees may be inaccurate. Google has not performed a legal analysis and makes no representation or warranty as to the accuracy of the list.)</dt>
+  <dd itemprop="assigneeCurrent" repeat>
+    Shenzhen Tete Laser Technology Co Ltd
+  </dd>
+
+  <dt>Original Assignee</dt>
+  <dd itemprop="assigneeOriginal" repeat>Shenzhen Tete Laser Technology Co Ltd</dd>
+
+  <dt>Priority date (The priority date is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the date listed.)</dt>
+  <dd><time itemprop="priorityDate" datetime="2019-02-22">2019-02-22</time></dd>
+
+  <dt>Filing date</dt>
+  <dd><time itemprop="filingDate" datetime="2019-02-22">2019-02-22</time></dd>
+
+  <dt>Publication date</dt>
+  <dd><time itemprop="publicationDate" datetime="2021-02-23">2021-02-23</time></dd>
+
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2019-02-22">2019-02-22</time>
+    <span itemprop="title">Application filed by Shenzhen Tete Laser Technology Co Ltd</span>
+    <span itemprop="type">filed</span>
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    <span itemprop="assigneeSearch">Shenzhen Tete Laser Technology Co Ltd</span>
+  </dd>
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2019-02-22">2019-02-22</time>
+    <span itemprop="title">Priority to CN201910132341.7A</span>
+    <span itemprop="type">priority</span>
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    <span itemprop="documentId">patent/CN109894748B/zh</span>
+    
+  </dd>
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2019-06-18">2019-06-18</time>
+    <span itemprop="title">Publication of CN109894748A</span>
+    <span itemprop="type">publication</span>
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    <span itemprop="documentId">patent/CN109894748A/zh</span>
+    
+  </dd>
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2021-02-23">2021-02-23</time>
+    <span itemprop="title">Application granted</span>
+    <span itemprop="type">granted</span>
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    
+  </dd>
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2021-02-23">2021-02-23</time>
+    <span itemprop="title">Publication of CN109894748B</span>
+    <span itemprop="type">publication</span>
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    <span itemprop="documentId">patent/CN109894748B/zh</span>
+    
+  </dd>
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date">Status</time>
+    <span itemprop="title">Active</span>
+    <span itemprop="type">legal-status</span>
+    <span itemprop="critical" content="true" bool>Critical</span>
+    <span itemprop="current" content="true" bool>Current</span>
+    
+    
+    
+  </dd>
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2039-02-22">2039-02-22</time>
+    <span itemprop="title">Anticipated expiration</span>
+    <span itemprop="type">legal-status</span>
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    
+  </dd>
+
+  <h2>Links</h2>
+  <ul>
+    
+
+    <li itemprop="links" itemscope repeat>
+        <meta itemprop="id" content="espacenetLink">
+        <a href="https://worldwide.espacenet.com/publicationDetails/biblio?CC=CN&amp;NR=109894748B&amp;KC=B&amp;FT=D" itemprop="url" target="_blank"><span itemprop="text">Espacenet</span></a>
+      </li>
+      
+
+    
+
+    <li itemprop="links" itemscope repeat>
+      <meta itemprop="id" content="globalDossierLink">
+      <a href="https://globaldossier.uspto.gov/result/application/CN/201910132341/1" itemprop="url" target="_blank"><span itemprop="text">Global Dossier</span></a>
+    </li>
+
+    
+
+      
+
+      
+
+      
+      <li itemprop="links" itemscope repeat>
+        <meta itemprop="id" content="stackexchangeLink">
+        <a href="https://patents.stackexchange.com/questions/tagged/CN109894748B" itemprop="url"><span itemprop="text">Discuss</span></a>
+      </li>
+  </ul>
+
+  <ul itemprop="concept" itemscope>
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">238000000034</span>
+      <span itemprop="name">method</span>
+      <span itemprop="domain">Methods</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0.000</span>
+      <span itemprop="sections" repeat>title</span>
+      <span itemprop="sections" repeat>claims</span>
+      <span itemprop="sections" repeat>abstract</span>
+      <span itemprop="sections" repeat>description</span>
+      <span itemprop="count">40</span>
+    </li>
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">238000003860</span>
+      <span itemprop="name">storage</span>
+      <span itemprop="domain">Methods</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0.000</span>
+      <span itemprop="sections" repeat>title</span>
+      <span itemprop="sections" repeat>claims</span>
+      <span itemprop="sections" repeat>abstract</span>
+      <span itemprop="sections" repeat>description</span>
+      <span itemprop="count">14</span>
+    </li>
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">238000012937</span>
+      <span itemprop="name">correction</span>
+      <span itemprop="domain">Methods</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0.000</span>
+      <span itemprop="sections" repeat>claims</span>
+      <span itemprop="sections" repeat>abstract</span>
+      <span itemprop="sections" repeat>description</span>
+      <span itemprop="count">116</span>
+    </li>
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">238000006073</span>
+      <span itemprop="name">displacement reaction</span>
+      <span itemprop="domain">Methods</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0.000</span>
+      <span itemprop="sections" repeat>claims</span>
+      <span itemprop="sections" repeat>abstract</span>
+      <span itemprop="sections" repeat>description</span>
+      <span itemprop="count">40</span>
+    </li>
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">238000004590</span>
+      <span itemprop="name">computer program</span>
+      <span itemprop="domain">Methods</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0.000</span>
+      <span itemprop="sections" repeat>claims</span>
+      <span itemprop="sections" repeat>description</span>
+      <span itemprop="count">17</span>
+    </li>
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">238000012545</span>
+      <span itemprop="name">processing</span>
+      <span itemprop="domain">Methods</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0.000</span>
+      <span itemprop="sections" repeat>claims</span>
+      <span itemprop="sections" repeat>description</span>
+      <span itemprop="count">14</span>
+    </li>
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">238000005259</span>
+      <span itemprop="name">measurement</span>
+      <span itemprop="domain">Methods</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0.000</span>
+      <span itemprop="sections" repeat>claims</span>
+      <span itemprop="sections" repeat>description</span>
+      <span itemprop="count">5</span>
+    </li>
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">238000004422</span>
+      <span itemprop="name">calculation algorithm</span>
+      <span itemprop="domain">Methods</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0.000</span>
+      <span itemprop="sections" repeat>claims</span>
+      <span itemprop="sections" repeat>description</span>
+      <span itemprop="count">4</span>
+    </li>
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">238000004519</span>
+      <span itemprop="name">manufacturing process</span>
+      <span itemprop="domain">Methods</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0.000</span>
+      <span itemprop="sections" repeat>description</span>
+      <span itemprop="count">8</span>
+    </li>
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">238000010586</span>
+      <span itemprop="name">diagram</span>
+      <span itemprop="domain">Methods</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0.000</span>
+      <span itemprop="sections" repeat>description</span>
+      <span itemprop="count">7</span>
+    </li>
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">238000005516</span>
+      <span itemprop="name">engineering process</span>
+      <span itemprop="domain">Methods</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0.000</span>
+      <span itemprop="sections" repeat>description</span>
+      <span itemprop="count">5</span>
+    </li>
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">238000010330</span>
+      <span itemprop="name">laser marking</span>
+      <span itemprop="domain">Methods</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0.000</span>
+      <span itemprop="sections" repeat>description</span>
+      <span itemprop="count">5</span>
+    </li>
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000003068</span>
+      <span itemprop="name">static effect</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0.000</span>
+      <span itemprop="sections" repeat>description</span>
+      <span itemprop="count">3</span>
+    </li>
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">238000005507</span>
+      <span itemprop="name">spraying</span>
+      <span itemprop="domain">Methods</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0.000</span>
+      <span itemprop="sections" repeat>description</span>
+      <span itemprop="count">2</span>
+    </li>
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000001360</span>
+      <span itemprop="name">synchronised effect</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0.000</span>
+      <span itemprop="sections" repeat>description</span>
+      <span itemprop="count">2</span>
+    </li>
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">241000226585</span>
+      <span itemprop="name">Antennaria plantaginifolia</span>
+      <span itemprop="domain">Species</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0.000</span>
+      <span itemprop="sections" repeat>description</span>
+      <span itemprop="count">1</span>
+    </li>
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000005540</span>
+      <span itemprop="name">biological transmission</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0.000</span>
+      <span itemprop="sections" repeat>description</span>
+      <span itemprop="count">1</span>
+    </li>
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">238000004364</span>
+      <span itemprop="name">calculation method</span>
+      <span itemprop="domain">Methods</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0.000</span>
+      <span itemprop="sections" repeat>description</span>
+      <span itemprop="count">1</span>
+    </li>
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">238000011161</span>
+      <span itemprop="name">development</span>
+      <span itemprop="domain">Methods</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0.000</span>
+      <span itemprop="sections" repeat>description</span>
+      <span itemprop="count">1</span>
+    </li>
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">238000002474</span>
+      <span itemprop="name">experimental method</span>
+      <span itemprop="domain">Methods</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0.000</span>
+      <span itemprop="sections" repeat>description</span>
+      <span itemprop="count">1</span>
+    </li>
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">238000009776</span>
+      <span itemprop="name">industrial production</span>
+      <span itemprop="domain">Methods</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0.000</span>
+      <span itemprop="sections" repeat>description</span>
+      <span itemprop="count">1</span>
+    </li>
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">238000010147</span>
+      <span itemprop="name">laser engraving</span>
+      <span itemprop="domain">Methods</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0.000</span>
+      <span itemprop="sections" repeat>description</span>
+      <span itemprop="count">1</span>
+    </li>
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">238000010329</span>
+      <span itemprop="name">laser etching</span>
+      <span itemprop="domain">Methods</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0.000</span>
+      <span itemprop="sections" repeat>description</span>
+      <span itemprop="count">1</span>
+    </li>
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">238000012986</span>
+      <span itemprop="name">modification</span>
+      <span itemprop="domain">Methods</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0.000</span>
+      <span itemprop="sections" repeat>description</span>
+      <span itemprop="count">1</span>
+    </li>
+    <li itemprop="match" itemscope repeat>
+      <span itemprop="id">230000004048</span>
+      <span itemprop="name">modification</span>
+      <span itemprop="domain">Effects</span>
+      <span itemprop="svg_large"></span>
+      <span itemprop="svg_small"></span>
+      <span itemprop="smiles"></span>
+      <span itemprop="inchi_key"></span>
+      <span itemprop="similarity">0.000</span>
+      <span itemprop="sections" repeat>description</span>
+      <span itemprop="count">1</span>
+    </li>
+  </ul>
+
+  <section>
+    <h2>Images</h2>
+    <ul>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/35/de/fa/b1d10acebcecc3/HDA0002718516140000011.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/f8/b2/21/bef31a57051bfb/HDA0002718516140000011.png">
+        <ul>
+        </ul>
+      </li>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/a1/4c/60/281ff0951a39dc/HDA0002718516140000021.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/cf/86/89/6062f4acfbd140/HDA0002718516140000021.png">
+        <ul>
+          <li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="1">
+            <meta itemprop="id" content="220">
+            <meta itemprop="label" content="first correction module">
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="5">
+              <meta itemprop="top" content="265">
+              <meta itemprop="right" content="60">
+              <meta itemprop="bottom" content="293">
+            </span>
+          </li>
+          <li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="1">
+            <meta itemprop="id" content="230">
+            <meta itemprop="label" content="second correction module">
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="619">
+              <meta itemprop="top" content="183">
+              <meta itemprop="right" content="681">
+              <meta itemprop="bottom" content="210">
+            </span>
+          </li>
+          <li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="1">
+            <meta itemprop="id" content="240">
+            <meta itemprop="label" content="marking module">
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="915">
+              <meta itemprop="top" content="184">
+              <meta itemprop="right" content="978">
+              <meta itemprop="bottom" content="209">
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/9b/ad/e6/c9191132322ab3/HDA0002718516140000022.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/64/4a/6a/391ee4cfb3254e/HDA0002718516140000022.png">
+        <ul>
+          <li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="1">
+            <meta itemprop="label" content="control system computer">
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="189">
+              <meta itemprop="top" content="7">
+              <meta itemprop="right" content="210">
+              <meta itemprop="bottom" content="33">
+            </span>
+          </li>
+          <li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="10">
+            <meta itemprop="label" content="speed measuring circuit">
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="249">
+              <meta itemprop="top" content="288">
+              <meta itemprop="right" content="299">
+              <meta itemprop="bottom" content="315">
+            </span>
+          </li>
+          <li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="2">
+            <meta itemprop="label" content="laser">
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="318">
+              <meta itemprop="top" content="20">
+              <meta itemprop="right" content="339">
+              <meta itemprop="bottom" content="47">
+            </span>
+          </li>
+          <li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="3">
+            <meta itemprop="label" content="beam expander">
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="411">
+              <meta itemprop="top" content="20">
+              <meta itemprop="right" content="434">
+              <meta itemprop="bottom" content="48">
+            </span>
+          </li>
+          <li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="4">
+            <meta itemprop="label" content="mirror group">
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="510">
+              <meta itemprop="top" content="20">
+              <meta itemprop="right" content="535">
+              <meta itemprop="bottom" content="47">
+            </span>
+          </li>
+          <li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="5">
+            <meta itemprop="label" content="axis reflecting galvanometer">
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="663">
+              <meta itemprop="top" content="20">
+              <meta itemprop="right" content="684">
+              <meta itemprop="bottom" content="47">
+            </span>
+          </li>
+          <li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="6">
+            <meta itemprop="label" content="Theta lens">
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="861">
+              <meta itemprop="top" content="154">
+              <meta itemprop="right" content="882">
+              <meta itemprop="bottom" content="182">
+            </span>
+          </li>
+          <li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="7">
+            <meta itemprop="label" content="trigger device">
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="801">
+              <meta itemprop="top" content="220">
+              <meta itemprop="right" content="823">
+              <meta itemprop="bottom" content="248">
+            </span>
+          </li>
+          <li itemprop="callouts" itemscope repeat>
+            <meta itemprop="figurePage" content="2">
+            <meta itemprop="id" content="9">
+            <meta itemprop="label" content="conveyor belt">
+            <span itemprop="bounds" itemscope>
+              <meta itemprop="left" content="509">
+              <meta itemprop="top" content="432">
+              <meta itemprop="right" content="531">
+              <meta itemprop="bottom" content="460">
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/40/53/13/84a717e4f3078a/HDA0002718516140000031.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/01/9e/69/340ef288307bb8/HDA0002718516140000031.png">
+        <ul>
+        </ul>
+      </li>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/0b/50/6d/fadcd2b4cc3ffb/HDA0002718516140000032.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/a4/5f/5f/712655dbd0c240/HDA0002718516140000032.png">
+        <ul>
+        </ul>
+      </li>
+      <li itemprop="images" itemscope repeat>
+        <img itemprop="thumbnail" src="https://patentimages.storage.googleapis.com/81/d6/12/05a28f60a1802e/HDA0002718516140000041.png">
+        <meta itemprop="full" content="https://patentimages.storage.googleapis.com/9f/2e/dd/932bc61c11c48e/HDA0002718516140000041.png">
+        <ul>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  
+
+  
+
+  
+
+  
+
+  <section>
+    <h2>Landscapes</h2>
+    <ul>
+      <li itemprop="landscapes" itemscope repeat>
+        <span itemprop="name">Laser Beam Processing</span>
+        (<span itemprop="type">AREA</span>)
+      </li>
+    </ul>
+  </section>
+
+
+  <section itemprop="abstract" itemscope>
+    <h2>Abstract</h2>
+    
+    <div itemprop="content" html><abstract mxw-id="PA435445237" lang="ZH" load-source="patent-office">
+    <div num="0001" class="abstract">本申请涉及一种激光三维飞行打标方法、装置、计算机设备和存储介质。所述方法包括：根据三维打标图像的三维激光点在聚焦深度方向的坐标，确定所述三维激光点所处的焦平面；其中，所述焦平面与所述聚焦深度方向垂直；根据所述三维激光点所处的焦平面，对所述三维激光点进行径向畸变校正以及非线性失真校正，得到第一校正激光点；对所述第一校正激光点进行位移补偿校正，得到第二校正激光点；根据所述第二校正激光点对所述工件进行打标。采用本方法能够实现三维曲面准确打标。</div>
+    </abstract>
+  </div>
+  </section>
+
+  <section itemprop="description" itemscope>
+    <h2>Description</h2>
+    
+    <div itemprop="content" html><div mxw-id="PDES291275966" lang="ZH" load-source="patent-office" class="description">
+    <invention-title lang="ZH" id="title1">激光三维飞行打标方法、装置、计算机设备和存储介质</invention-title>
+    <div id="p0001" num="0001" class="description-paragraph">技术领域</div>
+    <div id="p0002" num="0002" class="description-paragraph">本申请涉及激光应用技术领域，特别是涉及一种激光三维飞行打标方法、装置、计算机设备和存储介质。</div>
+    <div id="p0003" num="0003" class="description-paragraph">背景技术</div>
+    <div id="p0004" num="0004" class="description-paragraph">随着激光技术的飞速发展，激光在工业、军事、商业以及医疗等领域的应用越来越广泛。特别是激光飞行打标技术，由于加工效率高、适应现代化大生产的需要、使用灵活方便，在国内外得到了迅猛发展。运用激光飞行打标技术的飞行激光打标机主要用于在各类产品表面或外包装物表面进行在线式喷码标刻，与传统的只能对静止的物体进行打标的激光打标机不同的是：在喷码刻标过程中，产品在生产线上不停的流动，从而极大地提高了生产的效率，使激光机适应了工业生产的要求。</div>
+    <div id="p0005" num="0005" class="description-paragraph">激光飞行打标是近年来国内外新发展起来的一种激光加工手段。这种激光打标方法是在不影响生产流水线正常运转的前提下，对流水线上的工件因传输带运转而引起的位移变化进行补偿修正，得到正确的打标位置，实现精准动态打标以及大批量自动化生产，从而大大提高了加工效率，在国内外都具有广阔的市场前景。</div>
+    <div id="p0006" num="0006" class="description-paragraph">目前，激光飞行打标技术在二维平面能够实现准确的飞行打标，但是将现有的激光飞行打标技术应用在三维曲面会出现变形、失真、标点漏打等问题。</div>
+    <div id="p0007" num="0007" class="description-paragraph">发明内容</div>
+    <div id="p0008" num="0008" class="description-paragraph">基于此，有必要针对上述技术问题，提供一种能够在三维曲面准确打标的激光三维飞行打标方法、装置、计算机设备和存储介质。</div>
+    <div id="p0009" num="0009" class="description-paragraph">一种激光三维飞行打标方法，所述方法包括：</div>
+    <div id="p0010" num="0010" class="description-paragraph">根据三维打标图像的三维激光点在聚焦深度方向的坐标，确定所述三维激光点所处的焦平面；其中，所述焦平面与所述聚焦深度方向垂直；</div>
+    <div id="p0011" num="0011" class="description-paragraph">根据所述三维激光点所处的焦平面，对所述三维激光点进行径向畸变校正以及非线性失真校正，得到第一校正激光点；</div>
+    <div id="p0012" num="0012" class="description-paragraph">对所述第一校正激光点进行位移补偿校正，得到第二校正激光点；</div>
+    <div id="p0013" num="0013" class="description-paragraph">根据所述第二校正激光点对所述工件进行打标。</div>
+    <div id="p0014" num="0014" class="description-paragraph">在其中一个实施例中，所述方法还包括：根据工件的三维曲面图，生成所述三维打标图像的三维激光点。</div>
+    <div id="p0015" num="0015" class="description-paragraph">在其中一个实施例中，所述方法还包括：根据激光束的聚焦深度划分成奇数个焦平面；测量每个焦平面的所有节点的最优补偿值，所述最优补偿值包括x轴坐标的补偿值和y轴坐标的补偿值；其中，每个焦平面均匀划分成多个网格，网格顶点与顶点相交的位置称为节点，x轴、y轴为平面直角坐标系的两个轴，沿加工方向为x轴坐标正方向。</div>
+    <div id="p0016" num="0016" class="description-paragraph">在其中一个实施例中，所述对所述三维激光点进行非线性失真校正包括：获取所述三维激光点所处的网格的四个顶点；根据所述四个顶点所对应节点的最优补偿值，通过双线性插值算法计算出所述三维激光点的补偿值；根据所述三维激光点的补偿值对所述三维激光点进行位置校正，得到第一校正激光点。</div>
+    <div id="p0017" num="0017" class="description-paragraph">在其中一个实施例中，所述对所述第一校正激光点进行位移补偿校正，得到第二校正激光点，包括：</div>
+    <div id="p0018" num="0018" class="description-paragraph">在最大打标范围内，根据工件沿任意坐标轴移动方向的最大距离处的坐标值和速度，计算所述工件在所述坐标轴移动方向的位移补偿值；</div>
+    <div id="p0019" num="0019" class="description-paragraph">根据所述位移补偿值对所述第一校正激光点进行位移补偿校正，得到第二校正激光点。</div>
+    <div id="p0020" num="0020" class="description-paragraph">在其中一个实施例中，所述根据三维打标图像的三维激光点在聚焦深度方向的坐标，确定所述三维激光点所处的焦平面，包括：根据三维打标图像的三维激光点在聚焦深度方向的坐标，计算所述三维激光点到各个焦平面的距离；其中，所述焦平面与所述聚焦深度方向垂直；选择距离最近的焦平面作为所述三维激光点所处的焦平面。</div>
+    <div id="p0021" num="0021" class="description-paragraph">一种激光三维飞行打标装置，所述装置包括：</div>
+    <div id="p0022" num="0022" class="description-paragraph">焦平面判断模块，用于根据三维打标图像的三维激光点在聚焦深度方向的坐标，确定所述三维激光点所处的焦平面；其中，所述焦平面与所述聚焦深度方向垂直；</div>
+    <div id="p0023" num="0023" class="description-paragraph">第一校正模块，用于根据所述三维激光点所处的焦平面，对所述三维激光点进行径向畸变校正以及非线性失真校正，得到第一校正激光点；</div>
+    <div id="p0024" num="0024" class="description-paragraph">第二校正模块，用于对所述第一校正激光点进行位移补偿校正，得到第二校正激光点；</div>
+    <div id="p0025" num="0025" class="description-paragraph">打标模块，用于根据所述第二校正激光点对所述工件进行打标。</div>
+    <div id="p0026" num="0026" class="description-paragraph">一种采用上述任一项所述方法的三维振镜激光飞行打标加工系统，其特征在于，包括激光器、扩束镜、XY两轴反射振镜、动态聚焦镜组、F-Theta透镜、控制系统计算机、传送带、触发装置以及光电编码测速电路；其中，所述激光器产生打标时用的激光光束；所述扩束镜将所述激光光束扩束准直后调整为平行光束；所述动态聚焦镜组对所述平行光束进行焦距的长短变化控制，并投射到所述XY两轴反射振镜；所述XY两轴反射振镜用于偏转聚焦后的平行光束，并通过所述F-Theta透镜将光束在整个打标平面内形成均匀大小的聚焦光斑，并投射到工件表面形成扫描点；所述传送带用于传送所述工件，所述触发装置用于在检测到所述工件后触发所述激光器、扩束镜、XY两轴反射振镜、动态聚焦镜组、F-Theta透镜开始运作对所述工件进行打标；所述光电编码测速电路用于测量所述工件的传送速度；所述控制系统计算机用于控制传送带、触发装置以及光电编码测速电路工作；所述控制系统计算机还用于根据第二校正激光点的坐标调整XY两轴反射振镜的位置。</div>
+    <div id="p0027" num="0027" class="description-paragraph">一种计算机设备，包括存储器和处理器，所述存储器存储有计算机程序，所述处理器执行所述计算机程序时实现以下步骤：</div>
+    <div id="p0028" num="0028" class="description-paragraph">根据三维打标图像的三维激光点在聚焦深度方向的坐标，确定所述三维激光点所处的焦平面；其中，所述焦平面与所述聚焦深度方向垂直；</div>
+    <div id="p0029" num="0029" class="description-paragraph">根据所述三维激光点所处的焦平面，对所述三维激光点进行径向畸变校正以及非线性失真校正，得到第一校正激光点；</div>
+    <div id="p0030" num="0030" class="description-paragraph">对所述第一校正激光点进行位移补偿校正，得到第二校正激光点；</div>
+    <div id="p0031" num="0031" class="description-paragraph">根据所述第二校正激光点对所述工件进行打标。</div>
+    <div id="p0032" num="0032" class="description-paragraph">一种计算机可读存储介质，其上存储有计算机程序，所述计算机程序被处理器执行时实现以下步骤：</div>
+    <div id="p0033" num="0033" class="description-paragraph">根据三维打标图像的三维激光点在聚焦深度方向的坐标，确定所述三维激光点所处的焦平面；其中，所述焦平面与所述聚焦深度方向垂直；</div>
+    <div id="p0034" num="0034" class="description-paragraph">根据所述三维激光点所处的焦平面，对所述三维激光点进行径向畸变校正以及非线性失真校正，得到第一校正激光点；</div>
+    <div id="p0035" num="0035" class="description-paragraph">对所述第一校正激光点进行位移补偿校正，得到第二校正激光点；</div>
+    <div id="p0036" num="0036" class="description-paragraph">根据所述第二校正激光点对所述工件进行打标。</div>
+    <div id="p0037" num="0037" class="description-paragraph">上述激光三维飞行打标方法、装置、计算机设备和存储介质，通过根据三维激光点所述的焦平面，对三维激光点进行径向畸变校正和非线性失真校正，最后通过位移补偿防止三维激光点在进行三维曲面打标时的镭雕内容变形，提高了三维曲面激光飞行打标时扫描精度以及加工效率。</div>
+    <div id="p0038" num="0038" class="description-paragraph">附图说明</div>
+    <div id="p0039" num="0039" class="description-paragraph">图1为一个实施例中激光三维飞行打标的流程示意图；</div>
+    <div id="p0040" num="0040" class="description-paragraph">图2为一个实施例中激光三维飞行打标装置的结构框图；</div>
+    <div id="p0041" num="0041" class="description-paragraph">图3为一个实施例中三维振镜激光飞行打标加工系统的结构示意图；</div>
+    <div id="p0042" num="0042" class="description-paragraph">图4为一个实施例中焦平面的划分示意图；</div>
+    <div id="p0043" num="0043" class="description-paragraph">图5为一个实施例中沿x轴方向的位移补偿校正示意图；</div>
+    <div id="p0044" num="0044" class="description-paragraph">图6为一个实施例中计算机设备的内部结构图。</div>
+    <div id="p0045" num="0045" class="description-paragraph">具体实施方式</div>
+    <div id="p0046" num="0046" class="description-paragraph">为了使本申请的目的、技术方案及优点更加清楚明白，以下结合附图及实施例，对本申请进行进一步详细说明。应当理解，此处描述的具体实施例仅仅用以解释本申请，并不用于限定本申请。</div>
+    <div id="p0047" num="0047" class="description-paragraph">在一个实施例中，如图1所示，提供了一种激光三维飞行打标方法，包括以下步骤：</div>
+    <div id="p0048" num="0048" class="description-paragraph">步骤S110，根据三维打标图像的三维激光点在聚焦深度方向的坐标，确定所述三维激光点所处的焦平面；其中，所述焦平面与所述聚焦深度方向垂直。</div>
+    <div id="p0049" num="0049" class="description-paragraph">其中，所述三维打标图像为在工件表面通过激光束打印的镭雕图像，例如，三维打标图像为生产日期、保质期、生产许可证编号等。激光束包括多个三维激光点，多个三维激光点可处于不同的焦平面上。所述三维激光点的坐标通过直角坐标系表示，直角坐标系的z轴方向与所述聚焦深度方向相同。其中，聚焦深度指的是所述三维激光点的焦距。</div>
+    <div id="p0050" num="0050" class="description-paragraph">步骤S120，根据所述三维激光点所处的焦平面，对所述三维激光点进行径向畸变校正以及非线性失真校正，得到第一校正激光点。</div>
+    <div id="p0051" num="0051" class="description-paragraph">其中，每个所述焦平面的径向畸变校正以及非线性失真校正的校正参数不同。径向畸变包括桶形畸变和枕形畸变，所述径向畸变可采用张氏标定法或BOX校正方法进行校正。线性精校正是通过标记N*N的网格图形，测量出实际节点坐标与理想坐标之差，并计算出每个节点需要补偿的差值，其中，节点指的是网格顶点与顶点相交的位置。本申请进行多次测量实验，利用最小二乘法算出每个节点的最优补偿值并通过二维坐标形式记录。</div>
+    <div id="p0052" num="0052" class="description-paragraph">步骤S130，对所述第一校正激光点进行位移补偿校正，得到第二校正激光点。</div>
+    <div id="p0053" num="0053" class="description-paragraph">其中，通过本实施例中对激光点进行位移补偿校正，能够防止利用静态打标的方法在移动的工件上打标导致的镭雕内容变形。</div>
+    <div id="p0054" num="0054" class="description-paragraph">步骤S140，根据所述第二校正激光点对所述工件进行打标。</div>
+    <div id="p0055" num="0055" class="description-paragraph">在其中一个实施例中，一种激光三维飞行打标方法还包括：根据工件的三维曲面图，生成所述三维打标图像的三维激光点。</div>
+    <div id="p0056" num="0056" class="description-paragraph">其中，镭雕图像为分布在工件的表面的图像，由于某些工件的表面为三维曲面，需要根据三维曲面来确定三维打标图像，进而生成所述三维打标图像的三维激光点。</div>
+    <div id="p0057" num="0057" class="description-paragraph">在其中一个实施例中，一种激光三维飞行打标方法还包括：根据激光束的聚焦深度划分成奇数个焦平面；测量每个焦平面的所有节点的最优补偿值，所述最优补偿值包括x轴坐标的补偿值和y轴坐标的补偿值；其中，每个焦平面均匀划分成多个网格，网格顶点与顶点相交的位置称为节点，x轴、y轴为平面直角坐标系的两个轴，沿加工方向为x轴坐标正方向。</div>
+    <div id="p0058" num="0058" class="description-paragraph">其中，如图4所示，焦平面为N个，N为奇数，将第(N+1)/2个焦平面作为零平面，零平面位于所有焦平面的中间位置，将第一个焦平面作为正离焦平面，将第N个焦平面作为负离焦平面，位于第一个焦平面的三维激光点焦距最短，位于第N个焦平面的三维激光点焦距最长。</div>
+    <div id="p0059" num="0059" class="description-paragraph">在其中一个实施例中，所述对所述三维激光点进行非线性失真校正包括：获取所述三维激光点所处的网格的四个顶点；根据所述四个顶点所对应节点的最优补偿值，通过双线性插值算法计算出所述三维激光点的补偿值；根据所述三维激光点的补偿值对所述三维激光点进行位置校正，得到第一校正激光点。</div>
+    <div id="p0060" num="0060" class="description-paragraph">具体的，所述最优补偿值包括x轴坐标的补偿值和y轴坐标的补偿值，将所述三维激光点x轴坐标值与x轴坐标的补偿值相加得到第一校正激光点的x轴坐标值，所述三维激光点y轴坐标值与y轴坐标的补偿值相加得到第一校正激光点的y轴坐标值。</div>
+    <div id="p0061" num="0061" class="description-paragraph">在其中一个实施例中，所述对所述第一校正激光点进行位移补偿校正，得到第二校正激光点，包括：在最大打标范围内，根据工件沿任意坐标轴移动方向的最大距离处的坐标值和速度，计算所述工件在所述坐标轴移动方向的位移补偿值；根据所述位移补偿值对所述第一校正激光点进行位移补偿校正，得到第二校正激光点。</div>
+    <div id="p0062" num="0062" class="description-paragraph">具体的，计算工件沿任意坐标轴移动方向的位移补偿值：</div>
+    <div id="p0063" num="0063" class="description-paragraph">
+      <div class="patent-image"><a href="https://patentimages.storage.googleapis.com/00/82/bd/7a55af66af44e2/GDA0002718516130000061.png"><img he="67" wi="700" file="GDA0002718516130000061.GIF" img-content="drawing" img-format="gif" orientation="portrait" inline="no" width="2800" height="268" alt="Figure GDA0002718516130000061" class="patent-full-image" src="https://patentimages.storage.googleapis.com/00/82/bd/7a55af66af44e2/GDA0002718516130000061.png"/></a></div>
+    </div>
+    <div id="p0064" num="0064" class="description-paragraph">其中，如图5所示，在最大打标范围内，测量工件沿所述坐标轴正方向最大距离S1处的速度为V1，测量工件沿所述坐标轴负方向最大距离S2处的速度为V2，设工件在任意位置S处的速度为V，位置S处的坐标与所述三维激光点的坐标相同，激光打标控制卡的指令周期为Δd，执行到所述工件的所述三维激光点时所累积的指令数为N。</div>
+    <div id="p0065" num="0065" class="description-paragraph">具体的，如图5所示，工件沿x轴正方向移动，则ΔS为x轴移动方向的位移补偿值，同理，可以计算y轴移动方向的位移补偿值和z轴移动方向的位移补偿值。</div>
+    <div id="p0066" num="0066" class="description-paragraph">其中，所述加工工件的移动方向包括x轴移动方向、y轴移动方向和z轴移动方向，所述工件在所述移动方向不存在移动时位移补偿值为零。</div>
+    <div id="p0067" num="0067" class="description-paragraph">具体的，所述第一校正激光点的x轴坐标值与所述x轴移动方向的位移补偿值相加，得到第二校正激光点的x轴坐标值。</div>
+    <div id="p0068" num="0068" class="description-paragraph">在其中一个实施例中，所述根据三维打标图像的三维激光点在聚焦深度方向的坐标，确定所述三维激光点所处的焦平面，包括：根据三维打标图像的三维激光点在聚焦深度方向的坐标，计算所述三维激光点到各个焦平面的距离；其中，所述焦平面与所述聚焦深度方向垂直；选择距离最近的焦平面作为所述三维激光点所处的焦平面。</div>
+    <div id="p0069" num="0069" class="description-paragraph">其中，三维打标图像的三维激光点可能不位于任何一个焦平面，因此，选取距离最近的焦平面来对三维激光点进行径向畸变校正以及非线性失真校正。</div>
+    <div id="p0070" num="0070" class="description-paragraph">上述激光三维飞行打标方法中，通过根据三维激光点所述的焦平面，对三维激光点进行径向畸变校正和非线性失真校正，最后通过位移补偿防止三维激光点在进行三维曲面打标时的镭雕内容变形，提高了三维曲面激光飞行打标时扫描精度以及加工效率。</div>
+    <div id="p0071" num="0071" class="description-paragraph">应该理解的是，虽然图1中的各个步骤按照箭头的指示依次显示，但是这些步骤并不是必然按照箭头指示的顺序依次执行。除非本文中有明确的说明，这些步骤的执行并没有严格的顺序限制，这些步骤可以以其它的顺序执行。而且，图1中的至少一部分步骤可以包括多个子步骤或者多个阶段，这些子步骤或者阶段并不必然是在同一时刻执行完成，而是可以在不同的时刻执行，这些子步骤或者阶段的执行顺序也不必然是依次进行，而是可以与其它步骤或者其它步骤的子步骤或者阶段的至少一部分轮流或者交替地执行。</div>
+    <div id="p0072" num="0072" class="description-paragraph">在一个实施例中，如图2所示，提供了一种激光三维飞行打标装置，所述装置包括：焦平面判断模块210、第一校正模块220、第二校正模块230和打标模块240。其中：</div>
+    <div id="p0073" num="0073" class="description-paragraph">焦平面判断模块210，用于根据三维打标图像的三维激光点在聚焦深度方向的坐标，确定所述三维激光点所处的焦平面；其中，所述焦平面与所述聚焦深度方向垂直；</div>
+    <div id="p0074" num="0074" class="description-paragraph">第一校正模块220，用于根据所述三维激光点所处的焦平面，对所述三维激光点进行径向畸变校正以及非线性失真校正，得到第一校正激光点；</div>
+    <div id="p0075" num="0075" class="description-paragraph">第二校正模块230，用于对所述第一校正激光点进行位移补偿校正，得到第二校正激光点；</div>
+    <div id="p0076" num="0076" class="description-paragraph">打标模块240，用于根据所述第二校正激光点对所述工件进行打标。</div>
+    <div id="p0077" num="0077" class="description-paragraph">在其中一个实施例中，一种激光三维飞行打标装置还包括：三维激光点生成模块，用于根据工件的三维曲面图，生成所述三维打标图像的三维激光点。</div>
+    <div id="p0078" num="0078" class="description-paragraph">在其中一个实施例中，一种激光三维飞行打标装置还包括：焦平面划分模块，用于根据激光束的聚焦深度划分成奇数个焦平面；测量模块，用于测量每个焦平面的所有节点的最优补偿值，所述最优补偿值包括x轴坐标的补偿值和y轴坐标的补偿值；其中，每个焦平面均匀划分成多个网格，网格顶点与顶点相交的位置称为节点，x轴、y轴为平面直角坐标系的两个轴，沿加工方向为x轴坐标正方向。</div>
+    <div id="p0079" num="0079" class="description-paragraph">在其中一个实施例中，所述第一校正模块220包括：径向畸变校正单元，用于对所述三维激光点进行径向畸变校正；非线性失真校正单元，用于对所述三维激光点进行非线性失真校正。其中，非线性失真校正单元包括：顶点获取子单元，用于获取所述三维激光点所处的网格的四个顶点；补偿值计算子单元，用于根据所述四个顶点所对应节点的最优补偿值，通过双线性插值算法计算出所述三维激光点的补偿值；补偿子单元，用于根据所述补偿值对所述三维激光点进行位置校正，得到第一校正激光点。</div>
+    <div id="p0080" num="0080" class="description-paragraph">在其中一个实施例中，所述第二校正模块230包括：</div>
+    <div id="p0081" num="0081" class="description-paragraph">位移补偿值计算单元，用于在最大打标范围内，根据工件沿任意坐标轴移动方向的最大距离处的坐标值和速度，计算所述工件在所述坐标轴移动方向的位移补偿值。位移补偿校正单元，用于根据所述位移补偿值对所述第一校正激光点进行位移补偿校正，得到第二校正激光点。</div>
+    <div id="p0082" num="0082" class="description-paragraph">其中，计算工件沿任意坐标轴移动方向的位移补偿值：</div>
+    <div id="p0083" num="0083" class="description-paragraph">
+      <div class="patent-image"><a href="https://patentimages.storage.googleapis.com/d4/e1/bb/2fe6aaf627c3a0/GDA0002718516130000091.png"><img he="69" wi="700" file="GDA0002718516130000091.GIF" img-content="drawing" img-format="gif" orientation="portrait" inline="no" width="2800" height="276" alt="Figure GDA0002718516130000091" class="patent-full-image" src="https://patentimages.storage.googleapis.com/d4/e1/bb/2fe6aaf627c3a0/GDA0002718516130000091.png"/></a></div>
+    </div>
+    <div id="p0084" num="0084" class="description-paragraph">其中，如图5所示，在最大打标范围内，测量工件沿所述坐标轴正方向最大距离S1处的速度为V1，测量工件沿所述坐标轴负方向最大距离S2处的速度为V2，设工件在任意位置S处的速度为V，位置S处的坐标与所述三维激光点的坐标相同，激光打标控制卡的指令周期为Δd，执行到所述工件的所述三维激光点时所累积的指令数为N。</div>
+    <div id="p0085" num="0085" class="description-paragraph">在其中一个实施例中，所述焦平面判断模块210包括：距离计算模块，用于根据三维打标图像的三维激光点在聚焦深度方向的坐标，计算所述三维激光点到各个焦平面的距离；其中，所述焦平面与所述聚焦深度方向垂直；焦平面选择模块，用于选择距离最近的焦平面作为所述三维激光点所处的焦平面。</div>
+    <div id="p0086" num="0086" class="description-paragraph">关于激光三维飞行打标装置的具体限定可以参见上文中对于激光三维飞行打标方法的限定，在此不再赘述。上述激光三维飞行打标装置中的各个模块可全部或部分通过软件、硬件及其组合来实现。上述各模块可以硬件形式内嵌于或独立于计算机设备中的处理器中，也可以以软件形式存储于计算机设备中的存储器中，以便于处理器调用执行以上各个模块对应的操作。</div>
+    <div id="p0087" num="0087" class="description-paragraph">在一个实施例中，如图3所示，一种采用上述激光三维飞行打标方法的三维振镜激光飞行打标加工系统，所述系统包括：控制系统计算机1、激光器2、扩束镜3、动态聚焦镜组4、XY两轴反射振镜5、F-Theta透镜6、触发装置7、传送带9以及光电编码测速电路10。</div>
+    <div id="p0088" num="0088" class="description-paragraph">其中，激光器2用于产生打标时用的激光光束；扩束镜3使得激光光束扩束准直后调整为平行光束；XY两轴反射振镜5包括X轴反射振镜和Y轴反射振镜，X轴反射振镜和Y轴反射振镜各与伺服电机相连，用于偏转激光器2发射出来的激光光束；动态聚焦镜组4用于对经过扩束镜3的激光光束进行焦距的长短变化控制，并投射到XY两轴反射振镜5上，经过X轴反射振镜和Y轴反射振镜的两次反射，并聚焦于工件表面形成扫描点；F-Theta透镜6用于将激光光束在整个打标平面内形成均匀大小的聚焦光斑；所述触发装置用于在检测到所述工件后触发所述激光器、扩束镜、XY两轴反射振镜、动态聚焦镜组、F-Theta透镜开始运作对所述工件进行打标，所述光电编码测速电路用于测量所述工件的传送速度；控制系统计算机1是通过软硬件控制XY两轴反射振镜5、传送带9、触发装置7以及光电编码测速电路10工作；所述控制系统计算机还用于根据第二校正激光点的坐标调整XY两轴反射振镜的位置。</div>
+    <div id="p0089" num="0089" class="description-paragraph">在一个实施例中，提供了一种计算机设备，该计算机设备可以是服务器，其内部结构图可以如图6所示。该计算机设备包括通过系统总线连接的处理器、存储器、网络接口和数据库。其中，该计算机设备的处理器用于提供计算和控制能力。该计算机设备的存储器包括非易失性存储介质、内存储器。该非易失性存储介质存储有操作系统、计算机程序和数据库。该内存储器为非易失性存储介质中的操作系统和计算机程序的运行提供环境。该计算机设备的数据库用于存储焦平面校正数据。该计算机设备的网络接口用于与外部的终端通过网络连接通信。该计算机程序被处理器执行时以实现一种激光三维飞行打标方法。</div>
+    <div id="p0090" num="0090" class="description-paragraph">本领域技术人员可以理解，图6中示出的结构，仅仅是与本申请方案相关的部分结构的框图，并不构成对本申请方案所应用于其上的计算机设备的限定，具体的计算机设备可以包括比图中所示更多或更少的部件，或者组合某些部件，或者具有不同的部件布置。</div>
+    <div id="p0091" num="0091" class="description-paragraph">在一个实施例中，提供了一种计算机设备，包括存储器和处理器，存储器中存储有计算机程序，该处理器执行计算机程序时实现以下步骤：</div>
+    <div id="p0092" num="0092" class="description-paragraph">根据三维打标图像的三维激光点在聚焦深度方向的坐标，确定所述三维激光点所处的焦平面；其中，所述焦平面与所述聚焦深度方向垂直；</div>
+    <div id="p0093" num="0093" class="description-paragraph">根据所述三维激光点所处的焦平面，对所述三维激光点进行径向畸变校正以及非线性失真校正，得到第一校正激光点；</div>
+    <div id="p0094" num="0094" class="description-paragraph">对所述第一校正激光点进行位移补偿校正，得到第二校正激光点；</div>
+    <div id="p0095" num="0095" class="description-paragraph">根据所述第二校正激光点对所述工件进行打标。</div>
+    <div id="p0096" num="0096" class="description-paragraph">在一个实施例中，处理器执行计算机程序时还实现以下步骤：根据工件的三维曲面图，生成所述三维打标图像的三维激光点。</div>
+    <div id="p0097" num="0097" class="description-paragraph">在一个实施例中，处理器执行计算机程序时还实现以下步骤：根据激光束的聚焦深度划分成奇数个焦平面；测量每个焦平面的所有节点的最优补偿值，所述最优补偿值包括x轴坐标的补偿值和y轴坐标的补偿值；其中，每个焦平面均匀划分成多个网格，网格顶点与顶点相交的位置称为节点，x轴、y轴为平面直角坐标系的两个轴，沿加工方向为x轴坐标正方向。</div>
+    <div id="p0098" num="0098" class="description-paragraph">在一个实施例中，提供了一种计算机可读存储介质，其上存储有计算机程序，计算机程序被处理器执行时实现以下步骤：</div>
+    <div id="p0099" num="0099" class="description-paragraph">根据三维打标图像的三维激光点在聚焦深度方向的坐标，确定所述三维激光点所处的焦平面；其中，所述焦平面与所述聚焦深度方向垂直；</div>
+    <div id="p0100" num="0100" class="description-paragraph">根据所述三维激光点所处的焦平面，对所述三维激光点进行径向畸变校正以及非线性失真校正，得到第一校正激光点；</div>
+    <div id="p0101" num="0101" class="description-paragraph">对所述第一校正激光点进行位移补偿校正，得到第二校正激光点；</div>
+    <div id="p0102" num="0102" class="description-paragraph">根据所述第二校正激光点对所述工件进行打标。</div>
+    <div id="p0103" num="0103" class="description-paragraph">在一个实施例中，计算机程序被处理器执行时还实现以下步骤：根据工件的三维曲面图，生成所述三维打标图像的三维激光点。</div>
+    <div id="p0104" num="0104" class="description-paragraph">在一个实施例中，计算机程序被处理器执行时还实现以下步骤：根据激光束的聚焦深度划分成奇数个焦平面；测量每个焦平面的所有节点的最优补偿值，所述最优补偿值包括x轴坐标的补偿值和y轴坐标的补偿值；其中，每个焦平面均匀划分成多个网格，网格顶点与顶点相交的位置称为节点，x轴、y轴为平面直角坐标系的两个轴，沿加工方向为x轴坐标正方向。</div>
+    <div id="p0105" num="0105" class="description-paragraph">本领域普通技术人员可以理解实现上述实施例方法中的全部或部分流程，是可以通过计算机程序来指令相关的硬件来完成，所述的计算机程序可存储于一非易失性计算机可读取存储介质中，该计算机程序在执行时，可包括如上述各方法的实施例的流程。其中，本申请所提供的各实施例中所使用的对存储器、存储、数据库或其它介质的任何引用，均可包括非易失性和/或易失性存储器。非易失性存储器可包括只读存储器(ROM)、可编程ROM(PROM)、电可编程ROM(EPROM)、电可擦除可编程ROM(EEPROM)或闪存。易失性存储器可包括随机存取存储器(RAM)或者外部高速缓冲存储器。作为说明而非局限，RAM以多种形式可得，诸如静态RAM(SRAM)、动态RAM(DRAM)、同步DRAM(SDRAM)、双数据率SDRAM(DDRSDRAM)、增强型SDRAM(ESDRAM)、同步链路(Synchlink)DRAM(SLDRAM)、存储器总线(Rambus)直接RAM(RDRAM)、直接存储器总线动态RAM(DRDRAM)、以及存储器总线动态RAM(RDRAM)等。</div>
+    <div id="p0106" num="0106" class="description-paragraph">以上实施例的各技术特征可以进行任意的组合，为使描述简洁，未对上述实施例中的各个技术特征所有可能的组合都进行描述，然而，只要这些技术特征的组合不存在矛盾，都应当认为是本说明书记载的范围。</div>
+    <div id="p0107" num="0107" class="description-paragraph">以上所述实施例仅表达了本申请的几种实施方式，其描述较为具体和详细，但并不能因此而理解为对发明专利范围的限制。应当指出的是，对于本领域的普通技术人员来说，在不脱离本申请构思的前提下，还可以做出若干变形和改进，这些都属于本申请的保护范围。因此，本申请专利的保护范围应以所附权利要求为准。</div>
+  </div>
+  </div>
+  </section>
+
+  <section itemprop="claims" itemscope>
+    <h2>Claims (<span itemprop="count">10</span>)</h2>
+    
+    <div itemprop="content" html><div mxw-id="PCLM287438966" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div id="cl0001" num="0001" class="claim">
+      <div class="claim-text">1.一种激光三维飞行打标方法，其特征在于，所述方法包括：</div>
+      <div class="claim-text">根据三维打标图像的三维激光点在聚焦深度方向的坐标，确定所述三维激光点所处的焦平面；其中，所述焦平面与所述聚焦深度方向垂直；</div>
+      <div class="claim-text">根据所述三维激光点所处的焦平面，对所述三维激光点进行径向畸变校正以及非线性失真校正，得到第一校正激光点；</div>
+      <div class="claim-text">对所述第一校正激光点进行位移补偿校正，得到第二校正激光点；</div>
+      <div class="claim-text">根据所述第二校正激光点对工件进行打标。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="cl0002" num="0002" class="claim">
+      <div class="claim-text">2.根据权利要求1所述的方法，其特征在于，还包括：</div>
+      <div class="claim-text">根据工件的三维曲面图，生成所述三维打标图像的三维激光点。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="cl0003" num="0003" class="claim">
+      <div class="claim-text">3.根据权利要求1所述的方法，其特征在于，还包括：</div>
+      <div class="claim-text">根据激光束的聚焦深度划分成奇数个焦平面；</div>
+      <div class="claim-text">测量每个焦平面的所有节点的最优补偿值，所述最优补偿值包括x轴坐标的补偿值和y轴坐标的补偿值；其中，每个焦平面均匀划分成多个网格，网格顶点与顶点相交的位置称为节点，x轴、y轴为平面直角坐标系的两个轴，沿加工方向为x轴坐标正方向。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="cl0004" num="0004" class="claim">
+      <div class="claim-text">4.根据权利要求3所述的方法，其特征在于，所述对所述三维激光点进行非线性失真校正包括：</div>
+      <div class="claim-text">获取所述三维激光点所处的网格的四个顶点；</div>
+      <div class="claim-text">根据所述四个顶点所对应节点的最优补偿值，通过双线性插值算法计算出所述三维激光点的补偿值；</div>
+      <div class="claim-text">根据所述三维激光点的补偿值对所述三维激光点进行位置校正，得到第一校正激光点。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="cl0005" num="0005" class="claim">
+      <div class="claim-text">5.根据权利要求1所述的方法，其特征在于，所述对所述第一校正激光点进行位移补偿校正，得到第二校正激光点，包括：</div>
+      <div class="claim-text">在最大打标范围内，根据工件沿任意坐标轴移动方向的最大距离处的坐标值和速度，计算所述工件在所述坐标轴移动方向的位移补偿值；</div>
+      <div class="claim-text">根据所述位移补偿值对所述第一校正激光点进行位移补偿校正，得到第二校正激光点。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="cl0006" num="0006" class="claim">
+      <div class="claim-text">6.根据权利要求1所述的方法，其特征在于，所述根据三维打标图像的三维激光点在聚焦深度方向的坐标，确定所述三维激光点所处的焦平面，包括：</div>
+      <div class="claim-text">根据三维打标图像的三维激光点在聚焦深度方向的坐标，计算所述三维激光点到各个焦平面的距离；其中，所述焦平面与所述聚焦深度方向垂直；</div>
+      <div class="claim-text">选择距离最近的焦平面作为所述三维激光点所处的焦平面。</div>
+    </div>
+    </div> <div class="claim"> <div id="cl0007" num="0007" class="claim">
+      <div class="claim-text">7.一种激光三维飞行打标装置，其特征在于，所述装置包括：</div>
+      <div class="claim-text">焦平面判断模块，用于根据三维打标图像的三维激光点在聚焦深度方向的坐标，确定所述三维激光点所处的焦平面；其中，所述焦平面与所述聚焦深度方向垂直；</div>
+      <div class="claim-text">第一校正模块，用于根据所述三维激光点所处的焦平面，对所述三维激光点进行径向畸变校正以及非线性失真校正，得到第一校正激光点；</div>
+      <div class="claim-text">第二校正模块，用于对所述第一校正激光点进行位移补偿校正，得到第二校正激光点；</div>
+      <div class="claim-text">打标模块，用于根据所述第二校正激光点对工件进行打标。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="cl0008" num="0008" class="claim">
+      <div class="claim-text">8.一种采用权利要求1-6任一项所述方法的三维振镜激光飞行打标加工系统，其特征在于，包括激光器、扩束镜、XY两轴反射振镜、动态聚焦镜组、F-Theta透镜、控制系统计算机、传送带、触发装置以及光电编码测速电路；其中，所述激光器产生打标时用的激光光束；所述扩束镜将所述激光光束扩束准直后调整为平行光束；所述动态聚焦镜组对所述平行光束进行焦距的长短变化控制，并投射到所述XY两轴反射振镜；所述XY两轴反射振镜用于偏转聚焦后的平行光束，并通过所述F-Theta透镜将光束在整个打标平面内形成均匀大小的聚焦光斑，并投射到工件表面形成扫描点；所述传送带用于传送所述工件，所述触发装置用于在检测到所述工件后触发所述激光器、扩束镜、XY两轴反射振镜、动态聚焦镜组、F-Theta透镜开始运作对所述工件进行打标；所述光电编码测速电路用于测量所述工件的传送速度；所述控制系统计算机用于控制传送带、触发装置以及光电编码测速电路工作；所述控制系统计算机还用于根据第二校正激光点的坐标调整XY两轴反射振镜的位置。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="cl0009" num="0009" class="claim">
+      <div class="claim-text">9.一种计算机设备，包括存储器和处理器，所述存储器存储有计算机程序，其特征在于，所述处理器执行所述计算机程序时实现权利要求1至6中任一项所述的方法的步骤。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="cl0010" num="0010" class="claim">
+      <div class="claim-text">10.一种计算机可读存储介质，其上存储有计算机程序，其特征在于，所述计算机程序被处理器执行时实现权利要求1至6中任一项所述的方法的步骤。</div>
+    </div>
+  </div> </div>
+  </div>
+  </section>
+
+  <section itemprop="application" itemscope>
+
+    <section itemprop="metadata" itemscope>
+      <span itemprop="applicationNumber">CN201910132341.7A</span>
+      <span itemprop="priorityDate">2019-02-22</span>
+      <span itemprop="filingDate">2019-02-22</span>
+      <span itemprop="title">激光三维飞行打标方法、装置、计算机设备和存储介质 
+     </span>
+      <span itemprop="ifiStatus">Active</span>
+      
+      <a href="/patent/CN109894748B/zh">
+        <span itemprop="representativePublication">CN109894748B</span>
+        (<span itemprop="primaryLanguage">zh</span>)
+      </a>
+    </section>
+
+    <h2>Priority Applications (1)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Application Number</th>
+          <th>Priority Date</th>
+          <th>Filing Date</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="priorityApps" itemscope repeat>
+          <td>
+            <span itemprop="applicationNumber">CN201910132341.7A</span>
+            
+            <a href="/patent/CN109894748B/zh">
+              <span itemprop="representativePublication">CN109894748B</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+            </a>
+          </td>
+          <td itemprop="priorityDate">2019-02-22</td>
+          <td itemprop="filingDate">2019-02-22</td>
+          <td itemprop="title">激光三维飞行打标方法、装置、计算机设备和存储介质 
+     </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Applications Claiming Priority (1)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Application Number</th>
+          <th>Priority Date</th>
+          <th>Filing Date</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="appsClaimingPriority" itemscope repeat>
+          <td>
+            <span itemprop="applicationNumber">CN201910132341.7A</span>
+            <a href="/patent/CN109894748B/zh">
+              <span itemprop="representativePublication">CN109894748B</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+            </a>
+          </td>
+          <td itemprop="priorityDate">2019-02-22</td>
+          <td itemprop="filingDate">2019-02-22</td>
+          <td itemprop="title">激光三维飞行打标方法、装置、计算机设备和存储介质 
+     </td>
+        </tr>
+      </tbody>
+    </table>
+
+    
+
+    
+
+    <h2>Publications (2)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Publication Number</th>
+          <th>Publication Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="pubs" itemscope repeat>
+          <td>
+            <span itemprop="publicationNumber">CN109894748A</span>
+            
+            <a href="/patent/CN109894748A/zh">
+              CN109894748A
+              (<span itemprop="primaryLanguage">zh</span>)
+            </a>
+          </td>
+          <td itemprop="publicationDate">2019-06-18</td>
+        </tr>
+        <tr itemprop="pubs" itemscope repeat>
+          <td>
+            <span itemprop="publicationNumber">CN109894748B</span>
+            
+            <span itemprop="thisPatent">true</span>
+            <a href="/patent/CN109894748B/zh">
+              CN109894748B
+              (<span itemprop="primaryLanguage">zh</span>)
+            </a>
+          </td>
+          <td itemprop="publicationDate">2021-02-23</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </section>
+
+  <section itemprop="family" itemscope>
+    <h1>Family</h1>
+    <h2>ID=66945231</h2>
+
+    <h2>Family Applications (1)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Application Number</th>
+          <th>Title</th>
+          <th>Priority Date</th>
+          <th>Filing Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="applications" itemscope repeat>
+          <td>
+            <span itemprop="applicationNumber">CN201910132341.7A</span>
+            <span itemprop="ifiStatus">Active</span>
+            
+            <a href="/patent/CN109894748B/zh">
+              <span itemprop="representativePublication">CN109894748B</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+            </a>
+          </td>
+          <td itemprop="priorityDate">2019-02-22</td>
+          <td itemprop="filingDate">2019-02-22</td>
+          <td itemprop="title">激光三维飞行打标方法、装置、计算机设备和存储介质 
+     </td>
+        </tr>
+      </tbody>
+    </table>
+
+    
+
+    
+
+    <h2>Country Status (1)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Country</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="countryStatus" itemscope repeat>
+          <td>
+            <span itemprop="countryCode">CN</span>
+            (<span itemprop="num">1</span>)
+            <meta itemprop="thisCountry" content="true">
+          </td>
+          <td>
+            <a href="/patent/CN109894748B/zh">
+              <span itemprop="representativePublication">CN109894748B</span>
+              (<span itemprop="primaryLanguage">zh</span>)
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    
+
+    <h2>Families Citing this family (9)</h2>
+    <table>
+      <caption>* Cited by examiner, † Cited by third party</caption>
+      <thead>
+        <tr>
+          <th>Publication number</th>
+          <th>Priority date</th>
+          <th>Publication date</th>
+          <th>Assignee</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            <a href="/patent/CN110355476B/zh">
+              <span itemprop="publicationNumber">CN110355476B</span>
+              (<span itemprop="primaryLanguage">zh</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2019-07-17</td>
+          <td itemprop="publicationDate">2020-11-24</td>
+          <td><span itemprop="assigneeOriginal">华中科技大学</span></td>
+          <td itemprop="title">一种基于二维激光打标机的三维打标设备及方法 
+       </td>
+        </tr>
+        <tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            <a href="/patent/CN110548999A/zh">
+              <span itemprop="publicationNumber">CN110548999A</span>
+              (<span itemprop="primaryLanguage">zh</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2019-08-29</td>
+          <td itemprop="publicationDate">2019-12-10</td>
+          <td><span itemprop="assigneeOriginal">河南大学</span></td>
+          <td itemprop="title">立式激光印刻设备及基于该设备的印刻方法 
+       </td>
+        </tr>
+        <tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            <a href="/patent/CN111873433B/zh">
+              <span itemprop="publicationNumber">CN111873433B</span>
+              (<span itemprop="primaryLanguage">zh</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2020-06-19</td>
+          <td itemprop="publicationDate">2022-04-12</td>
+          <td><span itemprop="assigneeOriginal">深圳摩方新材科技有限公司</span></td>
+          <td itemprop="title">树脂涂层3d打印方法及系统 
+       </td>
+        </tr>
+        <tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            <a href="/patent/CN112108774B/zh">
+              <span itemprop="publicationNumber">CN112108774B</span>
+              (<span itemprop="primaryLanguage">zh</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2020-09-04</td>
+          <td itemprop="publicationDate">2022-07-01</td>
+          <td><span itemprop="assigneeOriginal">深圳泰软软件科技有限公司</span></td>
+          <td itemprop="title">三维激光位图打标方法、装置及计算机可读存储介质 
+     </td>
+        </tr>
+        <tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            <a href="/patent/CN112371998B/zh">
+              <span itemprop="publicationNumber">CN112371998B</span>
+              (<span itemprop="primaryLanguage">zh</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2020-11-09</td>
+          <td itemprop="publicationDate">2024-01-30</td>
+          <td><span itemprop="assigneeOriginal">南京前知智能科技有限公司</span></td>
+          <td itemprop="title">一种选择性激光熔化设备激光振镜的误差校准系统及方法 
+       </td>
+        </tr>
+        <tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            <a href="/patent/CN113230545B/zh">
+              <span itemprop="publicationNumber">CN113230545B</span>
+              (<span itemprop="primaryLanguage">zh</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2021-05-20</td>
+          <td itemprop="publicationDate">2022-07-12</td>
+          <td><span itemprop="assigneeOriginal">北京翼美云动光电科技有限公司</span></td>
+          <td itemprop="title">一种激光随机打点方法及系统 
+       </td>
+        </tr>
+        <tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            <a href="/patent/CN114178720B/zh">
+              <span itemprop="publicationNumber">CN114178720B</span>
+              (<span itemprop="primaryLanguage">zh</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2021-11-03</td>
+          <td itemprop="publicationDate">2022-12-02</td>
+          <td><span itemprop="assigneeOriginal">深圳市正运动技术有限公司</span></td>
+          <td itemprop="title">振镜式激光打标机的校正方法和终端设备 
+       </td>
+        </tr>
+        <tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            <a href="/patent/CN115239813B/zh">
+              <span itemprop="publicationNumber">CN115239813B</span>
+              (<span itemprop="primaryLanguage">zh</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2022-07-26</td>
+          <td itemprop="publicationDate">2025-07-11</td>
+          <td><span itemprop="assigneeOriginal">深圳泰软软件科技有限公司</span></td>
+          <td itemprop="title">数据处理方法、装置、设备及计算机可读存储介质 
+       </td>
+        </tr>
+        <tr itemprop="forwardReferencesFamily" itemscope repeat>
+          <td>
+            <a href="/patent/CN116833500B/zh">
+              <span itemprop="publicationNumber">CN116833500B</span>
+              (<span itemprop="primaryLanguage">zh</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2023-08-01</td>
+          <td itemprop="publicationDate">2025-09-19</td>
+          <td><span itemprop="assigneeOriginal">深圳泰德激光技术股份有限公司</span></td>
+          <td itemprop="title">喷锡点位校准方法、系统、喷锡设备及计算机存储介质 
+       </td>
+        </tr>
+      </tbody>
+    </table>
+
+    
+
+    <h2>Family Cites Families (5)</h2>
+    <table>
+      <caption>* Cited by examiner, † Cited by third party</caption>
+      <thead>
+        <tr>
+          <th>Publication number</th>
+          <th>Priority date</th>
+          <th>Publication date</th>
+          <th>Assignee</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            <a href="/patent/JP2003080383A/ja">
+              <span itemprop="publicationNumber">JP2003080383A</span>
+              (<span itemprop="primaryLanguage">ja</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2001-09-11</td>
+          <td itemprop="publicationDate">2003-03-18</td>
+          <td><span itemprop="assigneeOriginal">Sunx Ltd</span></td>
+          <td itemprop="title">レーザマーキング装置 
+       </td>
+        </tr>
+        <tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            <a href="/patent/CN101508055B/zh">
+              <span itemprop="publicationNumber">CN101508055B</span>
+              (<span itemprop="primaryLanguage">zh</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2009-03-10</td>
+          <td itemprop="publicationDate">2012-04-25</td>
+          <td><span itemprop="assigneeOriginal">深圳众为兴技术股份有限公司</span></td>
+          <td itemprop="title">一种激光加工校正方法 
+       </td>
+        </tr>
+        <tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            <a href="/patent/CN105620050B/zh">
+              <span itemprop="publicationNumber">CN105620050B</span>
+              (<span itemprop="primaryLanguage">zh</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2014-10-28</td>
+          <td itemprop="publicationDate">2017-07-21</td>
+          <td><span itemprop="assigneeOriginal">大族激光科技产业集团股份有限公司</span></td>
+          <td itemprop="title">基于机器视觉的高精度振镜误差自校正装置和方法 
+       </td>
+        </tr>
+        <tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            <a href="/patent/CN104439698B/zh">
+              <span itemprop="publicationNumber">CN104439698B</span>
+              (<span itemprop="primaryLanguage">zh</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2014-11-26</td>
+          <td itemprop="publicationDate">2016-08-24</td>
+          <td><span itemprop="assigneeOriginal">北京凌云光技术有限责任公司</span></td>
+          <td itemprop="title">用于激光加工系统的标定方法及装置 
+       </td>
+        </tr>
+        <tr itemprop="backwardReferencesFamily" itemscope repeat>
+          <td>
+            <a href="/patent/CN108015428B/zh">
+              <span itemprop="publicationNumber">CN108015428B</span>
+              (<span itemprop="primaryLanguage">zh</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2017-12-30</td>
+          <td itemprop="publicationDate">2019-09-13</td>
+          <td><span itemprop="assigneeOriginal">深圳泰德激光科技有限公司</span></td>
+          <td itemprop="title">三维激光打标方法、装置及存储介质 
+       </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <ul>
+      <li itemprop="applicationsByYear" itemscope repeat>
+        <span itemprop="year">2019</span>
+        <ul>
+          <li itemprop="application" itemscope repeat>
+            <span itemprop="filingDate">2019-02-22</span>
+            <span itemprop="countryCode">CN</span>
+            <span itemprop="applicationNumber">CN201910132341.7A</span>
+            <a href="/patent/CN109894748B/zh"><span itemprop="documentId">patent/CN109894748B/zh</span></a>
+            <span itemprop="legalStatusCat">active</span>
+            <span itemprop="legalStatus">Active</span>
+            <span itemprop="thisApp" content="true" bool></span>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    </section>
+
+  
+
+  
+
+  
+
+  <section>
+    <h2>Also Published As</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Publication number</th>
+          <th>Publication date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="docdbFamily" itemscope repeat>
+          <td>
+            <a href="/patent/CN109894748A/zh">
+              <span itemprop="publicationNumber">CN109894748A</span>
+              (<span itemprop="primaryLanguage">zh</span>)
+            </a>
+          </td>
+          <td itemprop="publicationDate">2019-06-18</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Similar Documents</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Publication</th>
+          <th>Publication Date</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN110899990B/zh">
+                <span itemprop="publicationNumber">CN110899990B</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2022-03-01">2022-03-01</time>
+            
+            
+          </td>
+          <td itemprop="title">激光雕刻方法及装置、计算机设备及存储介质 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN109894748A/zh">
+                <span itemprop="publicationNumber">CN109894748A</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2019-06-18">2019-06-18</time>
+            
+            
+          </td>
+          <td itemprop="title">激光三维飞行打标方法、装置、计算机设备和存储介质 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN114022370B/zh">
+                <span itemprop="publicationNumber">CN114022370B</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2022-08-05">2022-08-05</time>
+            
+            
+          </td>
+          <td itemprop="title">一种振镜激光加工畸变校正方法及系统 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/US10112301B2/en">
+                <span itemprop="publicationNumber">US10112301B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2018-10-30">2018-10-30</time>
+            
+            
+          </td>
+          <td itemprop="title">Automatic calibration method for robot systems using a vision sensor 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN100479968C/zh">
+                <span itemprop="publicationNumber">CN100479968C</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2009-04-22">2009-04-22</time>
+            
+            
+          </td>
+          <td itemprop="title">激光加工装置的激光束定位装置 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN113042464B/zh">
+                <span itemprop="publicationNumber">CN113042464B</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2022-09-23">2022-09-23</time>
+            
+            
+          </td>
+          <td itemprop="title">激光清洗的控制方法、装置、存储介质及设备 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN112620926B/zh">
+                <span itemprop="publicationNumber">CN112620926B</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2022-10-21">2022-10-21</time>
+            
+            
+          </td>
+          <td itemprop="title">一种焊点追踪方法、装置及存储介质 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/US20170102456A1/en">
+                <span itemprop="publicationNumber">US20170102456A1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2017-04-13">2017-04-13</time>
+            
+            
+          </td>
+          <td itemprop="title">Laser ranging calibration method and apparatus using the same 
+     </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/US20130060369A1/en">
+                <span itemprop="publicationNumber">US20130060369A1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2013-03-07">2013-03-07</time>
+            
+            
+          </td>
+          <td itemprop="title">Method and system for generating instructions for an automated machine 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/US20160059371A1/en">
+                <span itemprop="publicationNumber">US20160059371A1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2016-03-03">2016-03-03</time>
+            
+            
+          </td>
+          <td itemprop="title">System for machining surface of workpiece and method thereof 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN113825980A/zh">
+                <span itemprop="publicationNumber">CN113825980A</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2021-12-21">2021-12-21</time>
+            
+            
+          </td>
+          <td itemprop="title">机器人手眼标定方法、装置、计算设备、介质以及产品 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN108015428B/zh">
+                <span itemprop="publicationNumber">CN108015428B</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2019-09-13">2019-09-13</time>
+            
+            
+          </td>
+          <td itemprop="title">三维激光打标方法、装置及存储介质 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN117021113B/zh">
+                <span itemprop="publicationNumber">CN117021113B</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2024-03-19">2024-03-19</time>
+            
+            
+          </td>
+          <td itemprop="title">一种机械臂协作定位装配方法、系统及介质 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN112108774B/zh">
+                <span itemprop="publicationNumber">CN112108774B</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2022-07-01">2022-07-01</time>
+            
+            
+          </td>
+          <td itemprop="title">三维激光位图打标方法、装置及计算机可读存储介质 
+     </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN109732222B/zh">
+                <span itemprop="publicationNumber">CN109732222B</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2021-03-02">2021-03-02</time>
+            
+            
+          </td>
+          <td itemprop="title">卷料的切割定位装置、方法、计算机设备和存储介质 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN109029453B/zh">
+                <span itemprop="publicationNumber">CN109029453B</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2022-05-17">2022-05-17</time>
+            
+            
+          </td>
+          <td itemprop="title">熔覆头姿态路径规划方法、装置、终端、存储介质及系统 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/KR102050532B1/ko">
+                <span itemprop="publicationNumber">KR102050532B1</span>
+                (<span itemprop="primaryLanguage">ko</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2019-12-03">2019-12-03</time>
+            
+            
+          </td>
+          <td itemprop="title">3차원 레이저 패터닝 장치 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN114083111A/zh">
+                <span itemprop="publicationNumber">CN114083111A</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2022-02-25">2022-02-25</time>
+            
+            
+          </td>
+          <td itemprop="title">激光加工方法、终端设备及计算机可读存储介质 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN118989633B/zh">
+                <span itemprop="publicationNumber">CN118989633B</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2025-03-25">2025-03-25</time>
+            
+            
+          </td>
+          <td itemprop="title">一种基于机器视觉的激光加工方法、系统、设备及介质 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN110153582B/zh">
+                <span itemprop="publicationNumber">CN110153582B</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2020-05-19">2020-05-19</time>
+            
+            
+          </td>
+          <td itemprop="title">焊接方案生成方法、装置以及焊接系统 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/KR102076790B1/ko">
+                <span itemprop="publicationNumber">KR102076790B1</span>
+                (<span itemprop="primaryLanguage">ko</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2020-02-13">2020-02-13</time>
+            
+            
+          </td>
+          <td itemprop="title">3차원 레이저 컷팅 장치 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            
+            <meta itemprop="isScholar" content="true">
+              <meta itemprop="scholarID" content="17661086596978133489">
+              <a href="/scholar/17661086596978133489"><span itemprop="scholarAuthors">Fischer et al.</span></a>
+            
+          </td>
+          <td>
+            
+            <time itemprop="publicationDate" datetime="2019">2019</time>
+            
+          </td>
+          <td itemprop="title">Iterative learning control of single point incremental sheet forming process using digital image correlation</td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN114677429A/zh">
+                <span itemprop="publicationNumber">CN114677429A</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2022-06-28">2022-06-28</time>
+            
+            
+          </td>
+          <td itemprop="title">一种机械手的定位方法、装置、计算机设备和存储介质 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/KR101452437B1/ko">
+                <span itemprop="publicationNumber">KR101452437B1</span>
+                (<span itemprop="primaryLanguage">ko</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2014-11-04">2014-11-04</time>
+            
+            
+          </td>
+          <td itemprop="title">모바일 매니퓰레이터의 작업대 세팅방법 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN115205119A/zh">
+                <span itemprop="publicationNumber">CN115205119A</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2022-10-18">2022-10-18</time>
+            
+            
+          </td>
+          <td itemprop="title">基于标定的工艺路径确定方法、装置、设备及存储介质 
+       </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Legal Events</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Code</th>
+          <th>Title</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2019-06-18">2019-06-18</time></td>
+          <td itemprop="code">PB01</td>
+          <td itemprop="title">Publication</td>
+          <td>
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2019-06-18">2019-06-18</time></td>
+          <td itemprop="code">PB01</td>
+          <td itemprop="title">Publication</td>
+          <td>
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2019-07-12">2019-07-12</time></td>
+          <td itemprop="code">SE01</td>
+          <td itemprop="title">Entry into force of request for substantive examination</td>
+          <td>
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2019-07-12">2019-07-12</time></td>
+          <td itemprop="code">SE01</td>
+          <td itemprop="title">Entry into force of request for substantive examination</td>
+          <td>
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2021-02-23">2021-02-23</time></td>
+          <td itemprop="code">GR01</td>
+          <td itemprop="title">Patent grant</td>
+          <td>
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2021-02-23">2021-02-23</time></td>
+          <td itemprop="code">GR01</td>
+          <td itemprop="title">Patent grant</td>
+          <td>
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2021-12-24">2021-12-24</time></td>
+          <td itemprop="code">CP03</td>
+          <td itemprop="title">Change of name, title or address</td>
+          <td>
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Address after</strong>:
+              <span itemprop="value">518057 401m-2, bike science and technology building, No. 9, scientific research road, Maling community, Yuehai street, Nanshan District, Shenzhen, Guangdong Province</span>
+            </p>
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Patentee after</strong>:
+              <span itemprop="value">Shenzhen Taide Laser Technology Co.,Ltd.</span>
+            </p>
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Address before</strong>:
+              <span itemprop="value">518054 room 1005, 10th floor, SAIC building, 4050 Nanhai Avenue, Maling community, Yuehai street, Nanshan District, Shenzhen City, Guangdong Province</span>
+            </p>
+            <p itemprop="attributes" itemscope repeat>
+              <strong itemprop="label">Patentee before</strong>:
+              <span itemprop="value">SHENZHEN TETE LASER TECHNOLOGY Co.,Ltd.</span>
+            </p>
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2021-12-24">2021-12-24</time></td>
+          <td itemprop="code">CP03</td>
+          <td itemprop="title">Change of name, title or address</td>
+          <td>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+</article>
+
+    </search-app>
+    
+    <script></script>
+    <script type="text/javascript" src="//www.gstatic.com/feedback/api.js"></script>
+    <script type="text/javascript" src="//www.gstatic.com/feedback/js/help/prod/service/lazy.min.js"></script>
+    <script type="text/javascript">
+      if (window.help && window.help.service) {
+        helpApi = window.help.service.Lazy.create(0, {apiKey: 'AIzaSyDTEI_0tLX4varJ7bwK8aT-eOI5qr3BmyI', locale: 'en-US'});
+        window.requestedSurveys = new Set();
+        window.requestSurvey = function(triggerId) {
+          if (window.requestedSurveys.has(triggerId)) {
+            return;
+          }
+          window.requestedSurveys.add(triggerId);
+          helpApi.requestSurvey({
+            triggerId: triggerId,
+            enableTestingMode: false,
+            callback: (requestSurveyCallbackParam) => {
+              if (!requestSurveyCallbackParam.surveyData) {
+                return;
+              }
+              helpApi.presentSurvey({
+                productData: {
+                  productVersion: window.version,
+                  customData: {
+                    "experiments": "",
+                  },
+                },
+                surveyData: requestSurveyCallbackParam.surveyData,
+                colorScheme: 1,
+                customZIndex: 10000,
+              });
+            }
+          });
+        };
+
+        window.requestSurvey('YXTwAsvoW0kedxbuTdH0RArc9VhT');
+      }
+    </script>
+    <script src="/sw/null_loader.js"></script>
+  </body>
+</html>

@@ -1,0 +1,896 @@
+来源：https://patents.google.com/patent/CN111130015A/zh
+采集日期：2026-11-03
+
+CN111130015A - 一种激光除障仪 
+        - Google Patents
+CN111130015A - 一种激光除障仪 
+        - Google Patents
+一种激光除障仪
+Download PDF
+Info
+Publication number
+CN111130015A
+CN111130015A
+CN202010098925.XA
+CN202010098925A
+CN111130015A
+CN 111130015 A
+CN111130015 A
+CN 111130015A
+CN 202010098925 A
+CN202010098925 A
+CN 202010098925A
+CN 111130015 A
+CN111130015 A
+CN 111130015A
+Authority
+CN
+China
+Prior art keywords
+laser
+fiber laser
+camera
+reflector
+fiber
+Prior art date
+2020-02-18
+Legal status (The legal status is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the status listed.)
+Pending
+Application number
+CN202010098925.XA
+Other languages
+English
+(
+en
+)
+Inventor
+何舟
+周倩
+周健
+Current Assignee (The listed assignees may be inaccurate. Google has not performed a legal analysis and makes no representation or warranty as to the accuracy of the list.)
+Suzhou Usiland Optoelectronic Co ltd
+Original Assignee
+Suzhou Usiland Optoelectronic Co ltd
+Priority date (The priority date is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the date listed.)
+2020-02-18
+Filing date
+2020-02-18
+Publication date
+2020-05-08
+2020-02-18
+Application filed by Suzhou Usiland Optoelectronic Co ltd
+filed
+Critical
+Suzhou Usiland Optoelectronic Co ltd
+2020-02-18
+Priority to CN202010098925.XA
+priority
+Critical
+patent/CN111130015A/zh
+2020-03-04
+Priority to PCT/CN2020/077759
+priority
+patent/WO2021164055A1/zh
+2020-05-08
+Publication of CN111130015A
+publication
+Critical
+patent/CN111130015A/zh
+Status
+Pending
+legal-status
+Critical
+Current
+Links
+Espacenet
+Global Dossier
+Discuss
+239000000835
+fiber
+Substances
+0.000
+claims
+abstract
+description
+25
+239000013307
+optical fiber
+Substances
+0.000
+claims
+abstract
+description
+10
+230000001681
+protective effect
+Effects
+0.000
+claims
+description
+10
+239000011521
+glass
+Substances
+0.000
+claims
+description
+3
+238000000034
+method
+Methods
+0.000
+abstract
+description
+6
+230000008569
+process
+Effects
+0.000
+abstract
+description
+6
+230000009194
+climbing
+Effects
+0.000
+abstract
+description
+4
+238000006243
+chemical reaction
+Methods
+0.000
+abstract
+description
+3
+230000010354
+integration
+Effects
+0.000
+abstract
+description
+2
+230000005540
+biological transmission
+Effects
+0.000
+description
+4
+239000002184
+metal
+Substances
+0.000
+description
+3
+230000001174
+ascending effect
+Effects
+0.000
+description
+2
+230000004888
+barrier function
+Effects
+0.000
+description
+2
+230000006378
+damage
+Effects
+0.000
+description
+2
+238000010586
+diagram
+Methods
+0.000
+description
+2
+244000144972
+livestock
+Species
+0.000
+description
+2
+230000003287
+optical effect
+Effects
+0.000
+description
+2
+239000004033
+plastic
+Substances
+0.000
+description
+2
+230000009286
+beneficial effect
+Effects
+0.000
+description
+1
+238000004140
+cleaning
+Methods
+0.000
+description
+1
+230000034994
+death
+Effects
+0.000
+description
+1
+231100000517
+death
+Toxicity
+0.000
+description
+1
+230000007547
+defect
+Effects
+0.000
+description
+1
+239000004744
+fabric
+Substances
+0.000
+description
+1
+230000006872
+improvement
+Effects
+0.000
+description
+1
+239000012212
+insulator
+Substances
+0.000
+description
+1
+230000016507
+interphase
+Effects
+0.000
+description
+1
+230000004048
+modification
+Effects
+0.000
+description
+1
+238000012986
+modification
+Methods
+0.000
+description
+1
+230000009467
+reduction
+Effects
+0.000
+description
+1
+Images
+Classifications
+H
+—
+ELECTRICITY
+H02
+—
+GENERATION; CONVERSION OR DISTRIBUTION OF ELECTRIC POWER
+H02G
+—
+INSTALLATION OF ELECTRIC CABLES OR LINES, OR OF COMBINED OPTICAL AND ELECTRIC CABLES OR LINES
+H02G1/00
+—
+Methods or apparatus specially adapted for installing, maintaining, repairing or dismantling electric cables or lines
+H02G1/02
+—
+Methods or apparatus specially adapted for installing, maintaining, repairing or dismantling electric cables or lines for overhead lines or cables
+H
+—
+ELECTRICITY
+H02
+—
+GENERATION; CONVERSION OR DISTRIBUTION OF ELECTRIC POWER
+H02G
+—
+INSTALLATION OF ELECTRIC CABLES OR LINES, OR OF COMBINED OPTICAL AND ELECTRIC CABLES OR LINES
+H02G7/00
+—
+Overhead installations of electric lines or cables
+H02G7/16
+—
+Devices for removing snow or ice from lines or cables
+Landscapes
+Optical Couplings Of Light Guides
+(
+AREA
+)
+Lasers
+(
+AREA
+)
+Abstract
+本发明公开了一种激光除障仪，包括光纤激光器、控制云台、三脚架、瞄准控制器、电池组、电源线、激光发射器和无线遥控，光纤激光器通过光纤与激光发射器连接，电池组通过电源线与光纤激光器连接，激光发射器通过快装板固定在控制云台上。本发明激光除障仪，可以远程、“地对空”进行作业，除冰过程无需接触，过程安全，取代了登高梯，人工攀爬等需要接触式操作的方式，且可带电作业，减少断电带来的经济损失，采用光纤激光器，电光转换效率高、整机的耗电功率低，集成化程度高，采用目标显示、方向控制与激光控制集成一体的遥控键盘进行瞄准、云台方向调节、激光功率调节和出光控制，极大的降低了的操作人员的工作安全风险。
+Description
+一种激光除障仪
+技术领域
+本发明涉及架空输电线路异物清理领域，具体为一种激光除障仪。
+背景技术
+目前，输配电线路绝大部分是由无绝缘层保护的裸金属线，通过绝缘子固定到杆塔上，实现电能传输。但是，广告条幅、塑料布、塑料袋、风筝、风筝线、钓鱼线等异物很容易缠绕到裸露的金属导线上，一旦此类漂浮性的异物受雨、雪、雾、露浸湿，极易造成金属导线相间短路或者单相接地等故障，从而导致跳闸造成供电中断、输电线路损坏，在人畜可接触位置的异物，则有可能造成人畜伤亡。因此我们对此做出改进，提出一种激光除障仪。
+发明内容
+为解决现有技术存在的缺陷，本发明提供一种激光除障仪。
+为了解决上述技术问题，本发明提供了如下的技术方案：
+本发明一种激光除障仪，包括光纤激光器、控制云台、三脚架、瞄准控制器、电池组、电源线、激光发射器和无线遥控，所述光纤激光器通过光纤与激光发射器连接，所述电池组通过电源线与光纤激光器连接，所述激光发射器通过快装板固定在控制云台上，所述三脚架的其中一个支脚上设置有用于光纤穿过的限位环，所述光纤激光器安装在防爆箱中，所述防爆箱的正面设置有收纳盒，所述收纳盒正面的两侧分别相对滑动设置有推拉盖，两个所述推拉盖分别通过相对端面上设有的相吸的磁石吸附固定。
+作为本发明的一种优选技术方案，所述光纤激光器的一侧安装有空气开关，所述光纤激光器的一边侧设置有电源插孔，所述无线遥控用于控制光纤激光器输出功率。
+作为本发明的一种优选技术方案，所述瞄准控制器，包括壳体、显示屏和操作按键，所述瞄准控制器底部接有电缆线，所述显示屏嵌入在壳体上部，所述软胶操作按键装在壳体中，所述显示屏工作时中间有标识十字线。
+作为本发明的一种优选技术方案，所述激光发射器包括外壳、支架、激光准直器、第一反射镜、固定座、第二反射镜、保护镜、相机和滤光镜。
+作为本发明的一种优选技术方案，所述激光准直器和相机均置于外壳内并平行安装在支架上，所述第一反射镜通过可调螺丝安装在固定座上，所述固定座紧固在支架上。
+作为本发明的一种优选技术方案，所述第一反射镜与激光准直器出射光成度安装，所述第二反射镜和第一反射镜平行安装在相机的正前方，所述保护镜安装在第二反射镜出光口位置，所述滤光镜装在相机和第二反射镜之间。
+作为本发明的一种优选技术方案，所述相机为30倍变焦可见光相机。
+作为本发明的一种优选技术方案，所述保护镜和出射光成10-15度角安装。
+本发明的有益效果是：该种激光除障仪，可以远程、“地对空”进行作业，除冰过程无需接触，过程安全，取代了登高梯，人工攀爬等需要接触式操作的方式，且可带电作业，减少断电带来的经济损失，采用光纤激光器，电光转换效率高、整机的耗电功率低，集成化程度高，采用目标显示、方向控制与激光控制集成一体的遥控键盘进行瞄准、云台方向调节、激光功率调节和出光控制，极大的降低了的操作人员的工作安全风险，并提高了工作效率。
+附图说明
+附图用来提供对本发明的进一步理解，并且构成说明书的一部分，与本发明的实施例一起用于解释本发明，并不构成对本发明的限制。在附图中：
+图1是本发明一种激光除障仪的结构示意图；
+图2是本发明一种激光除障仪的瞄准控制器结构示意图；
+图3是本发明一种激光除障仪的激光发射器结构示意图；
+图4是本发明一种激光除障仪的光路图。
+图中：1、光纤激光器；2、控制云台；3、三脚架；4、瞄准控制器；401、壳体；402、显示屏；403、操作按键；5、电池组；6、电源线；7、激光发射器；701、外壳；702、支架；703、激光准直器；704、第一反射镜；705、第二反射镜；706、保护镜；707、相机；708、滤光镜；8、限位环；9、无线遥控；10、防爆箱；11、收纳盒。
+具体实施方式
+以下结合附图对本发明的优选实施例进行说明，应当理解，此处所描述的优选实施例仅用于说明和解释本发明，并不用于限定本发明。
+实施例：如图1、图2、图3和图4所示，本发明一种激光除障仪，包括光纤激光器1、控制云台2、三脚架3、瞄准控制器4、电池组5、电源线6、激光发射器7和无线遥控9，光纤激光器1通过光纤与激光发射器7连接，电池组5通过电源线6与光纤激光器1连接，激光发射器7通过快装板固定在控制云台2上，三脚架3的其中一个支脚上设置有用于光纤穿过的限位环8，光纤激光器1安装在防爆箱10中，防爆箱10的正面设置有收纳盒11，收纳盒11正面的两侧分别相对滑动设置有推拉盖，两个推拉盖分别通过相对端面上设有的相吸的磁石吸附固定。
+其中，光纤激光器1的一侧安装有空气开关，光纤激光器1的一边侧设置有电源插孔，无线遥控9用于控制光纤激光器1输出功率。
+其中，瞄准控制器4，包括壳体401、显示屏402和操作按键403，瞄准控制器4底部接有电缆线，显示屏402嵌入在壳体401上部，软胶操作按键403装在壳体401中，显示屏402工作时中间有标识十字线。
+其中，激光发射器7包括外壳701、支架702、激光准直器703、第一反射镜704、固定座、第二反射镜705、保护镜706、相机707和滤光镜708，激光准直器703和相机707均置于外壳701内并平行安装在支架702上，第一反射镜704通过可调螺丝安装在固定座上，固定座紧固在支架702上，第一反射镜704与激光准直器703出射光成45度安装，第二反射镜705和第一反射镜704平行安装在相机707的正前方，保护镜706安装在第二反射镜705出光口位置，滤光镜708装在相机707和第二反射镜705之间，相机707为30倍变焦可见光相机，保护镜706和出射光成10-15度角安装。
+工作原理：该种激光除障仪，可以远程、“地对空”进行作业，除冰过程无需接触，过程安全，取代了登高梯，人工攀爬等需要接触式操作的方式，且通过设有的电池组5，可以实现带电作业，减少断电带来的经济损失，采用光纤激光器1，电光转换效率高、整机的耗电功率低，集成化程度高，采用目标显示、方向控制与激光控制集成一体的遥控操作按键403进行瞄准、通过控制云台2进行方向调节、通过无线遥控9对激光功率调节和出光控制，极大的降低了的操作人员的工作安全风险，并提高了工作效率。
+在本发明的描述中，需要说明的是，术语“竖直”、“上”、“下”、“水平”等指示的方位或位置关系为基于附图所示的方位或位置关系，仅是为了便于描述本发明和简化描述，而不是指示或暗示所指的装置或元件必须具有特定的方位、以特定的方位构造和操作，因此不能理解为对本发明的限制。
+在本发明的描述中，还需要说明的是，除非另有明确的规定和限定，术语“设置”、“安装”、“相连”、“连接”应做广义理解，例如，可以是固定连接，也可以是可拆卸连接，或一体地连接；可以是机械连接，也可以是电连接；可以是直接相连，也可以通过中间媒介间接相连，可以是两个元件内部的连通。对于本领域的普通技术人员而言，可以根据具体情况理解上述术语在本发明中的具体含义。
+最后应说明的是：以上所述仅为本发明的优选实施例而已，并不用于限制本发明，尽管参照前述实施例对本发明进行了详细的说明，对于本领域的技术人员来说，其依然可以对前述各实施例所记载的技术方案进行修改，或者对其中部分技术特征进行等同替换。凡在本发明的精神和原则之内，所作的任何修改、等同替换、改进等，均应包含在本发明的保护范围之内。
+Claims (
+8
+)
+1.一种激光除障仪，其特征在于，包括光纤激光器(1)、控制云台(2)、三脚架(3)、瞄准控制器(4)、电池组(5)、电源线(6)、激光发射器(7)和无线遥控(9)，所述光纤激光器(1)通过光纤与激光发射器(7)连接，所述电池组(5)通过电源线(6)与光纤激光器(1)连接，所述激光发射器(7)通过快装板固定在控制云台(2)上，所述三脚架(3)的其中一个支脚上设置有用于光纤穿过的限位环(8)，所述光纤激光器(1)安装在防爆箱(10)中，所述防爆箱(10)的正面设置有收纳盒(11)，所述收纳盒(11)正面的两侧分别相对滑动设置有推拉盖，两个所述推拉盖分别通过相对端面上设有的相吸的磁石吸附固定。
+2.根据权利要求1所述的一种激光除障仪，其特征在于，所述光纤激光器(1)的一侧安装有空气开关，所述光纤激光器(1)的一边侧设置有电源插孔，所述无线遥控(9)用于控制光纤激光器(1)输出功率。
+3.根据权利要求1所述的一种激光除障仪，其特征在于，所述瞄准控制器(4)，包括壳体(401)、显示屏(402)和操作按键(403)，所述瞄准控制器(4)底部接有电缆线，所述显示屏(402)嵌入在壳体(401)上部，所述软胶操作按键(403)装在壳体(401)中，所述显示屏(402)工作时中间有标识十字线。
+4.根据权利要求1所述的一种激光除障仪，其特征在于，所述激光发射器(7)包括外壳(701)、支架(702)、激光准直器(703)、第一反射镜(704)、固定座、第二反射镜(705)、保护镜(706)、相机(707)和滤光镜(708)。
+5.根据权利要求4所述的一种激光除障仪，其特征在于，所述激光准直器(703)和相机(707)均置于外壳(701)内并平行安装在支架(702)上，所述第一反射镜(704)通过可调螺丝安装在固定座上，所述固定座紧固在支架(702)上。
+6.根据权利要求5所述的一种激光除障仪，其特征在于，所述第一反射镜(704)与激光准直器(703)出射光成45度安装，所述第二反射镜(705)和第一反射镜(704)平行安装在相机(707)的正前方，所述保护镜(706)安装在第二反射镜(705)出光口位置，所述滤光镜(708)装在相机(707)和第二反射镜(705)之间。
+7.根据权利要求6所述的一种激光除障仪，其特征在于，所述相机(707)为30倍变焦可见光相机。
+8.根据权利要求7所述的一种激光除障仪，其特征在于，所述保护镜(706)和出射光成10-15度角安装。
+CN202010098925.XA
+2020-02-18
+2020-02-18
+一种激光除障仪
+Pending
+CN111130015A
+(
+zh
+)
+Priority Applications (2)
+Application Number
+Priority Date
+Filing Date
+Title
+CN202010098925.XA
+CN111130015A
+(
+zh
+)
+2020-02-18
+2020-02-18
+一种激光除障仪
+PCT/CN2020/077759
+WO2021164055A1
+(
+zh
+)
+2020-02-18
+2020-03-04
+一种激光除障仪
+Applications Claiming Priority (1)
+Application Number
+Priority Date
+Filing Date
+Title
+CN202010098925.XA
+CN111130015A
+(
+zh
+)
+2020-02-18
+2020-02-18
+一种激光除障仪
+Publications (1)
+Publication Number
+Publication Date
+CN111130015A
+true
+CN111130015A
+              (
+zh
+)
+2020-05-08
+Family
+ID=70492960
+Family Applications (1)
+Application Number
+Title
+Priority Date
+Filing Date
+CN202010098925.XA
+Pending
+CN111130015A
+(
+zh
+)
+2020-02-18
+2020-02-18
+一种激光除障仪
+Country Status (2)
+Country
+Link
+CN
+(
+1
+)
+CN111130015A
+(
+zh
+)
+WO
+(
+1
+)
+WO2021164055A1
+(
+zh
+)
+Cited By (2)
+* Cited by examiner, † Cited by third party
+Publication number
+Priority date
+Publication date
+Assignee
+Title
+CN111641156A
+(
+zh
+)
+*
+2020-06-03
+2020-09-08
+国网山西省电力公司经济技术研究院
+一种用于架空线路爆破除冰机械敷设导爆索专用夹持金具
+CN111707158A
+(
+zh
+)
+*
+2020-07-07
+2020-09-25
+中国人民解放军32181部队
+便携式未爆弹激光销毁装置
+Families Citing this family (5)
+* Cited by examiner, † Cited by third party
+Publication number
+Priority date
+Publication date
+Assignee
+Title
+CN113794153B
+(
+zh
+)
+*
+2021-09-10
+2023-02-17
+国网山东省电力公司金乡县供电公司
+一种高压线路异物清除装置及方法
+CN114336408B
+(
+zh
+)
+*
+2021-12-30
+2024-07-26
+北京北创芯通科技有限公司
+一种吊舱式线路异物远程清除装置
+CN116806568A
+(
+zh
+)
+*
+2023-04-09
+2023-09-29
+国网黑龙江省电力有限公司大兴安岭供电公司
+输配电线路树木激光清除装置
+CN116632718B
+(
+zh
+)
+*
+2023-05-31
+2023-11-14
+南通斯派特激光科技有限公司
+一种智能调焦激光清障仪
+CN121395179B
+(
+zh
+)
+*
+2025-12-24
+2026-02-17
+国网黑龙江省电力有限公司大兴安岭供电公司
+适用于高寒地区的输电线路远距离激光除冰方法
+Citations (5)
+* Cited by examiner, † Cited by third party
+Publication number
+Priority date
+Publication date
+Assignee
+Title
+CN105226569A
+(
+zh
+)
+*
+2015-11-13
+2016-01-06
+江苏省电力公司电力科学研究院
+一种便携式架空线路异物激光清除装置及其使用方法
+CN206673456U
+(
+zh
+)
+*
+2017-04-18
+2017-11-24
+江苏省电力试验研究院有限公司
+一种基于二氧化碳激光器的输电线路异物激光清除装置
+CN108393589A
+(
+zh
+)
+*
+2018-04-25
+2018-08-14
+上海西邦电气有限公司
+一种激光清障系统的瞄准装置及使用方法
+CN207753375U
+(
+zh
+)
+*
+2017-12-22
+2018-08-21
+国网江苏省电力有限公司苏州供电分公司
+一种可夜视的电网异物激光清除仪
+CN208707194U
+(
+zh
+)
+*
+2018-08-17
+2019-04-05
+中科光绘（上海）科技有限公司
+一种激光异物安全清除装置
+Family Cites Families (2)
+* Cited by examiner, † Cited by third party
+Publication number
+Priority date
+Publication date
+Assignee
+Title
+JP2003290943A
+(
+ja
+)
+*
+2002-03-29
+2003-10-14
+Keyence Corp
+レーザマーカを用いた被覆電線の被覆カット装置及び方法
+CN106532567A
+(
+zh
+)
+*
+2017-01-11
+2017-03-22
+国网江苏省电力公司电力科学研究院
+基于光纤激光器的架空线路异物激光清除装置
+2020
+2020-02-18
+CN
+CN202010098925.XA
+patent/CN111130015A/zh
+active
+Pending
+2020-03-04
+WO
+PCT/CN2020/077759
+patent/WO2021164055A1/zh
+not_active
+Ceased
+Patent Citations (5)
+* Cited by examiner, † Cited by third party
+Publication number
+Priority date
+Publication date
+Assignee
+Title
+CN105226569A
+(
+zh
+)
+*
+2015-11-13
+2016-01-06
+江苏省电力公司电力科学研究院
+一种便携式架空线路异物激光清除装置及其使用方法
+CN206673456U
+(
+zh
+)
+*
+2017-04-18
+2017-11-24
+江苏省电力试验研究院有限公司
+一种基于二氧化碳激光器的输电线路异物激光清除装置
+CN207753375U
+(
+zh
+)
+*
+2017-12-22
+2018-08-21
+国网江苏省电力有限公司苏州供电分公司
+一种可夜视的电网异物激光清除仪
+CN108393589A
+(
+zh
+)
+*
+2018-04-25
+2018-08-14
+上海西邦电气有限公司
+一种激光清障系统的瞄准装置及使用方法
+CN208707194U
+(
+zh
+)
+*
+2018-08-17
+2019-04-05
+中科光绘（上海）科技有限公司
+一种激光异物安全清除装置
+Cited By (3)
+* Cited by examiner, † Cited by third party
+Publication number
+Priority date
+Publication date
+Assignee
+Title
+CN111641156A
+(
+zh
+)
+*
+2020-06-03
+2020-09-08
+国网山西省电力公司经济技术研究院
+一种用于架空线路爆破除冰机械敷设导爆索专用夹持金具
+CN111707158A
+(
+zh
+)
+*
+2020-07-07
+2020-09-25
+中国人民解放军32181部队
+便携式未爆弹激光销毁装置
+CN111707158B
+(
+zh
+)
+*
+2020-07-07
+2023-01-24
+中国人民解放军32181部队
+便携式未爆弹激光销毁装置
+Also Published As
+Publication number
+Publication date
+WO2021164055A1
+(
+zh
+)
+2021-08-26
+Similar Documents
+Publication
+Publication Date
+Title
+WO2021164055A1
+(
+zh
+)
+2021-08-26
+一种激光除障仪
+CN105977866A
+(
+zh
+)
+2016-09-28
+远距离激光清障系统
+WO2020108321A1
+(
+zh
+)
+2020-06-04
+一种输电线路异物激光清除仪
+CN109193449A
+(
+zh
+)
+2019-01-11
+一种智能便携式激光清障仪
+CN110401138A
+(
+zh
+)
+2019-11-01
+一种大功率无水冷小型化激光清障设备及其使用方法
+CN116806568A
+(
+zh
+)
+2023-09-29
+输配电线路树木激光清除装置
+CN108988201A
+(
+zh
+)
+2018-12-11
+激光清障装置
+CN209056850U
+(
+zh
+)
+2019-07-02
+一种激光清障装置
+CN208174133U
+(
+zh
+)
+2018-11-30
+激光清障装置
+CN208862470U
+(
+zh
+)
+2019-05-14
+一种用于架空线路远程激光清障器的发射头
+CN222452544U
+(
+zh
+)
+2025-02-11
+一种系留无人机照明系统
+CN210490267U
+(
+zh
+)
+2020-05-08
+一种智能化的激光清障仪
+CN104832864B
+(
+zh
+)
+2019-08-09
+一种太阳能低光强航空障碍灯
+CN107834430A
+(
+zh
+)
+2018-03-23
+一种直流供电的远距离激光清障系统
+CN208923725U
+(
+zh
+)
+2019-05-31
+一种输电线路异物激光清除仪
+CN208174134U
+(
+zh
+)
+2018-11-30
+一种电力系统用激光清障器
+CN213476699U
+(
+zh
+)
+2021-06-18
+一种智能安防监控立杆
+KR102034931B1
+(
+ko
+)
+2019-10-21
+항공 장애 표시등 제어장치
+CN209881226U
+(
+zh
+)
+2019-12-31
+一种架空线激光清障系统
+CN108321723A
+(
+zh
+)
+2018-07-24
+一种便携式远距离激光清障装备及其使用方法
+CN223567187U
+(
+zh
+)
+2025-11-18
+一种用于配网线路的自动清障装置及激光清障智能系统
+CN108963868A
+(
+zh
+)
+2018-12-07
+激光清障装置
+CN206981346U
+(
+zh
+)
+2018-02-09
+一体化二氧化碳激光清障机
+CN114162320A
+(
+zh
+)
+2022-03-11
+长航时激光清除树障式无人机及其使用方法
+CN208028482U
+(
+zh
+)
+2018-10-30
+一种便携式远距离激光清障装备
+Legal Events
+Date
+Code
+Title
+Description
+2020-05-08
+PB01
+Publication
+2020-05-08
+PB01
+Publication
+2020-06-02
+SE01
+Entry into force of request for substantive examination
+2020-06-02
+SE01
+Entry into force of request for substantive examination
+2022-01-28
+RJ01
+Rejection of invention patent application after publication
+Application publication date
+:
+20200508
+2022-01-28
+RJ01
+Rejection of invention patent application after publication

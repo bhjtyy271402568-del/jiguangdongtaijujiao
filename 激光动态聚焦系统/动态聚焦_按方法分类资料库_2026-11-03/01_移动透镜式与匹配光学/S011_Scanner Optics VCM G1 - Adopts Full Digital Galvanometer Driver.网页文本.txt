@@ -1,0 +1,402 @@
+来源：https://ar.scanneroptics.com/products/scanner-optics-vcm-g1/
+采集日期：2026-11-03
+
+Scanner Optics VCM G1 - Adopts Full Digital Galvanometer Driver
+EN
+English
+日本語
+한국어
+français
+Deutsch
+Español
+italiano
+русский
+português
+tiếng việt
+Search
+Home
+Products
+Galvo Scanners
+Galvo Scan Heads
+Galvo Scanning Solutions
+Dynamic Focusing Module
+Laser Optics
+Laser Control Card
+Optical Encoders
+Brushless Motors
+Applications
+Laser Welding
+Laser Marking
+Laser Drilling
+Laser Cutting
+Micromachining
+Medical Aesthetic
+Ophthalmic Imaging
+3D Printing
+Lithium Battery
+Laser Cleaning
+Resources
+Document Download
+Software Download
+FAQ
+Video
+Installation
+Services
+Company
+Company Profile
+Our History
+News
+Blog
+Company News
+Exhibitions & Events
+Industry News
+Contact
+Home
+Products
+Galvo Scanners
+Galvo Scan Heads
+Galvo Scanning Solutions
+Dynamic Focusing Module
+Laser Optics
+Laser Control Card
+Optical Encoders
+Brushless Motors
+Applications
+Laser Welding
+Laser Marking
+Laser Drilling
+Laser Cutting
+Micromachining
+Medical Aesthetic
+Ophthalmic Imaging
+3D Printing
+Lithium Battery
+Laser Cleaning
+Resources
+Document Download
+Software Download
+FAQ
+Video
+Installation
+Services
+Company
+Company Profile
+Our History
+News
+Blog
+Company News
+Exhibitions & Events
+Industry News
+Contact
+Contact Us
+Join Our Team
+Email Us
+
+EMAIL US
+sales@scanneroptics.com
+
+CALL US
++86-755-23041055
+
+en
+zh-CN
+English
+日本語
+한국어
+français
+Deutsch
+Español
+italiano
+русский
+português
+tiếng việt
+Home
+Products
+Galvo Scanners
+Ultra-Galvo Scanner
+Extra-Galvo Scanner
+ST-Galvo Scanner
+Analog Galvo Driver
+Digital Galvo Driver
+Galvo Scan Heads
+2-Axis Galvo Scan Head
+3-Axis Galvo Scan Head
+Galvo Scanning Solutions
+Laser Welding Systems
+4-Axis Large Field Processing System
+Laser Micromachining System
+Polygon Scanner
+Laser Projection System
+Fractional Galvanometer
+Dynamic Focusing Module
+VCM F1
+VCM G1
+VCM Z
+Laser Optics
+F-Theta Lenses
+Beam Expander
+Collimation Module
+Laser Protective Lens
+Laser Control Card
+Laser Marking Card
+ScanWorld Software
+Optical Encoders
+Optical Rotary Encoder
+Optical Linear Encoder
+Brushless Motors
+Coreless Brushless DC Motor
+Applications
+Laser Welding
+Laser Marking
+Laser Drilling
+Laser Cutting
+Micromachining
+Medical Aesthetic
+Ophthalmic Imaging
+3D Printing
+Lithium Battery
+Laser Cleaning
+Resources
+Document Download
+Software Download
+FAQ
+Video
+Installation
+Services
+Company
+Company Profile
+Our History
+News
+Blog
+Company News
+Exhibitions & Events
+Industry News
+Contact
+Contact Us
+Join Our Team
+
+
+Home
+Products
+Dynamic Focusing Module
+VCM G1
+VCM G1
+VCM G1 adopts full digital galvanometer driver, digital driver board of basic FPGA, stable performance, not easy to be disturbed, flexible to use, easy to debug. Modular design, easy to assemble. According to customer requirements, we can choose lenses with different aperture, high positioning accuracy and small drift. Mainly used for dynamic focusing, can be combined with the
+laser scanner head
+to form 3D modules, widely used in 3D marking, 3D printing, large area processing and other laser marking applications.
+GET A QUOTE
+Key Features Of VCM G1
+The VCM G1 adopts a new mechanical design that cleverly converts the rotary motion of the galvanometer into linear motion
+The dynamic following error is less than 1.5ms, and the response speed is improved by more than 50% compared to traditional voice coil motors
+All-digital motor drive scheme, stable performance
+Products
+Galvo Scanners
++
+-
+Ultra-Galvo Scanner
+Extra-Galvo Scanner
+ST-Galvo Scanner
+Analog Galvo Driver
+Digital Galvo Driver
+Galvo Scan Heads
++
+-
+2-Axis Galvo Scan Head
+UltraScan Head
+ExtraScan Head
+UltraScan II GS Galvo Head
+Economy Galvo Laser Head
+3-Axis Galvo Scan Head
+3D Large Area Laser Processing System
+High Speed 3D & 2.5D Scanning System 14mm
+3D Laser Scanning Head
+Galvo Scanning Solutions
++
+-
+Laser Welding Systems
+Thunder High Power Welding System
+Thunder Medium Power  Welding System
+Remote 3D Laser Welding System
+Wobble Welding Head
+4-Axis Large Field Processing System
+Laser Micromachining System
+Polygon Scanner
+Laser Projection System
+Fractional Galvanometer
+Dynamic Focusing Module
++
+-
+VCM F1
+VCM G1
+VCM Z
+Laser Optics
++
+-
+F-Theta Lenses
+Green Laser F-Theta Lens
+UV Laser F-Theta Lens
+Infrared Laser F-Theta Lens
+Infrared Laser High (Medium) Power F-Theta Lens
+Beam Expander
+Collimation Module
+Laser Protective Lens
+Laser Control Card
++
+-
+Laser Marking Card
+ScanWorld Software
+Optical Encoders
++
+-
+Optical Rotary Encoder
+Optical Linear Encoder
+Brushless Motors
++
+-
+Coreless Brushless DC Motor
+Download
+G2 Installation Dimensions(10mm Lens)
+
+
+Leave a Message
+*
+*
+*
+*
+*
+SUBMIT
+Specifications Of VCM G1
+VCM G1
+Input Beam Aperture（mm）
+≤16
+Output Beam Aperture（mm）
+/
+Travel Length（mm）
+9
+Tracking Error（ms）
+1.5
+Typical Speed (mm/s)
+≤100
+Focus speed（m/s）
+/
+Repeatability (μm)
+＜2
+Nonlinearity（%）
+2
+Long-Term Drift Over 8 hours (μm)
+＜10
+Power Requirement
+±15VDC, ≥3A
+Digital Interface
+XY2-100
+Operation Temperature（℃）
+25±10
+Galvanometer Applications
+Laser Welding
+Laser Marking
+Laser Drilling
+Laser Cutting
+Micromachining
+Medical Aesthetic
+Ophthalmic Imaging
+3D Printing
+Lithium Battery
+Laser Cleaning
+Please Contact Us!
+LEARN MORE ABOUT SCANNER OPTICS GALVANOMETER PRODUCTS
+Contact Scanner Optics
+Related Dynamic Focusing Module
+VCM F1
+VCM Z
+Scanner Optics News & Blogs
+Laser Spot Size: Calculation and Key Factors
+Oct 23 2026
+Read More
+Laser Processing Applications in Lithium Battery Manufacturing
+Sep 12 2026
+Read More
+Contact
+
+Tel: +86-755-23041055
+
+E-mail: sales@scanneroptics.com
+
+Add:
+Building B2&B10, Taohuayuan Science and Technology Innovation Park, Xixiang, Bao'an, Shenzhen, China.
+Products
+Galvo Scanners
+Galvo Scan Heads
+Galvo Scanning Solutions
+Dynamic Focusing Module
+Laser Optics
+Laser Control Card
+Optical Encoders
+Brushless Motors
+Applications
+Laser Welding
+Laser Marking
+Laser Drilling
+Laser Cutting
+Micromachining
+Medical Aesthetic
+Ophthalmic Imaging
+3D Printing
+Lithium Battery
+Laser Cleaning
+Company
+Company Profile
+Our History
+Quick Links
+Company News
+Blog
+Resources
+Services
+Installation
+Global Leader Of Optical Scanning System Solutions
+Learn More
+Copyright ©
+Scanner Optics Co., Ltd.
+All Rights Reserved.
+Sitemap
+Privacy Policy
+Products
+Galvo Scanners
+Galvo Scan Heads
+Galvo Scanning Solutions
+Dynamic Focusing Module
+Laser Optics
+Laser Control Card
+Optical Encoders
+Brushless Motors
+Applications
+Laser Welding
+Laser Marking
+Laser Drilling
+Laser Cutting
+Micromachining
+Medical Aesthetic
+Ophthalmic Imaging
+3D Printing
+Lithium Battery
+Laser Cleaning
+Company
+Company Profile
+Our History
+Quick Links
+Document Download
+Software Download
+FAQ
+Video
+Installation
+Services
+News
+Contact
+Building B2&B10, Taohuayuan Science and Technology Innovation Park, Xixiang, Bao'an, Shenzhen, China.
+sales@scanneroptics.com
++86-755-23041055
+Copyright ©
+Scanner Optics Co., Ltd.
+All Rights Reserved.
+Sitemap
+Privacy Policy
++86-755-23041055

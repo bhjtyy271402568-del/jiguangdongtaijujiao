@@ -1,0 +1,20 @@
+{
+  "id": "S001",
+  "url": "https://diposit.ub.edu/dspace/bitstream/2445/192696/1/704304.pdf",
+  "category": "08_综述与光学基础",
+  "origins": [
+    "补充检索_原文提及条目及有效替代入口"
+  ],
+  "context": "Variable optical elements for fast focus control_机构库作者稿",
+  "title": "Variable optical elements for fast focus control_机构库作者稿",
+  "files": [],
+  "attempts": [
+    {
+      "url": "https://diposit.ub.edu/dspace/bitstream/2445/192696/1/704304.pdf",
+      "http": 404,
+      "final_url": "https://diposit.ub.edu/dspace/bitstream/2445/192696/1/704304.pdf",
+      "error": "404 Client Error: Not found for url: https://diposit.ub.edu/dspace/bitstream/2445/192696/1/704304.pdf"
+    }
+  ],
+  "status": "未获取"
+}

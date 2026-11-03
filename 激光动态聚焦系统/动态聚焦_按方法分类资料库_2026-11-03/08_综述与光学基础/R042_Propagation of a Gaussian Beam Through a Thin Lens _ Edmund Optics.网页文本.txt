@@ -1,0 +1,1428 @@
+来源：https://www.edmundoptics.com/knowledge-center/application-notes/lasers/gaussian-beam-propagation/
+采集日期：2026-11-03
+
+Propagation of a Gaussian Beam Through a Thin Lens | Edmund Optics
+How may I help you?
+Engineers are available to assist.
+Chat Now
+Our operators are not available at the moment.
+Leave a message
+My Account
+Log In
+New to Edmund Optics
+®
+?
+Register
+.
+0
+Cart
+Manufacturing
+Custom and volume optical manufacturing with the expertise to guide you:
+PRECISION
+OPTICS
+by EDMUND
+OPTICAL
+FILTERS
+by EDMUND
+LASER
+OPTICS
+by EDMUND
+IMAGING
+OPTICS
+by EDMUND
+Learn
+Company
+About Us
+Events & Trade Shows
+Our Locations
+Careers
+Catalogs
+Sustainability
+Edmund Outreach
+Contact Us
+Leadership
+Compliance
+Discounts/Programs
+Press Releases
+AMPLIFY
+English
+Select Your Language:
+English
+简体中文
+日本語
+한국어
+繁體中文
+Deutsch
+Français
+USD
+Select Your Currency:
+USD
+GBP
+EUR
+JPY
+SGD
+KRW
+RMB
+TWD
+AUD
+INR
+CAD
+Can't find your local currency? Visit our
+Contact Us
+page for pricing guidance.
+Contact Us
+Shop
+Shop by Category
+Optics
+Back
+View All Optics
+Optical Lenses
+View All
+Achromatic Lenses
+Aspheric Lenses
+Plano-Convex (PCX) Lenses
+Double-Convex (DCX) Lenses
+Plano-Concave (PCV) Lenses
+Double-Concave (DCV) Lenses
+Cylinder Lenses
+Laser Lenses
+Infrared (IR) Lenses
+UV Lenses
+Ball and Condenser Lenses
+Fresnel Lenses
+Focus Tunable Lenses
+Light Pipes and Homogenizing Rods
+Specialty Lenses
+Lens Kits
+Optical Mirrors
+View All
+Flat Mirrors
+Off-Axis Mirrors
+Nd:YAG Laser Mirrors
+Broadband Dielectric Mirrors
+Laser Line Mirrors
+Ultrafast Laser Mirrors
+Focusing (Concave) Mirrors
+IR Mirrors
+Hot and Cold Mirrors
+Right Angle Prism Mirrors
+Specialty Mirrors
+Windows and Diffusers
+View All
+Visible Windows
+UV and IR Windows
+Laser Windows
+Interferometry Windows
+Specialty Windows
+Optical Diffusers
+Optical Filters
+View All
+Bandpass Filters
+Longpass Filters
+Shortpass Filters
+Notch Filters
+Neutral Density (ND) Filters
+Color and Absorptive Filters
+Dichroic Filters
+Machine Vision Filters
+Fluorescence Filters
+Polarization Optics
+View All
+Linear Polarizers
+Circular Polarizers
+Depolarizers
+Retarders (Waveplates)
+Polarizing Beamsplitters
+Polarization Testing
+Optomechanics for Polarizers
+Beamsplitters
+View All
+Plate Beamsplitters
+Cube Beamsplitters
+Polarizing Beamsplitters
+Non-Polarizing Beamsplitters
+Laser Beamsplitters
+Prisms
+View All
+Right Angle Prisms
+Dispersion Prisms
+Penta Prisms
+Image Rotation Prisms
+Light Pipes and Homogenizing Rods
+Mounted Prisms
+Retroreflection Prisms
+Specialty Prisms
+Diffraction Gratings
+View All
+Ruled Reflective Diffraction Gratings
+Holographic Reflective Diffraction Gratings
+Echelle Reflective Gratings
+Concave Diffraction Gratings
+Transmissive Diffraction Gratings
+Specialty Gratings
+Optical Assemblies
+View All
+Optical Kits
+C-Mount Optical Components
+Laser Optic Assemblies
+Alignment and Testing Accessories
+SCHOTT Optical Components
+Infrared Optics
+View All
+Germanium Optics
+Zinc Selenide (ZnSe) Optics
+Reflective IR Optics
+Sapphire Optics
+Silicon Optics
+Calcium Fluoride Optics
+Fused Silica Optics
+Magnesium Fluoride Optics
+Zinc Sulfide Optics
+Chalcogenides
+Other IR Materials
+IR Assemblies
+Fiber Optics
+Laser Optics
+View All
+Laser Mirrors
+Laser Lenses
+Laser Windows
+Laser Filters
+Ultrafast Optics
+Laser Beam Expanders
+Laser Optical Assemblies
+Laser Beam Shaping
+Laser Beamsplitters
+Laser Microscopy
+Crystals and Isolators
+Laser Polarization
+Laser Prisms
+New Laser Optics
+Ultrafast Optics
+View All
+Ultrafast Pulse Compression Mirrors
+Low GDD Ultrafast Mirrors
+Ultrafast Polarizers
+Ultrafast Lenses and Windows
+Ultrafast Optical Filters
+Ultrafast Harmonic Separators and Beamsplitters
+Ultrafast Laser Diagnostics
+Reflective Objectives and Beam Expanders
+Compression Prisms
+Pulse Compression Gratings
+Nonlinear Crystals
+IBS (Ion Beam Sputtering) Coated Optics
+Diffractive Optical Elements (DOE)
+Defense Optics
+View All
+COTS Assemblies
+COTS Lenses
+COTS Filters and Polarizers
+COTS Windows
+COTS Mirrors
+COTS Prisms
+COTS Beamsplitters
+COTS Testing
+New Optics
+Laser Optics
+Back
+View All Laser Optics
+Laser Mirrors
+View All
+Laser Line Mirrors
+Broadband Laser Mirrors
+Ultrafast Laser Mirrors
+Dichroic Mirrors & Harmonic Separators
+Laser Mirror Substrates
+Laser Lenses
+View All
+Plano-Convex (PCX) Laser Lenses
+Aspheric Laser Lenses
+Cylinder Laser Lenses
+Laser Focusing Assemblies
+Specialty Laser Lenses
+Laser Windows
+View All
+Laser Line Windows
+Broadband Laser Windows
+Single Surface Coated Laser Windows
+Uncoated Laser Windows
+Specialty Laser Windows
+Laser Filters
+View All
+Bandpass Laser Filters
+Longpass Edge and Dichroic Laser Filters
+Shortpass Edge and Dichroic Laser Filters
+Notch Laser Filters
+Harmonic Separators
+Neutral Density (ND) Laser Filters
+Ultrafast Optics
+View All
+Ultrafast Pulse Compression Mirrors
+Low GDD Ultrafast Mirrors
+Ultrafast Polarizers
+Ultrafast Lenses and Windows
+Ultrafast Optical Filters
+Ultrafast Harmonic Separators and Beamsplitters
+Ultrafast Laser Diagnostics
+Reflective Objectives and Beam Expanders
+Compression Prisms
+Pulse Compression Gratings
+Nonlinear Crystals
+Laser Beam Expanders
+View All
+Sill Optics Beam Expanders
+Scorpii® Beam Expanders
+Vega® Beam Expanders
+Arcturus® Beam Expanders
+Draconis® Beam Expanders
+Canopus® Beam Expanders
+Variable Beam Expanders
+CO
+2
+Beam Expanders
+Jenoptik Beam Expanders
+Laser Optical Assemblies
+View All
+Laser Beam Expanders
+Pockels Cells
+Focusing Objectives
+Beam Shapers
+Optical Isolators
+F-Theta Lenses
+Galvanometers
+Laser Beam Shaping
+Laser Beamsplitters
+Laser Microscopy
+Crystals and Isolators
+Laser Polarization
+Laser Prisms
+New Laser Optics
+Optomechanics
+Back
+View All Optomechanics
+Tube System
+View All
+Multi-Element Tube System
+C, S, and T-Mount Components
+SM Tube System
+Optical Cage System
+View All
+Cage System Optical Mounts
+Cage System Support Rods
+Cage System Plates
+Cage System Spheres
+Cage System Accessories
+Cage System Kits
+Benchtop Optical Mounts
+View All
+E-Series Kinematic Optical Mounts
+Optical Mirror Mounts
+Optical Lens and Filter Mounts
+Prism and Beamsplitter Mounts
+Polarizer Mounts
+Laser and Fiber Optic Mounts
+Benchtop System
+View All
+Optical Posts
+Optical Post Holders and Mounting Bases
+Optical Post Accessories
+Imaging Mechanics
+Benchtop Brackets and Plates
+Optical Tables and Breadboards
+View All
+Bench Plates
+Composite Breadboards
+Vibration Isolation Tables
+Laboratory Tables
+Optical Breadboard Accessories
+Motorized Stages
+View All
+Motorized Linear Translation Stages
+Motorized Vacuum Stages
+Motorized Rotary Stages
+Motorized Linear Translation Actuators
+Motorized Stages for Life Sciences
+Piezo Driven Motorized Stages
+Controllers for Motorized Stages
+Accessories for Motorized Stages
+Manual Stages and Slides
+View All
+Stages and Slides
+Accessories for Manual Stages and Slides
+Irises and Apertures
+View All
+Iris Diaphragms
+Pinholes and Slits
+Iris and Aperture Mounts
+Shutters
+Accessories
+View All
+Thread Adapters and Screws
+Tools
+Plates and Brackets
+New Optomechanics
+Microscopy
+Back
+View All Microscopy
+Edmund Optics® Objectives
+View All
+TECHSPEC® Objectives
+Reflective Objectives
+Mitutoyo Objectives
+Olympus Objectives
+Nikon Objectives
+ZEISS Objectives
+Leica Objectives
+Automated Upright Microscopes
+Infinity Corrected Objectives
+Finite Conjugate Objectives
+Reflective Objectives
+TECHSPEC® Objectives
+Microscopy Cameras
+View All
+Teledyne Photometrics Cameras
+Microscopy Lighting
+View All
+Microscopy Illumination Sources
+Fiber Optic Illuminators
+Fiber Optic Light Guides
+Microscopy Lighting Accessories
+Microscope Systems
+Microscopy Filters
+View All
+Microscopy Bandpass Filters
+Microscopy Longpass and Dichroic Edge Filters
+Microscopy Shortpass Edge Filters
+Microscopy Neutral Density (ND) Filters
+Modular Zoom Lenses
+Microscopy Targets
+Reticles and Stage Micrometers
+Microscopy Mechanics
+View All
+C, S, and T-Mount Components
+Laboratory Tables & Breadboard Components
+Posts and Post Holders
+Optical Mounts
+Linear Positioning Stages
+Eyepieces
+Relay Lenses and Couplers
+Pocket and Direct Microscopes
+Magnifiers
+View All
+Comparators
+Contact Reticles
+Handheld Magnifiers
+Linen Testers
+New Microscopy
+Lasers
+Back
+View All Lasers
+Laser Sources
+View All
+Machine Vision Lasers
+Life Science Lasers
+Metrology Lasers
+Gas Lasers
+Industrial and Pointing Lasers
+Material Processing Lasers
+Laser Measurement and Electronics
+View All
+Laser Beam Analysis
+Laser Power Meters
+EO Laser Measurement
+Infrared (IR) and Ultraviolet (UV) Viewers
+Laser Electronics
+Laser Optics
+View All
+Laser Mirrors
+Laser Lenses
+Laser Windows
+Laser Filters
+Ultrafast Optics
+Laser Beam Expanders
+Laser Optical Assemblies
+Laser Beam Shaping
+Laser Beamsplitters
+Laser Microscopy
+Crystals and Isolators
+Laser Polarization
+Laser Prisms
+New Laser Optics
+Optical Amplifiers
+Laser Safety
+View All
+Laser Safety Glasses and Goggles
+Laser Safety Windows
+Laser Protection
+Infrared (IR) and Ultraviolet (UV) Viewers
+Laser Mechanics
+Laser Accessories
+Lab and Production
+View All
+Optical Cleaning
+Component Handling Tools
+General Tools
+Optical Adhesives
+Acktar Blackened Products
+Blackout Material
+UV Lamps and Accessories
+Storage
+Lab Kits
+Laser Safety
+Magnets
+New Lab and Production
+Imaging Lenses
+Back
+View All Imaging Lenses
+Fixed Focal Length Lenses
+View All
+Fixed Focal Length Lens Selector
+Telecentric Lenses
+M12 Lenses (S-Mount Lenses)
+Zoom & Variable Magnification Lenses
+View All
+Zoom Lenses
+Zoom Lenses for High-Mag Long Working Distance
+Microscope Objectives
+View All
+Infinity Corrected Objectives
+Finite Conjugate Objectives
+Reflective Objectives
+Edmund Optics® Objectives
+TECHSPEC® Objectives
+Mitutoyo Objectives
+Olympus Objectives
+Nikon Objectives
+ZEISS Objectives
+Infinity Photo-Optical
+Liquid Lenses
+Ruggedized Lenses for Harsh Environments
+Cinema Production and Advanced Photography
+Imaging Lens Accessories
+View All
+Mounted Color Filters for Machine Vision
+Mounted UV-IR Filters for Machine Vision
+Mounted Polarizing Filters for Machine Vision
+Mounted Neutral Density Filters for Machine Vision
+Machine Vision Filter Kits
+Filter Wheels
+Threaded Filter Mounts
+Filter Thread Adapters
+Cameras
+Back
+View All Cameras
+USB Cameras
+Gigabit Ethernet Cameras
+SWIR Cameras
+Scientific Cameras
+Teledyne FLIR Cameras
+Teledyne Dalsa Cameras
+Teledyne Lumenera Microscopy Cameras
+Teledyne Photometrics Cameras
+Allied Vision Cameras
+Basler Cameras
+IDS Imaging Cameras
+LUCID Vision Labs Cameras
+Pixelink® Cameras
+JAI Cameras
+3D Cameras
+View All
+Stereo Cameras
+Time of Flight (ToF) Cameras
+Thermal Cameras
+NIR Cameras
+Line Scan Cameras
+Camera Accessories and Optomechanics
+High Speed Interface Cameras
+Analog Cameras
+FireWire Cameras
+Imaging Systems
+New Cameras
+Lights and Illumination
+Back
+View All Lights and Illumination
+Machine Vision Lighting
+View All
+Ring Lights
+Laser Light Source
+Line Lights
+Pattern Projectors
+Specialty Lights
+Bar Lights
+Backlights
+Inline Lights
+Spot Lights
+Diffuse Lights
+Flat Dome Lights
+Washdown Lights
+Machine Vision Lighting Accessories
+Microscopy Lighting
+View All
+Microscopy Illumination Sources
+Fiber Optic Illuminators
+Fiber Optic Light Guides
+Microscopy Lighting Accessories
+Spectroscopy Lighting
+Laser Sources
+View All
+Machine Vision Lasers
+Life Science Lasers
+Metrology Lasers
+Gas Lasers
+Industrial and Pointing Lasers
+Material Processing Lasers
+Other Light Sources
+Illumination Accessories
+View All
+Machine Vision Lighting Accessories
+Microscopy Lighting Accessories
+New Illumination
+Test Targets
+Back
+View All Test Targets
+Resolution Test Targets
+Distortion Test Targets
+Image Analysis & Stage Micrometers
+Color & Gray Level Test Targets
+USAF Targets
+Ronchi Rulings
+Reticles
+Testing and Detection
+Back
+View All Testing and Detection
+Optical Metrology
+Machine Vision Solutions
+Laser Measurement and Electronics
+View All
+Laser Beam Analysis
+Laser Power Meters
+EO Laser Measurement
+Infrared (IR) and Ultraviolet (UV) Viewers
+Laser Electronics
+Detectors
+Amplifiers
+Light Meters
+Spectroscopy
+View All
+Spectrometers
+Spectroscopy Lighting
+Integrating Spheres and Reflectance Standards
+Monochromators
+Probes
+Gas Cells
+Phantom Samples
+Scratch Dig and Roughness Standards
+Measurement Tools
+Active Optical Components
+New Testing and Detection
+Lab and Production
+Back
+View All Lab and Production
+Optical Cleaning
+View All
+Lens Tissue and Cloth
+Optical Cleaning Kits
+Compressed Air
+Gloves, Brushes, and Swabs
+Lens Cleaners and Pouches
+Optics Care Kit
+Component Handling Tools
+View All
+Gloves
+Pick-Up Tools
+Tweezers and Pliers
+Component Handling Kit
+General Tools
+Optical Adhesives
+Acktar Blackened Products
+Blackout Material
+UV Lamps and Accessories
+Storage
+Lab Kits
+Laser Safety
+View All
+Laser Safety Glasses and Goggles
+Laser Safety Windows
+Laser Protection
+Infrared (IR) and Ultraviolet (UV) Viewers
+Magnets
+New Lab and Production
+Shop By Application
+Back
+View All Shop By Application
+NIR Imaging
+View All
+VIS-NIR Imaging (400-1000 nm)
+NIR Phosphor-Coated Silicon Imaging (1495-1595 nm)
+Infrared and Terahertz (THz) Research
+View All
+UV and IR Windows
+Silicon Optics
+Zinc Selenide (ZnSe) Optics
+Calcium Fluoride Optics
+Wire Grid (Reflective) Polarizers
+Ultrafast Optics
+SWIR Imaging
+View All
+SWIR Cameras
+SWIR Imaging Lenses
+SWIR Illumination
+SWIR Filters
+Thermal Cameras
+Spectroscopy
+View All
+Spectrometers
+Spectroscopy Lighting
+Integrating Spheres and Reflectance Standards
+Monochromators
+Probes
+Gas Cells
+Phantom Samples
+Computational Imaging
+View All
+Polarization Optics
+Active Optical Components
+Scientific Cameras
+Galvanometers
+E-Series Kinematic Optical Mounts
+Diffractive Optical Elements (DOE)
+Irises and Apertures
+Diffraction Gratings
+Specialty Lenses
+Line Scan Imaging
+View All
+Line Lights
+Astronomical Imaging
+View All
+Image Rotation Prisms
+Polarization Optics
+Multiphoton Microscopy
+View All
+Optical Tables and Breadboards
+Life Science Lasers
+Low GDD Ultrafast Mirrors
+Dichroic Filters
+Galvanometers
+Motorized Stages for Life Sciences
+Infinity Corrected Objectives
+Detectors
+Cameras
+Quantum Technologies
+View All
+Optical Isolators
+XR | AR | MR
+View All
+Polarization Optics
+Optical Adhesives
+Specialty Windows
+Optical Diffusers
+M12 Lenses (S-Mount Lenses)
+Test Targets
+Testing and Detection
+Diffractive Optical Elements (DOE)
+Laser Material Processing
+View All
+Laser Beam Analysis
+Material Processing Lasers
+Laser Beam Expanders
+Beam Steering & Scanning
+F-Theta Lenses
+Laser Power Meters
+Optical Coherence Tomography
+View All
+Polarization Optics
+Non-Polarizing Beamsplitters
+Active Optical Components
+Galvanometers
+Motorized Stages
+Spectroscopy Lighting
+Shop By Brand
+Back
+View All Shop By Brand
+TECHSPEC®
+Allied Vision
+View All
+Top Sellers from Allied Vision
+More from Allied Vision
+10GigE Cameras
+Coherent®
+View All
+Top Sellers from Coherent
+More from Coherent
+Nikon
+View All
+Top Sellers from Nikon
+Objective Lenses from Nikon
+More from Nikon
+Olympus
+View All
+Top Sellers from Olympus
+More from Olympus
+Teledyne
+View All
+Teledyne Dalsa Cameras
+Teledyne FLIR Cameras
+Teledyne Lumenera Microscopy Cameras
+Teledyne Photometrics Cameras
+Acktar®
+AdlOptica
+Advanced Illumination
+Basler
+CCS
+Dolan-Jenner
+Everix
+Hamamatsu
+Hoya
+IDS Imaging Development Systems
+Infinity Photo-Optical Company
+ISP Optics
+View All
+ISP Optics Infrared Lenses
+ISP Optics Infrared Windows
+ISP Optics Infrared Prisms
+ISP Optics Infrared Mirrors
+Jenoptik
+Leica
+Lightpath® Optical Components
+LUCID Vision Labs™
+Mitutoyo
+Norland
+Ocean Optics
+Optotune
+Richardson Gratings™
+ScannerMAX
+SCHOTT Optical Components
+Sill Optics
+TMC
+UltraFast Innovations (UFI)
+Zaber™
+ZEISS
+New Products
+Back
+View All New Products
+New Optics
+New Laser Optics
+New Optomechanics
+New Microscopy
+New Cameras
+New Illumination
+New Testing and Detection
+New Lab and Production
+Clearance Products
+Back
+View All Clearance Products
+Clearance Laser Optics
+Clearance Optics
+Clearance Optomechanics
+Clearance Lasers
+Clearance Microscopy
+Clearance Imaging Lenses
+Clearance Cameras
+Clearance Illumination
+Clearance Test Targets
+Clearance Testing and Detection
+Clearance Lab and Production
+Recertified Products
+Back
+View All Recertified Products
+Recertified Optics
+Recertified Optomechanics
+Recertified Lasers
+Recertified Microscopy
+Recertified Imaging Lenses
+Recertified Cameras
+Recertified Illumination
+Recertified Testing and Detection
+Recertified Lab and Production
+Manufacturing
+Knowledge Center
+Edmund Events
+Company
+Product Tools and Discounts
+Quick Quote Tool
+Custom Quoting & Calculators
+Product Selection Tools
+Programs & Promotions
+Help and My Account
+My Account
+Contact Us and Help
+Sign in
+✕
+Product added to cart
+Knowledge Center
+Application Notes
+Laser Application Notes
+Propagation of a Gaussian Beam Through a Thin Lens
+Propagation of a Gaussian Beam Through a Thin Lens
+Francesco D'Angelo
+http://www.edmundoptics.com/knowledge-center/application-notes/lasers/gaussian-beam-propagation/
+http://www.edmundoptics.com
+Propagation of a Gaussian Beam Through a Thin Lens
+Authors:
+					
+Francesco D'Angelo
+This is
+Section 2.1
+of the
+Laser Optics Resource Guide
+.
+Previous Section
+Next Section
+Understanding Gaussian beam propagation is fundamental to optical design in many laser-based applications. Many laser beams exhibit a Gaussian intensity profile because the transverse modes of optical resonators are described by Hermite-Gaussian or Laguerre-Gaussian functions, with the fundamental (lowest-order) mode corresponding to a pure Gaussian distribution.
+This application note introduces the key properties of Gaussian beams and examines how propagation through a thin lens affects key beam parameters, including beam size, divergence, and waist position. The following sections follow the standard textbook treatment commonly found in the references listed below.
+Gaussian Beam: Definition and Characteristics
+Gaussian irradiance profiles are symmetric around the beam axis and decrease with increasing radial distance from the center (
+Figure 1
+). The transverse optical intensity as a function of radial distance 𝑟 is expressed as:
+\(I\left( r \right)={I}_{0}exp\left( -2\frac{{r}^{2}}{{w}^{2}} \right)=\frac{2P}{π{w}^{2}}exp\left( -2\frac{{r}^{2}}{{w}^{2}} \right)\),
+(1)
+where \({I}_{0}\) is the peak irradiance at the beam axis, \(P\) is the total power of the beam and \(w\) is the beam radius at which the irradiance falls to \(1/{e}^{2}\) (~13.5%) of \({I}_{0}\).
+Figure 1:
+Irradiance profile of a Gaussian beam in a plane orthogonal to the beam axis. The beam radius is defined as the location where the irradiance profile is 1/e
+2
+(13.5%) of its maximum value.
+Beam Caustic in Gaussian Beam Propagation
+The irradiance profile of a Gaussian beam changes as it propagates through space. Due to diffraction, the beam converges and diverges around the
+beam waist
+where the beam diameter reaches its minimum value \(2{w}_{0}\). The path of the beam diameter from and to its waist is also known as the
+beam caustic
+(
+Figure 2
+).
+Figure 2:
+Beam caustic showing key beam parameters such as beam waist (\({w}_{0}\)), Rayleigh range (z
+R
+), and divergence angle (θ).
+The beam radius as a function of propagation distance \(z\) is given by the following equation:
+\(w\left( z \right)={w}_{0}\sqrt{1+{\left( \frac{z}{{z}_{R}} \right)}^{2}}\)
+(2)
+Here \({z}_{R} \) denotes the
+Rayleigh length,
+a characteristic distance of the beam. At the beam waist location (\(z=0\)), the intensity reaches its absolute maximum \(\frac{2P}{π{w}_{0}^{2}}\) on the beam axis. The Rayleigh length represents the distance from the waist at which the beam radius increases by a factor of \(\sqrt{2}\) corresponding to a reduction of the peak intensity by a factor of two.
+Rayleigh Length and Divergence in Gaussian Beams
+Beam waist and Rayleigh length are related by the following equation:
+\({z}_{R}=\frac{{πw}_{0}^{2}}{λ}\)
+(3)
+In the far field limit (\(z≫{z}_{R}\)), the beam radius increases linearly with \(z\), allowing the
+divergence angle
+\(θ\) to be defined as:
+\(θ=\frac{{w}_{0}}{{z}_{R}}\)
+(4)
+Rayleigh length and divergence angle are all quantities that are intrinsically linked to one another. Combining
+Equations 3
+and
+4
+yields:
+\({w}_{0}θ=\frac{λ}{π}\)
+(5)
+where \(λ\) is the wavelength of the beam.
+Equation 5
+shows that a smaller beam waist leads to a larger divergence angle, and vice versa.
+Beam Quality Metrics for Gaussian Beams
+The product \({w}_{0}θ\) is known as the
+beam parameter product
+(\(BPP\)). It is an inherent property of the beam and a measure of beam quality. Another measure of beam quality is the
+M
+2
+factor
+that can be defined as the ratio of the beam parameter products of the real beam to that of a diffraction-limited Gaussian beam with the same wavelength.
+This has a significant implication on optical design as an optical system can be optimized either for beam waist size or for beam divergence, but not independently for both. For example, it is impossible to generate an arbitrarily small collimated beam. Another practical case is coupling a beam into a fiber: depending on the fiber NA and core diameter, poor beam quality can compromise the coupling efficiency into the fiber.
+Beam quality may also be interpreted as a measure of how closely the beam wavefronts resemble those of an ideal diffraction-limited Gaussian beam. We will now examine how the curvature of Gaussian beam wavefronts evolves during propagation.
+Radius of Curvature of Gaussian Wavefronts
+The
+radius of curvature
+\(R(z)\) of the wavefronts is given by:
+\(R\left( z \right)=z\left( 1+{\left( \frac{{z}_{R}}{z} \right)}^{2} \right)\)
+(6)
+At the beam waist the radius of curvature is \(R→∞\), corresponding to a planar wavefront. As the beam propagates away from the waist, the curvature increases, reaching a minimum value of \(R=2{z}_{R}\) at \({z}_{R}\). For \(z≫{z}_{R}\), \(R\) increases linearly with \(z\) and the wavefront becomes nearly spherical (
+Figure 3
+).
+Figure 3:
+The curvature of the wavefront of a Gaussian beam is near-zero when it is both very close and very far away from the beam waist.
+Related Products
+Laser Sources
+Beam Shapers
+Laser Beam Analysis
+Laser Lenses
+Describing the Propagation of a Gaussian Beam
+To describe a Gaussian beam completely, it’s enough to know two independent parameters of the beam, for example, the waist position and size, or alternatively, the beam radius and wavefront curvature at a certain point. Let’s show the latter explicitly, since it will be useful in the next section.
+By combining
+Equations 2
+,
+3
+and
+6
+we can determine the axial position \(z\) from the beam waist where the beam has a wavefront curvature \(R\) and beam radius \(w\):
+\(z=\frac{R}{1+(\frac{{λ}^{2}{R}^{2}}{{π}^{2}{w}^{4}})}\)
+(7)
+The corresponding beam waist is then given by:
+\({w}_{0}=w\frac{\frac{λR}{π{w}^{2}}}{\sqrt{1+{\left( \frac{λR}{π{w}^{2}} \right)}^{2}}}.\)
+(8)
+The Complex q Parameter
+Knowing the waist position and size (or equivalently the Rayleigh length) is sufficient to fully describe the spatial evolution of a Gaussian beam. With that in mind it is useful to introduce the
+complex q parameter
+of the beam:
+\(q=z+i{z}_{R}\)
+(9)
+The complex q parameter contains all the information about the beam, and it can be used in combination with ABCD matrices to propagate the beam through any aberration-free optical system.
+Using
+Equation 7
+,
+8
+and
+3
+,
+Equation 9
+can also be written as:
+\(\frac{1}{q}=\frac{1}{R}-i\frac{λ}{π{w}^{2}}\)
+(10)
+The output beam is linked to the input beam by the following relation:
+\({q}^{'}=\frac{Aq+B}{Cq+D}\)
+(11)
+The ABCD matrices used with Gaussian beams are the same as in ray optics. For a thin lens the ABCD matrix has the following form:
+\(\left( \begin{matrix}1 & 0 \\ -1/f & 1\end{matrix} \right)\)
+(12)
+This leads to:
+\(q'=\frac{q}{1-\frac{q}{f}}\)
+(13)
+Equation 13
+is known as the
+Gaussian thin lens equation
+. In the following paragraph, we derive the same equation using a slightly different approach to emphasize its correspondence with the thin lens equation in ray optics.
+Gaussian Beam Propagation Through a Thin Lens
+Many laser applications require manipulation of a laser beam as opposed to simply using the “raw” beam. This may be done using optical components such as lenses, mirrors, prisms, and more. In this section, we examine how a thin lens modifies the Gaussian beam parameters. Let’s first recall the lens equation which describes the behavior of a thin lens in geometric optics:
+\(\frac{1}{s}+\frac{1}{{s}^{'}}=\frac{1}{f}\)
+(14)
+In
+Equation 14
+, \(s\) is the object distance, \(s\)’ is the image distance, and \(f\) is the focal length of the lens (also see
+Figure 4
+). The intrinsic signs of 𝑠 and 𝑠’ depend on whether the object or image lies in the object or image half-plane: they are positive if the object (image) lies in its respective half-plane and negative otherwise.
+Figure 4:
+The thin lens equation allows the position of an image (s’) to be determined when the distance from the lens to the object (s) and the focal length of the lens (f) are known.
+For reasons that will become clear in the next paragraph it is useful to express
+Equation 14
+in a dimensionless form by multiplying both sides by \(f\):
+\(\frac{{s}^{'}}{f}-1=\frac{1}{\frac{s}{f}-1}.\)
+(15)
+Now, let’s consider a Gaussian beam incident on a thin lens, as illustrated in
+Figure 5
+. Because the lens thickness is negligible, the beam radius immediately before and after the lens can be assumed to be unchanged (\(w=w’\)). The curvature of the lens introduces however an additional phase shift, and the wavefront curvature of the transmitted beam \(R’\) is related to the incident curvature \(R\) by:
+\(\frac{1}{R'} =\frac{1}{R}-\frac{1}{f}\)
+(16)
+As shown by
+Equations 7
+and
+8
+, knowing the beam radius and curvature at a given location completely determines the beam. This allows us to derive the location of the output waist \(s'\) as a function of the input waist position \(s\) with respect to the lens:
+\(\frac{{s}^{'}}{f}-1=\frac{\frac{s}{f}-1}{{\left( \frac{s}{f}-1 \right)}^{2}+{\left( \frac{{z}_{R}}{f} \right)}^{2}}\)
+(17)
+Equation 17
+becomes identical to
+Equation 13
+by introducing the following coordinate transformation:
+s becomes z, s’ becomes -z’
+. In this new coordinate system, the reference frame of each beam is defined relative to its respective beam waist. When \(\left( s-f \right)≫{z}_{R}\), meaning when the waist position is far from the focal point of the lens in Rayleigh length units,
+Equation 15
+is recovered.
+Figure 5:
+Propagation of a Gaussian beam through a thin lens.
+Effect of Rayleigh Length on the Imaged Waist
+A plot of the normalized image distance versus the normalized object distance shows the effect of the Rayleigh range on the location of the imaged waist (
+Figure 6
+). Unlike ray optics, where the image moves to infinity when \(s=f,\) in Gaussian optics the waist moves to \(f\). The maximum distance of the imaged waist from the lens is given by
+\({s}^{'}=f\left( \frac{2f}{{z}_{R}}+1 \right)\)
+(18)
+with
+\(s=f+{z}_{R}\)
+(19)
+When the Rayleigh length is small, the waist location of the imaged beam moves toward infinity. Conversely, when the Rayleigh length is large, the waist location approaches the focal length \(f\).
+Figure 6:
+Normalized output waist position as a function of the normalized input waist position. The curve where z
+R
+/ f = 0 corresponds to the ray optics limit. The ray optics approximation works well far from the confocal region. The dots are the maxima (and minima) distances that the waist of the propagated Gaussian beam can reach.
+Transformation of Gaussian Beams after a Thin Lens
+To fully understand how Gaussian beams transform after passing through the lens, we also need to know how the beam waist or alternatively the Rayleigh range changes.
+Following the same approach used to obtain
+Equation 17
+, it is possible to derive a relation between the input and output waist sizes:
+\({w}_{0}^{'}=\frac{{w}_{0}}{\sqrt{{\left( \frac{s}{f}-1 \right)}^{2}+{\left( \frac{{z}_{R}}{f} \right)}^{2}}}=α{w}_{0}\)
+(20)
+In
+Equation 20
+we have introduced another important parameter of the optical system which is the
+magnification factor
+\(α\) of the lens.
+In some cases, it is convenient to rewrite
+Equation 17
+in terms of the magnification factor:
+\(\frac{{s}^{'}}{f}-1={α}^{2}\left( \frac{s}{f}-1 \right)\)
+(21)
+From this, we can express the squared magnification as:
+\({α}^{2}=\frac{{s}^{'}-f}{s-f}\)
+(22)
+From
+Equation 3
+and
+20
+the output Rayleigh length can be written as:
+\({{z}^{'}}_{R}={α}^{2}{z}_{R}\)
+(23)
+Since the beam parameter product \(BPP={w}_{0}θ\) is conserved, the beam divergence transforms as:
+\({θ}^{'}=\frac{θ}{α}\)
+(24)
+The magnification factor is therefore the key parameter governing the beam transformation during propagation through the lens.
+If \(|s-f|≪{z}_{R}\) the magnification tends to \(\left| f/{z}_{R} \right|\). As expected for \(\left| s-f \right|≫{z}_{R}\) we simply recover the magnification factor of the lens known in geometrical optics \({α}_{R}=\left| \frac{f}{s-f} \right|\). Note that geometrical optics represents the upper limit of the lens magnification (\(α<{α}_{R}\)).
+Gaussian Beam Focusing and Collimation
+In many applications, such as laser materials processing or surgery, it is highly important to focus a laser beam down to the smallest spot possible to maximize intensity and minimize the heated area (
+Figure 7
+).
+Figure 7:
+Focusing a laser beam down to the smallest possible size is crucial for a wide range of applications such as laser cutting.
+In other cases, the goal is reversed, for example when a diverging beam (such as the beam from a single-mode fiber) should be collimated. The equations introduced in the previous section are particularly useful for both cases. Consider a lens placed at the waist of a Gaussian beam (\(s=0\)). In this configuration,
+Equations 17
+and
+20
+become respectively:
+\({s}^{'}=\frac{f}{1+{\left( \frac{f}{{z}_{R}} \right)}^{2}}\)
+(25)
+and
+\({w}_{0}^{'}=\frac{{w}_{0}}{\sqrt{1+{\left( \frac{{z}_{R}}{f} \right)}^{2}}}\)
+(26)
+Although the wavefront is planar at the beam waist, a Gaussian beam with a waist at the lens position does not behave exactly like a plane wave. As illustrated in
+Figure 8
+, the new waist (\({w'}_{0}\)) does not coincide precisely with the geometrical focus predicted by ray optics. This deviation originates from the finite divergence of the Gaussian beam, or equivalently, from its finite transverse intensity distribution, which causes the beam waist to form slightly away from the geometric focal plane.
+Figure 8:
+Axial shift between the Gaussian beam waist and the geometric focal plane after focusing with a thin lens.
+In geometrical optics, by contrast, the divergence (\(\frac{λ}{π{w}_{0}}\)) can be zero. In the limit (\(λ≪ {w}_{0}\)), we retrieve the results predicted by geometrical optics. Since laser wavelengths are typically much smaller than the beam waist, the ray-optics approximation is often sufficiently accurate for many practical applications.
+Now consider a collimated beam to be focused on a workpiece. A beam is collimated if the beam radius doesn’t change within a certain propagation distance. This condition is fulfilled when the Rayleigh range is much larger than the focal length: \({z}_{R}≫f\).
+The magnification factor is just \(|f/{z}_{R}|\), and the output waist is located at the focal plane of the lens (\({s}^{'}=f\)).
+Equations 24
+and
+26
+simplify to
+\[{w}_{0}^{'} \sim \frac{{w}_{0}f}{{z}_{R}} = \frac{\lambda f}{\pi {w}_{0}} = \theta f \]
+(27)
+and
+\({θ}^{'} \sim \frac{θ{w}_{0}^{2}π}{λf}={w}_{0}/f\)
+(28)
+respectively. These results are consistent with those obtained for a set of parallel rays incident on the lens: the focused spot is determined solely by the focal length and the input beam diameter. In this geometric limit, the exact waist location of the input beam is irrelevant because the beam’s radius and wavefront curvature are nearly constant, and the concept of waist loses its significance.
+Equation 27
+shows that the spot size can be minimized by reducing the lens’ focal length and by decreasing the beam divergence (or equivalently, increasing the beam radius). To make sure the lens can capture the full beam energy, the diameter \(D\) of the lens is usually set to be four times the beam radius and therefore the numerical aperture of the lens is \(NA=\frac{D}{f}=4{w}_{0}/f\).
+Equation 27
+can be written in terms of NA as:
+\(2{w}_{0}^{'}=\frac{2λ}{π}\frac{1}{NA}\)
+(29)
+This expression shows that the focused spot diameter is inversely proportional to the numerical aperture of the focusing system.
+Due to the reversibility of optical systems, the results derived for focusing a collimated beam can be directly applied to the collimation of a diverging beam. It is sufficient to exchange the object and image half-spaces.
+A commonly misunderstood point is that achieving a collimated beam does not require driving \(s'\) to infinity. Rather, the condition for optimal collimation is to maximize the Rayleigh range \({z'}_{R}\), which is equivalent to minimizing the output beam divergence (\(θ'\)). As shown in the previous section, when \(s=f\), the image distance \(s'\) approaches \(f\), not infinity. Therefore, long focal-length lenses combined with highly diverging input beams (i.e., large (\(|f/{z}_{R}|\))) produce better collimation and lower output divergence. However, because the beam parameter product is conserved, improved collimation comes at the expense of a larger output beam diameter.
+Summary and Key Takeaways
+This application note highlights the characteristics of a Gaussian laser beam and its propagation through a thin lens. The analysis in the text also explains how Gaussian beam propagation departs from simple geometric optics and why a wave-based description is essential for accurately predicting beam behavior. The resulting relations clarify how waist size, waist position, and divergence evolve after a lens, providing a rigorous basis for optimizing both focusing and collimation. This knowledge is crucial whenever precise control over beam quality or spot size is required, ensuring that optical system design aligns with the fundamental constraints of Gaussian beam physics. More information on laser beam quality or beam parameters can be found in the application note
+Beam Quality and Strehl Ratio
+. For an overview of laser beam shaping products please refer to our
+Beam Shapers product page
+.
+References
+Saleh, B. E. A., & Teich, M. C. (2019).
+Fundamentals of photonics (3rd ed., Vol. 1).
+Wiley.
+Siegman, A. E. (1986).
+Lasers. University Science Books.
+Self, Sidney A. “Focusing of Spherical Gaussian Beams.”
+Applied Optics, vol. 22, no. 5
+, January 1983.
+Paschotta, Rüdiger.
+Encyclopedia of Laser Physics and Technology, RP Photonics
+, October 2017,
+www.rp-photonics.com/encyclopedia.html
+.
+Previous Section
+Next Section
+Off-the-Shelf Laser Optics
+Buy Now
+Custom Laser Optics
+Learn More
+Off-the-Shelf Lasers
+Buy Now
+Was this content useful to you?
+Thank you for rating this content!
+Related Products
+Canopus® Reflective Beam Expanders
+Draconis® Broadband Beam Expanders
+Draconis® Nd:YAG Laser Line Beam Expanders
+YAG-BBAR Coated Plano-Concave (PCV) Lenses
+Coherent® CO
+2
+Beam Expanders
+Arcturus® HeNe Beam Expanders
+Research-Grade Variable Beam Expanders
+Vega® Laser Line Beam Expanders
+Scorpii® Nd:YAG Beam Expander Kits
+Scorpii® Nd:YAG Beam Expanders
+Vega® Broadband Beam Expanders
+Laser Pointers
+Sales & Expert Advice
+or view
+regional numbers
+LIVE CHAT
+EMAIL
+Easy-to-Use
+QUOTE TOOL
+enter stock numbers to begin
+Sign-up Today
+// industry trends, new products, discounts, and technical content
+Sign-up Now
+About Us
+Company
+Executive Team
+Events & Trade Shows
+Our Locations
+Careers
+Press Releases
+Case Studies
+Compliance
+TECHSPEC
+®
+Brand Partnerships
+Contact Us
+Customer Care
+Shipping
+Returns
+FAQs
+Give Feedback
+Advanced Manufacturing
+Precision Optics
+Optical Filters
+Laser Optics
+Imaging Optics
+Defense Optics
+Discounts & Programs
+All Discount Programs
+Vision Integration Partners
+Volume Discount Services
+Educational Discount Program
+Educational Award
+Discounted Products
+Edmund Scientific Outreach
+E-procurement Platforms
+Catalogs
+All
+Catalogs
+Digital Catalogs
+Catalog Unsubscribe
+We are Hiring!
+Apply Now
+Copyright
+2023
+, Edmund Optics Inc., 101 East Gloucester Pike, Barrington, NJ 08007-1380 USA
+Privacy Policy
+|
+Cookie Policy
+|
+Terms & Conditions
+|
+Accessibility
+California Consumer Privacy Acts (CCPA):
+Do Not Sell or Share My Personal Information
+California Transparency in Supply Chains Act
+This content may include material that has been generated or modified using artificial intelligence (AI).
+The
+FUTURE
+Depends On Optics
+®
+Please select your shipping country to view the most accurate inventory information, and to determine the correct Edmund Optics sales office for your order.
+Select Your Country/Region:
+Aland Islands
+Albania
+Algeria
+Andorra
+Angola
+Antigua and Barbuda
+Argentina
+Australia
+Austria
+Bahamas
+Bahrain
+Bangladesh
+Barbados
+Belgium
+Belize
+Benin
+Bermuda
+Bhutan
+Bolivia
+Bosnia and Herzegovina
+Botswana
+Brazil
+Brunei Darussalam
+Bulgaria
+Cambodia
+Canada
+Canary Islands (Spain)
+Cape Verde
+Cayman Islands
+Chile
+China
+Colombia
+Comoros
+Costa Rica
+Croatia
+Cyprus
+Czech Republic
+Denmark
+Djibouti
+Dominica
+Dominican Republic
+East Timor
+Ecuador
+Egypt
+El Salvador
+Equatorial Guinea
+Estonia
+Ethiopia
+European Union
+Falkland Islands
+Fiji
+Finland
+France
+French Guiana
+Gabon
+Gambia
+Georgia
+Germany
+Ghana
+Gibraltar
+Greece
+Greenland
+Grenada
+Guatemala
+Guernsey (UK)
+Guinea-Bissau
+Guyana
+Honduras
+Hong Kong
+Hungary
+Iceland
+India
+Indonesia
+Ireland
+Israel
+Italy
+Jamaica
+Japan
+Jersey (UK)
+Jordan
+Kazakhstan
+Kenya
+Kiribati
+Kosovo
+Kuwait
+Kyrgyzstan
+Laos
+Latvia
+Lesotho
+Liechtenstein
+Lithuania
+Luxembourg
+Macau
+Macedonia
+Madagascar
+Malawi
+Malaysia
+Maldives
+Malta
+Mauritius
+Mexico
+Micronesia
+Moldova
+Monaco
+Mongolia
+Montenegro
+Morocco
+Mozambique
+Namibia
+Nauru
+Nepal
+Netherlands
+New Caledonia
+New Zealand
+Nicaragua
+Northern Ireland
+Norway
+Oman
+Pakistan
+Palau
+Panama
+Papua New Guinea
+Paraguay
+Peru
+Philippines
+Poland
+Portugal
+Qatar
+Republic of the Congo
+Reunion
+Romania
+Rwanda
+Saint Kitts and Nevis
+Saint Lucia
+Saint Vincent and the Grenadines
+Samoa
+San Marino
+Sao Tome and Principe
+Saudi Arabia
+Senegal
+Serbia
+Seychelles
+Sierra Leone
+Singapore
+Slovakia
+Slovenia
+Solomon Islands
+South Africa
+South Korea
+Spain
+Sri Lanka
+Suriname
+Swaziland
+Sweden
+Switzerland
+Taiwan
+Tajikistan
+Tanzania
+Thailand
+Togo
+Tonga
+Trinidad and Tobago
+Tunisia
+Turkey
+Turkmenistan
+Tuvalu
+Uganda
+Ukraine
+United Arab Emirates
+United Kingdom
+United States
+Uruguay
+Uzbekistan
+Vanuatu
+Vatican City
+Venezuela
+Vietnam
+Western Sahara
+Zambia
+Submit
+How likely are you to recommend the Edmund Optics website to a friend or colleague?
+Not at all likely
+Extremely likely
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1

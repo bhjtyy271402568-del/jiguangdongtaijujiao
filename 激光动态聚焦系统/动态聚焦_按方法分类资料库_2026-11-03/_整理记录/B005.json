@@ -1,0 +1,34 @@
+{
+  "id": "B005",
+  "category": "08_综述与光学基础",
+  "url": "https://diposit.ub.edu/items/c5405db1-7249-4964-abb3-89c9d150361f/full",
+  "context": "Variable_optical_elements_作者稿元数据",
+  "title": "Variable_optical_elements_作者稿元数据",
+  "origins": [
+    "原文线索补充及相关中文综述"
+  ],
+  "files": [
+    {
+      "path": "08_综述与光学基础\\B005_Variable optical elements for fast focus control.html",
+      "type": "HTML",
+      "bytes": 471235,
+      "sha256": "96dcccc7adb0e3f1037cfaeea82427cba62f2c056fdd19acd0ba0b515b8f2fc2",
+      "url": "https://diposit.ub.edu/items/c5405db1-7249-4964-abb3-89c9d150361f/full",
+      "title": "Variable optical elements for fast focus control",
+      "text_chars": 2835
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://diposit.ub.edu/items/c5405db1-7249-4964-abb3-89c9d150361f/full",
+      "http": 200,
+      "final_url": "https://diposit.ub.edu/items/c5405db1-7249-4964-abb3-89c9d150361f/full",
+      "result": "网页"
+    },
+    {
+      "url": "https://dd-x-0-fe-01.fe.cpd.local:4000/bitstreams/499f25a7-7d55-4c1d-b9bc-d5568d2fcaf8/download",
+      "error": "HTTPSConnectionPool(host='dd-x-0-fe-01.fe.cpd.local', port=4000): Max retries exceeded with url: /bitstreams/499f25a7-7d55-4c1d-b9bc-d5568d2fcaf8/download (Caused by NameResolutionError(\"HTTPSConnection(host='dd-x-0-fe-01.fe.cpd.local', port=4000): Failed to resolve 'dd-x-0-fe-01.fe.cpd.local' ([Errno 11001] getaddrinfo failed)\"))"
+    }
+  ],
+  "status": "摘要或元数据网页已保存"
+}

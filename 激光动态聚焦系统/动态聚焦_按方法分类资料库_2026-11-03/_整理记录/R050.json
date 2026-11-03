@@ -1,0 +1,33 @@
+{
+  "url": "https://zhirongipp.oss-cn-hangzhou.aliyuncs.com/application/2025-03-17-10-43-29TOfCkMEo.pdf",
+  "category": "09_艾思兰及相邻应用",
+  "origins": [
+    "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md"
+  ],
+  "context": "\n- [CN116534252A 线索记录](https://zhirongipp.oss-cn-hangzhou.aliyuncs.com/application/2025-03-17-10-43-29TOfCkMEo.pdf)",
+  "id": "R050",
+  "files": [
+    {
+      "path": "09_艾思兰及相邻应用\\R050_艾思兰_CN116534252A_项目线索记录.pdf",
+      "type": "PDF",
+      "pages": 15,
+      "bytes": 459397,
+      "sha256": "6fc848dde89cea1506959f126f95342eeb101e36bd76843b7c51dbb611fa7a5a",
+      "url": "https://zhirongipp.oss-cn-hangzhou.aliyuncs.com/application/2025-03-17-10-43-29TOfCkMEo.pdf",
+      "text_chars": 40923,
+      "title": "",
+      "preview": "MEC边缘计算近期新增公开专利清单\n序号 标题 (中文) 申请人 公开（公告）号 申请号 专利类型\n1 一种最小化总成本的车载边缘服\n务器调度方法及系统 南京邮电大学 CN118590939A CN202410621505.3 发明专利\n2 一种面向AGV依赖型计算任务的\n主动迁移式卸载方法及系统 大连理工大学 CN119576500A CN202411725739.9 发明专利\n3 一种隧道交通流量及事故预测模\n型\n厦门凡想智能科技有限公司 CN119580507A CN202411781973.3 发明专利\n4 一种智能网联车云协同自动代客\n泊车系统及控制方法\n湖南湘江智车出行科技有限\n公司 CN119580526A CN202411801582.3 发明专利\n5 边缘计算系统无人机轨迹和用户\n卸载决策优化方法及装置 广东工业大学 CN119580535A CN202411790360.6 发明专利\n6\n一种最小化车载边缘服务器数量\n的车载边缘服务器调度方法、系\n统及存储介质\n南京邮电大学 CN118519769A CN202410620241.X 发明专利\n7 人脸图像数据分布式",
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://zhirongipp.oss-cn-hangzhou.aliyuncs.com/application/2025-03-17-10-43-29TOfCkMEo.pdf",
+      "http": 200,
+      "final_url": "https://zhirongipp.oss-cn-hangzhou.aliyuncs.com/application/2025-03-17-10-43-29TOfCkMEo.pdf",
+      "result": "有效PDF"
+    }
+  ],
+  "status": "PDF已下载",
+  "title": "艾思兰_CN116534252A_项目线索记录"
+}

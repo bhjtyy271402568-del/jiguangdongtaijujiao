@@ -1,0 +1,30 @@
+{
+  "url": "https://patents.google.com/patent/CN121742097A/zh",
+  "category": "07_测高闭环_三轴同步与标定",
+  "origins": [
+    "Gemini输出.txt"
+  ],
+  "context": "原文提到的专利号，补全公开文本入口；标题及相关性待与原件核对",
+  "id": "R006",
+  "files": [
+    {
+      "path": "07_测高闭环_三轴同步与标定\\R006_CN121742097A - 一种集成振镜激光投影方法以及集成振镜激光控制装置 _        - Google Patents.html",
+      "type": "HTML",
+      "bytes": 71355,
+      "sha256": "afd66721685e48aa1e63b5ef6251b38d4f208aba3a6ab95d479237248a2417eb",
+      "url": "https://patents.google.com/patent/CN121742097A/zh",
+      "title": "CN121742097A - 一种集成振镜激光投影方法以及集成振镜激光控制装置 \n        - Google Patents",
+      "text_chars": 13345
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://patents.google.com/patent/CN121742097A/zh",
+      "http": 200,
+      "final_url": "https://patents.google.com/patent/CN121742097A/zh",
+      "result": "网页"
+    }
+  ],
+  "title": "CN121742097A - 一种集成振镜激光投影方法以及集成振镜激光控制装置 - Google Patents",
+  "status": "专利全文网页已保存_无PDF附件"
+}

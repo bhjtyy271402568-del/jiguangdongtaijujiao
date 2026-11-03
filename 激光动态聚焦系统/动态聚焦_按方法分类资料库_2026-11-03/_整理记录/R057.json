@@ -1,0 +1,22 @@
+{
+  "url": "https://www.osa-opn.org/home/optics_letters/abstract.cfm?uri=ol-48-24-6496",
+  "category": "02_反射式与三振镜调焦",
+  "origins": [
+    "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md"
+  ],
+  "context": "\n- [Optics Letters：reflective dynamic focusing range](https://www.osa-opn.org/home/optics_letters/abstract.cfm?uri=ol-48-24-6496)",
+  "id": "R057",
+  "files": [],
+  "attempts": [
+    {
+      "url": "https://www.osa-opn.org/home/optics_letters/abstract.cfm?uri=ol-48-24-6496",
+      "http": 404,
+      "final_url": "https://www.optica-opn.org/home/optics_letters/abstract.cfm?uri=ol-48-24-6496",
+      "error": "404 Client Error: Not Found for url: https://www.optica-opn.org/home/optics_letters/abstract.cfm?uri=ol-48-24-6496"
+    }
+  ],
+  "status": "全文已由用户补齐 → U001",
+  "title": "反射式扫描范围扩展_旧版失效入口",
+  "resolved_by": "U001",
+  "resolution_note": "此前网络获取未完成；现已由用户提供正式版全文补齐。保留历史请求记录。"
+}

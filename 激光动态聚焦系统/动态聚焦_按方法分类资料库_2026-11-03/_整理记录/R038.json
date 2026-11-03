@@ -1,0 +1,31 @@
+{
+  "url": "https://www.scanneroptics.com/products/scanner-optics-vcm-f1/",
+  "category": "01_移动透镜式与匹配光学",
+  "origins": [
+    "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+    "用户粘贴_激光动态聚焦深度调研.txt"
+  ],
+  "context": "\n- 原始入口：https://www.scanneroptics.com/products/scanner-optics-vcm-f1/",
+  "id": "R038",
+  "files": [
+    {
+      "path": "01_移动透镜式与匹配光学\\R038_Scanner Optics VCM F1 - Digital Processing Driver Galvano Technology.html",
+      "type": "HTML",
+      "bytes": 84812,
+      "sha256": "ca4e5d5dc3f05f0fc5ab02a668a8f04901d1e7300d179f341cf4a292fbe2ad2d",
+      "url": "https://www.scanneroptics.com/products/scanner-optics-vcm-f1/",
+      "title": "Scanner Optics VCM F1 - Digital Processing Driver Galvano Technology",
+      "text_chars": 6856
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://www.scanneroptics.com/products/scanner-optics-vcm-f1/",
+      "http": 200,
+      "final_url": "https://www.scanneroptics.com/products/scanner-optics-vcm-f1/",
+      "result": "网页"
+    }
+  ],
+  "title": "Scanner Optics VCM F1 - Digital Processing Driver Galvano Technology",
+  "status": "网页已保存"
+}

@@ -1,0 +1,33 @@
+{
+  "url": "https://www.sino-galvo.com/Products_detail/7.html",
+  "category": "01_移动透镜式与匹配光学",
+  "origins": [
+    "Gemini输出.txt",
+    "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+    "用户粘贴_激光动态聚焦深度调研.txt",
+    "苏州艾思兰_动态聚焦资料\\设备自研方案与选型表.md"
+  ],
+  "context": "\n| **Sino-Galvo**（思特/华南及苏州） | **FL8220-3D-500** | 前聚焦三轴扫描头 | 1064 nm | $400 \\times 400$ 至 $500 \\times 500$ | 最大高度差 **$80\\text{ mm}$**（$\\pm 40\\text{ mm}$） | 移动透镜组 | 标刻速度 $2000\\text{ mm/s}$ | 重复定位精度 **$< 8\\text{ }\\mu\\text{rad}$**；8h漂移 $< 0.5\\text{ mRad}$ | XY2-100 | **约 ¥1.5万–3万元**；常用于科研共焦显微与工业中大幅面加工 | [Sino-Galvo产品页](https://www.sino-galvo.com/Products_detail/7.html) |\r",
+  "id": "R001",
+  "files": [
+    {
+      "path": "01_移动透镜式与匹配光学\\R001_FL8220-3D-500 Fiber 3D Galvo scanning system-Sino-Galvo Technology Co., Ltd.html",
+      "type": "HTML",
+      "bytes": 337844,
+      "sha256": "f74ab5cb77bbfe3d51623a131f744a1d5e9b328a9d822996bfd5cbc888ef0e15",
+      "url": "https://www.sino-galvo.com/Products_detail/7.html",
+      "title": "FL8220-3D-500 Fiber 3D Galvo scanning system-Sino-Galvo Technology Co., Ltd",
+      "text_chars": 7639
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://www.sino-galvo.com/Products_detail/7.html",
+      "http": 200,
+      "final_url": "https://www.sino-galvo.com/Products_detail/7.html",
+      "result": "网页"
+    }
+  ],
+  "title": "FL8220-3D-500 Fiber 3D Galvo scanning system-Sino-Galvo Technology Co., Ltd",
+  "status": "网页已保存"
+}

@@ -1,0 +1,48 @@
+{
+  "url": "https://patents.google.com/patent/CN107315247B/zh",
+  "category": "07_测高闭环_三轴同步与标定",
+  "origins": [
+    "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md"
+  ],
+  "context": "\n   [Google Patents](https://patents.google.com/patent/CN107315247B/en)",
+  "id": "R054",
+  "files": [
+    {
+      "path": "07_测高闭环_三轴同步与标定\\R054_CN107315247B - 预览模块及动态聚焦激光振镜 _        - Google Patents.html",
+      "type": "HTML",
+      "bytes": 140214,
+      "sha256": "d2feb92abd995962d29eb66060ffeb5b1881b6bc2d460966b9c3f3a2251f962a",
+      "url": "https://patents.google.com/patent/CN107315247B/zh",
+      "title": "CN107315247B - 预览模块及动态聚焦激光振镜 \n        - Google Patents",
+      "text_chars": 20148
+    },
+    {
+      "path": "07_测高闭环_三轴同步与标定\\R054_CN107315247B - 预览模块及动态聚焦激光振镜 - Google Patents.pdf",
+      "type": "PDF",
+      "pages": 18,
+      "bytes": 1257472,
+      "sha256": "30144d05c1c558a529fa7e95413f31d8ebb471f772c7d5406837fb376175760d",
+      "url": "https://patentimages.storage.googleapis.com/8a/4b/62/5df454c0c3805c/CN107315247B.pdf",
+      "text_chars": 13422,
+      "title": "",
+      "preview": "(19)国家知识产权局\n(12)发明专利\n(10)授权公告号 \n(45)授权公告日 \n(21)申请号 201710739483.0\n(22)申请日 2017.08.24\n(65)同一申请的已公布的文献号 \n申请公布号 CN 107315247 A\n(43)申请公布日 2017.11.03\n(73)专利权人 江苏金海创科技有限公司\n地址 212000 江苏省镇江市新区丁卯经十\n五路99号29幢二楼\n(72)发明人 李宝良　崔振华　\n(74)专利代理机构 北京超凡志成知识产权代理\n事务所(普通合伙) 11371\n专利代理师 史明罡\n(51)Int.Cl.\nG02B 26/08(2006.01)\nG02B 26/10(2006.01)\n审查员 周峰\n \n(54)发明名称\n预览模块及动态聚焦激光振镜\n(57)摘要\n本发明涉及振镜技术领域，尤其是涉及一种\n预览模块及动态聚焦激光振镜。以缓解现有技术\n中存在的光损较大以 及占用空间较大的技术问\n题。包括：第一驱动机构、第一传动机构和摇臂 ；\n摇臂的侧面设置有限位槽、自由端设置有红光发\n射装置；第一传动机构包括摆杆和连接件 ，摆杆\n上设置有第一安装孔",
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://patents.google.com/patent/CN107315247B/zh",
+      "http": 200,
+      "final_url": "https://patents.google.com/patent/CN107315247B/zh",
+      "result": "网页"
+    },
+    {
+      "url": "https://patentimages.storage.googleapis.com/8a/4b/62/5df454c0c3805c/CN107315247B.pdf",
+      "http": 200,
+      "final_url": "https://patentimages.storage.googleapis.com/8a/4b/62/5df454c0c3805c/CN107315247B.pdf",
+      "result": "有效PDF"
+    }
+  ],
+  "title": "CN107315247B - 预览模块及动态聚焦激光振镜 - Google Patents",
+  "status": "PDF已下载"
+}

@@ -1,0 +1,374 @@
+{
+  "统计": {
+    "来源入口数": 114,
+    "取得有效文件的入口数": 83,
+    "唯一文件类型统计": {
+      "HTML": 54,
+      "PDF": 54,
+      "MOV": 3,
+      "DOCX": 1
+    },
+    "PDF总页数": 964,
+    "原始输入文件数": 8,
+    "已排除异常页面数": 0,
+    "合并重复数": 3,
+    "有效文件总字节": 300532517,
+    "用户补充PDF数": 8
+  },
+  "异常页面": [],
+  "重复文件": [
+    {
+      "id": "R024",
+      "保留文件": "04_TAG声学调焦\\R023_TAG_2023_正文.pdf",
+      "SHA256": "addfe359849a08f49035f2333cb312fc593091038988381336384d4b8bd1c259"
+    },
+    {
+      "id": "R032",
+      "保留文件": "01_移动透镜式与匹配光学\\R031_Aerotech_AGV3D_产品页与安装使用手册.pdf",
+      "SHA256": "1953b1e0c0ff049a3d28916ca64c7fff7d4602b682bc97458cf740ee611bc373"
+    },
+    {
+      "id": "R066",
+      "保留文件": "01_移动透镜式与匹配光学\\R029_varioSCAN II _ Scanlab.html",
+      "SHA256": "9aec6c3a55b2f6a0d63ee39816b00c7e19ddf7c987096c67551d20e0869d8271"
+    }
+  ],
+  "PDF校验": [
+    {
+      "id": "R002",
+      "path": "01_移动透镜式与匹配光学\\R002_US12265207B2 - Dynamic focus for laser processing head - Google Patents.pdf",
+      "pages": 13,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "R003",
+      "path": "07_测高闭环_三轴同步与标定\\R003_CN109894748B - 激光三维飞行打标方法、装置、计算机设备和存储介质 - Google Patents.pdf",
+      "pages": 14,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "R004",
+      "path": "01_移动透镜式与匹配光学\\R004_CN205899130U - 高速动态聚焦激光振镜模组 - Google Patents.pdf",
+      "pages": 13,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "R005",
+      "path": "01_移动透镜式与匹配光学\\R005_CN204248222U - 一种三轴动态聚焦激光打标装置 - Google Patents.pdf",
+      "pages": 5,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "R007",
+      "path": "09_艾思兰及相邻应用\\R007_CN111130015A - 一种激光除障仪 - Google Patents.pdf",
+      "pages": 8,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "R008",
+      "path": "09_艾思兰及相邻应用\\R008_CN111181117A - 一种一字激光除冰装置 - Google Patents.pdf",
+      "pages": 6,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "R009",
+      "path": "01_移动透镜式与匹配光学\\R009_CN213163617U - 一种三维动态聚焦振镜系统 - Google Patents.pdf",
+      "pages": 13,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "R010",
+      "path": "07_测高闭环_三轴同步与标定\\R010_CN222626476U - 自动调焦激光加工装置 - Google Patents.pdf",
+      "pages": 9,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "R011",
+      "path": "01_移动透镜式与匹配光学\\R011_CN103157904B - 一种基于动态聚焦的激光加工装置 - Google Patents.pdf",
+      "pages": 12,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "R012",
+      "path": "01_移动透镜式与匹配光学\\R012_US20220283416A1 - Dynamic Focus For Laser Processing Head - Google Patents.pdf",
+      "pages": 12,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "R013",
+      "path": "06_可变发散角激光源\\R013_US20240393604A1 - Variable divergence laser for dynamic focus adjustment - Google Patents.pdf",
+      "pages": 20,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "R014",
+      "path": "09_艾思兰及相邻应用\\R014_CN210203085U - 一种激光驱鸟器 - Google Patents.pdf",
+      "pages": 5,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "R015",
+      "path": "09_艾思兰及相邻应用\\R015_CN116373177A - 激光洗模机 - Google Patents.pdf",
+      "pages": 22,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "R017",
+      "path": "01_移动透镜式与匹配光学\\R017_Experimental investigation of 3D scanheads for laser micro-processing_2016_作者稿.pdf",
+      "pages": 12,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "R023",
+      "path": "04_TAG声学调焦\\R023_TAG_2023_正文.pdf",
+      "pages": 13,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "R023",
+      "path": "04_TAG声学调焦\\R023_TAG_2023_补充资料.pdf",
+      "pages": 10,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "R024",
+      "path": "04_TAG声学调焦\\R023_TAG_2023_正文.pdf",
+      "pages": 13,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "R025",
+      "path": "05_MEMS与全息调焦\\R025_全息10MHz_2024_正文.pdf",
+      "pages": 10,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "R025",
+      "path": "05_MEMS与全息调焦\\R025_全息10MHz_2024_公开审稿文件.pdf",
+      "pages": 28,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "R030",
+      "path": "01_移动透镜式与匹配光学\\R030_SCANLAB_varioSCAN_II_eBox_官方规格书.pdf",
+      "pages": 4,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "R031",
+      "path": "01_移动透镜式与匹配光学\\R031_Aerotech_AGV3D_产品页与安装使用手册.pdf",
+      "pages": 60,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "R032",
+      "path": "01_移动透镜式与匹配光学\\R031_Aerotech_AGV3D_产品页与安装使用手册.pdf",
+      "pages": 60,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "R036",
+      "path": "01_移动透镜式与匹配光学\\R036_RAYLASE_AXIALSCAN_RD14_官方规格书_2026.pdf",
+      "pages": 6,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "R039",
+      "path": "03_液体与膜片可调透镜\\R039_Optotune_tunable_optics_for_laser_processing_2024.pdf",
+      "pages": 14,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "R041",
+      "path": "07_测高闭环_三轴同步与标定\\R041_NIST_Methodologies and Implementation of Laser Powder-Bed Fusion Process Control_2023.pdf",
+      "pages": 9,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "R043",
+      "path": "01_移动透镜式与匹配光学\\R043_CN104191089B - 基于激光器输出光束的三维动态聚焦标刻系统及方法 - Google Patents.pdf",
+      "pages": 10,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "R044",
+      "path": "02_反射式与三振镜调焦\\R044_CN112068309B - 一种含双抛物面镜动态聚焦模块的三维扫描系统 - Google Patents.pdf",
+      "pages": 13,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "R045",
+      "path": "02_反射式与三振镜调焦\\R045_CN222506659U - 一种光学动态聚焦模组及三维扫描系统 - Google Patents.pdf",
+      "pages": 19,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "R046",
+      "path": "01_移动透镜式与匹配光学\\R046_CN222866943U - 一种动态聚焦光学系统 - Google Patents.pdf",
+      "pages": 5,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "R050",
+      "path": "09_艾思兰及相邻应用\\R050_艾思兰_CN116534252A_项目线索记录.pdf",
+      "pages": 15,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "R052",
+      "path": "09_艾思兰及相邻应用\\R052_江南大学项目清单_含艾思兰光束整形项目.pdf",
+      "pages": 36,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "R053",
+      "path": "01_移动透镜式与匹配光学\\R053_CN104191089A - 基于激光器输出光束的三维动态聚焦标刻系统及方法 - Google Patents.pdf",
+      "pages": 10,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "R054",
+      "path": "07_测高闭环_三轴同步与标定\\R054_CN107315247B - 预览模块及动态聚焦激光振镜 - Google Patents.pdf",
+      "pages": 18,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "R062",
+      "path": "09_艾思兰及相邻应用\\R062_CN110883020A - 清模机 - Google Patents.pdf",
+      "pages": 37,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "R063",
+      "path": "09_艾思兰及相邻应用\\R063_CN116373177B - 激光洗模机 - Google Patents.pdf",
+      "pages": 22,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "R064",
+      "path": "01_移动透镜式与匹配光学\\R064_CN114054972A - 一种动态聚焦激光切割方法与装置 - Google Patents.pdf",
+      "pages": 13,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "R065",
+      "path": "09_艾思兰及相邻应用\\R065_CN116534252A - 一种基于ai识别的无人机激光障碍物清除装置及方法 - Google Patents.pdf",
+      "pages": 11,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "S008",
+      "path": "07_测高闭环_三轴同步与标定\\S008_HALaser_E1803D控制卡完整手册.pdf",
+      "pages": 173,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "S009",
+      "path": "01_移动透镜式与匹配光学\\S009_RAYLASE_FOCUSSHIFTER_RD14_有效新版2026.pdf",
+      "pages": 8,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "S015",
+      "path": "10_执行器_导轨与编码器\\S015_Renishaw_ATOM_DX数据表.pdf",
+      "pages": 27,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "S018",
+      "path": "10_执行器_导轨与编码器\\S018_Akribis_AVM音圈电机规格.pdf",
+      "pages": 10,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "A001",
+      "path": "08_综述与光学基础\\A001_综述_大学机构库作者稿_新地址.pdf",
+      "pages": 22,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "A003",
+      "path": "01_移动透镜式与匹配光学\\A003_三维随机访问共焦显微_原文与补充资料.pdf",
+      "pages": 10,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "A003",
+      "path": "01_移动透镜式与匹配光学\\A003_三维随机访问共焦显微_原文与补充资料_84842d.pdf",
+      "pages": 53,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "A003",
+      "path": "01_移动透镜式与匹配光学\\A003_三维随机访问共焦显微_原文与补充资料_f4bb0a.pdf",
+      "pages": 18,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "A003",
+      "path": "01_移动透镜式与匹配光学\\A003_三维随机访问共焦显微_原文与补充资料_159780.pdf",
+      "pages": 3,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "B001",
+      "path": "08_综述与光学基础\\B001_激光自身空间维度加工系统综述_机械工程学报2023.pdf",
+      "pages": 14,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "C002",
+      "path": "07_测高闭环_三轴同步与标定\\C002_SCANLAB_RTC6官方规格书.pdf",
+      "pages": 2,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "U001",
+      "path": "02_反射式与三振镜调焦\\U001_2023_反射式动态聚焦_非球面校正与扫描范围扩展.pdf",
+      "pages": 4,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "U002",
+      "path": "02_反射式与三振镜调焦\\U002_2023_清华_振镜驱动反射式动态聚焦.pdf",
+      "pages": 11,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "U003",
+      "path": "01_移动透镜式与匹配光学\\U003_2026_Z镜组_XY振镜_场镜系统联合优化.pdf",
+      "pages": 16,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "U004",
+      "path": "02_反射式与三振镜调焦\\U004_2025_高速三振镜三维扫描系统_光学设计与分析.pdf",
+      "pages": 7,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "U005",
+      "path": "02_反射式与三振镜调焦\\U005_2025_高速三振镜三维扫描系统_曲面加工.pdf",
+      "pages": 13,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "U006",
+      "path": "01_移动透镜式与匹配光学\\U006_2025_模型驱动三维焦点移动_透明柔性聚合物微加工.pdf",
+      "pages": 28,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "U007",
+      "path": "04_TAG声学调焦\\U007_2026_共线光声相互作用_局域动态调焦与扩展景深.pdf",
+      "pages": 12,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "id": "U008",
+      "path": "01_移动透镜式与匹配光学\\U008_2016_激光大尺度3维动态聚焦扫描加工系统研究.pdf",
+      "pages": 6,
+      "result": "PDF签名、逐页解析、首末页渲染通过"
+    }
+  ]
+}

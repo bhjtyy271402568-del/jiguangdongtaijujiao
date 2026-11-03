@@ -1,0 +1,39 @@
+{
+  "url": "https://opg.optica.org/ol/abstract.cfm?uri=ol-48-24-6496",
+  "category": "02_反射式与三振镜调焦",
+  "origins": [
+    "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+    "用户粘贴_激光动态聚焦深度调研.txt"
+  ],
+  "context": "\n- 原始入口：https://opg.optica.org/ol/abstract.cfm?uri=ol-48-24-6496",
+  "id": "R020",
+  "files": [
+    {
+      "path": "02_反射式与三振镜调焦\\R020_Extending the 3D scanning range of reflective dynamic focusing device-based laser scanners.html",
+      "type": "HTML",
+      "bytes": 113433,
+      "sha256": "f62a72220fd87a2932780f8a63c822af1aaa29cdee0e77fa063d5027e88fd18b",
+      "url": "https://opg.optica.org/ol/abstract.cfm?uri=ol-48-24-6496",
+      "title": "Extending the 3D scanning range of reflective dynamic focusing device-based laser scanners",
+      "text_chars": 12526
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://opg.optica.org/ol/abstract.cfm?uri=ol-48-24-6496",
+      "http": 200,
+      "final_url": "https://opg.optica.org/ol/abstract.cfm?uri=ol-48-24-6496",
+      "result": "网页"
+    },
+    {
+      "url": "https://opg.optica.org/viewmedia.cfm?uri=ol-48-24-6496&seq=0",
+      "http": 200,
+      "final_url": "https://validate.perfdrive.com/?ssa=df2b33d6-d6c2-0c21-2881-4a5f346b677b&ssb=32387275929&ssc=https%3A%2F%2Fopg.optica.org%2Fviewmedia.cfm%3Furi%3Dol-48-24-6496%26seq%3D0&ssi=5ac69680-d3hy-b54f-f6a5-77dc6054232d&ssk=botmanager_support@radware.com&ssm=82604893250568616105208723591105&ssn=2d74f6260a0634d7478a7c2e279155bfe49aa8333fe3-72b9-afd1-77b4ab&sso=85a27d1-77d6-7135c4e4831bf9a20cf74e048a9cd87c7c844a6e0ed34380&ssp=28402150111793611138179360862865787&ssq=19041067588394625449575883528008883660648&ssr=MjMuMTcyLjIwMC44OQ==&sst=Mozilla%2F5.0%20%28compatible%3B%20ResearchDocumentCollection%2F1.0%29&ssv=&ssw=",
+      "result": "网页"
+    }
+  ],
+  "title": "Extending the 3D scanning range of reflective dynamic focusing device-based laser scanners",
+  "status": "全文已由用户补齐 → U001",
+  "resolved_by": "U001",
+  "resolution_note": "此前网络获取未完成；现已由用户提供正式版全文补齐。保留历史请求记录。"
+}

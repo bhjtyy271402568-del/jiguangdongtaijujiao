@@ -1,0 +1,382 @@
+# 激光动态聚焦深度调研
+
+**核心判断：要做出可靠样机，优先研究“移动透镜调焦＋匹配光学系统＋三轴同步”；要做高速方面的研究创新，重点看“反射式动态聚焦”；要解决未知表面的快速测高与自动跟焦，TAG声学透镜值得单独研究。这三条路线的目标不同，不能仅凭宣传中的“响应速度”选型。**[Scanlab](https://www.scanlab.de/sites/default/files/2026-03/SCANLAB-varioSCANII-eBox-EN.pdf)
+
+本轮检索截至 **2026年11月3日**，以你上传材料中的“1064 nm工业三维扫描头，用于曲面加工、打标、深雕和清洗”为主要场景，并扩展了高速反射式、可调透镜、声学和全息聚焦。材料里的功率、幅面、Z行程等仍应视为候选指标，而不是已经确定的设计要求。给其他AI的搜索词 设备自研方案与选型表
+
+另外整理了 **31项来源、原始入口、证据边界和工程验证清单**，便于后续查阅：
+
+:chatgpt-content-reference{index="58"}[下载：激光动态聚焦——来源索引与验证清单](sandbox:/mnt/data/激光动态聚焦_来源索引与验证清单_2026-11-03.md)
+
+---
+
+## 一、先纠正原资料里几个会影响设计判断的地方
+
+| 原资料中的表述或容易产生的理解 | 核查后的判断 |
+|---|---|
+| 三维动态聚焦一般就是“Z模块＋XY振镜＋F-Theta场镜” | 这是重要路线，但不是唯一架构。商业产品同时存在**带场镜的FT方案**和**不使用场镜的预聚焦PR方案**。[Scanlab](https://www.scanlab.de/en/products/z-axes-3d-add-ons/varioscan-ii) |
+| 移动透镜、可变发散角、视觉闭环是三种并列的调焦结构 | 三者不在同一层次：移动透镜是执行方式；改变发散角经常是其光学效果；视觉或测距闭环是获取目标高度的控制层。[Google Patents](https://patents.google.com/patent/CN222866943U/zh) |
+| 厂商写“重复精度0.5 μm”，就是工件上焦点重复精度0.5 μm | **不能这样解释。**SCANLAB和Aerotech的相关参数明确涉及电机或聚焦机构位置，焦点误差还要经过光学倍率换算，并叠加其他误差。[Scanlab](https://www.scanlab.de/sites/default/files/2026-03/SCANLAB-varioSCANII-eBox-EN.pdf) |
+| 80 mm标刻高度相当于Z＝±80 mm | 不成立。Sino-Galvo页面写的是最高标刻高度80 mm，不能自行翻倍。[Sino-Galvo Technology Co., Ltd](https://www.sino-galvo.com/Products_detail/7.html) |
+| 控制周期做到1 kHz，就能保证动态聚焦 | 1 kHz可能是某一层轨迹规划频率，但不能代替对**输出更新周期、机械响应、同步时差和跟随误差**的要求。[美国国家标准与技术研究院](https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=935084) |
+| 《Experimental investigation of 3D scanheads…》是2018年论文 | 正式发表年份是**2016年**。另外，三振镜高速扫描论文虽然DOI含2024，期刊卷期是**2025年2月**。[University of Birmingham](https://research.birmingham.ac.uk/en/publications/experimental-investigation-of-3d-scanheads-for-laser-micro-proces/) |
+
+**这里最重要的不是年份，而是避免把“电机动得准”“焦点落得准”和“加工结果一致”当成同一个指标。**
+
+---
+
+## 二、动态聚焦到底有哪些技术路线？
+
+### 1. 移动透镜式：最适合作为第一台工程样机的基线
+
+基本原理是改变透镜之间的相对位置，使输出光束的会聚或发散状态发生变化，从而移动最终焦点。工业产品中既有独立Z模块，也有与XY扫描头一体化的系统。[Scanlab](https://www.scanlab.de/sites/default/files/2026-03/SCANLAB-varioSCANII-eBox-EN.pdf)
+
+需要区分两种光学组织方式。
+
+**带场镜的方案：**
+
+```text
+激光器 → 光束匹配 → 动态调焦镜组 → X/Y振镜 → F-Theta场镜 → 工件
+```
+
+**无场镜的预聚焦方案：**
+
+```text
+激光器 → 动态调焦/聚焦光学系统 → X/Y振镜 → 工件
+```
+
+第二种不是把第一种的场镜直接拆掉，而是另一套完整的光学设计。RAYLASE的FOCUSSHIFTER和AXIALSCAN分别提供了这两类商业实现。[RAYLASE - THE POWER OF WE](https://www.raylase.de/en/products/focusshifter/focusshifter-rd-14.html)
+
+我的工程判断是：**第一版应选“已有匹配关系的镜组＋扫描头”，而不是随便买一个Z模块、一个振镜、一个场镜拼起来。**2026年的联合优化论文正说明，Z镜组、XY扫描与场镜的像差会相互影响，需要整体优化。[PubMed](https://pubmed.ncbi.nlm.nih.gov/42071592/)
+
+### 2. 反射式动态聚焦：用镜面转动实现轴向焦点移动
+
+这条路线不是简单增加第三块普通平面扫描镜，而是通过抛物面镜等特殊光学结构，把转镜运动转换成输出波前、发散角和焦点位置的变化。已有“两块调焦振镜＋XY振镜”的四执行器结构，也有压缩为三振镜、但轴间耦合更强的结构。[ResearchGate](https://www.researchgate.net/publication/366318787_Galvanometer_driven_optical_system_for_laser_dynamic_focusing)
+
+它最值得研究的地方是：**让Z方向也利用旋转振镜的动态性能，而不是依赖较大镜组的轴向平移。**
+
+但“三振镜”不等于“三个独立轴各管一个方向”。2025年的方案中，两块振镜共同决定Z，其中一块同时决定X，因此需要耦合模型和逆解，控制难度不能按普通XYZ三个独立通道理解。[科学直通车](https://www.sciencedirect.com/science/article/pii/S0030399224010661)
+
+### 3. 液体/膜片可调透镜：结构紧凑，但不能默认高速、高功率、高精度同时具备
+
+这类方案改变透镜形状或光焦度，不需要让整个镜组作长距离移动。它是否适合加工，必须检查具体型号的通光口径、功率承受能力、响应、温漂和焦点重复性。
+
+例如Optotune公开的EL-10-42-OF资料，给出10 mm孔径、±2屈光度，以及特定近红外条件下50 W平均功率等级；不同驱动和步进条件下响应约4.5–12 ms。其f＝160 mm示例中的焦点重复性/漂移典型值为小于500 μm，**不能直接当成±10 μm级精密调焦方案**。这些是2024年官方资料中的参考条件，采购时仍需确认当前版本。[Optotune](https://www.optotune.com/s/Optotune-tunable-optics-for-laser-processing.pdf)
+
+### 4. TAG声学透镜：高速周期扫焦，再在正确相位出光
+
+TAG透镜利用声场形成变化的折射率分布，使焦点高速周期运动。对于脉冲加工，可以在焦点经过目标高度时触发激光，而不是要求焦点停在那个高度。2023年的研究还把测高和加工跟焦放进同一个动态光学元件中。[新闻在线](https://www.newswise.com/pdf_docs/170367637534890_s41377-023-01303-2.pdf)
+
+**这种方式的关键是“焦点扫描＋相位选择”，不是普通伺服轴意义上的任意位置停留。**因此，140–350 kHz的扫焦/测高频率，不能直接写成“任意Z轨迹的350 kHz闭环带宽”。[新闻在线](https://www.newswise.com/pdf_docs/170367637534890_s41377-023-01303-2.pdf)
+
+### 5. 全息、MEMS与其他快速调焦：前沿空间大，但要区分实验演示与工业适用性
+
+MEMS变焦镜、相位调制器、DMD全息调焦等，也能实现轴向焦点控制。2025年的综述将MEMS路线分为反射式变焦镜、变焦微透镜和相位型变焦镜，可作为扩展阅读入口。[PubMed Central (PMC)](https://pmc.ncbi.nlm.nih.gov/articles/PMC12029447/)
+
+不过，对你当前的工业设备方向，我不会因为某个实验达到MHz，就把它排在成熟Z模块前面。**高刷新率不自动意味着高能量利用率、大口径、大工作体积和高功率可靠性已经得到验证。**
+
+---
+
+## 三、最值得阅读的论文，以及真正能借鉴什么
+
+### 1. 2026年：Z镜组、XY振镜和场镜联合优化
+
+**Doubled Z-axis scanning range and spot-quality enhancement in system-level integrated co-optimized transmissive 3D laser scanning systems**
+
+- 作者：Yunli Yu等。
+- 期刊：*Optics Express*，34(8)，14943–14958。
+- DOI：**10.1364/OE.588979**。
+
+论文把动态聚焦模块、XY振镜和远心F-Theta镜作为统一系统优化。摘要报告：在直径80 mm的XY区域内，Z范围由±10 mm扩大至±20 mm，光程差由1.0波降低至0.25波，Strehl比由0.3提高至0.96以上。**这些具体数值在摘要中明确属于仿真结果；摘要另称进行了实验验证，不能把两者合并写成全部指标均已实测。**[PubMed](https://pubmed.ncbi.nlm.nih.gov/42071592/)
+
+**对你的价值：最高优先级的光学设计方法参考。**  
+它提醒我们：增加Z行程不只是让电机多走一点；全体积光斑质量可能先成为瓶颈。
+
+### 2. 2023年：清华的振镜驱动反射式动态聚焦
+
+**Galvanometer driven optical system for laser dynamic focusing**
+
+- 作者：Liang Yu、Kuai Yang、Zhen Zhang。
+- 期刊：*Optics Express*，31(1)，673–683。
+- DOI：**10.1364/OE.476921**。
+
+结构使用两块抛物面镜和两块调焦振镜，再与XY扫描头组合。实验使用405 nm连续激光。原文中的600 μs对应3.5 mrad、约1%满量程的小阶跃，折算焦移约2.04 mm；文中468 nm焦点重复性是由角重复性和光学关系换算得到，不能当作整个工作体积内独立实测的动态定位误差。[ResearchGate](https://www.researchgate.net/publication/366318787_Galvanometer_driven_optical_system_for_laser_dynamic_focusing)
+
+**对你的价值：最值得拆解的高速Z光机原型。**  
+而且它不是只有论文概念，作者披露的申请号能够对应到清华大学的 **CN112068309B**，可以把论文和专利一起看。[Google Patents](https://patents.google.com/patent/CN112068309B/zh)
+
+### 3. 2025年：从四执行器进一步压缩到三振镜
+
+**Optical design and analysis of a high-speed triple galvanometer laser 3D scanning system**
+
+- 作者：Yi Liu、Tianting Chen等。
+- 期刊：*Optics & Laser Technology*，181，111608。
+- DOI：**10.1016/j.optlastec.2024.111608**。
+
+方案使用三块振镜、两块抛物面镜和F-Theta镜，论文报告三维扫描速度可达到10 m/s，并给出光学分析和实验验证。其重要特点是X与Z耦合，而不是简单地让第三振镜独立承担Z。[科学直通车](https://www.sciencedirect.com/science/article/pii/S0030399224010661)
+
+**对你的价值：适合作为反射式路线的第二篇核心论文。**  
+应重点看几何模型、像差、控制逆解和扫描连接质量，而不是只摘录“10 m/s”。
+
+本轮取得的是出版社摘要与引言，尚不足以独立复现其全部光学处方和动态实验。
+
+### 4. 2016年：如何测出Z轴到底拖慢了多少
+
+**Experimental investigation of 3D scanheads for laser micro-processing**
+
+- 作者：Pavel Penchev、Stefan Dimov、Debajyoti Bhaduri。
+- 期刊：*Optics & Laser Technology*，81，55–59。
+- DOI：**10.1016/j.optlastec.2016.01.035**。
+
+研究通过平面与15°倾斜面的微加工实验，观察随扫描速度增加而出现的离焦影响。在其被测系统中，倾斜面扫描能力对应的Z速度约为388 mm/s，明显低于XY能力。**这属于特定系统的实验结果，不是所有动态聚焦头的统一速度上限。**[纯OAI](https://pure-oai.bham.ac.uk/ws/portalfiles/portal/25552450/2016_Experimental_Investigation_of_3D_Scanheads_for_Laser_Micro_Processing_FINAL.pdf)
+
+**对你的价值：第一台样机的验收方法，比宣传页上的最大扫描速度更有用。**
+
+### 5. 2023年：测高与加工跟焦合在同一TAG镜中
+
+**Single-lens dynamic z-scanning for simultaneous in situ position detection and laser processing focus control**
+
+- 作者：Xiaohan Du、Camilo Florian、Craig B. Arnold。
+- 期刊：*Light: Science & Applications*，12，274。
+- DOI：**10.1038/s41377-023-01303-2**。
+
+探测光束和加工光束共用动态扫焦元件：通过反射信号确定表面高度，再在相应相位触发加工光。论文演示140–350 kHz动态表面检测，最低线性误差1.10%。[CityUHK Scholars](https://scholars.cityu.edu.hk/en/publications/single-lens-dynamic-z-scanning-for-simultaneous-in-situ-position-/)
+
+**对你的价值：当工件表面未知、持续变化，或预先测好的高度图不够用时，这条路线比单纯加快Z电机更值得考虑。**
+
+但它对光路、探测信号、色散校准和触发相位有专门要求，不是把普通Z模块换成TAG镜就能完成。[新闻在线](https://www.newswise.com/pdf_docs/170367637534890_s41377-023-01303-2.pdf)
+
+### 6. 2024年：全息焦点控制达到MHz级
+
+**Large-volume focus control at 10 MHz refresh rate via fast line-scanning amplitude-encoded scattering-assisted holography**
+
+- 作者：Atsushi Shibukawa等。
+- 期刊：*Nature Communications*，15，2926。
+- DOI：**10.1038/s41467-024-47009-w**。
+
+研究结合DMD、共振扫描和散射辅助全息，演示最高31 MHz刷新，并在毫米级三维体积中进行多焦点寻址。实验使用532 nm光源。它展示了非常强的高速光场控制能力，但不能据此推断已经适合1064 nm高功率工业加工。[Nature](https://www.nature.com/articles/s41467-024-47009-w)
+
+**对你的价值：适合了解速度上限和新的控制思路，不建议作为第一台工业样机的起点。**
+
+### 另外两篇值得补充
+
+| 论文 | 主要价值 | 需要注意 |
+|---|---|---|
+| **Extending the 3D scanning range of reflective dynamic focusing device-based laser scanners**，2023，DOI：**10.1364/OL.509656** | 非球面对称校正，研究反射式系统的像差与工作范围；报告范围增加15.2% | 本轮主要核实了摘要，不能视为已获得完整设计处方。[Optica Publishing Group](https://opg.optica.org/ol/abstract.cfm?uri=ol-48-24-6496) |
+| **Model-driven 3D laser focus shifting for precision fabrication of microstructures in transparent flexible polymers**，2025，DOI：**10.1016/j.ijmachtools.2025.104310** | 将焦点移动与材料加工深度模型联系起来 | PDMS/PET的百分比误差属于加工模型误差，不是Z定位误差；机构库全文仍在禁运期。[理大机构研究档案馆](https://ira.lib.polyu.edu.hk/handle/10397/115461) |
+
+---
+
+## 四、市面设备：哪些参数真正有参考价值？
+
+以下均为**厂商公开参数，不是本轮实测**，不同配置不能拼接成一套“最优参数”。
+
+| 厂商与型号 | 核实到的关键参数或配置 | 选型时的关键提醒 |
+|---|---|---|
+| **SCANLAB varioSCAN II** | 20i移动单元行程±2 mm，tracking error为0.55 ms；20-20FT示例配f＝163 mm场镜，给出Z范围±32 mm | 镜片行程与焦点行程不同；小于0.5 μm的重复性是电机指标。[Scanlab](https://www.scanlab.de/sites/default/files/2026-03/SCANLAB-varioSCANII-eBox-EN.pdf) |
+| **Aerotech AGV3D** | 直驱聚焦机构；Z机构精度0.5 μm、重复性0.15 μm；最大机构速度1000 mm/s | 这些精度是在聚焦机构处定义，不等于工件上的焦点精度。[Aerotech US](https://www.aerotech.com/product/agv3d-three-axis-laser-scan-heads/) |
+| **RAYLASE FOCUSSHIFTER RD-14** | 带场镜；f＝163配置自由焦移−16～+14 mm，f＝254配置−41～+32 mm；tracking error 0.9 ms | 焦移范围随镜头而变；900 mm/s是镜片运动速度，不是直接给出的焦点速度。[RAYLASE - THE POWER OF WE](https://www.raylase.de/_Resources/Persistent/8/3/8/2/8382e9d0599c27104c9f8316603afbaa4d944558/03119_Datenblatt_FOCUSSHIFTER%20RD-14_EN.pdf) |
+| **RAYLASE AXIALSCAN RD-14** | 无场镜预聚焦；2026年规格书覆盖200～600 mm方形场的不同配置；tracking error 0.9 ms | 工作距离、光斑和三维范围绑定配置，不能只看最大幅面。[RAYLASE - THE POWER OF WE](https://www.raylase.de/_Resources/Persistent/b/9/a/f/b9afb6124b7834b86df20625625e58d8316dbf82/2026-03-16_Datenblatt_AXIALSCAN%20RD-14_EN_v2.0.pdf) |
+| **Sino-Galvo FL8220-3D-500** | 1064 nm；400～500 mm方形场；最高标刻高度80 mm；标刻速度2000 mm/s；XY2-100 | 小于8 μrad是角重复性；页面没有充分给出可直接用于验收的工件Z焦点精度。[Sino-Galvo Technology Co., Ltd](https://www.sino-galvo.com/Products_detail/7.html) |
+| **FEELTEK FR20-F** | 1064 nm前聚焦系统，页面列出Z深度200 mm | 需进一步确认该深度对应的场幅、工作距离和光斑质量，不能写成±200 mm。[苏州菲镭泰克激光有限公司](https://www.feeltek.cn/products/3dzhenjing/fr20_xilie/3dqianjujiaodongtaixitong_fr20_f_f20_.html) |
+| **Scanner Optics VCM F1** | 独立Z模块；入口20 mm、出口40 mm；行程≤20 mm；tracking error 0.7 ms；典型速度≤180 mm/s；XY2-100 | 很适合列入独立Z模块候选；小于0.5 μm指标仍须落实到具体光学组合与测试定义。[Scanner Optics Co., Ltd.](https://www.scanneroptics.com/products/scanner-optics-vcm-f1/) |
+| **Optotune EL-10-42-OF** | 可调光焦度元件；10 mm孔径；±2 dpt；特定NIR条件下50 W等级 | 对响应、温漂和焦点重复性要求高时，必须按具体配置核算，不能只依据“无长行程机械移动”判断优越性。[Optotune](https://www.optotune.com/s/Optotune-tunable-optics-for-laser-processing.pdf) |
+
+### 哪些值得优先联系？
+
+**做整机集成对标**，我会优先比较SCANLAB、RAYLASE、Aerotech与国内成套3D头；**做独立Z模块开发对标**，会把varioSCAN和VCM F1放到同一轮询问中。
+
+这不是已经确定的采购排名，而是为了分别回答两个问题：成套系统能交付到什么程度；单独Z模块留给我们多少光学、标定和控制工作。
+
+**价格方面，本轮没有取得同配置、同交付范围的正式报价，不给一个看似精确但不可比的区间。**询价必须同时说明是否包含镜组、驱动器、XY头、场镜、控制卡、校正文件、SDK、软件授权及调试服务。
+
+---
+
+## 五、真正决定系统性能的，不是单个“最快参数”
+
+### 1. 先明确你要控制的是哪个量
+
+我建议把需求分成四层：
+
+| 层级 | 应该写清楚的量 |
+|---|---|
+| 光学 | 波长、M²、入射光束直径及定义、光斑要求、可用三维体积 |
+| 执行机构 | 镜片/镜面行程、速度、加速度、重复性、温漂 |
+| 动态控制 | 指令与实际响应的时差、跟随误差、稳定时间、触发同步 |
+| 工艺结果 | 线宽、深度、能量密度、表面质量及允许波动 |
+
+这种分层能避免把厂商的机构精度直接写进工件加工精度要求。SCANLAB、Aerotech的说明，以及三维扫描头的实验研究，都表明这些层级需要分别核查。[Scanlab](https://www.scanlab.de/sites/default/files/2026-03/SCANLAB-varioSCANII-eBox-EN.pdf)
+
+### 2. 镜片误差如何变成焦点误差？
+
+设镜片位置为 \(u\)，焦点轴向位置为 \(z_f\)，局部一阶关系是：
+
+\[
+\delta z_f \approx \frac{\partial z_f}{\partial u}\delta u
+\]
+
+SCANLAB某示例配置给出 **17.1 mm/mm** 的焦移倍率。用0.5 μm机构重复性作单项换算，得到约8.55 μm的焦点误差尺度，**而不是0.5 μm**；这还不包含其他光学、动态和热误差。这里是基于规格参数的推算，不是整机精度保证。[Scanlab](https://www.scanlab.de/sites/default/files/2026-03/SCANLAB-varioSCANII-eBox-EN.pdf)
+
+### 3. 曲面扫描速度，必须同时检查所需Z速度
+
+下面是一个需求分析示例，不是某设备的实测结果。
+
+工件表面为 \(z=h(x,y)\) 时：
+
+\[
+v_z=\frac{\partial h}{\partial x}v_x+
+\frac{\partial h}{\partial y}v_y
+\]
+
+假设沿运动方向坡度为0.2，XY速度为2 m/s，则需要：
+
+\[
+v_z=0.4\ \mathrm{m/s}
+\]
+
+再假设XY与Z之间有未补偿的0.5 ms相对延迟，则一阶高度偏差约为：
+
+\[
+\Delta z\approx0.4\times0.0005
+=0.0002\ \mathrm m
+=200\ \mu\mathrm m
+\]
+
+若只给同步误差分配20 μm预算，残余相对时差应控制在约50 μs以内。
+
+**因此，“XY很快、Z也很快”仍不够；必须让它们在同一时刻到达对应的空间位置。**NIST的控制资料同样将机械响应与激光功率—位置同步作为独立问题讨论。[美国国家标准与技术研究院](https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=935084)
+
+### 4. 100、200、500 mm幅面不能直接对应唯一焦距
+
+同样幅面下，工作距离、通光口径、入射光束和光斑要求不同，会导致不同设计。
+
+例如Aerotech公布的1064 nm、M²＝1配置中，同为200 mm方形场，AGV3D20的理论光斑约35.2～38.5 μm，AGV3D30约23.3～25.7 μm。**“同样能扫200 mm”并不意味着具有相同加工能力。**[Aerotech US](https://www.aerotech.com/product/agv3d-three-axis-laser-scan-heads/)
+
+我的选型顺序是：
+
+> **先确定工件和光斑需求 → 再确定有效三维工作体积 → 再选入射光束、镜组与口径 → 最后确定所需Z行程和动态性能。**
+
+不建议从“买20 mm口径振镜”开始倒推全部光学系统。
+
+---
+
+## 六、专利调研：最值得拆解的不是标题，而是结构限定
+
+以下列的是已取得的公开申请或授权文本。**“取得授权文本”不代表已经核实当前法律有效性，更不代表做过自由实施分析。**Google Patents本身也注明，其法律状态不是法律结论。[Google Patents](https://patents.google.com/patent/CN222866943U/zh)
+
+| 专利 | 申请人及关键日期 | 值得研究的具体内容 |
+|---|---|---|
+| **CN104191089B** | 苏州菲镭泰克；优先权2014-09-11，授权文本2016-05-04 | Z调焦镜组、两片聚焦镜与XY振镜组合，结合束腰、发散角和标刻位置计算调整位置。不是对所有移动透镜调焦的笼统覆盖。[Google Patents](https://patents.google.com/patent/CN104191089B/zh) |
+| **CN112068309B** | 清华大学；优先权2020-09-08，授权文本2021-07-02 | 两等焦距抛物面镜、两调焦振镜的特定几何关系，再接扩束/聚焦镜组和XY模块；与前述清华论文对应。[Google Patents](https://patents.google.com/patent/CN112068309B/zh) |
+| **CN222506659U** | Suzhou Jieentai Technology；申请2024-06-06，公开2025-02-18 | 两离轴抛物面镜与两个同步转动反射镜；从属结构包括曲柄镜座，说明书包含前聚焦和后聚焦实施方式。[Google Patents](https://patents.google.com/patent/CN222506659U/zh) |
+| **CN222866943U** | Suzhou Carmen Hass Laser Technology；申请2024-09-29，公开2025-05-13 | 移动透镜＋固定透镜的动态扩束，与XY和场镜配合；包含小幅面精密加工实施例。[Google Patents](https://patents.google.com/patent/CN222866943U/zh) |
+| **US12265207B2** | II-VI Delaware；优先权2021-03-04，授权文本2025-04-01 | 固定输入镜、移动正透镜和固定输出正透镜。权利要求1还包含焦距比例等限定，另有其他独立权利要求。[Google Patents](https://patents.google.com/patent/US12265207B2/en) |
+| **CN120928524B** | 北京正时精控；申请2025-10-14，授权文本2026-01-23 | 双对称电磁驱动、聚焦元件、导轨以及遮光片位置检测，适合研究Z执行器与反馈结构。[Google Patents](https://patents.google.com/patent/CN120928524B/zh) |
+| **CN121245003A** | Amsky Technology；申请2025-09-22，公开2026-01-02 | 按光学景深分层安排加工，部分实施方式在每层内保持调焦镜不动；不能概括成所有点都高速连续跟焦。[Google Patents](https://patents.google.com/patent/CN121245003A/en) |
+
+**对自研最有用的三组：**
+
+- 光学结构：清华双抛物面镜方案，与三振镜论文对照。
+- 执行器结构：2026年公开授权文本的双电磁驱动方案。
+- 轨迹策略：景深分层，不一味要求Z跟随每个微小高度变化。
+
+这些分别对应“怎样调焦”“怎样驱动”和“怎样减少不必要的调焦”，不应混成一个问题。
+
+你资料中提到的**苏州艾思兰**，本轮仍没有找到足以确认其采用某一种具体动态聚焦架构的直接证据。这个结论是“证据不足”，不是“该企业没有相关技术或专利”；也不应从清洗、除障或驱鸟产品宣传反推出其使用了某种三维扫描光路。你原资料对此的保留是必要的。动态聚焦技术资料汇编
+
+---
+
+## 七、结合你在做的控制卡，动态聚焦应该怎样接进去？
+
+你之前确定的是**两轴、XY2接口、STM32＋独立FPGA**。我的建议是：**保留两轴第一版目标，但在接口和时间轴上预留Z，不要因此把第一版扩大成同时自研光学、Z伺服和三轴加工软件。**
+
+### 1. Z不是一个随便异步发送的数值
+
+NIST公开资料给出的常见16位XY2-100形式，使用2 MHz时钟、20位帧，对应10 μs更新周期；X、Y、Z使用各自的数据差分对，共用时钟和同步信号。**这是数字通信能力，不是机械轴能以100 kHz完成定位。**[美国国家标准与技术研究院](https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=935084)
+
+建议的职责划分是：
+
+```text
+上位机
+  曲面/高度图、加工路径、标定模型
+                ↓
+STM32
+  任务管理、通信、缓冲、参数和状态管理
+                ↓
+FPGA
+  统一时间轴、插补、XYZ同步输出、激光触发
+                ↓
+XY驱动器＋Z驱动器
+  各自闭环伺服
+                ↓
+实际光束位置与加工结果
+```
+
+这是建议架构，不是现成控制器性能承诺。
+
+**同一时钟只能解决数字发送同步，不能自动消除不同轴的机械延迟。**还要测量响应、匹配时延，必要时加入前馈或调整轨迹。[美国国家标准与技术研究院](https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=935084)
+
+### 2. 已有DLC-2也值得先确认，但不能直接套新版本功能
+
+金橙子当前DLC2-V2官方页面列有增强XY2-100三轴支持。但你手里的DLC-2是否为同一硬件、固件和软件版本尚未核实，因此不能直接保证能输出所需Z通道。[JCZ激光系统](https://www.ezcad.com/products/dlc2-v2/)
+
+对已有设备，最该确认的是：第三光学轴输出、协议位宽、同步方式、可用SDK，以及三维校正文件的格式与授权。机械升降台的Z功能也不能自动等同于光学动态聚焦通道。
+
+### 3. “24 V输入”不能等同于所有模块共用24 V
+
+例如VCM F1公开要求±15 V供电。控制卡电源与调焦驱动器电源应分别设计和核对，不能因为控制板输入24 V，就默认可直接给Z模块供电。[Scanner Optics Co., Ltd.](https://www.scanneroptics.com/products/scanner-optics-vcm-f1/)
+
+---
+
+## 八、我建议的自研路线和验收方法
+
+以下是基于上述资料提出的工程方案，不是厂商已有成套承诺。
+
+### 第一阶段：先建一个可测量、可比较的基准系统
+
+选择一套已经匹配好的移动透镜光学系统，先完成静态焦点移动和三轴轨迹验证。暂时不要同时叠加反射式新光路、实时视觉测高和复杂自由曲面工艺。
+
+基准系统的价值是：以后替换自研Z模块时，可以判断问题来自执行器、光学、控制还是标定，而不是所有环节同时不确定。
+
+### 第二阶段：把“焦点移动”做成可验证的三维系统
+
+建议建立完整映射：
+
+\[
+(\theta_x,\theta_y,u)
+=F(x,y,z;T)
+\]
+
+其中 \(T\) 表示温度等需要考虑的状态。不要默认Z镜片位置只与目标高度有关，也不要只在一个平面做XY校正后就认为整个三维体积已经标定。
+
+| 验收项目 | 建议怎么测 | 必须记录什么 |
+|---|---|---|
+| 静态焦点 | 中心、边缘、四角，在多个Z层测量 | 焦点位置、光斑直径、椭圆率、功率 |
+| 三维定位 | 全体积采样，另留独立验证点 | XYZ误差，而不是只有拟合残差 |
+| 动态性能 | 不同幅值阶跃、斜坡、正弦与倾斜面扫描 | 跟随误差、稳定时间、超调和相对时延 |
+| 热稳定 | 冷态到稳态、不同激光负载 | 焦点漂移、光斑变化、温度与回零误差 |
+| 加工一致性 | 平面、斜面、球/柱面，再做真实工件 | 线宽、深度、质量波动、效率和失败工况 |
+
+动态测试可以参考2016年论文的倾斜面方法；光学验收则应覆盖整个工作体积，而不是只展示中心位置的一张光斑照片。[纯OAI](https://pure-oai.bham.ac.uk/ws/portalfiles/portal/25552450/2016_Experimental_Investigation_of_3D_Scanheads_for_Laser_Micro_Processing_FINAL.pdf)
+
+### 第三阶段：先预测高度，再考虑实时跟焦
+
+我建议先用预扫描得到的高度图驱动Z，以便把“测高误差”和“调焦误差”分开。等执行端稳定后，再加入实时测高，并处理传感器与加工点之间的空间偏置、数据时效和遮挡。
+
+同时明确三种不同的闭环：
+
+**镜片位置闭环**保证执行器到位；**表面—焦点闭环**保证焦点与工件关系正确；**工艺反馈闭环**才涉及实际加工深度或质量。NIST资料也明确指出，振镜自身闭环不代表实际激光落点已经闭环。[美国国家标准与技术研究院](https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=935084)
+
+台阶或高度突变处，应规划停光和跳转，而不是要求Z以无限加速度连续跟随。整个调试过程应从低功率封闭测试开始，并让越界、数据失效、驱动异常及联锁触发进入明确的停光状态。
+
+---
+
+## 最终建议
+
+**工程主线：移动透镜式Z模块＋匹配光学系统＋统一时间轴＋三维标定。**先证明在规定工作体积和速度下，焦点误差、光斑质量和加工结果可重复，再决定哪些部分值得自研替换。
+
+**研究主线：优先读清华2023年反射式论文及对应专利，再读2025年三振镜论文和2026年联合光学优化论文。**它们分别对应高速Z实现、执行器数量与耦合控制、全工作体积的光斑质量问题。[ResearchGate](https://www.researchgate.net/publication/366318787_Galvanometer_driven_optical_system_for_laser_dynamic_focusing)
+
+**未知表面跟焦主线：TAG论文单独立项评估，不要与普通三轴扫描头混为一谈。**它真正值得借鉴的是把测高与选焦整合，而不仅是那个很高的频率数字。[CityUHK Scholars](https://scholars.cityu.edu.hk/en/publications/single-lens-dynamic-z-scanning-for-simultaneous-in-situ-position-/)
+
+当前还缺的不是更多“支持3D动态聚焦”的产品名称，而是你最终要加工的**材料、工作体积、目标光斑、轨迹速度及允许误差**。在这些指标确定之前，可以收敛技术路线和验证方法，但还不能负责任地定死镜片焦距、Z行程、执行器型号和整机精度。

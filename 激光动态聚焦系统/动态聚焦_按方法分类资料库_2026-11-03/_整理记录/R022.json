@@ -1,0 +1,23 @@
+{
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42071592/",
+  "category": "01_移动透镜式与匹配光学",
+  "origins": [
+    "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+    "用户粘贴_激光动态聚焦深度调研.txt"
+  ],
+  "context": "\n- 原始入口：https://pubmed.ncbi.nlm.nih.gov/42071592/",
+  "id": "R022",
+  "files": [],
+  "attempts": [
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42071592/",
+      "http": 403,
+      "final_url": "https://pubmed.ncbi.nlm.nih.gov/42071592/",
+      "error": "403 Client Error: Forbidden for url: https://pubmed.ncbi.nlm.nih.gov/42071592/"
+    }
+  ],
+  "status": "全文已由用户补齐 → U003",
+  "title": "Doubled Z-axis scanning range and spot-quality enhancement_2026",
+  "resolved_by": "U003",
+  "resolution_note": "此前网络获取未完成；现已由用户提供正式版全文补齐。保留历史请求记录。"
+}

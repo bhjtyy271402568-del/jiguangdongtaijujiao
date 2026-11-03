@@ -1,0 +1,237 @@
+www.raylase.com
+HIGH DYNAMICS IN LARGE WORKING FIELDS 
+The AXIALSCAN RD-14 was developed to be able to efficiently process large workpieces. It combines the 
+high dynamics of a MINISCAN III with the advantages of dynamic pre-focusing. In contrast to a solution 
+with an F-Theta lens, the laser is focused in front of the scan mirrors, allowing the deflection angle to be fully 
+utilized. This means that larger processing fields are possible and even large components can be processed 
+with a single deflection unit. This results in a great advantage for the user, who can avoid the time-consuming 
+stitching together of several processing fields.
+The AXIALSCAN RD-14 is the ideal solution for all applications where large fields and high dynamics are 
+required. Hence, it is particularly suitable for additive manufacturing or the cutting and marking of printed 
+circuit boards (PCBs).
+The dynamic pre-focusing also enables the processing of non-planar structures without the need for additi-
+onal optics. This means that the AXIALSCAN RD-14 can be used for both layer-by-layer processing (2.5D) 
+and complete 3D processing.
+The very compact design of the AXIALSCAN RD-14 and its versatile mounting options are almost identical 
+to our FOCUSSHIFTER RD-14. Therefore, it can also be flexibly integrated into laser systems and the integrator 
+can easily select the optimum solution for his laser application.
+AXIALSCAN RD-14
+ADDITIVE MANUFACTURING - PCB MARKING – PCB CUTTING
+Stable focus 
+position
+Highest 
+dynamics
+Large 
+processing fields
+
+AXIALSCAN RD-14 WHAT IS SPECIAL ABOUT THE AXIALSCAN RD-14?
+FLEXIBLE 3D LASER PROCESSING WITH COMPACT DESIGN
+The AXIALSCAN RD-14 is a 3D defl  ection unit designed for mid-range laser power and medium to large processing fi  elds. 
+Thanks to the pre-focusing optics for fl  at fi  eld correction, it can utilize the maximum processing fi  eld, and, thanks to 
+RAYVOLUTION DRIVE technology, it still off  ers very dynamic adjustment of the z-position of the focus. 
+With its compact housing and multiple mounting options, the AXIALSCAN RD-14 can be fl  exibly integrated into any laser 
+system, making it the ideal solution for even the most demanding laser processes.
+See for yourself:
+Highly dynamic z-focusing with 
+technology
+Ensures stable z-position and penetration depth 
+independent of machining speed
+Compact housing with multiple 
+mounting options
+Enables optimum integration into 
+almost any laser system
+Digital control with XY2-100 or 
+SL2-100 protocol
+Enables high-precision control and 
+additionally feedback of position and 
+status signals for process monitoring 
+and optimization
+Dust-proof housing (IP64)
+Allows the use of high laser powers 
+even under harsh production conditions
+Second protective glass with 
+quick-change mounting frame
+Reduces maintenance times and 
+increases productivity and process 
+reliability Flexible process fi  eld sizes
+Enables processing of components 
+in processing fi  elds between
+200 x 200 mm² and 600 x 600 mm²
+
+AXIALSCAN RD-14  FACTS & USE CASES
+ADDITIVE PRODUCTION OF DENTAL IMPLANTS
+In additive manufacturing, the goal is often to increase pro-
+ductivity and reduce part costs. This is particularly true in 
+the market for additively manufactured dental implants. One 
+of the challenges: Though conventional laser systems for this 
+application usually have sufficient dynamic performance, 
+they often do not have the necessary field size. This is becau-
+se the F-Theta lens can considerably restrict the usable field. 
+For the user, this translates into longer production times and 
+higher costs per implant.
+Here, the AXIALSCAN RD-14 represents an interesting tech-
+nological option. With its highly dynamic RAYVOLUTION DRIVE 
+z-axis, a fast and precise flat field correction beco-
+mes possible without an F-Theta objective. This allows the  
+AXIALSCAN RD-14 to utilize the full scanning angle and thus 
+cover a larger working field without compromising the 
+dynamics of the system. The larger working field results in 
+more implants per production run, which leads to a shorter 
+production time per implant and therefore a reduction in 
+costs.
+Furthermore, with its compact dimensions and versatile 
+mounting options, the AXIALSCAN RD-14 can be easily in-
+tegrated into existing machine designs. As a result, the 
+AXIALSCAN RD-14 with its RAYVOLUTION DRIVE offers an 
+attractive solution for optimizing productivity and costs in 
+additive manufacturing and paves the way for scalable and 
+more economical production processes for customer-speci-
+fic dental implants.
+OTHER SUITABLE ACCESSORIES
+INTUITIVE PROCESS SOFTWARE
+Our software solution for a quick and easy program-
+ming of your scanning solution. User-friendly set-up 
+and calibration of the deflection unit and effortless au-
+tomation through the built-in API.
+CONTROL CARD WITH FEEDBACK FUNCTION
+The control center for runtime-critical process steps.  
+Allows synchronous control of deflection unit, laser and 
+peripherals and a combined readback of scanner and 
+sensor signals.
+SP-ICE 3
+Patient-specific dental implants are often manufactured 
+using additive manufacturing. Here and in other additive 
+manufacturing processes, high dynamics and a favorab-
+le machine price play an important role. For many such 
+applications, the AXIALSCAN RD-14 offers an optimum 
+compromise between spot size, dynamics, compact design 
+and price.
+
+AXIALSCAN RD-14    GOOD REASONS TO CHOOSE RAYLASE
+THIS MAKES RAYLASE SPECIAL
+Systems view instead of components
+Broad application knowledge
+Education & training on the system
+The POWER OF WE
+On-site support for implementation and service
+Technical specifications are important and often decisive. But at RAYLASE, we believe that there is more to it than 
+pure technology that matters. For this reason, we are your partner for reliable and successful laser processes and 
+offer more than just technical components.
+Modern production systems for laser processing are usually designed specifically for one process step 
+and are highly optimized. It is therefore important to consider the interplay with the other machine 
+components when selecting suitable beam deflection units. At RAYLASE, we therefore always have the 
+entire solution in mind and offer our customers assistance in putting together suitable components.
+For many processes, the beam deflection unit is a decisive component. Often it determines whether the 
+desired spot parameters and processing speeds can be implemented on the component. To identify 
+the optimal solution here, we support our customers in selecting the right beam delivery components 
+and sensor technology. and perform simulations of the laser processes developed by our customers. In 
+addition, we provide support in the parameterization of the laser and deflection unit or software func-
+tionality through the experts at our Technical Competence Center TCC.
+Modern laser deflection units are complex systems. Therefore, it is important to have a good knowledge 
+of their characteristics. Because only when users know how the various parameters interact the opti-
+mum process becomes possible. For this reason, we at RAYLASE put a high priority on training for our 
+products. In addition, we also offer our customers on-site training directly on the system, if required, to 
+enable users to operate the system independently.
+Together you achieve more. At RAYLASE, we are convinced about this. That’s why we place great value 
+on cooperation in a spirit of partnership and open communication at equal level – from expert to expert. 
+Because only when we jointly find the best solution and successful integrate it into the machine, every-
+one involved benefits in the end – our customers, us and also the end users.
+Our customers are the experts for their application – we are the experts for our beam deflection units. 
+That’s why we support our customers during the commissioning of our products – if necessary also di-
+rectly on site. In this way, we at RAYLASE ensure that our system is optimally adjusted and permanently 
+delivers what it is capable of.
+
+AXIALSCAN RD-14    TECHNICAL SPECIFICATIONS
+GENERAL SPECIFICATIONS
+APERTURE DEPENDENT SPECIFICATIONS – MECHANICAL DATA
+TYPE DEPENDENT SPECIFICATIONS – TUNINGS
+Power Supply
+Voltage [V] + 48
+Current (RMS) [A] 4
+Current (max.) [A] 8
+Riple / Noise 
+@ 20 MHz bandwith [mV pp] Max. 300
+Ambient temperature [°C] +15 to +35
+Storage temperature [°C] -10 to +60
+Humidity non condensing [%] ≤ 80
+IP Code 64
+Interface signals Digital XY2-100 Enhanced protocol 16 Bit
+SL2-100 protocol 20 Bit
+Typical deflection (optical) [rad] ± 0.393
+Resolution XY2-100 16 Bit [µrad] 12
+Resolution SL2-100 20-Bit [µrad] 0.76
+Repeatability (RMS) [µrad] < 2.0
+Positioning noise (RMS) [µrad] < 4.5
+Temperature drift Max. Gaindrift [ppm/K] 15
+Max. Offsetdrift [µrad/K] ¹ 10
+Long-term drift 8 h  [µrad] ¹ < 60
+1 Angles optical. Drift per Axis, after 30  min. warm-up, at constant ambient temperature and process stress.
+Deflection Unit AXIALSCAN RD-14
+Limiting input aperture [mm] 5.0
+Beam displacement [mm] 17.0
+Optimum input 
+beam diameter
+full beam [mm] 4.7
+1/e² [mm]   3.1
+Weight [kg] 5.5
+Dimensions without electrical connectors 
+(L x W x H) [mm]
+ 330.0 x 105.0 x 134.0
+Tuning Description
+Marking-Tuning (MA) Optimized tuning for marking applications
+Vector-Tuning (VC) Optimized tuning with a wide range of applications with emphasis on processing speed  
+TYPE DEPENDENT SPECIFICATIONS – DYNAMIC DATA
+1 See “Calculation of speed”     2 Setting ot 1/1,000 of full scale     3 Setting to 1/5,000 of full scale
+Deflection unit AXIALSCAN RD-14 SI
+Tuning MA VC
+Processing speed [rad/s] ¹ 30 50
+Positioning speed [rad/s] ¹ 90 50
+Tracking error [ms] 0.16 0.20
+Acceleration time approx. [ms] 0.30 0.46
+Step response time at 1% of full scale [ms] 0.36 2 0.68 3
+Tracking error focusing unit [ms] 0.9 
+Speed of moving lens [mm/s] 900
+
+AXIALSCAN RD-14   TE CHNICAL SPECIFICATIONS
+No
+te: Spot data valid for beam diameter FBD = 4.7 mm
+Working distance and working volume valid with one external protective cover glass: The values may change slightly when 
+using the second external quick-change protective cover glass. Details on request.
+OPTICS SPECIFICATIONS
+Wavelength and coatings Mirror substrate Maximum permessible laser power [W] ¹
+355 nm SI 100
+1,064 nm SI 300
+Calculation of speed:
+With a deflection angle of +/- 0.393 rad (45°) for a process field of 100 x 100 mm², an angular speed of 1 rad/s corresponds to 
+a speed in the field of 0.12 m/s.
+Example: An AXIALSCAN RD-14 with a process field of 400 x 400 mm² (field factor 4) and Marking Tuning (MA) with an 
+angular speed of 30 rad/s achieves a processing speed in the field of: 30 rad/s x 0.12 m/s x 4 = 14.4 m/s
+Note: Depending on the control card used, processing task, process field size and optical configuration, the Z-axis may lower 
+the processing speed.
+CONFIGURATION E XAMPLES – A XIA LSCAN R D- 14
+Field size [mm x mm] 200 x 200 300 x 300 400 x 400 500 x 500 600 x 600
+Working distance [mm] 200 324 448 571 695
+Spot diameter λ =  355 nm, 1/e² ca. [µm] 16 24 32 40 48
+Spot diameter λ = 1064 nm, 1/e² ca. [µm] 45 68 91 113 136
+Working volume [mm] 36 143 355 747 1000
+1 Valid for single-mode and multi-mode continuous wave (CW) lasers
+All trademarks are registered trademarks of their owners.
+March 2026. Information is subject to change without prior notice. v2.0
+Headquarters: 
+RAYLASE GmbH   
+W
+essling, Germany
+  +49 8153 9999 699
+ info@raylase.de
+Subsidiary USA:
+RA
+YLASE Laser Technology Inc.   
+Newburyport, MA, USA
+  +1 978 255 1672
+ info@raylase.com
+Subsidiary China:
+RA
+YLASE Laser Technology (Shenzhen) Co.
+Shenzhen, China
+  +86 755 28 24 8533
+ info@raylase.cn

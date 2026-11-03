@@ -1,0 +1,31 @@
+{
+  "url": "https://patents.google.com/patent/CN120928524B/zh",
+  "category": "01_移动透镜式与匹配光学",
+  "origins": [
+    "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+    "用户粘贴_激光动态聚焦深度调研.txt"
+  ],
+  "context": "\n- 原始入口：https://patents.google.com/patent/CN120928524B/zh",
+  "id": "R047",
+  "files": [
+    {
+      "path": "01_移动透镜式与匹配光学\\R047_CN120928524B - 一种用于激光动态聚焦的驱动装置 _        - Google Patents.html",
+      "type": "HTML",
+      "bytes": 82494,
+      "sha256": "bcf493655121c21884664e7653073f010bda0798ab9a921169a75e10084b63c4",
+      "url": "https://patents.google.com/patent/CN120928524B/zh",
+      "title": "CN120928524B - 一种用于激光动态聚焦的驱动装置 \n        - Google Patents",
+      "text_chars": 16394
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://patents.google.com/patent/CN120928524B/zh",
+      "http": 200,
+      "final_url": "https://patents.google.com/patent/CN120928524B/zh",
+      "result": "网页"
+    }
+  ],
+  "title": "CN120928524B - 一种用于激光动态聚焦的驱动装置 - Google Patents",
+  "status": "专利全文网页已保存_无PDF附件"
+}

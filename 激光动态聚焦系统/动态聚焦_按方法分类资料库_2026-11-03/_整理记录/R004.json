@@ -1,0 +1,50 @@
+{
+  "url": "https://patents.google.com/patent/CN205899130U/zh",
+  "category": "01_移动透镜式与匹配光学",
+  "origins": [
+    "Gemini输出.txt",
+    "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md",
+    "苏州艾思兰_动态聚焦资料\\来源清单.csv"
+  ],
+  "context": "原文提到的专利号，补全公开文本入口；标题及相关性待与原件核对",
+  "id": "R004",
+  "files": [
+    {
+      "path": "01_移动透镜式与匹配光学\\R004_CN205899130U - 高速动态聚焦激光振镜模组 _        - Google Patents.html",
+      "type": "HTML",
+      "bytes": 72375,
+      "sha256": "c5fbbfdf4ef998b3c134b0bb9dc14e963731b5ae03e26bfbb082906c0ca598bd",
+      "url": "https://patents.google.com/patent/CN205899130U/zh",
+      "title": "CN205899130U - 高速动态聚焦激光振镜模组 \n        - Google Patents",
+      "text_chars": 13747
+    },
+    {
+      "path": "01_移动透镜式与匹配光学\\R004_CN205899130U - 高速动态聚焦激光振镜模组 - Google Patents.pdf",
+      "type": "PDF",
+      "pages": 13,
+      "bytes": 790627,
+      "sha256": "d5ca9f7fe343a8cfba7b8a7eace7864432ad78afbcd653e3f3c8507c77c9a9c5",
+      "url": "https://patentimages.storage.googleapis.com/1c/04/87/60b60370d1dd69/CN205899130U.pdf",
+      "text_chars": 24,
+      "title": "",
+      "preview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://patents.google.com/patent/CN205899130U/zh",
+      "http": 200,
+      "final_url": "https://patents.google.com/patent/CN205899130U/zh",
+      "result": "网页"
+    },
+    {
+      "url": "https://patentimages.storage.googleapis.com/1c/04/87/60b60370d1dd69/CN205899130U.pdf",
+      "http": 200,
+      "final_url": "https://patentimages.storage.googleapis.com/1c/04/87/60b60370d1dd69/CN205899130U.pdf",
+      "result": "有效PDF"
+    }
+  ],
+  "title": "CN205899130U - 高速动态聚焦激光振镜模组 - Google Patents",
+  "status": "PDF已下载"
+}

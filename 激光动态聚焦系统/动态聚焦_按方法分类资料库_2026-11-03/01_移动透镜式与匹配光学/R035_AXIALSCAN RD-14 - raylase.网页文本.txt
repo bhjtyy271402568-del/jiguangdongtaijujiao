@@ -1,0 +1,202 @@
+来源：https://www.raylase.de/en/products/prefocusing-deflection-units/axialscan-rd-14.html
+采集日期：2026-11-03
+
+AXIALSCAN RD-14 - raylase
+Toggle navigation
++49 8153 9999 699
+Contact us
+Login / Sign in
+English
+German
+English
+Chinese
+PRODUCTS
+2-AXIS DEFLECTION UNITS
+MINISCAN III
+SUPERSCAN IIE
+SUPERSCAN IV
+SUPERSCAN IVHL-15
+SUPERSCAN IV SOLAR
+SUPERSCAN V
+HIGH POWER WELDING MODULE
+PREFOCUSING DEFLECTION UNITS
+AXIALSCAN-30 DIGITAL II
+AXIALSCAN-30 DIGITAL II HP
+AXIALSCAN-50 DIGITAL II
+AXIALSCAN RD-14
+AXIALSCAN FIBER RD-30
+AXIALSCAN FIBER RD-50
+AM-MODULE III
+BUSBAR WELDING MODULE
+FOCUSSHIFTER
+FOCUSSHIFTER RD-14
+FOCUSSHIFTER DIGITAL II
+IMAGE PROCESSING AND MEASUREMENT SYSTEMS
+RAYDIME
+RAYSPECTOR
+SCAN FIELD CALIBRATOR
+CONTROL ELECTRONICS SP-ICE
+SP-ICE 3
+SOFTWARE
+RAYGUIDE
+RAYBOARD
+APPLICATIONS
+ADDITIVE MANUFACTURING
+FIELD CALIBRATION FOR AM-MULTI-HEAD MACHINES
+IN-FOCUS SPOT MAGNIFICANTION IN ADDITIVE MANUFACTURING
+ADDITIVE MANUFACTURING CASE STUDY
+ADDITIVE MANUFACTURING - LASER POWDER BED FUSION-PROCESS
+3D-PRINT CERAMIC COMPONENTS (LCM)
+LASER MARKING
+JEANS BLEACHING
+PCB MANUFACTURING
+BLUE LASER
+LASER WELDING
+MORE CONTROL OVER YOUR WELDING PROCESS
+FUEL CELL WELDING
+WELDING COPPER HAIRPINS IN ELECTRIC MOTORS
+WELDING COPPER POWER ELECTRONICS
+WELDING COPPER - BLUE DIODE LASER
+IN-VACUUM LASER BEAM WELDING
+LASER STRUCTURING
+SCALING UP SOLAR
+SOLAR CELLS WITH PERC
+BIG SOLAR-WAFER
+ITO-PATTERNING
+LASER CUTTING
+LASER PAPER CUTTING
+ON THE FLY LASER CUTTING BATTERY
+BATTERY PRODUCTION ELECTRIC MOBILITY
+High-Speed Precision Welding RMA
+BATTERY FOIL PRODUCTION
+TAB-WELDING
+PRE-STRUCTURING AND SEALING OF BATTERY HOUSING
+WELDING AND BONDING ELECTRONICS
+ELECTRODE PRODUCTION FOR BATTERY CELLS
+LASER CLEANING IN BATTERY PRODUCTION
+SOLID-STATE BATTERIES
+MORE APPLICATIONS
+LASER CLEANING
+SERVICE & SUPPORT
+RMA & REPAIR
+RETURN TRANSPORT SUITCASE
+PRODUCT DISCONTINUATION NOTICE (PDN)
+PRODUCT CHANGE NOTICE (PCN)
+SUPPORT
+SUPPLIER APPLICATION
+ABOUT RAYLASE
+MANAGEMENT
+LOCATIONS
+DISTRIBUTORS + PARTNERS
+CAREERS
+JOB VACANCIES
+RAYculture
+Department Portraits
+PRESS
+PRESS REVIEW
+EVENTS
+AXIALSCAN RD-14
+HIGH DYNAMICS IN LARGE WORKING FIELDS
+The AXIALSCAN RD-14 was developed to be able to
+efficiently process large workpieces.
+It combines the
+high dynamics
+of a MINISCAN III with the advantages of
+dynamic pre-focusing.
+In contrast to a solution with an F-Theta lens, the laser is focused in front of the scan mirrors, allowing the deflection angle to be fully utilized. This means that larger processing fields are possible and even large components can be processed with a single deflection unit. This results in a great advantage for the user, who can avoid the time-consuming stitching together of several processing fields.
+The AXIALSCAN RD-14 is the ideal solution for all applications where
+large fields and high dynamics
+are required. Hence, it is particularly suitable for additive manufacturing or the cutting and marking of printed circuit boards (PCBs).
+The dynamic pre-focusing also enables the processing of non-planar structures without the need for additional optics. This means that the AXIALSCAN RD-14 can be used for
+both layer-by-layer processing (2.5D) and complete 3D processing.
+The
+very compact design
+of the AXIALSCAN RD-14 and its
+versatile mounting options
+are almost identical to our FOCUSSHIFTER RD-14. Therefore, it can also be flexibly integrated into laser systems and the integrator can easily select the optimum solution for his laser application.
+Highest dynamics
+Stable focus position
+Large processing fields
+WHAT IS SPECIAL ABOUT THE AXIALSCAN RD-14?
+FLEXIBLE 3D LASER PROCESSING WITH COMPACT DESIGN
+The AXIALSCAN RD-14 is a
+3D deflection unit
+designed for mid-range laser power and medium to large processing fields. Thanks to the pre-focusing optics for flat field correction, it can utilize the maximum processing field, and, thanks to RAYVOLUTION DRIVE technology, it still offers
+very dynamic adjustment of the z-position of the focus.
+With its compact housinmultiple mounting options, the AXIALSCAN RD-14 can be flexibly integrated into any laser system, making it the ideal solution for even the most demanding laser processes.
+See for yourself:
+FACTS & USE CASES
+ADDITIVE PRODUCTION OF DENTAL IMPLANTS
+In additive manufacturing, the goal is often to
+increase productivity
+and
+reduce part costs.
+This is particularly true in the market for additively manufactured dental implants. One of the challenges: Though conventional laser systems for this application usually have suffi cient dynamic performance, they often do not have the necessary field size. This is because the F-Theta lens can considerably restrict the usable field. For the user, this translates into longer production times and higher costs per implant.
+Here, the AXIALSCAN RD-14 represents an interesting technological option. With its highly dynamic RAYVOLUTION DRIVE z-axis, a
+fast and precise flat field correction
+becomes possible without an F-Theta objective. This allows the AXIALSCAN RD-14 to utilize the full scanning angle and thus
+cover a larger working field
+without compromising the dynamics of the system. The larger working field results in more implants per production run, which leads to a shorter production time per implant and therefore a reduction in costs.
+Patient-specific dental implants are often manufactured using additive manufacturing. Here and in other additive manufacturing processes, high dynamics and a favorable machine price play an important role. For many such applications, the AXIALSCAN RD-14 offers an optimum compromise between spot size, dynamics, compact design and price.
+Furthermore, with its compact dimensions and versatile mounting options, the AXIALSCAN RD-14 can be
+easily integrated into existing machine designs.
+As a result, the AXIALSCAN RD-14 with its RAYVOLUTION DRIVE offers an attractive solution for optimizing productivity and costs in additive manufacturing and paves the way for scalable and more economical production processes for customer-specific dental implants.
+OPTIMAL ADD-ONS
+INTUITIVE PROCESS SOFTWARE
+Our software solution for a quick and easy programming of your scanning solution. User-friendly set-up and calibration of the deflection unit and effortless automation through the built-in API.
+zum produkt
+SP-ICE 3
+: CONTROL CARD WITH FEEDBACK FUNCTION
+The control center for runtime-critical process steps. Allows synchronous control of deflection unit, laser and peripherals and a combined readback of scanner and sensor signals.
+zum produkt
+GOOD REASONS TO CHOOSE RAYLASE
+THIS MAKES RAYLASE SPECIAL
+Technical specifications are important and often decisive. But at RAYLASE, we believe that there is more to it than pure technology that matters. For this reason, we are your partner for reliable and successful laser processes and offer more than just technical components.
+Systems view instead of components
+Modern production systems for laser processing are usually designed specifically for one process step and are highly optimized. It is therefore important to consider the interplay with the other machine components when selecting suitable beam deflection units. At RAYLASE, we therefore always have the entire solution in mind and offer our customers assistance in putting together suitable components.
+Broad application knowledge
+For many processes, the beam deflection unit is a decisive component. Often it determines whether the desired spot parameters and processing speeds can be implemented on the component. To identify the optimal solution here, we support our customers in selecting the right beam delivery components and sensor technology. and perform simulations of the laser processes developed by our customers. In addition, we provide support in the parameterization of the laser and deflection unit or software functionality through the experts at our Technical Competence Center TCC.
+On-site support for implementation and service
+Our customers are the experts for their application – we are the experts for our beam deflection units. That’s why we support our customers during the commissioning of our products – if necessary also directly on site. In this way, we at RAYLASE ensure that our system is optimally adjusted and permanently delivers what it is capable of.
+Education & training on the system
+Modern laser deflection units are complex systems. Therefore, it is important to have a good knowledge of their characteristics. Because only when users know how the various parameters interact the optimum process becomes possible. For this reason, we at RAYLASE put a high priority on training for our products. In addition, we also offer our customers on-site training directly on the system, if required, to enable users to operate the system independently.
+The POWER OF WE
+Together you achieve more. At RAYLASE, we are convinced about this. That’s why we place great value on cooperation in a spirit of partnership and open communication at equal level – from expert to expert. Because only when we jointly find the best solution and successful integrate it into the machine, everyone involved benefits in the end – our customers, us and also the end users.
+Do you have any questions?
+Your contact person will be happy to assist you
+Harnesh Singh
+Director Sales & Marketing
++49 8153 9999 699
+Get in Contact
+Besonderheiten
+Highly dynamic z-focusing with RAYVOLUTION DRIVE technology
+Dust-proof housing (IP64)
+Second protective glass with quick-change mounting frame
+Compact housing with multiple mounting options
+Digital control with XY2-100 or SL2-100 protocol
+Flexible process field sizes
+downloads
+Data Sheet AXIALSCAN RD-14
+RAYLASE worldwide
+locations
+Get expert advice for your product
+contact
+Product overview
+show all
+Newsletter
+Sign up now to be the first to know about updates and trade shows!
+Links
+Terms and Conditions
+Imprint
+Privacy policy Website/Newsletter
+Privacy policy customers, suppliers and interested persons
+Glossar
+Supplier terms & conditions
+Contact
+Argelsrieder Feld 2+4
+82234  Wessling
+Germany
++49 8153 9999 699
++49 8153 9999 296
+info (at) raylase.com
+© 2026 RAYLASE GmbH

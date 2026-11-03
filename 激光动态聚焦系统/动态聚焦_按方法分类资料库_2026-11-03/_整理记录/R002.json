@@ -1,0 +1,51 @@
+{
+  "url": "https://patents.google.com/patent/US12265207B2/en",
+  "category": "01_移动透镜式与匹配光学",
+  "origins": [
+    "Gemini输出.txt",
+    "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+    "用户粘贴_激光动态聚焦深度调研.txt",
+    "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md"
+  ],
+  "context": "原文提到的专利号，补全公开文本入口；标题及相关性待与原件核对",
+  "id": "R002",
+  "files": [
+    {
+      "path": "01_移动透镜式与匹配光学\\R002_US12265207B2 - Dynamic focus for laser processing head _        - Google Patents.html",
+      "type": "HTML",
+      "bytes": 410914,
+      "sha256": "b12e73731f8cc75982bab354f829910156f3dde06c131368fbc4b405163d6ce5",
+      "url": "https://patents.google.com/patent/US12265207B2/en",
+      "title": "US12265207B2 - Dynamic focus for laser processing head \n        - Google Patents",
+      "text_chars": 111417
+    },
+    {
+      "path": "01_移动透镜式与匹配光学\\R002_US12265207B2 - Dynamic focus for laser processing head - Google Patents.pdf",
+      "type": "PDF",
+      "pages": 13,
+      "bytes": 1014800,
+      "sha256": "eca6c62619486fd20411e7cdff138c59e0655f65d40b634a6c40edb406322cc7",
+      "url": "https://patentimages.storage.googleapis.com/b6/08/46/d2c5aaf5cd8fb4/US12265207.pdf",
+      "text_chars": 24,
+      "title": "US00000012265207B220250401",
+      "preview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://patents.google.com/patent/US12265207B2/en",
+      "http": 200,
+      "final_url": "https://patents.google.com/patent/US12265207B2/en",
+      "result": "网页"
+    },
+    {
+      "url": "https://patentimages.storage.googleapis.com/b6/08/46/d2c5aaf5cd8fb4/US12265207.pdf",
+      "http": 200,
+      "final_url": "https://patentimages.storage.googleapis.com/b6/08/46/d2c5aaf5cd8fb4/US12265207.pdf",
+      "result": "有效PDF"
+    }
+  ],
+  "title": "US12265207B2 - Dynamic focus for laser processing head - Google Patents",
+  "status": "PDF已下载"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "A004",
+  "category": "02_反射式与三振镜调焦",
+  "url": "https://www.researchgate.net/publication/366318787_Galvanometer_driven_optical_system_for_laser_dynamic_focusing/links/65e2e82dadf2362b636352aa/Galvanometer-driven-optical-system-for-laser-dynamic-focusing.pdf",
+  "context": "反射式动态聚焦_ResearchGate公开PDF入口",
+  "title": "反射式动态聚焦_ResearchGate公开PDF入口",
+  "origins": [
+    "补充检索_修复失效入口"
+  ],
+  "files": [],
+  "attempts": [
+    {
+      "url": "https://www.researchgate.net/publication/366318787_Galvanometer_driven_optical_system_for_laser_dynamic_focusing/links/65e2e82dadf2362b636352aa/Galvanometer-driven-optical-system-for-laser-dynamic-focusing.pdf",
+      "http": 403,
+      "final_url": "https://www.researchgate.net/publication/366318787_Galvanometer_driven_optical_system_for_laser_dynamic_focusing/links/65e2e82dadf2362b636352aa/Galvanometer-driven-optical-system-for-laser-dynamic-focusing.pdf",
+      "error": "403 Client Error: Forbidden for url: https://www.researchgate.net/publication/366318787_Galvanometer_driven_optical_system_for_laser_dynamic_focusing/links/65e2e82dadf2362b636352aa/Galvanometer-driven-optical-system-for-laser-dynamic-focusing.pdf"
+    }
+  ],
+  "status": "全文已由用户补齐 → U002",
+  "resolved_by": "U002",
+  "resolution_note": "此前网络获取未完成；现已由用户提供正式版全文补齐。保留历史请求记录。"
+}

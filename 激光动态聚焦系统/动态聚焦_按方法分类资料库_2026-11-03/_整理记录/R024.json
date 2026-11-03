@@ -1,0 +1,35 @@
+{
+  "url": "https://www.newswise.com/pdf_docs/170367637534890_s41377-023-01303-2.pdf",
+  "category": "04_TAG声学调焦",
+  "origins": [
+    "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+    "用户粘贴_激光动态聚焦深度调研.txt"
+  ],
+  "context": "\n- 核查范围与注意事项：公开原文PDF已检查。双光束共用TAG镜，140–350 kHz测高/选相位出光。周期扫描频率不等于任意Z轨迹伺服带宽。原文PDF镜像：https://www.newswise.com/pdf_docs/170367637534890_s41377-023-01303-2.pdf",
+  "id": "R024",
+  "files": [
+    {
+      "path": "04_TAG声学调焦\\R023_TAG_2023_正文.pdf",
+      "type": "PDF",
+      "pages": 13,
+      "bytes": 1719339,
+      "sha256": "addfe359849a08f49035f2333cb312fc593091038988381336384d4b8bd1c259",
+      "url": "https://www.newswise.com/pdf_docs/170367637534890_s41377-023-01303-2.pdf",
+      "text_chars": 61346,
+      "title": "Single-lens dynamic z-scanning for simultaneous in situ position detection and laser processing focus control",
+      "preview": "Du et al. Light: Science & Applications          (2023) 12:274 Ofﬁcial journal of the CIOMP 2047-7538\nhttps://doi.org/10.1038/s41377-023-01303-2 www.nature.com/lsa\nARTICLE Open Access\nSingle-lens dynamicz-scanning for simultaneous in\nsitu position detection and laser processing focus\ncontrol\nXiaohan Du1,2, Camilo Florian3,4 and Craig B. Arnold 1,4✉\nAbstract\nExisting auto-focusing methods in laser processing typically include two independent modules, one for surface\ndetection and another for z-ax",
+      "validation": "PDF签名、逐页解析、首末页渲染通过",
+      "duplicate": true
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://www.newswise.com/pdf_docs/170367637534890_s41377-023-01303-2.pdf",
+      "http": 200,
+      "final_url": "https://www.newswise.com/pdf_docs/170367637534890_s41377-023-01303-2.pdf",
+      "result": "有效PDF"
+    }
+  ],
+  "status": "PDF已下载",
+  "title": "Single-lens dynamic z-scanning_2023_TAG_全文镜像"
+}

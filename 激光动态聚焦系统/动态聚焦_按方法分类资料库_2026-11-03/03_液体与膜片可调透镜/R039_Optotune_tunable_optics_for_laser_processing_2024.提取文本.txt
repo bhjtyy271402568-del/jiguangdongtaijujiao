@@ -1,0 +1,306 @@
+Optotune tunable optics for Laser Processing
+Enabling beam wobbling, inline inspection and 3D laser processing
+November 2024
+Dr Branislav Timotijevic, BD Manager
+Bernstrasse 388 | CH-8953 Dietikon | Switzerland
+Phone +41 58 856 3000 | www.optotune.com | info@optotune.com
+
+This information is confidential to Optotune and is not to be copied or forwarded to any 3rd party without our prior written consent.
+Beam shifting devices
+Optotune provides four core product lines
+2
+Focus tunable lenses Laser speckle reducers
+Beam steering devices (2D mirrors)
+∆𝑦
+𝑛
+𝑡
+𝜃
+A
+B C
+D
+Pixel
+∆𝑦
+
+
+This information is confidential to Optotune and is not to be copied or forwarded to any 3rd party without our prior written consent.
+Optotune products in Laser processing applications
+3
+Inline inspection and AF
+High precision 2D beam control
+2.5 & 3D laser processing
+EL-OF
+2D mirrors for beam steering
+
+
+This information is confidential to Optotune and is not to be copied or forwarded to any 3rd party without our prior written consent.
+Products, applications and benefits
+4
+• Compact laser welding
+• Laser beam micro-positioning
+• Laser soldering
+FMR: Fine steering 2D mirror
+Benefits: high angular resolution, 
+fast, 2D programmable, small, low 
+weight, customizable, lifetime
+• 2D beam steering at 50 W
+• Free space communication
+• Potential for >50 W
+(tunable lens not compulsory)
+MR: Large angle 2D mirror
+Benefits: large angle, large mirror, 
+compact package, built-in feedback, 
+1 optical surface for 2 DOF , lifetime
+EL-16-40: Imaging lens
+• Laser process inspection 
+(both low and high power)
+Benefits: compact, fast, durable, AF , 
+distance measurement, easy to 
+integrate in most camera systems
+
+
+This information is confidential to Optotune and is not to be copied or forwarded to any 3rd party without our prior written consent.
+Products, applications and benefits
+• High-end laser marking
+• Laser beam focusing
+• Medical lasers
+5
+EL-10-42: 3D laser lens
+Benefits: large z-range, green and 
+NIR, high repeatability, lifetime, 
+compact, fast
+• Small dpt range laser 
+processing < 50 W
+EL-7-20 / EL-12-30 for LP
+Benefits: fast, low thermal 
+sensitivity, plano-convex to plano-
+concave, low power consumption, 
+lifetime
+• Fibre coupling
+• Colour cameras
+• Hyperspectral imaging
+BSW: Beam shifting window
+Benefits: 2-axis beam shifting, 
+precise, fast, high transmission, 
+lifetime
+
+This information is confidential to Optotune and is not to be copied or forwarded to any 3rd party without our prior written consent.
+High-power fine beam steering with FMR 2D mirrors
+6
+FMR-20
+~1°
+FMR-20
+Mirror size 20 x 20 mm
+(customizable)
+Motion pattern -, o, ∞, 
+(2D programmable)
+Mechanical tilt angle
+Single axis
+Both axis
+±0.3° (5.2 mrad)
+±0.2° (3.5 mrad)
+Resolution (with ICC -4C-2000) 4 µrad
+Bandwidth (sine wave, ± 2.3 mrad) 250 Hz
+Reflectivity
+Protected gold (800 -2000 nm,0-45°)
+Dielectric NIR (750 -1100 nm, 0-45°)
+1064 HP (1060 -1100 nm, 58-70°)
+>95%
+>98%
+>99.9%
+Average laser power 2 kW*
+LIDT ISO 21254 
+(1064 nm, 10 ns, 10 Hz) 10 J/cm2
+Scale drift 1000 ppm/K
+Position feedback Open loop
+Transition (rise) time 1.3 ms
+Settling time 4 ms
+Power consumption < 4W
+Size (without bracket) 47 x 35 x 3.65 mm
+Weight (without bracket) 9 g
+Benefits:
+• Compact
+• Long lifetime
+• Fast
+• Precise
+• Programmable pattern
+Applications:
+• Laser welding & soldering
+• Laser cavity alignment
+• Point and shoot / raster (lissajous) scanning
+
+
+This information is confidential to Optotune and is not to be copied or forwarded to any 3rd party without our prior written consent.
+Large-angle beam steering with MR 2D mirrors
+MR-15-30 (quasi-static)
+Mirror size 15 mm
+Mechanical tilt – fast axis (half angle) 25°
+Full-scale bandwidth – fast axis 20 Hz
+Mechanical tilt – slow axis (half angle) 25°
+Full-scale bandwidth – slow axis 20 Hz
+Mech. Repeatability RMS typical 30-100 rad
+Footprint 30x14.5
+Position feedback yes
+Laser power 50 W*
+(EL-10-42-OF)
+MR-15-30
+Applications:
+• Laser templating
+• Free space communication
+• Low-power beam steering
+7
+50°
+Benefits:
+• Large angle
+• Small footprint
+• Single optical surface
+
+This information is confidential to Optotune and is not to be copied or forwarded to any 3rd party without our prior written consent.
+Fast steering mirror MR-15-30 Rev. 1 MR-15-30 Rev. 2
+Laser 15 W
+Closed loop
+Laser 50 W
+Closed loop
+MR-15-30-Rev2 performance up to 50 W
+8
+Test setup:
+• Focus on metallic surface to test for the 
+influence backscattered light on the 
+optical feedback of the mirror
+• Laser: 1064 nm, 0-50 W
+• Angle of incidence: 45° 
+• Mirror angle (mechanical): ±5°
+• Focusing lens: f=160 mm (f-theta)
+• Mirror control: MR-E-2
+Mean absolute mechanical angle 
+change is below 0.02° up to 50 W
+Further tests planned >50 W
+
+This information is confidential to Optotune and is not to be copied or forwarded to any 3rd party without our prior written consent.
+Inspection & DFF 
+depth measurement
+Inline inspection with Distance measurement using EL-16-40
+Object
+Inline camera
+Scan head
+Laser
+Dichroic 
+mirror F-theta lens 
+160mm
+Z-range = 26 mm
+EL-16-40
+High resolution: 
+30 lp/mm (image)
+9 µm on object
+10 mm scan head aperture
+Depth from focus: A focus tunable lens in 
+conjunction with an autofocus algorithm 
+can reliably measure distance to an 
+arbitrary object in less than a second
+9
+
+This information is confidential to Optotune and is not to be copied or forwarded to any 3rd party without our prior written consent.
+Inline inspection up to 50W using EL-10-42-OF
+Laser
+Dichroic mirror
+No f-theta lens
+Scan head
+Inline camera 
+(fixed optics)
+EL-10-42-OF
+One lens, two functions :
+- Laser marking
+- Camera inspection
+Marking field
+10 cm
+10 cm
+1
+23
+Uniform resolution of 30 
+lp/mm (image) across 
+marking field
+10
+
+
+This information is confidential to Optotune and is not to be copied or forwarded to any 3rd party without our prior written consent.
+2.5D and 3D laser processing with EL-10-42-OF
+2.5D Z-stepping 3D laser focus control
+11
+Benefits:
+• Compact
+• Long lifetime
+• High z-speed
+• Constant spot
+• LAM
+Benefits:
+• Compact
+• Long lifetime
+• Easy to install
+• Cost efficient
+
+This information is confidential to Optotune and is not to be copied or forwarded to any 3rd party without our prior written consent.
+EL-10-42-OF specs in the NIR and at 532 nm
+12
+Product EL-10-42-OF-NIR
+EL-10-42-OF-532 unit
+Clear aperture 10 mm
+Maximum operating average laser power
+@ NIR (950-1100 nm)
+@ 532 nm
+50 
+20
+W
+Optical power: tuning range -2.0 to +2.0 dpt
+Optical power: repeatability typical: < 0.02
+ max: < 0.04 dpt
+Optical power: long term stability 8h
+Wavelength range (NIR) 950 – 1100 nm
+Wavefront error
+@ 1064 nm
+@ 532 nm
+< 0.15
+< 0.3
+𝜆 RMS
+Transmission
+NIR (950-1100 nm)
+@ 532 nm
+> 94 %
+> 95 %
+Long term radiation damage @ 1064 nm:
+40 mJ /cm2 at 20 kHz No effect after 2000 h
+Damage threshold @ 1064 nm:
+125 ns-pulsed at 50 kHz 2.6 J/cm2
+10 ps-pulsed at 50 kHz 2.05
+Response time with EL -E-OF-A analog board 80% step:  12
+20% step:    6 ms
+Response time with Scaps digital board 80% step:    8
+20% step: 4.5 ms
+Focal length resolution Continuous (depends on 
+control electronics)
+Lifecycles (10% -90% sinusoidal) > 1‘000‘000‘000
+Typical parameters in a marking system with  f = 160 mm f-theta lens
+Max z-tuning range 100 mm
+Repeatability (10% -90% step)* typical: < 500
+max: < 1000 µm
+Long term drift over 8h*
+All EL-10-42-OF lenses undergo extensive OQC tests
+including laser testing 
+
+
+This information is confidential to Optotune and is not to be copied or forwarded to any 3rd party without our prior written consent.
+Analog and digital drivers for EL-10-42-OF
+EL-E-OF-A (2.5D) SCAPS Optotune-DSD-2-O (3D)
+Interface Analog 0-5V Digital XY2-100,
+X-Y bi-directional Scaps interface
+Controller Microprocessor based FPGA based
+Intelligence Standard PID control Model based drive algorithm
+80% step response 12ms 8ms
+Demonstrated processing speed on 
+45deg slope (160mm F-Theta) 0.7m/s 6m/s
+Suitable operation Z-Stepping for 2D processing True 3D processing
+XY2-100 integration by USB calibration interface
+Only one power supply
+Thermal Control and lens status signal
+13
+
+This information is confidential to Optotune and is not to be copied or forwarded to any 3rd party without our prior written consent.
+Optotune – 1 slide

@@ -1,0 +1,33 @@
+{
+  "url": "https://ira.lib.polyu.edu.hk/handle/10397/115461",
+  "category": "01_移动透镜式与匹配光学",
+  "origins": [
+    "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+    "用户粘贴_激光动态聚焦深度调研.txt"
+  ],
+  "context": "\n- 原始入口：https://ira.lib.polyu.edu.hk/handle/10397/115461",
+  "id": "R026",
+  "files": [
+    {
+      "path": "01_移动透镜式与匹配光学\\R026_Model-driven 3D laser focus shifting for precision fabrication of microstructures in transparent flexible.html",
+      "type": "HTML",
+      "bytes": 46095,
+      "sha256": "dea97dd00f653e9ec698a0f033c04bdc1a23ec5bfab088a9a37fb72cb15788da",
+      "url": "https://ira.lib.polyu.edu.hk/handle/10397/115461",
+      "title": "Model-driven 3D laser focus shifting for precision fabrication of microstructures in transparent flexible polymers | PolyU Institutional Research Archive",
+      "text_chars": 3820
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://ira.lib.polyu.edu.hk/handle/10397/115461",
+      "http": 200,
+      "final_url": "https://ira.lib.polyu.edu.hk/handle/10397/115461",
+      "result": "网页"
+    }
+  ],
+  "title": "Model-driven 3D laser focus shifting for precision fabrication of microstructures in transparent flexible polymers | PolyU Institutional Research Archive",
+  "status": "全文已由用户补齐 → U006",
+  "resolved_by": "U006",
+  "resolution_note": "此前网络获取未完成；现已由用户提供正式版全文补齐。保留历史请求记录。"
+}

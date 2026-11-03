@@ -1,0 +1,390 @@
+来源：https://www.scanlab.de/en/products/z-axes-3d-add-ons/varioscan-ii
+采集日期：2026-11-03
+
+varioSCAN II | Scanlab
+Skip to main content
+Search
+DE
+EN
+中文
+日本語
+한국어
+SCANLAB Portal
+SCANLAB Portal
+Customer Portal
+Repair Portal
+Search
+Company
+About SCANLAB
+History
+Quality
+Corporate Social Responsibility
+Memberships & Associations
+Collaborative Research
+Contact
+Products
+Scan Systems
+excelli
+SCAN
+excelli
+SCAN
+14
+excelli
+SCAN
+20
+excelli
+SCAN
+30
+excelli
+SCAN
+30 ARRAY
+intelli
+SCAN
+IV Series
+intelli
+SCAN
+IV 10
+intelli
+SCAN
+IV 14
+intelli
+SCAN
+IV 20
+intelli
+SCAN
+IV 30
+With Digital Encoder
+intelli
+SCAN
+se
+10
+intelli
+SCAN
+se
+14
+intelli
+SCAN
+se
+20
+intelli
+SCAN
+se
+30
+III Series
+intelli
+SCAN
+III 10
+intelli
+SCAN
+III 14
+intelli
+SCAN
+III 20
+intelli
+SCAN
+III 30
+Standard Series
+intelli
+SCAN
+10
+intelli
+SCAN
+14
+intelli
+SCAN
+20
+intelli
+SCAN
+30
+SCAN
+cube
+IV Series
+SCAN
+cube IV 10
+SCAN
+cube IV 14
+SCAN
+cube IV 20
+SCAN
+cube IV 30
+III Series
+SCAN
+cube III 10
+SCAN
+cube III 14
+Standard Series
+SCAN
+cube 7
+SCAN
+cube 10
+hurry
+SCAN
+II Series
+hurry
+SCAN II
+7
+Standard Series
+hurry
+SCAN
+20
+hurry
+SCAN
+30
+basiCube
+basiCube 10
+basiCube 10d
+basiCube 14
+basiCube 20
+power
+SCAN
+power
+SCAN
+II 50i
+power
+SCAN
+II 70i
+intelli
+WELD
+intelli
+WELD
+II PR
+intelli
+WELD
+II FT
+fiberSYS
+fiberSYS
+wel
+DYNA
+Scan Components
+Collimation Module
+Camera Adapter
+Scan Lenses
+Diffractive Optical Elements
+z Axes & 3D Add-Ons
+excelli
+SHIFT
+vario
+SCAN
+II
+Advanced Scanning Solutions
+Remote 3D Laser Welding
+precSYS Micromachining System
+XL
+SCAN
+excelliDRILL & intelliDRILLse II
+pivotSCAN
+Software
+SCAN
+motionControl
+SCAN
+ahead
+SCAN
+motionStudio
+RTC Software
+Download
+StreamParser
+Download
+laserDESK
+Download
+FAQs
+Calibration
+correXion pro
+laserDESK 3D Calibration Wizard
+CalibrationLibrary
+Control Electronics
+RTC Control Boards
+RTC Features
+Open Interface Extension
+Galvanometer Scanners
+Applications
+Laser Marking
+Micromachining
+Additive Manufacturing (3D Printing)
+Laser Drilling
+Laser Welding
+Laser Cutting
+Laser Cleaning
+Laser-assisted Medical Treatments
+Biomedical and Ophthalmic Imaging
+News & Events
+Press Releases
+Press Review
+Technical Article
+Image Library
+Trade Shows & Events
+Past Trade Shows and Events
+Careers
+Working at SCANLAB
+Our Vacancies
+Reasons to choose SCANLAB
+Company Culture
+Contact
+Downloads
+vario
+SCAN
+II
+excelli
+SHIFT
+vario
+SCAN
+II
+Breadcrumb
+Home
+Products
+z Axes & 3D Add-Ons
+vario
+SCAN
+II
+Optics in motion
+3D workpiece processing
+vario
+SCAN
+II focusing units enable highly dynamic and exceptionally precise positioning of the laser focus along the beam direction. The z axis extends 2D scanning systems for 3D processing or replaces expensive objectives in flat field correction. The product series offers a wide range of different sizes and optics designs. Each system design is tailor-made for the customer's application.
+Features of the vario
+SCAN
+II
+Position independence
+for installing the z axis in any orientation
+Clean optimised design
+for high laser power
+Revised optics configurations
+concerning image quality,
+wavelength range
+and power compatibility
+Compact design
+for easy installation
+Variants
+vario
+SCAN
+de
+II
+Higher dynamic range
+Larger z stroke
+Better position stability
+Read-back function
+vario
+SCAN
+II
+FLEX
+Variably adjustable image field size and
+working distance
+FLEX housing with integrated controller boards
+vario
+SCAN
+II eBox
+Electronic cards in a compact box
+Flat design that creates flexible integration options
+Rear drilling pattern also suitable for upright installation
+EMC and RoHS compliant
+Improved thermal management
+SL2-100 and XY2-100 variants available
+Combinable products
+Scan systems
+Control electronics
+Downloads
+vario
+SCAN
+II Product brochure
+Applications
+Additive manufacturing; rapid prototyping / rapid tooling
+Microstructuring
+Laser cutting
+Laser welding
+3D laser marking
+Laser deep engraving
+Laser drilling
+More Questions?
+Get in touch!
+Phone
++49 89 800 746-0
+Contact form
+By loading the content, I agree that personal data will be processed by YouTube/Google through the use of embedded content.
+Agree
+Video
+3D Laser Application With a Z Axis
+vario
+SCAN
+By loading the content, I agree that personal data will be processed by YouTube/Google through the use of embedded content.
+Agree
+Video
+Laser Scanner Flat Field Correction Options
+vario
+SCAN
+or F-Theta Objective
+Products
+Scan Systems
+Scan Components
+z Axes & 3D Add-Ons
+Advanced Scanning Solutions
+Software
+Calibration
+Control Electronics
+Galvanometer Scanners
+Services
+Return & Repairs
+Installation Tips
+Online-Support
+Piracy Proofing
+Glossary (
+SCAN
+pedia)
+SCANcalc App
+SCANLAB Portal
+Applications
+Laser Marking
+Micromachining
+Additive Manufacturing
+Laser Drilling
+Laser Welding
+Laser Cutting
+Laser Cleaning
+Laser-assisted Medical Treatments
+Biomedical and Ophthalmic Imaging
+Downloads
+Product Brochures
+RTC Software
+laserDESK Software
+sync
+AXIS
+Software
+Image Library
+Industries
+Automotive Industry
+Electronics and Telecommunications
+Food and Packaging
+Lightweight Construction
+Mechanical Engineering and Metalworking
+Solar Industry (Photovoltaics)
+E-Mobility
+Medical Technology
+Textile Industry
+Watches, Jewelry and Lifestyle
+Collaborative Research
+Partner sites
+www.directmachining.com
+www.holoor.co.il
+www.iqlase.de
+Contact
+SCANLAB GmbH
+Siemensstr. 2a
+82178 Puchheim
+GERMANY
+Phone
++49 89 800 746-0
+Please contact us
+Contact us
+Our SCANcalc App
+Glossary (SCANpedia)
+Glossary
+© 2026 SCANLAB. All Rights Reserved.
+LEGAL NOTICE
+I
+PRIVACY
+I
+WHISTLEBLOWER
+I
+PSIRT
+I
+TERMS
+I
+TERMS of PURCHASE

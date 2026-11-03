@@ -1,0 +1,36 @@
+{
+  "url": "https://research.birmingham.ac.uk/en/publications/experimental-investigation-of-3d-scanheads-for-laser-micro-proces/",
+  "category": "01_移动透镜式与匹配光学",
+  "origins": [
+    "用户粘贴_激光动态聚焦深度调研.txt"
+  ],
+  "context": "\n| 《Experimental investigation of 3D scanheads…》是2018年论文 | 正式发表年份是**2016年**。另外，三振镜高速扫描论文虽然DOI含2024，期刊卷期是**2025年2月**。[University of Birmingham](https://research.birmingham.ac.uk/en/publications/experimental-investigation-of-3d-scanheads-for-laser-micro-proces/) |\r",
+  "id": "R069",
+  "files": [
+    {
+      "path": "01_移动透镜式与匹配光学\\R069_Experimental Investigation of 3D Scanheads for Laser Micro Processing_      -  University of Birmingham.html",
+      "type": "HTML",
+      "bytes": 49987,
+      "sha256": "e4cb6bf5b1138e545143d3b053c81bcfff4a5c4472e458f5df8347a521e3a942",
+      "url": "https://research.birmingham.ac.uk/en/publications/experimental-investigation-of-3d-scanheads-for-laser-micro-proces/",
+      "title": "Experimental Investigation of 3D Scanheads for Laser Micro Processing\n      -  University of Birmingham",
+      "text_chars": 9299
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://research.birmingham.ac.uk/en/publications/experimental-investigation-of-3d-scanheads-for-laser-micro-proces/",
+      "http": 200,
+      "final_url": "https://research.birmingham.ac.uk/en/publications/experimental-investigation-of-3d-scanheads-for-laser-micro-proces/",
+      "result": "网页"
+    },
+    {
+      "url": "https://research.birmingham.ac.uk/files/25552450/2016_Experimental_Investigation_of_3D_Scanheads_for_Laser_Micro_Processing_FINAL.pdf",
+      "http": 403,
+      "final_url": "https://research.birmingham.ac.uk/files/25552450/2016_Experimental_Investigation_of_3D_Scanheads_for_Laser_Micro_Processing_FINAL.pdf",
+      "error": "403 Client Error: Forbidden for url: https://research.birmingham.ac.uk/files/25552450/2016_Experimental_Investigation_of_3D_Scanheads_for_Laser_Micro_Processing_FINAL.pdf"
+    }
+  ],
+  "title": "Experimental Investigation of 3D Scanheads for Laser Micro Processing - University of Birmingham",
+  "status": "网页已保存"
+}

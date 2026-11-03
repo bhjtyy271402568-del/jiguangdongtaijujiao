@@ -1,0 +1,51 @@
+{
+  "url": "https://patents.google.com/patent/CN213163617U/zh",
+  "category": "01_移动透镜式与匹配光学",
+  "origins": [
+    "Gemini输出.txt",
+    "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+    "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md",
+    "苏州艾思兰_动态聚焦资料\\来源清单.csv"
+  ],
+  "context": "原文提到的专利号，补全公开文本入口；标题及相关性待与原件核对",
+  "id": "R009",
+  "files": [
+    {
+      "path": "01_移动透镜式与匹配光学\\R009_CN213163617U - 一种三维动态聚焦振镜系统 _        - Google Patents.html",
+      "type": "HTML",
+      "bytes": 77952,
+      "sha256": "c261e09273c0d5d498897685dd740472a223a133f785d22b22ea5456396e0387",
+      "url": "https://patents.google.com/patent/CN213163617U/zh",
+      "title": "CN213163617U - 一种三维动态聚焦振镜系统 \n        - Google Patents",
+      "text_chars": 11426
+    },
+    {
+      "path": "01_移动透镜式与匹配光学\\R009_CN213163617U - 一种三维动态聚焦振镜系统 - Google Patents.pdf",
+      "type": "PDF",
+      "pages": 13,
+      "bytes": 854568,
+      "sha256": "2911d303ef3dcadd1517f0f67e02e0ed6d23ad5ef6a9cf09cb543d39495a8638",
+      "url": "https://patentimages.storage.googleapis.com/4d/56/25/0554444e0d5dd0/CN213163617U.pdf",
+      "text_chars": 8640,
+      "title": "",
+      "preview": "(19)中华人民共和国国家知识产权局\n(12)实用新型专利\n(10)授权公告号  \n(45)授权公告日 \n(21)申请号  202021742069.9\n(22)申请日 2020.08.18\n(73)专利权人  深圳市智博泰克科技有限公司\n地址  518000  广东省深圳市光明区凤凰街\n道甲子塘社区力缆科技大楼九层A区\n(72)发明人  林梓荣　曹志强　\n(74)专利代理机构  深圳市深联知识产权代理事\n务所(普通合伙) 44357\n代理人  黄立强\n(51)Int.Cl.\nB23K 26/046(2014.01)\nB23K 26/064(2014.01)\nB23K 26/70(2014.01)\nG02B 26/08(2006.01)\n \n(54)实用新型名称\n一种三维动态聚焦振镜系统\n(57)摘要\n一种三维动态聚焦振镜系统， 包括X、 Y轴电\n机反射镜、 调焦透镜、 固定透镜、 聚焦场镜、 Z轴调\n焦机构、 光路底座和光路上盖， 光路底座设有由\n所述光路上盖密封罩盖的安装腔， 以及与安装腔\n导通的入光孔和出光孔， X轴电机反射镜接收依\n次经入光孔、 调焦透镜和固定透镜射入的激光器\n",
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://patents.google.com/patent/CN213163617U/zh",
+      "http": 200,
+      "final_url": "https://patents.google.com/patent/CN213163617U/zh",
+      "result": "网页"
+    },
+    {
+      "url": "https://patentimages.storage.googleapis.com/4d/56/25/0554444e0d5dd0/CN213163617U.pdf",
+      "http": 200,
+      "final_url": "https://patentimages.storage.googleapis.com/4d/56/25/0554444e0d5dd0/CN213163617U.pdf",
+      "result": "有效PDF"
+    }
+  ],
+  "title": "CN213163617U - 一种三维动态聚焦振镜系统 - Google Patents",
+  "status": "PDF已下载"
+}

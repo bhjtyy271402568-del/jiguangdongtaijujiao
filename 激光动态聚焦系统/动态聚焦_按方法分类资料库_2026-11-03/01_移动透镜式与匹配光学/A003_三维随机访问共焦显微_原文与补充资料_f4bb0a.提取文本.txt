@@ -1,0 +1,234 @@
+1 
+ 
+Supplementary Information  1 
+Three-dimensional random -access confocal microscopy with 3D remote 2 
+focusing system 3 
+ 4 
+Li. et al. 5 
+  6 
+
+2 
+ 
+ 1 
+Figure S1. Detailed schematic of remote focusing system.  2 
+3 
+
+
+3 
+ 
+ 1 
+Figure S2. Bidirectional repeatability measurement of the 3D dynamic focusing  system 2 
+via power measurement after a pinhole. (a) Schematic of setup for testing the bidirectional 3 
+repeatability of the 3D dynamic focusing system. A 100 μm pinhole was placed near the focal 4 
+plane of 3D dynamic focusing system and a power meter was used to detect the light intensity 5 
+after the pinhole. (b-g) The laser power measurement results in x (b -c), y (d-e), and z (f -g), 6 
+respectively. Three measurements were conducted, with forward scans represented by orange, 7 
+blue, and green dashed lines, and reverse scans by solid lines . (c, e, g) Scanning results along 8 
+the x, y, and z axes. The scanning range  with ranges for x  and y is  -2 μm to 2 μm . The 9 
+scanning range with ranges for z is -5 μm to 5 μm. (b, d, f) Enlarged views of the red dashed 10 
+boxes in (c, e, g) , respectively. The relative root mean square error ( RRMSE) values  were 11 
+calculated for characterizing the repeatbility. The RRMSE values for the x, y, and z axes were 12 
+
+
+4 
+ 
+0.032, 0.029, and 0.033, respectively, indicating good bidirectional repeatability across all 1 
+axes. 2 
+  3 
+
+5 
+ 
+ 1 
+ 2 
+Figure S3. Bidirectional repeatability measurement of the 3D dynamic focusing  system 3 
+via scanning images. (a) Schematic of setup for testing the bidirectional repeatability of the 4 
+3D dynamic focusing system. The excitation light is focused on a blank coverslip and imaged 5 
+on a CMOS camera. As the system scans in the x and y  directions, the CMOS captures laser 6 
+spot images at 5 μm intervals. (b, d) Scanning images in the range between -20 and 20 μm in 7 
+x and y direction, respectively. Three sets of scan ning results are shown: Scan 1 and Scan 2 8 
+represent the first set, Scan 3 and Scan 4 the second set, and Scan 5 and Scan 6 the third set. 9 
+Each set shows both forward (orange arrow) and reverse (pink arrow) scan results. The 10 
+bottom row presents the merged images from all six scans . (c, e) Overlayed n ormalized 11 
+intensity profiles along the scanning direction. The RRMSE values for the x and y axes are 12 
+0.058 and 0.064, respectively.  13 
+14 
+
+
+6 
+ 
+ 1 
+Figure S4.  Resolution characterization with fluorescent sphere image. The intensity 2 
+profiles along the x, y, and z directions are extracted and Gaussian fitted. The resolution is 3 
+calculated by the full widths at half maximum (FWHM) as noted in the figure.  4 
+  5 
+
+
+7 
+ 
+ 1 
+Figure S5. Comparison of the PSF between 3D-DyFI and the piezo-stage based confocal 2 
+microscopy. (a) The scanning images of 50 nm fluorescent beads with 3D- DyFI and the 3 
+piezo-stage based confocal microscopy. Upper panel: x- y plane section images; lower plane: 4 
+x-z plane section images. The color indicates fluorescence intensity.  (b-d) The comparative 5 
+analysis of sectional intensity profiles  of PSF images in (a) along x (b) , y (c) , and z (d) 6 
+direction. Scale bar: 500 nm. 7 
+  8 
+
+
+8 
+ 
+ 1 
+Figure S6. The resolution characterization with 50 nm red fluorescent spheres  in the 2 
+center of scanning range of dynamics focusing lens. Images of four typical 50 nm red 3 
+fluorescent microspheres (635 nm excitation) in the x -y and x- z planes, obtained using the 4 
+Piezo stage (a-b) and 3D -DyFI (c-d) systems. The upper panel shows the PSF in the x- y 5 
+plane, and the lower panel shows the PSF in the x- z plane. Pixel size: 50 nm. Scale bar : 500 6 
+nm. (b, d) Statistical histogram of the spatial resolution distribution in the x, y, and z axis  for 7 
+the piezo stage-based confocal microscopy  (b) and 3D-DyFI (d) systems. n = 20. The color 8 
+indicates fluorescence intensity in (a) and (c). 9 
+
+
+9 
+ 
+ 1 
+Figure S7. 3D spatial resolution examination in various positions in 3D  with 50 nm red  2 
+fluorescent beads. (a) Images of four typical 50 nm fluorescent microspheres located at the 3 
+boundary of the maximum scanning range, with positions at (18, 0), (-18, 0), (0, 18), and (0, -4 
+18) in the x- y plane. The upper panel shows the PSF in x- y plane, while the lower panel 5 
+shows the PSF in x- z plane. Scale bar = 500 nm. (b) The statistical histogram of spatial 6 
+resolution distribution in x, y, and z directions, which shows mean values of 405 ± 54 nm, 7 
+504 ± 65 nm, and 1.06 ± 0.12 µm in x, y, and z. n=39. (c) Fluorescent microsphere images at 8 
+different z-depths (-4 μm, -2 μm, 0 μm, 2 μm, and 4 μm). Scale bar = 500 nm. (d) Plot of the 9 
+
+
+10 
+ 
+intensity distribution of the PSFs from (c) with the fitted FWHM values to determine the 1 
+corresponding axial resolution.  2 
+  3 
+Figure S8. 3D imaging of microtubules  of live Hela cell.  The microtubules were labeled 4 
+with mBaojin fluorescent protein. The left panel shows 3D live cell imaging. The right panel 5 
+shows the section image in the x- y, x-z, and y-z planes. The sectioning positions are labeled 6 
+in the upper right corner of the images. The color indicates fluorescence intensity. 7 
+ 8 
+
+
+11 
+ 
+  1 
+Figure S9. Three -dimensional imaging of DiD -stained Hela cell membranes with 3D -2 
+DyFI (a -c). The left panel shows 3D live cell imaging. The right panel shows the section 3 
+image in the x -y, x-z, and y- z planes. The sectioning positions are labeled in the upper right 4 
+corner of the images. The color indicates fluorescence intensity. 5 
+ 6 
+
+
+12 
+ 
+ 1 
+Figure S10. 3D imaging of Nile Red labeled live L929 cell. The lipid droplets (bright spots) 2 
+and cell membrane were labeled by Nile Red. The left panel shows 3D live cell imaging. The 3 
+right panel shows the section image in the x- y, x-z, and y-z planes. The sectioning positions 4 
+are labeled in the upper right corner of the images. The color indicates fluorescence intensity. 5 
+  6 
+
+
+13 
+ 
+ 1 
+Figure S11. Thick cell imaging with  3D-DyFI.  (a) x-z plane image of DiD- stained Hela 2 
+cell membrane obtained with piezo stage -based confocal microscopy. (b) x-z plane image of 3 
+DiD-stained Hela cell membrane obtained with  3D-DyFI. The imaging area is selected to the 4 
+top part of cell as marked with dash box. Pixel size in x: 0.1 µ m; Pixel size in z: 0.2 µm. The 5 
+color indicates fluorescence intensity. 6 
+7 
+
+
+14 
+ 
+ 1 
+Figure S 12. 3D imaging of  50 nm red fluorescent microspheres with different pixel 2 
+illumination times.  Microspheres located at coverslip were imaged with 3D -DyFI with 3 
+illumination times of 2 ms (a), 5 ms (b), and 10 ms (c). The left panels show 3D views, while 4 
+the right panels display maximum intensity projection (MIP) images along the x- y, y-z, and 5 
+x-z planes. Scale bar: 1 µm. The color indicates fluorescence intensity. 6 
+  7 
+
+
+15 
+ 
+Supplementary Note 1. Specifications of the galvo mirrors and motors in remote 1 
+focusing system. 2 
+The mirrors are dielectric coated, with Ravg ≥98% @ 405 -  700 nm at angle of incidence 3 
+from 30 to 60 degrees. The size of the mirror is 30 mm × 35 mm. The linearity of motors is 4 
+99.9%. The long-term drift of motors over 8 hours: < 0.5 mRad. The machinery scan angle of 5 
+XY scanning is ±  11°. The control voltage range is ±  5 V. The repeatability, indicated by 6 
+relative root mean square error (RRMSE), are 0.058, 0.064, and 0.033 for x, y, and z, 7 
+respectively (Figure S2 and S3). 8 
+ 9 
+ 10 
+ 11 
+  12 
+
+16 
+ 
+Supplementary Note 2.  1 
+Minimize aberration with scanning tube lens 2 
+The excitation field distortion is a common problem for 3D dynamic focusing system 1. In 3 
+piezoelectric stage-based imaging system, the sample is moved step by step. Therefore, in 4 
+this situation the excitation and detection path remain stationary, which avoided the 5 
+aberration and field distortion. However, in a 3D dynamic focusing system, the galvanometer 6 
+mirror is tilted to steer the beam,  and the light will be deflected off its initial straight (optical 7 
+axis) path, which could induce severe aberration. Instead of using standard spherical or 8 
+achromatic doublet lenses for relaying the beam after the 3D dynamic focusing system, we 9 
+employed a laser scanning tube lens. This laser scanning tube lens can create a telecentric 10 
+system, providing flat field and aberration reduced focused laser after objective lens1.  11 
+To demonstrate the advantage of using a laser scanning tube lens over conventional 12 
+achromatic doublet lenses in 3D -DyFI, we conduct 3D imaging of 200 nm red fluorescent 13 
+microspheres under both conditions (Fig. S1 3). In 3D -DyFI with achromatic doublet lenses, 14 
+the image of fluorescent microspheres exhibits severe distortions and spherical divergence, 15 
+especially in the area further away from the center of the image (Fig. S1 3a). In contrast, the 16 
+laser scanning tube lens delivers uniformly clear images across the entire imaging field ( Fig. 17 
+S13b), showing pronounced aberration- correcting capabilities. In this microsphere sample, 18 
+microspheres are located on the surface of the coverslip. Theoretically, these microspheres 19 
+should have the same axial position, as shown in the image taken with laser scanning tube 20 
+lens base 3D-DyFI (Fig. S13b, maximum projected x-z and y-z images). However, the image 21 
+taken with the achromatic doublet lens base 3D -DyFI shows obvious axial position variation 22 
+(Fig. S13a, maximum projected x- z and y -z images). These results further validate the 23 
+correction capacity of the laser scanning tube lens in 3D -DyFI, which ensures a flat and 24 
+uniform field scanning. Additionally, the use of laser scanning tube lenses significantly 25 
+enhances the axial resolution of 3D -DyFI. As shown in Fig. S13, it is evident that the using 26 
+of conventional achromatic doublet lenses produced an axial PSF elongation by 27 
+approximately 2 times compared with that use scanning tube lens. Altogether, the using 28 
+scanning tube lenses in 3D -DyFI provides distortion and aberration reduced excitation, 29 
+
+17 
+ 
+ensuring accurate and high- resolution 3D imaging. The aberration can be further reduced by 1 
+using adaptive optics or spatial light modulators, at the cost of system complexity 2-4. Another 2 
+way to reduce the aberration is use of long working distance objective lenses 5. 3 
+ 4 
+ 5 
+Figure S13. Aberration correction comparison in 3D -DyFI: achromatic doublet lens vs. 6 
+scanning tube lens. Three -dimensional imaging of 200 nm fluorescent beads on a glass slide 7 
+in PBS buffer, using an achromatic doublet lens (a) and a scanning tube lens (b), with 8 
+corresponding maximum intensity projection in the x- y, x- z, and y- z planes shown in the 9 
+right panel. The color indicates fluorescence intensity. 10 
+  11 
+
+
+18 
+ 
+Supplementary References 1 
+1 Negrean, A. & Mansvelder, H. D. Optimal lens design and use in laser -scanning 2 
+microscopy. Biomed. Opt. Express 5, 1588-1609 (2014). 3 
+2 Yang, J.-T. et al. Remote focusing with dynamic aberration elimination by model -based 4 
+adaptive optics. Optics & Laser Technology 169, 110126 (2024). 5 
+3 Yang, Y ., Chen, W., Fan, J. L. & Ji, N. Adaptive optics enables aberration- free single-6 
+objective remote focusing for two- photon fluorescence microscopy. Biomed. Opt. Express  7 
+12, 354-366 (2021). 8 
+4 Jiang, H. et al. Long-range remote focusing by image -plane aberration correction. Optics 9 
+Express 28, 34008-34014 (2020). 10 
+5 Q i ,  Y. et al.  Remote-focusing microscopy with long working distance objective lenses. 11 
+Appl. Opt. 53, 3473-3478 (2014). 12 
+ 13 

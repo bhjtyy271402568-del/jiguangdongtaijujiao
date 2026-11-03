@@ -1,0 +1,252 @@
+﻿01_移动透镜式与匹配光学
+
+R001 | FL8220-3D-500 Fiber 3D Galvo scanning system-Sino-Galvo Technology Co., Ltd
+状态：网页已保存
+来源：https://www.sino-galvo.com/Products_detail/7.html
+文件：01_移动透镜式与匹配光学\R001_FL8220-3D-500 Fiber 3D Galvo scanning system-Sino-Galvo Technology Co., Ltd.html
+
+R002 | US12265207B2 - Dynamic focus for laser processing head - Google Patents
+状态：PDF已下载
+来源：https://patents.google.com/patent/US12265207B2/en
+文件：01_移动透镜式与匹配光学\R002_US12265207B2 - Dynamic focus for laser processing head _        - Google Patents.html
+文件：01_移动透镜式与匹配光学\R002_US12265207B2 - Dynamic focus for laser processing head - Google Patents.pdf
+
+R004 | CN205899130U - 高速动态聚焦激光振镜模组 - Google Patents
+状态：PDF已下载
+来源：https://patents.google.com/patent/CN205899130U/zh
+文件：01_移动透镜式与匹配光学\R004_CN205899130U - 高速动态聚焦激光振镜模组 _        - Google Patents.html
+文件：01_移动透镜式与匹配光学\R004_CN205899130U - 高速动态聚焦激光振镜模组 - Google Patents.pdf
+
+R005 | CN204248222U - 一种三轴动态聚焦激光打标装置 - Google Patents
+状态：PDF已下载
+来源：https://patents.google.com/patent/CN204248222U/zh
+文件：01_移动透镜式与匹配光学\R005_CN204248222U - 一种三轴动态聚焦激光打标装置 _        - Google Patents.html
+文件：01_移动透镜式与匹配光学\R005_CN204248222U - 一种三轴动态聚焦激光打标装置 - Google Patents.pdf
+
+R009 | CN213163617U - 一种三维动态聚焦振镜系统 - Google Patents
+状态：PDF已下载
+来源：https://patents.google.com/patent/CN213163617U/zh
+文件：01_移动透镜式与匹配光学\R009_CN213163617U - 一种三维动态聚焦振镜系统 _        - Google Patents.html
+文件：01_移动透镜式与匹配光学\R009_CN213163617U - 一种三维动态聚焦振镜系统 - Google Patents.pdf
+
+R011 | CN103157904B - 一种基于动态聚焦的激光加工装置 - Google Patents
+状态：PDF已下载
+来源：https://patents.google.com/patent/CN103157904B/zh
+文件：01_移动透镜式与匹配光学\R011_CN103157904B - 一种基于动态聚焦的激光加工装置 _        - Google Patents.html
+文件：01_移动透镜式与匹配光学\R011_CN103157904B - 一种基于动态聚焦的激光加工装置 - Google Patents.pdf
+
+R012 | US20220283416A1 - Dynamic Focus For Laser Processing Head - Google Patents
+状态：PDF已下载
+来源：https://patents.google.com/patent/US20220283416A1/en
+文件：01_移动透镜式与匹配光学\R012_US20220283416A1 - Dynamic Focus For Laser Processing Head _        - Google Patents.html
+文件：01_移动透镜式与匹配光学\R012_US20220283416A1 - Dynamic Focus For Laser Processing Head - Google Patents.pdf
+
+R017 | Experimental investigation of 3D scanheads for laser micro-processing_2016_作者稿
+状态：PDF已下载
+来源：https://pure-oai.bham.ac.uk/ws/portalfiles/portal/25552450/2016_Experimental_Investigation_of_3D_Scanheads_for_Laser_Micro_Processing_FINAL.pdf
+文件：01_移动透镜式与匹配光学\R017_Experimental investigation of 3D scanheads for laser micro-processing_2016_作者稿.pdf
+
+R022 | Doubled Z-axis scanning range and spot-quality enhancement_2026
+状态：全文已由用户补齐 → U003
+来源：https://pubmed.ncbi.nlm.nih.gov/42071592/
+
+
+R026 | Model-driven 3D laser focus shifting for precision fabrication of microstructures in transparent flexible polymers | PolyU Institutional Research Archive
+状态：全文已由用户补齐 → U006
+来源：https://ira.lib.polyu.edu.hk/handle/10397/115461
+文件：01_移动透镜式与匹配光学\R026_Model-driven 3D laser focus shifting for precision fabrication of microstructures in transparent flexible.html
+
+R029 | varioSCAN II | Scanlab
+状态：网页已保存
+来源：https://www.scanlab.de/en/products/z-axes-3d-add-ons/varioscan-ii
+文件：01_移动透镜式与匹配光学\R029_varioSCAN II _ Scanlab.html
+
+R030 | SCANLAB_varioSCAN_II_eBox_官方规格书
+状态：PDF已下载
+来源：https://www.scanlab.de/sites/default/files/2026-03/SCANLAB-varioSCANII-eBox-EN.pdf
+文件：01_移动透镜式与匹配光学\R030_SCANLAB_varioSCAN_II_eBox_官方规格书.pdf
+
+R031 | Aerotech_AGV3D_产品页与安装使用手册
+状态：PDF已下载
+来源：https://www.aerotech.com/product/agv3d-three-axis-laser-scan-heads/
+文件：01_移动透镜式与匹配光学\R031_AGV3D Three-Axis Laser Scan Heads _ Aerotech.html
+文件：01_移动透镜式与匹配光学\R031_Aerotech_AGV3D_产品页与安装使用手册.pdf
+
+R032 | Aerotech_AGV3D_安装使用手册
+状态：PDF已下载
+来源：https://www.aerotech.com/wp-content/uploads/2021/12/AGV3D-7.pdf
+文件：01_移动透镜式与匹配光学\R031_Aerotech_AGV3D_产品页与安装使用手册.pdf
+
+R033 | FOCUSSHIFTER RD-14 - RAYLASE - raylase
+状态：网页已保存
+来源：https://www.raylase.de/en/products/focusshifter/focusshifter-rd-14.html
+文件：01_移动透镜式与匹配光学\R033_FOCUSSHIFTER RD-14 - RAYLASE - raylase.html
+
+R034 | RAYLASE_FOCUSSHIFTER_RD14_旧版失效链接
+状态：未获取
+来源：https://www.raylase.de/_Resources/Persistent/8/3/8/2/8382e9d0599c27104c9f8316603afbaa4d944558/03119_Datenblatt_FOCUSSHIFTER%20RD-14_EN.pdf
+
+
+R035 | AXIALSCAN RD-14 - raylase
+状态：网页已保存
+来源：https://www.raylase.de/en/products/prefocusing-deflection-units/axialscan-rd-14.html
+文件：01_移动透镜式与匹配光学\R035_AXIALSCAN RD-14 - raylase.html
+
+R036 | RAYLASE_AXIALSCAN_RD14_官方规格书_2026
+状态：PDF已下载
+来源：https://www.raylase.de/_Resources/Persistent/b/9/a/f/b9afb6124b7834b86df20625625e58d8316dbf82/2026-03-16_Datenblatt_AXIALSCAN%20RD-14_EN_v2.0.pdf
+文件：01_移动透镜式与匹配光学\R036_RAYLASE_AXIALSCAN_RD14_官方规格书_2026.pdf
+
+R037 | 动态聚焦 , 焊接振镜 , 3D振镜 , 激光3D打印 , 视觉定位曲面打标-苏州菲镭泰克激光有限公司
+状态：网页已保存
+来源：https://www.feeltek.cn/products/3dzhenjing/fr20_xilie/3dqianjujiaodongtaixitong_fr20_f_f20_.html
+文件：01_移动透镜式与匹配光学\R037_动态聚焦 , 焊接振镜 , 3D振镜 , 激光3D打印 , 视觉定位曲面打标-苏州菲镭泰克激光有限公司.html
+
+R038 | Scanner Optics VCM F1 - Digital Processing Driver Galvano Technology
+状态：网页已保存
+来源：https://www.scanneroptics.com/products/scanner-optics-vcm-f1/
+文件：01_移动透镜式与匹配光学\R038_Scanner Optics VCM F1 - Digital Processing Driver Galvano Technology.html
+
+R043 | CN104191089B - 基于激光器输出光束的三维动态聚焦标刻系统及方法 - Google Patents
+状态：PDF已下载
+来源：https://patents.google.com/patent/CN104191089B/zh
+文件：01_移动透镜式与匹配光学\R043_CN104191089B - 基于激光器输出光束的三维动态聚焦标刻系统及方法 _        - Google Patents.html
+文件：01_移动透镜式与匹配光学\R043_CN104191089B - 基于激光器输出光束的三维动态聚焦标刻系统及方法 - Google Patents.pdf
+
+R046 | CN222866943U - 一种动态聚焦光学系统 - Google Patents
+状态：PDF已下载
+来源：https://patents.google.com/patent/CN222866943U/zh
+文件：01_移动透镜式与匹配光学\R046_CN222866943U - 一种动态聚焦光学系统 _        - Google Patents.html
+文件：01_移动透镜式与匹配光学\R046_CN222866943U - 一种动态聚焦光学系统 - Google Patents.pdf
+
+R047 | CN120928524B - 一种用于激光动态聚焦的驱动装置 - Google Patents
+状态：专利全文网页已保存_无PDF附件
+来源：https://patents.google.com/patent/CN120928524B/zh
+文件：01_移动透镜式与匹配光学\R047_CN120928524B - 一种用于激光动态聚焦的驱动装置 _        - Google Patents.html
+
+R053 | CN104191089A - 基于激光器输出光束的三维动态聚焦标刻系统及方法 - Google Patents
+状态：PDF已下载
+来源：https://patents.google.com/patent/CN104191089A/zh
+文件：01_移动透镜式与匹配光学\R053_CN104191089A - 基于激光器输出光束的三维动态聚焦标刻系统及方法 _        - Google Patents.html
+文件：01_移动透镜式与匹配光学\R053_CN104191089A - 基于激光器输出光束的三维动态聚焦标刻系统及方法 - Google Patents.pdf
+
+R055 | Experimental investigation of 3D scanheads_ORCA机构库入口
+状态：未获取
+来源：https://orca.cardiff.ac.uk/id/eprint/114207/
+
+
+R056 | 激光大尺度3维动态聚焦扫描加工系统研究_2016
+状态：全文已由用户补齐 → U008
+来源：https://www.jgjs.net.cn/en/article/doi/10.7510/jgjs.issn.1001-3806.2016.04.002
+
+
+R058 | Model-driven 3D laser focus shifting_2025_出版社入口
+状态：全文已由用户补齐 → U006
+来源：https://www.sciencedirect.com/science/article/pii/S0890695525000653
+
+
+R059 | Three-dimensional random-access confocal microscopy_2024
+状态：未获取
+来源：https://pmc.ncbi.nlm.nih.gov/articles/PMC11555065/
+
+
+R060 | Scan Systems | Scanlab
+状态：网页已保存
+来源：https://www.scanlab.de/en/products/scan-systems
+文件：01_移动透镜式与匹配光学\R060_Scan Systems _ Scanlab.html
+
+R061 | Aerotech激光加工产品总入口_返回异常内容
+状态：未获取
+来源：https://www.aerotech.com/product-category/laser-processing/
+
+
+R064 | CN114054972A - 一种动态聚焦激光切割方法与装置 - Google Patents
+状态：PDF已下载
+来源：https://patents.google.com/patent/CN114054972A/zh
+文件：01_移动透镜式与匹配光学\R064_CN114054972A - 一种动态聚焦激光切割方法与装置 _        - Google Patents.html
+文件：01_移动透镜式与匹配光学\R064_CN114054972A - 一种动态聚焦激光切割方法与装置 - Google Patents.pdf
+
+R066 | SCANLAB_varioSCAN_II旧PDF地址_已重定向至产品网页
+状态：网页已保存
+来源：https://www.scanlab.de/sites/default/files/2021-11/varioSCANII_en.pdf
+文件：01_移动透镜式与匹配光学\R029_varioSCAN II _ Scanlab.html
+
+R067 | Dynamic Focus System
+状态：网页已保存
+来源：https://haaslti.com/products/tailored-solutions/dynamic-focus-system
+文件：01_移动透镜式与匹配光学\R067_Dynamic Focus System.html
+
+R068 | 3D Laser Scanning Head
+状态：网页已保存
+来源：https://www.scanneroptics.com/products/3d-laser-scanning-head/
+文件：01_移动透镜式与匹配光学\R068_3D Laser Scanning Head.html
+
+R069 | Experimental Investigation of 3D Scanheads for Laser Micro Processing - University of Birmingham
+状态：网页已保存
+来源：https://research.birmingham.ac.uk/en/publications/experimental-investigation-of-3d-scanheads-for-laser-micro-proces/
+文件：01_移动透镜式与匹配光学\R069_Experimental Investigation of 3D Scanheads for Laser Micro Processing_      -  University of Birmingham.html
+
+S004 | 系统联合优化_2026_出版社PDF入口
+状态：全文已由用户补齐 → U003
+来源：https://opg.optica.org/oe/viewmedia.cfm?seq=0&uri=oe-34-8-14943
+
+
+S009 | RAYLASE_FOCUSSHIFTER_RD14_有效新版2026
+状态：PDF已下载
+来源：https://www.raylase.de/_Resources/Persistent/5/1/8/9/5189d9ad9239901c83aa37b1738071904ed74596/2026-03-16_Datenblatt_FOCUSSHIFTER%20RD-14_EN_v2.0.pdf
+文件：01_移动透镜式与匹配光学\S009_RAYLASE_FOCUSSHIFTER_RD14_有效新版2026.pdf
+
+S010 | RAYLASE_AXIALSCAN30_Digital_II_HP
+状态：未获取
+来源：https://www.raylase.de/_Resources/Persistent/6/7/1/2/6712ab165f7dce513a0c934c651708e7256f153a/RAYLASE_AXIALSCAN-30%20DIGITAL%20II%20HP_en.pdf
+
+
+S011 | Scanner_Optics_VCM_G1
+状态：网页已保存
+来源：https://ar.scanneroptics.com/products/scanner-optics-vcm-g1/
+文件：01_移动透镜式与匹配光学\S011_Scanner Optics VCM G1 - Adopts Full Digital Galvanometer Driver.html
+
+S012 | JCZ_G3_3D
+状态：网页已保存
+来源：https://en.bjjcz.cn/product/156.html
+文件：01_移动透镜式与匹配光学\S012_G3-3D_Beijing JCZ Technology Co., Ltd.html
+
+S020 | 大尺度三维动态聚焦_中文期刊入口
+状态：全文已由用户补齐 → U008
+来源：https://www.jgjs.net.cn/cn/article/doi/10.7510/jgjs.issn.1001-3806.2016.04.002
+
+
+A003 | 三维随机访问共焦显微_原文与补充资料
+状态：PDF已下载
+来源：https://www.nature.com/articles/s44172-024-00320-2
+文件：01_移动透镜式与匹配光学\A003_Three-dimensional random-access confocal microscopy with 3D remote focusing system _ Communications Engin.html
+文件：01_移动透镜式与匹配光学\A003_三维随机访问共焦显微_原文与补充资料.pdf
+文件：01_移动透镜式与匹配光学\A003_三维随机访问共焦显微_原文与补充资料_84842d.pdf
+文件：01_移动透镜式与匹配光学\A003_三维随机访问共焦显微_原文与补充资料_f4bb0a.pdf
+文件：01_移动透镜式与匹配光学\A003_三维随机访问共焦显微_原文与补充资料_159780.pdf
+
+A005 | 联合优化_ResearchGate公开PDF入口
+状态：全文已由用户补齐 → U003
+来源：https://www.researchgate.net/publication/403458253_DOUBLED_Z-AXIS_SCANNING_RANGE_AND_SPOT-QUALITY_ENHANCEMENT_IN_SYSTEM-LEVEL_INTEGRATED_CO-OPTIMIZED_TRANSMISSIVE_3D_LASER_SCANNING_SYSTEMS/links/69dd3aca00864436152c8e96/Doubled-Z-axis-scanning-range-and-spot-quality-enhancement-in-system-level-integrated-co-optimized-transmissive-3D-laser-scanning-systems.pdf
+
+
+B004 | 大尺度三维动态聚焦_期刊文章编号入口
+状态：全文已由用户补齐 → U008
+来源：https://www.jgjs.net.cn/cn/article/id/15434
+
+
+U003 | 2026_Z镜组_XY振镜_场镜系统联合优化
+状态：PDF已下载
+来源：https://doi.org/10.1364/OE.588979
+文件：01_移动透镜式与匹配光学\U003_2026_Z镜组_XY振镜_场镜系统联合优化.pdf
+
+U006 | 2025_模型驱动三维焦点移动_透明柔性聚合物微加工
+状态：PDF已下载
+来源：https://doi.org/10.1016/j.ijmachtools.2025.104310
+文件：01_移动透镜式与匹配光学\U006_2025_模型驱动三维焦点移动_透明柔性聚合物微加工.pdf
+
+U008 | 2016_激光大尺度3维动态聚焦扫描加工系统研究
+状态：PDF已下载
+来源：https://doi.org/10.7510/jgjs.issn.1001-3806.2016.04.002
+文件：01_移动透镜式与匹配光学\U008_2016_激光大尺度3维动态聚焦扫描加工系统研究.pdf
+

@@ -1,0 +1,30 @@
+{
+  "id": "S011",
+  "url": "https://ar.scanneroptics.com/products/scanner-optics-vcm-g1/",
+  "category": "01_移动透镜式与匹配光学",
+  "origins": [
+    "补充检索_原文提及条目及有效替代入口"
+  ],
+  "context": "Scanner_Optics_VCM_G1",
+  "title": "Scanner_Optics_VCM_G1",
+  "files": [
+    {
+      "path": "01_移动透镜式与匹配光学\\S011_Scanner Optics VCM G1 - Adopts Full Digital Galvanometer Driver.html",
+      "type": "HTML",
+      "bytes": 84387,
+      "sha256": "f4d33cdcb5a4d0c06a6d19f7942697bb2bb268b3741d177f857a6c9d2f8cf25a",
+      "url": "https://ar.scanneroptics.com/products/scanner-optics-vcm-g1/",
+      "title": "Scanner Optics VCM G1 - Adopts Full Digital Galvanometer Driver",
+      "text_chars": 6769
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://ar.scanneroptics.com/products/scanner-optics-vcm-g1/",
+      "http": 200,
+      "final_url": "https://ar.scanneroptics.com/products/scanner-optics-vcm-g1/",
+      "result": "网页"
+    }
+  ],
+  "status": "网页已保存"
+}

@@ -1,0 +1,66 @@
+{
+  "url": "https://www.nature.com/articles/s41377-023-01303-2",
+  "category": "04_TAG声学调焦",
+  "origins": [
+    "激光动态聚焦_来源索引与验证清单_2026-11-03.md"
+  ],
+  "context": "\n- 原始入口：https://www.nature.com/articles/s41377-023-01303-2",
+  "id": "R023",
+  "files": [
+    {
+      "path": "04_TAG声学调焦\\R023_Single-lens dynamic $$z$$ -scanning for simultaneous in situ position detection and laser processing focu.html",
+      "type": "HTML",
+      "bytes": 427298,
+      "sha256": "515f603d361cb6e6ba6dfb26ac90c6f50d2a88edf9ae4cc6192c50cbf75d0953",
+      "url": "https://www.nature.com/articles/s41377-023-01303-2",
+      "title": "Single-lens dynamic $$z$$ -scanning for simultaneous in situ position detection and laser processing focus control | Light: Science & Applications",
+      "text_chars": 64236
+    },
+    {
+      "path": "04_TAG声学调焦\\R023_TAG_2023_正文.pdf",
+      "type": "PDF",
+      "pages": 13,
+      "bytes": 1719339,
+      "sha256": "addfe359849a08f49035f2333cb312fc593091038988381336384d4b8bd1c259",
+      "url": "https://www.nature.com/articles/s41377-023-01303-2.pdf",
+      "text_chars": 61346,
+      "title": "Single-lens dynamic z-scanning for simultaneous in situ position detection and laser processing focus control",
+      "preview": "Du et al. Light: Science & Applications          (2023) 12:274 Ofﬁcial journal of the CIOMP 2047-7538\nhttps://doi.org/10.1038/s41377-023-01303-2 www.nature.com/lsa\nARTICLE Open Access\nSingle-lens dynamicz-scanning for simultaneous in\nsitu position detection and laser processing focus\ncontrol\nXiaohan Du1,2, Camilo Florian3,4 and Craig B. Arnold 1,4✉\nAbstract\nExisting auto-focusing methods in laser processing typically include two independent modules, one for surface\ndetection and another for z-ax",
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    },
+    {
+      "path": "04_TAG声学调焦\\R023_TAG_2023_补充资料.pdf",
+      "type": "PDF",
+      "pages": 10,
+      "bytes": 7477011,
+      "sha256": "768023e18e64c647b0a3cb5586291b9390b7b68278c8b9fcf4d4462e234c6b08",
+      "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41377-023-01303-2/MediaObjects/41377_2023_1303_MOESM1_ESM.pdf",
+      "text_chars": 16224,
+      "title": "",
+      "preview": "Supplementary Information for Single-lens dynamic\nz-scanning for simultaneous in-situ position detection\nand laser processing focus control\nXiaohan Du1,2, Camilo Florian3,4, and Craig B.Arnold1,4,*\n1Department of Mechanical and Aerospace Engineering, Princeton University, Princeton, NJ, 08544, USA\n2Department of Systems Engineering, City University of Hong Kong, Hong Kong, China\n3Institut für Werkstofftechnik, Universität Kassel, 34125, Kassel, Germany\n4Princeton Materials Institute, Princeton U",
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://www.nature.com/articles/s41377-023-01303-2",
+      "http": 200,
+      "final_url": "https://www.nature.com/articles/s41377-023-01303-2",
+      "result": "网页"
+    },
+    {
+      "url": "https://www.nature.com/articles/s41377-023-01303-2.pdf",
+      "http": 200,
+      "final_url": "https://www.nature.com/articles/s41377-023-01303-2.pdf",
+      "result": "有效PDF"
+    },
+    {
+      "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41377-023-01303-2/MediaObjects/41377_2023_1303_MOESM1_ESM.pdf",
+      "http": 200,
+      "final_url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41377-023-01303-2/MediaObjects/41377_2023_1303_MOESM1_ESM.pdf",
+      "result": "有效PDF"
+    }
+  ],
+  "title": "Single-lens dynamic $$z$$ -scanning for simultaneous in situ position detection and laser processing focus control | Light: Science & Applications",
+  "status": "PDF已下载"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "U003",
+  "url": "https://doi.org/10.1364/OE.588979",
+  "category": "01_移动透镜式与匹配光学",
+  "title": "2026_Z镜组_XY振镜_场镜系统联合优化",
+  "context": "用户提供的正式期刊全文PDF，已核对首页标题与DOI",
+  "origins": [
+    "F:\\发票\\oe-34-8-14943.pdf"
+  ],
+  "local_source": "F:\\发票\\oe-34-8-14943.pdf",
+  "doi": "10.1364/OE.588979",
+  "status": "PDF已下载",
+  "files": [
+    {
+      "path": "01_移动透镜式与匹配光学\\U003_2026_Z镜组_XY振镜_场镜系统联合优化.pdf",
+      "type": "PDF",
+      "pages": 16,
+      "bytes": 29276469,
+      "sha256": "0880057d89ebcc5feb776c71b039cdef209cd4d79d3f54fd4ba23f919ef8290d",
+      "url": "https://doi.org/10.1364/OE.588979",
+      "title": "2026_Z镜组_XY振镜_场镜系统联合优化",
+      "text_chars": 48785,
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    }
+  ],
+  "attempts": [
+    {
+      "source": "F:\\发票\\oe-34-8-14943.pdf",
+      "result": "用户提供本地PDF，复制归档，原件保留"
+    }
+  ]
+}

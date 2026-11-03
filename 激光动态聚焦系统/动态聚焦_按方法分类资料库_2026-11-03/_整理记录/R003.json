@@ -1,0 +1,48 @@
+{
+  "url": "https://patents.google.com/patent/CN109894748B/zh",
+  "category": "07_测高闭环_三轴同步与标定",
+  "origins": [
+    "Gemini输出.txt"
+  ],
+  "context": "原文提到的专利号，补全公开文本入口；标题及相关性待与原件核对",
+  "id": "R003",
+  "files": [
+    {
+      "path": "07_测高闭环_三轴同步与标定\\R003_CN109894748B - 激光三维飞行打标方法、装置、计算机设备和存储介质 _      - Google Patents.html",
+      "type": "HTML",
+      "bytes": 115078,
+      "sha256": "18266f6c22aab0e908fbe7ac5028a6b0ac1edf1c201e0378fee46072c9571aac",
+      "url": "https://patents.google.com/patent/CN109894748B/zh",
+      "title": "CN109894748B - 激光三维飞行打标方法、装置、计算机设备和存储介质 \n      - Google Patents",
+      "text_chars": 19388
+    },
+    {
+      "path": "07_测高闭环_三轴同步与标定\\R003_CN109894748B - 激光三维飞行打标方法、装置、计算机设备和存储介质 - Google Patents.pdf",
+      "type": "PDF",
+      "pages": 14,
+      "bytes": 602415,
+      "sha256": "ebea76dfc3e081eab306577e8880bc602d1ed36bcf9a6932f561ce193d877ceb",
+      "url": "https://patentimages.storage.googleapis.com/a8/4b/72/5f3bfaf96f488f/CN109894748B.pdf",
+      "text_chars": 13556,
+      "title": "",
+      "preview": "(19)中华人民共和国国家知识产权局\n(12)发明专利\n(10)授权公告号  \n(45)授权公告日 \n(21)申请号  201910132341.7\n(22)申请日 2019.02.22\n(65)同一申请的已公布的文献号  \n申请公布号  CN  109894748  A\n(43)申请公布日 2019.06.18\n(73)专利权人  深圳泰德激光科技有限公司\n地址  518054  广东省深圳市南山区粤海街\n道麻岭社区南海大道4050号上汽大厦\n10层1005室\n(72)发明人  李启程　刘伟　盛辉　黄小龙　\n周威　张凯　周红林　贾长桥　\n刘文慧　\n(74)专利代理机构  广州华进联合专利商标代理\n有限公司  44224\n代理人  李文渊\n(51)Int.Cl.\nB23K 26/362(2014.01)\nB23K 26/046(2014.01)\nB23K 26/064(2014.01)\nB23K 26/067(2006.01)\nB23K 26/70(2014.01)\n审查员  王杰\n \n(54)发明名称\n激光三维飞行打标方法、 装置、 计算机设备\n和存储介质\n(57)摘要\n本申请涉及一",
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://patents.google.com/patent/CN109894748B/zh",
+      "http": 200,
+      "final_url": "https://patents.google.com/patent/CN109894748B/zh",
+      "result": "网页"
+    },
+    {
+      "url": "https://patentimages.storage.googleapis.com/a8/4b/72/5f3bfaf96f488f/CN109894748B.pdf",
+      "http": 200,
+      "final_url": "https://patentimages.storage.googleapis.com/a8/4b/72/5f3bfaf96f488f/CN109894748B.pdf",
+      "result": "有效PDF"
+    }
+  ],
+  "title": "CN109894748B - 激光三维飞行打标方法、装置、计算机设备和存储介质 - Google Patents",
+  "status": "PDF已下载"
+}

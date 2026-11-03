@@ -1,0 +1,23 @@
+{
+  "url": "https://www.researchgate.net/publication/366318787_Galvanometer_driven_optical_system_for_laser_dynamic_focusing",
+  "category": "02_反射式与三振镜调焦",
+  "origins": [
+    "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+    "用户粘贴_激光动态聚焦深度调研.txt"
+  ],
+  "context": "\n- 核查范围与注意事项：原文全文网页文本可访问；出版社PDF访问受限。405 nm实验，两个Z振镜加XY振镜共四执行器；600 μs对应3.5 mrad小步进，折算焦移约2.04 mm。468 nm焦点重复性由角重复性和光学关系推算，不是独立的全体积动态焦点实测。全文备用：https://www.researchgate.net/publication/366318787_Galvanometer_driven_optical_system_for_laser_dynamic_focusing",
+  "id": "R019",
+  "files": [],
+  "attempts": [
+    {
+      "url": "https://www.researchgate.net/publication/366318787_Galvanometer_driven_optical_system_for_laser_dynamic_focusing",
+      "http": 403,
+      "final_url": "https://www.researchgate.net/publication/366318787_Galvanometer_driven_optical_system_for_laser_dynamic_focusing",
+      "error": "403 Client Error: Forbidden for url: https://www.researchgate.net/publication/366318787_Galvanometer_driven_optical_system_for_laser_dynamic_focusing"
+    }
+  ],
+  "status": "全文已由用户补齐 → U002",
+  "title": "Galvanometer driven optical system for laser dynamic focusing_2023_ResearchGate",
+  "resolved_by": "U002",
+  "resolution_note": "此前网络获取未完成；现已由用户提供正式版全文补齐。保留历史请求记录。"
+}

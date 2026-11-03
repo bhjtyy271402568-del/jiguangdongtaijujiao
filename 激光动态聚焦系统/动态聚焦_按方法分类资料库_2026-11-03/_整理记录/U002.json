@@ -1,0 +1,32 @@
+{
+  "id": "U002",
+  "url": "https://doi.org/10.1364/OE.476921",
+  "category": "02_反射式与三振镜调焦",
+  "title": "2023_清华_振镜驱动反射式动态聚焦",
+  "context": "用户提供的正式期刊全文PDF，已核对首页标题与DOI",
+  "origins": [
+    "F:\\发票\\oe-31-1-673.pdf"
+  ],
+  "local_source": "F:\\发票\\oe-31-1-673.pdf",
+  "doi": "10.1364/OE.476921",
+  "status": "PDF已下载",
+  "files": [
+    {
+      "path": "02_反射式与三振镜调焦\\U002_2023_清华_振镜驱动反射式动态聚焦.pdf",
+      "type": "PDF",
+      "pages": 11,
+      "bytes": 46357513,
+      "sha256": "7a1acdb14d3a5204ab74196c46eda8d7b4abbdcea3531ee64b4edbf263d37222",
+      "url": "https://doi.org/10.1364/OE.476921",
+      "title": "2023_清华_振镜驱动反射式动态聚焦",
+      "text_chars": 30549,
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    }
+  ],
+  "attempts": [
+    {
+      "source": "F:\\发票\\oe-31-1-673.pdf",
+      "result": "用户提供本地PDF，复制归档，原件保留"
+    }
+  ]
+}

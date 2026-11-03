@@ -1,0 +1,20 @@
+{
+  "id": "S014",
+  "url": "https://www.mdpi.com/2072-666X/16/4/482",
+  "category": "05_MEMS与全息调焦",
+  "origins": [
+    "补充检索_原文提及条目及有效替代入口"
+  ],
+  "context": "MEMS综述_出版社网页",
+  "title": "MEMS综述_出版社网页",
+  "files": [],
+  "attempts": [
+    {
+      "url": "https://www.mdpi.com/2072-666X/16/4/482",
+      "http": 403,
+      "final_url": "https://www.mdpi.com/2072-666X/16/4/482",
+      "error": "403 Client Error: Forbidden for url: https://www.mdpi.com/2072-666X/16/4/482"
+    }
+  ],
+  "status": "未获取"
+}

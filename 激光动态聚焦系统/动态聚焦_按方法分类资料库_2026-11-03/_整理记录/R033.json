@@ -1,0 +1,31 @@
+{
+  "url": "https://www.raylase.de/en/products/focusshifter/focusshifter-rd-14.html",
+  "category": "01_移动透镜式与匹配光学",
+  "origins": [
+    "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+    "用户粘贴_激光动态聚焦深度调研.txt"
+  ],
+  "context": "\n- 原始入口：https://www.raylase.de/en/products/focusshifter/focusshifter-rd-14.html",
+  "id": "R033",
+  "files": [
+    {
+      "path": "01_移动透镜式与匹配光学\\R033_FOCUSSHIFTER RD-14 - RAYLASE - raylase.html",
+      "type": "HTML",
+      "bytes": 69051,
+      "sha256": "cd3135e281d44044b0696524bc2c4e7766f41df50bb6d095947e883b02b9908a",
+      "url": "https://www.raylase.de/en/products/focusshifter/focusshifter-rd-14.html",
+      "title": "FOCUSSHIFTER RD-14 - RAYLASE - raylase",
+      "text_chars": 12564
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://www.raylase.de/en/products/focusshifter/focusshifter-rd-14.html",
+      "http": 200,
+      "final_url": "https://www.raylase.de/en/products/focusshifter/focusshifter-rd-14.html",
+      "result": "网页"
+    }
+  ],
+  "title": "FOCUSSHIFTER RD-14 - RAYLASE - raylase",
+  "status": "网页已保存"
+}

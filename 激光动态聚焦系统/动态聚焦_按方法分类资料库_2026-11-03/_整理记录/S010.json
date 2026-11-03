@@ -1,0 +1,20 @@
+{
+  "id": "S010",
+  "url": "https://www.raylase.de/_Resources/Persistent/6/7/1/2/6712ab165f7dce513a0c934c651708e7256f153a/RAYLASE_AXIALSCAN-30%20DIGITAL%20II%20HP_en.pdf",
+  "category": "01_移动透镜式与匹配光学",
+  "origins": [
+    "补充检索_原文提及条目及有效替代入口"
+  ],
+  "context": "RAYLASE_AXIALSCAN30_Digital_II_HP",
+  "title": "RAYLASE_AXIALSCAN30_Digital_II_HP",
+  "files": [],
+  "attempts": [
+    {
+      "url": "https://www.raylase.de/_Resources/Persistent/6/7/1/2/6712ab165f7dce513a0c934c651708e7256f153a/RAYLASE_AXIALSCAN-30%20DIGITAL%20II%20HP_en.pdf",
+      "http": 404,
+      "final_url": "https://www.raylase.de/_Resources/Persistent/6/7/1/2/6712ab165f7dce513a0c934c651708e7256f153a/RAYLASE_AXIALSCAN-30%20DIGITAL%20II%20HP_en.pdf",
+      "error": "404 Client Error: Not Found for url: https://www.raylase.de/_Resources/Persistent/6/7/1/2/6712ab165f7dce513a0c934c651708e7256f153a/RAYLASE_AXIALSCAN-30%20DIGITAL%20II%20HP_en.pdf"
+    }
+  ],
+  "status": "未获取"
+}

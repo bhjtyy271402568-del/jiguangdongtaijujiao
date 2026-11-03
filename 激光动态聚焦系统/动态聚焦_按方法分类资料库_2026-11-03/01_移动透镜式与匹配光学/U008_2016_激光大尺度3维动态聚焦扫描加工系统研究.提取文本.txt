@@ -1,0 +1,531 @@
+第4 0 卷第4 期 
+2016 年7 月
+激 
+光
+技
+术
+LASER TECHNOLOGY
+V〇1.40,N 〇.4 
+July,2016
+文章编号：1001-3806(2016)04-0466-06
+激光大尺度3 维动态聚焦扫描加工系统研究
+李东华，邓磊敏, 段军％曾晓雁,游欣易
+( 华中科技大学武汉光电国家实验室，武汉430074)
+摘要：为了满足激光3 维微加工不断提高的精度要求、不断增大的加工尺寸范围，以及加工效率的上升需求，采用 
+理论分析和计算结合的方法，研制出由动态聚焦镜和2 维扫描振镜组合的动态聚焦系统，与高精度X-Y-Z 3 维高精度工 
+作台集成为一台激光大尺度3 维动态聚焦扫描加工设备。设计了焦距为100mm 、视场角± 15° 、光阑口径7mm 、后工作距 
+137mm、相对畸变小于0.5% 的远心/- 0 镜和人光口径8mm、光学杠杆比1:8、后工作距800m m ±40m m 的动态聚焦镜系 
+统,并使用ZEMAX软件对系统关键光学部件动态聚焦镜和远心/- 0 镜进行光学设计及系统性能评价。结果表明，通过 
+工艺控制软件分层拼接,实现了 460m m x310m m x50m m 大尺度3 维动态聚焦的高精度紫外激光微加工功能，在该3 维 
+扫描范围内，激光聚焦光斑直径始终保持小于10^m ，从而满足大尺度激光3 维精密微加工需求。
+关键词：激光技术;3 维动态聚焦;光学设计;3 维微加工
+中图分类号：TG665;TN229 
+文献标志码：A 
+doi：10. 7510/jgjs. issn. 1001-3806. 2016. 04. 002
+Study on large scale 3-D laser dynamic scanning manufacturing systems
+LI Donghua，DENGLeimin，DUANJun，ZENGXiaoyan，YOU Xinyi 
+(Wuhan National Laboratory for Optoelectronics，Huazhong University of Science & Technology，Wuhan 430074，China)
+Abstract： In 
+order 
+to 
+meet 
+the requirements 
+of 
+increasing precision，processing size and processing 
+ef
+micromachining，after theoretical analysis and calculation， a dynamic focusing system was designed combining the dynamic
+focusing lens with the 2-D galvanometer scanning system. A large scale 3-D laser dynamic focusing scanning processing system 
+was proposed with the combination of the dynamic focusing system and a high precision X-Y-Z 3-D working stage. Telecentric f- 
+0 lens was designed with focal length of 100mm，field angle of ± 15°，aperture size of 7mm，back focal length of 137mm and
+relative distortion of less 
+than 0.5% . 
+And 
+a 
+dynamic focusing 
+system 
+was 
+designed with 
+aperture size 
+ratio of 1:8 and back focal length of 800mm± 40mm. ZEMAX was used to analyze and evaluate the optical design and system 
+performance of the dynamic focusing lens and telecentric f-0 lens. The results show that，after layer stitching with the process 
+control software，large-scale (460mm x 310mm x 50mm) 3-D dynamic focusing precision UV laser micromachining system is
+achieved. In 
+3-D scanning range，laser 
+beam 
+spot diameter 
+remains always 
+less 
+than 
+10jjim 
+and 
+meets 
+3-D precision laser micro machining.
+Key words： laser technique； 3-D dynamic focusing； optical design； 3-D micro manufacture
+引言
+激光具备亮度高、亮度高、单色性好、相干性强、方 
+向性好等四大特性，尤其是它的高功率密度和非接触 
+加工特性[1]，使其成为性能极佳的加工光源。激光微 
+加工是激光加工应用中的一个重要方向，应用范围及 
+其广泛，如激光微调、激光精密打标、激光微孔加工、激 
+光柔性布线、激光毛化[2-]。随着激光微加工应用的不
+基金项目：国家自然科学基金资助项目（51175205; 
+51475182)
+作者简介:李东华（1989-),男，硕士研究生，现主要从事 
+光学设计及激光微加工系统的研究。
+* 通讯联系人。E-mail :duans@hust. edu. cn 
+收稿日期:2015-05-07;收到修改稿日期:2015-06-17
+断深入，激光微加工的维度也从2 维上升到3 维，如激 
+光的3 维改性、3 维刻蚀等应用，迫切需求高速的激光 
+3 维微加工技术。
+国外已经从设备到工艺层面开展了激光3 维微加 
+工方面的研究。牛津激光有限公司使用355nm 
+N d : Y A G 激光器在37p m 的单晶硅上加工了通孔和连 
+接通道[5]。塞维利亚大学设计了激光加工系统，使用 
+355n m 波长激光加工出直径2m m 的不锈钢球，并在球 
+体上加工出了微结构[]。德国Scanlab公司、Raylase 
+公司等都研制了用于3 维扫描加工系统的三轴动态聚 
+焦系统。国内对3 维加工方面的也有一定研究[7 9]，但 
+对大尺度3 维微加工的研究还很欠缺。传统的激光大 
+尺寸度3 维微加工技术多采用分层累积，叠加成型的 
+方案，使用机械结构或X -Y 振镜完成2 维层面的扫描
+
+
+第40卷第4 期
+李东华激光大尺度3 维动态聚焦扫描加工系统研究
+467
+86 
+88 
+90 
+92 
+94 
+96
+distance between the 1st and 2nd 
+lens of dynamic lens/mm
+Fig. 3 Relationship of focus shift and distance between the first and second
+lens of dynamic focusing lens
+^ 方向位置。动态聚焦镜的移动一般是使用曲柄连杆 
+将伺服电机的旋转运动转换为直线运动，也可以使用 
+直线电机直接进行驱动。无论哪种方式，均受限于机 
+械结构、运动速度和加速度等因素限制，不能使可动透 
+镜获得较大的移动范围，一般典型的最大移动量为 
+10m m 。如果需要使焦点移动范围更大，则需要光学杠 
+杆机构放大透镜移动引起的焦点移动量。选用光学长 
+度较小的非线性杠杆结构，其原理图2 所示[12]。该结 
+构由两组透镜组成，第1 组为正透镜（透镜1 ，其焦距 
+为Z1，焦点为^ ;第2 组透镜由透镜2 (焦距为/2)和透 
+镜3 (焦距为/3)两片透镜组成，其焦距为/4，焦点为 
+心。其中物距Z〇 = ^ ，透镜2 和透镜3 之间的间距Z =
+0 。当透镜1 移动Z 距离时，根据复合光组的变换公 
+式[13]，可以得到透镜移动量Z 与焦点移动量仏之间 
+的关系如下：
+A 5
+//3(/2
+f 2 2 _ ^((2 - f 3 )
+■Z3
+(1)
+Fig. 2 Schematic diagram of nonlinear optical lever structure
+将系统等效为单透镜，根据高斯光束的透镜变换 
+公式，可得激光通过该系统聚焦变换后的束腰半径^ 
+和束腰位置，分别为：
+, 
+A 
+/1/2/3
+f 2 2 - 2((2 ^ 3 )
+//3((2 — )
+(2)
+(3）
+fl 
+- z/
+2 ^/3)
+式中，A 为入射激光束的波长，W 为入射到透镜1 上的 
+激光光束半径。
+后通过平台或加工头在Z万向移动一定位移，再继续 
+进行2 维扫描，依次累加，最终完成3 维的加工[10_11]。 
+但由于激光焦点的移动是依靠滚珠丝杠等机械传动方 
+式进行，因此惯性大而导致速度慢、加工时间长、精度 
+不够高，限制了进行激光3 维微加工效率和精度。
+本文中提出了使用动态聚焦镜、远心/-(9镜和2 维 
+振镜进行组合，设计高速激光3 维动态聚焦微加工系 
+统，并通与大行程2 维X -Y 直线工作台和z 轴升降机 
+构集成，将激光3 维动态聚焦微加工的尺度扩展到 
+460m m x 310m m x 50m m 范围，实现激光大尺度3 维动 
+态聚焦扫描精加工功能。
+1
+激光大尺度3 维动态聚焦扫描加工系统设计
+本激光大尺度3 维动态聚焦扫描加工系统由 
+355n m 半导体抽运全固态紫外激光器、扩束镜、动态聚 
+焦镜、反射镜、2 维振镜、远心/ - 镜、2 维直线工作台、 
+轴升降机构等组成，系统结构如图1 所示。激光器输 
+出的激光束经扩束镜扩束放大准直后进入动态聚焦镜 
+系统，经过两个45°反射镜导向后进入2 维扫描振镜，
+ 
+再经/ - 远心聚焦镜聚焦于加工工件的表面。工作台 
+是X -Y 2 维直线电机工作台（460m m x 310m m ) ，用于 
+扩大％-方向的加工范围，轴移动机构由伺服电机驱 
+动，可以在z 向做升降运动（± 2 m m ) ，用于扩大z 方 
+向的加工范围。通过2 维工作台和z 轴升降机构实现 
+对扫描路径的拼接，以此克服振镜扫描视场小的不足，
+ 
+使激光3 维动态聚焦扫描加工范围达到460m m x 
+310m m x 50m m 的大尺度。
+dynamic
+Fig. 1 Large scale 3-D laser dynamic scanning manufacturing system
+其中动态聚焦镜可以由计算机控制实时的改变自 
+身的焦距，从而改变激光焦点的高度，配合远心/ - 镜 
+和2 维扫描振镜，完成空间3 维立体扫描加工。动态 
+聚焦镜和远心/ - 镜的设计为本文中的关键。
+1
+1
+动态聚焦镜设计
+动态聚焦镜是在普通聚焦透镜的基础上增加一个 
+沿光轴方向可移动的透镜，获得随时调节所需焦点在
+760
+i
+/
+L
+u
+u
+o
+j
+ 
+SL
+.=
+>IJOA\
+ 
+>p
+cd
+q
+
+
+468
+激 
+光
+技
+术
+2016年7 月
+确定光学杠杆机构以后，可以首先通过第3 个透 
+镜到的后工作距确定/3 = 800m m ，然后选取合适的杠 
+杆比仏八确定仏，从而确定/2=301.7111]11，再根据聚 
+焦半径和第1 片和第2 片透镜的距离要求确定/1 = 
+-200m m 。使用Z E M A X 模拟动态聚焦镜得到如图3 
+所示光学杠杆关系，图3 中横坐标为动态聚焦过程中 
+动态聚焦镜第1 片镜片透镜1 与第2 片镜片透镜2 之 
+间的距离，纵坐标为动态聚焦镜聚焦焦点距其最后一 
+片镜片的距离。
+1 . 2 远心/-6^竟设计
+对于理想的光学系统，其像高y 与视场角0 的正 
+切值成正比[⑷，即：=/' •
+ tan^(/'为有效焦距），与 
+理想光学系统不同，用于物镜前扫描光学系统的聚焦 
+物镜，为获得等速扫描效果，要求像高y 与入射角沒视 
+场角成正比，即y =/' •心因此被称作/-0镜。为使得 
+扫描范围内聚焦光斑能量分布一致且垂直入射与加工 
+平面，就要求视场角范围内的入射光束经/-0镜聚焦 
+后垂直出射，满足这种条件的/-0镜被称作远心/-沒 
+镜。本文中所设计的/-(9镜用于高精度的激光微加 
+工，因此要求其为远心/ - 镜。设计指标如下:工作波 
+长为355n m ，采用像方远心设计，有效焦距/ ' = 
+100m m ，光阑口径^ = 7m m ，光阑距离透镜1 是28m m ，
+ 
+视场角为± 15◦，扫描场50m m x 50m m 。
+选取专利USP 4436383中的4 片式/ - 透镜结构 
+作为系统初始结构[15]。输入Z E M A X ，设定系统要求 
+的参量和限制条件后，在Z E M A X 默认优化评价函数 
+的基础上加入/ - 畸变控制操作数D I S C 和出瞳距控 
+制操作数E X P P ，并设置第4 片镜片的前边面为偶次非 
+球面，进行自动优化。图4 是镜优化设计后远心/—镜 
+的光路示意图。图5 中给出了此远心/ - 镜头聚焦性 
+能评价曲线。激光束在焦平面上的点列图如图5a 所 
+示，图中各视场处的圆代表艾里斑大小，各视场的光线 
+点列图均能基本保持在爱里斑（实线圆）范围以内，
+ 
+0°，5〇，10°视场均能达到衍射极限，15°视场接近达到 
+衍射极限，表明系统聚焦效果较好，具有接近衍射极限 
+的聚焦特性。图5b 是系统的场曲和畸变特性曲线，镜 
+头场曲和像散较小，镜头的相对畸变值不超过0. 5 % ，
+ 
+满足/ - 镜设计要求。图5c 为/ - 透镜能量集中度曲 
+线，其中^点表示接近是8 % 的入射能量能够集中在
+Fig. 5 Evaluation of focusing performances of teleentric f-d lens 
+a— spot diagram b—field curvature and distortion relative to /— linearity 
+c— encricled energy d— relative illumination
+半径为5.4p m 的艾里斑范围内。图5d 透镜聚焦光束 
+在工件表面的相对福照度曲线，整个工作面内的能量 
+均勻性超过9 0 % 。综合各像质评价标准，该远心/— 
+镜设计较为理想。
+2
+系统动态聚焦焦点浮动特性
+将第1 节中设计的动态聚焦镜和远心/—镜输入 
+Z E M A X ，设置二者合适的间距，可以得到如图6 所示 
+的后工作距(焦平面与/—镜出射面的距离）随动态聚 
+焦镜透镜1 和透镜2 之间距离的变化关系。从图中可 
+以看出，二者变化关系接近线性变化。此时动态聚焦 
+范围约为±3. 5m m 。图6 中横坐标为动态聚焦镜透镜 
+1 与透镜2 之间的距离，纵坐标为激光焦点距远心/— 
+镜的距离。
+
+
+第40卷第4 期
+李东华激光大尺度3 维动态聚焦扫描加工系统研究
+469
+84 
+86 
+88 
+90 
+92 
+94 
+96
+distance between the 1st and 2nd 
+lens of dynamic lens/mm
+Fig. 7 Focused laser spots changing with the position oif-6 lens of dynamic 
+focusing system on 2-axis
+3 3 维扫描验证实验
+本文中完成了激光大尺度3 维动态聚焦扫描系统 
+的设计、集成工作，为本系统设计了准3 维动态聚焦扫 
+描和联动3 维动态聚焦扫描两种扫描加工方式对动态 
+聚焦性能进行验证。其中，准3 维动态聚焦扫描方式 
+适用于扫描台阶式的工件或倾斜面上特定的扫描路
+Fig. 6 Relationship of back working length and dynamic focusing lens
+由于本动态聚焦扫描加工系统设计是将动态聚焦 
+镜放置于固定的位置，而振镜和远心/ - 场镜可随^轴 
+升降机构的移动来增加动态调焦范围，因此动态聚焦 
+镜与远心/ - 镜之间的距离是可变的，这种距离的变 
+化会给动态聚焦设计带来误差，为了解该误差对动态 
+聚焦设计带来的影响，本文中通过Z E M A X 软件模拟 
+研究了远心/ - 场镜分别位于z 轴不同位置处时的动 
+态聚焦焦点浮动特性。设定z 轴零点位于z 轴可移动 
+范围中部，图7 中给出了振镜和远心/—场镜分别位于 
+之轴的 _ 20m m ，- 15m m ，- 5m m ，5m m ，15m m ，20m m 处 
+时，远心/—镜后工作距随动态聚焦镜透镜1 和透镜2 
+之间距离的变化关系。计算结果表明，远心/ - 场镜 
+在^轴不同位置处，动态聚焦变化斜率略有差异，但在 
+动态聚焦调节范围内基本上呈线性关系，因此，通过控 
+制软件设计使得远心/ - 场镜在z 轴不同位置处采用 
+不同的动态聚焦变化斜率，即可消除误差，确保在大尺 
+度动态调焦范围内激光焦点始终位于待加工工件的设 
+定焦平面处。
+径。图8 中展示了以准3 维动态聚焦扫描方式扫描刻 
+蚀斜面上激光相纸的结果。刻蚀图形为10m m (宽）X 
+20m m (长）的直线填充矩形，填充间距为0. 1m m ，激光 
+焦点在2 方向浮动范围6. 8m m ，扫描速率为400m m /s，
+ 
+跳转速率为l〇〇0m m / s ，激光频率为100kHz。本次刻 
+蚀耗时仅为8. 9s，同样的图形使用z 轴伺服电机升降 
+振镜的准3 维方式扫描，刻蚀时间长达34. 4s 之久。 
+因此，动态聚焦扫描方式大大提高了 3 维扫描加工的 
+效率。且在准3 维动态聚焦扫描过程中，刻蚀线条的 
+宽度差别仅有2p m ，小于激光焦深范围内光斑大小 
+± 5 % 的变化，表明该准3 维动态聚焦扫描方式工作良 
+好，激光焦点能够始终保持在刻蚀表面。
+100|Lim
+Fig. 8 Inclined photopaper etached by means of quasi 3-D dynamic fcu- 
+sing-scanningmode
+a— picture of etching pattern b— micrograph of the top etching pat­
+tern c— micrograph of the bottom etching pattern
+联动3 维动态聚焦扫描方式则适用于复杂曲面上 
+的图形扫描。本文中在圆柱面上刻蚀了同心圆来验证 
+该扫描方式的性能。图9 中展示了以该方式刻蚀圆柱 
+面上的激光相纸的结果。圆柱面直径为1. 5m m ，刻 
+蚀同心圆最大直径为10m m ，扫描速率为200m m /s。 
+其中图9a 为刻蚀的宏观照片；图9b 为圆柱上激光刻 
+蚀线最低点处的显微照片；图9c 为圆柱面上的最高点 
+处的激光刻蚀线的显微照片。图9 中刻蚀线条清晰，
+ 
+说明动态聚焦刻蚀过程中，焦点较好地保持在圆柱面 
+上，仅由于激光与表面法线夹角变大导致低点处的刻 
+线变宽，刻蚀深度变浅。此刻蚀结果表明，联动3 维动
+2
+ 
+0
+ 
+8
+ 
+6
+ 
+4
+ 
+2
+ 
+0
+1
+ 
+1
+ 
+o
+ 
+o
+ 
+o
+ 
+o
+'
+ 
+0
+ms/lpscq
+5fl
+ul3IJ0M
+ 
+d
+Q
+B
+q
+
+
+470
+激 
+光
+技
+术
+2016年7 月
+84 
+86 
+88 
+90 
+92 
+94 
+96
+distance between the 1st and 2nd 
+lens of dynamic lens/mm
+Fig. 11 Verification of laser focus as/-^? lens at different 2 positions
+设计了如下实验来龙去脉验证本系统在较大Z 向 
+范围内的扫描刻蚀特性。分别将z 轴置于-20m m ，
+ 
+-5m m ，5m m 和20m m 处，再将放有黑色相纸的手动升 
+降平台升降到任意处于动态聚焦镜调节范围内任意位 
+置，通过位移传感器测得加工平面与振镜的相对距离，
+ 
+再依据图1 所示动态聚焦随z 轴位置的变化规律，调 
+节动态聚焦镜透镜1 和透镜2 之间对应的间距，此时 
+开启激光和振镜刻蚀平台上的黑色相纸，所有激光刻 
+蚀线条轮廓清晰（说明相纸位于焦点上）且激光刻蚀 
+宽度差别很小(说明动态聚焦的大尺度调焦工作性能 
+良好）。z 轴的每个位置分别刻蚀不同高度上的两个 
+同心正方形，刻蚀过程中，动态聚焦镜依据图7 中给出 
+的规律对激光焦点进行动态调节。图1 所示分别为z 
+轴位于- 20m m ，- 5m m ，5m m ，20m m 处使用动态聚焦 
+镜按照上述实验设计进行刻蚀的显微照片。刻蚀使用 
+参量如下:激光频率为100kHz，激光功率为1W ，扫描 
+速率为500m m /s。图中刻蚀线条的线宽相差很小，在 
+2|jLm以内，说明动态聚焦效果较好，也就间接说明本 
+系统不但动态聚焦功能良好，且能够实现z 方向上的 
+分层拼接加工。从而实现z 方向大范围的动态聚焦扫 
+描加工。
+降台上，可以手动调节其高度，使得加工工件表面位于 
+远心/ - 镜的焦平面上，利用位移传感器测量焦平面 
+距远心/ - 镜的距离(后工作距）。通过z 轴分别移动 
+/—镜到 _ 20m m ，-15m m ，- 5 m m ，5m m ，15m m ，20m m 
+处，调节动态聚焦镜透镜1 和透镜2 之间的间距，测量 
+此时的远心/ - 镜的后工作距，获得远心/ - 镜后工作 
+距随动态聚焦镜透镜1 和透镜2 之间距离的变化关 
+系。测试结果如图1 所示。该实验结果显示的规律 
+与图7 所示模拟计算结果较为一致，即远心/ - 场镜在 
+z 轴不同位置处，动态聚焦变化斜率略有差异，但在动 
+态聚焦调节范围内基本上呈线性关系，通过控制软件 
+扫描时根据远心/ - 场镜在z 轴不同位置处采用不同 
+的动态聚焦变化斜率，即可确保在大尺度动态调焦范 
+围内激光焦点始终位于待加工工件的设定焦平面处。
+Fig. 9 
+Cylindral photopaper etached by means of 3-D dynamic focusing- 
+scanning mode
+a— picture of etching pattern 
+b— micrograph of the top etching 
+pattern c— micrograph of the bottom etching pattern
+态聚焦方式工作良好，可以实现复杂曲面上的3 维联 
+动扫描。
+本扫描加工系统致力于达到较大尺度上的高精度 
+快速加工，但振镜扫描系统由于远心/ - 镜视场大小 
+的限制，只能达到50m m X 50m m 的扫描范围，动态聚 
+集镜搭配远心/ - 镜工作时，动态范围也仅有 
+± 3 .5m m ，因此本文中设计了利用高精度X -Y 2 维直 
+线工作台对％-平面的扫描范围进行拼接，利用z 轴升 
+降机构对z 方向动态范围进行拼接，使系统达到了 
+460m m X 310m m X 50m m 的3 维扫描加工范围。
+因X-Y 2 维平台％和y 方向的拼接技术已经成 
+熟，本文中主要验证z 方向拼接时动态聚焦系统的工作 
+情况。首先验证远心/ - 镜位于z 轴不同位置时的动态 
+聚焦的焦点浮动规律是否符合图7 所示计算规律。检 
+测装置示意图如图1 所示，图1
+中工件置于手动升
+lalu/lpgsisuajf
+ 
+d
+ 
+J
+
+
+第40卷第4 期
+李东华激光大尺度3 维动态聚焦扫描加工系统研究
+471
+Fig. 12 Photopaper etached at different 2 positions in the focal plane adjust­
+ed by dynamic focusing lens
+a—
+-20mm b—
+-5mm c—z=5mm d— 2 = 20mm
+在进行大尺度扫描加工时，通过工艺控制软件对 
+工件加工区域进行区域分割和高度分层扫描，就能够 
+实现大尺度的激光扫描加工，同时保证扫描刻蚀的精 
+度和效率。本系统设备的实物如图1 所示。
+Fig. 13 Large scale 3-D laser dynamic scanning manufacturing equipment
+4
+结论
+根据大尺度高效激光3 维微加工的需求，本文中
+设计并研制了激光大尺度3 维动态聚焦加工系统，对 
+系统关键光学组件动态聚焦镜和远心镜进行了光 
+学设计，实现了 460m m x 310m m x 50m m 的大尺度3 
+维动态聚焦的高精度紫外激光微加工功能。提出两种 
+扫描加工方式，并分别通过实验对系统的动态聚焦扫 
+描功能进行了实验验证，证明达到了系统设计的需求，
+ 
+大大提高了激光3 维微加工的加工效率，实现了传统 
+准3 维微加工系统所不能实现的复杂曲面上进行轮廓 
+扫描的功能，并扩大了紫外激光3 维微加工的尺寸。
+参
+考
+文
+献
+[1] WEN Z H. Study of 3-D) microstructure fabrication system based on 
+laser-induced thermoplastic formation [D]. Hangzhou： Zhejiang Uni­
+versity, 2010：9-10(in Chinese).
+[2] DUAN J. Present and future development of laser micro-processing on 
+disk substrate—laser texture [ J ]. Laser Technology, 2006，30(5 )：
+ 
+490-93 ( in Chinese).
+[3 ] GUO S Y, CHEN T, LIU S B. Study on a method of improving the 
+quality of exciner laser drilling [ J ]. Laser Technology，2206，30
+(6) ：625-627(in Chinese).
+[4] GUAN B G, LIUS H, ZHANG M L, et al. Application and develop­
+ment tendency of precision laser maching [ J ]. Laser & Infrared，
+ 
+2010, 40(3) ：229-232(in Chinese).
+[5 ] YANG X. A study on UV laser micro-machining single-crystal silicon 
+[ D ]. Wuhan： Huazhong University of Science and Technology，
+ 
+2011 :2-3 (in Chinese).
+[6] MOLPECERES C，LAUZURICAS，GARCIA-BALLESTEROS J J，et 
+al. Advanced 3-D) micromachining techniques using UV laser sources 
+[J]. Microelectronic Engineering，2007，84(5/8) ：1337-1340.
+[7] WEN S F，SHI Y S ，XIEJ，et al. Study on key technology for 3-D)
+galvanometric scanners[ J]. Laser Technology，2209，33 (4):377- 
+380(in Chinese).
+[8] ZHANGW X，SHI Y S，JIAH P. Dynamic focus technology for laser 
+galvanometer scanning of a selective laser melting system [ J ]. Applied 
+Laser, 2008, 28(2) ：99-102(in Chinese).
+[9] XU B Zh，LIU T G，WANG M，et al. Research on laser marking 
+technology for free-form surface [ J ]. Chinese Journal of Lasers, 2010，
+ 
+37(8) ：2165-2169(in Chinese).
+[10] WANG C，ZENGX Y. Experimental study about 3-D laser carving 
+of Al2O3 ceramic [ J]. Laser Technology，2007，31(1 )： 18-21 ( in 
+Chinese) .
+[11 ] ZHANG F. Study on UV laser microprocessing technology and mech­
+anism for electronic materials [ D]. Wuhan： Huazhong University of 
+Science and Technology，2012:20-22(in Chinese).
+[12] WANGRM，LU B H. Analysis of several dynamic focus systems for 
+laser scanning [ J]. Applied Laser，1998，18(1 )： 10-12 ( in Chi­
+nese) .
+[13] ZHANG Y M. Applied optics [M ]. 3rd ed. Beijing： Publishing 
+House of Electronics Industry, 2008 ： 43-50 ( in Chinese).
+[14] JI Y Q, LI H J, SHEN W M. Optical design of large working area 
+F-Theta lens [ J]. Acta Optica Sinica，2007，27(1) ：73-76 ( in Chi­
+nese) .
+[15] MAEDA H. F-theta lens system：US 4436383 [ P ]. 1984-03-13.

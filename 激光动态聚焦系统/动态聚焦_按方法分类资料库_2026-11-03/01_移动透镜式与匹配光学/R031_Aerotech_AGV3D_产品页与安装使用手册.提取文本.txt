@@ -1,0 +1,1534 @@
+Revision2.01
+AGV3D Three-Axis Laser Scan Head
+HARDWARE MANUAL
+
+GLOBAL TECHNICAL SUPPORT
+Gotothe GlobalTechnicalSupportPortal forinformationandsupportaboutyour
+Aerotech,Inc.products.Thewebsitesuppliessoftware,productmanuals,Helpfiles,
+trainingschedules,andPC-to-PCremotetechnicalsupport.Ifnecessary,youcan
+completeProductReturn(RMA)formsandgetinformationaboutrepairsandspare
+orreplacementparts.Togethelpimmediately,contactaserviceofficeoryoursales
+representative.Includeyourcustomerordernumberinyouremailorhaveit
+availablebeforeyoucall.
+Thismanualcontainsproprietaryinformationandmaynotbereproduced,
+disclosed,orusedinwholeorinpartwithouttheexpresswrittenpermissionof
+Aerotech,Inc.Productnamesmentionedhereinareusedforidentificationpurposes
+onlyandmaybetrademarksoftheirrespectivecompanies.
+Copyright©2020-2021,Aerotech,Inc.,Allrightsreserved.
+
+TableofContents
+AGV3D Three-Axis Laser Scan Head 1
+TableofContents 3
+ListofFigures 4
+ListofTables 5
+SafetyProceduresandWarnings 7
+LaserSafety 9
+ClassesofLasers 9
+LaserArea 10
+LaserShutter 11
+EUDeclarationofIncorporation 13
+Chapter 1: Overview 15
+1.1.EnvironmentalSpecifications 18
+1.2.AccuracyandTemperatureEffects 18
+1.2.1.Power-OnThermalDrift 18
+1.3.BasicSpecifications 19
+1.4.SoftwareConfiguration 26
+Chapter 2: Mechanical Specifications and Installation 27
+2.1.UnpackingandHandlingtheScan Head 28
+2.2.Dimensions 29
+2.3.RemovetheShippingClamp 31
+2.4.SecuringtheScanHeadtotheMountingSurface 33
+2.5.LaserBeamAlignment 35
+2.6.AirRequirements 38
+2.7.WaterRequirements 39
+2.8.ChangingtheDynamicFocusingField-of-ViewSetting 40
+2.9.UsinganF-ThetaLens 42
+Chapter 3: Electrical Specifications and Installation 43
+3.1.MotorandFeedbackConnectors 44
+3.2.MotorandFeedbackWiring 47
+3.3.MotorandFeedbackSpecifications 50
+Chapter 4: Maintenance 51
+4.1.ServiceandInspectionSchedule 51
+4.2.CleaningandInspection 52
+4.2.1.ProtectiveWindows 52
+4.2.2.TurningMirrors 53
+4.3.Troubleshooting 54
+Appendix A: Warranty and Field Service 55
+Appendix B: Revision History 57
+Index 59
+AGV3DHardwareManual TableofContents
+www.aerotech.com 3
+
+ListofFigures
+Figure1-1: FunctionalPrincipleofa3-AxisGalvanometerScanner 15
+Figure1-2: StandardAGV3D 16
+Figure1-3: WorkingDistanceDetail 23
+Figure1-4: AGV3D-20X/YAxisLinearAccelerationvsWorkingDistance 24
+Figure1-5: AGV3D-30X/YAxisLinearAccelerationvsWorkingDistance 24
+Figure1-6: AGV3DZ-AxisLinearAccelerationvsWorkingDistance 25
+Figure2-1: AGV3D-20ScanHeadDimensions 29
+Figure2-2: AGV3D-30ScanHeadDimensions 30
+Figure2-3: TopCoverRemoval 31
+Figure2-4: ShippingClampDetail 32
+Figure2-5: MountingPointLocations 34
+Figure2-6: AlignmentFixture 35
+Figure2-7: Air-CoolingLocations 38
+Figure2-8: WaterCoolingLocations 39
+Figure2-9: DynamicFocusingModuleMountingScrews 40
+Figure2-10: DynamicFocusingModuleReference 41
+Figure3-1: Connectors 44
+Figure3-2: X-andY-AxisMotorandFeedbackWiring 48
+Figure3-3: Z-AxisMotorandFeedbackWiring 49
+Figure4-1: ExitApertureProtectiveWindowMountingBracket 53
+ListofFigures AGV3DHardwareManual
+4 www.aerotech.com
+
+ListofTables
+Table1-1: OrderingOptions 17
+Table1-2: EnvironmentalSpecifications 18
+Table1-3: AGV3DSeriesSpecifications 19
+Table1-4: AGV3DSeriesSpecifications(continued) 20
+Table1-5: AGV3D-20SpotDiameterRange(µm)withinFieldofViewperWavelength 21
+Table1-6: AGV3D-30SpotDiameterRange(µm)withinFieldofViewperWavelength 22
+Table1-7: FOVExtentsbyFieldConfigurationOptionandWavelength 23
+Table2-1: MountingHardwareSpecifications 34
+Table2-2: MountingSpecifications 34
+Table2-3: RecommendedBeamPowerSettings 36
+Table3-1: MotorandFeedbackConnecterPinouts(XandYAxis) 45
+Table3-2: MatingConnectorPartNumbersfortheMotorandFeedbackConnectors 45
+Table3-3: MotorandFeedbackConnecterPinout(ZAxis) 46
+Table3-4: MatingConnectorPartNumbersfortheMotorandFeedbackConnector 46
+Table3-5: AerotechMotorandFeedbackCablePartNumbers 47
+Table3-6: AGV3D-20MotorandFeedbackSpecifications 50
+Table3-7: AGV3D-30MotorandFeedbackSpecifications 50
+Table4-1: Troubleshooting 54
+AGV3DHardwareManual ListofTables
+www.aerotech.com 5
+
+This page intentionally left blank.
+ListofTables AGV3DHardwareManual
+6 www.aerotech.com
+
+SafetyProceduresandWarnings
+IMPORTANT:Thismanualtellsyouhowtocarefullyandcorrectlyuseandoperatethe
+AGV3D.
+l Readallpartsofthismanualbeforeyouinstalloroperatethegalvoorbeforeyoudo
+maintenancetoyoursystem.
+l Topreventinjurytoyouanddamagetotheequipment,obeytheprecautionsinthis
+manual.
+l Allspecificationsandillustrationsareforreferenceonlyandwerecompleteand
+accurateasofthereleaseofthismanual.Tofindthenewestinformationaboutthis
+product,refertowww.aerotech.com.
+Ifyoudonotunderstandtheinformationinthismanual,contactAerotechGlobal
+TechnicalSupport.
+IMPORTANT:Thisproducthasbeendesignedforlightindustrialmanufacturingor
+laboratoryenvironments.Iftheproductisusedinamannernotspecifiedbythe
+manufacturer:
+l Theprotectionprovidedbytheequipmentcouldbeimpaired.
+l Thelifeexpectancyoftheproductcouldbedecreased.
+Safetynotesandsymbolsareplacedthroughoutthismanualtowarnyouofthepotentialrisksatthe
+momentofthesafetynoteorifyoufailtoobeythesafetynote.
+Thevoltagecancauseshock,burn,ordeath.
+Youareatriskofphysicalinjury.
+Youcoulddamagethegalvo.
+Asurfacecanbehotenoughtoburnyou.
+Youractions,thetemperatureofthesystem,ortheconditionoftheatmosphere
+thatsurroundthesystemcouldstartafire.
+Youareatriskofphysicalinjurybecauseofexposuretolasers.
+Youareatriskofphysicalinjurybecauseofexposuretohighpressureinthe
+system.
+Unsecuredcablescouldcauseyouto:
+l tripandfall
+l dragtheproductoffofitsmountinglocation
+l damagethecableconnections.
+Abluecirclesymbolisanactionortipthatyoushouldobey.Someexamples
+include: 
+l Generaltip
+l Readthemanual/section
+l Wearprotectivesafetyequipment(eyeprotection,earprotection,gloves)
+AGV3DHardwareManual SafetyProceduresandWarnings
+www.aerotech.com 7
+
+DANGER:Todecreasetheriskofelectricalshock,injury,death,anddamagetothe
+equipment,obeytheprecautionsthatfollow.
+l Electricalinstallationmustbedonebyqualifiedpersonnel.
+l Beforeyoudomaintenancetotheequipment,disconnecttheelectricalpower.
+l Beforeyouconnectwirestothisproduct,disconnecttheelectricalpower.
+l Donotconnectordisconnectelectricalcomponents,wires,andcableswhilethis
+productisconnectedtoapowersource.
+l Restrictaccesstothegalvowhenitisconnectedtoapowersource.
+l Makesurethatallcomponentsaregroundedcorrectlyandthattheyobeythelocal
+electricalsafetyrequirements.
+l Supplyeachoperatorwiththenecessaryprotectionfromliveelectricalcircuits.
+l Installthenecessaryprecautionstosupplysafetyandprotectiontotheoperator.
+l Itistheresponsibiltyofthesystemintegratororqualifiedinstallertodetermineand
+meetallsafetyandcompliancerequirementswhentheyintegratetheAGV3Dintoa
+completedsystem.
+IMPORTANT:TheprotectivegroundconnectionoftheAGV3Dprovidesmotorframe
+groundprotectiononly.Additionalgroundandsafetyprecautionsarerequiredfor
+applicationsthatrequireaccesstotheAGV3Dwhileitisenergized.
+DANGER:Useofthisproductincreasestheriskofexposuretovisibleand/orinvisible
+laserradiation.
+l Donotstareintothelaserbeam,putyourbodypartsinthelaserarea,orexpose
+yourselftoreflectionsfrompowerfulbeams.
+l Wearcertifiedlasersafetyeyeprotection.
+l Avoideyeorskinexposuretodirectorscatteredradiation.
+DANGER:Highpressureaircancausesevereinjury.
+l Lockoutthesourceandbleedoffthepressurebeforeyoudoservicetotheequip-
+ment.
+l Weareyeprotection.
+l Wearearprotection.
+WARNING:Topreventdamagetotheequipmentanddecreasetheriskofelectrical
+shockandinjury,obeytheprecautionsthatfollow.
+l Onlytrainedoperatorsshouldoperatethisequipment.
+l Usethisproductonlyinenvironmentsandoperatingconditionsthatareapprovedin
+thismanual.
+l Makesurethattheproductissecurelymountedbeforeyouoperateit.
+l Allserviceandmaintenancemustbedonebyapprovedpersonnel.
+l Keepthescanheadfreeofforeignmatterandmoisturetopreventareductioninits
+performanceandlifeexpectancy.
+WARNING:Securelymountandpositionallsystemcables.
+SafetyProceduresandWarnings AGV3DHardwareManual
+8 www.aerotech.com
+
+IMPORTANT:Carefullylift,move,andtransportthisproduct.
+IMPORTANT:Fingerprintscontainaggressivesubstancesthatcandamageoptical
+surfaces.Wearclean,powder-freegloveswhenyouhandleopticalcomponents.
+LaserSafety
+Itistheresponsibilityoftheusertoprovidethenecessaryconditionsforsafeoperationofalaser
+systemandtosafeguardtheworkareaagainstthedangersthatcanbecausedbylaserradiation.
+Theusermustensurecompliancewithalllocalandnationalregulations.
+Althoughthescanheadbyitselfdoesnotemitlaserradiation,theusermustundertakeathorough
+analysisofsystemsafetybeforetheyoperatetheAGV3Dinconjunctionwithalasersource.
+Importantinformationforperformingthisanalysisispresentedinthismanual.Lookforadditional
+informationinthecorrespondingdocumentationsuppliedbythemanufacturer(s)ofthelaser
+sourceandothersystemcomponents.
+ClassesofLasers
+TheAGV3Dseriesscanheadcanbeusedwithavarietyoflasers.Eachlaserisassignedaparticular
+hazardlevel,whichisindicatedbytheLaserClasslabelthatisaffixedtothedevicenearthelocation
+wherelaserradiationisemitted.Briefdescriptionsofeachofthevariousradiationclassesare
+presentedinthetablebelow.
+Notethatinadditiontothedangersofradiation,laserscanposefurtherdangers,suchastheriskof
+electricalshockorthegenerationofpoisonousfumes.
+Classifications of Laser Devices
+Class Danger
+ClassI Inherentlysafe;nopossibilityofeyedamageduringnormaloperation.
+ClassIIa Requiresinexcessof1000secondsofcontinuousviewingtocauseeye
+damage.
+ClassII Theblinkreflexwillpreventeyedamage,unlessthepersondeliberately
+staresintothebeamforanextendedperiodoftime.
+ClassIIIa
+Mostlydangerousincombinationwithopticalinstrumentswhich
+changethebeamdiameterorpowerdensity.However,evenwithout
+opticalenhancement,directcontactforovertwominutescouldcause
+eyedamage.
+ClassIIIb Directexposuresof0.01secondorlesscouldcauseeyeandskin
+damage.
+ClassIV Directorscatteredradiationwithoutopticalenhancementcouldcause
+eyeandskindamage.
+AGV3DHardwareManual LaserSafety
+www.aerotech.com 9
+
+LaserArea
+Theareainwhichthemaximumpermittedradiationvaluecanbeexceededisdefinedasthelaser
+area.Ingeneral,alaserareaisapplicabletoClassIIIa,IIIbandIVlasersystems.Alaserareacanalso
+beproducedifyoufocusthebeamofaClassI,IIa,orIIlaserdevice.
+TheAGV3Dcanaimthelaserbeamoveranapproximatelypyramidalvolume.Whenthescanheadis
+usedinconjunctionwithalaserdevicethatcangenerateasufficientlyintensebeam,alaserareawill
+beproducedthatincludestheaimingvolumeaswellasthereflectionsfromallobjectsthatcanbe
+exposedtotheradiation.Itisimportanttonotethatevenapparentlydiffusesurfacescanreflect
+laserradiationandalaserbeamthathasbeenreflectedseveraltimescanstillbedangerous.
+Thelaserareamustbedesignatedbysuitablewarningsignsorlampsandprotectedbyappropriate
+shadingandinterlockswitches.
+Figure 1: Laser Area of an AGV3D Scan Head
+LaserArea AGV3DHardwareManual
+10 www.aerotech.com
+
+LaserShutter
+Alaserattenuator(beamshutter)isamechanicalorelectricaldevicethatblockstheemissionof
+laserradiation.Itisarequirementformostclassesoflasersystems.Theattenuatormustbe
+availableforuseatalltimeswhenthelasersystemisoperated.Powerswitchesandkeycontrolsdo
+notsatisfytheattenuatorrequirement.
+TheAGV3Dscanheaddoesnotincludealaserattenuator,andthereforeitcannotblockorweaken
+thelaserbeam.Duetotheuniquepropertiesofeachlaser,itistheresponsibilityoftheuserto
+incorporateanappropriateshutterasperanyandallapplicableregulationsinordertoprevent
+unwantedemissionofthelaserbeam.
+Placethebeamshutterbetweenthelasersourceandthescanhead(referto Figure1).
+DANGER:Thedangertoyoureyesincreaseswhenopticalinstrumentsareusedin
+conjunctionwiththescanhead.
+l Wearcertifiedlasersafetyeyeprotection.
+l Donotstareintothelaserbeam,putyourbodypartsinthelaserarea,orexpose
+yourselftoreflectionsfrompowerfulbeams.
+WARNING:AerotechrecommendsthatyouonlyuseaClass1HeNelasertodo
+alignments.IfaClass1HeNelaserisnotavailable,usethelowestpowersettingonthe
+availablelaserandremotebeamsensingtechniques.
+AGV3DHardwareManual LaserShutter
+www.aerotech.com 11
+
+This page intentionally left blank.
+LaserShutter AGV3DHardwareManual
+12 www.aerotech.com
+
+EUDeclarationofIncorporation
+Manufacturer: Aerotech,Inc.
+101ZetaDrive
+Pittsburgh,PA15238-2811
+USA
+herewith declares that the product:
+AGV3DScanHead
+is intended to be incorporated into machinery to constitute machinery covered by the Directive 2006/42/EC
+as amended;
+and that the following harmonized European standards have been applied:
+ENISO12100:2010
+Safetyofmachinery-Basicconcepts,generalprinciplesfordesign
+EN60204-1:2010
+Safetyofmachinery-Electricalequipmentofmachines-Part1: General
+requirements
+and further more declares that
+it is not allowed to put the equipment into service until the machinery into which it is to
+be incorporated or of which it is to be a component has been found and declared to
+be in conformity with the provisions of the Directive 2006/42/EC and with national
+implementing legislation, for example, as a whole, including the equipment referred
+to in this Declaration.
+This is to certify that the aforementioned product is in accordance with the applicable requirements of the
+following directive(s):
+2011/65/EU RoHS2Directive
+EU2015/863 AmendmentRoHS3Directive
+Authorized
+Representative
+ /SimonSmith,EuropeanDirector
+AerotechLtd
+TheOldBrickKiln,Ramsdell,Tadley
+HampshireRG265PR
+UK
+Engineer Verifying
+Compliance
+ /AlexWeibel
+Aerotech,Inc.
+101ZetaDrive
+Pittsburgh,PA15238-2811
+USA
+Date 12/22/2021
+AGV3DHardwareManual EUDeclarationofIncorporation
+www.aerotech.com 13
+
+This page intentionally left blank.
+EUDeclarationofIncorporation AGV3DHardwareManual
+14 www.aerotech.com
+
+Chapter1:Overview
+Aerotech’sAGV3Dthree-axislaserscanheadmanipulatesalaserbeaminthreedegreesoffreedom: 
+X,Y,andZ.TheAGV3Dusestwomirrors,eachofwhichisactuatedbyagalvanomotor,todeflectthe
+beamintheXandYdirections.BeforetheXandYdeflections,thelaserbeamtravelsthroughthe
+DynamicFocusingModule(DFM).TheDFMusesanexpanderlensthatismountedonahigh-
+dynamiclinearstageandstationaryopticstoadjustthefocusthelaserbeam.Changethedistance
+betweentheexpanderlensandtheopticstoadjustthefocalheight(Z-heightofthefocusedspot).
+Usethisinfield-flatteningapplicationstoeliminatetheneedforexpensivefocusingopticssuchasan
+F-thetalens,orinapplicationsthatrequiredifferentworkingheightsindifferentstagesofthe
+process.TheDFMintheAGV3Dcanalsobeusedtocollimatetheincominglaserbeamtofunctionas
+abeamexpandertoincreasetheincomingbeamdiameterto2.5Xtheoriginalsize.
+Thescanheadenclosureisfullysealed,featuringcoverglassandgasketsoverboththeinputand
+exitapertures,tomakesurethatnodustorparticlescaninfiltratetheenclosureandcausedamage
+totheinternalopticalcomponents.Onlyusealaserthatmeetsthelaserspecificationsthatarelisted
+inSection1.3.BasicSpecifications fordetails.
+Figure 1-1: Functional Principle of a 3-Axis Galvanometer Scanner
+Integration Flexibility
+TheAGV3Doffersmountingflexibility,withmountingholepatternsontheside,rear,andbottom
+faces.Thecontrolconnectionsconsistoftwo300mmcablesterminatedin25-pinD-styleconnectors
+fortheXandYaxes,andanadditional25-pinD-styleconnectorlocatedonthetopfaceofthe
+enclosurefortheZaxis.Thecablescanbeorientedinanydirectionandterminatedonthemachine
+tomakesurethatthereisnointerferencewithbeamdeliveryfromthecontrolcables.
+AbeamalignmentfixtureisincludedwiththeAGV3D.Boltthefixturetothefrontfaceofthe
+enclosuretohelpaligntheinputlaserbeamtothesystem(referto Section2.5.).
+AGV3DHardwareManual Chapter1:Overview
+www.aerotech.com 15
+
+Figure 1-2: Standard AGV3D
+Chapter1:Overview AGV3DHardwareManual
+16 www.aerotech.com
+
+Table 1-1: Ordering Options
+AGV3D Series High Performance Galvanometer Scanner
+Wavelength (Required)
+-W001 10.6µm
+-W003 1552nm
+-W004 1064nm
+-W005 1030nm
+-W006 532nm
+-W007 515nm
+-W008 355nm
+-W009 343nm
+-W012 9.3µm
+NOTE:Customwavelengthsareavailable.Contactthefactoryfordetails.
+Scanner Aperture (Required)
+-20 20mmScannerAperture
+-30 30mmScannerAperture
+Field Configuration (Required)
+-F1 NearFieldofView
+-F2 FarFieldofView
+Air Cooling (Optional, refer to Section 2.6.)
+-AC Aircooling
+Water Cooling (Optional, refer to Section 2.7.)
+-WC Watercooling
+Plate (Optional)
+-MP1 RearMountingPlate
+-MP2 BottomMountingPlate
+Integration (Required)
+-TAS
+Integration-Testassystem
+Testing,integration,anddocumentationofagroupofcomponentsasacomplete
+systemthatwillbeusedtogether(ex:drive,controller,andstage).Thisincludes
+parameterfilegeneration,systemtuning,anddocumentationofthesystem
+configuration.
+-TAC
+Integration-Testascomponents
+Testingandintegrationofindividualitemsasdiscretecomponentsthatshiptogether.
+Thisistypicallyusedforspareparts,replacementparts,oritemsthatwillnotbeused
+together.Thesecomponentsmayormaynotbepartofalargersystem.
+AGV3DHardwareManual Chapter1:Overview
+www.aerotech.com 17
+
+1.1.EnvironmentalSpecifications
+WARNING:Usethisproductonlyinenvironmentsandoperatingconditionsthatare
+approvedinthismanual.
+Table 1-2: Environmental Specifications
+Ambient
+Temperature
+Theoptimaloperatingtemperatureis20°C±2°C(68°F±4°F).Ifatanytimethe
+operatingtemperaturedeviatesfrom20°Cdegradationinperformancecould
+occur.
+Storage:0°to40°C(32°to104°F)inoriginalshippingpackaging
+Humidity
+Operating:20%to60%RH
+Storage:10%to70%RH,non-condensinginoriginalpackaging.Thestageshould
+bepackagedwithdesiccantifitistobestoredforanextendedtime.
+Altitude
+Operating:0mto2,000m(0ftto6,562ft)abovesealevel
+ContactAerotechifyourspecificapplicationinvolvesuseabove2,000morbelow
+sealevel.
+Vibration
+Usethesysteminalowvibrationenvironment.Excessivefloororacoustical
+vibrationcanaffectsystemperformance.ContactAerotechforinformation
+regardingyourspecificapplication.
+Protection
+Rating
+TheAGV3Disgasketedatcriticalinterfacestoprovidesomeprotectionfrom
+contaminationduetolasermarkingandcutting.Dustandfumesgeneratedby
+thelasermachiningprocessshouldberemovedthroughexhaustorvacuum
+systems.Failuretocontrolthisdebriscouldresultinrapidcontaminationofthe
+coverglassanddamagetobeamdeliveryopticalcomponents.
+Use Indooruseonly
+1.2.AccuracyandTemperatureEffects
+Aerotechproductsaredesignedforandbuiltina20°C(68°F)environment.Extremetemperature
+changescouldcauseadecreaseinperformanceorpermanentdamagetotheAGV3D.Ata
+minimum,theenvironmentaltemperaturemustbecontrolledtowithin0.25ºCper24hoursto
+ensuretheAGV3Dspecificationsarerepeatableoveranextendedperiodoftime.Theseverityof
+temperatureeffectsonallspecificationsdependsonmanydifferentenvironmentalconditions,
+includinghowtheAGV3Dismounted.Contactthefactoryformoredetails.
+1.2.1.Power-OnThermalDrift
+Forthebestpossibleaccuracyandrepeatability,itisrecommendedthatthe+5Vfeedbackpower
+supplybeconnectedtothegalvanomotorsforaminimumoffourhourspriortoperformingany
+criticaloperationswiththeAGV3D.Applicationofthefeedbackpowersupplycanraisethe
+temperatureofthegalvanomotors,resultinginatransientperiodof"power-on"thermaldrift.
+Allowanceforthiswarm-upperiodprovidesthegalvanomotorssufficienttimetoachievethermal
+equilibrium.
+Inapplicationswhereamark-and-measurecalibrationisperformedtoimproveaccuracy,itis
+essentialthatthecalibrationprocedurenotbeconductedpriortocompletionofthewarm-up
+period.Otherwise,thecalibrationmaynotbeeffectiveduetothechangeinzerooffsetthatcan
+resultfromthe"power-on"thermaldrift.
+TominimizedelaysinoperatingtheAGV3D,itisrecommendedthatthe+5Vfeedbackpowersupply
+iscontinuouslymaintainedtothegalvanomotors,evenwhentheyarenotunderservocontrol.
+1.1.EnvironmentalSpecifications AGV3DHardwareManual
+18 www.aerotech.com
+
+1.3.BasicSpecifications
+Table 1-3: AGV3D Series Specifications
+AGV3D-20 AGV3D-30
+Optical Specifications
+CompatibleWavelength (1) 343nm,355nm,515nm,532nm,1030nm,1064nm,
+1550nm,9.3µm,10.6µm
+Aperture 20mm 30mm
+InputBeamDiameter(1/e 2) 8mm 12mm
+BeamDisplacement 23.2mm 35.7mm
+Dynamic Performance
+TrackingError 0µsec
+PeakAcceleration GalvoScanners 500,000rad/s 2 350,000rad/s 2
+Z-Focus (2) 150m/s 2
+ContinuousAcceleration GalvoScanners 130,000rad/s 2 120,000rad/s 2
+Z-Focus (2) 50m/s 2
+MaximumPositioning
+Speed
+GalvoScanners
+300rad/s
+40m/sat100x100mmFOV
+400m/s1000x1000mm
+FOV
+125rad/s
+17m/sat100x100mmFOV
+170m/sat1000x1000mm
+FOV
+Z-Focus
+1000mm/s (2)
+3.8m/sat160mmworkingdistance
+30m/sat500mmworkingdistance
+100m/sat1000mmworkingdistance
+ProcessingSpeed (3)
+GalvoScanners
+50rad/s
+at100x100mmFOV:6.5m/s
+at1000x1000mmFOV:65m/s
+Z-Focus
+500mm/s (2)
+1.9m/sat160mmworkingdistance
+15m/sat500mmworkingdistance
+50m/sat1000mmworkingdistance
+Stability
+Long-TermDrift (4) GalvoScanners 10µrad/12h
+Z-Focus 0.5μm/12h
+ThermalDrift GalvoScanners 10µrad/°C
+Z-Focus 2.5μm/°C
+NOTE: Allanglesareopticalunlessotherwisenoted.Allspecificationsareperaxisunlessnoted.
+(1)ContactAerotechtoinquireaboutadditionalwavelengths.
+(2)Asmeasuredatthefocusingapparatus.
+(3)Theprocessingspeedisdependentontheallowabletrackingerror.Itisachievablewith<2%velocityerrorover
+continuousvelocityportionofthemove.
+(4)Afteraninitialfourhourwarm-up,expectanambienttemperaturevariationof<±0.5°.
+(5)Without-ACaircoolingoption.
+(6)Airspecifications: Nitrogenmustbe99.99%pureandfilteredto0.25μm.Compressedairmustbefilteredto0.25μm,
+dryto0ºFdewpointandoilfree.
+(7)Theworkingdistanceismeasuredfromthebottomsurfaceofthescanhead.
+AGV3DHardwareManual 1.3.BasicSpecifications
+www.aerotech.com 19
+
+Table 1-4: AGV3D Series Specifications (continued)
+AGV3D-20 AGV3D-30
+Mechanical Specifications
+Axes 3total:Spotpositioning(X,Y);Focusing(Z)
+Accuracy GalvoScanners 50µradpk-pk
+Z-Focus 0.5µm
+Repeatability GalvoScanners 0.4µradrms
+Z-Focus 0.15µm
+Dither(Minimum
+IncrementalMotion) (5)
+GalvoScanners <0.4µradrms
+Z-Focus
+0.003μm (2)
+0.05μmat160mmworkingdistance
+0.25μmat500mmworkingdistance
+0.8μmat1000mmworkingdistance
+Cooling (6) Aircooling(-AC option);
+Watercooling(-WCoption)
+Weight 10.5kg 11.2kg
+Material Anodizedaluminum
+MeanTimeBeforeFailure(MTBF) 20,000hours
+NOTE: Allanglesareopticalunlessotherwisenoted.Allspecificationsareperaxisunlessnoted.
+(1)ContactAerotechtoinquireaboutadditionalwavelengths.
+(2)Asmeasuredatthefocusingapparatus.
+(3)Theprocessingspeedisdependentontheallowabletrackingerror.Itisachievablewith<2%velocityerrorover
+continuousvelocityportionofthemove.
+(4)Afteraninitialfourhourwarm-up,expectanambienttemperaturevariationof<±0.5°.
+(5)Without-ACaircoolingoption.
+(6)Airspecifications: Nitrogenmustbe99.99%pureandfilteredto0.25μm.Compressedairmustbefilteredto0.25μm,
+dryto0ºFdewpointandoilfree.
+(7)Theworkingdistanceismeasuredfromthebottomsurfaceofthescanhead.
+1.3.BasicSpecifications AGV3DHardwareManual
+20 www.aerotech.com
+
+Table 1-5: AGV3D-20 Spot Diameter Range (µm) within Field of View per Wavelength
+Nominal Field of View Nominal Working
+Distance 343 nm 355 nm 515 nm
+100mmx100mm 83mm 7.0-7.5 7.2-7.8 10.3-11.1
+200mmx200mm 221mm 11.7-12.7 12.1-13.2 17.3-18.9
+300mmx300mm 358mm 16.2-17.9 16.8-18.5 24.3-26.8
+400mmx400mm 495mm 20.8-23.0 21.5-23.8 31.2-34.6
+500mmx500mm 632mm 25.3-28.1 26.3-29.2 38.1-42.4
+600mmx600mm 770mm 29.9-33.3 31.0-34.5 45.1-50.2
+700mmx700mm 907mm 34.5-38.4 35.8-39.9 52.1-58.1
+800mmx800mm 1045mm 39.1-43.6 40.5-45.2 59.1-65.9
+1000mmx1000mm 1320mm 48.2-53.9 50.1-55.9 73.1-81.7
+532 nm 1030 nm 1064 nm
+100mmx100mm 83mm 10.6-11.4 20.4-22.0 21.1-22.7
+200mmx200mm 221mm 17.8-19.6 34.1-37.3 35.2-38.5
+300mmx300mm 358mm 25.0-27.6 47.8-52.7 49.3-54.4
+400mmx400mm 495mm 32.2-35.7 61.5-68.1 63.5-70.4
+500mmx500mm 632mm 39.4-43.8 75.2-83.6 77.6-86.3
+600mmx600mm 770mm 46.6-51.9 88.9-99.0 91.8-102.3
+700mmx700mm 907mm 53.8-60.0 102.7-114.5 106.0-118.3
+800mmx800mm 1045mm 61.0-68.1 116.5-130.1 120.3-134.3
+1000mmx1000mm 1320mm 75.4-84.4 144.1-161.2 148.8-166.4
+1550 nm 9.3 µm 10.6 µm
+100mmx100mm 83mm 30.7-32.9 190.5-204.7 216.7-232.8
+200mmx200mm 221mm 51.5-56.0 316.4-346.2 360.2-394.1
+300mmx300mm 358mm 71.6-79.1 442.6-488.1 503.9-555.7
+400mmx400mm 495mm 92.2-102.2 568.8-630.0 647.6-717.4
+500mmx500mm 632mm 112.8-125.4 695.0-771.9 791.3-878.9
+600mmx600mm 770mm 133.4-148.6 821.1-913.7 934.9-1040.2
+700mmx700mm 907mm 154.1-171.8 947.2-1055.4 1078.3-1201.2
+800mmx800mm 1045mm 174.7-195.1 1073.2-1196.9 1221.4-1361.9
+1000mmx1000m 1320mm 216.2-241.8 1324.6-1479.1 1506.8-1682.0
+NOTES: 
+l Spotdiameterisexpressedas1/e 2assumingabeamqualityofM 2=1.
+l Theworkingdistanceismeasuredfromthebottomsurfaceofthescanhead.
+l Referto Table1-7 todeterminewhichfieldconfigurationoptionisrequiredtoachieveaspecificnominalfieldofview
+forthedesiredwavelength.
+l ContactAerotechforadditionaldata.
+AGV3DHardwareManual 1.3.BasicSpecifications
+www.aerotech.com 21
+
+Table 1-6: AGV3D-30 Spot Diameter Range (µm) within Field of View per Wavelength
+Nominal Field of View Nominal Working
+Distance 343 nm 355 nm 515 nm
+100mmx100mm 83mm 4.8-5.0 5.0-5.2 7.4-7.7
+200mmx200mm 221mm 7.9-8.6 8.2-8.9 11.9-13.2
+300mmx300mm 358mm 11.0-12.2 11.3-12.5 17.3-19.2
+400mmx400mm 495mm 14.2-15.8 14.6-16.2 22.7-25.3
+500mmx500mm 632mm 17.5-19.4 17.8-19.8 28.2-31.6
+600mmx600mm 770mm 20.7-23.0 21-23.4 33.8-38.1
+700mmx700mm 907mm 23.9-26.6 24.3-27 39.7-44.8
+800mmx800mm 1045mm 27.0-30.1 27.5-30.6 45.7-51.8
+1000mmx1000mm 1320mm 33.3-37.1 33.9-37.8 58.4-66.7
+532 nm 1030 nm 1064 nm
+100mmx100mm 83mm 7.7-7.9 14.6-14.7 15.0-15.2
+200mmx200mm 221mm 12.2-13.6 22.4-24.7 23.3-25.7
+300mmx300mm 358mm 17.8-19.8 32.3-35.9 33.4-37.0
+400mmx400mm 495mm 23.3-26.0 42.2-47.1 43.5-48.5
+500mmx500mm 632mm 28.9-32.4 52.2-58.4 53.8-60.1
+600mmx600mm 770mm 34.6-38.9 62.3-69.8 64.1-71.7
+700mmx700mm 907mm 40.5-45.6 72.6-81.4 74.5-83.5
+800mmx800mm 1045mm 46.5-52. 82.8-93.0 84.9-95.3
+1000mmx1000mm 1320mm 59.0-67.0 103.1-116.5 106.0-119.1
+1550 nm 9.3 µm 10.6 µm
+100mmx100mm 83mm 21.1-21.8 128.5-137.1 145.8-155.8
+200mmx200mm 221mm 33.2-36.5 211.1-231.2 240.3-263.1
+300mmx300mm 358mm 47.3-52.4 296.1-326.8 337.0-371.9
+400mmx400mm 495mm 61.5-68.4 381.3-422. 433.9-481.0
+500mmx500mm 632mm 75.8-84.5 466.5-518.6 531.0-590.3
+600mmx600mm 770mm 90.1-100.7 552.0-614.9 628.3-699.9
+700mmx700mm 907mm 104.5-116.0 637.6-711.4 725.8-809.8
+800mmx800mm 1045mm 119.0-133.2 723.5-808.2 823.6-920.0
+1000mmx1000mm 1320mm 148.0-166.0 895.9-1002.6 1019.9-1141.4
+NOTES: 
+l Spotdiameterisexpressedas1/e 2assumingabeamqualityofM 2=1.
+l Theworkingdistanceismeasuredfromthebottomsurfaceofthescanhead.
+l Referto Table1-7 todeterminewhichfieldconfigurationoptionisrequiredtoachieveaspecificnominalfieldofview
+forthedesiredwavelength.
+l ContactAerotechforadditionaldata.
+1.3.BasicSpecifications AGV3DHardwareManual
+22 www.aerotech.com
+
+Table 1-7: FOV Extents by Field Configuration Option and Wavelength
+Field Configuration Option 343 nm 355 nm 515 nm
+F1
+Min 100mmx100mm(83mmWorkingDistance(WD))
+Max 600mmx600mm
+(770mmWD)
+550mmx550mm
+(701mmWD)
+450mmx450mm
+(564mmWD)
+F2 Min 150mmx150mm
+(152mmWD)
+150mmx150mm
+(152mmWD)
+175mmx175mm
+(186mmWD)
+Max 1000mmx1000mm(1320mmWD) (1)
+532 nm 1030 nm 1064 nm
+F1
+Min 100mmx100mm(83mmWD)
+Max 425mmx425mm
+(530mmWD)
+375mmx375mm
+(461mmWD)
+375mmx375mm
+(461mmWD)
+F2 Min 175mmx175mm(186mmWD)
+Max 1000mmx1000mm(1320mmWD) (1)
+1550 nm 9.3 µm 10.6 µm
+F1
+Min 100mmx100mm(83mmWD)
+Max 350mmx350mm
+(427mmWD)
+325mmx325mm
+(392mmWD)
+300mmx300mm
+(358mmWD)
+F2 Min 175mmx175mm
+(186mmWD)
+200mmx200mm
+(221mmWD)
+200mmx200mm
+(221mmWD)
+Max 1000mmx1000mm(1320mmWD) (1)
+(1)Forfieldsofviewexceedingthisvalue,orforapplicationsusinganF-thetalensinconjunctionwithAGV3D,contact
+Aerotech.
+(2)Theworkingdistanceismeasuredfromthebottomsurfaceofthescanhead.
+Figure 1-3: Working Distance Detail
+AGV3DHardwareManual 1.3.BasicSpecifications
+www.aerotech.com 23
+
+Figure 1-4: AGV3D-20 X/Y Axis Linear Acceleration vs Working Distance
+Figure 1-5: AGV3D-30 X/Y Axis Linear Acceleration vs Working Distance
+1.3.BasicSpecifications AGV3DHardwareManual
+24 www.aerotech.com
+
+Z-Axislinearaccelerationvaluesareshownfor1030-1090nmwavelengthconfiguration.These
+valuesaregenerallyrepresentativeofsystemperformanceforallwavelengthoptions.Ifprecise
+valuesforanalternatewavelengtharerequired,contactthefactory.
+Figure 1-6: AGV3D Z-Axis Linear Acceleration vs Working Distance
+AGV3DHardwareManual 1.3.BasicSpecifications
+www.aerotech.com 25
+
+1.4.SoftwareConfiguration
+RefertotheAGV3DUserGuidetoconfigurethemotionsoftware.AnyPCincludedwiththesystem
+fromthefactorywillalreadybeconfigured.
+1.4.SoftwareConfiguration AGV3DHardwareManual
+26 www.aerotech.com
+
+Chapter2:MechanicalSpecificationsandInstallation
+IMPORTANT:Thismanualtellsyouhowtocarefullyandcorrectlyuseandoperatethe
+AGV3D.
+l Readallpartsofthismanualbeforeyouinstalloroperatethegalvoorbeforeyoudo
+maintenancetoyoursystem.
+l Topreventinjurytoyouanddamagetotheequipment,obeytheprecautionsinthis
+manual.
+l Allspecificationsandillustrationsareforreferenceonlyandwerecompleteand
+accurateasofthereleaseofthismanual.Tofindthenewestinformationaboutthis
+product,refertowww.aerotech.com.
+Ifyoudonotunderstandtheinformationinthismanual,contactAerotechGlobal
+TechnicalSupport.
+DANGER:Useofthisproductincreasestheriskofexposuretovisibleand/orinvisible
+laserradiation.
+l Donotstareintothelaserbeam,putyourbodypartsinthelaserarea,orexpose
+yourselftoreflectionsfrompowerfulbeams.
+l Wearcertifiedlasersafetyeyeprotection.
+l Avoideyeorskinexposuretodirectorscatteredradiation.
+WARNING:AerotechrecommendsthatyouonlyuseaClass1HeNelasertodo
+alignments.IfaClass1HeNelaserisnotavailable,usethelowestpowersettingonthe
+availablelaserandremotebeamsensingtechniques.
+WARNING:Usetheparameterfileprovidedbythefactorytoconfigurethecontrolleror
+permanentmechanicaldamagecouldoccur.
+AGV3DHardwareManual Chapter2:MechanicalSpecificationsandInstallation
+www.aerotech.com 27
+
+2.1.UnpackingandHandlingtheScan Head
+IMPORTANT:Topreventtheaccumulationofcondensationontheopticalsurfaces,
+allowtheshippingcasetositatroomtemperaturebeforeyouopenit.
+WARNING:Itistheresponsibilityofthecustomertosafelyandcarefullyliftandmove
+thescanhead.Ifyouarenotcareful,youcouldadverselyaffecttheperformanceofthe
+AGV3D.
+l Donotusethecablesortubingasliftingpoints.
+l Donotusethefocallensorexitapertureasaliftsurface.
+l MakesurethatthelenscapisattachedbeforeyoumovetheAGV3D.
+l Putthescanheadonasoftsurfacewhenitisnotattachedtoitsmountingsurfaceto
+protecttheoptics.
+IMPORTANT:Wearclean,powder-freegloveswhenyouhandleopticalcomponents.
+CarefullyremovetheAGV3D fromitsprotectiveshippingcontainer.
+BeforeoperatingtheAGV3D,itisimportanttoletitstabilizeoutsideoftheshippingcaseatroom
+temperatureforatleast12hours.Allowingittostabilizetoroomtemperaturewillensurethatallof
+thealignments,preloads,andtolerancesarethesameastheywerewhentestedatAerotech.Use
+compressednitrogenorclean,dry,oil-lessairtoremoveanydustordebristhathascollectedduring
+shipping.
+IMPORTANT:EachAGV3Dhasalabelthatliststhesystempartnumberandserial
+number.Thesenumbersarenecessarytomaintainorupdatesystemhardwareand
+software.Locatethislabelandrecordtheinformationforlaterreference.
+2.1.UnpackingandHandlingtheScan Head AGV3DHardwareManual
+28 www.aerotech.com
+
+2.2.Dimensions
+Figure 2-1: AGV3D-20 Scan Head Dimensions
+AGV3DHardwareManual 2.2.Dimensions
+www.aerotech.com 29
+
+Figure 2-2: AGV3D-30 Scan Head Dimensions
+2.2.Dimensions AGV3DHardwareManual
+30 www.aerotech.com
+
+2.3.RemovetheShippingClamp
+RemovetheshippingclampbeforeyoumountoroperatetheAGV3D.PuttheAGV3Donastable,flat
+surfaceforthisprocedure.
+WARNING:YoucouldcausepermanentmechanicaldamagetotheAGV3Difyoudonot
+removetheshippingclampbeforeyouroperatetheAGV3D.
+REMOVING THE SHIPPING CLAMP
+1. Removethefour[QTY.4]M3x0.5,10mmLGsocketheadcapscrewsthatattachthetopcoverof
+themainAGV3Denclosureandsetthemaside.
+Figure 2-3: Top Cover Removal
+2. Carefullyliftupthetopcoverfromthefronttoaccesstheshippingclamp.
+NOTE: Thetopcovercannotbecompletelyremovedbecausetherearecablesattachedtothe
+undersideofit.
+WARNING:Ifacableisdamagedordetachedinthisstep,itcouldcauseseveredamage
+totheAGV3D whenitisconnectedtoapowersource.
+3. Loosenthetwo[QTY.2]M3socketheadcapscrewsthatholdtheshippingclampinplace.
+4. Carefullyremovetheshippingclamp,thetwo[QTY.2]M3shcs,andthetwo[QTY.2]M3washers
+asagrouptomakesurethatyoudonotdropascreworwasherintheopenAGV3Denclosure.
+AGV3DHardwareManual 2.3.RemovetheShippingClamp
+www.aerotech.com 31
+
+Figure 2-4: Shipping Clamp Detail
+5. ReplacethetopcoverontotheAGV3Denclosure.Becarefulnottopinchanycableswhenyou
+reattachthecover.
+NOTE: Thetopcovershouldbeflushwiththeenclosure.Carefullymoveanycablesthatinterfere
+withthepositionofthetopcover.
+6. Attachthetopcoverwiththefour[QTY.4]M3socketheadcapscrewsthatwereremoved
+inStep1.
+2.3.RemovetheShippingClamp AGV3DHardwareManual
+32 www.aerotech.com
+
+2.4.SecuringtheScanHeadtotheMountingSurface
+WARNING:Itistheresponsibilityofthecustomertosafelyandcarefullymoveand
+mountthescanhead.Ifyouarenotcareful,youcouldadverselyaffecttheperformance
+oftheAGV3D.
+l Topreventcontamination,makesurethatthebeamexitandthebeaminputaper-
+turearecoveredbeforeyoumovetheAGV3D.
+l Putthescanheadonasoftsurfacewhenitisnotattachedtoitsmountingsurfaceto
+protecttheoptics.
+Themountingsurfaceshouldbeflatandhaveadequatestiffnessinordertoachievethemaximum
+performancefromtheAGV3Dscanhead( Table2-2).WhenanAGV3Dismountedtoanon-flat
+surface,thescanheadcanbedistortedasthemountingscrewsaretightened.Thisdistortionwill
+affectthealignmentbetweenthegalvanomotorsanddecreasetheoverallaccuracyofthescan
+head.Adjustmentstothemountingsurfacemustbemadebeforethescanheadissecured.
+Inspectthemountingsurfacefordirtorunwantedresidueandcleanifnecessary.Useprecision
+flatstonesonthemountingsurfacetoremoveanyburrsorhighspots.Cleanthemountingsurface
+withalint-freeclothandacetoneorisopropylalcoholandallowthecleaningsolventtocompletely
+dry.Gentlyplacethestageonthemountingsurface.
+WARNING:TheAGV3Disprecisionmachinedandverifiedforflatnessatthefactory.
+l DonotmachinetheAGV3Dhousing.Ifyoumustmachineasurfacetoachievea
+requiredflatness,machinethemountingsurface.
+l KeeptheuseofshimstoaminimumwhenyoumounttheAGV3Dtothemounting
+surface.Theuseofshimscouldreducetherigidityofthesystem.
+TheAGV3Dhasthreemountingoptions( Figure2-5).Thesystemshouldbemountedsothatitis
+paralleltotheworkpiece(referto Table2-2 fortheparallelmountingspecification).Usethebottom
+oftheexitcoverglassbracketasareference,ifpossible.Ifthissurfaceisinaccessible,usethe
+unusedmountingpointsforreference.Forexample,iftherearmountingpointsareusedtomount
+theAGV3Dtothemountingsurface,usethebottommountingpointsasareference.Eithertheexit
+coverglassbracketorthebottommountingsurfacemustbeaccessibletoverifymounting
+parallelism.
+AGV3DHardwareManual 2.4.SecuringtheScanHeadtotheMountingSurface
+www.aerotech.com 33
+
+Figure 2-5: Mounting Point Locations
+Table 2-1: Mounting Hardware Specifications
+Location Quantity Screw Size
+RightSide 4 M6x1,9mmLG
+RearSide 4 M6x1,9mmLG
+Bottom 4 M6x1,9mmLG
+Table 2-2: Mounting Specifications
+Specification
+ParallelismtoWorkpiece 50µmover100mm
+MountingSurfaceFlatness 25µmover305mm
+2.4.SecuringtheScanHeadtotheMountingSurface AGV3DHardwareManual
+34 www.aerotech.com
+
+2.5.LaserBeamAlignment
+Foroptimalperformance,aligntheinputlaserbeamtotheAGV3Denclosure.Usethealignment
+fixturethatisprovidedwiththeAGV3Dtosimplifythelaseralignmentprocedure.Thealignment
+fixtureisdesignedtoworkwiththeworkinglaserbeam,soavisiblealignmentbeamisnotnecessary
+forUVandIRwavelengths.Thealignmenttargetswillfluoresceunderlaserpower,evenforUVand
+IRwavelengthlasers.
+Figure 2-6: Alignment Fixture
+DANGER:Thelaserwillneedtobe"ON"forthealignmentprocedure.Obeyalllaser
+safetyprecautions.
+l Donotstareintothelaserbeam,putyourbodypartsinthelaserarea,orexpose
+yourselftoreflectionsfrompowerfulbeams.
+l Wearcertifiedlasersafetyeyeprotection.
+l Avoideyeorskinexposuretodirectorscatteredradiation.
+WARNING:Thelasercouldburnthefluorescingtargetdisks.
+l Duringlaseralignment,itiscriticalthatyouonlyusesufficientlylowpowersettings
+toavoidburningthetargetdisks.
+l Ingeneral,useaslittlepowerasnecessarytoseethelaserspotonthefluorescing
+disks.
+l Thevaluesin Table2-3 aretherecommendedlasersettingsforalignment.
+l Smalldeviationsinpowerareacceptable,ifnecessary.
+AGV3DHardwareManual 2.5.LaserBeamAlignment
+www.aerotech.com 35
+
+ALIGNMENT PROCEDURE FOR UV, VISIBLE, AND NIR WAVELENGTHS
+1. Turnthelaseroff.
+2. BoltthelaseralignmentfixturetothefrontfaceoftheAGV3D(referto Figure2-6).
+l Usethe6x12mmLG dowelpinsandM6x1.070mmLG socketheadcapscrewsprovidedwith
+thealignmentfixture.
+l Thelargecutoutshouldpointup.
+3. Turnonthelaserbeamandalignitsothatthebeamisroughlycenteredonthefronttargetof
+thealignmentfixture.
+Table 2-3: Recommended Beam Power Settings
+Average Power Repetition Rate Pulse Duration
+1W <1kHz >600fs
+IMPORTANT:Thelasermustwarm-upandstabilizebeforeyoucanperformaprecision
+alignment.Refertothedocumentationthatwassuppliedwiththelaser.
+4. Adjustthepositionofthelasersourceuntilthebeamisconcentricwiththemarkedcirclesonthe
+fronttargetofthealignmentfixture.
+5. Ifthebeamhitsthereartargetbutdoesnotgothroughthepinhole,adjusttheangularposition
+ofthelasersourceuntilthebeamisalignedwiththerearpinhole.
+6. IfangularadjustmentswererequiredinStep5:Verifythatthebeamisstillcenteredonthefront
+target.Makepositionaladjustmentstothelasersourceifitisnecessarytorecenterthebeamon
+thefronttarget.
+7. Repeatsteps5and6untilthebeamisalignedwiththereartargetpinholeandcenteredonthe
+fronttarget.
+8. Turnoffthelaser.
+9. Removethelaserbeamalignmentfixture,M6SHCS,and6mmdowelsfromthefrontfaceofthe
+AGV3D.
+2.5.LaserBeamAlignment AGV3DHardwareManual
+36 www.aerotech.com
+
+ALIGNMENT PROCEDURE FOR CO 2 WAVELENGTHS (9.3 UM AND 10.6 UM)
+1. BoltthelaseralignmentfixturetothefrontfaceoftheAGV3D.
+l Usethe6x12mmLG dowelpinsandM6x1.070mmLG socketheadcapscrewsprovidedwith
+thealignmentfixture.
+l Thelargecutoutshouldpointup.
+2. Tapefaxpaper(orotherheat-sensitivepaper)tothefrontalignmenttarget.Pokeapinholeinthe
+paperthatisalignedwiththepinholeinthefrontalignmenttarget.
+3. Fireoneortwopulsesofthelaserandtheninspectthemarkonthefaxpapertoseeifthemark
+isconcentricwiththepinhole.Usearulertomeasurethemarkforlargebeams.
+4. Ifthemarkisconcentricwiththepinhole,proceedtoStep5.Ifnot,adjustthepositionofthelaser
+andrepeatSteps2and3withanewpieceofheat-sensitivepaper.Useanewsheetofpaperfor
+eachtestuntilthelaserbeamiscorrectlycenteredonthetarget.
+5. Removethefronttargetfromthealignmentfixture.
+6. Determineifthebeamisalignedwiththepinholeonthereartarget.Followtheprocedurein
+Steps2and3withthereartarget.
+7. Ifthebeamisnotcenteredonthereartarget,adjusttheangularpositionofthelasersourceuntil
+thebeamisalignedwiththerearpinhole.FollowthesameprocedureinSteps2and3tocheck
+thebeamposition.
+8. IfangularadjustmentswererequiredinStep7: Replacethefronttargetinthealignmentfixture
+andverifyifthebeamisstillcenteredonthefronttarget.Makepositionaladjustmentstothe
+lasersourcetorecenterthebeam.
+9. RepeatSteps2through8untilthebeamisalignedwiththereartargetpinholeandthefront
+targetpinhole.
+10. Removethelaserbeamalignmentfixture,M6SHCS,and6mmdowelsfromthefrontfaceofthe
+AGV3D.
+AGV3DHardwareManual 2.5.LaserBeamAlignment
+www.aerotech.com 37
+
+2.6.AirRequirements
+WARNING:TopreventdamagetotheAGV3D,donotattachawaterhosetoanair
+fittingoranairhosetoawaterfitting.
+DANGER:Highpressureaircancausesevereinjury.
+l Lockoutthesourceandbleedoffthepressurebeforeyoudoservicetotheequip-
+ment.
+l Weareyeprotection.
+Ifthe-AC (air-cooling) optionwaspurchased,usethisoptiontocooltheturningmirrorsanddynamic
+focusingmodule.
+Agassupplypressureof517kPato586kPa(75psito85psi)isrequired.Gasmustbedeliveredviaa
+polyurethaneairhosewithanouterdiameterof4mm.Unlessotherwisespecified,agasflowrateof
+20SLPM(standardlitersperminute)at550kPa(80psi)shouldbeobserved.
+l If nitrogen is used, it must be 99.99% pure and filtered to 0.25 microns. [Recommended]
+l If compressed air is used, it must be filtered to 0.25 microns, dry to 0º F dew point, and oil free.
+Thefiltrationrequirementisnecessarytopreventparticlesfromdamagingtheopticalsurfacesof
+theturningmirrors.
+Figure 2-7: Air-Cooling Locations
+2.6.AirRequirements AGV3DHardwareManual
+38 www.aerotech.com
+
+2.7.WaterRequirements
+WARNING:TopreventdamagetotheAGV3D,donotattachawaterhosetoanair
+fittingoranairhosetoawaterfitting.
+WARNING:UsedistilledwaterasthecoolantintheAGV3Dwater-coolingsystem.To
+preventcorrosionanddamagetothecoolingcircuit,additivesmustbecompatiblewith
+thematerialsfoundinthecoolingcircuit.Thesematerialsincludebrass,stainlesssteel,
+aluminum(plainoranodized),nickelplating,polyurethane,nylon,andnitrilerubber.If
+distilledwatercannotbeused,contactthefactorytodiscussthespecificsofyour
+application.
+Ifthe-WC (watercooling) optionwaspurchased,usethisoptiontocoolthegalvomotorsandthe
+AGV3Denclosure.
+Usedistilledwaterandachillerthatissizedtodeliver0.35GPM(gallonsperminute)at60psid.Use
+nylontubeswithanouterdiameterof6mmtodeliverandretrievethecoolantfromthescanhead.
+Useofacorrosioninhibitoradditivemeantformulti-metalcoolingchannelscanhelpincreasethe
+lifeofcomponentsinthewater-coolingcircuit.
+Figure 2-8: Water Cooling Locations
+AGV3DHardwareManual 2.7.WaterRequirements
+www.aerotech.com 39
+
+2.8.ChangingtheDynamicFocusingField-of-ViewSetting
+TheAGV3DhastwofieldofviewoptionsfortheZ-axis: -F1and-F2(referto Table1-7).The
+procedurethatfollowsexplainshowtochangethefieldofviewsetting.
+IMPORTANT:TheAGV3Dmustbesettoeitherthe-F1 orthe-F2option.TheAGV3D
+cannotbesettoafieldofviewbetweenthesetwosettings.
+MakesurethattheAGV3Dissecurelymountedandinanuprightpositionandyoucanaccessthe
+bottomoftheenclosure.Theprocedurecannotbedonewiththebottommountingplate(-M2
+option)attached.
+HOW TO CHANGE THE FIELD OF VIEW SETTING
+WARNING:TurnoffthelaseranddisconnecttheAGV3Dfrompowerbeforeyoustart
+thisprocedure.
+1. Loosen,butdonotremove,thefour[QTY.4]M4x0.7,14mmLG socketheadcapscrewsthatare
+locatedintheslotsonthebottomsideoftheAGV3Denclosure.
+Figure 2-9: Dynamic Focusing Module Mounting Screws
+2. Inserta6mmallenkey,orsimilartool,throughtheslotinthebottomoftheenclosureandinto
+theholeinthebottomoftheDynamicFocusingModule(DFM).
+3. UsethetooltoslidetheDFMtothenewfieldofviewsetting.TheDFMisinthecorrectposition
+whenareferenceedgeisencounteredandtheDFMcannotbemovedanyfurtherinthecorrect
+direction.
+l -F1Option: SlidetheDFMtotheright
+l -F2Option:SlidetheDFMtotheleft
+IMPORTANT:TheM4screwsdonotneedtoreachtheendsoftheirslotsfortheDFMto
+beinthecorrectposition.
+2.8.ChangingtheDynamicFocusingField-of-ViewSettingAGV3DHardwareManual
+40 www.aerotech.com
+
+Figure 2-10: Dynamic Focusing Module Reference
+4. TokeeptheDFMreferencedaftertheFieldofViewadjustment,usetheallenkeytogentlypush
+theDFM towardstherearface.
+5. SlowlytightentheM4socketheadcapscrewsthatwereloosenedinStep2.
+l Alternatebetweenthescrews.
+l Tightenthescrewstoatorqueof30in·lb.
+6. UsetheAGV3D setupprogramstoupdatetheparametersettingstomakesurethattheAGV3D
+functionscorrectly.RefertotheAGV3DUserGuide.
+AGV3DHardwareManual2.8.ChangingtheDynamicFocusingField-of-ViewSetting
+www.aerotech.com 41
+
+2.9.UsinganF-ThetaLens
+IMPORTANT:Wearclean,powder-freegloveswhenyouhandleopticalcomponents.
+ForapplicationsthatuseanF-thetalensinconjunctionwithAGV3D,theuserisresponsiblefor
+supplyingboththeF-thetalensandalensadapter.Contactthefactoryforassistance.
+2.9.UsinganF-ThetaLens AGV3DHardwareManual
+42 www.aerotech.com
+
+Chapter3:ElectricalSpecificationsandInstallation
+DANGER:Todecreasetheriskofelectricalshock,injury,death,anddamagetothe
+equipment,obeytheprecautionsthatfollow.
+l Electricalinstallationmustbedonebyqualifiedpersonnel.
+l Beforeyoudomaintenancetotheequipment,disconnecttheelectricalpower.
+l Beforeyouconnectwirestothisproduct,disconnecttheelectricalpower.
+l Makesurethatallcomponentsaregroundedcorrectlyandthattheyobeythelocal
+electricalsafetyrequirements.
+l Itistheresponsibiltyofthesystemintegratororqualifiedinstallertodetermineand
+meetallsafetyandcompliancerequirementswhentheyintegratetheAGV3Dintoa
+completedsystem.
+WARNING:Topreventdamagetotheequipmentanddecreasetheriskofelectrical
+shockandinjury,obeytheprecautionsthatfollow.
+l Onlytrainedoperatorsshouldoperatethisequipment.
+l Usethisproductonlyinenvironmentsandoperatingconditionsthatareapprovedin
+thismanual.
+Electricalinstallationrequirementswilldependontheorderedproductoptions.Installation
+instructionsinthissectionareforAerotechproductsequippedwithstandardAerotechmotors
+intendedforusewithanAerotechmotioncontrolsystem.ContactAerotechforfurtherinformation
+onproductsthatareotherwiseconfigured.
+Aerotechmotioncontrolsystemsareadjustedatthefactoryforoptimumperformance.Whenthe
+AGV3DispartofacompleteAerotechmotioncontrolsystem,setupshouldonlyrequirethatyou
+connectthegalvototheappropriatedrivechassiswiththecablesprovided.Labelsonthesystem
+componentsshouldindicatetheappropriateconnections.
+Ifsystemlevelintegrationwaspurchased,anelectricaldrawingthatshowsthesysteminterconnects
+hasbeensuppliedwiththesystem(separatefromthisdocumentation).
+Theelectricalwiringfromthemotorandencoderareintegratedatthefactory.Refertothesections
+thatfollowforstandardmotorwiringandconnectorpinouts.
+AGV3DHardwareManual Chapter3:ElectricalSpecificationsandInstallation
+www.aerotech.com 43
+
+3.1.MotorandFeedbackConnectors
+DANGER:Todecreasetheriskofelectricalshock,injury,death,anddamagetothe
+equipment,obeytheprecautionsthatfollow.
+l Makesurethatallcomponentsaregroundedcorrectlyandthattheyobeythelocal
+electricalsafetyrequirements.
+l Itistheresponsibiltyofthesystemintegratororqualifiedinstallertodetermineand
+meetallsafetyandcompliancerequirementswhentheyintegratetheAGV3Dintoa
+completedsystem.
+l Restrictaccesstothegalvowhenitisconnectedtoapowersource.
+IftheAGV3D isbuiltwithstandardAerotechmotorsandencoders,itwillarrivefromthefactory
+completelywiredandassembled.
+TheX-andY-axisgalvomotorsproducedualanalogencoderfeedbacksignals.TheZ-axismotor
+producessingleanalogencoderfeedbacksignals.ThePrimary(X,Y,andZ)andSecondary(XandY)
+positionfeedbacksignalsmustbetunedforoptimalperformance.Forhelponhowtoadjustthe
+gain,offset,andphasebalanceforeachchannel,refertotheAutomation1orA3200Helpsystemfor
+moreinformation.Forcontrollerinformation,refertotheNmarkGCLorGL4ControllerHardware
+Manualformoreinformation.
+Figure 3-1: Connectors
+IMPORTANT:TheprotectivegroundconnectionoftheAGV3Dprovidesmotorframe
+groundprotectiononly.Additionalgroundandsafetyprecautionsarerequiredfor
+applicationsthatrequireaccesstotheAGV3Dwhileitisenergized.
+3.1.MotorandFeedbackConnectors AGV3DHardwareManual
+44 www.aerotech.com
+
+Table 3-1: Motor and Feedback Connecter Pinouts (X and Y Axis)
+Pin Description Connector
+Case CableShield
+1 SIN1+(EncoderSine1+)
+2 COS1+(EncoderCosine1+)
+3 5VCommonGround
+4 SIN2+(EncoderSine2+)
+5 COS2+(EncoderCosine2+)
+6 +/CWLMT (Thelimitsignalthatshowsthemaximumpermittedmachine
+travelinpositiveorclockwiseencodercounts.)
+7 MRK+(EncoderMarker+)
+8 Encoder5V SupplyInput
+9 Reserved
+10 Reserved
+11 FrameGround
+12 Motor+
+13 Motor+
+14 SIN1-(EncoderSine1-)
+15 COS1-(EncoderCosine1-)
+16 5VCommonGround
+17 SIN2-(EncoderSine2-)
+18 COS2-(EncoderCosine2-)
+19 -/CCWLMT (Thelimitsignalthatshowsthemaximumpermittedmachine
+travelinnegativeorcounterclockwiseencodercounts.)
+20 MRK+(EncoderMarker+)
+21 5VCommonGround
+22 5VCommonGround
+23 FrameGround
+24 Motor-
+25 Motor-
+Table 3-2: Mating Connector Part Numbers for the Motor and Feedback Connectors
+Mating Connector Aerotech P/N Third Party P/N
+25-SocketD-Connector ECK00300 FCIDB25S064TLF
+Backshell ECK00656 Amphenol17E-1726-2
+AGV3DHardwareManual 3.1.MotorandFeedbackConnectors
+www.aerotech.com 45
+
+Table 3-3: Motor and Feedback Connecter Pinout (Z Axis)
+Pin Description Connector
+Case CableShield
+1 SIN+ (EncoderSine+)
+2 COS+(Encoder Cosine+)
+3 Commonground
+4 Reserved
+5 Reserved
+6 Reserved
+7 MRK+(EncoderMarker+)
+8 Encoder5V SupplyInput
+9 Reserved
+10 Reserved
+11 FrameGround
+12 Motor+
+13 Motor+
+14 SIN+ (EncoderSine+)
+15 COS+(Encoder Cosine+)
+16 Commonground
+17 Reserved
+18 Reserved
+19 Reserved
+20 MRK+(EncoderMarker+)
+21 Commonground
+22 Commonground
+23 ShieldConnection
+24 Motor-
+25 Motor-
+Table 3-4: Mating Connector Part Numbers for the Motor and Feedback Connector
+Mating Connector Aerotech P/N Third Party P/N
+25-SocketD-Connector ECK00300 FCIDB25S064TLF
+Backshell ECK00656 Amphenol17E-1726-2
+3.1.MotorandFeedbackConnectors AGV3DHardwareManual
+46 www.aerotech.com
+
+3.2.MotorandFeedbackWiring
+DANGER:Todecreasetheriskofelectricalshock,injury,death,anddamagetothe
+equipment,obeytheprecautionsthatfollow.
+l Makesurethatallcomponentsaregroundedcorrectlyandthattheyobeythelocal
+electricalsafetyrequirements.
+l Itistheresponsibiltyofthesystemintegratororqualifiedinstallertodetermineand
+meetallsafetyandcompliancerequirementswhentheyintegratetheAGV3Dintoa
+completedsystem.
+l Restrictaccesstothegalvowhenitisconnectedtoapowersource.
+AGV3Dscanheadsarewiredandassembledatthefactory.ContactyourAerotechrepresentativeif
+youhaveanyquestionsonsystemconfiguration.Forcabledrawings,refertothedocumentation
+thatshippedwithyoursystem.
+Table 3-5: Aerotech Motor and Feedback Cable Part Numbers
+Aerotech Controller Nmark GCL or Automation1 GL4
+Cable Application Standard Hi-Flex
+Interface Cable Part Number C23680-xxx(1,2) C23690-xxx(1,2)
+(1)-xxx=CableLengthinDecimeters(1Decimeter=3.937inches)
+(2)Contactthefactoryforstandardandcustomlengthcables
+AGV3DHardwareManual 3.2.MotorandFeedbackWiring
+www.aerotech.com 47
+
+Figure 3-2: X- and Y-Axis Motor and Feedback Wiring
+3.2.MotorandFeedbackWiring AGV3DHardwareManual
+48 www.aerotech.com
+
+Figure 3-3: Z-Axis Motor and Feedback Wiring
+AGV3DHardwareManual 3.2.MotorandFeedbackWiring
+www.aerotech.com 49
+
+3.3.MotorandFeedbackSpecifications
+Table 3-6: AGV3D-20 Motor and Feedback Specifications
+Feedback Specifications
+XandY Motors ZMotor
+SupplyVoltage 5V
+SupplyCurrent 250mA
+OutputSignals Sinusoidal Type (Incremental Encoder): 1V pk-pkinto120 ΩLoad
+(differentialsignalsSIN+,SIN-,COS+,COS-are.5V  pk-pkrelativetoground.)
+EncoderResolution 4096lines/revolution 0.0076nm
+LimitSwitches Opticallimitswitchesandsoftware
+limits Currentlimitsandsoftwarelimits
+HomeSwitch AtCenter
+Motor Specifications
+XandY Motors ZMotor
+BEMFConstant 1.4V/krpm 6.64V/(m/s)
+MaxCurrent 5A 9A
+Resistance 1.5Ω 1.84Ω
+Inductance 170µH 1.12mH
+MaximumBus
+Voltage 80V 80V
+NumberofPoles 2 N/A
+Table 3-7: AGV3D-30 Motor and Feedback Specifications
+Feedback Specifications
+XandY Motors ZMotor
+SupplyVoltage 5V
+SupplyCurrent 250mA
+OutputSignals Sinusoidal Type (Incremental Encoder): 1V pk-pkinto120 ΩLoad
+(differentialsignalsSIN+,SIN-,COS+,COS-are.5V  pk-pkrelativetoground.)
+EncoderResolution 4096lines/revolution 0.0076nm
+LimitSwitches Opticallimitswitchesandsoftware
+limits Currentlimitsandsoftwarelimits
+HomeSwitch AtCenter
+Motor Specifications
+XandY Motors ZMotor
+BEMFConstant 4.3V/krpm 6.64V/(m/s)
+MaxCurrent 5A 9A
+Resistance 3.1Ω 1.84Ω
+Inductance 675µH 1.12mH
+MaximumBus
+Voltage 80V 80V
+NumberofPoles 2 N/A
+3.3.MotorandFeedbackSpecifications AGV3DHardwareManual
+50 www.aerotech.com
+
+Chapter4:Maintenance
+DANGER:Todecreasetheriskofelectricalshock,injury,death,anddamagetothe
+equipment,obeytheprecautionsthatfollow.
+l Allserviceandmaintenancemustbedonebyapprovedpersonnel.
+l Beforeyoudomaintenancetotheequipment,disconnecttheelectricalpower.
+l Beforeyouconnectwirestothisproduct,disconnecttheelectricalpower.
+l Restrictaccesstothegalvowhenitisconnectedtoapowersource.
+WARNING:Keepthescanheadfreeofforeignmatterandmoisturetopreventa
+reductioninitsperformanceandlifeexpectancy.
+TheAGV3Dscanheadisdesignedtoberesistanttodust.Thescanheaddoesnotrequireany
+maintenanceotherthanthatitshouldbecleanedperiodically.
+Operationindirtyordustyenvironmentscouldrequireyoutoperiodicallyreplacetheentranceand
+exitapertureprotectivewindows.Contactthefactoryforreplacementparts.
+IMPORTANT:Donotremoveanycomponentsfromthesystemotherthanthose
+specifiedintheMaintenancesectionofthemanual.Theinternalopticalcomponents
+arepreciselyalignedatthefactoryinacleanenvironmenttoachievehighperformance.
+Removalofanycomponentswillsignificantlycompromiseperformanceandcould
+requireyoutosendthescanheadbacktothefactoryforcalibration.
+4.1.ServiceandInspectionSchedule
+Untilyoucanfindthecorrectinspectionintervalforyoursystem,settheintervalforonceamonth.
+Usethesystemapplication(s)andconditions(dutycycle,speed,andenvironment)todefinethe
+inspectioninterval.
+Monthlyinspectionsshouldincludebutnotbelimitedto:
+l Visuallyinspectthegalvo,components,andcables.
+l Re-tightenlooseconnectors.
+l Replaceorrepairdamagedcables.
+l CleantheAGV3Dandanycomponentsandcablesasneeded.
+l RepairanydamagebeforeyouoperatetheAGV3D.
+l Inspectandperformanoperationalcheckonallsafeguardsandprotectivedevices.
+ItisusuallynotpossibleforAerotechfieldservicepersonneltodorepairsand/orreplace
+components.ContactAerotechGlobalTechnicalSupportformoreinformationandtodetermineif
+theAGV3Dshouldbesentbacktothefactoryformaintenance.
+AGV3DHardwareManual Chapter4:Maintenance
+www.aerotech.com 51
+
+4.2.CleaningandInspection
+TherearenoelementsontheAGV3Dthatrequirelubrication.
+BeforeyouuseacleaningsolventonanypartoftheAGV3D,blowawaysmallparticlesanddustwith
+nitrogenor,lesspreferably,clean,dry,compressedair.
+Useisopropylalcoholonalint-freeclothtocleananyexternalmetalsurfaceoftheAGV3D.
+4.2.1.ProtectiveWindows
+Opticalsurfacesthatarecontaminatedwithdirtanddebrisresultinincreasedabsorptionoflaser
+radiation.Overtime,thiscontaminationcancausetheopticalsurfacestoabsorbenoughheatto
+causepermanentburndamage.Thereareseveraldifferentkindsofopticalsurfacecontamination:
+l Airborneparticlesintheambientatmosphere–dust,grease,etc.
+l Productsfromthelaserprocess–vapors,backspatter,burned-inparticles,etc.
+l Organiccontamination–particlesproducedbytalking,coughing,orsneezingneartheopticalsur-
+faces.
+Whereverpossible,protecttheexposedopticstoavoidcontamination.However,since
+contaminationcannotbecompletelyavoided,youwillhavetoperiodicallycleantheopticalsystem.
+Regularlyinspectandcleantheopticalsurfacestohelppreventpermanentdamage.
+WARNING:Contaminationfromthelaserprocesscancauseirreversibledamagetothe
+opticalsurfaces.Tohelpminimizecontamination,useanexhaustorvacuumsystem.
+Opticalmaterialsandcoatingsarerelativelysoftsubstancesandincorrectcleaningtechniqueswill
+resultinsurfacedamageanddrasticallyreducedcomponentlifetime.Thecleaningprocedureforthe
+AGV3Disintendedtohelpprolongthecomponentlifetime.
+IMPORTANT:Wearclean,powder-freegloveswhenyouhandleopticalcomponents.
+DANGER:Makesurethatthelaserissetinthe"off" positionandsecuredagainst
+accidentaloperationbeforeyouinspectordomaintenancetothefocallens.
+WARNING:Ifthefocallensdoesnothaveaprotectiveglasswindow,takeextracare
+whenyoucleanthefocallens.
+Cleaning Procedure
+1. Usecompressednitrogenorclean,dry,oil-lessairtoremoveanylooseparticlesfromthesurface.
+2. Moistenanappropriatelint-freelenscleaningclothwithisopropylalcohol.
+3. Foldtheclothoversuchthatonefolded(straight)edgewillserveastheleadingedgeduringthe
+wipingmotion.
+4. Placethefolded(straight)edgeoftheclothontooneendoftheopticalsurface.Applyingvery
+minimalpressure,slowlymovetheclothovertheopticalcomponenttotheoppositeend.Never
+beardownhard,scrub,orwipeinacircularmotionwhencleaninganopticalsurface.
+5. Removeanyliquidresiduewithadrylint-freelenscleaningclothorbyblowitoffinonedirection
+withcompressednitrogenorclean,dry,oil-lessair.
+6. Repeatthisprocedure,usinganewlint-freelenscleaningclothforeachrepetition,untilthe
+surfaceiscompletelyclean.
+ContactAerotechifyouneedareplacementProtectiveWindow.
+4.2.CleaningandInspection AGV3DHardwareManual
+52 www.aerotech.com
+
+4.2.2.TurningMirrors
+WARNING:Nevertouchthereflectivesurfaceofaturningmirror.Turningmirror
+surfacesareextremelydelicateandcanbeeasilydamaged.
+IMPORTANT:Wearclean,powder-freegloveswhenyouhandleopticalcomponents.
+Thereflectivesurfacesoftheturningmirrorsareextremelysensitiveandshouldonlybecleaned
+whenitisabsolutelynecessaryandonlybyexperiencedpersonnel.Inmanycases,minor
+imperfectionsinthesurfaceofthemirrorcanbelessharmfulthanthesurfacedamagecausedby
+repeatedcleaning.
+ToaccesstheTurningMirrors,theExitApertureProtectiveWindowmustfirstberemoved.
+TURNING MIRROR CLEANING PROCEDURE
+1. Removethefour[QTY.4]M6x1.0,16mmLG socketheadcapscrewsthatsecuretheexitaperture
+protectivewindowmountingbracket.
+2. Removethemountingbracket,protectivewindow,ando-ringfromthescanhead.
+WARNING: Theprotectivewindowisnotsecuredinthemountingbracket.Makesurethatitdoes
+notfalloutofthebracket.
+3. CleantheTurningMirrors. Followthesamecleaningprocedurefrom Section4.2.1.
+4. Replacethemountingbracket.Usethedowelpinstopreciselylocatethemountingbracket.
+NOTE:Makesurethattheprotectivewindowando-ringareintheircorrectpositions.
+5. Usethefour[QTY.4]M6socketheadcapscrewsthatwereremovedinStep1tosecurethe
+mountingbrackettothescanhead.
+Figure 4-1: Exit Aperture Protective Window Mounting Bracket
+AGV3DHardwareManual 4.2.2.TurningMirrors
+www.aerotech.com 53
+
+4.3.Troubleshooting
+Table 4-1: Troubleshooting
+Symptom Possible Cause Possible Solution
+Scannerswillnot
+move.
+Controllertraporfault. Refertothecontrollerdocumentation.
+MotorandFeedback
+connections
+Referto Section3.1.,Section3.2.,andthe
+controllerdocumentation.
+Scannersmove
+uncontrollably
+Gainsnotoptimized Refertothecontrollerdocumentationfor
+tuninginstructions.
+Encodersignalsnot
+optimized
+Refertothecontrollerdocumentationfor
+encodertuninginstructions.
+MotorandFeedback
+connections
+Referto Section3.1.,Section3.2.,andthe
+controllerdocumentation
+Scannersoscillateor
+squeal
+Gainsnotoptimized Refertothecontrollerdocumentationfor
+tuninginstructions.
+Encodersignalsnot
+optimized
+Refertothecontrollerdocumentationfor
+encodertuninginstructions.
+Reductioninpoweras
+thelaserbeampasses
+throughthescan
+head
+Opticalsurfaces
+contaminatedwithdirt
+anddebris
+Referto Section4.2.
+Opticalsurfacesdamaged ContactAerotechserviceand/oralens
+supplier.
+AGV3Dscannerdoes
+notfindmarker
+duringhomingcycle.
+MotorandFeedback
+connections
+Referto Section3.1.,Section3.2.,andthe
+controllerdocumentation.
+Mechanicalstopshave
+shifted ContactAerotechservice.
+AGV3Disoutoffocus
+Theworkingdistanceis
+incorrect
+Followtheinstructionsinthesoftware
+manualtosetthecorrectworkingdistance.
+Thelensspacing
+correctionisincorrect
+Followtheinstructionsinthesoftware
+manualtosetthelensspacingcorrection.
+4.3.Troubleshooting AGV3DHardwareManual
+54 www.aerotech.com
+
+AppendixA:WarrantyandFieldService
+Aerotech,Inc.warrantsitsproductstobefreefromharmfuldefectscausedbyfaultymaterialsor
+poorworkmanshipforaminimumperiodofoneyearfromdateofshipmentfromAerotech.
+Aerotech’sliabilityislimitedtoreplacing,repairingorissuingcredit,atitsoption,foranyproducts
+thatarereturnedbytheoriginalpurchaserduringthewarrantyperiod.Aerotechmakesnowarranty
+thatitsproductsarefitfortheuseorpurposetowhichtheymaybeputbythebuyer,whetheror
+notsuchuseorpurposehasbeendisclosedtoAerotechinspecificationsordrawingspreviouslyor
+subsequentlyprovided,orwhetherornotAerotech’sproductsarespecificallydesignedand/or
+manufacturedforbuyer’suseorpurpose.Aerotech’sliabilityonanyclaimforlossordamagearising
+outofthesale,resale,oruseofanyofitsproductsshallinnoeventexceedthesellingpriceofthe
+unit.
+THEEXPRESSWARRANTYSETFORTHHEREINISINLIEUOFANDEXCLUDESALLOTHERWARRANTIES,
+EXPRESSEDORIMPLIED,BYOPERATIONOFLAWOROTHERWISE.INNOEVENTSHALLAEROTECHBE
+LIABLEFORCONSEQUENTIALORSPECIALDAMAGES.
+Return Products Procedure
+Claimsforshipmentdamage(evidentorconcealed)mustbefiledwiththecarrierbythebuyer.
+Aerotechmustbenotifiedwithinthirty(30)daysofshipmentofincorrectmaterial.Noproductmay
+bereturned,whetherinwarrantyoroutofwarranty,withoutfirstobtainingapprovalfromAerotech.
+Nocreditwillbegivennorrepairsmadeforproductsreturnedwithoutsuchapproval.A"Return
+MaterialsAuthorization(RMA)"numbermustaccompanyanyreturnedproduct(s).TheRMAnumber
+maybeobtainedbycallinganAerotechservicecenterorbysubmittingtheappropriaterequest
+availableonourwebsite( www.aerotech.com).Productsmustbereturned,prepaid,toanAerotech
+servicecenter(noC.O.D.orCollectFreightaccepted).Thestatusofanyproductreturnedlaterthan
+thirty(30)daysaftertheissuanceofareturnauthorizationnumberwillbesubjecttoreview.
+VisitGlobalTechnicalSupportPortal forthelocationofyournearestAerotechServicecenter.
+Returned Product Warranty Determination
+AfterAerotech'sexamination,warrantyorout-of-warrantystatuswillbedetermined.Ifupon
+Aerotech'sexaminationawarranteddefectexists,thentheproduct(s)willberepairedatnocharge
+andshipped,prepaid,backtothebuyer.Ifthebuyerdesiresanexpeditedmethodofreturn,the
+product(s)willbeshippedcollect.Warrantyrepairsdonotextendtheoriginalwarrantyperiod.
+Fixed Fee Repairs -Productshavingfixed-feepricingwillrequireavalidpurchaseorderor
+creditcardparticularsbeforeanyserviceworkcanbegin.
+All Other Repairs -AfterAerotech'sevaluation,thebuyershallbenotifiedoftherepaircost.At
+suchtimethebuyermustissueavalidpurchaseordertocoverthecostoftherepairandfreight,
+orauthorizetheproduct(s)tobeshippedbackasis,atthebuyer'sexpense.Failuretoobtaina
+purchaseordernumberorapprovalwithinthirty(30)daysofnotificationwillresultinthe
+product(s)beingreturnedasis,atthebuyer'sexpense.
+Repairworkiswarrantedforninety(90)daysfromdateofshipment.Replacementcomponentsare
+warrantedforoneyearfromdateofshipment.
+AGV3DHardwareManual AppendixA:WarrantyandFieldService
+www.aerotech.com 55
+
+Rush Service
+Attimes,thebuyermaydesiretoexpeditearepair.Regardlessofwarrantyorout-of-warranty
+status,thebuyermustissueavalidpurchaseordertocovertheaddedrushservicecost.Rush
+serviceissubjecttoAerotech'sapproval.
+On-site Warranty Repair
+IfanAerotechproductcannotbemadefunctionalbytelephoneassistanceorbysendingandhaving
+thecustomerinstallreplacementparts,andcannotbereturnedtotheAerotechservicecenterfor
+repair,andifAerotechdeterminestheproblemcouldbewarranty-related,thenthefollowingpolicy
+applies:
+Aerotechwillprovideanon-siteFieldServiceRepresentativeinareasonableamountoftime,
+providedthatthecustomerissuesavalidpurchaseordertoAerotechcoveringalltransportation
+andsubsistencecosts.Forwarrantyfieldrepairs,thecustomerwillnotbechargedforthecostof
+laborandmaterial.Ifserviceisrenderedattimesotherthannormalworkperiods,thenspecial
+ratesapply.
+Ifduringtheon-siterepairitisdeterminedtheproblemisnotwarrantyrelated,thentheterms
+andconditionsstatedinthefollowing“On-SiteNon-WarrantyRepair”sectionapply.
+On-site Non-Warranty Repair
+IfanyAerotechproductcannotbemadefunctionalbytelephoneassistanceorpurchased
+replacementparts,andcannotbereturnedtotheAerotechservicecenterforrepair,thenthe
+followingfieldservicepolicyapplies:
+Aerotechwillprovideanon-siteFieldServiceRepresentativeinareasonableamountoftime,
+providedthatthecustomerissuesavalidpurchaseordertoAerotechcoveringalltransportation
+andsubsistencecostsandtheprevailinglaborcost,includingtraveltime,necessarytocomplete
+therepair.
+Service Locations
+http://www.aerotech.com/contact-sales.aspx?mapState=showMap
+USA, CANADA, MEXICO
+Aerotech,Inc.
+GlobalHeadquarters
+CHINA
+AerotechChina
+Full-ServiceSubsidiary
+GERMANY
+AerotechGermany
+Full-ServiceSubsidiary
+TAIWAN
+AerotechTaiwan
+Full-ServiceSubsidiary
+UNITED KINGDOM
+AerotechUnitedKingdom
+Full-ServiceSubsidiary
+AppendixA:WarrantyandFieldService AGV3DHardwareManual
+56 www.aerotech.com
+
+AppendixB:RevisionHistory
+Revision Description
+2.01 NewdimensiondrawingforAGV3D-20( Figure2-1)
+2.00 Generalupdate
+1.01 UpdatedSection1.3.BasicSpecifications
+1.00 NewManual
+AGV3DHardwareManual AppendixB:RevisionHistory
+www.aerotech.com 57
+
+This page intentionally left blank.
+AppendixB:RevisionHistory AGV3DHardwareManual
+58 www.aerotech.com
+
+Index
+2
+2006/42/EC 13
+2011/65/EU 13
+A
+AccuracyandTemperatureEffects 18
+air
+nitrogen 38
+AirRequirements 38
+Altitude 18
+AmbientTemperature 18
+attenuator 11
+B
+BasicSpecifications 19
+beamshutter 11
+C
+CablePartNumbers 47
+chiller 39
+ClassI 9
+ClassII 9
+ClassIIa 9
+ClassIIIa 9
+ClassIIIb 9
+ClassIV 9
+cleaning
+mountingsurface 33
+solvents 52
+Cleaning 52
+compressedair 38
+D
+Dimensions 29
+Directive2006/42/EC 13
+E
+ElectricalInstallation 43
+EN60204-12010 13
+ENISO121002010 13
+EU2015/863 13
+F
+FeedbackSpecifications 50
+fieldservice 51
+H
+HandlingtheScanHead 28
+Humidity 18
+I
+Inspection 51-52
+InspectionSchedule 51
+isopropylalcohol 52
+L
+label 28
+lubrication 52
+M
+Maintenance 51
+maximumpermittedradiationvalue 10
+MotorSpecifications 50
+mountingsurface
+cleaning 33
+N
+nitrogen 38
+O
+Opticalsurfacescontaminated 52
+OrderingOptions 17
+P
+partnumber 28
+ProtectionRating 18
+protectivegroundconnection 8,44
+ProtectiveWindows 52
+S
+SecuringtheScanHeadtotheMountingSurface 33
+AGV3DHardwareManual Index
+www.aerotech.com 59
+
+serialnumber 28
+ServiceandInspectionSchedule 51
+solvents 52
+stabilizingstage 28
+stage
+stabilizing 28
+T
+TableofContents 3
+TemperatureEffects 18
+TurningMirrors 53
+U
+UnpackingandHandlingtheScanHead 28
+V
+Vibration 18
+W
+WarrantyandFieldService 55
+WaterRequirements 39
+Index AGV3DHardwareManual
+60 www.aerotech.com

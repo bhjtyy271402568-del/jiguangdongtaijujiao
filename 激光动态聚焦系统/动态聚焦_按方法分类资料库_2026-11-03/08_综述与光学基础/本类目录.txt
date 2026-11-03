@@ -1,0 +1,32 @@
+﻿08_综述与光学基础
+
+R016 | Variable optical elements for fast focus control | Nature Photonics
+状态：摘要或元数据网页已保存
+来源：https://www.nature.com/articles/s41566-020-0684-z
+文件：08_综述与光学基础\R016_Variable optical elements for fast focus control _ Nature Photonics.html
+
+R042 | Propagation of a Gaussian Beam Through a Thin Lens | Edmund Optics
+状态：网页已保存
+来源：https://www.edmundoptics.com/knowledge-center/application-notes/lasers/gaussian-beam-propagation/
+文件：08_综述与光学基础\R042_Propagation of a Gaussian Beam Through a Thin Lens _ Edmund Optics.html
+
+S001 | Variable optical elements for fast focus control_机构库作者稿
+状态：未获取
+来源：https://diposit.ub.edu/dspace/bitstream/2445/192696/1/704304.pdf
+
+
+A001 | 综述_大学机构库作者稿_新地址
+状态：PDF已下载
+来源：https://diposit.ub.edu/bitstreams/499f25a7-7d55-4c1d-b9bc-d5568d2fcaf8/download
+文件：08_综述与光学基础\A001_综述_大学机构库作者稿_新地址.pdf
+
+B001 | 激光自身空间维度加工系统综述_机械工程学报2023
+状态：PDF已下载
+来源：https://qikan.cmes.org/jxgcxb/CN/PDF/10.3901/JME.2023.19.375
+文件：08_综述与光学基础\B001_激光自身空间维度加工系统综述_机械工程学报2023.pdf
+
+B005 | Variable_optical_elements_作者稿元数据
+状态：摘要或元数据网页已保存
+来源：https://diposit.ub.edu/items/c5405db1-7249-4964-abb3-89c9d150361f/full
+文件：08_综述与光学基础\B005_Variable optical elements for fast focus control.html
+

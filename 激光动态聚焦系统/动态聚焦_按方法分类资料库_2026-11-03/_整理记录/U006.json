@@ -1,0 +1,32 @@
+{
+  "id": "U006",
+  "url": "https://doi.org/10.1016/j.ijmachtools.2025.104310",
+  "category": "01_移动透镜式与匹配光学",
+  "title": "2025_模型驱动三维焦点移动_透明柔性聚合物微加工",
+  "context": "用户提供的正式期刊全文PDF，已核对首页标题与DOI",
+  "origins": [
+    "F:\\发票\\1-s2.0-S0890695525000653-main.pdf"
+  ],
+  "local_source": "F:\\发票\\1-s2.0-S0890695525000653-main.pdf",
+  "doi": "10.1016/j.ijmachtools.2025.104310",
+  "status": "PDF已下载",
+  "files": [
+    {
+      "path": "01_移动透镜式与匹配光学\\U006_2025_模型驱动三维焦点移动_透明柔性聚合物微加工.pdf",
+      "type": "PDF",
+      "pages": 28,
+      "bytes": 42300644,
+      "sha256": "eb2cb66b75f95689028ed2a1282314ba53594d3fa10bcf9b91ed8735bf63e391",
+      "url": "https://doi.org/10.1016/j.ijmachtools.2025.104310",
+      "title": "2025_模型驱动三维焦点移动_透明柔性聚合物微加工",
+      "text_chars": 125458,
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    }
+  ],
+  "attempts": [
+    {
+      "source": "F:\\发票\\1-s2.0-S0890695525000653-main.pdf",
+      "result": "用户提供本地PDF，复制归档，原件保留"
+    }
+  ]
+}

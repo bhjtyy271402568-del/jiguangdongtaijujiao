@@ -1,0 +1,33 @@
+{
+  "id": "S009",
+  "url": "https://www.raylase.de/_Resources/Persistent/5/1/8/9/5189d9ad9239901c83aa37b1738071904ed74596/2026-03-16_Datenblatt_FOCUSSHIFTER%20RD-14_EN_v2.0.pdf",
+  "category": "01_移动透镜式与匹配光学",
+  "origins": [
+    "补充检索_原文提及条目及有效替代入口"
+  ],
+  "context": "RAYLASE_FOCUSSHIFTER_RD14_有效新版2026",
+  "title": "RAYLASE_FOCUSSHIFTER_RD14_有效新版2026",
+  "files": [
+    {
+      "path": "01_移动透镜式与匹配光学\\S009_RAYLASE_FOCUSSHIFTER_RD14_有效新版2026.pdf",
+      "type": "PDF",
+      "pages": 8,
+      "bytes": 1560091,
+      "sha256": "4a1f8a40c5411e75fa1e43f8e515a054364fe465a5e5117fd99324d647688e6d",
+      "url": "https://www.raylase.de/_Resources/Persistent/5/1/8/9/5189d9ad9239901c83aa37b1738071904ed74596/2026-03-16_Datenblatt_FOCUSSHIFTER%20RD-14_EN_v2.0.pdf",
+      "text_chars": 16068,
+      "title": "03119_Datenblatt_FOCUSSHIFTER RD-14.indd",
+      "preview": "www.raylase.com\nEFFICIENT PROCESSING OF DIFFERENT SURFACE HEIGHTS\nThe combination of f-theta lens and defl  ection unit is an ideal solution for many marking and engraving \napplications. After all, for small and medium-sized working fi  elds, it off  ers small focus diameters and good \nfl  at fi  eld correction with low spot variations.\nHowever, the workpieces are not always fl  at. Especially when cleaning components from paint, oxide layers or \noil, cutting fl  exible printed circuit boards or",
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://www.raylase.de/_Resources/Persistent/5/1/8/9/5189d9ad9239901c83aa37b1738071904ed74596/2026-03-16_Datenblatt_FOCUSSHIFTER%20RD-14_EN_v2.0.pdf",
+      "http": 200,
+      "final_url": "https://www.raylase.de/_Resources/Persistent/5/1/8/9/5189d9ad9239901c83aa37b1738071904ed74596/2026-03-16_Datenblatt_FOCUSSHIFTER%20RD-14_EN_v2.0.pdf",
+      "result": "有效PDF"
+    }
+  ],
+  "status": "PDF已下载"
+}

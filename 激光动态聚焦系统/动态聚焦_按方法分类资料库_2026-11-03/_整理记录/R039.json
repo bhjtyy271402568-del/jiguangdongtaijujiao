@@ -1,0 +1,34 @@
+{
+  "url": "https://www.optotune.com/s/Optotune-tunable-optics-for-laser-processing.pdf",
+  "category": "03_液体与膜片可调透镜",
+  "origins": [
+    "激光动态聚焦_来源索引与验证清单_2026-11-03.md",
+    "用户粘贴_激光动态聚焦深度调研.txt"
+  ],
+  "context": "\n- 原始入口：https://www.optotune.com/s/Optotune-tunable-optics-for-laser-processing.pdf",
+  "id": "R039",
+  "files": [
+    {
+      "path": "03_液体与膜片可调透镜\\R039_Optotune_tunable_optics_for_laser_processing_2024.pdf",
+      "type": "PDF",
+      "pages": 14,
+      "bytes": 1158031,
+      "sha256": "743b648c9a2ae2c402c0a9e2c9edc75b2cc243cfdce157affaab8c682937670b",
+      "url": "https://145326430.fs1.hubspotusercontent-eu1.net/hubfs/145326430/2025%20Website%20Downloads/Download%20Hub/Optotune%2Btunable%2Boptics%2Bfor%2Blaser%2Bprocessing.pdf",
+      "text_chars": 8232,
+      "title": "",
+      "preview": "Optotune tunable optics for Laser Processing\nEnabling beam wobbling, inline inspection and 3D laser processing\nNovember 2024\nDr Branislav Timotijevic, BD Manager\nBernstrasse 388 | CH-8953 Dietikon | Switzerland\nPhone +41 58 856 3000 | www.optotune.com | info@optotune.com\n\nThis information is confidential to Optotune and is not to be copied or forwarded to any 3rd party without our prior written consent.\nBeam shifting devices\nOptotune provides four core product lines\n2\nFocus tunable lenses Laser ",
+      "validation": "PDF签名、逐页解析、首末页渲染通过"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://www.optotune.com/s/Optotune-tunable-optics-for-laser-processing.pdf",
+      "http": 200,
+      "final_url": "https://145326430.fs1.hubspotusercontent-eu1.net/hubfs/145326430/2025%20Website%20Downloads/Download%20Hub/Optotune%2Btunable%2Boptics%2Bfor%2Blaser%2Bprocessing.pdf",
+      "result": "有效PDF"
+    }
+  ],
+  "status": "PDF已下载",
+  "title": "Optotune_tunable_optics_for_laser_processing_2024"
+}

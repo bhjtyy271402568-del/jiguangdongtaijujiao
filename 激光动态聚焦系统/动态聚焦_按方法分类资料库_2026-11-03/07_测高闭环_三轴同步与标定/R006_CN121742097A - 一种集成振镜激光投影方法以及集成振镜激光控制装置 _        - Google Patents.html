@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CN121742097A - 一种集成振镜激光投影方法以及集成振镜激光控制装置 
+        - Google Patents</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="referrer" content="origin-when-crossorigin">
+    <link rel="canonical" href="https://patents.google.com/patent/CN121742097A/zh">
+    <meta name="description" content="
+     本申请公开了一种集成振镜激光投影方法以及集成振镜激光控制装置，其包括步骤一：控制卡分类存储各项数据；上位机下发系统参数指令时，根据所述上位机的通信方式自动切换通信接口，解析指令数据并存储至EEPROM；步骤二:上位机下发指令后，控制卡协同控制激光光源的开关状态与激光振镜的偏转角度，调节透镜位置和焦距；步骤三：根据上位机的靶标点定位指令；控制卡协同控制激光器与振镜对靶标中心进行粗定位；根据粗定位获取的靶标点为初始参考位置，对靶标中心进行精定位。本申请具有显著提升了集成振镜激光控制装置的环境适应性、控制精度与操作便捷性的效果。 
+     
+   
+   ">
+    <meta name="DC.type" content="patent">
+    <meta name="DC.title" content="一种集成振镜激光投影方法以及集成振镜激光控制装置 
+       ">
+    <meta name="DC.date" content="2025-11-05" scheme="dateSubmitted">
+    <meta name="DC.description" content="
+     本申请公开了一种集成振镜激光投影方法以及集成振镜激光控制装置，其包括步骤一：控制卡分类存储各项数据；上位机下发系统参数指令时，根据所述上位机的通信方式自动切换通信接口，解析指令数据并存储至EEPROM；步骤二:上位机下发指令后，控制卡协同控制激光光源的开关状态与激光振镜的偏转角度，调节透镜位置和焦距；步骤三：根据上位机的靶标点定位指令；控制卡协同控制激光器与振镜对靶标中心进行粗定位；根据粗定位获取的靶标点为初始参考位置，对靶标中心进行精定位。本申请具有显著提升了集成振镜激光控制装置的环境适应性、控制精度与操作便捷性的效果。 
+     
+   
+   ">
+    <meta name="citation_patent_application_number" content="CN:202511609956.6A">
+    <meta name="citation_patent_publication_number" content="CN:121742097:A">
+    <meta name="DC.date" content="2026-03-27">
+    <meta name="DC.contributor" content="王浩天" scheme="inventor">
+    <meta name="DC.contributor" content="涂俊超" scheme="inventor">
+    <meta name="DC.contributor" content="罗嗣友" scheme="inventor">
+    <meta name="DC.contributor" content="Zero Light Intelligent Technology Ningbo Co ltd" scheme="assignee">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Product+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700">
+
+    <style>
+      
+      #gb { position: absolute; top: 6px; left: auto; right: 0; width: auto; min-width: 135px !important; }   
+      body { transition: none; }
+    </style>
+    <script></script>
+
+    <script>
+      window.version = 'patent-search.search_20261019_RC00';
+
+      function sendFeedback() {
+        userfeedback.api.startFeedback({
+          'productId': '713680',
+          'bucket': 'patent-search-web',
+          'productVersion': window.version,
+        });
+      }
+
+      window.experiments = {};
+      window.experiments.patentCountries = "ae,ag,al,am,ao,ap,ar,at,au,aw,az,ba,bb,bd,be,bf,bg,bh,bj,bn,bo,br,bw,bx,by,bz,ca,cf,cg,ch,ci,cl,cm,cn,co,cr,cs,cu,cy,cz,dd,de,dj,dk,dm,do,dz,ea,ec,ee,eg,em,ep,es,fi,fr,ga,gb,gc,gd,ge,gh,gm,gn,gq,gr,gt,gw,hk,hn,hr,hu,ib,id,ie,il,in,ir,is,it,jo,jp,ke,kg,kh,km,kn,kp,kr,kw,kz,la,lc,li,lk,lr,ls,lt,lu,lv,ly,ma,mc,md,me,mg,mk,ml,mn,mo,mr,mt,mw,mx,my,mz,na,ne,ng,ni,nl,no,nz,oa,om,pa,pe,pg,ph,pl,pt,py,qa,ro,rs,ru,rw,sa,sc,sd,se,sg,si,sk,sl,sm,sn,st,su,sv,sy,sz,td,tg,th,tj,tm,tn,tr,tt,tw,tz,ua,ug,us,uy,uz,vc,ve,vn,wo,yu,za,zm,zw";
+      
+      
+      window.experiments.keywordWizard = true;
+      
+      
+      
+      window.experiments.definitions = true;
+      window.experiments.plogs = true;
+
+      window.Polymer = {
+        dom: 'shady',
+        lazyRegister: true,
+      };
+    </script>
+
+    <script src="//www.gstatic.com/patent-search/frontend/patent-search.search_20261019_RC00/scs/compiled_dir/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <link rel="import" href="//www.gstatic.com/patent-search/frontend/patent-search.search_20261019_RC00/scs/compiled_dir/search-app-vulcanized.html">
+  </head>
+  <body unresolved>
+    
+    
+    <script></script>
+    <script src="//www.gstatic.com/patent-search/frontend/patent-search.search_20261019_RC00/scs/compiled_dir/search-app-vulcanized.js"></script>
+    <search-app>
+      
+      
+
+      <article class="result" itemscope itemtype="http://schema.org/ScholarlyArticle">
+  <h1 itemprop="pageTitle">CN121742097A - 一种集成振镜激光投影方法以及集成振镜激光控制装置 
+        - Google Patents</h1>
+  <span itemprop="title">一种集成振镜激光投影方法以及集成振镜激光控制装置 
+       </span>
+
+  <meta itemprop="type" content="patent">
+  
+  <h2>Info</h2>
+
+  <dl>
+    <dt>Publication number</dt>
+    <dd itemprop="publicationNumber">CN121742097A</dd>
+    <meta itemprop="numberWithoutCodes" content="121742097">
+    <meta itemprop="kindCode" content="A">
+    <meta itemprop="publicationDescription" content="Unexaminded application">
+    <span>CN121742097A</span>
+    <span>CN202511609956.6A</span>
+    <span>CN202511609956A</span>
+    <span>CN121742097A</span>
+    <span>CN 121742097 A</span>
+    <span>CN121742097 A</span>
+    <span>CN 121742097A</span>
+    <span>  </span>
+    <span> </span>
+    <span> </span>
+    <span>CN 202511609956 A</span>
+    <span>CN202511609956 A</span>
+    <span>CN 202511609956A</span>
+    <span>CN 121742097 A</span>
+    <span>CN121742097 A</span>
+    <span>CN 121742097A</span>
+
+    <dt>Authority</dt>
+    <dd itemprop="countryCode">CN</dd>
+    <dd itemprop="countryName">China</dd>
+
+    <dt>Prior art keywords</dt>
+    <dd itemprop="priorArtKeywords" repeat>laser</dd>
+    <dd itemprop="priorArtKeywords" repeat>galvanometer</dd>
+    <dd itemprop="priorArtKeywords" repeat>control card</dd>
+    <dd itemprop="priorArtKeywords" repeat>integrated</dd>
+    <dd itemprop="priorArtKeywords" repeat>host computer</dd>
+
+    <dt>Prior art date</dt>
+    <dd><time itemprop="priorArtDate" datetime="2025-11-05">2025-11-05</time></dd>
+
+    <dt>Legal status (The legal status is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the status listed.)</dt>
+    <dd itemprop="legalStatusIfi" itemscope>
+      <span itemprop="status">Pending</span>
+    </dd>
+  </dl>
+
+  <dt>Application number</dt>
+  <dd itemprop="applicationNumber">CN202511609956.6A</dd>
+
+  <dt>Other languages</dt>
+  <dd itemprop="otherLanguages" itemscope repeat>
+    <a href="/patent/CN121742097A/en">
+      <span itemprop="name">English</span> (<span itemprop="code">en</span>)
+    </a>
+  </dd>
+
+  
+
+  <dt>Inventor</dt>
+  <dd itemprop="inventor" repeat>王浩天</dd>
+  <dd itemprop="inventor" repeat>涂俊超</dd>
+  <dd itemprop="inventor" repeat>罗嗣友</dd>
+
+  <dt>Current Assignee (The listed assignees may be inaccurate. Google has not performed a legal analysis and makes no representation or warranty as to the accuracy of the list.)</dt>
+  <dd itemprop="assigneeCurrent" repeat>
+    Zero Light Intelligent Technology Ningbo Co ltd
+  </dd>
+
+  <dt>Original Assignee</dt>
+  <dd itemprop="assigneeOriginal" repeat>Zero Light Intelligent Technology Ningbo Co ltd</dd>
+
+  <dt>Priority date (The priority date is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the date listed.)</dt>
+  <dd><time itemprop="priorityDate" datetime="2025-11-05">2025-11-05</time></dd>
+
+  <dt>Filing date</dt>
+  <dd><time itemprop="filingDate" datetime="2025-11-05">2025-11-05</time></dd>
+
+  <dt>Publication date</dt>
+  <dd><time itemprop="publicationDate" datetime="2026-03-27">2026-03-27</time></dd>
+
+  
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2025-11-05">2025-11-05</time>
+    <span itemprop="title">Application filed by Zero Light Intelligent Technology Ningbo Co ltd</span>
+    <span itemprop="type">filed</span>
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    
+    <span itemprop="assigneeSearch">Zero Light Intelligent Technology Ningbo Co ltd</span>
+  </dd>
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2025-11-05">2025-11-05</time>
+    <span itemprop="title">Priority to CN202511609956.6A</span>
+    <span itemprop="type">priority</span>
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    <span itemprop="documentId">patent/CN121742097A/zh</span>
+    
+  </dd>
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date" datetime="2026-03-27">2026-03-27</time>
+    <span itemprop="title">Publication of CN121742097A</span>
+    <span itemprop="type">publication</span>
+    <span itemprop="critical" content="true" bool>Critical</span>
+    
+    
+    <span itemprop="documentId">patent/CN121742097A/zh</span>
+    
+  </dd>
+  <dd itemprop="events" itemscope repeat>
+    <time itemprop="date">Status</time>
+    <span itemprop="title">Pending</span>
+    <span itemprop="type">legal-status</span>
+    <span itemprop="critical" content="true" bool>Critical</span>
+    <span itemprop="current" content="true" bool>Current</span>
+    
+    
+    
+  </dd>
+
+  <h2>Links</h2>
+  <ul>
+    
+
+    <li itemprop="links" itemscope repeat>
+        <meta itemprop="id" content="espacenetLink">
+        <a href="https://worldwide.espacenet.com/publicationDetails/biblio?CC=CN&amp;NR=121742097A&amp;KC=A&amp;FT=D" itemprop="url" target="_blank"><span itemprop="text">Espacenet</span></a>
+      </li>
+      
+
+    
+
+    <li itemprop="links" itemscope repeat>
+      <meta itemprop="id" content="globalDossierLink">
+      <a href="https://globaldossier.uspto.gov/result/application/CN/202511609956/1" itemprop="url" target="_blank"><span itemprop="text">Global Dossier</span></a>
+    </li>
+
+    
+
+      
+
+      
+
+      
+      <li itemprop="links" itemscope repeat>
+        <meta itemprop="id" content="stackexchangeLink">
+        <a href="https://patents.stackexchange.com/questions/tagged/CN121742097A" itemprop="url"><span itemprop="text">Discuss</span></a>
+      </li>
+  </ul>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <section>
+    <h2>Landscapes</h2>
+    <ul>
+      <li itemprop="landscapes" itemscope repeat>
+        <span itemprop="name">Laser Beam Processing</span>
+        (<span itemprop="type">AREA</span>)
+      </li>
+    </ul>
+  </section>
+
+
+  <section itemprop="abstract" itemscope>
+    <h2>Abstract</h2>
+    
+    <div itemprop="content" html><abstract mxw-id="PA772810487" lang="ZH" load-source="patent-office">
+    <div num="0001" class="abstract">本申请公开了一种集成振镜激光投影方法以及集成振镜激光控制装置，其包括步骤一：控制卡分类存储各项数据；上位机下发系统参数指令时，根据所述上位机的通信方式自动切换通信接口，解析指令数据并存储至EEPROM；步骤二:上位机下发指令后，控制卡协同控制激光光源的开关状态与激光振镜的偏转角度，调节透镜位置和焦距；步骤三：根据上位机的靶标点定位指令；控制卡协同控制激光器与振镜对靶标中心进行粗定位；根据粗定位获取的靶标点为初始参考位置，对靶标中心进行精定位。本申请具有显著提升了集成振镜激光控制装置的环境适应性、控制精度与操作便捷性的效果。</div>
+    </abstract>
+  </div>
+  </section>
+
+  <section itemprop="description" itemscope>
+    <h2>Description</h2>
+    
+    <div itemprop="content" html><div mxw-id="PDES524769282" lang="ZH" load-source="patent-office" class="description">
+    <invention-title lang="ZH" id="title1">一种集成振镜激光投影方法以及集成振镜激光控制装置</invention-title>
+    <technical-field>
+      <div id="p0001" class="description-paragraph">技术领域</div>
+      <div id="p0002" num="0001" class="description-paragraph">本申请涉及激光定位、振镜控制技术的领域，尤其是涉及一种集成振镜激光投影方法以及集成振镜激光控制装置。</div>
+    </technical-field>
+    <background-art>
+      <div id="p0003" class="description-paragraph">背景技术</div>
+      <div id="p0004" num="0002" class="description-paragraph">振镜控制技术在激光加工、精密标记以及光学扫描等领域占据核心地位。其原理是借助高速伺服系统驱动反射镜，达成激光束在二维空间内的高精度偏转与轨迹控制。</div>
+      <div id="p0005" num="0003" class="description-paragraph">当下主流的振镜系统通常运用标准化协议，搭配双轴高速电机与位置反馈装置，能够实现高分辨率且快速响应的扫描性能。不过，随着应用场景朝着“高速动态控制”以及“大范围高精度”方向持续拓展，传统振镜控制方案的弊端逐渐显现。诸如通信带宽受限、轨迹更新滞后、控制算法鲁棒性欠佳等问题不断涌现，已然无法契合智能制造与先进光学系统对实时性和智能化水平日益提高的要求。</div>
+      <div id="p0006" num="0004" class="description-paragraph">进一步分析发现，传统振镜控制系统在系统架构方面主要存在三大技术瓶颈。一是通信接口单一，难以支持多设备协同以及实时数据交互；二是数据存储机制固定，缺乏针对不同应用场景的灵活配置能力；三是传统运动控制算法在高速、大角度偏转场景中，难以兼顾响应速度与轨迹精度，容易产生动态误差。这些技术缺陷严重阻碍了激光扫描系统在工业自动化、精密测量等高端领域的进一步拓展与应用，因而具备进一步改进的空间。</div>
+    </background-art>
+    <disclosure>
+      <div id="p0007" class="description-paragraph">发明内容</div>
+      <div id="p0008" num="0005" class="description-paragraph">本申请提出一种集成振镜激光投影方法以及集成振镜激光控制装置。该方法融合了多协议通信机制、可配置的混合式存储方案与智能运动控制算法，打破了传统方案对外部辅助设备的依赖，显著提升了集成振镜激光控制装置的环境适应性、控制精度与操作便捷性。</div>
+      <div id="p0009" num="0006" class="description-paragraph">具体而言，本发明支持多种工业标准通信协议，包括TCP、USART等，具备良好的系统兼容性与扩展性，能够满足多类型设备的联动控制需求；同时，集成振镜激光控制装置集成FLASH、SRAM及EEPROM等多级混合存储介质，提供高效可靠的数据存储与管理能力，适应不同应用场景下的控制策略切换与数据缓存需求；在控制算法方面，本发明提出了一种基于运动学优化的智能插值算法，并结合独创的拐角延时自适应调节机制，有效解决了传统振镜系统在大角度、高速转向过程中常出现的振动过大、响应迟缓等技术难题，从而实现更加平滑、精准的轨迹控制与动态响应。</div>
+      <div id="p0010" num="0007" class="description-paragraph">本申请提供的一种集成振镜激光投影方法以及集成振镜激光控制装置采用如下的技术方案：</div>
+      <div id="p0011" class="description-paragraph">一种集成振镜激光投影方法，包括如下步骤：</div>
+      <div id="p0012" class="description-paragraph">步骤一：控制卡分类存储各项数据；上位机下发系统参数指令时，根据所述上位机的通信方式自动切换通信接口，解析指令数据并存储至EEPROM；</div>
+      <div id="p0013" class="description-paragraph">步骤二:上位机下发指令后，控制卡协同控制激光光源的开关状态与激光振镜的偏转角度，调节透镜位置和焦距；</div>
+      <div id="p0014" class="description-paragraph">步骤三：根据上位机的靶标点定位指令；控制卡协同控制激光器与振镜对靶标中心进行粗定位；根据粗定位获取的靶标点为初始参考位置，对靶标中心进行精定位；</div>
+      <div id="p0015" class="description-paragraph">步骤四：解析上位机下发的图形文件，提取图形轮廓信息与坐标点序列；在图形中的相邻点位之间插入插值点以生成连续轨迹；</div>
+      <div id="p0016" class="description-paragraph">步骤五：对轨迹中的特征点进行动态延时计算；</div>
+      <div id="p0017" class="description-paragraph">步骤六：将处理完成后的坐标序列发送至振镜；</div>
+      <div id="p0018" class="description-paragraph">步骤七：控制卡协同控制光路中的激光光源的开关状态与激光振镜的偏转角度，使激光束按设定轨迹在物体表面投射。</div>
+      <div id="p0019" num="0008" class="description-paragraph">通过采用上述技术方案，相比于现有技术而言，首先，本发明通过根据所述上位机的通信方式自动切换通信接口，可以支持多种工业标准通信协议，包括TCP、USART等，具备良好的系统兼容性与扩展性，能够满足多类型设备的联动控制需求；其次，通过控制卡分类存储各项数据和解析指令数据并存储至EEPROM，实现多级混合存储介质，提供高效可靠的数据存储与管理能力，适应不同应用场景下的控制策略切换与数据缓存需求；最后，本发明提出了一种基于运动学优化的智能插值算法，并结合独创的拐角延时自适应调节机制，有效解决了传统振镜系统在大角度、高速转向过程中常出现的振动过大、响应迟缓等技术难题，从而实现更加平滑、精准的轨迹控制与动态响应，本发明依据起点与目标终点之间的空间位置，计算出一条合理的运动路径。</div>
+      <div id="p0020" num="0009" class="description-paragraph">优选的，所述步骤一具体包括以下步骤：</div>
+      <div id="p0021" class="description-paragraph">步骤1.1：当上位机下发系统参数指令时，控制卡根据其与上位机的通信方式自动切换至串口模式或TCP模式，并对接收的数据进行解析；</div>
+      <div id="p0022" class="description-paragraph">步骤1.2：将解析后的参数存储至EEPROM实现非易失性保存；</div>
+      <div id="p0023" class="description-paragraph">步骤1.3：按数据类型实施分级存储：将高频读写的数据、重要但偶尔修改的配置参数、固化的配置信息或不常更改的大量数据分别存入SRAM、EEPROM和FLASH中；</div>
+      <div id="p0024" class="description-paragraph">步骤1.4：对系统关键参数执行冗余备份及校验：控制卡将系统关键参数在至少两种存储介质中进行冗余备份；在系统启动或运行过程中，控制卡定期校验关键参数的完整性和有效性。</div>
+      <div id="p0025" num="0010" class="description-paragraph">优选的，所述步骤二具体包括以下步骤：</div>
+      <div id="p0026" class="description-paragraph">步骤2.1：上位机下发指令至控制卡，控制卡协同控制光路中激光光源的开关状态与激光振镜的偏转角度，以“十”字投射的方式将激光定位至目标扫描区域的反光靶点附近；</div>
+      <div id="p0027" class="description-paragraph">步骤2.2：通过调节承载透镜的光学平台位置，配合光路中的准直扩束组件与动态聚焦装置，实现对激光线条尺寸的控制；</div>
+      <div id="p0028" class="description-paragraph">步骤2.3：激光在靶点附近形成最小光斑，将当前焦距参数存储为系统基准值；后续上电时将自动调用该焦距参数完成焦距复位。</div>
+      <div id="p0029" num="0011" class="description-paragraph">优选的，所述步骤三具体包括以下步骤：</div>
+      <div id="p0030" class="description-paragraph">步骤3.1：上位机下发靶标点定位指令，控制卡在解析指令后，将协同控制激光器与振镜，以预设靶标点为中心，在预设靶标点附近区域以矩阵方式按固定步长向外扩张扫描；</div>
+      <div id="p0031" class="description-paragraph">步骤3.2：基于光传感器捕获的反射信号实时判定靶标中心位置，完成对靶标中心的粗定位；</div>
+      <div id="p0032" class="description-paragraph">步骤3.3：当扫描扩展至预设最大范围或成功识别靶标点时终止粗定位，并根据识别结果判断是否启动精定位，若粗定位失败，则向上位机返回错误代码；若粗定位成功，则以粗定位坐标为初始参考点进入精定位模式；</div>
+      <div id="p0033" class="description-paragraph">步骤3.4：控制激光器与振镜以粗定位获取的靶标点为初始参考位置，在粗定位点周边缩小扫描范围，执行高精度定位扫描，最终将精确定位的靶标点坐标反馈至上位机。</div>
+      <div id="p0034" num="0012" class="description-paragraph">优选的，所述步骤四具体包括以下步骤：</div>
+      <div id="p0035" class="description-paragraph">步骤4.1：上位机通过预设的数据传输协议，将指定格式将图形文件发送至控制卡；</div>
+      <div id="p0036" class="description-paragraph">步骤4.2：控制卡接收并解析图形文件内容，提取图形轮廓信息及坐标点序列；</div>
+      <div id="p0037" class="description-paragraph">步骤4.3：根据振镜运动速度和系统的动态响应能力，控制卡对图形相邻坐标点位之间插入中间坐标点；</div>
+      <div id="p0038" class="description-paragraph">步骤4.4：获得连续平滑的振镜运动轨迹和按预设路径移动的激光束。</div>
+      <div id="p0039" num="0013" class="description-paragraph">优选的，所述步骤五具体包括以下步骤：</div>
+      <div id="p0040" class="description-paragraph">步骤5.1：识别轨迹中的特殊点，包括轨迹的起始、终止点、及曲率变化超过设定阈值的突变点；</div>
+      <div id="p0041" class="description-paragraph">步骤5.2：在特殊点处，控制卡会插入可调时间延迟，使激光器开关动作延迟至振镜运动稳定后触发。</div>
+      <div id="p0042" num="0014" class="description-paragraph">优选的，所述步骤六具体包括：在完成插值点的计算与路径规划后，控制卡自动转换坐标数据为符合振镜行业标准的高速数据通信协议；并将处理后的坐标序列发送至振镜。</div>
+      <div id="p0043" num="0015" class="description-paragraph">一种振镜激光控制装置，适用于上述的集成振镜激光投影方法，包括上位机、控制卡、激光振镜扫描装置和激光能量反馈装置，所述上位机与所述控制卡电信号连接，所述控制卡、所述激光振镜扫描装置和所述激光能量反馈装置电信号连接。</div>
+      <div id="p0044" num="0016" class="description-paragraph">通过采用上述技术方案，与现有技术相比，振镜激光控制装置通过上位机、控制卡、激光振镜扫描装置和激光能量反馈装置，形成高度集成化的设计架构，通过集成振镜激光投影方法，创新性地融合了激光功率控制、振镜运动控制、靶标点定位与图形投影等多项功能，不仅能够在复杂环境下实现靶标点的快速、精确定位，振镜运动路径的高效规划以及图形内容的精准投影，还可支持多种工业标准通信协议，集成多级混合存储介质。</div>
+      <div id="p0045" num="0017" class="description-paragraph">综上所述，本申请包括以下至少一种有益技术效果：</div>
+      <div id="p0046" class="description-paragraph">1.首先，本发明通过根据所述上位机的通信方式自动切换通信接口，可以支持多种工业标准通信协议，包括TCP、USART等，具备良好的系统兼容性与扩展性，能够满足多类型设备的联动控制需求；其次，通过控制卡分类存储各项数据和解析指令数据并存储至EEPROM，实现多级混合存储介质，提供高效可靠的数据存储与管理能力，适应不同应用场景下的控制策略切换与数据缓存需求；最后，本发明提出了一种基于运动学优化的智能插值算法，并结合独创的拐角延时自适应调节机制，有效解决了传统振镜系统在大角度、高速转向过程中常出现的振动过大、响应迟缓等技术难题，从而实现更加平滑、精准的轨迹控制与动态响应，本发明依据起点与目标终点之间的空间位置，计算出一条合理的运动路径；</div>
+      <div id="p0047" class="description-paragraph">2.振镜激光控制装置通过上位机、控制卡、激光振镜扫描装置和激光能量反馈装置，形成高度集成化的设计架构，通过集成振镜激光投影方法，创新性地融合了激光功率控制、振镜运动控制、靶标点定位与图形投影等多项功能，不仅能够在复杂环境下实现靶标点的快速、精确定位，振镜运动路径的高效规划以及图形内容的精准投影，还可支持多种工业标准通信协议，集成多级混合存储介质。</div>
+    </disclosure>
+    <description-of-drawings>
+      <div id="p0048" class="description-paragraph">附图说明</div>
+      <div id="p0049" num="0018" class="description-paragraph">图1为本实施例中振镜激光控制装置的部分连接示意图；</div>
+      <div id="p0050" class="description-paragraph">图2为本实施例中靶标点定位和振镜控制的效果验证图。</div>
+    </description-of-drawings>
+    <mode-for-invention>
+      <div id="p0051" class="description-paragraph">具体实施方式</div>
+      <div id="p0052" num="0019" class="description-paragraph">以下结合附图1-图2对本申请作进一步详细说明。</div>
+      <div id="p0053" num="0020" class="description-paragraph">本申请实施例公开一种集成振镜激光投影方法以及集成振镜激光控制装置。</div>
+      <div id="p0054" num="0021" class="description-paragraph">参考图1和图2，集成振镜激光控制装置包括上位机、控制卡、激光振镜扫描装置和激光能量反馈装置，所述上位机与所述控制卡电信号连接，所述控制卡、所述激光振镜扫描装置和所述激光能量反馈装置电信号连接。</div>
+      <div id="p0055" num="0022" class="description-paragraph">其中激光振镜扫描装置包括激光发射器、激光准直扩束装置、激光动态聚焦装置、激光扫描振镜。</div>
+      <div id="p0056" num="0023" class="description-paragraph">激光能量反馈装置包括分光镜和光敏板。</div>
+      <div id="p0057" num="0024" class="description-paragraph">控制卡电路包括以太网口电路、串口电路、振镜差分电路、光电信号检测电路以及一系列电压转换电路。</div>
+      <div id="p0058" num="0025" class="description-paragraph">具体的集成振镜激光投影方法包括</div>
+      <div id="p0059" class="description-paragraph">步骤一：控制卡分类存储各项数据；上位机下发系统参数指令时，根据所述上位机的通信方式自动切换通信接口，解析指令数据并存储至EEPROM；</div>
+      <div id="p0060" class="description-paragraph">步骤一具体包括以下步骤：</div>
+      <div id="p0061" class="description-paragraph">步骤1.1：当上位机下发系统参数指令时，控制卡根据其与上位机的通信方式自动切换至串口模式或TCP模式，并对接收的数据进行解析；</div>
+      <div id="p0062" class="description-paragraph">步骤1.2：将解析后的参数存储至EEPROM实现非易失性保存；可以确保数据在断电情况下仍能保留；</div>
+      <div id="p0063" class="description-paragraph">步骤1.3：按数据类型实施分级存储：将高频读写的数据、重要但偶尔修改的配置参数、固化的配置信息或不常更改的大量数据分别存入SRAM、EEPROM和FLASH中；有利于提高系统运行效率和数据安全性；</div>
+      <div id="p0064" class="description-paragraph">步骤1.4：对系统关键参数执行冗余备份及校验：控制卡将系统关键参数（如安全限制、校验码等）在两种或多种存储介质中进行冗余备份，防止单点存储故障导致系统异常；在系统启动或运行过程中，控制卡定期校验关键参数的完整性和有效性，确保其一致性与有效性。</div>
+      <div id="p0065" num="0026" class="description-paragraph">步骤二:上位机下发指令后，控制卡协同控制激光光源的开关状态与激光振镜的偏转角度，调节透镜位置和焦距；</div>
+      <div id="p0066" class="description-paragraph">步骤二具体包括以下步骤：</div>
+      <div id="p0067" class="description-paragraph">步骤2.1：上位机下发指令至控制卡，控制卡协同控制光路中激光光源的开关状态与激光振镜的偏转角度，以“十”字投射的方式将激光定位至目标扫描区域的反光靶点附近；</div>
+      <div id="p0068" class="description-paragraph">步骤2.2：通过调节承载透镜的光学平台位置，配合光路中的准直扩束组件与动态聚焦装置，实现对激光线条尺寸的精细控制；</div>
+      <div id="p0069" class="description-paragraph">步骤2.3：激光在靶点附近形成小于10纳米的最小光斑，将当前焦距参数存储为系统基准值；后续上电时将自动调用该焦距参数完成焦距复位。</div>
+      <div id="p0070" num="0027" class="description-paragraph">步骤三：根据上位机的靶标点定位指令；控制卡协同控制激光器与振镜对靶标中心进行粗定位；根据粗定位获取的靶标点为初始参考位置，对靶标中心进行精定位；</div>
+      <div id="p0071" class="description-paragraph">步骤三具体包括以下步骤：</div>
+      <div id="p0072" class="description-paragraph">步骤3.1：上位机下发靶标点定位指令，控制卡在解析指令后，将协同控制激光器与振镜，以预设靶标点为中心，在预设靶标点附近区域以矩阵方式按固定步长向外扩张扫描；</div>
+      <div id="p0073" class="description-paragraph">步骤3.2：基于光传感器捕获的反射信号实时判定靶标中心位置，完成对靶标中心的粗定位；</div>
+      <div id="p0074" class="description-paragraph">步骤3.3：当扫描扩展至预设最大范围或成功识别靶标点时终止粗定位，控制卡根据识别结果判断是否启动精定位；若粗定位失败，则向上位机返回错误代码；若粗定位成功，则以粗定位坐标为初始参考点进入精定位模式；</div>
+      <div id="p0075" class="description-paragraph">步骤3.4：在精定位模式中，控制激光器与振镜以粗定位获取的靶标点为初始参考位置，在粗定位点周边缩小扫描范围，执行高精度定位扫描，最终将精确定位的靶标点坐标反馈至上位机。</div>
+      <div id="p0076" num="0028" class="description-paragraph">其中，控制卡向外扩张扫描以及光传感器捕获反射信号的原理如下：控制卡以特定步长控制激光束扫描经过靶标点，此时反射信号经分光镜引导，被光传感器捕获，并依据光信号的强弱转化为电信号的强弱，通过引入负反馈，抑制电子元件因温漂影响致使温度产生细微变化，进而影响相同光强转化后的电信号幅值发生改变，同时，经过校准后可自适应电平比较阈值，将光传感器产生的模拟量转换为数字量，以高电平、低电平的形式判断激光束是否经过靶标点。</div>
+      <div id="p0077" num="0029" class="description-paragraph">步骤四：解析上位机下发的图形文件，提取图形轮廓信息与坐标点序列；在图形中的相邻点位之间插入插值点以生成连续轨迹；</div>
+      <div id="p0078" class="description-paragraph">步骤四具体包括以下步骤：</div>
+      <div id="p0079" class="description-paragraph">步骤4.1：上位机通过预设的数据传输协议，以指定格式将图形文件发送至控制卡；</div>
+      <div id="p0080" class="description-paragraph">步骤4.2：控制卡接收并解析图形文件内容，提取关键的图形轮廓信息及坐标点序列；</div>
+      <div id="p0081" class="description-paragraph">步骤4.3：控制卡根据当时设定的振镜运动速度和系统的动态响应能力，控制卡对图形相邻坐标点位之间插入中间坐标点，使激光束配合振镜能够按预设轨迹丝滑移动，有效提高了振镜的使用寿命；</div>
+      <div id="p0082" class="description-paragraph">步骤4.4：获得连续平滑的振镜运动轨迹和按预设路径移动的激光束。</div>
+      <div id="p0083" num="0030" class="description-paragraph">步骤五：对轨迹中的特征点进行动态延时计算；</div>
+      <div id="p0084" class="description-paragraph">步骤五具体包括以下步骤：</div>
+      <div id="p0085" class="description-paragraph">步骤5.1：识别轨迹中的特殊点，包括轨迹的起始、终止点及曲率变化超过设定阈值的突变点；</div>
+      <div id="p0086" class="description-paragraph">步骤5.2：在特殊点处，控制卡进行动态延时处理，即在某些关键点的附近点位，插入可调时间延迟，使激光器开关动作延迟至振镜运动稳定后触发，从而提高图形投射的准确性与一致性，避免因振镜未稳导致图像边缘偏移。</div>
+      <div id="p0087" num="0031" class="description-paragraph">步骤六：将处理完成后的坐标序列发送至振镜；</div>
+      <div id="p0088" class="description-paragraph">步骤六具体包括：在完成插值点的计算与路径规划后，控制卡自动转换坐标数据为符合振镜行业标准的高速数据通信协议；并将处理后的坐标序列发送至振镜，进而可兼容市面上常见振镜。</div>
+      <div id="p0089" num="0032" class="description-paragraph">步骤七：控制卡协同控制光路中的激光光源的开关状态与激光振镜的偏转角度，使激光束按设定轨迹在物体表面投射。</div>
+      <div id="p0090" num="0033" class="description-paragraph">进一步的，本实施例中，准备一块激光投影校验板，激光投影校验板上分布了48个反光靶标点，并用机械加工的方式在板子的表面加工了若干个宽度为1mm的轮廓槽，该校验板的目的是为了对标定后的激光定位投影系统进行定位精度验证。</div>
+      <div id="p0091" num="0034" class="description-paragraph">通过本发明的步骤三，依此对每个靶标点进行粗定位、精定位，得到靶标点的精确坐标位置。</div>
+      <div id="p0092" num="0035" class="description-paragraph">再利用步骤一到步骤七，对校验板进行空间定位，最后按校验板线槽进行激光投影。</div>
+      <div id="p0093" num="0036" class="description-paragraph">如图2所示，控制卡协同激光器与振镜准确的将激光投射至线槽内，从而验证本发明对靶标点定位、振镜控制具有很好的效果。</div>
+      <div id="p0094" num="0037" class="description-paragraph">需要说明的是，本申请的各实施例在对方案不冲突且技术方案能够共同存在的情况下，可以任意组合成新的实施例。</div>
+      <div id="p0095" num="0038" class="description-paragraph">以上均为本申请的较佳实施例，并非依此限制本申请的保护范围，故：凡依本申请的结构、形状、原理所做的等效变化，均应涵盖于本申请的保护范围之内。</div>
+    </mode-for-invention>
+  </div>
+  </div>
+  </section>
+
+  <section itemprop="claims" itemscope>
+    <h2>Claims (<span itemprop="count">8</span>)</h2>
+    
+    <div itemprop="content" html><div mxw-id="PCLM519430986" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div id="zh-cl0001" num="0001" class="claim">
+      <div class="claim-text">1.一种集成振镜激光投影方法，其特征在于：包括如下步骤：</div>
+      <div class="claim-text">步骤一：控制卡分类存储各项数据；上位机下发系统参数指令时，根据所述上位机的通信方式自动切换通信接口，解析指令数据并存储至EEPROM；</div>
+      <div class="claim-text">步骤二:上位机下发指令后，控制卡协同控制激光光源的开关状态与激光振镜的偏转角度，调节透镜位置和焦距；</div>
+      <div class="claim-text">步骤三：根据上位机的靶标点定位指令；控制卡协同控制激光器与振镜对靶标中心进行粗定位；根据粗定位获取的靶标点为初始参考位置，对靶标中心进行精定位；</div>
+      <div class="claim-text">步骤四：解析上位机下发的图形文件，提取图形轮廓信息与坐标点序列；在图形中的相邻点位之间插入插值点以生成连续轨迹；</div>
+      <div class="claim-text">步骤五：对轨迹中的特征点进行动态延时计算；</div>
+      <div class="claim-text">步骤六：将处理完成后的坐标序列发送至振镜；</div>
+      <div class="claim-text">步骤七：控制卡协同控制光路中的激光光源的开关状态与激光振镜的偏转角度，使激光束按设定轨迹在物体表面投射。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="zh-cl0002" num="0002" class="claim">
+      <div class="claim-text">
+        <claim-ref idref="zh-cl0001"> </claim-ref>
+      </div>
+      <div class="claim-text">2.根据权利要求1所述的集成振镜激光投影方法，其特征在于：所述步骤一具体包括以下步骤：</div>
+      <div class="claim-text">步骤1.1：当上位机下发系统参数指令时，控制卡根据其与上位机的通信方式自动切换至串口模式或TCP模式，并对接收的数据进行解析；</div>
+      <div class="claim-text">步骤1.2：将解析后的参数存储至EEPROM实现非易失性保存；</div>
+      <div class="claim-text">步骤1.3：按数据类型实施分级存储：将高频读写的数据、重要但偶尔修改的配置参数、固化的配置信息或不常更改的大量数据分别存入SRAM、EEPROM和FLASH中；</div>
+      <div class="claim-text">步骤1.4：对系统关键参数执行冗余备份及校验：控制卡将系统关键参数在至少两种存储介质中进行冗余备份；在系统启动或运行过程中，控制卡定期校验关键参数的完整性和有效性。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="zh-cl0003" num="0003" class="claim">
+      <div class="claim-text">
+        <claim-ref idref="zh-cl0001"> </claim-ref>
+      </div>
+      <div class="claim-text">3.根据权利要求1所述的集成振镜激光投影方法，其特征在于：所述步骤二具体包括以下步骤：</div>
+      <div class="claim-text">步骤2.1：上位机下发指令至控制卡，控制卡协同控制光路中激光光源的开关状态与激光振镜的偏转角度，以“十”字投射的方式将激光定位至目标扫描区域的反光靶点附近；</div>
+      <div class="claim-text">步骤2.2：通过调节承载透镜的光学平台位置，配合光路中的准直扩束组件与动态聚焦装置，实现对激光线条尺寸的控制；</div>
+      <div class="claim-text">步骤2.3：激光在靶点附近形成最小光斑，将当前焦距参数存储为系统基准值；后续上电时将自动调用该焦距参数完成焦距复位。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="zh-cl0004" num="0004" class="claim">
+      <div class="claim-text">
+        <claim-ref idref="zh-cl0001"> </claim-ref>
+      </div>
+      <div class="claim-text">4.根据权利要求1所述的集成振镜激光投影方法，其特征在于：所述步骤三具体包括以下步骤：</div>
+      <div class="claim-text">步骤3.1：上位机下发靶标点定位指令，控制卡在解析指令后，将协同控制激光器与振镜，以预设靶标点为中心，在预设靶标点附近区域以矩阵方式按固定步长向外扩张扫描；</div>
+      <div class="claim-text">步骤3.2：基于光传感器捕获的反射信号实时判定靶标中心位置，完成对靶标中心的粗定位；</div>
+      <div class="claim-text">步骤3.3：当扫描扩展至预设最大范围或成功识别靶标点时终止粗定位，并根据识别结果判断是否启动精定位，若粗定位失败，则向上位机返回错误代码；若粗定位成功，则以粗定位坐标为初始参考点进入精定位模式；</div>
+      <div class="claim-text">步骤3.4：控制激光器与振镜以粗定位获取的靶标点为初始参考位置，在粗定位点周边缩小扫描范围，执行高精度定位扫描，最终将精确定位的靶标点坐标反馈至上位机。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="zh-cl0005" num="0005" class="claim">
+      <div class="claim-text">
+        <claim-ref idref="zh-cl0001"> </claim-ref>
+      </div>
+      <div class="claim-text">5.根据权利要求1所述的集成振镜激光投影方法，其特征在于：所述步骤四具体包括以下步骤：</div>
+      <div class="claim-text">步骤4.1：上位机通过预设的数据传输协议，将指定格式将图形文件发送至控制卡；</div>
+      <div class="claim-text">步骤4.2：控制卡接收并解析图形文件内容，提取图形轮廓信息及坐标点序列；</div>
+      <div class="claim-text">步骤4.3：根据振镜运动速度和系统的动态响应能力，控制卡对图形相邻坐标点位之间插入中间坐标点；</div>
+      <div class="claim-text">步骤4.4：获得连续平滑的振镜运动轨迹和按预设路径移动的激光束。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="zh-cl0006" num="0006" class="claim">
+      <div class="claim-text">
+        <claim-ref idref="zh-cl0001"> </claim-ref>
+      </div>
+      <div class="claim-text">6.根据权利要求1所述的集成振镜激光投影方法，其特征在于：所述步骤五具体包括以下步骤：</div>
+      <div class="claim-text">步骤5.1：识别轨迹中的特殊点，包括轨迹的起始、终止点、及曲率变化超过设定阈值的突变点；</div>
+      <div class="claim-text">步骤5.2：在特殊点处，控制卡会插入可调时间延迟，使激光器开关动作延迟至振镜运动稳定后触发。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="zh-cl0007" num="0007" class="claim">
+      <div class="claim-text">
+        <claim-ref idref="zh-cl0001"> </claim-ref>
+      </div>
+      <div class="claim-text">7.根据权利要求1所述的集成振镜激光投影方法，其特征在于：所述步骤六具体包括：在完成插值点的计算与路径规划后，控制卡自动转换坐标数据为符合振镜行业标准的高速数据通信协议；并将处理后的坐标序列发送至振镜。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div id="zh-cl0008" num="0008" class="claim">
+      <div class="claim-text">8.一种集成振镜激光控制装置，其特征在于：适用于实现如权利要求1-7任意一项所述的集成振镜激光投影方法，包括上位机、控制卡、激光振镜扫描装置和激光能量反馈装置，所述上位机与所述控制卡电信号连接，所述控制卡、所述激光振镜扫描装置和所述激光能量反馈装置电信号连接。</div>
+    </div>
+  </div> </div>
+  </div>
+  </section>
+
+  <section itemprop="application" itemscope>
+
+    <section itemprop="metadata" itemscope>
+      <span itemprop="applicationNumber">CN202511609956.6A</span>
+      <span itemprop="priorityDate">2025-11-05</span>
+      <span itemprop="filingDate">2025-11-05</span>
+      <span itemprop="title">一种集成振镜激光投影方法以及集成振镜激光控制装置 
+       </span>
+      <span itemprop="ifiStatus">Pending</span>
+      
+      <a href="/patent/CN121742097A/zh">
+        <span itemprop="representativePublication">CN121742097A</span>
+        (<span itemprop="primaryLanguage">zh</span>)
+      </a>
+    </section>
+
+    <h2>Priority Applications (1)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Application Number</th>
+          <th>Priority Date</th>
+          <th>Filing Date</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="priorityApps" itemscope repeat>
+          <td>
+            <span itemprop="applicationNumber">CN202511609956.6A</span>
+            
+            <a href="/patent/CN121742097A/zh">
+              <span itemprop="representativePublication">CN121742097A</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+            </a>
+          </td>
+          <td itemprop="priorityDate">2025-11-05</td>
+          <td itemprop="filingDate">2025-11-05</td>
+          <td itemprop="title">一种集成振镜激光投影方法以及集成振镜激光控制装置 
+       </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Applications Claiming Priority (1)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Application Number</th>
+          <th>Priority Date</th>
+          <th>Filing Date</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="appsClaimingPriority" itemscope repeat>
+          <td>
+            <span itemprop="applicationNumber">CN202511609956.6A</span>
+            <a href="/patent/CN121742097A/zh">
+              <span itemprop="representativePublication">CN121742097A</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+            </a>
+          </td>
+          <td itemprop="priorityDate">2025-11-05</td>
+          <td itemprop="filingDate">2025-11-05</td>
+          <td itemprop="title">一种集成振镜激光投影方法以及集成振镜激光控制装置 
+       </td>
+        </tr>
+      </tbody>
+    </table>
+
+    
+
+    
+
+    <h2>Publications (1)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Publication Number</th>
+          <th>Publication Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="pubs" itemscope repeat>
+          <td>
+            <span itemprop="publicationNumber">CN121742097A</span>
+            
+            <span itemprop="thisPatent">true</span>
+            <a href="/patent/CN121742097A/zh">
+              CN121742097A
+              (<span itemprop="primaryLanguage">zh</span>)
+            </a>
+          </td>
+          <td itemprop="publicationDate">2026-03-27</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </section>
+
+  <section itemprop="family" itemscope>
+    <h1>Family</h1>
+    <h2>ID=99144551</h2>
+
+    <h2>Family Applications (1)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Application Number</th>
+          <th>Title</th>
+          <th>Priority Date</th>
+          <th>Filing Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="applications" itemscope repeat>
+          <td>
+            <span itemprop="applicationNumber">CN202511609956.6A</span>
+            <span itemprop="ifiStatus">Pending</span>
+            
+            <a href="/patent/CN121742097A/zh">
+              <span itemprop="representativePublication">CN121742097A</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+            </a>
+          </td>
+          <td itemprop="priorityDate">2025-11-05</td>
+          <td itemprop="filingDate">2025-11-05</td>
+          <td itemprop="title">一种集成振镜激光投影方法以及集成振镜激光控制装置 
+       </td>
+        </tr>
+      </tbody>
+    </table>
+
+    
+
+    
+
+    <h2>Country Status (1)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Country</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="countryStatus" itemscope repeat>
+          <td>
+            <span itemprop="countryCode">CN</span>
+            (<span itemprop="num">1</span>)
+            <meta itemprop="thisCountry" content="true">
+          </td>
+          <td>
+            <a href="/patent/CN121742097A/zh">
+              <span itemprop="representativePublication">CN121742097A</span>
+              (<span itemprop="primaryLanguage">zh</span>)
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Cited By (1)</h2>
+    <table>
+      <caption>* Cited by examiner, † Cited by third party</caption>
+      <thead>
+        <tr>
+          <th>Publication number</th>
+          <th>Priority date</th>
+          <th>Publication date</th>
+          <th>Assignee</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="forwardReferencesOrig" itemscope repeat>
+          <td>
+            <a href="/patent/CN122151967A/zh">
+              <span itemprop="publicationNumber">CN122151967A</span>
+              (<span itemprop="primaryLanguage">zh</span>)
+            </a>
+            <span itemprop="examinerCited">*</span>
+            
+          </td>
+          <td itemprop="priorityDate">2026-04-27</td>
+          <td itemprop="publicationDate">2026-06-05</td>
+          <td><span itemprop="assigneeOriginal">光量信息科技(宁波)有限公司</span></td>
+          <td itemprop="title">一种基于多核处理器集成的振镜激光控制方法和控制装置 
+       </td>
+        </tr>
+      </tbody>
+    </table>
+
+    
+
+    
+
+    
+
+    <ul>
+      <li itemprop="applicationsByYear" itemscope repeat>
+        <span itemprop="year">2025</span>
+        <ul>
+          <li itemprop="application" itemscope repeat>
+            <span itemprop="filingDate">2025-11-05</span>
+            <span itemprop="countryCode">CN</span>
+            <span itemprop="applicationNumber">CN202511609956.6A</span>
+            <a href="/patent/CN121742097A/zh"><span itemprop="documentId">patent/CN121742097A/zh</span></a>
+            <span itemprop="legalStatusCat">active</span>
+            <span itemprop="legalStatus">Pending</span>
+            <span itemprop="thisApp" content="true" bool></span>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    </section>
+
+  
+
+  
+
+  <h2>Cited By (1)</h2>
+  <table>
+    <caption>* Cited by examiner, † Cited by third party</caption>
+    <thead>
+      <tr>
+        <th>Publication number</th>
+        <th>Priority date</th>
+        <th>Publication date</th>
+        <th>Assignee</th>
+        <th>Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr itemprop="forwardReferences" itemscope repeat>
+        <td>
+          <a href="/patent/CN122151967A/zh">
+            <span itemprop="publicationNumber">CN122151967A</span>
+            (<span itemprop="primaryLanguage">zh</span>)
+          </a>
+          <span itemprop="examinerCited">*</span>
+          
+        </td>
+        <td itemprop="priorityDate">2026-04-27</td>
+        <td itemprop="publicationDate">2026-06-05</td>
+        <td><span itemprop="assigneeOriginal">光量信息科技(宁波)有限公司</span></td>
+        <td itemprop="title">一种基于多核处理器集成的振镜激光控制方法和控制装置 
+       </td>
+      </tr>
+    </tbody>
+  </table>
+
+  
+
+  <section>
+    <h2>Similar Documents</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Publication</th>
+          <th>Publication Date</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/US8633421B2/en">
+                <span itemprop="publicationNumber">US8633421B2</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2014-01-21">2014-01-21</time>
+            
+            
+          </td>
+          <td itemprop="title">Laser processing apparatus and method 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/US20180338090A1/en">
+                <span itemprop="publicationNumber">US20180338090A1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2018-11-22">2018-11-22</time>
+            
+            
+          </td>
+          <td itemprop="title">Image processing system, image processing device, and image processing program 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/US5347363A/en">
+                <span itemprop="publicationNumber">US5347363A</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="1994-09-13">1994-09-13</time>
+            
+            
+          </td>
+          <td itemprop="title">External lead shape measurement apparatus for measuring lead shape of semiconductor package by using stereoscopic vision 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/US20240326159A1/en">
+                <span itemprop="publicationNumber">US20240326159A1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2024-10-03">2024-10-03</time>
+            
+            
+          </td>
+          <td itemprop="title">Systems and methods for multi-laser head alignment in additive manufacturing systems 
+     </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/TWI446983B/zh">
+                <span itemprop="publicationNumber">TWI446983B</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2014-08-01">2014-08-01</time>
+            
+            
+          </td>
+          <td itemprop="title">用於在雷射為基礎之晶圓處理期間調適參數以增加產量之系統及方法 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN105598579A/zh">
+                <span itemprop="publicationNumber">CN105598579A</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2016-05-25">2016-05-25</time>
+            
+            
+          </td>
+          <td itemprop="title">基于两个同轴ccd进行视觉定位的激光加工装置及方法 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN117991594A/zh">
+                <span itemprop="publicationNumber">CN117991594A</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2024-05-07">2024-05-07</time>
+            
+            
+          </td>
+          <td itemprop="title">控制焦点的套刻测量装置和方法以及用于其的程序 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN111604581A/zh">
+                <span itemprop="publicationNumber">CN111604581A</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2020-09-01">2020-09-01</time>
+            
+            
+          </td>
+          <td itemprop="title">一种激光加工的协作方法、系统、设备和介质 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/EP3786012B1/en">
+                <span itemprop="publicationNumber">EP3786012B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2024-10-23">2024-10-23</time>
+            
+            
+          </td>
+          <td itemprop="title">Lane keeping for autonomous vehicles 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN205650938U/zh">
+                <span itemprop="publicationNumber">CN205650938U</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2016-10-19">2016-10-19</time>
+            
+            
+          </td>
+          <td itemprop="title">基于两个同轴ccd进行视觉定位的激光加工装置 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN120502874B/zh">
+                <span itemprop="publicationNumber">CN120502874B</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2025-11-11">2025-11-11</time>
+            
+            
+          </td>
+          <td itemprop="title">一种硬脆材料的激光烧蚀与铣削协同加工系统及方法 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/JPH11179579A/ja">
+                <span itemprop="publicationNumber">JPH11179579A</span>
+                (<span itemprop="primaryLanguage">ja</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="1999-07-06">1999-07-06</time>
+            
+            
+          </td>
+          <td itemprop="title">光軸補正方法、装置及びそれを利用した露光加工装置 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/EP0387018B1/en">
+                <span itemprop="publicationNumber">EP0387018B1</span>
+                (<span itemprop="primaryLanguage">en</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="1994-08-17">1994-08-17</time>
+            
+            
+          </td>
+          <td itemprop="title">Track access control method and apparatus for optical disk apparatus 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/JPH0830319A/ja">
+                <span itemprop="publicationNumber">JPH0830319A</span>
+                (<span itemprop="primaryLanguage">ja</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="1996-02-02">1996-02-02</time>
+            
+            
+          </td>
+          <td itemprop="title">レーザセンサの検出角度制御方法 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN118218778B/zh">
+                <span itemprop="publicationNumber">CN118218778B</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2025-10-31">2025-10-31</time>
+            
+            
+          </td>
+          <td itemprop="title">一种激光打标方法、装置以及系统 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/JP2002535719A/ja">
+                <span itemprop="publicationNumber">JP2002535719A</span>
+                (<span itemprop="primaryLanguage">ja</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2002-10-22">2002-10-22</time>
+            
+            
+          </td>
+          <td itemprop="title">レーザー記録方法およびシステム 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN119501626A/zh">
+                <span itemprop="publicationNumber">CN119501626A</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2025-02-25">2025-02-25</time>
+            
+            
+          </td>
+          <td itemprop="title">一种基于三维测量的零件辅助装夹方法 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN120791194B/zh">
+                <span itemprop="publicationNumber">CN120791194B</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2025-11-28">2025-11-28</time>
+            
+            
+          </td>
+          <td itemprop="title">激光切割设备的激光同轴调试方法、装置及设备 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/JP2014115336A/ja">
+                <span itemprop="publicationNumber">JP2014115336A</span>
+                (<span itemprop="primaryLanguage">ja</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2014-06-26">2014-06-26</time>
+            
+            
+          </td>
+          <td itemprop="title">焦点制御装置及びその方法 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN107678105A/zh">
+                <span itemprop="publicationNumber">CN107678105A</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2018-02-09">2018-02-09</time>
+            
+            
+          </td>
+          <td itemprop="title">一种光组件耦合装置及其使用方法 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN112078133B/zh">
+                <span itemprop="publicationNumber">CN112078133B</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2023-07-25">2023-07-25</time>
+            
+            
+          </td>
+          <td itemprop="title">一种基于电荷耦合原件的激光快速成形自动标定方法及系统 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/JP7258259B1/ja">
+                <span itemprop="publicationNumber">JP7258259B1</span>
+                (<span itemprop="primaryLanguage">ja</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2023-04-14">2023-04-14</time>
+            
+            
+          </td>
+          <td itemprop="title">アライメントシステム、アライメント方法及びプログラム 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/JP7374353B1/ja">
+                <span itemprop="publicationNumber">JP7374353B1</span>
+                (<span itemprop="primaryLanguage">ja</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2023-11-06">2023-11-06</time>
+            
+            
+          </td>
+          <td itemprop="title">アライメントシステム、アライメント方法及びプログラム 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/JP7374354B1/ja">
+                <span itemprop="publicationNumber">JP7374354B1</span>
+                (<span itemprop="primaryLanguage">ja</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2023-11-06">2023-11-06</time>
+            
+            
+          </td>
+          <td itemprop="title">アライメントシステム、アライメント方法及びプログラム 
+       </td>
+        </tr>
+        <tr itemprop="similarDocuments" itemscope repeat>
+          <td>
+            <meta itemprop="isPatent" content="true">
+              <a href="/patent/CN119910316B/zh">
+                <span itemprop="publicationNumber">CN119910316B</span>
+                (<span itemprop="primaryLanguage">zh</span>)
+              </a>
+            
+            
+          </td>
+          <td>
+            <time itemprop="publicationDate" datetime="2025-06-20">2025-06-20</time>
+            
+            
+          </td>
+          <td itemprop="title">用于激光金属雕刻的功率自适应控制方法及系统 
+       </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Legal Events</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Code</th>
+          <th>Title</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2026-03-27">2026-03-27</time></td>
+          <td itemprop="code">PB01</td>
+          <td itemprop="title">Publication</td>
+          <td>
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2026-03-27">2026-03-27</time></td>
+          <td itemprop="code">PB01</td>
+          <td itemprop="title">Publication</td>
+          <td>
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2026-04-14">2026-04-14</time></td>
+          <td itemprop="code">SE01</td>
+          <td itemprop="title">Entry into force of request for substantive examination</td>
+          <td>
+          </td>
+        </tr>
+        <tr itemprop="legalEvents" itemscope repeat>
+          <td><time itemprop="date" datetime="2026-04-14">2026-04-14</time></td>
+          <td itemprop="code">SE01</td>
+          <td itemprop="title">Entry into force of request for substantive examination</td>
+          <td>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+</article>
+
+    </search-app>
+    
+    <script></script>
+    <script type="text/javascript" src="//www.gstatic.com/feedback/api.js"></script>
+    <script type="text/javascript" src="//www.gstatic.com/feedback/js/help/prod/service/lazy.min.js"></script>
+    <script type="text/javascript">
+      if (window.help && window.help.service) {
+        helpApi = window.help.service.Lazy.create(0, {apiKey: 'AIzaSyDTEI_0tLX4varJ7bwK8aT-eOI5qr3BmyI', locale: 'en-US'});
+        window.requestedSurveys = new Set();
+        window.requestSurvey = function(triggerId) {
+          if (window.requestedSurveys.has(triggerId)) {
+            return;
+          }
+          window.requestedSurveys.add(triggerId);
+          helpApi.requestSurvey({
+            triggerId: triggerId,
+            enableTestingMode: false,
+            callback: (requestSurveyCallbackParam) => {
+              if (!requestSurveyCallbackParam.surveyData) {
+                return;
+              }
+              helpApi.presentSurvey({
+                productData: {
+                  productVersion: window.version,
+                  customData: {
+                    "experiments": "",
+                  },
+                },
+                surveyData: requestSurveyCallbackParam.surveyData,
+                colorScheme: 1,
+                customZIndex: 10000,
+              });
+            }
+          });
+        };
+
+        window.requestSurvey('YXTwAsvoW0kedxbuTdH0RArc9VhT');
+      }
+    </script>
+    <script src="/sw/null_loader.js"></script>
+  </body>
+</html>

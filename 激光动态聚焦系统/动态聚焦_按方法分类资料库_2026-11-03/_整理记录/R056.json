@@ -1,0 +1,20 @@
+{
+  "url": "https://www.jgjs.net.cn/en/article/doi/10.7510/jgjs.issn.1001-3806.2016.04.002",
+  "category": "01_移动透镜式与匹配光学",
+  "origins": [
+    "苏州艾思兰_动态聚焦资料\\动态聚焦技术资料汇编.md"
+  ],
+  "context": "\n- [Journal of Optics：large scale 3-D laser dynamic scanning](https://www.jgjs.net.cn/en/article/doi/10.7510/jgjs.issn.1001-3806.2016.04.002)",
+  "id": "R056",
+  "files": [],
+  "attempts": [
+    {
+      "url": "https://www.jgjs.net.cn/en/article/doi/10.7510/jgjs.issn.1001-3806.2016.04.002",
+      "error": "HTTPSConnectionPool(host='www.jgjs.net.cn', port=443): Max retries exceeded with url: /en/article/doi/10.7510/jgjs.issn.1001-3806.2016.04.002 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1010)')))"
+    }
+  ],
+  "status": "全文已由用户补齐 → U008",
+  "title": "激光大尺度3维动态聚焦扫描加工系统研究_2016",
+  "resolved_by": "U008",
+  "resolution_note": "此前网络获取未完成；现已由用户提供正式版全文补齐。保留历史请求记录。"
+}
