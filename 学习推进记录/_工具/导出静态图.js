@@ -1,6 +1,7 @@
 // 从交互课件里导出静态 SVG（白底、浅色配色），供 GitHub 直接查看。
 // 用法：node 导出静态图.js <课件.html> <输出目录>
 // 课件中带 data-export="课号-序号_标题" 的 <svg> 会被导出；
+// 若页面定义了 window.__beforeExport()，导出前先调用（例如把分步讲解跳到最后一步）。
 // 若页面定义了 window.__frames[名字] = {count, names, show(i)}，则把每一帧拼成一张网格图。
 const {chromium}=require('playwright');const fs=require('fs');const path=require('path');
 (async()=>{
@@ -8,6 +9,7 @@ const {chromium}=require('playwright');const fs=require('fs');const path=require
   const b=await chromium.launch();
   const p=await b.newPage({viewport:{width:1000,height:900},colorScheme:'light',reducedMotion:'reduce'});
   await p.goto('file://'+path.resolve(html));await p.waitForTimeout(600);
+  await p.evaluate(()=>window.__beforeExport&&window.__beforeExport());await p.waitForTimeout(200);
   const res=await p.evaluate(()=>{
     const cs=getComputedStyle(document.documentElement);
     const FONT='PingFang SC, Microsoft YaHei, Noto Sans CJK SC, WenQuanYi Zen Hei, sans-serif';
