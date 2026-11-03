@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 380" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, WenQuanYi Zen Hei, sans-serif">
+  <rect width="920" height="380" rx="16" fill="#ffffff"/>
+  <line x1="460" y1="50" x2="460" y2="350" stroke="#e5e7eb" stroke-width="2"/>
+  <!-- 左 -->
+  <g>
+    <text x="235" y="38" font-size="18" text-anchor="middle" font-weight="700" fill="#b91c1c">没有动态聚焦</text>
+    <ellipse cx="235" cy="75" rx="110" ry="10" fill="#e0f2fe" stroke="#0369a1" stroke-width="1.5"/>
+    <line x1="80" y1="200" x2="390" y2="200" stroke="#64748b" stroke-dasharray="6 5" stroke-width="1.5"/>
+    <text x="395" y="196" font-size="12" fill="#64748b">焦点面</text>
+    <text x="395" y="211" font-size="12" fill="#64748b">（平的）</text>
+    <path d="M90,290 Q235,120 380,290" fill="#e7e5e4" stroke="#78716c" stroke-width="2"/>
+    <g fill="#ef4444" opacity="0.55">
+      <polygon points="215,83 255,83 235,203"/>
+      <polygon points="130,83 160,83 130,200"/><polygon points="130,200 122,250 138,250"/>
+      <polygon points="310,83 340,83 340,200"/><polygon points="340,200 332,250 348,250"/>
+    </g>
+    <circle cx="235" cy="205" r="5" fill="#16a34a"/>
+    <circle cx="130" cy="250" r="12" fill="none" stroke="#dc2626" stroke-width="2.5"/>
+    <circle cx="340" cy="250" r="12" fill="none" stroke="#dc2626" stroke-width="2.5"/>
+    <text x="235" y="190" font-size="16" text-anchor="middle" fill="#16a34a">✓</text>
+    <text x="104" y="278" font-size="15" fill="#dc2626">✗</text>
+    <text x="356" y="278" font-size="15" fill="#dc2626">✗</text>
+    <text x="235" y="330" font-size="14" text-anchor="middle" fill="#111">只有中间对焦，两边光斑变大</text>
+  </g>
+  <!-- 右 -->
+  <g transform="translate(460,0)">
+    <text x="235" y="38" font-size="18" text-anchor="middle" font-weight="700" fill="#15803d">有动态聚焦</text>
+    <ellipse cx="235" cy="75" rx="110" ry="10" fill="#e0f2fe" stroke="#0369a1" stroke-width="1.5"/>
+    <path d="M90,290 Q235,120 380,290" fill="#e7e5e4" stroke="#78716c" stroke-width="2"/>
+    <path d="M90,290 Q235,120 380,290" fill="none" stroke="#15803d" stroke-dasharray="6 5" stroke-width="2" transform="translate(0,-2)"/>
+    <g fill="#ef4444" opacity="0.55">
+      <polygon points="215,83 255,83 235,203"/>
+      <polygon points="130,83 160,83 130,248"/>
+      <polygon points="310,83 340,83 340,248"/>
+    </g>
+    <circle cx="235" cy="205" r="5" fill="#16a34a"/>
+    <circle cx="130" cy="249" r="5" fill="#16a34a"/>
+    <circle cx="340" cy="249" r="5" fill="#16a34a"/>
+    <text x="235" y="190" font-size="16" text-anchor="middle" fill="#16a34a">✓</text>
+    <text x="112" y="240" font-size="16" fill="#16a34a">✓</text>
+    <text x="350" y="240" font-size="16" fill="#16a34a">✓</text>
+    <text x="235" y="330" font-size="14" text-anchor="middle" fill="#111">Z 镜跟着移动，焦点贴着表面走</text>
+  </g>
+  <text x="460" y="368" font-size="12" text-anchor="middle" fill="#888">光打到边上时，Z 镜把焦点"推远"一点；回到中间，再"拉近"</text>
+</svg>

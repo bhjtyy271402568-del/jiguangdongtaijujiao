@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, WenQuanYi Zen Hei, sans-serif">
+  <rect width="900" height="360" rx="16" fill="#ffffff"/>
+  <text x="24" y="34" font-size="20" font-weight="700" fill="#111">聚焦后的光束像一个沙漏</text>
+  <path d="M370,50 Q445,160 445,180 Q445,200 370,330 L530,330 Q455,200 455,180 Q455,160 530,50 Z" fill="#fecaca" stroke="#dc2626" stroke-width="2"/>
+  <g stroke="#64748b" stroke-dasharray="6 5" stroke-width="1.5">
+    <line x1="300" y1="95" x2="600" y2="95"/>
+    <line x1="300" y1="180" x2="600" y2="180"/>
+    <line x1="300" y1="265" x2="600" y2="265"/>
+  </g>
+  <!-- 截面 -->
+  <circle cx="670" cy="95" r="26" fill="#fca5a5" opacity="0.7" stroke="#dc2626"/>
+  <circle cx="670" cy="180" r="5" fill="#dc2626"/>
+  <circle cx="670" cy="265" r="26" fill="#fca5a5" opacity="0.7" stroke="#dc2626"/>
+  <g font-size="15" fill="#111">
+    <text x="712" y="92">离焦：光斑大</text>
+    <text x="712" y="177" font-weight="700" fill="#15803d">焦点：光斑最小 ✓</text>
+    <text x="712" y="262">离焦：光斑大</text>
+  </g>
+  <g font-size="12" fill="#666">
+    <text x="712" y="110">能量摊薄 → 打不动/线变粗</text>
+    <text x="712" y="194">能量最集中 → 加工效果最好</text>
+  </g>
+  <!-- 焦深括号 -->
+  <path d="M290,155 L280,155 L280,205 L290,205" fill="none" stroke="#15803d" stroke-width="2.5"/>
+  <text x="270" y="176" font-size="15" text-anchor="end" fill="#15803d" font-weight="700">焦深</text>
+  <text x="270" y="195" font-size="12" text-anchor="end" fill="#15803d">能接受的范围</text>
+  <text x="24" y="345" font-size="13" fill="#555">你资料里的估算：典型配置下焦深约 ±0.33 mm，上下加起来不到 0.7 mm，大约两张名片叠起来那么厚</text>
+</svg>

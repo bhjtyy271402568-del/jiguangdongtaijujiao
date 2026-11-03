@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 380" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, WenQuanYi Zen Hei, sans-serif">
+<rect width="940" height="380" rx="16" fill="#ffffff"/>
+<text x="24" y="34" font-size="20" font-weight="700" fill="#111">课程路线图</text>
+<text x="150" y="34" font-size="13" fill="#666">先懂原理（①–⑧）→ 再一起写系统规格 → 再动手设计</text>
+<path d="M110,110 L350,110 L590,110 L830,110 C920,110 920,240 830,240 L830,240 L590,240 L350,240 L110,240" fill="none" stroke="#cbd5e1" stroke-width="6" stroke-linecap="round"/>
+<circle cx="110" cy="110" r="22" fill="#16a34a" stroke="#15803d" stroke-width="3"/>
+<text x="110" y="116" font-size="17" text-anchor="middle" fill="#fff" font-weight="700">✓</text>
+<text x="110" y="158" font-size="15" text-anchor="middle" fill="#111" font-weight="700">光的旅程</text>
+<text x="110" y="176" font-size="12" text-anchor="middle" fill="#666">全景</text>
+<circle cx="350" cy="110" r="22" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+<text x="350" y="116" font-size="17" text-anchor="middle" fill="#ea580c" font-weight="700">②</text>
+<text x="350" y="158" font-size="15" text-anchor="middle" fill="#111" font-weight="700">焦点与光斑</text>
+<text x="350" y="176" font-size="12" text-anchor="middle" fill="#666">焦深多大</text>
+<circle cx="590" cy="110" r="22" fill="#fff" stroke="#94a3b8" stroke-width="3"/>
+<text x="590" y="116" font-size="17" text-anchor="middle" fill="#64748b" font-weight="700">③</text>
+<text x="590" y="158" font-size="15" text-anchor="middle" fill="#111" font-weight="700">振镜怎么指</text>
+<text x="590" y="176" font-size="12" text-anchor="middle" fill="#666">XY2-100信号</text>
+<circle cx="830" cy="110" r="22" fill="#fff" stroke="#94a3b8" stroke-width="3"/>
+<text x="830" y="116" font-size="17" text-anchor="middle" fill="#64748b" font-weight="700">④</text>
+<text x="830" y="158" font-size="15" text-anchor="middle" fill="#111" font-weight="700">Z怎么动</text>
+<text x="830" y="176" font-size="12" text-anchor="middle" fill="#666">几种聚焦法</text>
+<circle cx="830" cy="240" r="22" fill="#fff" stroke="#94a3b8" stroke-width="3"/>
+<text x="830" y="246" font-size="17" text-anchor="middle" fill="#64748b" font-weight="700">⑤</text>
+<text x="830" y="288" font-size="15" text-anchor="middle" fill="#111" font-weight="700">三轴对齐</text>
+<text x="830" y="306" font-size="12" text-anchor="middle" fill="#666">时间与延迟</text>
+<circle cx="590" cy="240" r="22" fill="#fff" stroke="#94a3b8" stroke-width="3"/>
+<text x="590" y="246" font-size="17" text-anchor="middle" fill="#64748b" font-weight="700">⑥</text>
+<text x="590" y="288" font-size="15" text-anchor="middle" fill="#111" font-weight="700">激光器接口</text>
+<text x="590" y="306" font-size="12" text-anchor="middle" fill="#666">开关光与安全</text>
+<circle cx="350" cy="240" r="22" fill="#fff" stroke="#94a3b8" stroke-width="3"/>
+<text x="350" y="246" font-size="17" text-anchor="middle" fill="#64748b" font-weight="700">⑦</text>
+<text x="350" y="288" font-size="15" text-anchor="middle" fill="#111" font-weight="700">控制卡分工</text>
+<text x="350" y="306" font-size="12" text-anchor="middle" fill="#666">MCU/FPGA</text>
+<circle cx="110" cy="240" r="22" fill="#fff" stroke="#94a3b8" stroke-width="3"/>
+<text x="110" y="246" font-size="17" text-anchor="middle" fill="#64748b" font-weight="700">⑧</text>
+<text x="110" y="288" font-size="15" text-anchor="middle" fill="#111" font-weight="700">标定</text>
+<text x="110" y="306" font-size="12" text-anchor="middle" fill="#666">让它打得准</text>
+<text x="350" y="78" font-size="12" text-anchor="middle" fill="#ea580c" font-weight="700">下一课 ▼</text>
+<rect x="20" y="334" width="900" height="26" rx="6" fill="#f1f5f9"/>
+<text x="470" y="352" font-size="13" text-anchor="middle" fill="#334155">终点：一份把项目①控制卡 + 项目②Z聚焦头 串起来的《三轴系统规格》</text>
+</svg>

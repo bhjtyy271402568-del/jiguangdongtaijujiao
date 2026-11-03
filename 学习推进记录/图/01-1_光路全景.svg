@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 440" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, WenQuanYi Zen Hei, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" fill="#2563eb"/></marker>
+  </defs>
+  <rect width="960" height="440" rx="16" fill="#ffffff"/>
+  <text x="24" y="34" font-size="20" font-weight="700" fill="#111">一束光的旅程：从激光器到工件</text>
+
+  <!-- 控制卡 -->
+  <rect x="330" y="56" width="320" height="44" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="490" y="84" font-size="16" text-anchor="middle" fill="#1e3a8a" font-weight="700">控制卡 MCU+FPGA（项目①）</text>
+  <g stroke="#2563eb" stroke-width="1.6" stroke-dasharray="5 4" fill="none" marker-end="url(#a)">
+    <path d="M340,100 C200,110 90,120 75,160"/>
+    <path d="M400,100 L330,140"/>
+    <path d="M520,100 L475,165"/>
+    <path d="M610,100 L605,160"/>
+  </g>
+  <text x="118" y="150" font-size="12" fill="#2563eb">开光/关光/功率</text>
+  <text x="352" y="122" font-size="12" fill="#2563eb">Z</text>
+  <text x="502" y="140" font-size="12" fill="#2563eb">X</text>
+  <text x="618" y="140" font-size="12" fill="#2563eb">Y</text>
+
+  <!-- 激光器 -->
+  <rect x="20" y="165" width="110" height="50" rx="8" fill="#fde2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="75" y="196" font-size="16" text-anchor="middle" font-weight="700" fill="#991b1b">激光器</text>
+  <!-- 细光束 -->
+  <line x1="130" y1="190" x2="180" y2="190" stroke="#ef4444" stroke-width="2.5"/>
+  <!-- 扩束 -->
+  <ellipse cx="182" cy="190" rx="5" ry="16" fill="#e0f2fe" stroke="#0369a1" stroke-width="1.5"/>
+  <ellipse cx="225" cy="190" rx="7" ry="28" fill="#e0f2fe" stroke="#0369a1" stroke-width="1.5"/>
+  <polygon points="184,189 184,191 225,197 225,183" fill="#fca5a5"/>
+  <!-- 粗光束 -->
+  <rect x="225" y="183" width="375" height="14" fill="#fca5a5" opacity="0.85"/>
+  <!-- Z 镜 -->
+  <rect x="285" y="138" width="80" height="122" rx="8" fill="none" stroke="#ea580c" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="325" y="276" font-size="13" text-anchor="middle" fill="#ea580c" font-weight="700">项目②</text>
+  <ellipse cx="325" cy="190" rx="8" ry="30" fill="#e0f2fe" stroke="#0369a1" stroke-width="1.5"/>
+  <text x="325" y="160" font-size="18" text-anchor="middle" fill="#ea580c">⟷</text>
+  <!-- X 镜 -->
+  <rect x="461" y="172" width="18" height="36" rx="3" fill="#94a3b8" stroke="#334155"/>
+  <path d="M452,166 A24,24 0 0 1 488,166" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#a)"/>
+  <!-- Y 镜 45° -->
+  <line x1="585" y1="172" x2="619" y2="206" stroke="#334155" stroke-width="7" stroke-linecap="round"/>
+  <!-- 向下光束 -->
+  <rect x="595" y="197" width="14" height="88" fill="#fca5a5" opacity="0.85"/>
+  <!-- 场镜 -->
+  <ellipse cx="602" cy="290" rx="70" ry="10" fill="#e0f2fe" stroke="#0369a1" stroke-width="1.5"/>
+  <polygon points="595,298 609,298 602,378" fill="#ef4444"/>
+  <polygon points="595,298 609,298 662,378" fill="#ef4444" opacity="0.18"/>
+  <!-- 工件 -->
+  <rect x="470" y="378" width="270" height="22" fill="#d6d3d1" stroke="#78716c"/>
+  <circle cx="602" cy="378" r="5" fill="#facc15" stroke="#b45309" stroke-width="2"/>
+  <circle cx="662" cy="378" r="4" fill="none" stroke="#b45309" stroke-dasharray="2 2"/>
+
+  <!-- 标签 -->
+  <g font-size="14" fill="#111" text-anchor="middle">
+    <text x="204" y="246">扩束镜</text>
+    <text x="470" y="236">X 振镜</text>
+    <text x="640" y="190" text-anchor="start">Y 振镜</text>
+    <text x="605" y="420">工件</text>
+  </g>
+  <g font-size="12" fill="#555" text-anchor="middle">
+    <text x="204" y="263">把光变粗</text>
+    <text x="325" y="300">前后移动</text>
+    <text x="325" y="316">→ 改变焦点远近</text>
+    <text x="470" y="252">左右摆</text>
+  </g>
+  <text x="682" y="286" font-size="14" fill="#111">场镜</text>
+  <text x="682" y="303" font-size="12" fill="#555">把光聚成一个小点</text>
+  <text x="680" y="358" font-size="12" fill="#b45309">振镜一摆，光点就挪</text>
+  <text x="24" y="420" font-size="12" fill="#888">示意图：真实扫描头里两片振镜是立体摆放的</text>
+</svg>
