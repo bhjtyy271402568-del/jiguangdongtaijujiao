@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 250" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, WenQuanYi Zen Hei, sans-serif"><rect x="0" y="0" width="840" height="250" fill="#ffffff"/>
+    <polygon id="x1" fill="#f6b3b4" points="94,104 207.3,104 207.3,112 94,112"></polygon><polygon id="x2" fill="#f6b3b4" points="207.3,104 300,92.9 300,123.1 207.3,112"></polygon><polygon id="x3" fill="#f6b3b4" points="300,92.9 500,92.9 500,123.1 300,123.1"></polygon><polygon id="x4" fill="#e5383b" opacity=".75" points="484.9,108 515.1,108 515.1,182 500,228 484.9,182"></polygon>
+    <rect x="14" y="88" width="80" height="40" rx="8" fill="#f6b3b4" stroke="#e5383b" stroke-width="2"></rect><text x="54" y="113" font-size="13" text-anchor="middle" fill="#151a23" font-weight="700">激光器</text>
+    <g id="xL1" transform="translate(207.3,108)"><path d="M-6,-18 Q0,0 -6,18 L6,18 Q0,0 6,-18 Z" fill="#dcecf8" stroke="#2b7bb9" stroke-width="2"></path></g>
+    <ellipse id="xL2" cx="300" cy="108" rx="8" ry="30" fill="#dcecf8" stroke-width="3" stroke="#2b7bb9"></ellipse>
+    <rect x="150" y="60" width="180" height="96" rx="10" fill="none" stroke="#17914f" stroke-width="2" stroke-dasharray="6 4"></rect>
+    <text x="240" y="50" font-size="13" text-anchor="middle" fill="#17914f" font-weight="700">动镜 + 音圈 + 光栅尺：不变 ✓</text>
+    <text id="xL2T" x="300" y="176" font-size="13" text-anchor="middle" font-weight="700" fill="#2b7bb9">定镜：收成平行光</text>
+    <line x1="484" y1="92" x2="516" y2="124" stroke="#7b8697" stroke-width="7" stroke-linecap="round"></line><text x="530" y="100" font-size="13" fill="#151a23">振镜</text>
+    <g id="xFTL" display="inline"><ellipse cx="500" cy="186" rx="90" ry="9" fill="#dcecf8" stroke="#2b7bb9" stroke-width="2"></ellipse><text x="600" y="190" font-size="13" fill="#151a23">F-θ 场镜</text></g>
+    <text id="xFTx" x="600" y="190" font-size="13" fill="#d23c3c" font-weight="700"></text>
+    <rect x="380" y="228" width="240" height="12" fill="#d7d3cf" stroke="#8a817a"></rect>
+    <circle cx="500" cy="228" r="5" fill="#facc15" stroke="#b45309" stroke-width="2"></circle>
+  </svg>
