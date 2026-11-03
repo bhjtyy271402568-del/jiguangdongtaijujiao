@@ -1,0 +1,266 @@
+<title>50 米换思路</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@700;900&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* 布局：与第 01、02 课相同的“实验台”纵向课程；第 06 课：工作距离 50 m 时设计要换思路 */
+:root{
+  --bg:#f4f6f9; --surface:#ffffff; --fg:#151a23; --muted:#5d6676; --line:#d8dee7;
+  --beam:#e5383b; --beam-soft:#f6b3b4; --glass:#2b7bb9; --glass-fill:#dcecf8;
+  --ok:#17914f; --bad:#d23c3c; --proj2:#e0701c; --card:#2c5fd6; --card-fill:#e2eafc;
+  --metal:#7b8697; --work:#d7d3cf; --work-line:#8a817a; --band:#17914f22;
+  --knobA:#7c3aed; --knobB:#0e8a8a;
+  --f-body:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --f-display:"Noto Serif SC","Songti SC",serif;
+  --f-num:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1218; --surface:#171c25; --fg:#e7ebf1; --muted:#9aa4b4; --line:#2b3240;
+  --beam:#ff5c60; --beam-soft:#7a2a2d; --glass:#6db5ee; --glass-fill:#1c3448;
+  --ok:#3fd082; --bad:#ff6b6b; --proj2:#ff9a4a; --card:#82a6ff; --card-fill:#1d2a4a;
+  --metal:#8c97a8; --work:#3a3633; --work-line:#7d746c; --band:#3fd08226;
+  --knobA:#b08cff; --knobB:#4fd1c5; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1218; --surface:#171c25; --fg:#e7ebf1; --muted:#9aa4b4; --line:#2b3240;
+  --beam:#ff5c60; --beam-soft:#7a2a2d; --glass:#6db5ee; --glass-fill:#1c3448;
+  --ok:#3fd082; --bad:#ff6b6b; --proj2:#ff9a4a; --card:#82a6ff; --card-fill:#1d2a4a;
+  --metal:#8c97a8; --work:#3a3633; --work-line:#7d746c; --band:#3fd08226;
+  --knobA:#b08cff; --knobB:#4fd1c5; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:15px;line-height:1.65}
+.wrap{max-width:900px;margin:0 auto;padding-block:28px 56px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:flex;flex-direction:column;gap:28px}
+header{display:flex;flex-direction:column;gap:6px}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--muted)}
+h1{font-family:var(--f-display);font-weight:900;font-size:clamp(28px,5vw,40px);margin:0;line-height:1.2;text-wrap:balance}
+h1 .red{color:var(--beam)}
+.lede{color:var(--muted);margin:0;max-width:60ch}
+section{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:14px;min-width:0}
+h2{font-family:var(--f-display);font-size:21px;margin:0;display:flex;gap:10px;align-items:baseline;text-wrap:balance}
+h2 .n{font-family:var(--f-num);font-size:13px;color:var(--beam)}
+.try{font-size:13px;color:var(--muted);margin:0}
+.try b{color:var(--fg);font-weight:500}
+.stage{overflow-x:auto;border-radius:10px;background:var(--bg)}
+.stage svg{display:block;width:100%;height:auto}
+.controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px 20px}
+.ctl{display:flex;flex-direction:column;gap:4px;min-width:0}
+.ctl label{font-size:13px;display:flex;justify-content:space-between;gap:8px}
+.ctl label span{font-family:var(--f-num);color:var(--muted);font-size:12px}
+input[type=range]{width:100%;accent-color:var(--beam)}
+.ctl.a input{accent-color:var(--knobA)} .ctl.b input{accent-color:var(--knobB)}
+.ctl.a label{color:var(--knobA)} .ctl.b label{color:var(--knobB)}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+button{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--surface);color:var(--fg);
+  border-radius:999px;padding:6px 14px;cursor:pointer}
+button:hover{border-color:var(--muted)}
+button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--card);outline-offset:2px}
+button[aria-pressed=true]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.readout{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.cell{border-top:2px solid var(--line);padding-top:6px;min-width:0}
+.cell .k{font-size:12px;color:var(--muted)}
+.cell .v{font-family:var(--f-num);font-size:20px;font-variant-numeric:tabular-nums}
+.chip{display:inline-block;font-size:13px;font-weight:500;padding:2px 10px;border-radius:999px}
+.chip.ok{background:var(--band);color:var(--ok)}
+.chip.bad{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+.chip.a{background:color-mix(in srgb,var(--knobA) 15%,transparent);color:var(--knobA)}
+.chip.b{background:color-mix(in srgb,var(--knobB) 15%,transparent);color:var(--knobB)}
+.note{font-size:12px;color:var(--muted);margin:0}
+.facts{display:grid;grid-template-columns:7.5em 1fr;gap:4px 14px;font-size:14px;margin:0}
+.facts dt{color:var(--muted)} .facts dd{margin:0;min-width:0}
+.cap{font-size:15px;margin:0;font-weight:500}
+.verdicts{display:flex;flex-wrap:wrap;gap:8px}
+.verdicts .chip{font-weight:400}
+.quiz{display:flex;flex-direction:column;gap:16px}
+.q p{margin:0 0 6px;font-weight:500}
+.q .fb{font-size:14px;margin-top:6px;min-height:1.6em}
+.q button.right{border-color:var(--ok);color:var(--ok)}
+.q button.wrong{border-color:var(--bad);color:var(--bad)}
+footer{font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+footer b{color:var(--fg)}
+svg text{font-family:var(--f-body)}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+.lv{font-size:12px;font-weight:700;padding:1px 8px;border-radius:999px;margin-left:6px}
+.lv.e{background:var(--band);color:var(--ok)} .lv.m{background:color-mix(in srgb,var(--proj2) 18%,transparent);color:var(--proj2)} .lv.h{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+.info{border-left:3px solid var(--card);padding:8px 12px;background:var(--card-fill);border-radius:0 8px 8px 0;min-height:64px}
+.info b{display:inline} .info p{margin:4px 0 0;font-size:14px}
+.part{cursor:pointer;transition:transform .6s ease}
+.part:hover > :first-child,.part.sel > :first-child{filter:drop-shadow(0 0 4px var(--card))}
+@media (prefers-reduced-motion: reduce){.part{transition:none}}
+</style>
+<style>
+.q-big{font-family:var(--f-display);font-size:clamp(20px,3.6vw,26px);font-weight:900;margin:0;text-wrap:balance}
+.cap-box{display:flex;gap:12px;align-items:flex-start;background:var(--card-fill);border-radius:10px;padding:12px 14px;min-height:72px}
+.cap-box .no{font-family:var(--f-num);font-size:13px;color:var(--card);white-space:nowrap;padding-top:3px}
+.cap-box p{margin:0;font-size:16px;line-height:1.6}
+.cap-box b{color:var(--beam)}
+.stepbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.dots{display:flex;gap:6px;margin-left:4px}
+.dots i{width:9px;height:9px;border-radius:50%;background:var(--line);display:block}
+.dots i.on{background:var(--card)}
+.free{border-top:1px dashed var(--line);padding-top:12px;display:flex;flex-direction:column;gap:10px}
+.free .t{font-size:13px;color:var(--muted)}
+.big-next{background:var(--card);color:#fff;border-color:var(--card);font-weight:700}
+.concl{font-size:15px;font-weight:700;color:var(--ok);margin:0}
+</style>
+<div class="wrap">
+<header>
+  <div class="eyebrow">激光扫描系统入门 · 第 06 课</div>
+  <h1>50 米，设计要<span class="red">换思路</span></h1>
+  <p class="lede">工作距离从 0.5–2 m 改成 50 m 以后，有三件事变了：光点能做到多小、还需不需要“动态”聚焦、Z 模块该怎么做。数字都由 <b>设计/工具/远距离方案对比.py</b> 算出。</p>
+</header>
+
+<section aria-labelledby="s1">
+  <p class="q-big" id="s1">问题 1：50 米外，光点能做到多小？</p>
+  <div class="stage"><svg id="svg1" data-export="06-1_50米光点" viewBox="0 0 840 330" role="img" aria-label="50 米处不同方案的光点大小"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n1"></span><p id="c1"></p></div>
+  <div class="stepbar"><button id="p1">← 上一步</button><button id="x1" class="big-next">下一步 →</button><span class="dots" id="d1"></span></div>
+  <p class="concl">记住一句：50 米处光点是毫米级。决定它大小的，一是出口镜子有多大，二是<b>激光器的光束质量（M²）</b>。</p>
+</section>
+
+<section aria-labelledby="s2">
+  <p class="q-big" id="s2">问题 2：50 米时，还需要“动态”聚焦吗？</p>
+  <div class="stage"><svg id="svg2" data-export="06-2_焦深变长" viewBox="0 0 840 300" role="img" aria-label="近距离与 50 米的焦深对比"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n2"></span><p id="c2"></p></div>
+  <div class="stepbar"><button id="p2">← 上一步</button><button id="x2" class="big-next">下一步 →</button><span class="dots" id="d2"></span></div>
+  <p class="concl">记住一句：在 50 米处，扫描时 Z 基本不用动；只有<b>换目标距离</b>（比如从 10 m 换到 50 m）时才要调焦。</p>
+</section>
+
+<section aria-labelledby="s3">
+  <p class="q-big" id="s3">问题 3：那 Z 模块要怎么改？</p>
+  <div class="stage"><svg id="svg3" data-export="06-3_反着用的望远镜" viewBox="0 0 840 300" role="img" aria-label="把望远镜反过来用作扩束调焦"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n3"></span><p id="c3"></p></div>
+  <div class="stepbar"><button id="p3">← 上一步</button><button id="x3" class="big-next">下一步 →</button><span class="dots" id="d3"></span></div>
+  <div class="free"><span class="t">自己玩：换物镜焦距，看对焦 10 → 50 m 时镜片要走多远</span><div class="row" id="f3"></div></div>
+  <p class="concl">记住一句：Z 模块变成了一台“反着用的望远镜”，物镜大一点，调焦更好控制。它也不再需要高速音圈，精密丝杠就够了。</p>
+</section>
+
+<section aria-labelledby="s4">
+  <h2 id="s4"><span class="n">✓</span>小测</h2>
+  <div class="quiz" id="quiz"></div>
+</section>
+
+<footer>
+  <div><b>本课对项目的推进：</b>产出《设计/远距离系统方案_v0.4.md》（50 m，取代 v0.3 的距离假设）和《设计/工具/远距离方案对比.py》。</div>
+  <div>· 推荐 v0：<b>方案 A</b>（30 mm 振镜 + 调焦望远镜，物镜 f2 约 150–300 mm），控制卡可以直接沿用；50 m 处光点约 4.5 mm。</div>
+  <div>· 新发现：<b>激光器 M² 是选型第一指标</b>；Z 不再需要跟着扫描高速运动；<b>50 m 开放光束的安全</b>是头号风险。</div>
+</footer>
+</div>
+
+<script>
+
+const $=id=>document.getElementById(id);
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const T=(x,y,t,s=14,c='var(--fg)',a='middle',w=400)=>`<text x="${x}" y="${y}" font-size="${s}" fill="${c}" text-anchor="${a}" font-weight="${w}">${t}</text>`;
+/* 通用：分步 + 补间动画 */
+function stepper(k,steps,state,draw){
+  let i=0,anim=0;
+  const dots=$('d'+k);dots.innerHTML=steps.map(()=>'<i></i>').join('');
+  function go(n,instant){i=Math.max(0,Math.min(steps.length-1,n));const to={...state,...steps[i].s},from={...state},t0=performance.now(),dur=(reduce||instant)?0:700;
+    cancelAnimationFrame(anim);
+    const tick=now=>{const p=dur?Math.min(1,(now-t0)/dur):1,e=p<.5?2*p*p:1-(-2*p+2)**2/2;
+      for(const key in to){if(typeof to[key]==='number')state[key]=from[key]+(to[key]-from[key])*e;else state[key]=to[key];}
+      draw();if(p<1)anim=requestAnimationFrame(tick);};
+    if(!dur){for(const key in to)state[key]=to[key];draw();}else anim=requestAnimationFrame(tick);
+    $('c'+k).innerHTML=steps[i].t;$('n'+k).textContent=`第 ${i+1} / ${steps.length} 步`;
+    dots.querySelectorAll('i').forEach((d,j)=>d.classList.toggle('on',j<=i));
+    $('p'+k).disabled=i===0;$('x'+k).textContent=i===steps.length-1?'从头再看 ↺':'下一步 →';}
+  $('p'+k).onclick=()=>go(i-1);$('x'+k).onclick=()=>go(i===steps.length-1?0:i+1);
+  go(0,true);return {go,n:steps.length};
+}
+
+/* ---------- 1 光点大小 ---------- */
+// 方案：出口镜子直径(mm) 与 50 m 光点(mm)，来自 远距离方案对比结果.md
+const OPT=[{mir:30,spot:4.5,name:'振镜 30 mm'},{mir:50,spot:2.7,name:'大振镜 50 mm'},{mir:100,spot:1.3,name:'望远镜 100 mm + 云台'},{mir:30,spot:34,name:'振镜 30 mm，但激光器 M²=10'}];
+const s1={k:0,coin:0};
+function draw1(){
+  const k=Math.min(3,Math.max(0,s1.k)),i=Math.round(k),o=OPT[i];
+  let g='';
+  // 左：出口镜子（按比例：1 mm = 1.6 px）
+  g+=T(150,30,'出口镜子',13,'var(--muted)');
+  const r=o.mir*0.8;g+=`<circle cx="150" cy="170" r="${r}" fill="var(--glass-fill)" stroke="var(--glass)" stroke-width="3"/>`+T(150,170+r+24,o.mir+' mm',15,'var(--glass)','middle',700);
+  g+=T(150,300,o.name,14,'var(--fg)','middle',700);
+  // 中：光束
+  g+=`<polygon points="${150+r*0.3},${170-r*0.55} ${150+r*0.3},${170+r*0.55} 700,${170+Math.min(80,o.spot*2)} 700,${170-Math.min(80,o.spot*2)}" fill="var(--beam)" opacity=".25"/>`;
+  g+=T(380,150,'—— 50 米 ——',14,'var(--muted)');
+  // 右：50 m 处的光点（放大 4 倍，并和硬币对比）
+  g+=T(700,30,'50 米处的光点（和硬币同比例）',13,'var(--muted)');
+  const sr=Math.min(o.spot*2,80);g+=`<line x1="${150+r*0.3}" y1="170" x2="700" y2="170" stroke="var(--beam)" stroke-width="1" opacity=".4"/>`;
+  g+=`<circle cx="700" cy="170" r="${sr}" fill="#facc15" stroke="#b45309" stroke-width="2" opacity=".9"/>`;
+  if(s1.coin>0.01)g+=`<g opacity="${s1.coin}"><circle cx="700" cy="170" r="50" fill="none" stroke="var(--fg)" stroke-width="2" stroke-dasharray="5 4"/>${T(700,276,'虚线圈：一元硬币（25 mm）',12,'var(--fg)')}</g>`+T(700,170-Math.max(sr,50)-10,'约 '+o.spot+' mm',16,i===3?'var(--bad)':'var(--fg)','middle',700);
+  $('svg1').innerHTML=g;
+}
+const st1=stepper(1,[
+ {t:'用我们现在的<b>30 mm 振镜</b>，打到 50 米，光点约 <b>4.5 mm</b>，比一元硬币小很多。',s:{k:0,coin:1}},
+ {t:'换成 <b>50 mm 的大振镜</b>，光束可以更粗，光点缩到约 <b>2.7 mm</b>。代价是镜片更重，振镜更慢、更贵。',s:{k:1,coin:1}},
+ {t:'再大就得用<b>望远镜（出口 100 mm）+ 云台</b>，光点约 <b>1.3 mm</b>。这类镜子大到振镜带不动，只能靠云台转，就像艾思兰的除障、除冰设备。',s:{k:2,coin:1}},
+ {t:'但如果激光器的<b>光束质量差</b>（M² = 10，高功率多模激光器常见），哪怕用 30 mm 振镜，光点也会胀到约 <b>34 mm</b>，比硬币还大。<b>激光器选型时，M² 要排在第一位</b>。',s:{k:3,coin:1}}
+],s1,draw1);
+
+/* ---------- 2 焦深 ---------- */
+const s2={far:0,car:0,arc:0};
+function draw2(){
+  let g='';
+  // 近处 1 m：焦深 ±2 mm（画得很短）
+  const y1=70,y2=200;
+  g+=T(20,y1-34,'1 米处（第 05 课的设计）',13,'var(--muted)','start',700);
+  g+=`<polygon points="40,${y1-26} 40,${y1+26} 420,${y1+2} 440,${y1+2} 820,${y1+26} 820,${y1-26} 440,${y1-2} 420,${y1-2}" fill="var(--beam)" opacity=".2"/>`;
+  g+=`<rect x="426" y="${y1-30}" width="8" height="60" fill="var(--band)" stroke="var(--ok)" stroke-width="2"/>`+T(430,y1+48,'焦深 ±2 mm：像一枚硬币的厚度',13,'var(--ok)','middle',700);
+  if(s2.far>0.01){g+=`<g opacity="${s2.far}">`+T(20,y2-44,'50 米处（新设计）',13,'var(--muted)','start',700);
+    const hw=150+40*s2.car*0;
+    g+=`<polygon points="40,${y2-30} 40,${y2+30} 260,${y2+6} 600,${y2+6} 820,${y2+30} 820,${y2-30} 600,${y2-6} 260,${y2-6}" fill="var(--beam)" opacity=".2"/>`;
+    g+=`<rect x="280" y="${y2-34}" width="300" height="68" fill="var(--band)" stroke="var(--ok)" stroke-width="2"/>`+T(430,y2+54,'焦深约 ±5 m：比一辆车还长',13,'var(--ok)','middle',700)+'</g>';}
+  if(s2.car>0.01){g+=`<g opacity="${s2.car}"><rect x="296" y="${y2-20}" width="140" height="26" rx="8" fill="var(--card-fill)" stroke="var(--card)" stroke-width="2"/><circle cx="326" cy="${y2+8}" r="8" fill="var(--fg)"/><circle cx="406" cy="${y2+8}" r="8" fill="var(--fg)"/>${T(366,y2-4,'车 4.5 m',12,'var(--card)','middle',700)}</g>`;}
+  if(s2.arc>0.01){g+=`<g opacity="${s2.arc}"><rect x="530" y="${y2-34}" width="6" height="68" fill="var(--bad)"/>${T(500,y2-40,'扫描弧面只差 30 mm（红条）',13,'var(--bad)','start',700)}</g>`;}
+  $('svg2').innerHTML=g;
+}
+const st2=stepper(2,[
+ {t:'还记得第 01 课的沙漏吗？光点只在“腰”附近清楚。在 1 米处，这个腰只有<b>约 ±2 mm</b>，所以 Z 要一直跟着跑。',s:{far:0,car:0,arc:0}},
+ {t:'到了 50 米，光汇聚得很平，腰被拉得很长：<b>约 ±5 米</b>都算对焦。',s:{far:1,car:0,arc:0}},
+ {t:'±5 米是什么概念？<b>比一辆车还长</b>。目标前后差个一两米，照样清楚。',s:{far:1,car:1,arc:0}},
+ {t:'扫描时的弧面补偿只差<b>约 30 mm</b>（红条），在这么长的腰里可以忽略。所以<b>扫描时 Z 基本不用动</b>，只有换目标距离时才调一次。',s:{far:1,car:1,arc:1}}
+],s2,draw2);
+
+/* ---------- 3 反着用的望远镜 ---------- */
+const s3={rev:0,f2:60,mv:0};
+const TR={60:0.29,150:1.8,300:7.2};
+function draw3(){
+  let g='';
+  const flip=s3.rev>0.5,f2=Math.round(s3.f2),big=26+f2*0.12,len=120+f2*0.9;
+  const ex=flip?140:640,ob=flip?140+len:640-len; // 目镜 / 物镜位置
+  g+=T(420,26,flip?'反过来用：激光从小镜进、大镜出 = 扩束 + 调焦':'单筒望远镜：眼睛在小镜这边',14,'var(--fg)','middle',700);
+  // 镜筒
+  g+=`<rect x="${Math.min(ex,ob)}" y="${150-big-6}" width="${len}" height="${2*big+12}" rx="10" fill="none" stroke="var(--line)" stroke-width="2"/>`;
+  const mv=s3.mv*12*(flip?1:-1);
+  g+=`<ellipse cx="${ex+mv}" cy="150" rx="6" ry="16" fill="var(--glass-fill)" stroke="var(--proj2)" stroke-width="3"/>`+T(ex+mv,190,flip?'动镜（小）':'目镜',13,'var(--proj2)','middle',700);
+  g+=`<ellipse cx="${ob}" cy="150" rx="10" ry="${big}" fill="var(--glass-fill)" stroke="var(--glass)" stroke-width="3"/>`+T(ob,150+big+26,'物镜 f2 = '+f2+' mm',13,'var(--glass)','middle',700);
+  if(flip){g+=`<rect x="20" y="138" width="${ex-20}" height="24" fill="var(--beam)" opacity=".35"/>`+T(60,128,'激光',12,'var(--beam)','middle',700);
+    g+=`<polygon points="${ex},142 ${ex},158 ${ob},${150-big+4} ${ob},${150+big-4}" fill="var(--beam)" opacity=".25"/><polygon points="${ob},${150-big+4} ${ob},${150+big-4} 830,150" fill="var(--beam)" opacity=".2"/>`+T(800,135,'→ 50 m',13,'var(--muted)','end');}
+  else{g+=`<circle cx="${ex+40}" cy="150" r="10" fill="none" stroke="var(--fg)" stroke-width="2"/><circle cx="${ex+40}" cy="150" r="4" fill="var(--fg)"/>`+T(ex+40,130,'眼睛',12,'var(--fg)');}
+  g+=`<path d="M${ex-14},${222} L${ex+14},${222}" stroke="var(--proj2)" stroke-width="3" marker-end=""/>`+T(ex,244,'⟷ 调焦：镜片走一点点',12,'var(--proj2)');
+  if(flip)g+=T(420,284,`对焦 10 m → 50 m，动镜要走约 ${TR[f2]??(f2*f2*(1/10000-1/50000)).toFixed(2)} mm`,15,'var(--ok)','middle',700);
+  $('svg3').innerHTML=g;
+}
+const st3=stepper(3,[
+ {t:'先想想<b>单筒望远镜</b>：眼睛这边是小的目镜，前面是大的物镜。看远看近时，转一下调焦旋钮，<b>镜片只挪一点点</b>。',s:{rev:0,f2:60,mv:1}},
+ {t:'把它<b>反过来用</b>：激光从小镜进、大镜出，光就被扩粗了；挪一挪小镜片，就能调焦点远近。这正是我们的<b>动镜模块</b>。',s:{rev:1,f2:60,mv:0}},
+ {t:'问题是：物镜焦距短（60 mm）时，从 10 m 调到 50 m，镜片只需走 <b>0.29 mm</b>，太小，不好控制。',s:{rev:1,f2:60,mv:1}},
+ {t:'换<b>焦距长一点的物镜</b>（150–300 mm），行程变成 <b>1.8–7.2 mm</b>，就好控制了。而且扫描时 Z 不用跟着跑，<b>精密丝杠加步进电机</b>就够用，不必上高速音圈。',s:{rev:1,f2:300,mv:1}}
+],s3,draw3);
+$('f3').innerHTML=[60,150,300].map(v=>`<button data-v="${v}">物镜 ${v} mm</button>`).join('');
+$('f3').querySelectorAll('button').forEach(b=>b.onclick=()=>{s3.f2=+b.dataset.v;s3.rev=1;$('f3').querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));draw3();});
+
+window.__beforeExport=()=>{st1.go(0,true);st2.go(3,true);st3.go(3,true);};
+/* 小测 */
+const QS=[
+ {q:'50 米处想把光点做小，最该先关注哪一项？',o:['激光功率','激光器的光束质量 M²，以及出口镜子大小','振镜速度'],a:1,
+  e:['功率不影响光点大小。','对。M² 从 1.3 变到 10，光点从约 4.5 mm 变成约 34 mm。','速度不影响光点大小。']},
+ {q:'50 米处扫描时，Z 需要跟着高速运动吗？',o:['需要','基本不需要，换距离时调一次就行'],a:1,
+  e:['焦深约 ±5 m，扫描时弧面只差约 30 mm，可以忽略。','对。所以 Z 模块的要求从“快”变成了“准”。']},
+ {q:'为什么物镜焦距要选长一点（150–300 mm）？',o:['让光点更小','让调焦行程大一些，好控制','为了更便宜'],a:1,
+  e:['光点大小主要看出口光束直径和 M²。','对。f2 = 60 mm 时行程只有 0.29 mm，太小了。','不一定更便宜。']}
+];
+$('quiz').innerHTML=QS.map((q,i)=>`<div class="q" data-i="${i}"><p>Q${i+1}. ${q.q}</p><div class="row">${q.o.map((o,j)=>`<button data-j="${j}">${o}</button>`).join('')}</div><div class="fb" aria-live="polite"></div></div>`).join('');
+document.querySelectorAll('.q button').forEach(b=>b.onclick=()=>{const qd=b.closest('.q'),q=QS[+qd.dataset.i],j=+b.dataset.j;
+  qd.querySelectorAll('button').forEach(x=>x.classList.remove('right','wrong'));b.classList.add(j===q.a?'right':'wrong');
+  qd.querySelector('.fb').textContent=(j===q.a?'✓ ':'✗ ')+q.e[j];});
+</script>
