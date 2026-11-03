@@ -1,5 +1,5 @@
 """
-调焦头结构参数 v0.2（5–50 m 前聚焦，详细结构）——唯一数据源
+调焦头结构参数 v0.3（5–50 m 前聚焦，详细结构 + 优化）——唯一数据源
 参考结构：CN213163617U（光路底座+上盖密封腔、隔断分左右腔）、CN205899130U（Z 轴底座保证同轴、内支架装 X/Y 振镜、
 电机夹、保护窗镜片、驱动板）、CN120928524B（遮光片 + 探测器检测镜片位置）、SCANLAB varioSCAN（入口光阑可水冷）
 坐标：X 沿入射光轴（从后壁外表面起），Y 向左，Z 向上（从壳体底面起），单位 mm
@@ -12,30 +12,32 @@ L_NEAR, L_FAR = 5000.0, 50000.0
 TRAVEL = F2**2 * (1/L_NEAR - 1/L_FAR)       # 4.05
 
 P = dict(
-  # —— 壳体（光路底座 + 隔断 + 上盖）——
-  HX=360, HW=170, HH=120, WALL=6, FLOOR=8, LID=6, PART_X=220,      # 隔断位置
-  AXIS_Z=45,                       # 入射光轴高度
+  VERSION="0.3",
+  RED_COMBINER=False,              # v0.3：激光器自带红光 → 去掉合束镜和红光模组（True 可恢复）
+  # —— 壳体 ——
+  HX=370, HW=170, HH=120, WALL=6, FLOOR=8, LID=6, PART_X=238,
+  AXIS_Z=45,
   # —— 激光输入 ——
-  COLL_D=30, COLL_L=80, COLL_X0=-135,                             # 准直器（占位）
-  FLANGE_OD=64, FLANGE_T=12, CLAMP_OD=44, CLAMP_L=43,             # 两轴俯仰法兰 + 夹紧套
-  APER_X=11, APER_OD=40, APER_ID=10,                              # 入口光阑（可水冷）
-  COMB_X=34, COMB_D=25.4,                                         # 合束镜
-  RED_D=12, RED_L=40, RED_Y=-40,                                  # 红光模组
-  # —— Z 调焦机构（Z 轴底座为同轴基准）——
-  ZB_X0=50, ZB_X1=212, ZB_W=80, ZB_T=8,
-  RAIL_X0=56, RAIL_X1=110, RAIL_W=7, RAIL_H=5,                    # 微型直线导轨
-  CAR_L=23, CAR_W=17, CAR_H=8,                                    # 滑座
-  X_L1_INF=194 - S0, X_OBJ=194, STROKE=10,                        # 动镜位置（对焦∞）、物镜位置、机械行程
+  COLL_D=30, COLL_L=80, COLL_X0=-135,
+  FLANGE_OD=64, FLANGE_T=12, CLAMP_OD=44, CLAMP_L=43,
+  APER_X=11, APER_OD=40, APER_ID=10,
+  COMB_X=34, COMB_D=25.4, RED_D=12, RED_L=40, RED_Y=-40,          # 仅 RED_COMBINER=True 时用
+  # —— Z 调焦机构（电机在后，丝杠靠近导轨，导轨垫高）——
+  ZB_X0=16, ZB_X1=236, ZB_W=80, ZB_T=8,
+  RISER_H=8,                                                       # 导轨垫高块：降低镜心到导轨的力臂
+  RAIL_X0=78, RAIL_X1=132, RAIL_W=7, RAIL_H=5,
+  CAR_L=23, CAR_W=17, CAR_H=8,
+  X_L1_INF=96, X_OBJ=96 + S0, STROKE=10,
   L1_D=12.7,
-  SCREW_Y=-31, SCREW_Z=30, SCREW_D=5, SCREW_X0=58, SCREW_X1=104,   # 丝杠
-  MOTOR=28, MOTOR_L=32, MOTOR_X0=130,                             # NEMA 11
-  HOME_X=194 - S0 - 12, LIMIT_X=194 - S0 + 12,                                          # 原点 / 限位光电开关
-  SHADE_D=30, SHADE_X0=86, SHADE_X1=174,                          # 遮光筒
-  OBJ_D=40, OBJ_TUBE_OD=50, XYM_X0=176, XYM_T=12, XYM_S=70,       # 物镜 + XY 对中座
-  # —— 振镜腔（内支架 + 两个振镜）——
-  GAL_X=270, MIR_GAP=32, GAL_D=30, GAL_L=48,                      # 两镜中心高差、电机 Ø/长（占位）
-  BR_X0=240, BR_X1=300, BR_Y=26, BR_Z0=20, BR_Z1=100,             # 内支架
-  WIN_D=60, WIN_T=4, WIN_FR_OD=80,                                # 侧面出光保护窗
+  SCREW_Y=-20, SCREW_Z=30, SCREW_D=5, SCREW_X0=66, SCREW_X1=134,   # 丝杠离导轨 20 mm（v0.2 为 31）
+  MOTOR=28, MOTOR_L=32, MOTOR_X0=18,                               # 电机放在后面
+  HOME_X=81, LIMIT_X=107,
+  SHADE_D=30, SHADE_X0=116, SHADE_X1=198,
+  OBJ_D=40, OBJ_TUBE_OD=50, XYM_X0=198, XYM_T=12, XYM_S=70,
+  # —— 振镜 ——
+  GAL_X=282, MIR_GAP=32, GAL_D=30, GAL_L=48,
+  BR_X0=252, BR_X1=312, BR_Y=26, BR_Z0=20, BR_Z1=100,
+  WIN_D=60, WIN_T=4, WIN_FR_OD=80, WIN_TILT=3,                     # 保护窗倾斜 3°，防反射回激光器
 )
 P["OUT_Z"] = P["AXIS_Z"] + P["MIR_GAP"]
 
@@ -45,8 +47,11 @@ BOM = [
  ("H01_Base",        "H", "光路底座（含隔断）", 1, "6061 铝，整体铣削；隔断把腔体分为 Z 腔 / 振镜腔", "做", "CN213163617U 光路底座 + 隔断"),
  ("H02_Lid",         "H", "光路上盖",           1, "6061 铝 6 mm，周边 M3 螺钉 + 密封条", "做", "CN213163617U 光路上盖"),
  ("H03_LidScrews",   "H", "上盖螺钉",           12, "M3×8 内六角", "买", "—"),
- ("H04_MountPads",   "H", "底部安装垫块",       4, "带 M6 螺孔，接云台 / 支架", "做", "—"),
- ("I01_Collimator",  "I", "激光准直器（占位）", 1, "Ø30×80，按激光器型号替换", "买", "激光器附带"),
+ ("H04_MountPlate",  "H", "安装接口板（在重心下）", 1, "4×M6 + 2 定位销，接云台 / 支架；位置按重心自动放", "做", "v0.3 优化"),
+ ("H05_Breather",    "H", "防水透气阀",         1, "M12，平衡内外气压、防水防尘", "买", "v0.3 优化（户外）"),
+ ("H06_LidGasket",   "H", "上盖密封条",         1, "装在底座顶面密封槽里", "买", "v0.3 优化（户外）"),
+ ("H07_HeatSink",    "H", "底部散热鳍片",       1, "振镜驱动板下方，外置", "做", "v0.3 优化（散热）"),
+ ("I01_Collimator",  "I", "激光准直输出头（QBH，占位）", 1, "Ø30×80；激光器配套或另配，决定出光直径（按 4 mm 设计）", "买", "激光器附带"),
  ("I02_FiberCable",  "I", "光纤铠缆（示意）",   1, "—", "买", "—"),
  ("I03_TiltFlange",  "I", "两轴俯仰法兰",       1, "3 颗推拉螺钉调俯仰，装在后壁", "做", "参考常见准直器座"),
  ("I04_Clamp",       "I", "准直器夹紧套",       1, "开口夹紧，内径按准直器", "做", "—"),
@@ -57,6 +62,7 @@ BOM = [
  ("I09_RedModule",   "I", "红光指示模组",       1, "Ø12×40，650 nm", "买", "—"),
  ("I10_RedHolder",   "I", "红光模组座",         1, "—", "做", "—"),
  ("Z01_ZBase",       "Z", "Z 轴底座",           1, "导轨、动镜、遮光筒、物镜都装在它上面 → 保证同轴", "做", "CN205899130U Z 轴底座"),
+ ("Z22_Riser",       "Z", "导轨垫高块",         1, "8 mm，降低镜心到导轨的力臂", "做", "v0.3 优化（阿贝误差）"),
  ("Z02_Rail",        "Z", "微型直线导轨",       1, "7 mm 宽，长 54；关键：横向晃动 ≤ 3 μm", "买", "S016/S017（导轨资料）"),
  ("Z03_Carriage",    "Z", "滑座",               1, "导轨配套滑块", "买", "CN205899130U 滑座"),
  ("Z04_LensHolder",  "Z", "动镜镜座",           1, "装在滑座上，轻量化", "做", "CN120928524B 镜片安装结构"),
@@ -64,6 +70,8 @@ BOM = [
  ("Z06_L1Ring",      "Z", "动镜压圈",           1, "—", "做", "—"),
  ("Z07_NutArm",      "Z", "螺母连接臂",         1, "滑座 → 丝杠螺母", "做", "—"),
  ("Z08_Nut",         "Z", "预紧丝杠螺母",       1, "消回差", "买", "【推算】回差对策"),
+ ("Z21_FloatJoint",  "Z", "浮动接头",           1, "螺母和滑座之间，隔离丝杠跳动，只传轴向力", "买", "v0.3 优化"),
+ ("Z23_HardStops",   "Z", "机械硬限位块",       2, "导轨两端，防失控撞击", "做", "v0.3 优化"),
  ("Z09_Screw",       "Z", "丝杠",               1, "Ø5，导程 1 mm", "买", "【推算】"),
  ("Z10_BearingFix",  "Z", "固定端轴承座",       1, "成对角接触轴承", "做", "—"),
  ("Z11_BearingSup",  "Z", "支撑端轴承座",       1, "—", "做", "—"),
@@ -78,7 +86,7 @@ BOM = [
  ("Z20_TempSensor",  "Z", "温度传感器",         1, "用于热胀补偿（10 K → 28 μm）", "买", "【推算】"),
  ("O01_XYMount",     "O", "物镜 XY 对中座",     1, "4 颗顶丝对中", "做", "—"),
  ("O02_ObjTube",     "O", "物镜筒",             1, "—", "做", "CN205899130U 聚焦透镜筒"),
- ("O03_Objective",   "O", "物镜 f = 150 mm",    1, "Ø40 双胶合，通光 ≥ 28 mm", "买", "【推算】v0.5"),
+ ("O03_Objective",   "O", "物镜 f = 150 mm",    1, "Ø40，熔石英分离式双片或非球面单片（大功率不用胶合），通光 ≥ 28 mm", "买", "【推算】v0.5 / v0.3 优化"),
  ("O04_ObjRing",     "O", "物镜压圈",           1, "—", "做", "—"),
  ("O05_CenterScrews","O", "对中顶丝 / 弹簧顶销", 3, "M4 顶丝 ×2 + 弹簧顶销 ×1，三点对中", "买", "—"),
  ("G01_Bracket",     "G", "振镜内支架",         1, "铝块，内部通光腔；X/Y 电机从两面插入", "做", "CN205899130U 内支架"),
@@ -90,23 +98,27 @@ BOM = [
  ("G07_MirrorY",     "G", "Y 镜片",             1, "比 X 镜大", "买", "随振镜"),
  ("G08_DriverX",     "G", "X 振镜驱动板",       1, "随振镜；带散热块", "买", "CN205899130U 驱动板"),
  ("G09_DriverY",     "G", "Y 振镜驱动板",       1, "—", "买", "CN205899130U 驱动板"),
+ ("G10_ThermalPads", "G", "导热垫",             2, "驱动板功率器件 → 底板 → 散热鳍片", "买", "v0.3 优化（散热）"),
  ("W01_WinFrame",    "W", "保护窗框",           1, "快拆，4 颗螺钉", "做", "CN205899130U 保护窗口"),
- ("W02_Window",      "W", "保护窗镜片",         1, "Ø60×4，1064 双面增透", "买", "CN205899130U 保护窗镜片"),
+ ("W02_Window",      "W", "保护窗镜片",         1, "Ø60×4，1064 双面增透，倾斜 3° 安装（防反射回激光器）", "买", "CN205899130U 保护窗镜片 / v0.3 优化"),
  ("W03_ORing",       "W", "O 型圈",             1, "密封防尘", "买", "—"),
+ ("W04_AirKnife",    "W", "窗口吹气嘴",         1, "接干燥压缩空气，吹走窗口灰尘", "买", "v0.3 优化（户外）"),
  ("E01_StepDriver",  "E", "步进驱动板",         1, "STEP/DIR/EN 输入", "买", "—"),
  ("E02_DB25",        "E", "DB25 接口",          1, "XY2-100（X/Y）+ 步进信号，接控制卡", "买", "控制卡方案包 J2/J3"),
  ("E03_PowerConn",   "E", "电源航空插头",       1, "振镜 ±15 V / 步进 24 V", "买", "—"),
  ("E04_GroundStud",  "E", "接地柱",             1, "M4", "买", "—"),
 ]
-data = dict(generated=str(datetime.date.today()), version="0.2", P=P, groups=G,
+if not P["RED_COMBINER"]:
+    BOM = [b for b in BOM if b[0] not in ("I07_Combiner", "I08_CombMount", "I09_RedModule", "I10_RedHolder")]
+data = dict(generated=str(datetime.date.today()), version=P["VERSION"], P=P, groups=G,
             bom=[dict(id=i, g=g, name=n, qty=q, spec=s, make=m, ref=r) for i, g, n, q, s, m, r in BOM],
             travel=TRAVEL, s0=S0)
 here = os.path.dirname(os.path.abspath(__file__))
 json.dump(data, open(os.path.join(here, "结构参数.json"), "w"), ensure_ascii=False, indent=1)
 
 def shift(e_um, L): return e_um * 1e-3 / F2 * L
-md = [f"# 调焦头结构参数 v0.2（自动生成，{data['generated']}）\n",
-      "> 由 `工具/结构参数.py` 生成。零件清单见 `../CAD/BOM_v0.2.md`。\n",
+md = [f"# 调焦头结构参数 v{P['VERSION']}（自动生成，{data['generated']}）\n",
+      "> 由 `工具/结构参数.py` 生成。零件清单见 `../CAD/BOM_v0.3.md`。\n",
       f"- 壳体 {P['HX']} × {P['HW']} × {P['HH']} mm；入射光轴高 {P['AXIS_Z']} mm，出光高 {P['OUT_Z']} mm（侧面出光）",
       f"- 动镜：对焦 ∞ 时 X = {P['X_L1_INF']:.0f}，对焦 5 m 时后退 {TRAVEL:.2f} mm；机械行程 {P['STROKE']} mm",
       f"- 物镜 X = {P['X_OBJ']}；隔断 X = {P['PART_X']}；振镜中心 X = {P['GAL_X']}\n",

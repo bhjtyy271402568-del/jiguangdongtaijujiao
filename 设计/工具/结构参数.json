@@ -1,14 +1,16 @@
 {
  "generated": "2026-11-03",
- "version": "0.2",
+ "version": "0.3",
  "P": {
-  "HX": 360,
+  "VERSION": "0.3",
+  "RED_COMBINER": false,
+  "HX": 370,
   "HW": 170,
   "HH": 120,
   "WALL": 6,
   "FLOOR": 8,
   "LID": 6,
-  "PART_X": 220,
+  "PART_X": 238,
   "AXIS_Z": 45,
   "COLL_D": 30,
   "COLL_L": 80,
@@ -25,51 +27,53 @@
   "RED_D": 12,
   "RED_L": 40,
   "RED_Y": -40,
-  "ZB_X0": 50,
-  "ZB_X1": 212,
+  "ZB_X0": 16,
+  "ZB_X1": 236,
   "ZB_W": 80,
   "ZB_T": 8,
-  "RAIL_X0": 56,
-  "RAIL_X1": 110,
+  "RISER_H": 8,
+  "RAIL_X0": 78,
+  "RAIL_X1": 132,
   "RAIL_W": 7,
   "RAIL_H": 5,
   "CAR_L": 23,
   "CAR_W": 17,
   "CAR_H": 8,
-  "X_L1_INF": 74.0,
-  "X_OBJ": 194,
+  "X_L1_INF": 96,
+  "X_OBJ": 216.0,
   "STROKE": 10,
   "L1_D": 12.7,
-  "SCREW_Y": -31,
+  "SCREW_Y": -20,
   "SCREW_Z": 30,
   "SCREW_D": 5,
-  "SCREW_X0": 58,
-  "SCREW_X1": 104,
+  "SCREW_X0": 66,
+  "SCREW_X1": 134,
   "MOTOR": 28,
   "MOTOR_L": 32,
-  "MOTOR_X0": 130,
-  "HOME_X": 62.0,
-  "LIMIT_X": 86.0,
+  "MOTOR_X0": 18,
+  "HOME_X": 81,
+  "LIMIT_X": 107,
   "SHADE_D": 30,
-  "SHADE_X0": 86,
-  "SHADE_X1": 174,
+  "SHADE_X0": 116,
+  "SHADE_X1": 198,
   "OBJ_D": 40,
   "OBJ_TUBE_OD": 50,
-  "XYM_X0": 176,
+  "XYM_X0": 198,
   "XYM_T": 12,
   "XYM_S": 70,
-  "GAL_X": 270,
+  "GAL_X": 282,
   "MIR_GAP": 32,
   "GAL_D": 30,
   "GAL_L": 48,
-  "BR_X0": 240,
-  "BR_X1": 300,
+  "BR_X0": 252,
+  "BR_X1": 312,
   "BR_Y": 26,
   "BR_Z0": 20,
   "BR_Z1": 100,
   "WIN_D": 60,
   "WIN_T": 4,
   "WIN_FR_OD": 80,
+  "WIN_TILT": 3,
   "OUT_Z": 77
  },
  "groups": {
@@ -110,20 +114,47 @@
    "ref": "—"
   },
   {
-   "id": "H04_MountPads",
+   "id": "H04_MountPlate",
    "g": "H",
-   "name": "底部安装垫块",
-   "qty": 4,
-   "spec": "带 M6 螺孔，接云台 / 支架",
+   "name": "安装接口板（在重心下）",
+   "qty": 1,
+   "spec": "4×M6 + 2 定位销，接云台 / 支架；位置按重心自动放",
    "make": "做",
-   "ref": "—"
+   "ref": "v0.3 优化"
+  },
+  {
+   "id": "H05_Breather",
+   "g": "H",
+   "name": "防水透气阀",
+   "qty": 1,
+   "spec": "M12，平衡内外气压、防水防尘",
+   "make": "买",
+   "ref": "v0.3 优化（户外）"
+  },
+  {
+   "id": "H06_LidGasket",
+   "g": "H",
+   "name": "上盖密封条",
+   "qty": 1,
+   "spec": "装在底座顶面密封槽里",
+   "make": "买",
+   "ref": "v0.3 优化（户外）"
+  },
+  {
+   "id": "H07_HeatSink",
+   "g": "H",
+   "name": "底部散热鳍片",
+   "qty": 1,
+   "spec": "振镜驱动板下方，外置",
+   "make": "做",
+   "ref": "v0.3 优化（散热）"
   },
   {
    "id": "I01_Collimator",
    "g": "I",
-   "name": "激光准直器（占位）",
+   "name": "激光准直输出头（QBH，占位）",
    "qty": 1,
-   "spec": "Ø30×80，按激光器型号替换",
+   "spec": "Ø30×80；激光器配套或另配，决定出光直径（按 4 mm 设计）",
    "make": "买",
    "ref": "激光器附带"
   },
@@ -173,42 +204,6 @@
    "ref": "SCANLAB varioSCAN 水冷入口光阑（R030）"
   },
   {
-   "id": "I07_Combiner",
-   "g": "I",
-   "name": "合束镜",
-   "qty": 1,
-   "spec": "Ø25.4×3，1064 透 / 650 反",
-   "make": "买",
-   "ref": "—"
-  },
-  {
-   "id": "I08_CombMount",
-   "g": "I",
-   "name": "合束镜运动学镜座",
-   "qty": 1,
-   "spec": "两轴俯仰",
-   "make": "买",
-   "ref": "—"
-  },
-  {
-   "id": "I09_RedModule",
-   "g": "I",
-   "name": "红光指示模组",
-   "qty": 1,
-   "spec": "Ø12×40，650 nm",
-   "make": "买",
-   "ref": "—"
-  },
-  {
-   "id": "I10_RedHolder",
-   "g": "I",
-   "name": "红光模组座",
-   "qty": 1,
-   "spec": "—",
-   "make": "做",
-   "ref": "—"
-  },
-  {
    "id": "Z01_ZBase",
    "g": "Z",
    "name": "Z 轴底座",
@@ -216,6 +211,15 @@
    "spec": "导轨、动镜、遮光筒、物镜都装在它上面 → 保证同轴",
    "make": "做",
    "ref": "CN205899130U Z 轴底座"
+  },
+  {
+   "id": "Z22_Riser",
+   "g": "Z",
+   "name": "导轨垫高块",
+   "qty": 1,
+   "spec": "8 mm，降低镜心到导轨的力臂",
+   "make": "做",
+   "ref": "v0.3 优化（阿贝误差）"
   },
   {
    "id": "Z02_Rail",
@@ -279,6 +283,24 @@
    "spec": "消回差",
    "make": "买",
    "ref": "【推算】回差对策"
+  },
+  {
+   "id": "Z21_FloatJoint",
+   "g": "Z",
+   "name": "浮动接头",
+   "qty": 1,
+   "spec": "螺母和滑座之间，隔离丝杠跳动，只传轴向力",
+   "make": "买",
+   "ref": "v0.3 优化"
+  },
+  {
+   "id": "Z23_HardStops",
+   "g": "Z",
+   "name": "机械硬限位块",
+   "qty": 2,
+   "spec": "导轨两端，防失控撞击",
+   "make": "做",
+   "ref": "v0.3 优化"
   },
   {
    "id": "Z09_Screw",
@@ -411,9 +433,9 @@
    "g": "O",
    "name": "物镜 f = 150 mm",
    "qty": 1,
-   "spec": "Ø40 双胶合，通光 ≥ 28 mm",
+   "spec": "Ø40，熔石英分离式双片或非球面单片（大功率不用胶合），通光 ≥ 28 mm",
    "make": "买",
-   "ref": "【推算】v0.5"
+   "ref": "【推算】v0.5 / v0.3 优化"
   },
   {
    "id": "O04_ObjRing",
@@ -515,6 +537,15 @@
    "ref": "CN205899130U 驱动板"
   },
   {
+   "id": "G10_ThermalPads",
+   "g": "G",
+   "name": "导热垫",
+   "qty": 2,
+   "spec": "驱动板功率器件 → 底板 → 散热鳍片",
+   "make": "买",
+   "ref": "v0.3 优化（散热）"
+  },
+  {
    "id": "W01_WinFrame",
    "g": "W",
    "name": "保护窗框",
@@ -528,9 +559,9 @@
    "g": "W",
    "name": "保护窗镜片",
    "qty": 1,
-   "spec": "Ø60×4，1064 双面增透",
+   "spec": "Ø60×4，1064 双面增透，倾斜 3° 安装（防反射回激光器）",
    "make": "买",
-   "ref": "CN205899130U 保护窗镜片"
+   "ref": "CN205899130U 保护窗镜片 / v0.3 优化"
   },
   {
    "id": "W03_ORing",
@@ -540,6 +571,15 @@
    "spec": "密封防尘",
    "make": "买",
    "ref": "—"
+  },
+  {
+   "id": "W04_AirKnife",
+   "g": "W",
+   "name": "窗口吹气嘴",
+   "qty": 1,
+   "spec": "接干燥压缩空气，吹走窗口灰尘",
+   "make": "买",
+   "ref": "v0.3 优化（户外）"
   },
   {
    "id": "E01_StepDriver",
