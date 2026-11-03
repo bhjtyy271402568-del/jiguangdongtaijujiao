@@ -181,10 +181,10 @@ function prof(u,m){ // 截面形状
 function draw1(){
   const m=s1.m;let g='';
   // 截面
-  g+=T(170,30,'正面看：光束的截面（亮度）',13,'var(--muted)');
+  g+=T(170,30,'沿光点中间切一刀：各处有多亮',13,'var(--muted)');
   let d=`M40,220`;for(let k=0;k<=120;k++){const u=-1.5+k*0.025;d+=` L${40+k*2.17},${220-150*prof(u,m)}`;}
   g+=`<path d="${d} L300,220 Z" fill="var(--beam)" opacity=".35" stroke="var(--beam)" stroke-width="2"/>`;
-  g+=`<line x1="40" y1="220" x2="300" y2="220" stroke="var(--fg)"/>`+T(170,250,m<1.15?'光滑的“小山包”':m<2?'几乎光滑':'坑坑洼洼',14,'var(--fg)','middle',700);
+  g+=`<line x1="40" y1="220" x2="300" y2="220" stroke="var(--fg)"/>`+T(170,250,m<1.15?'光滑的“小山包”':m<2?'几乎光滑':'坑坑洼洼',14,'var(--fg)','middle',700)+T(170,272,'（光点本身是圆的，这条线画的是亮度）',11,'var(--muted)');
   // 侧面：扩散
   g+=T(600,30,'侧面看：往前走时散开多快',13,'var(--muted)');
   const hw=Math.min(125,10+10*m),hi=20;

@@ -1,0 +1,237 @@
+<title>光点是圆的</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@700;900&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* 布局：与第 01、02 课相同的“实验台”纵向课程；第 07 课补课二：光点是圆的，“小山包”是亮度 */
+:root{
+  --bg:#f4f6f9; --surface:#ffffff; --fg:#151a23; --muted:#5d6676; --line:#d8dee7;
+  --beam:#e5383b; --beam-soft:#f6b3b4; --glass:#2b7bb9; --glass-fill:#dcecf8;
+  --ok:#17914f; --bad:#d23c3c; --proj2:#e0701c; --card:#2c5fd6; --card-fill:#e2eafc;
+  --metal:#7b8697; --work:#d7d3cf; --work-line:#8a817a; --band:#17914f22;
+  --knobA:#7c3aed; --knobB:#0e8a8a;
+  --f-body:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --f-display:"Noto Serif SC","Songti SC",serif;
+  --f-num:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1218; --surface:#171c25; --fg:#e7ebf1; --muted:#9aa4b4; --line:#2b3240;
+  --beam:#ff5c60; --beam-soft:#7a2a2d; --glass:#6db5ee; --glass-fill:#1c3448;
+  --ok:#3fd082; --bad:#ff6b6b; --proj2:#ff9a4a; --card:#82a6ff; --card-fill:#1d2a4a;
+  --metal:#8c97a8; --work:#3a3633; --work-line:#7d746c; --band:#3fd08226;
+  --knobA:#b08cff; --knobB:#4fd1c5; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1218; --surface:#171c25; --fg:#e7ebf1; --muted:#9aa4b4; --line:#2b3240;
+  --beam:#ff5c60; --beam-soft:#7a2a2d; --glass:#6db5ee; --glass-fill:#1c3448;
+  --ok:#3fd082; --bad:#ff6b6b; --proj2:#ff9a4a; --card:#82a6ff; --card-fill:#1d2a4a;
+  --metal:#8c97a8; --work:#3a3633; --work-line:#7d746c; --band:#3fd08226;
+  --knobA:#b08cff; --knobB:#4fd1c5; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:15px;line-height:1.65}
+.wrap{max-width:900px;margin:0 auto;padding-block:28px 56px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:flex;flex-direction:column;gap:28px}
+header{display:flex;flex-direction:column;gap:6px}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--muted)}
+h1{font-family:var(--f-display);font-weight:900;font-size:clamp(28px,5vw,40px);margin:0;line-height:1.2;text-wrap:balance}
+h1 .red{color:var(--beam)}
+.lede{color:var(--muted);margin:0;max-width:60ch}
+section{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:14px;min-width:0}
+h2{font-family:var(--f-display);font-size:21px;margin:0;display:flex;gap:10px;align-items:baseline;text-wrap:balance}
+h2 .n{font-family:var(--f-num);font-size:13px;color:var(--beam)}
+.try{font-size:13px;color:var(--muted);margin:0}
+.try b{color:var(--fg);font-weight:500}
+.stage{overflow-x:auto;border-radius:10px;background:var(--bg)}
+.stage svg{display:block;width:100%;height:auto}
+.controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px 20px}
+.ctl{display:flex;flex-direction:column;gap:4px;min-width:0}
+.ctl label{font-size:13px;display:flex;justify-content:space-between;gap:8px}
+.ctl label span{font-family:var(--f-num);color:var(--muted);font-size:12px}
+input[type=range]{width:100%;accent-color:var(--beam)}
+.ctl.a input{accent-color:var(--knobA)} .ctl.b input{accent-color:var(--knobB)}
+.ctl.a label{color:var(--knobA)} .ctl.b label{color:var(--knobB)}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+button{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--surface);color:var(--fg);
+  border-radius:999px;padding:6px 14px;cursor:pointer}
+button:hover{border-color:var(--muted)}
+button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--card);outline-offset:2px}
+button[aria-pressed=true]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.readout{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.cell{border-top:2px solid var(--line);padding-top:6px;min-width:0}
+.cell .k{font-size:12px;color:var(--muted)}
+.cell .v{font-family:var(--f-num);font-size:20px;font-variant-numeric:tabular-nums}
+.chip{display:inline-block;font-size:13px;font-weight:500;padding:2px 10px;border-radius:999px}
+.chip.ok{background:var(--band);color:var(--ok)}
+.chip.bad{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+.chip.a{background:color-mix(in srgb,var(--knobA) 15%,transparent);color:var(--knobA)}
+.chip.b{background:color-mix(in srgb,var(--knobB) 15%,transparent);color:var(--knobB)}
+.note{font-size:12px;color:var(--muted);margin:0}
+.facts{display:grid;grid-template-columns:7.5em 1fr;gap:4px 14px;font-size:14px;margin:0}
+.facts dt{color:var(--muted)} .facts dd{margin:0;min-width:0}
+.cap{font-size:15px;margin:0;font-weight:500}
+.verdicts{display:flex;flex-wrap:wrap;gap:8px}
+.verdicts .chip{font-weight:400}
+.quiz{display:flex;flex-direction:column;gap:16px}
+.q p{margin:0 0 6px;font-weight:500}
+.q .fb{font-size:14px;margin-top:6px;min-height:1.6em}
+.q button.right{border-color:var(--ok);color:var(--ok)}
+.q button.wrong{border-color:var(--bad);color:var(--bad)}
+footer{font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+footer b{color:var(--fg)}
+svg text{font-family:var(--f-body)}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+.lv{font-size:12px;font-weight:700;padding:1px 8px;border-radius:999px;margin-left:6px}
+.lv.e{background:var(--band);color:var(--ok)} .lv.m{background:color-mix(in srgb,var(--proj2) 18%,transparent);color:var(--proj2)} .lv.h{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+.info{border-left:3px solid var(--card);padding:8px 12px;background:var(--card-fill);border-radius:0 8px 8px 0;min-height:64px}
+.info b{display:inline} .info p{margin:4px 0 0;font-size:14px}
+.part{cursor:pointer;transition:transform .6s ease}
+.part:hover > :first-child,.part.sel > :first-child{filter:drop-shadow(0 0 4px var(--card))}
+@media (prefers-reduced-motion: reduce){.part{transition:none}}
+</style>
+<style>
+.q-big{font-family:var(--f-display);font-size:clamp(20px,3.6vw,26px);font-weight:900;margin:0;text-wrap:balance}
+.cap-box{display:flex;gap:12px;align-items:flex-start;background:var(--card-fill);border-radius:10px;padding:12px 14px;min-height:72px}
+.cap-box .no{font-family:var(--f-num);font-size:13px;color:var(--card);white-space:nowrap;padding-top:3px}
+.cap-box p{margin:0;font-size:16px;line-height:1.6}
+.cap-box b{color:var(--beam)}
+.stepbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.dots{display:flex;gap:6px;margin-left:4px}
+.dots i{width:9px;height:9px;border-radius:50%;background:var(--line);display:block}
+.dots i.on{background:var(--card)}
+.free{border-top:1px dashed var(--line);padding-top:12px;display:flex;flex-direction:column;gap:10px}
+.free .t{font-size:13px;color:var(--muted)}
+.big-next{background:var(--card);color:#fff;border-color:var(--card);font-weight:700}
+.concl{font-size:15px;font-weight:700;color:var(--ok);margin:0}
+</style>
+<div class="wrap">
+<header>
+  <div class="eyebrow">激光扫描系统入门 · 第 07 课 · 补课二</div>
+  <h1>光点是<span class="red">圆的</span>，“小山包”画的是亮度</h1>
+  <p class="lede">激光打在墙上就是一个圆点，这没错。上一课的曲线画的不是形状，而是<b>这个圆点各个位置有多亮</b>。</p>
+</header>
+
+<section aria-labelledby="s1">
+  <p class="q-big" id="s1">问题 1：圆形的光点，怎么变成一个“小山包”？</p>
+  <div class="stage"><svg id="svg1" data-export="07c-1_圆点和山包" viewBox="0 0 840 340" role="img" aria-label="圆形光点与亮度曲线的关系"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n1"></span><p id="c1"></p></div>
+  <div class="stepbar"><button id="p1">← 上一步</button><button id="x1" class="big-next">下一步 →</button><span class="dots" id="d1"></span></div>
+  <p class="concl">记住一句：像一座山，从上往下看是圆的，从侧面看是山包。光点也一样，圆的是形状，山包是亮度。</p>
+</section>
+
+<section aria-labelledby="s2">
+  <p class="q-big" id="s2">问题 2：M² 大的激光，光点看起来什么样？</p>
+  <div class="stage"><svg id="svg2" data-export="07c-2_单模与多模" viewBox="0 0 840 340" role="img" aria-label="单模与多模激光的光点和亮度曲线"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n2"></span><p id="c2"></p></div>
+  <div class="stepbar"><button id="p2">← 上一步</button><button id="x2" class="big-next">下一步 →</button><span class="dots" id="d2"></span></div>
+  <div class="free"><span class="t">自己玩：</span>
+    <div class="ctl"><label for="fm">M²<span id="fmV"></span></label><input id="fm" type="range" min="1" max="10" step="0.1" value="1"></div>
+  </div>
+  <p class="concl">记住一句：M² 大的光点大体也是圆的，但里面一块一块亮斑，而且走同样远会散得更大。</p>
+</section>
+
+<section aria-labelledby="s4">
+  <h2 id="s4"><span class="n">✓</span>小测</h2>
+  <div class="quiz" id="quiz"></div>
+</section>
+
+<footer>
+  <div><b>本课对项目的推进：</b>把“光点形状”和“亮度分布”分开理解。后面实测光斑时，相机拍到的是圆点，分析软件画出来的就是这条“山包”曲线，用来量光斑有多大。</div>
+</footer>
+</div>
+
+<script>
+
+const $=id=>document.getElementById(id);
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const T=(x,y,t,s=14,c='var(--fg)',a='middle',w=400)=>`<text x="${x}" y="${y}" font-size="${s}" fill="${c}" text-anchor="${a}" font-weight="${w}">${t}</text>`;
+/* 通用：分步 + 补间动画 */
+function stepper(k,steps,state,draw){
+  let i=0,anim=0;
+  const dots=$('d'+k);dots.innerHTML=steps.map(()=>'<i></i>').join('');
+  function go(n,instant){i=Math.max(0,Math.min(steps.length-1,n));const to={...state,...steps[i].s},from={...state},t0=performance.now(),dur=(reduce||instant)?0:700;
+    cancelAnimationFrame(anim);
+    const tick=now=>{const p=dur?Math.min(1,(now-t0)/dur):1,e=p<.5?2*p*p:1-(-2*p+2)**2/2;
+      for(const key in to){if(typeof to[key]==='number')state[key]=from[key]+(to[key]-from[key])*e;else state[key]=to[key];}
+      draw();if(p<1)anim=requestAnimationFrame(tick);};
+    if(!dur){for(const key in to)state[key]=to[key];draw();}else anim=requestAnimationFrame(tick);
+    $('c'+k).innerHTML=steps[i].t;$('n'+k).textContent=`第 ${i+1} / ${steps.length} 步`;
+    dots.querySelectorAll('i').forEach((d,j)=>d.classList.toggle('on',j<=i));
+    $('p'+k).disabled=i===0;$('x'+k).textContent=i===steps.length-1?'从头再看 ↺':'下一步 →';}
+  $('p'+k).onclick=()=>go(i-1);$('x'+k).onclick=()=>go(i===steps.length-1?0:i+1);
+  go(0,true);return {go,n:steps.length};
+}
+
+const CX=190,CY=170,RR=110,PX0=430,PX1=810,PB=280,PH=210;
+const defs=`<defs><radialGradient id="gG"><stop offset="0" stop-color="#fffbe6"/><stop offset=".25" stop-color="#ffe066"/><stop offset=".55" stop-color="#ff9a3c" stop-opacity=".85"/><stop offset=".8" stop-color="#e5383b" stop-opacity=".35"/><stop offset="1" stop-color="#e5383b" stop-opacity="0"/></radialGradient></defs>`;
+// 多模亮斑（相对坐标 -1..1，强度）
+const BL=[[-.35,-.2,.9,.32],[.3,.25,1,.3],[.15,-.45,.7,.26],[-.5,.35,.6,.28],[.55,-.15,.75,.27],[-.05,.1,.8,.3],[.05,.55,.55,.25],[-.6,-.5,.45,.24]];
+function inten(u,v,mm){ // 亮度（0..~1），u,v ∈ -1..1
+  const base=Math.exp(-2*(u*u+v*v)/0.32);
+  let mmv=0;BL.forEach(([x,y,a,w])=>{mmv+=a*Math.exp(-2*((u-x)**2+(v-y)**2)/(w*w*0.7));});
+  return (1-mm)*base+mm*Math.min(1.1,mmv*0.8);
+}
+function spot(mm,scale){ // 画圆点
+  let g=`<rect x="20" y="20" width="340" height="300" rx="12" fill="#151a23"/>`+`<text x="190" y="42" font-size="12" fill="#9aa4b4" text-anchor="middle">墙（暗的房间里）</text>`;
+  const r=RR*scale;
+  if(mm<0.02)return g+`<circle cx="${CX}" cy="${CY}" r="${r}" fill="url(#gG)"/>`;
+  g+=`<circle cx="${CX}" cy="${CY}" r="${r}" fill="url(#gG)" opacity="${1-mm}"/>`;
+  BL.forEach(([x,y,a,w])=>{g+=`<circle cx="${CX+x*r*0.8}" cy="${CY+y*r*0.8}" r="${w*r*1.3}" fill="url(#gG)" opacity="${(mm*a).toFixed(2)}"/>`;});
+  return g;
+}
+function profile(mm,p,scale,label){ // 亮度曲线，p = 画出比例
+  let g=`<line x1="${PX0}" y1="${PB}" x2="${PX1}" y2="${PB}" stroke="var(--fg)" stroke-width="1.5"/><line x1="${PX0}" y1="${PB}" x2="${PX0}" y2="${PB-PH-10}" stroke="var(--fg)" stroke-width="1.5"/>`;
+  g+=T(PX0-8,PB-PH,'亮',13,'var(--fg)','end',700)+T(PX0-8,PB,'暗',13,'var(--fg)','end',700)+T((PX0+PX1)/2,PB+24,'← 沿着切线，从左到右 →',12,'var(--muted)');
+  const n=Math.max(2,Math.round(160*p));let d='';
+  for(let k=0;k<=n;k++){const t=k/160,u=(-1+2*t)/scale;const I=Math.abs(u)>1.6?0:inten(u,0,mm);d+=(k?'L':'M')+(PX0+t*(PX1-PX0)).toFixed(1)+','+(PB-Math.min(1.1,I)*PH*0.9).toFixed(1);}
+  g+=`<path d="${d}" fill="none" stroke="var(--beam)" stroke-width="3"/>`;
+  if(label)g+=T((PX0+PX1)/2,40,label,14,'var(--beam)','middle',700);
+  return g;
+}
+/* ---------- 1 ---------- */
+const s1={st:0,p:0};
+function draw1(){
+  let g=defs+spot(0,1);
+  if(s1.st>=1)g+=`<text x="${CX}" y="${CY+4}" font-size="13" fill="#151a23" text-anchor="middle" font-weight="700">最亮</text><text x="${CX+RR-6}" y="${CY-RR+18}" font-size="12" fill="#ffb4a8" text-anchor="end">边上暗</text>`;
+  if(s1.st>=2){const x=CX-RR-20+s1.p*(2*RR+40);g+=`<line x1="${CX-RR-20}" y1="${CY}" x2="${CX+RR+20}" y2="${CY}" stroke="#7dd3fc" stroke-width="2" stroke-dasharray="6 4"/><line x1="${x}" y1="${CY-14}" x2="${x}" y2="${CY+14}" stroke="#7dd3fc" stroke-width="3"/>`+`<text x="32" y="${CY-10}" font-size="12" fill="#7dd3fc" text-anchor="start">沿这条线切一刀</text>`;
+    g+=profile(0,s1.p,1,s1.st>=3?'侧面看：山包（亮度）':'');}
+  else g+=T((PX0+PX1)/2,170,'（下一步在这里画亮度）',13,'var(--muted)');
+  if(s1.st>=3){[0.35,0.6,0.85].forEach(f=>{g+=`<circle cx="${CX}" cy="${CY}" r="${RR*f}" fill="none" stroke="#7dd3fc" stroke-width="1" opacity=".7"/>`;});g+=`<text x="${CX}" y="304" font-size="13" fill="#7dd3fc" text-anchor="middle" font-weight="700">从上往下看：圆的（等高线）</text>`;}
+  $('svg1').innerHTML=g;
+}
+const st1=stepper(1,[
+ {t:'激光打在墙上，确实是一个<b>圆点</b>。',s:{st:0,p:0}},
+ {t:'但它不是一个“一样亮”的圆：<b>中间最亮，往边上越来越暗</b>。',s:{st:1,p:0}},
+ {t:'沿着圆点中间<b>横着切一刀</b>，把这条线上每个位置的亮度画成高度：越亮画得越高。右边就画出一个<b>“小山包”</b>。',s:{st:2,p:1}},
+ {t:'就像一座<b>山</b>：从上往下看，等高线是一圈一圈的圆；从侧面看，是一个山包。<b>圆的是形状，山包是亮度</b>。上一课左边那张图画的就是这个山包。',s:{st:3,p:1}}
+],s1,draw1);
+
+/* ---------- 2 ---------- */
+const s2={mm:0,sc:1};
+function draw2(){
+  let g=defs+spot(s2.mm,s2.sc);
+  g+=`<line x1="20" y1="${CY}" x2="360" y2="${CY}" stroke="#7dd3fc" stroke-width="1.5" stroke-dasharray="6 4"/>`;
+  g+=profile(s2.mm,1,s2.sc,s2.mm<0.3?'单模：光滑的山包':'多模：坑坑洼洼');
+  $('svg2').innerHTML=g;
+  $('fmV').textContent=(1+s2.mm*9).toFixed(1);
+}
+const st2=stepper(2,[
+ {t:'<b>单模激光（M² ≈ 1）</b>：圆点干干净净，切一刀是光滑的山包。',s:{mm:0,sc:1}},
+ {t:'<b>M² 大的激光（多模）</b>：整体还是大致圆的，但里面有<b>一块一块的亮斑</b>，好像很多个小光点叠在一起。',s:{mm:1,sc:1}},
+ {t:'切一刀看亮度：<b>坑坑洼洼</b>，有好几个山头。上一课里的“坑坑洼洼”说的就是这个。',s:{mm:1,sc:1}},
+ {t:'更要紧的是：这些小光点各自的方向不太一样，所以<b>走到同样远，整个光点散得更大</b>。这就是 M² 大、50 米外光点大的原因。',s:{mm:1,sc:1.5}}
+],s2,draw2);
+$('fm').addEventListener('input',()=>{const m=+$('fm').value;s2.mm=Math.min(1,(m-1)/3);s2.sc=Math.min(1.5,1+(m-1)/18);draw2();});
+
+window.__beforeExport=()=>{st1.go(3,true);st2.go(2,true);};
+const QS=[
+ {q:'激光打在墙上，形状是？',o:['圆的','山包形的'],a:0,
+  e:['对。山包是“亮度”，不是形状。','山包画的是亮度：沿一条线切过去，各处有多亮。']},
+ {q:'那条“小山包”曲线越高的地方表示？',o:['光点越大','那个位置越亮'],a:1,
+  e:['曲线的高度是亮度，宽度才和光点大小有关。','对。中间最亮，所以中间最高。']},
+ {q:'多模激光（M² 大）的光点有什么特点？',o:['里面有一块块亮斑，而且散得更大','是方形的'],a:0,
+  e:['对。','大体还是圆的。']}
+];
+$('quiz').innerHTML=QS.map((q,i)=>`<div class="q" data-i="${i}"><p>Q${i+1}. ${q.q}</p><div class="row">${q.o.map((o,j)=>`<button data-j="${j}">${o}</button>`).join('')}</div><div class="fb" aria-live="polite"></div></div>`).join('');
+document.querySelectorAll('.q button').forEach(b=>b.onclick=()=>{const qd=b.closest('.q'),q=QS[+qd.dataset.i],j=+b.dataset.j;
+  qd.querySelectorAll('button').forEach(x=>x.classList.remove('right','wrong'));b.classList.add(j===q.a?'right':'wrong');
+  qd.querySelector('.fb').textContent=(j===q.a?'✓ ':'✗ ')+q.e[j];});
+</script>
