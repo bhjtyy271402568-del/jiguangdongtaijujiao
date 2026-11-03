@@ -27,15 +27,15 @@
 <text x="590" y="246" font-size="17" text-anchor="middle" fill="#fff" font-weight="700">✓</text>
 <text x="590" y="288" font-size="15" text-anchor="middle" fill="#111" font-weight="700">50米换思路</text>
 <text x="590" y="306" font-size="12" text-anchor="middle" fill="#666">光点·焦深·望远镜</text>
-<circle cx="350" cy="240" r="22" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
-<text x="350" y="246" font-size="17" text-anchor="middle" fill="#ea580c" font-weight="700">⑦</text>
-<text x="350" y="288" font-size="15" text-anchor="middle" fill="#111" font-weight="700">调焦望远镜模块</text>
-<text x="350" y="306" font-size="12" text-anchor="middle" fill="#666">镜片·丝杠·Z通道</text>
-<circle cx="110" cy="240" r="22" fill="#fff" stroke="#94a3b8" stroke-width="3"/>
-<text x="110" y="246" font-size="17" text-anchor="middle" fill="#64748b" font-weight="700">⑧</text>
+<circle cx="350" cy="240" r="22" fill="#16a34a" stroke="#15803d" stroke-width="3"/>
+<text x="350" y="246" font-size="17" text-anchor="middle" fill="#fff" font-weight="700">✓</text>
+<text x="350" y="288" font-size="15" text-anchor="middle" fill="#111" font-weight="700">需求落地</text>
+<text x="350" y="306" font-size="12" text-anchor="middle" fill="#666">M²·档位·丝杠</text>
+<circle cx="110" cy="240" r="22" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+<text x="110" y="246" font-size="17" text-anchor="middle" fill="#ea580c" font-weight="700">⑧</text>
 <text x="110" y="288" font-size="15" text-anchor="middle" fill="#111" font-weight="700">激光器与安全</text>
-<text x="110" y="306" font-size="12" text-anchor="middle" fill="#666">M²·功率·远距离防护</text>
-<text x="350" y="208" font-size="12" text-anchor="middle" fill="#ea580c" font-weight="700">下一课 ▼</text>
+<text x="110" y="306" font-size="12" text-anchor="middle" fill="#666">选型·远距离防护</text>
+<text x="110" y="208" font-size="12" text-anchor="middle" fill="#ea580c" font-weight="700">下一课 ▼</text>
 <rect x="20" y="334" width="900" height="28" rx="6" fill="#f1f5f9"/>
-<text x="470" y="353" font-size="13" text-anchor="middle" fill="#334155">终点：《50 m 远距离前聚焦系统规格》＝ 项目①控制卡 + 调焦望远镜 Z 模块（项目②）+ 激光器与安全</text>
+<text x="470" y="353" font-size="13" text-anchor="middle" fill="#334155">终点：《5–50 m 前聚焦系统规格》＝ 控制卡（项目①）+ 调焦望远镜（项目②，丝杠步进）+ 激光器与安全</text>
 </svg>
