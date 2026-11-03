@@ -1,0 +1,128 @@
+<title>同类结构图鉴</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@700;900&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* 布局：一条“光学实验台”式的纵向课程，每节 = 一句话 + 一个能动手的装置 + 读数 */
+:root{
+  --bg:#f4f6f9; --surface:#ffffff; --fg:#151a23; --muted:#5d6676; --line:#d8dee7;
+  --beam:#e5383b; --beam-soft:#f6b3b4; --glass:#2b7bb9; --glass-fill:#dcecf8;
+  --ok:#17914f; --bad:#d23c3c; --proj2:#e0701c; --card:#2c5fd6; --card-fill:#e2eafc;
+  --metal:#7b8697; --work:#d7d3cf; --work-line:#8a817a; --band:#17914f22;
+  --f-body:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --f-display:"Noto Serif SC","Songti SC",serif;
+  --f-num:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1218; --surface:#171c25; --fg:#e7ebf1; --muted:#9aa4b4; --line:#2b3240;
+  --beam:#ff5c60; --beam-soft:#7a2a2d; --glass:#6db5ee; --glass-fill:#1c3448;
+  --ok:#3fd082; --bad:#ff6b6b; --proj2:#ff9a4a; --card:#82a6ff; --card-fill:#1d2a4a;
+  --metal:#8c97a8; --work:#3a3633; --work-line:#7d746c; --band:#3fd08226; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1218; --surface:#171c25; --fg:#e7ebf1; --muted:#9aa4b4; --line:#2b3240;
+  --beam:#ff5c60; --beam-soft:#7a2a2d; --glass:#6db5ee; --glass-fill:#1c3448;
+  --ok:#3fd082; --bad:#ff6b6b; --proj2:#ff9a4a; --card:#82a6ff; --card-fill:#1d2a4a;
+  --metal:#8c97a8; --work:#3a3633; --work-line:#7d746c; --band:#3fd08226; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:15px;line-height:1.65}
+.wrap{max-width:900px;margin:0 auto;padding-block:28px 56px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:flex;flex-direction:column;gap:28px}
+header{display:flex;flex-direction:column;gap:6px}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--muted)}
+h1{font-family:var(--f-display);font-weight:900;font-size:clamp(28px,5vw,40px);margin:0;line-height:1.2;text-wrap:balance}
+h1 .red{color:var(--beam)}
+.lede{color:var(--muted);margin:0;max-width:60ch}
+section{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:14px}
+h2{font-family:var(--f-display);font-size:21px;margin:0;display:flex;gap:10px;align-items:baseline;text-wrap:balance}
+h2 .n{font-family:var(--f-num);font-size:13px;color:var(--beam)}
+.try{font-size:13px;color:var(--muted);margin:0}
+.try b{color:var(--fg);font-weight:500}
+.stage{overflow-x:auto;border-radius:10px;background:var(--bg)}
+.stage svg{display:block;width:100%;height:auto}
+.controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px 20px}
+.ctl{display:flex;flex-direction:column;gap:4px;min-width:0}
+.ctl label{font-size:13px;display:flex;justify-content:space-between;gap:8px}
+.ctl label span{font-family:var(--f-num);color:var(--muted);font-size:12px}
+input[type=range]{width:100%;accent-color:var(--beam)}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+button{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--surface);color:var(--fg);
+  border-radius:999px;padding:6px 14px;cursor:pointer}
+button:hover{border-color:var(--muted)}
+button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--card);outline-offset:2px}
+button[aria-pressed=true]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.readout{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.cell{border-top:2px solid var(--line);padding-top:6px;min-width:0}
+.cell .k{font-size:12px;color:var(--muted)}
+.cell .v{font-family:var(--f-num);font-size:20px;font-variant-numeric:tabular-nums}
+.chip{display:inline-block;font-size:13px;font-weight:500;padding:2px 10px;border-radius:999px}
+.chip.ok{background:var(--band);color:var(--ok)}
+.chip.bad{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+.info{border-left:3px solid var(--card);padding:8px 12px;background:var(--card-fill);border-radius:0 8px 8px 0;min-height:64px}
+.info b{display:block}
+.info p{margin:2px 0 0;font-size:14px}
+.clickable{cursor:pointer}
+.clickable:hover > *:first-child,.clickable.sel > *:first-child{filter:drop-shadow(0 0 4px var(--card))}
+.note{font-size:12px;color:var(--muted);margin:0}
+.quiz{display:flex;flex-direction:column;gap:16px}
+.q p{margin:0 0 6px;font-weight:500}
+.q .fb{font-size:14px;margin-top:6px;min-height:1.6em}
+.q button.right{border-color:var(--ok);color:var(--ok)}
+.q button.wrong{border-color:var(--bad);color:var(--bad)}
+footer{font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+footer b{color:var(--fg)}
+svg text{font-family:var(--f-body)}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+
+.hero{width:100%;border-radius:10px;border:1px solid var(--line)}
+.card{border-top:1px solid var(--line);padding-top:14px;display:flex;flex-direction:column;gap:10px}
+.card:first-of-type{border-top:0;padding-top:0}
+.ttl{font-weight:700;font-size:16px;display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.rid{font-family:var(--f-num);font-size:12px;color:var(--bg);background:var(--fg);padding:1px 7px;border-radius:6px}
+.gal{display:flex;gap:10px;overflow-x:auto;padding-bottom:4px}
+.gal img{height:260px;width:auto;max-width:none;background:#fff;border:1px solid var(--line);border-radius:8px;cursor:zoom-in;flex:none}
+.card ul{margin:0;padding-left:1.2em;font-size:14px}
+.cmp{margin:0;font-size:14px;background:var(--card-fill);border-radius:8px;padding:8px 12px}
+.cmp span{font-weight:700;color:var(--card);margin-right:8px}
+.cmp.same{background:var(--band)} .cmp.same span{color:var(--ok)}
+.sum{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:6px}
+#lb{position:fixed;inset:0;background:rgba(10,12,16,.85);display:flex;align-items:center;justify-content:center;z-index:20;padding:env(safe-area-inset-top,0px) 16px env(safe-area-inset-bottom,0px);cursor:zoom-out}
+#lb img{max-width:100%;max-height:92vh;background:#fff;border-radius:8px}
+#lb[hidden]{display:none}
+@media (max-width:600px){.gal img{height:200px}}
+</style>
+<div class="wrap"><header><div class="eyebrow">参考资料图鉴 · 2026-11-03</div><h1>别人的<span class="red">同类结构</span></h1><p class="lede">从你给的资料库里挑出 13 台和我们类似的设备，放的都是它们<b>专利附图 / 产品手册原图</b>。每张都写了它怎么做的、和我们哪里一样、哪里不一样。点图可以放大。</p></header>
+<section><h2><span class="n">00</span>先看我们自己（v0.3）</h2><img class="hero" src="ref_img/ours.png" alt="我们的调焦头 v0.3"><p class="note">前聚焦 · 动镜 f −30 + 物镜 f 150 · 丝杠步进调焦 · 隔断分两腔 · 内支架装振镜 · 侧面出光</p></section>
+<section><h2><span class="n">A</span>最像我们：一体化的“动态聚焦 + 振镜”头</h2>
+<article class="card"><div class="ttl"><span class="rid">R004</span>CN205899130U 高速动态聚焦激光振镜模组（深圳思特 / 大族思特）</div><div class="gal"><img src="ref_img/R004_p9.png" alt="CN205899130U 高速动态聚焦激光振镜模组（深圳思特 / 大族思特） R004_第9页" loading="lazy"><img src="ref_img/R004_p10.png" alt="CN205899130U 高速动态聚焦激光振镜模组（深圳思特 / 大族思特） R004_第10页" loading="lazy"><img src="ref_img/R004_p12.png" alt="CN205899130U 高速动态聚焦激光振镜模组（深圳思特 / 大族思特） R004_第12页" loading="lazy"></div><ul><li>两件式壳体 + <b>内支架</b>装 X/Y 振镜，壳体侧壁装<b>保护窗镜片</b>；没有场镜，是<b>前聚焦</b></li><li>Z 模块：<b>Z 轴底座</b>上装直线导轨 + 滑座（变焦透镜）+ 遮光座 + 聚焦透镜筒；<b>两台电机竖装 + 连杆</b>推滑座（响应 &lt; 0.2 ms）</li><li>驱动板装在壳体里，电机用<b>电机夹</b>包裹固定</li></ul><p class="cmp same"><span>和我们比</span><b>整体思路和我们一样</b>（前聚焦、Z 轴底座保同轴、内支架、侧壁保护窗）。区别：它用双电机连杆追求高速打标；我们 50 m 焦深大，用丝杠步进求“准”</p></article>
+<article class="card"><div class="ttl"><span class="rid">R009</span>CN213163617U 三维动态聚焦振镜系统</div><div class="gal"><img src="ref_img/R009_p9.png" alt="CN213163617U 三维动态聚焦振镜系统 R009_第9页" loading="lazy"><img src="ref_img/R009_p12.png" alt="CN213163617U 三维动态聚焦振镜系统 R009_第12页" loading="lazy"><img src="ref_img/R009_p13.png" alt="CN213163617U 三维动态聚焦振镜系统 R009_第13页" loading="lazy"></div><ul><li>方形<b>光路底座 + 光路上盖</b>密封；底座里<b>隔断分左右两腔</b>（Z 机构 / 振镜）</li><li>Z 调焦：<b>电机 + 摆臂 + 连杆</b>推直线滑块上的调焦透镜</li><li>出光孔在底面，装<b>场镜</b>（后聚焦）</li></ul><p class="cmp same"><span>和我们比</span>我们的壳体 + 隔断就是照它做的。区别：它带场镜、底部出光；我们无场镜、侧面出光</p></article>
+<article class="card"><div class="ttl"><span class="rid">R054</span>CN107315247B 预览模块及动态聚焦激光振镜</div><div class="gal"><img src="ref_img/R054_p14.png" alt="CN107315247B 预览模块及动态聚焦激光振镜 R054_第14页" loading="lazy"><img src="ref_img/R054_p15.png" alt="CN107315247B 预览模块及动态聚焦激光振镜 R054_第15页" loading="lazy"></div><ul><li>动态聚焦振镜里加了一个<b>红光预览摇臂</b>：电机带摆杆，把红光发射器摆进 / 摆出光路</li><li>整机同样是“底座 + 罩壳 + 内部模组”</li></ul><p class="cmp "><span>和我们比</span>提供了另一种红光方案（摆进摆出，不用合束镜）。我们 v0.3 选的是“激光器自带红光”，更简单</p></article>
+</section>
+<section><h2><span class="n">B</span>光路怎么排：动镜和定镜</h2>
+<article class="card"><div class="ttl"><span class="rid">R046</span>CN222866943U 动态聚焦光学系统</div><div class="gal"><img src="ref_img/R046_p5.png" alt="CN222866943U 动态聚焦光学系统 R046_第5页" loading="lazy"></div><ul><li><b>可驱动透镜（负）在前 + 固定透镜（正）在后</b>，再到振镜、场镜</li><li>实施例：动镜 f −113.2 / −60.7 mm，定镜 f 147.2 mm</li></ul><p class="cmp same"><span>和我们比</span><b>和我们同一种结构</b>（我们：动镜 f −30、物镜 f 150）。我们扩束倍数更大（×5），因为要打 50 m</p></article>
+<article class="card"><div class="ttl"><span class="rid">R002</span>US12265207B2 Dynamic focus for laser processing head（II-VI）</div><div class="gal"><img src="ref_img/R002_p3.png" alt="US12265207B2 Dynamic focus for laser processing head（II-VI） R002_第3页" loading="lazy"><img src="ref_img/R002_p4.png" alt="US12265207B2 Dynamic focus for laser processing head（II-VI） R002_第4页" loading="lazy"></div><ul><li>三片：<b>固定负透镜 → 可动正透镜 → 固定正输出透镜</b>（输出焦距 ≥ 2 倍中间镜），工作距离大</li><li>整个加工头竖装，光纤从顶部进</li></ul><p class="cmp "><span>和我们比</span>它动的是<b>正</b>透镜、三片式；我们动的是<b>负</b>透镜、两片式。专利要逐条对照权利要求（不构成法律意见）</p></article>
+<article class="card"><div class="ttl"><span class="rid">R043</span>CN104191089B 三维动态聚焦标刻系统（菲镭泰克）</div><div class="gal"><img src="ref_img/R043_p9.png" alt="CN104191089B 三维动态聚焦标刻系统（菲镭泰克） R043_第9页" loading="lazy"></div><ul><li>激光器 → <b>Z 轴镜组</b> → 两片聚焦镜 → X/Y 振镜</li><li>按激光器的束腰和发散角来算 Z 镜位置</li></ul><p class="cmp "><span>和我们比</span>光路顺序和我们一致（先调焦后扫描）</p></article>
+</section>
+<section><h2><span class="n">C</span>独立的 Z 模块 / 整机产品</h2>
+<article class="card"><div class="ttl"><span class="rid">R030</span>SCANLAB varioSCAN II（R030）</div><div class="gal"><img src="ref_img/R030_p1.png" alt="SCANLAB varioSCAN II（R030） R030_第1页" loading="lazy"><img src="ref_img/R030_p2.png" alt="SCANLAB varioSCAN II（R030） R030_第2页" loading="lazy"></div><ul><li>独立 Z 模块：<b>电机块 + 动镜（扩束）+ 定镜</b>；定镜换一下，就能变成带场镜（FT）或前聚焦（PR）</li><li>可选<b>水冷入口光阑</b>；XY2-100 接口</li></ul><p class="cmp "><span>和我们比</span>我们的入口光阑、动镜 / 定镜分工参考它。区别：它是单独模块，我们把 Z 和振镜装进一个壳体</p></article>
+<article class="card"><div class="ttl"><span class="rid">R036</span>RAYLASE AXIALSCAN RD-14（R036）</div><div class="gal"><img src="ref_img/R036_p1.png" alt="RAYLASE AXIALSCAN RD-14（R036） R036_第1页" loading="lazy"></div><ul><li><b>前聚焦一体化 3D 头</b>，没有场镜，幅面 200–600 mm</li><li>长方体整机，前面一个大出光窗</li></ul><p class="cmp "><span>和我们比</span>概念最接近我们的整机（前聚焦一体化），但工作距离只到 0.7 m</p></article>
+<article class="card"><div class="ttl"><span class="rid">R031</span>Aerotech AGV3D（R031）</div><div class="gal"><img src="ref_img/R031_p29.png" alt="Aerotech AGV3D（R031） R031_第29页" loading="lazy"></div><ul><li>三轴激光扫描头，<b>直驱</b>聚焦机构</li><li>手册里有完整外形尺寸图</li></ul><p class="cmp "><span>和我们比</span>可以参考它的外形尺寸标注方式，做我们的安装接口图</p></article>
+</section>
+<section><h2><span class="n">D</span>电机推调焦镜、远距离作业</h2>
+<article class="card"><div class="ttl"><span class="rid">R062</span>CN110883020A 清模机（钛昇）</div><div class="gal"><img src="ref_img/R062_p20.png" alt="CN110883020A 清模机（钛昇） R062_第20页" loading="lazy"></div><ul><li>激光模块出口外侧装<b>聚焦透镜</b>，用<b>伺服电机 + 螺杆 + 螺接件</b>推着它改变焦距</li><li>整个激光模块装在 X/Y/Z 龙门上进出模具</li></ul><p class="cmp same"><span>和我们比</span><b>驱动方式和我们一样</b>（丝杠推调焦镜）</p></article>
+<article class="card"><div class="ttl"><span class="rid">R010</span>CN222626476U 自动调焦激光加工装置</div><div class="gal"><img src="ref_img/R010_p8.png" alt="CN222626476U 自动调焦激光加工装置 R010_第8页" loading="lazy"></div><ul><li>整个场镜装在<b>驱动模组</b>上沿光路移动</li><li>带<b>检测器实时测距</b>，自动调焦</li></ul><p class="cmp "><span>和我们比</span>“测距 + 自动调焦”就是我们以后第 ⑥ 阶段要做的</p></article>
+<article class="card"><div class="ttl"><span class="rid">R008</span>CN111181117A 一字激光除冰装置（苏州艾思兰）</div><div class="gal"><img src="ref_img/R008_p6.png" alt="CN111181117A 一字激光除冰装置（苏州艾思兰） R008_第6页" loading="lazy"></div><ul><li>三脚架 + <b>电动转台</b>指向，150 m 处一字形光斑</li><li><b>平凹 + 平凸柱面镜</b>，间距 45–55 mm 可调（就是调焦）</li></ul><p class="cmp same"><span>和我们比</span>远距离用法和我们一样；它靠转台慢速指向，我们用振镜快速扫小范围</p></article>
+<article class="card"><div class="ttl"><span class="rid">R007</span>CN111130015A 激光除障仪（苏州艾思兰）</div><div class="gal"><img src="ref_img/R007_p6.png" alt="CN111130015A 激光除障仪（苏州艾思兰） R007_第6页" loading="lazy"></div><ul><li>箱体（激光器、电池）+ 三脚架<b>云台</b> + 发射头（准直器 + 相机）</li><li>遥控，地对空远程作业</li></ul><p class="cmp "><span>和我们比</span>以后可以把我们的调焦头装到云台上（v0.3 已在重心下做了安装接口板）</p></article>
+</section>
+<section><h2><span class="n">✓</span>总结：我们的结构从哪来</h2><ul class="sum">
+<li><b>整体布局</b>（前聚焦、Z 轴底座保证同轴、内支架装振镜、侧壁保护窗、驱动板在壳内）← <b>R004 思特</b></li>
+<li><b>壳体</b>（底座 + 上盖密封、隔断分两腔）← <b>R009</b></li>
+<li><b>光学</b>（负透镜动 + 正透镜固定）← <b>R046</b>、SCANLAB varioSCAN</li>
+<li><b>驱动</b>（丝杠推调焦镜）← <b>R062 清模机</b>；高速打标设备（R004、R009）用连杆和摆臂，我们 50 m 焦深大，不需要</li>
+<li><b>用法</b>（远距离、以后上云台、加测距）← <b>艾思兰 R007 / R008</b>、R010</li>
+</ul><p class="note">专利附图来自资料库里的 Google Patents PDF，产品图来自厂家公开规格书 / 手册；只用于设计参考。借鉴结构前要逐条核对相关专利的权利要求（不构成法律意见）。</p></section>
+<div id="lb" hidden><img alt="放大"></div></div>
+<script>
+const lb=document.getElementById('lb'),li=lb.querySelector('img');
+document.querySelectorAll('.gal img,.hero').forEach(i=>i.addEventListener('click',()=>{li.src=i.src;lb.hidden=false;}));
+lb.addEventListener('click',()=>lb.hidden=true);document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.hidden=true;});
+</script>
