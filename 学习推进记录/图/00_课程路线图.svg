@@ -33,9 +33,9 @@
 <text x="350" y="306" font-size="12" text-anchor="middle" fill="#666">M²·档位·丝杠</text>
 <circle cx="110" cy="240" r="22" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
 <text x="110" y="246" font-size="17" text-anchor="middle" fill="#ea580c" font-weight="700">⑧</text>
-<text x="110" y="288" font-size="15" text-anchor="middle" fill="#111" font-weight="700">激光器与安全</text>
-<text x="110" y="306" font-size="12" text-anchor="middle" fill="#666">选型·远距离防护</text>
+<text x="110" y="288" font-size="15" text-anchor="middle" fill="#111" font-weight="700">调焦模块选型</text>
+<text x="110" y="306" font-size="12" text-anchor="middle" fill="#666">镜片·丝杠·步进</text>
 <text x="110" y="208" font-size="12" text-anchor="middle" fill="#ea580c" font-weight="700">下一课 ▼</text>
 <rect x="20" y="334" width="900" height="28" rx="6" fill="#f1f5f9"/>
-<text x="470" y="353" font-size="13" text-anchor="middle" fill="#334155">终点：《5–50 m 前聚焦系统规格》＝ 控制卡（项目①）+ 调焦望远镜（项目②，丝杠步进）+ 激光器与安全</text>
+<text x="470" y="353" font-size="13" text-anchor="middle" fill="#334155">终点：《5–50 m 前聚焦系统规格》＝ 控制卡（项目①）+ 调焦望远镜（项目②，丝杠步进）+ 激光器（M²≤1.2）</text>
 </svg>
