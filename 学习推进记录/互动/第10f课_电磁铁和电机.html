@@ -107,7 +107,7 @@ svg text{font-family:var(--f-body)}
 <header>
   <div class="eyebrow">激光扫描系统入门 · 第 10 课补课</div>
   <h1>电磁铁、音圈、电机：一个道理讲到底</h1>
-  <p class="lede">三张图，一张只回答一个问题。红色 = N 极，蓝色 = S 极。每张都点“下一步”，一步只变一样东西。</p>
+  <p class="lede">四张图，一张只回答一个问题。红色 = N 极，蓝色 = S 极。每张都点“下一步”，一步只变一样东西。</p>
 </header>
 <section aria-labelledby="s1">
   <p class="q-big" id="s1">问题 1：线圈通了电，为什么就变成磁铁？</p>
@@ -133,11 +133,21 @@ svg text{font-family:var(--f-body)}
   <div class="free"><span class="t">自己玩：</span><div class="ctl"><label for="f3">切换速度（每秒换几组）<span id="f3V"></span></label><input id="f3" type="range" min="0" max="6" step="0.1" value="1.5"></div><div class="row"><button id="f3a">手动：换下一组</button><button id="f3b">反着换（DIR）</button></div></div>
   <p class="concl">记住一句：电机 = 一圈线圈轮流变成磁铁，把中间的磁铁一格一格“吸”着转；无刷电机按转子位置换，步进电机按脉冲换。</p>
 </section>
+<section aria-labelledby="s4">
+  <p class="q-big" id="s4">问题 4：真的音圈把磁铁围成一圈，为什么镜片是沿着光轴走？</p>
+  <p class="note" style="margin-top:-6px">把第 10d 课那个 3D 音圈沿光轴切开，看切面</p>
+  <div class="stage"><svg id="svg4" data-export="10f-4_音圈切开看" viewBox="0 0 840 320" role="img" aria-label="问题 4：真的音圈把磁铁围成一圈，为什么镜片是沿着光轴走？"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n4"></span><p id="c4"></p></div>
+  <div class="stepbar"><button id="p4">← 上一步</button><button id="x4" class="big-next">下一步 →</button><span class="dots" id="d4"></span></div>
+  <div class="free"><span class="t">自己玩：</span><div class="ctl"><label for="f4">线圈电流<span id="f4V"></span></label><input id="f4" type="range" min="-100" max="100" step="1" value="80"></div></div>
+  <p class="concl">记住一句：磁场横着穿过导线、电流绕着线圈走，推力就沿着光轴（左手定则）；一整圈导线都往同一边推，所以又匀又直。</p>
+</section>
 <section aria-labelledby="s7"><h2 id="s7"><span class="n">✓</span>小测</h2><div class="quiz" id="quiz"></div></section>
 <footer>
   <div><b>本课对项目的推进：</b></div>
   <div>· 看懂了 Z 轴步进电机的接口：<b>STEP</b> 来一个脉冲 = 换下一组线圈 = 走一格；<b>DIR</b> = 顺着换还是倒着换（控制卡预留的就是这两根线）</div>
   <div>· 音圈（Z 模块 v2）和电机是同一个道理：线圈当电磁铁，永磁铁当对手</div>
+  <div>· 真的音圈：磁场横穿导线、推力沿光轴（左手定则），整圈导线同向出力 → 选音圈时看“推力常数（N/A）”就是这个</div>
 </footer>
 </div>
 <script>
@@ -306,7 +316,53 @@ $('f3').addEventListener('input',()=>{s3.speed=+$('f3').value;s3.auto=1;$('n3').
 $('f3a').onclick=()=>{s3.auto=0;const a=Math.round(s3.act);s3.act=a<0?0:((a+dir3)%4+4)%4;pulses.push(TT);$('n3').textContent='自己玩';$('c3').innerHTML=`手动换到线圈 ${Math.round(s3.act)+1}：转子跟过去一格。`;};
 $('f3b').onclick=()=>{dir3=-dir3;$('f3b').textContent=dir3>0?'反着换（DIR）':'顺着换（DIR）';$('n3').textContent='自己玩';$('c3').innerHTML=dir3>0?'顺着换：1→2→3→4，转子顺时针转。':'倒着换：4→3→2→1，转子就反着转。这就是 DIR 线的作用。';};
 
-window.__beforeExport=()=>{st1.go(2,true);st2.go(1,true);st3.go(4,true);};
+
+/* ===== 4 音圈切开看 ===== */
+const s4={I:0,field:0,force:0};let cx4=0;
+function wire(x,y,out){return `<circle cx="${x}" cy="${y}" r="5.5" fill="${CU}" stroke="${CU2}"/>`+(out===null?'':out?`<circle cx="${x}" cy="${y}" r="1.8" fill="#fff"/>`:`<path d="M${x-3},${y-3} L${x+3},${y+3} M${x+3},${y-3} L${x-3},${y+3}" stroke="#fff" stroke-width="1.6"/>`);}
+function draw4(){
+  const I=s4.I,a=Math.abs(I);const tgt=50*I*(s4.force>0.5?1:0);cx4+=(tgt-cx4)*0.08;const dx=cx4;
+  const Y=160,M=(r)=>[Y-r,Y+r];let g=`<rect x="20" y="${Y-7}" width="600" height="14" fill="var(--beam)" opacity=".22"/>`+T(40,Y-12,'光轴',11,'var(--beam)','start',700);
+  // 外壳 + 后板 + 铁芯（上下对称）
+  for(const sg of [-1,1]){const yy=r=>Y+sg*r;
+    g+=R(150,Math.min(yy(132),yy(120)),290,12,'#6b7686')+R(150,Math.min(yy(132),yy(50)),16,82,'#6b7686');
+    g+=R(166,Math.min(yy(66),yy(50)),274,16,FE);
+    g+=R(200,Math.min(yy(106),yy(92)),220,14,NC)+R(200,Math.min(yy(120),yy(106)),220,14,SC);
+    g+=T(410,yy(99)+5,'N',12,'#fff','middle',700)+T(410,yy(113)+5,'S',12,'#fff','middle',700);}
+  // 磁场
+  if(s4.field>0.02){for(let x=215;x<=405;x+=38)for(const sg of [-1,1]){const y0=Y+sg*91,y1=Y+sg*67;g+=`<g opacity="${s4.field}">`+arrow(x,y0,x,y1,'#0ea5c6',2)+'</g>';}}
+  // 线圈（导线切口）+ 骨架 + 镜片
+  for(const sg of [-1,1]){const yy=r=>Y+sg*r;
+    g+=R(250+dx,Math.min(yy(70),yy(68)),190,3,'#e7d9b8');           // 骨架
+    for(let x=262;x<=338;x+=13)for(const r of [75,83]){const out=a<0.02?null:((sg<0)===(I>0));g+=wire(x+dx,yy(r),out);}}
+  g+=R(438+dx,Y-70,6,140,'#e7d9b8')+lens(470+dx,Y,44)+R(438+dx,Y-70,34,4,'#e7d9b8')+R(438+dx,Y+66,34,4,'#e7d9b8');
+  g+=T(470+dx,Y-56,'镜片',12,'var(--fg)','middle',700);
+  // 推力
+  if(s4.force>0.5&&a>0.03){const d=Math.sign(I);for(const sg of [-1,1]){const y=Y+sg*79,x=300+dx;g+=arrow(x-d*20,y+sg*0,x+d*(40+40*a),y,'var(--bad)',4);}}
+  // 标注
+  g+=T(150,312,'灰色外框 = 外壳和后板（铁）',11,'var(--muted)','start',700)+T(300,Y-38,'铁芯',12,'var(--fg)','middle',700)+T(300,Y+48,'线圈（铜色圆点 = 导线的切口）',11,'var(--fg)','middle',700);
+  // 右侧：左手定则
+  g+=R(630,40,195,240,'var(--surface)','var(--line)',1,10)+T(727,64,'左手定则（看上面那一排）',12,'var(--fg)','middle',700);
+  const ox=700,oy=170;
+  g+=arrow(ox,oy-60,ox,oy-6,'#0ea5c6',3)+T(ox+8,oy-50,'磁场：往下穿',12,'#0ea5c6','start',700);
+  if(a>0.02){g+=`<circle cx="${ox}" cy="${oy}" r="11" fill="none" stroke="#c99a00" stroke-width="2.5"/>`+(I>0?`<circle cx="${ox}" cy="${oy}" r="3.5" fill="#c99a00"/>`:`<path d="M${ox-6},${oy-6} L${ox+6},${oy+6} M${ox+6},${oy-6} L${ox-6},${oy+6}" stroke="#c99a00" stroke-width="2.5"/>`)+
+    T(ox+18,oy+5,I>0?'电流：冒出纸面 ⊙':'电流：钻进纸面 ⊗',12,'#c99a00','start',700);}
+  if(s4.force>0.5&&a>0.03)g+=arrow(ox+(I>0?-6:6),oy+40,ox+(I>0?60:-60),oy+40,'var(--bad)',3)+T(ox+(I>0?64:-64),oy+44,'推力',12,'var(--bad)',I>0?'start':'end',700);
+  g+=T(727,258,'磁场穿手心、四指顺电流',11,'var(--muted)','middle')+T(727,274,'→ 大拇指 = 推力',11,'var(--muted)','middle');
+  let top=a<0.02?(s4.field>0.5?'磁场横着穿过线圈；没通电，不动':'切开看：磁铁围成一圈，红色 N 面朝里'):(s4.force>0.5?(I>0?'上下两排导线都被往右推 → 镜片沿光轴往右走':'电流反过来 → 都往左推 → 镜片往左走'):'通电：上面一排电流冒出来、下面一排钻进去（绕了一圈）');
+  g+=T(330,22,top,14,a>0.02&&s4.force>0.5?'var(--bad)':'var(--ok)','middle',700);
+  $('svg4').innerHTML=g;$('f4V').textContent=Math.round(s4.I*100)+'%';
+}
+ANIM.push(()=>draw4());
+const st4=stepper(4,[
+ {t:'把 3D 音圈<b>沿光轴切开</b>，看切面（上下对称）：中间是<b>铁芯</b>（灰），外面一圈<b>磁铁</b>，红色 N 面朝里；线圈夹在中间的缝里，铜色圆点是<b>导线的切口</b>；镜片接在线圈的骨架上。',s:{I:0,field:0,force:0}},
+ {t:'缝里的<b>磁场</b>（青色）：从磁铁的 N 面出发，<b>横着</b>穿过线圈，钻进铁芯。上面那排是往下穿，下面那排是往上穿。',s:{I:0,field:1,force:0}},
+ {t:'通电：<b>⊙ = 电流从纸面冒出来，⊗ = 钻进去</b>。线圈是一圈圈绕的，所以上面冒出来的电流，绕到下面就是钻进去。',s:{I:1,field:1,force:0}},
+ {t:'用<b>左手定则</b>（右边小图）：磁场穿手心、四指顺着电流，大拇指就是推力 → 上面一排推力<b>朝右</b>；下面磁场和电流<b>都反了</b>，推力还是朝右 → 整个线圈带着镜片<b>沿光轴往右走</b>。',s:{I:1,field:1,force:1}},
+ {t:'电流反过来，⊙⊗ 对调，推力朝左。问题 2 的小车是“两块磁铁面对面推”的简化版；真的音圈把磁铁围成一圈，让磁场<b>横着穿过每一根导线</b>，一整圈导线都往同一边使劲，所以推得又匀又直。',s:{I:-1,field:1,force:1}}
+],s4,draw4);
+$('f4').addEventListener('input',()=>{s4.I=+$('f4').value/100;s4.field=1;s4.force=1;$('n4').textContent='自己玩';$('c4').innerHTML=Math.abs(s4.I)<0.03?'电流 0：没有推力。':`电流 ${Math.round(s4.I*100)}%：推力朝${s4.I>0?'右':'左'}，电流越大推得越远。`;});
+window.__beforeExport=()=>{st1.go(2,true);st2.go(1,true);st3.go(4,true);st4.go(3,true);};
 const QS=[
  {q:'线圈通电后，哪一头是 N，由什么决定？',o:['电流的方向','铁芯的颜色'],a:0,e:['对。电源反接，N 和 S 就对调。','和颜色无关，是电流方向。']},
  {q:'小车上的线圈通着电，但把永磁铁拿走，小车会怎样？',o:['不动','照样被推开'],a:0,e:['对。电磁铁要有对手才推得动。','没有另一块磁铁，就没有推力。']},
