@@ -1,0 +1,325 @@
+<meta charset="utf-8">
+<title>凸轮筒和斜坡</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@700;900&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* 第 11 课补课：照片里镜头的齿轮 + 凸轮筒；丝杆 / 齿轮齿条 / 凸轮筒 = 斜坡原理 */
+:root{
+  --bg:#f4f6f9; --surface:#ffffff; --fg:#151a23; --muted:#5d6676; --line:#d8dee7;
+  --beam:#e5383b; --beam-soft:#f6b3b4; --glass:#2b7bb9; --glass-fill:#dcecf8;
+  --ok:#17914f; --bad:#d23c3c; --proj2:#e0701c; --card:#2c5fd6; --card-fill:#e2eafc;
+  --metal:#7b8697; --work:#d7d3cf; --work-line:#8a817a; --band:#17914f22;
+  --knobA:#7c3aed; --knobB:#0e8a8a;
+  --f-body:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --f-display:"Noto Serif SC","Songti SC",serif;
+  --f-num:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1218; --surface:#171c25; --fg:#e7ebf1; --muted:#9aa4b4; --line:#2b3240;
+  --beam:#ff5c60; --beam-soft:#7a2a2d; --glass:#6db5ee; --glass-fill:#1c3448;
+  --ok:#3fd082; --bad:#ff6b6b; --proj2:#ff9a4a; --card:#82a6ff; --card-fill:#1d2a4a;
+  --metal:#8c97a8; --work:#3a3633; --work-line:#7d746c; --band:#3fd08226;
+  --knobA:#b08cff; --knobB:#4fd1c5; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1218; --surface:#171c25; --fg:#e7ebf1; --muted:#9aa4b4; --line:#2b3240;
+  --beam:#ff5c60; --beam-soft:#7a2a2d; --glass:#6db5ee; --glass-fill:#1c3448;
+  --ok:#3fd082; --bad:#ff6b6b; --proj2:#ff9a4a; --card:#82a6ff; --card-fill:#1d2a4a;
+  --metal:#8c97a8; --work:#3a3633; --work-line:#7d746c; --band:#3fd08226;
+  --knobA:#b08cff; --knobB:#4fd1c5; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:15px;line-height:1.65}
+.wrap{max-width:900px;margin:0 auto;padding-block:28px 56px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:flex;flex-direction:column;gap:28px}
+header{display:flex;flex-direction:column;gap:6px}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--muted)}
+h1{font-family:var(--f-display);font-weight:900;font-size:clamp(28px,5vw,40px);margin:0;line-height:1.2;text-wrap:balance}
+h1 .red{color:var(--beam)}
+.lede{color:var(--muted);margin:0;max-width:60ch}
+section{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:14px;min-width:0}
+h2{font-family:var(--f-display);font-size:21px;margin:0;display:flex;gap:10px;align-items:baseline;text-wrap:balance}
+h2 .n{font-family:var(--f-num);font-size:13px;color:var(--beam)}
+.try{font-size:13px;color:var(--muted);margin:0}
+.try b{color:var(--fg);font-weight:500}
+.stage{overflow-x:auto;border-radius:10px;background:var(--bg)}
+.stage svg{display:block;width:100%;height:auto}
+.controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px 20px}
+.ctl{display:flex;flex-direction:column;gap:4px;min-width:0}
+.ctl label{font-size:13px;display:flex;justify-content:space-between;gap:8px}
+.ctl label span{font-family:var(--f-num);color:var(--muted);font-size:12px}
+input[type=range]{width:100%;accent-color:var(--beam)}
+.ctl.a input{accent-color:var(--knobA)} .ctl.b input{accent-color:var(--knobB)}
+.ctl.a label{color:var(--knobA)} .ctl.b label{color:var(--knobB)}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+button{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--surface);color:var(--fg);
+  border-radius:999px;padding:6px 14px;cursor:pointer}
+button:hover{border-color:var(--muted)}
+button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--card);outline-offset:2px}
+button[aria-pressed=true]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.readout{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.cell{border-top:2px solid var(--line);padding-top:6px;min-width:0}
+.cell .k{font-size:12px;color:var(--muted)}
+.cell .v{font-family:var(--f-num);font-size:20px;font-variant-numeric:tabular-nums}
+.chip{display:inline-block;font-size:13px;font-weight:500;padding:2px 10px;border-radius:999px}
+.chip.ok{background:var(--band);color:var(--ok)}
+.chip.bad{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+.chip.a{background:color-mix(in srgb,var(--knobA) 15%,transparent);color:var(--knobA)}
+.chip.b{background:color-mix(in srgb,var(--knobB) 15%,transparent);color:var(--knobB)}
+.note{font-size:12px;color:var(--muted);margin:0}
+.facts{display:grid;grid-template-columns:7.5em 1fr;gap:4px 14px;font-size:14px;margin:0}
+.facts dt{color:var(--muted)} .facts dd{margin:0;min-width:0}
+.cap{font-size:15px;margin:0;font-weight:500}
+.verdicts{display:flex;flex-wrap:wrap;gap:8px}
+.verdicts .chip{font-weight:400}
+.quiz{display:flex;flex-direction:column;gap:16px}
+.q p{margin:0 0 6px;font-weight:500}
+.q .fb{font-size:14px;margin-top:6px;min-height:1.6em}
+.q button.right{border-color:var(--ok);color:var(--ok)}
+.q button.wrong{border-color:var(--bad);color:var(--bad)}
+footer{font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+footer b{color:var(--fg)}
+svg text{font-family:var(--f-body)}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+.lv{font-size:12px;font-weight:700;padding:1px 8px;border-radius:999px;margin-left:6px}
+.lv.e{background:var(--band);color:var(--ok)} .lv.m{background:color-mix(in srgb,var(--proj2) 18%,transparent);color:var(--proj2)} .lv.h{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+.info{border-left:3px solid var(--card);padding:8px 12px;background:var(--card-fill);border-radius:0 8px 8px 0;min-height:64px}
+.info b{display:inline} .info p{margin:4px 0 0;font-size:14px}
+.part{cursor:pointer;transition:transform .6s ease}
+.part:hover > :first-child,.part.sel > :first-child{filter:drop-shadow(0 0 4px var(--card))}
+@media (prefers-reduced-motion: reduce){.part{transition:none}}
+</style>
+<style>
+.q-big{font-family:var(--f-display);font-size:clamp(20px,3.6vw,26px);font-weight:900;margin:0;text-wrap:balance}
+.cap-box{display:flex;gap:12px;align-items:flex-start;background:var(--card-fill);border-radius:10px;padding:12px 14px;min-height:72px}
+.cap-box .no{font-family:var(--f-num);font-size:13px;color:var(--card);white-space:nowrap;padding-top:3px}
+.cap-box p{margin:0;font-size:16px;line-height:1.6}
+.cap-box b{color:var(--beam)}
+.stepbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.dots{display:flex;gap:6px;margin-left:4px}
+.dots i{width:9px;height:9px;border-radius:50%;background:var(--line);display:block}
+.dots i.on{background:var(--card)}
+.free{border-top:1px dashed var(--line);padding-top:12px;display:flex;flex-direction:column;gap:10px}
+.free .t{font-size:13px;color:var(--muted)}
+.big-next{background:var(--card);color:#fff;border-color:var(--card);font-weight:700}
+.concl{font-size:15px;font-weight:700;color:var(--ok);margin:0}
+</style>
+<div class="wrap">
+<header>
+  <div class="eyebrow">激光扫描系统入门 · 第 11 课补课</div>
+  <h1>照片里的镜头怎么推镜片？丝杆为什么<span class="red">推不回去</span>？</h1>
+  <p class="lede">你发的那个镜头：电机带小齿轮、小齿轮带大齿轮、大齿轮带一个“凸轮筒”，凸轮筒把转动变成镜片前后走。它和丝杆其实是同一个原理——把螺纹剪开摊平，就是一个斜坡。</p>
+</header>
+<section aria-labelledby="s1">
+  <p class="q-big" id="s1">问题 1：小齿轮带大齿轮，为什么一大一小？</p>
+  <p class="note" style="margin-top:-6px">从正面看照片里的镜头（齿数是示意：小 20 齿、大 100 齿）</p>
+  <div class="stage"><svg id="svg1" data-export="11b-1_齿轮减速" viewBox="0 0 840 320" role="img" aria-label="问题 1：小齿轮带大齿轮，为什么一大一小？"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n1"></span><p id="c1"></p></div>
+  <div class="stepbar"><button id="p1">← 上一步</button><button id="x1" class="big-next">下一步 →</button><span class="dots" id="d1"></span></div>
+  <div class="free"><span class="t">自己玩：</span><div class="ctl"><label for="f1">电机（小齿轮）转了几圈<span id="f1V"></span></label><input id="f1" type="range" min="0" max="10" step="0.05" value="2.5"></div></div>
+  <p class="concl">记住一句：小齿轮带大齿轮 = 减速：小的转 5 圈，大的才转 1 圈，所以更细、力气更大。这不是行星齿轮，是最普通的一对齿轮。</p>
+</section>
+<section aria-labelledby="s2">
+  <p class="q-big" id="s2">问题 2：大齿轮一转，镜片怎么会前后走？</p>
+  <p class="note" style="margin-top:-6px">左边：从侧面看镜头（剖开）；右边：把两个筒剪开、摊平</p>
+  <div class="stage"><svg id="svg2" data-export="11b-2_凸轮筒摊开" viewBox="0 0 840 320" role="img" aria-label="问题 2：大齿轮一转，镜片怎么会前后走？"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n2"></span><p id="c2"></p></div>
+  <div class="stepbar"><button id="p2">← 上一步</button><button id="x2" class="big-next">下一步 →</button><span class="dots" id="d2"></span></div>
+  <div class="free"><span class="t">自己玩：</span><div class="ctl"><label for="f2">外筒（大齿轮）转了多少<span id="f2V"></span></label><input id="f2" type="range" min="0" max="0.9" step="0.005" value="0.3"></div></div>
+  <p class="concl">记住一句：凸轮筒 = 绕在镜筒上的丝杆：斜槽是螺纹，销子是螺母，直槽是导轨。相机镜头的对焦环就是这样做的。</p>
+</section>
+<section aria-labelledby="s3">
+  <p class="q-big" id="s3">问题 3：丝杆和齿轮齿条，本质区别在哪？</p>
+  <div class="stage"><svg id="svg3" data-export="11b-3_螺纹就是斜坡" viewBox="0 0 840 320" role="img" aria-label="问题 3：丝杆和齿轮齿条，本质区别在哪？"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n3"></span><p id="c3"></p></div>
+  <div class="stepbar"><button id="p3">← 上一步</button><button id="x3" class="big-next">下一步 →</button><span class="dots" id="d3"></span></div>
+  <div class="free"><span class="t">自己玩：</span>
+    <div class="ctl"><label for="f3">丝杆导程（转一圈走多远）<span id="f3V"></span></label><input id="f3" type="range" min="0.5" max="14" step="0.1" value="1"></div>
+    <div class="row"><button id="g1">丝杆 1 mm（我们的）</button><button id="g2">丝杆 4 mm</button><button id="g3">齿轮齿条</button><button id="g4">照片里的凸轮筒</button><button id="gp">推一下</button></div></div>
+  <p class="concl">记住一句：转一圈走多远 ÷ 一圈的周长 = 坡有多陡。坡缓 → 走得细、推不回去（自锁）；坡陡 → 走得快、一推就滑。丝杆和凸轮筒是缓坡，齿轮齿条是陡坡。</p>
+</section>
+<section aria-labelledby="s7"><h2 id="s7"><span class="n">✓</span>小测</h2><div class="quiz" id="quiz"></div></section>
+<footer>
+  <div><b>本课对项目的推进：</b></div>
+  <div>· 认出了照片里的结构：<b>齿轮减速 + 凸轮筒</b>（相机镜头式），不是行星齿轮；它是“同轴的丝杆”：紧凑、对称、镜片靠镜筒自动对中，但凸轮槽要高精度加工、齿轮要消隙</div>
+  <div>· 统一判据：<b>坡度 = 一圈行程 ÷ 周长</b>，坡度 &lt; 摩擦角就自锁。我们的丝杆 4.0° &lt; 5.9° ✓（和 <code>Z轴传动计算.py</code> 一致）</div>
+  <div>· 记入待定：Z 模块以后可以考虑做成凸轮筒式（更紧凑），v0.4 先保持丝杆</div>
+</footer>
+</div>
+<script>
+
+const $=id=>document.getElementById(id);
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const T=(x,y,t,s=14,c='var(--fg)',a='middle',w=400)=>`<text x="${x}" y="${y}" font-size="${s}" fill="${c}" text-anchor="${a}" font-weight="${w}">${t}</text>`;
+/* 通用：分步 + 补间动画 */
+function stepper(k,steps,state,draw){
+  let i=0,anim=0;
+  const dots=$('d'+k);dots.innerHTML=steps.map(()=>'<i></i>').join('');
+  function go(n,instant){i=Math.max(0,Math.min(steps.length-1,n));const to={...state,...steps[i].s},from={...state},t0=performance.now(),dur=(reduce||instant)?0:700;
+    cancelAnimationFrame(anim);
+    const tick=now=>{const p=dur?Math.min(1,(now-t0)/dur):1,e=p<.5?2*p*p:1-(-2*p+2)**2/2;
+      for(const key in to){if(typeof to[key]==='number')state[key]=from[key]+(to[key]-from[key])*e;else state[key]=to[key];}
+      draw();if(p<1)anim=requestAnimationFrame(tick);};
+    if(!dur){for(const key in to)state[key]=to[key];draw();}else anim=requestAnimationFrame(tick);
+    $('c'+k).innerHTML=steps[i].t;$('n'+k).textContent=`第 ${i+1} / ${steps.length} 步`;
+    dots.querySelectorAll('i').forEach((d,j)=>d.classList.toggle('on',j<=i));
+    $('p'+k).disabled=i===0;$('x'+k).textContent=i===steps.length-1?'从头再看 ↺':'下一步 →';}
+  $('p'+k).onclick=()=>go(i-1);$('x'+k).onclick=()=>go(i===steps.length-1?0:i+1);
+  go(0,true);return {go,n:steps.length};
+}
+
+const R=(x,y,w,h,f,s='none',sw=0,rx=3,extra='')=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${rx}" fill="${f}" stroke="${s}" stroke-width="${sw}" ${extra}/>`;
+const lens=(x,y,ry=20)=>`<ellipse cx="${x}" cy="${y}" rx="6" ry="${ry}" fill="var(--glass-fill)" stroke="var(--glass)" stroke-width="2"/>`;
+const arrow=(x1,y1,x2,y2,c,w=3)=>{const a=Math.atan2(y2-y1,x2-x1),h=10;return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${c}" stroke-width="${w}"/><polygon points="${x2},${y2} ${x2-h*Math.cos(a-0.45)},${y2-h*Math.sin(a-0.45)} ${x2-h*Math.cos(a+0.45)},${y2-h*Math.sin(a+0.45)}" fill="${c}"/>`;};
+let TT=0;const ANIM=[];(function loop(){TT+=0.016;ANIM.forEach(f=>f(TT));requestAnimationFrame(loop);})();
+const BR='#c9a24a',BR2='#8a6d1d',FE='#9aa3ad';
+const deg=Math.PI/180;
+function gearPath(cx,cy,r,z,h,rot){let d='';for(let k=0;k<z;k++){const a0=(k/z)*2*Math.PI+rot*deg,da=2*Math.PI/z;
+  const p=[[r-h/2,a0],[r+h/2,a0+da*0.22],[r+h/2,a0+da*0.5],[r-h/2,a0+da*0.72],[r-h/2,a0+da]];
+  p.forEach(([rr,a],j)=>{const x=cx+rr*Math.cos(a),y=cy+rr*Math.sin(a);d+=(k===0&&j===0?'M':'L')+x.toFixed(1)+','+y.toFixed(1);});}return d+'Z';}
+
+/* ===== 1 齿轮减速 ===== */
+const Z1=20,Z2=100,G1={x:0,y:0},GC=[240,165],R2=116,R1=R2*Z1/Z2,AP=-140;
+G1.x=GC[0]+(R1+R2)*Math.cos(AP*deg);G1.y=GC[1]+(R1+R2)*Math.sin(AP*deg);
+const s1={auto:0,turns:0,count:0,second:0,planet:0};let th1=0;
+function draw1(){
+  if(s1.auto>0.5&&!reduce)th1+=360*0.5*0.016;else if(s1.auto<=0.5)th1=360*s1.turns;
+  const th2=-th1*Z1/Z2+ (180/Z2);
+  let g='';
+  // 电机（在小齿轮后面）
+  g+=R(G1.x-30,G1.y-30,60,60,'#2b2f38','var(--muted)',1,8)+T(G1.x-38,G1.y-8,'电机',12,'var(--fg)','end',700)+T(G1.x-38,G1.y+8,'（在后面）',11,'var(--muted)','end');
+  // 大齿轮 + 镜筒 + 镜片
+  g+=`<path d="${gearPath(GC[0],GC[1],R2,Z2,7,th2)}" fill="${BR}" stroke="${BR2}" stroke-width=".8"/>`;
+  g+=`<circle cx="${GC[0]}" cy="${GC[1]}" r="${R2-7}" fill="#1d2330"/><circle cx="${GC[0]}" cy="${GC[1]}" r="86" fill="#7fc8a9" opacity=".55"/><circle cx="${GC[0]}" cy="${GC[1]}" r="86" fill="none" stroke="#e8c45a" stroke-width="3"/>`;
+  g+=`<path d="M${GC[0]-50},${GC[1]-40} Q${GC[0]},${GC[1]-70} ${GC[0]+40},${GC[1]-30}" stroke="#fff" stroke-width="3" fill="none" opacity=".5"/>`+T(GC[0],GC[1]+6,'镜片',14,'#fff','middle',700);
+  const [mx,my]=[Math.cos(th2*deg),Math.sin(th2*deg)];g+=`<line x1="${GC[0]+mx*(R2-12)}" y1="${GC[1]+my*(R2-12)}" x2="${GC[0]+mx*(R2+4)}" y2="${GC[1]+my*(R2+4)}" stroke="var(--beam)" stroke-width="5"/>`;
+  // 小齿轮
+  g+=`<path d="${gearPath(G1.x,G1.y,R1,Z1,7,th1)}" fill="#e3c66e" stroke="${BR2}" stroke-width=".8"/><circle cx="${G1.x}" cy="${G1.y}" r="5" fill="#2b2f38"/>`;
+  const [px,py]=[Math.cos(th1*deg),Math.sin(th1*deg)];g+=`<line x1="${G1.x}" y1="${G1.y}" x2="${G1.x+px*(R1)}" y2="${G1.y+py*(R1)}" stroke="var(--beam)" stroke-width="3"/>`;
+  g+=T(G1.x+40,G1.y-34,'小齿轮 20 齿',12,'var(--fg)','start',700)+T(GC[0]+R2+14,GC[1]+70,'大齿轮 100 齿',12,'var(--fg)','start',700);
+  if(s1.second>0.5){const a2=-40*deg,x2=GC[0]+(R1+R2)*Math.cos(a2),y2=GC[1]+(R1+R2)*Math.sin(a2);
+    g+=`<path d="${gearPath(x2,y2,R1,Z1,7,-th2*Z2/Z1+9)}" fill="#e3c66e" stroke="${BR2}" stroke-width=".8" opacity=".9"/><circle cx="${x2}" cy="${y2}" r="5" fill="#2b2f38"/>`+T(x2+30,y2-20,'第二个小齿轮？',12,'var(--proj2)','start',700);}
+  // 右侧
+  g+=R(500,40,320,250,'var(--surface)','var(--line)',1,10);
+  if(s1.planet>0.5){const c=[580,200];g+=T(660,64,'对比：行星齿轮长这样',13,'var(--fg)','middle',700);
+    g+=`<circle cx="${c[0]}" cy="${c[1]}" r="60" fill="none" stroke="${FE}" stroke-width="10"/><circle cx="${c[0]}" cy="${c[1]}" r="18" fill="#e3c66e"/>`;
+    for(let k=0;k<3;k++){const a=(k*120+TT*20)*deg;g+=`<circle cx="${c[0]+36*Math.cos(a)}" cy="${c[1]+36*Math.sin(a)}" r="15" fill="${BR}" stroke="${BR2}"/>`;}
+    g+=T(c[0],c[1]+4,'太阳轮',10,'#3a2a00','middle',700)+T(660,120,'中间太阳轮 + 一圈行星轮',12,'var(--muted)','start')+T(660,140,'+ 外圈内齿圈，三层套在一起',12,'var(--muted)','start')+
+       T(660,180,'照片里是普通的一对',13,'var(--ok)','start',700)+T(660,200,'外啮合齿轮，不是行星齿轮',13,'var(--ok)','start',700)+T(660,236,'第二个小齿轮【推测】：',12,'var(--proj2)','start',700)+T(660,254,'测转角的电位器 / 编码器，',12,'var(--muted)','start')+T(660,272,'或两个小齿轮对顶消隙',12,'var(--muted)','start');}
+  else{const n1=th1/360,n2=n1*Z1/Z2;
+    g+=T(660,74,'小齿轮（电机）转了',13,'var(--muted)','middle')+T(660,112,`${n1.toFixed(2)} 圈`,30,'var(--fg)','middle',700);
+    g+=T(660,160,'大齿轮（镜筒）转了',13,'var(--muted)','middle')+T(660,198,`${n2.toFixed(2)} 圈`,30,BR2,'middle',700);
+    if(s1.count>0.5)g+=T(660,244,'100 ÷ 20 = 5：减速 5 倍',15,'var(--ok)','middle',700)+T(660,268,'电机一步，镜筒只转 1/5 步',12,'var(--muted)','middle');}
+  $('svg1').innerHTML=g;$('f1V').textContent=(th1/360).toFixed(2)+' 圈';
+}
+ANIM.push(()=>draw1());
+const st1=stepper(1,[
+ {t:'从正面看你发的那个镜头：中间是镜片，镜筒外面套着一个铜色<b>大齿轮</b>；左上角一个<b>小齿轮</b>，后面接着电机。',s:{auto:0,turns:0,count:0,second:0,planet:0}},
+ {t:'电机带小齿轮转：小齿轮的齿一个一个推着大齿轮的齿走 → 大齿轮<b>反方向</b>、<b>慢慢地</b>转（看两个红色记号）。',s:{auto:1,count:0,second:0,planet:0}},
+ {t:'数齿：小齿轮转 1 圈推过 20 个齿；大齿轮有 100 个齿，要推 100 个才转 1 圈 → 小齿轮转 <b>5 圈</b>，大齿轮才转 <b>1 圈</b>。这叫<b>减速</b>。',s:{auto:1,count:1,second:0,planet:0}},
+ {t:'为什么要减速？① <b>更细</b>：电机走一步，镜筒只转 1/5 步；② <b>力气更大</b>：和自行车挂低速挡爬坡一个道理。',s:{auto:1,count:1,second:0,planet:0}},
+ {t:'这<b>不是行星齿轮</b>（右边是行星齿轮的样子：太阳轮、行星轮、内齿圈三层套在一起）。照片里只是最普通的一对齿轮。照片里还有第二个小齿轮，<b>我推测</b>是测转角的传感器，或者两个小齿轮对顶消隙。',s:{auto:1,count:1,second:1,planet:1}}
+],s1,draw1);
+$('f1').addEventListener('input',()=>{s1.turns=+$('f1').value;s1.auto=0;s1.count=1;s1.planet=0;$('n1').textContent='自己玩';$('c1').innerHTML=`小齿轮转 ${s1.turns.toFixed(2)} 圈 → 大齿轮转 ${(s1.turns/5).toFixed(2)} 圈。`;});
+
+/* ===== 2 凸轮筒摊开 ===== */
+const s2={unroll:0,phi:0.3,auto:0,map:0};const YS=175;
+function draw2(){
+  const phi=s2.auto>0.5&&!reduce?0.45+0.4*Math.sin(TT*0.8):s2.phi;
+  const xp=480+290*phi/0.9*0.9/0.9*1, xpin=480+290*Math.min(1,phi/0.9);   // 右图交叉点
+  const xl=xpin-400;                                                     // 左图镜片位置（同一比例）
+  let g=`<rect x="20" y="164" width="400" height="12" fill="var(--beam)" opacity=".22"/>`+T(24,158,'光',11,'var(--beam)','start',700);
+  // 左：侧面剖视
+  g+=R(42,62,18,216,BR,BR2,1,2);for(let y=66;y<276;y+=6)g+=`<line x1="42" y1="${y}" x2="38" y2="${y+3}" stroke="${BR2}"/>`;
+  g+=T(51,54,s2.map>0.5?'大齿轮 = 联轴器 + 减速':'大齿轮',12,BR2,'start',700);
+  g+=R(60,76,340,188,'none',BR2,2,6)+T(230,292,'外筒（带斜槽，跟大齿轮一起转）',12,BR2,'middle',700);
+  g+=R(72,90,316,160,'color-mix(in srgb,var(--line) 35%,transparent)','var(--muted)',1.5,4)+T(230,110,'内筒（不转，开直槽）',11,'var(--muted)','middle');
+  g+=R(xl-7,96,14,148,'#6b7686','none',0,3)+lens(xl,170,58)+`<line x1="${xl}" y1="96" x2="${xl}" y2="84" stroke="#2b2f38" stroke-width="4"/><circle cx="${xl}" cy="82" r="7" fill="#2b2f38" stroke="#fff" stroke-width="1.5"/>`;
+  g+=T(xl+12,74,s2.map>0.5?'销子 = 螺母':'销子',12,'var(--fg)','start',700)+T(xl,262,'镜片',12,'var(--fg)','middle',700);
+  // 右：摊开
+  if(s2.unroll>0.02){const op=s2.unroll;const sh=105-210*Math.min(1,phi/0.9);
+    g+=`<g opacity="${op}"><defs><clipPath id="cp2"><rect x="450" y="60" width="350" height="230"/></clipPath></defs>`;
+    g+=R(450,60,350,230,'color-mix(in srgb,'+BR+' 18%,transparent)',BR2,1.5,4);
+    g+=`<g clip-path="url(#cp2)"><line x1="480" y1="${280-sh}" x2="770" y2="${70-sh}" stroke="${BR2}" stroke-width="16" stroke-linecap="round"/><line x1="480" y1="${280-sh}" x2="770" y2="${70-sh}" stroke="var(--surface)" stroke-width="10" stroke-linecap="round"/></g>`;
+    g+=`<line x1="470" y1="${YS}" x2="780" y2="${YS}" stroke="var(--muted)" stroke-width="14" stroke-linecap="round" opacity=".55"/>`;
+    g+=`<circle cx="${xpin}" cy="${YS}" r="9" fill="#2b2f38" stroke="#fff" stroke-width="2"/>`;
+    g+=T(780,52,s2.map>0.5?'斜槽 = 螺纹':'斜槽（外筒的）',12,BR2,'end',700)+T(790,YS-14,s2.map>0.5?'直槽 = 导轨':'直槽（内筒的）',12,'var(--muted)','end',700)+T(xpin,YS+28,s2.map>0.5?'销子 = 螺母':'销子',12,'var(--fg)','middle',700);
+    g+=arrow(460,300,800,300,'var(--beam)',1.5)+T(625,316,'沿光轴方向 →',11,'var(--beam)','middle',700);
+    g+=T(440,70,'绕',11,'var(--muted)','end')+T(440,86,'筒',11,'var(--muted)','end')+T(440,102,'一',11,'var(--muted)','end')+T(440,118,'圈',11,'var(--muted)','end');
+    g+=T(440,40,'剪开摊平 →',12,'var(--fg)','end',700)+'</g>';}
+  $('svg2').innerHTML=g;$('f2V').textContent=Math.round(phi*360)+'°';
+}
+ANIM.push(()=>draw2());
+const st2=stepper(2,[
+ {t:'从侧面剖开看：大齿轮固定在一个能转的<b>外筒</b>上；里面还有一个<b>不转的内筒</b>，镜片装在内筒里，镜片架上伸出一根<b>销子</b>。',s:{unroll:0,phi:0.3,auto:0,map:0}},
+ {t:'把两个筒都<b>剪开摊平</b>（右边）：内筒上开的是一条<b>直槽</b>（顺着光轴）；外筒上开的是一条<b>斜槽</b>（绕着筒的螺旋槽，摊平后是一条斜线）。销子同时插在两条槽里，就在它们的<b>交叉点</b>。',s:{unroll:1,phi:0.3,auto:0,map:0}},
+ {t:'大齿轮带外筒转 → 摊开图上斜槽<b>上下滑</b>；直槽不动 → 交叉点只能<b>沿着直槽左右走</b> → 销子带着镜片沿光轴前后走。',s:{unroll:1,auto:1,map:0}},
+ {t:'直槽的作用：不让镜片跟着外筒转，只许它前后走——和丝杆旁边的<b>导轨</b>一模一样。',s:{unroll:1,auto:1,map:0}},
+ {t:'所以它就是一根<b>绕在镜筒上的丝杆</b>：斜槽 = 螺纹，销子 = 螺母，直槽 = 导轨，大齿轮 = 联轴器 + 减速。相机镜头转对焦环、镜片前后走，就是这个结构。',s:{unroll:1,auto:1,map:1}}
+],s2,draw2);
+$('f2').addEventListener('input',()=>{s2.phi=+$('f2').value;s2.auto=0;s2.unroll=1;$('n2').textContent='自己玩';$('c2').innerHTML=`外筒转了 ${Math.round(s2.phi*360)}°：交叉点（销子）沿直槽走到这里，镜片跟着走。`;});
+
+/* ===== 3 螺纹就是斜坡 ===== */
+const PHI=Math.atan(0.10/Math.cos(15*deg))/deg;     // 摩擦角 5.9°（μ = 0.10【假设】）
+const PRE={s1:{n:'丝杆 导程 1 mm（我们的 Z 轴）',C:Math.PI*4.5,L:1},s4:{n:'丝杆 导程 4 mm',C:Math.PI*3,L:4},rk:{n:'齿轮齿条（20 齿小齿轮）',C:31.4,L:31.4},cam:{n:'照片里的凸轮筒【假设：Ø60，转 3/4 圈走 10 mm】',C:188.5,L:13.3,gear:5}};
+const s3={pre:'s1',L:1,wedge:0,push:0};let off3=0,slide3=0;
+function draw3(){
+  const p=PRE[s3.pre],L=s3.pre==='s1'||s3.pre==='s4'?s3.L:p.L,C=p.C;
+  const lam=Math.atan(L/C)/deg,tl=Math.tan(lam*deg),lock=lam<PHI;
+  const X0=50,W=240,BY=292,XG=200;
+  if(s3.wedge>0.5&&!reduce)off3=40*Math.sin(TT*1.1);else off3*=0.9;
+  if(s3.push>0.5&&!lock&&!reduce){slide3=Math.min(1,slide3+0.016*0.8);if(slide3>=1&&TT%3<0.05)slide3=0;}else slide3=0;
+  const off=off3+slide3*60;                                   // 方块被推下坡 → 斜坡被挤向右（丝杆倒转）
+  const hAt=x=>Math.max(0,Math.min(W,x-(X0+off)))*Math.min(tl,1.0)*(tl>1?1:1);
+  const VF=4,Hs=Math.min(W*tl*VF,250),dang=Math.atan(Hs/W)/deg,tlv=Hs/W;
+  let g='';
+  // 小图：丝杆剪开一圈
+  g+=R(20,30,20,64,'#c9cdd3','#7b8697',1,3);for(let y=36;y<90;y+=9)g+=`<line x1="20" y1="${y+6}" x2="40" y2="${y}" stroke="#7b8697" stroke-width="1.5"/>`;
+  g+=T(48,48,'螺纹剪开一圈',11,'var(--fg)','start',700)+T(48,64,'摊平 = 斜坡',11,'var(--fg)','start',700)+T(48,82,'（高度放大 4 倍画）',10,'var(--muted)','start');
+  // 斜坡（会被推着左右走）
+  g+=`<polygon points="${X0+off},${BY} ${X0+off+W},${BY} ${X0+off+W},${BY-Hs}" fill="#c9cdd3" stroke="#7b8697" stroke-width="1.5"/>`;
+  g+=`<line x1="${X0+off}" y1="${BY}" x2="${X0+off+W}" y2="${BY-W*Math.tan(PHI*deg)*VF}" stroke="var(--ok)" stroke-width="2" stroke-dasharray="6 5"/>`;
+  g+=T(X0+off+W/2,BY+16,'底边 = 一圈的周长',11,'var(--muted)','middle')+T(X0+off+W+6,BY-Hs/2,'高 = 导程',11,'var(--muted)','start');
+  // 导轨 + 方块（螺母）
+  g+=`<line x1="${XG}" y1="40" x2="${XG}" y2="${BY}" stroke="var(--card)" stroke-width="1.5" stroke-dasharray="4 4"/>`+T(XG+6,30,'导轨：螺母只能上下走',11,'var(--card)','start',700);
+  const hb=Math.max(0,Math.min(Hs,(XG-(X0+off))*tlv));const by=BY-hb;
+  g+=`<g transform="translate(${XG} ${by}) rotate(${-dang})">`+R(-22,-26,44,26,'#d4a72c','#8a6d1d',1.5,3)+T(0,-9,'螺母',11,'#3a2a00','middle',700)+'</g>';
+  if(s3.push>0.5){const [ux,uy]=[Math.cos(dang*deg),Math.sin(dang*deg)];
+    g+=arrow(XG+ux*60,by-uy*60-14,XG+ux*26,by-uy*26-14,'var(--bad)',4)+T(XG+ux*64+4,by-uy*64-14,'被推',12,'var(--bad)','start',700);}
+  g+=T(X0+W+10,BY-W*Math.tan(PHI*deg)*VF-4,'绿虚线：摩擦扛得住的最陡坡',10,'var(--ok)','start',700);
+  // 右侧面板
+  g+=R(470,30,350,262,'var(--surface)','var(--line)',1,10)+T(645,56,p.n,13,'var(--fg)','middle',700);
+  g+=T(490,92,'一圈的周长',12,'var(--muted)','start')+T(800,92,C.toFixed(1)+' mm',14,'var(--fg)','end',700);
+  g+=T(490,118,'转一圈走多远',12,'var(--muted)','start')+T(800,118,L.toFixed(1)+' mm',14,'var(--fg)','end',700);
+  g+=T(490,148,'坡度',12,'var(--muted)','start')+T(800,148,lam.toFixed(1)+'°',22,lock?'var(--ok)':'var(--bad)','end',700);
+  g+=T(490,176,'摩擦扛得住的坡度',12,'var(--muted)','start')+T(800,176,PHI.toFixed(1)+'°',14,'var(--ok)','end',700);
+  g+=T(645,214,lock?'缓坡：推不回去（自锁）✓':'陡坡：一推就滑 ✗',16,lock?'var(--ok)':'var(--bad)','middle',700);
+  g+=T(645,240,lam<5?'走得细：一圈只走一点点':(lam<20?'不算细':'很粗：一圈走一大截'),12,'var(--muted)','middle');
+  if(p.gear)g+=T(645,270,`再加 ${p.gear}:1 齿轮减速 → 电机一圈镜片走 ${(L/p.gear).toFixed(1)} mm`,12,'var(--fg)','middle',700);
+  $('svg3').innerHTML=g;$('f3V').textContent=s3.L.toFixed(1)+' mm';
+}
+ANIM.push(()=>draw3());
+const st3=stepper(3,[
+ {t:'把丝杆的螺纹<b>剪开、摊平一圈</b>，就是一个<b>斜坡</b>：底边 = 丝杆一圈的周长（约 14 mm），高 = 导程（1 mm）。螺母就是坡上的一块方块，旁边的导轨只让它上下走。',s:{pre:'s1',L:1,wedge:0,push:0}},
+ {t:'丝杆转一圈 = 把这个斜坡往前推一整圈周长 → 方块被<b>抬高一个导程</b>。坡越缓，推一圈抬得越少 → <b>走得越细</b>。（看方块跟着斜坡上下）',s:{pre:'s1',L:1,wedge:1,push:0}},
+ {t:'反过来：镜片被振一下，从方块往下<b>推</b>（红箭头）。坡只有 4°，比绿虚线（摩擦扛得住的 5.9°）还缓 → 像箱子放在缓坡上不会自己滑 → <b>推不回去 = 自锁</b>。',s:{pre:'s1',L:1,wedge:0,push:1}},
+ {t:'换成导程 <b>4 mm</b>：坡变陡（23°），超过绿虚线 → 一推，方块就顺着坡滑下来，斜坡被推着往回退 = <b>丝杆被推着倒转</b>。',s:{pre:'s4',L:4,wedge:0,push:1}},
+ {t:'<b>齿轮齿条</b>也能换算成坡：小齿轮转一圈，齿条走 31 mm，正好等于它一圈的周长 → 坡度 <b>45°</b>，远超绿虚线 → 一推就动；一圈 31 mm 也太粗。这才是它和丝杆的本质区别。',s:{pre:'rk',wedge:0,push:1}},
+ {t:'<b>照片里的凸轮筒</b>：筒很粗（周长约 190 mm），转 3/4 圈镜片只走 10 mm【假设】→ 坡度只有约 4°，<b>也能自锁、也很细</b>，再加 5:1 齿轮减速就更细。所以它和丝杆是同一个原理：<b>缓坡</b>。',s:{pre:'cam',wedge:1,push:0}}
+],s3,draw3);
+const pick=(k,txt)=>{s3.pre=k;if(PRE[k].L&&(k==='s1'||k==='s4'))s3.L=PRE[k].L;$('f3').value=s3.L;$('n3').textContent='自己玩';$('c3').innerHTML=txt;};
+$('g1').onclick=()=>pick('s1','丝杆导程 1 mm：缓坡 4°，自锁、走得细。');$('g2').onclick=()=>pick('s4','丝杆导程 4 mm：坡 23°，推得回去。');
+$('g3').onclick=()=>pick('rk','齿轮齿条：相当于 45° 的陡坡。');$('g4').onclick=()=>pick('cam','凸轮筒：筒粗，坡也只有约 4°。');
+$('gp').onclick=()=>{s3.push=s3.push>0.5?0:1;s3.wedge=0;$('gp').textContent=s3.push?'停止推':'推一下';};
+$('f3').addEventListener('input',()=>{s3.L=+$('f3').value;s3.pre='s1';PRE.s1.n='丝杆（导程自己调）';$('n3').textContent='自己玩';const lam=Math.atan(s3.L/14.1)/deg;$('c3').innerHTML=`导程 ${s3.L.toFixed(1)} mm → 坡度 ${lam.toFixed(1)}°：${lam<PHI?'比 5.9° 缓，自锁':'比 5.9° 陡，推得回去'}。`;});
+
+window.__beforeExport=()=>{st1.go(2,true);st2.go(4,true);st3.go(2,true);};
+const QS=[
+ {q:'照片里的镜头是行星齿轮吗？',o:['不是：一对普通齿轮减速 + 凸轮筒','是行星齿轮'],a:0,e:['对。行星齿轮是太阳轮、行星轮、内齿圈三层套在一起。','照片里只有外面一对齿轮。']},
+ {q:'凸轮筒里的“直槽”起什么作用？',o:['不让镜片跟着转，只许前后走（相当于导轨）','让镜片转起来'],a:0,e:['对。','镜片不能转，否则销子就跟着外筒一起转了。']},
+ {q:'丝杆能自锁、齿轮齿条不能，本质原因是？',o:['丝杆是缓坡（4°，比摩擦扛得住的 5.9° 还缓）；齿轮齿条相当于 45° 陡坡','齿轮有缝'],a:0,e:['对。坡度 = 一圈走多远 ÷ 周长。','两者都有缝，也都能消；区别在坡度。']}
+];
+$('quiz').innerHTML=QS.map((q,i)=>`<div class="q" data-i="${i}"><p>Q${i+1}. ${q.q}</p><div class="row">${q.o.map((o,j)=>`<button data-j="${j}">${o}</button>`).join('')}</div><div class="fb" aria-live="polite"></div></div>`).join('');
+document.querySelectorAll('.q button').forEach(b=>b.onclick=()=>{const qd=b.closest('.q'),q=QS[+qd.dataset.i],j=+b.dataset.j;
+  qd.querySelectorAll('button').forEach(x=>x.classList.remove('right','wrong'));b.classList.add(j===q.a?'right':'wrong');
+  qd.querySelector('.fb').textContent=(j===q.a?'✓ ':'✗ ')+q.e[j];});
+</script>
