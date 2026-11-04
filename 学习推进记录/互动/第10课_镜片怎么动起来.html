@@ -117,13 +117,13 @@ svg text{font-family:var(--f-body)}
   <p class="concl">记住一句：螺母被导轨卡住转不了，丝杆一转，它只能直着走；转一圈走一格（我们是 1 mm）。</p>
 </section>
 <section aria-labelledby="s2">
-  <p class="q-big" id="s2">问题 2：为什么不用音圈、齿轮、皮带？</p>
+  <p class="q-big" id="s2">问题 2：第一台为什么不用音圈、齿轮、皮带？</p>
   <p class="note" style="margin-top:-6px">来源：S018 Akribis 音圈电机规格（机械时间常数约 4–17 ms）；丝杆参数来自 BOM v0.3（导程 1 mm、16 细分）</p>
-  <div class="stage"><svg id="svg2" data-export="10-2_四种传动比一比" viewBox="0 0 840 320" role="img" aria-label="问题 2：为什么不用音圈、齿轮、皮带？"></svg></div>
+  <div class="stage"><svg id="svg2" data-export="10-2_四种传动比一比" viewBox="0 0 840 320" role="img" aria-label="问题 2：第一台为什么不用音圈、齿轮、皮带？"></svg></div>
   <div class="cap-box" aria-live="polite"><span class="no" id="n2"></span><p id="c2"></p></div>
   <div class="stepbar"><button id="p2">← 上一步</button><button id="x2" class="big-next">下一步 →</button><span class="dots" id="d2"></span></div>
   <div class="free"><span class="t">自己玩：换一种传动，再换一个要求</span><div class="row"><button id="f2a">齿轮</button><button id="f2b">皮带</button><button id="f2c">音圈</button><button id="f2d">丝杆</button></div><div class="row"><button id="f2e" aria-pressed="false">要求改成：边扫边对焦</button></div></div>
-  <p class="concl">记住一句：我们设一次距离就不动，不要求快，但要稳；丝杆断电自己咬住，最合适。只有要边扫边对焦时，才换音圈。</p>
+  <p class="concl">记住一句：丝杆省事、断电自己咬住；音圈又快又安静（相机镜头就用它），但要多一个位置传感器和伺服环。第一台只设一次距离，先用丝杆。音圈详见<a href="https://claude.ai/artifact/7hGkN7BGe8ruuocLRjbtPY">补课 10b</a>。</p>
 </section>
 <section aria-labelledby="s3">
   <p class="q-big" id="s3">问题 3：Z 这部分，买现成的还是自己搭？</p>
@@ -245,7 +245,7 @@ const s2={mech:'req',fast:0,verdict:0};
 const M2={
  gear:{name:'齿轮 + 齿条',rows:[['✓','快'],['✗','齿和齿之间有缝'],['✗','在缝里来回晃']]},
  belt:{name:'皮带',rows:[['✓','快，走得远'],['✗','有弹性，推一下先伸长'],['✗','像橡皮筋来回弹']]},
- vc:{name:'音圈电机',rows:[['✓','最快：几毫秒'],['△','要加光栅尺 + 伺服板'],['✗','断电没力气，会滑走']]},
+ vc:{name:'音圈电机（相机镜头里就是它）',rows:[['✓','最快最安静：几毫秒'],['△','要位置传感器 + 伺服环'],['✗','断电就松了，会滑走']]},
  screw:{name:'丝杆 + 步进',rows:[['✓','4 mm 约 0.4 秒，够用'],['✓','一步约 0.3 μm'],['✓','螺纹咬住，推不回去']]}
 };
 function rows2(){
@@ -282,9 +282,9 @@ function draw2(){
       g+=`<circle cx="70" cy="${238+by}" r="13" fill="#9aa3ad"/><circle cx="530" cy="${238+by}" r="13" fill="#9aa3ad"/>`+R(52,190+by,36,34,'#1d2330','var(--muted)',1)+T(70,182,'电机',12,'var(--fg)','middle',700);
       g+=`<path d="M70,${225+by} Q${(70+cx)/2},${225+sag+by} ${cx-30},${226+by} M${cx+30},${226+by} Q${(cx+530)/2},${225-sag+by} 530,${225+by} M70,${251+by} H530" stroke="#2b2b2b" stroke-width="4" fill="none"/>`+T(200,214+by,'皮带',12,'var(--fg)','middle',700);
     }else if(m==='vc'){
-      g+=R(110,198+by,150,40,'#3a4150')+R(110,198+by,75,8,'#d23c3c')+R(185,198+by,75,8,'#2b7bb9')+T(185,190+by,'磁铁',12,'var(--fg)','middle',700);
-      g+=R(cx-160,206+by,130,24,'#c87533');for(let x=cx-156;x<cx-32;x+=8)g+=`<line x1="${x}" y1="${206+by}" x2="${x}" y2="${230+by}" stroke="#8a4f1f"/>`;
-      g+=T(cx-95,252+by,'线圈（通电被推）',12,'var(--fg)','middle',700)+R(476,196+by,10,40,'var(--proj2)')+T(481,190+by,'挡块',11,'var(--proj2)','middle',700);
+      g+=R(170,180+by,230,14,'#3a4150')+R(170,190+by,230,4,'#d23c3c')+R(170,236+by,230,14,'#3a4150')+R(170,236+by,230,4,'#d23c3c')+T(285,172+by,'磁铁（固定），线圈夹在中间，通电就被推',12,'var(--fg)','middle',700);
+      g+=R(cx-150,200+by,120,30,'#c87533');for(let x=cx-146;x<cx-32;x+=7)g+=`<line x1="${x}" y1="${200+by}" x2="${x}" y2="${230+by}" stroke="#8a4f1f"/>`;
+      g+=T(cx-90,219+by,'线圈',12,'#fff','middle',700)+R(486,196+by,10,40,'var(--proj2)')+T(491,190+by,'挡块',11,'var(--proj2)','middle',700);
     }else if(m==='screw'){
       g+=R(20,188+by,40,44,'#1d2330','var(--muted)',1)+T(40,182,'电机',12,'var(--fg)','middle',700)+R(60,206+by,480,14,'#c9cdd3');
       for(let x=64;x<540;x+=10)g+=`<line x1="${x-3}" y1="${206+by}" x2="${x+3}" y2="${220+by}" stroke="#7b8697" stroke-width="1.2"/>`;
@@ -309,16 +309,17 @@ function draw2(){
   $('svg2').innerHTML=g;
 }
 ANIM.push(()=>draw2());
-const st2=stepper(2,[
+const ST2=[
  {t:'先定考题。我们的 Z <b>设一次距离</b>就不动了，所以<b>不用快</b>；但要<b>准</b>，而且<b>断电、振动时不能跑</b>（前面算过：振动是最大的误差）。',s:{mech:'req',fast:0,verdict:0}},
  {t:'<b>齿轮 + 齿条</b>：齿轮转，齿条就直着走。可是齿和齿之间<b>有缝</b>，一振动，镜片就在缝里<b>来回晃</b>。',s:{mech:'gear',fast:0,verdict:0}},
  {t:'<b>皮带</b>（3D 打印机常用）走得远、走得快。但皮带<b>像橡皮筋</b>，有弹性，一振动就<b>来回弹</b>。',s:{mech:'belt',fast:0,verdict:0}},
- {t:'<b>音圈电机</b>和喇叭一个原理：线圈通电，被磁铁推开。它<b>最快</b>，几毫秒就到位；但它是靠电流“顶”着镜片，<b>断电就没力气</b>，镜片会滑走。要停得准，还得加光栅尺和伺服板。',s:{mech:'vc',fast:0,verdict:0}},
- {t:'<b>丝杆</b>慢一点（4 mm 约 0.4 秒），但螺纹<b>咬住</b>了：就像拧进木头的螺丝，直接拔是拔不出来的（这叫<b>自锁</b>）。断电、振动都不跑 ✓，所以我们选丝杆。',s:{mech:'screw',fast:0,verdict:1}}
-],s2,draw2);
-const pick2=m=>{s2.mech=m;s2.verdict=1;};
+ {t:'<b>音圈电机</b>：线圈夹在磁铁中间，通电就被推。<b>手机摄像头、很多微单镜头对焦就用它</b>，又快又安静。代价是：要停在某个位置，得有<b>位置传感器</b>盯着、随时调电流；<b>断电就松了</b>。（详见补课 10b）',s:{mech:'vc',fast:0,verdict:0}},
+ {t:'<b>丝杆</b>慢一点（4 mm 约 0.4 秒），但螺纹<b>咬住</b>了：就像拧进木头的螺丝，直接拔是拔不出来的（这叫<b>自锁</b>）。断电、振动都不跑 ✓，所以<b>第一台</b>选丝杆：控制卡已有的 STEP/DIR 接上就走。音圈不是不好，是它的快我们暂时用不上。',s:{mech:'screw',fast:0,verdict:1}}
+];
+const st2=stepper(2,ST2,s2,draw2);
+const pick2=m=>{s2.mech=m;s2.verdict=1;const k={gear:1,belt:2,vc:3,screw:4}[m];$('c2').innerHTML=ST2[k].t;$('n2').textContent='自己玩';};
 $('f2a').onclick=()=>pick2('gear');$('f2b').onclick=()=>pick2('belt');$('f2c').onclick=()=>pick2('vc');$('f2d').onclick=()=>pick2('screw');
-$('f2e').onclick=()=>{s2.fast=s2.fast?0:1;s2.verdict=1;if(s2.mech==='req')s2.mech='screw';$('f2e').setAttribute('aria-pressed',s2.fast?'true':'false');};
+$('f2e').onclick=()=>{s2.fast=s2.fast?0:1;s2.verdict=1;if(s2.mech==='req')s2.mech='screw';$('f2e').setAttribute('aria-pressed',s2.fast?'true':'false');$('n2').textContent='自己玩';$('c2').innerHTML=s2.fast?'要求改成<b>边扫边对焦</b>：丝杆跟不上，改用<b>音圈</b>（或振镜电机），像相机连续对焦那样。':'要求是<b>设一次距离</b>：丝杆够用，最省事。';};
 
 /* ===== 3 买还是做 ===== */
 const s3={hl:-1,v1:0,v2:0,v3:0,path:0,mode:'proto'};
@@ -363,7 +364,7 @@ window.__beforeExport=()=>{st1.go(3,true);st2.go(4,true);st3.go(4,true);};
 const QS=[
  {q:'拧螺栓的时候，螺母为什么会直着走？',o:['螺母被捏住（被导轨卡住），转不了','螺栓转着转着变长了'],a:0,e:['对。螺母不能转，就只能沿着螺纹走。','螺栓长度不变；是螺母被卡住不能转。']},
  {q:'丝杆导程 1 mm，电机转了 3 圈，镜片走多远？',o:['3 mm','1 mm'],a:0,e:['对。转一圈走一格，一格 1 mm。','转一圈走 1 mm，转 3 圈就是 3 mm。']},
- {q:'断电以后被振了一下，哪种传动的镜片还在原位？',o:['音圈','丝杆'],a:1,e:['音圈靠电流顶着，断电就没力气了。','对。螺纹咬住，推不动（自锁）。']},
+ {q:'断电以后被振了一下，哪种传动的镜片还在原位？',o:['音圈','丝杆'],a:1,e:['音圈断电就松了（微单镜头关机摇一摇会响）。','对。螺纹咬住，推不动（自锁）。']},
  {q:'第一台样机的 Z，怎么做最快？',o:['买整套商业 Z 模块','买电动平移台，自己装镜片'],a:1,e:['商业模块是为 0.2–0.7 m 设计的，打 50 m 对不上。','对。厂家已经把电机、丝杆、导轨调好了。']}
 ];
 $('quiz').innerHTML=QS.map((q,i)=>`<div class="q" data-i="${i}"><p>Q${i+1}. ${q.q}</p><div class="row">${q.o.map((o,j)=>`<button data-j="${j}">${o}</button>`).join('')}</div><div class="fb" aria-live="polite"></div></div>`).join('');

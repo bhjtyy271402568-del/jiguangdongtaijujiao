@@ -1,0 +1,337 @@
+<title>音圈马达</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@700;900&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* 布局：与第 01、02 课相同；第 10 课补课：音圈马达怎么推镜片、怎么停住（闭环）、和丝杆怎么选 */
+:root{
+  --bg:#f4f6f9; --surface:#ffffff; --fg:#151a23; --muted:#5d6676; --line:#d8dee7;
+  --beam:#e5383b; --beam-soft:#f6b3b4; --glass:#2b7bb9; --glass-fill:#dcecf8;
+  --ok:#17914f; --bad:#d23c3c; --proj2:#e0701c; --card:#2c5fd6; --card-fill:#e2eafc;
+  --metal:#7b8697; --work:#d7d3cf; --work-line:#8a817a; --band:#17914f22;
+  --knobA:#7c3aed; --knobB:#0e8a8a;
+  --f-body:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --f-display:"Noto Serif SC","Songti SC",serif;
+  --f-num:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1218; --surface:#171c25; --fg:#e7ebf1; --muted:#9aa4b4; --line:#2b3240;
+  --beam:#ff5c60; --beam-soft:#7a2a2d; --glass:#6db5ee; --glass-fill:#1c3448;
+  --ok:#3fd082; --bad:#ff6b6b; --proj2:#ff9a4a; --card:#82a6ff; --card-fill:#1d2a4a;
+  --metal:#8c97a8; --work:#3a3633; --work-line:#7d746c; --band:#3fd08226;
+  --knobA:#b08cff; --knobB:#4fd1c5; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1218; --surface:#171c25; --fg:#e7ebf1; --muted:#9aa4b4; --line:#2b3240;
+  --beam:#ff5c60; --beam-soft:#7a2a2d; --glass:#6db5ee; --glass-fill:#1c3448;
+  --ok:#3fd082; --bad:#ff6b6b; --proj2:#ff9a4a; --card:#82a6ff; --card-fill:#1d2a4a;
+  --metal:#8c97a8; --work:#3a3633; --work-line:#7d746c; --band:#3fd08226;
+  --knobA:#b08cff; --knobB:#4fd1c5; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:15px;line-height:1.65}
+.wrap{max-width:900px;margin:0 auto;padding-block:28px 56px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:flex;flex-direction:column;gap:28px}
+header{display:flex;flex-direction:column;gap:6px}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--muted)}
+h1{font-family:var(--f-display);font-weight:900;font-size:clamp(28px,5vw,40px);margin:0;line-height:1.2;text-wrap:balance}
+h1 .red{color:var(--beam)}
+.lede{color:var(--muted);margin:0;max-width:60ch}
+section{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:14px;min-width:0}
+h2{font-family:var(--f-display);font-size:21px;margin:0;display:flex;gap:10px;align-items:baseline;text-wrap:balance}
+h2 .n{font-family:var(--f-num);font-size:13px;color:var(--beam)}
+.try{font-size:13px;color:var(--muted);margin:0}
+.try b{color:var(--fg);font-weight:500}
+.stage{overflow-x:auto;border-radius:10px;background:var(--bg)}
+.stage svg{display:block;width:100%;height:auto}
+.controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px 20px}
+.ctl{display:flex;flex-direction:column;gap:4px;min-width:0}
+.ctl label{font-size:13px;display:flex;justify-content:space-between;gap:8px}
+.ctl label span{font-family:var(--f-num);color:var(--muted);font-size:12px}
+input[type=range]{width:100%;accent-color:var(--beam)}
+.ctl.a input{accent-color:var(--knobA)} .ctl.b input{accent-color:var(--knobB)}
+.ctl.a label{color:var(--knobA)} .ctl.b label{color:var(--knobB)}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+button{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--surface);color:var(--fg);
+  border-radius:999px;padding:6px 14px;cursor:pointer}
+button:hover{border-color:var(--muted)}
+button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--card);outline-offset:2px}
+button[aria-pressed=true]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.readout{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.cell{border-top:2px solid var(--line);padding-top:6px;min-width:0}
+.cell .k{font-size:12px;color:var(--muted)}
+.cell .v{font-family:var(--f-num);font-size:20px;font-variant-numeric:tabular-nums}
+.chip{display:inline-block;font-size:13px;font-weight:500;padding:2px 10px;border-radius:999px}
+.chip.ok{background:var(--band);color:var(--ok)}
+.chip.bad{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+.chip.a{background:color-mix(in srgb,var(--knobA) 15%,transparent);color:var(--knobA)}
+.chip.b{background:color-mix(in srgb,var(--knobB) 15%,transparent);color:var(--knobB)}
+.note{font-size:12px;color:var(--muted);margin:0}
+.facts{display:grid;grid-template-columns:7.5em 1fr;gap:4px 14px;font-size:14px;margin:0}
+.facts dt{color:var(--muted)} .facts dd{margin:0;min-width:0}
+.cap{font-size:15px;margin:0;font-weight:500}
+.verdicts{display:flex;flex-wrap:wrap;gap:8px}
+.verdicts .chip{font-weight:400}
+.quiz{display:flex;flex-direction:column;gap:16px}
+.q p{margin:0 0 6px;font-weight:500}
+.q .fb{font-size:14px;margin-top:6px;min-height:1.6em}
+.q button.right{border-color:var(--ok);color:var(--ok)}
+.q button.wrong{border-color:var(--bad);color:var(--bad)}
+footer{font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+footer b{color:var(--fg)}
+svg text{font-family:var(--f-body)}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+.lv{font-size:12px;font-weight:700;padding:1px 8px;border-radius:999px;margin-left:6px}
+.lv.e{background:var(--band);color:var(--ok)} .lv.m{background:color-mix(in srgb,var(--proj2) 18%,transparent);color:var(--proj2)} .lv.h{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+.info{border-left:3px solid var(--card);padding:8px 12px;background:var(--card-fill);border-radius:0 8px 8px 0;min-height:64px}
+.info b{display:inline} .info p{margin:4px 0 0;font-size:14px}
+.part{cursor:pointer;transition:transform .6s ease}
+.part:hover > :first-child,.part.sel > :first-child{filter:drop-shadow(0 0 4px var(--card))}
+@media (prefers-reduced-motion: reduce){.part{transition:none}}
+</style>
+<style>
+.q-big{font-family:var(--f-display);font-size:clamp(20px,3.6vw,26px);font-weight:900;margin:0;text-wrap:balance}
+.cap-box{display:flex;gap:12px;align-items:flex-start;background:var(--card-fill);border-radius:10px;padding:12px 14px;min-height:72px}
+.cap-box .no{font-family:var(--f-num);font-size:13px;color:var(--card);white-space:nowrap;padding-top:3px}
+.cap-box p{margin:0;font-size:16px;line-height:1.6}
+.cap-box b{color:var(--beam)}
+.stepbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.dots{display:flex;gap:6px;margin-left:4px}
+.dots i{width:9px;height:9px;border-radius:50%;background:var(--line);display:block}
+.dots i.on{background:var(--card)}
+.free{border-top:1px dashed var(--line);padding-top:12px;display:flex;flex-direction:column;gap:10px}
+.free .t{font-size:13px;color:var(--muted)}
+.big-next{background:var(--card);color:#fff;border-color:var(--card);font-weight:700}
+.concl{font-size:15px;font-weight:700;color:var(--ok);margin:0}
+</style>
+<div class="wrap">
+<header>
+  <div class="eyebrow">激光扫描系统入门 · 第 10 课补课</div>
+  <h1>音圈马达：相机镜头里<span class="red">推镜片</span>的那个</h1>
+  <p class="lede">你说得对：手机摄像头、很多微单镜头的对焦都靠音圈马达。上一课把它说成了“不好”，图也没画明白。这次从相机镜头讲起：它怎么推、怎么停住，再公平地和丝杆比一比。</p>
+</header>
+<section aria-labelledby="s1">
+  <p class="q-big" id="s1">问题 1：音圈马达是怎么推动镜片的？</p>
+  <p class="note" style="margin-top:-6px">画的是镜头切开后的样子（剖面）；红色是光</p>
+  <div class="stage"><svg id="svg1" data-export="10b-1_音圈怎么推镜片" viewBox="0 0 840 320" role="img" aria-label="问题 1：音圈马达是怎么推动镜片的？"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n1"></span><p id="c1"></p></div>
+  <div class="stepbar"><button id="p1">← 上一步</button><button id="x1" class="big-next">下一步 →</button><span class="dots" id="d1"></span></div>
+  <div class="free"><span class="t">自己玩：</span><div class="ctl"><label for="f1">电流（负的就是反向）<span id="f1V"></span></label><input id="f1" type="range" min="-100" max="100" step="1" value="40"></div><div class="row"><button id="f1a" aria-pressed="true">有小弹簧（手机摄像头）</button><button id="f1b" aria-pressed="false">没弹簧（微单镜头）</button></div></div>
+  <p class="concl">记住一句：线圈绕在镜筒上、夹在磁铁中间，通电就被推，电流反向就往回拉；没电就没有力。</p>
+</section>
+<section aria-labelledby="s2">
+  <p class="q-big" id="s2">问题 2：没弹簧的音圈，怎么停在想要的位置？</p>
+  <div class="stage"><svg id="svg2" data-export="10b-2_闭环停住" viewBox="0 0 840 320" role="img" aria-label="问题 2：没弹簧的音圈，怎么停在想要的位置？"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n2"></span><p id="c2"></p></div>
+  <div class="stepbar"><button id="p2">← 上一步</button><button id="x2" class="big-next">下一步 →</button><span class="dots" id="d2"></span></div>
+  <div class="free"><span class="t">自己玩：</span>
+    <div class="controls"><div class="ctl"><label for="f2t">目标位置<span id="f2tV"></span></label><input id="f2t" type="range" min="-90" max="90" step="1" value="40"></div>
+    <div class="ctl"><label for="f2k">力度（增益）<span id="f2kV"></span></label><input id="f2k" type="range" min="0.5" max="10" step="0.1" value="3"></div></div>
+    <div class="row"><button id="f2p">推它一下</button></div></div>
+  <p class="concl">记住一句：音圈要靠“尺子 + 控制器”一直盯着，随时调电流，才能停得准；这就是闭环。相机机身里一直在做这件事。</p>
+</section>
+<section aria-labelledby="s3">
+  <p class="q-big" id="s3">问题 3：那我们的 Z，选音圈还是丝杆？</p>
+  <p class="note" style="margin-top:-6px">我们的动镜：Ø12.7 mm、几克重、行程约 4 mm，和相机对焦镜组差不多大；S018 最小一款音圈行程 5 mm、动子 5 g【资料】</p>
+  <div class="stage"><svg id="svg3" data-export="10b-3_音圈还是丝杆" viewBox="0 0 840 320" role="img" aria-label="问题 3：那我们的 Z，选音圈还是丝杆？"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n3"></span><p id="c3"></p></div>
+  <div class="stepbar"><button id="p3">← 上一步</button><button id="x3" class="big-next">下一步 →</button><span class="dots" id="d3"></span></div>
+  <div class="free"><span class="t">自己玩：我们要的是——</span><div class="row"><button id="f3a" aria-pressed="true">设一次距离就行</button><button id="f3b" aria-pressed="false">边扫边对焦（曲面、动目标）</button></div></div>
+  <p class="concl">记住一句：音圈快、安静，但要多做“尺子 + 伺服环”；丝杆慢，但接上就能用、断电咬住。第一台用丝杆，要边扫边对焦时换音圈。</p>
+</section>
+<section aria-labelledby="s7">
+  <h2 id="s7"><span class="n">✓</span>小测</h2>
+  <div class="quiz" id="quiz"></div>
+</section>
+<footer>
+  <div><b>本课对项目的推进：</b></div>
+  <div>· 更正第 10 课：音圈不是“不好”，而是第一台用不上它的快，还要多做位置传感器和伺服环</div>
+  <div>· 我们的动镜和相机对焦镜组差不多大，音圈完全推得动 → 定为 <b>Z 模块 v2</b> 的路线（音圈 + 直线标尺 + 伺服环），样机仍用丝杆平移台</div>
+  <div>· 控制卡待办：Z 除 STEP/DIR/EN/HOME 外，再<b>预留一路编码器输入（A/B）</b>；也可以买能直接收 STEP/DIR 的音圈伺服驱动器【假设，选型时核实】</div>
+</footer>
+</div>
+<script>
+
+const $=id=>document.getElementById(id);
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const T=(x,y,t,s=14,c='var(--fg)',a='middle',w=400)=>`<text x="${x}" y="${y}" font-size="${s}" fill="${c}" text-anchor="${a}" font-weight="${w}">${t}</text>`;
+/* 通用：分步 + 补间动画 */
+function stepper(k,steps,state,draw){
+  let i=0,anim=0;
+  const dots=$('d'+k);dots.innerHTML=steps.map(()=>'<i></i>').join('');
+  function go(n,instant){i=Math.max(0,Math.min(steps.length-1,n));const to={...state,...steps[i].s},from={...state},t0=performance.now(),dur=(reduce||instant)?0:700;
+    cancelAnimationFrame(anim);
+    const tick=now=>{const p=dur?Math.min(1,(now-t0)/dur):1,e=p<.5?2*p*p:1-(-2*p+2)**2/2;
+      for(const key in to){if(typeof to[key]==='number')state[key]=from[key]+(to[key]-from[key])*e;else state[key]=to[key];}
+      draw();if(p<1)anim=requestAnimationFrame(tick);};
+    if(!dur){for(const key in to)state[key]=to[key];draw();}else anim=requestAnimationFrame(tick);
+    $('c'+k).innerHTML=steps[i].t;$('n'+k).textContent=`第 ${i+1} / ${steps.length} 步`;
+    dots.querySelectorAll('i').forEach((d,j)=>d.classList.toggle('on',j<=i));
+    $('p'+k).disabled=i===0;$('x'+k).textContent=i===steps.length-1?'从头再看 ↺':'下一步 →';}
+  $('p'+k).onclick=()=>go(i-1);$('x'+k).onclick=()=>go(i===steps.length-1?0:i+1);
+  go(0,true);return {go,n:steps.length};
+}
+
+const R=(x,y,w,h,f,s='none',sw=0,rx=3,extra='')=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${rx}" fill="${f}" stroke="${s}" stroke-width="${sw}" ${extra}/>`;
+const lens=(x,y,ry=20)=>`<ellipse cx="${x}" cy="${y}" rx="6" ry="${ry}" fill="var(--glass-fill)" stroke="var(--glass)" stroke-width="2"/>`;
+const arrow=(x1,y1,x2,y2,c,w=3)=>{const a=Math.atan2(y2-y1,x2-x1),h=10;return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${c}" stroke-width="${w}"/><polygon points="${x2},${y2} ${x2-h*Math.cos(a-0.45)},${y2-h*Math.sin(a-0.45)} ${x2-h*Math.cos(a+0.45)},${y2-h*Math.sin(a+0.45)}" fill="${c}"/>`;};
+let TT=0;const ANIM=[];(function loop(){TT+=0.016;ANIM.forEach(f=>f(TT));requestAnimationFrame(loop);})();
+const CX=420,TRV=100,DT=0.016;
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+/* 画音圈执行器（剖面）。x：-1..1 */
+function actuator(x,o){
+  const px=CX+TRV*x;let g='';
+  g+=`<rect x="20" y="152" width="800" height="16" fill="var(--beam)" opacity=".25"/>`;
+  g+=R(250,36,340,250,'none','var(--muted)',1.5,12);
+  if(o.frameLabel)g+=T(244,282,'外壳（固定）',11,'var(--muted)','end',700);
+  if(o.mag){g+=R(275,50,290,26,'#3a4150','var(--muted)',1)+R(275,72,290,4,'#d23c3c')+R(275,244,290,26,'#3a4150','var(--muted)',1)+R(275,244,290,4,'#d23c3c');}
+  if(o.spring){let d=`M252,128`;const x1=px-55,n=12;for(let k=1;k<=n;k++){const xx=252+(x1-252)*k/n;d+=` L${xx.toFixed(1)},${128+(k===n?0:(k%2?-7:7))}`;}g+=`<path d="${d}" fill="none" stroke="var(--knobB)" stroke-width="2"/>`;}
+  if(o.coil){for(const y of [82,218]){g+=R(px-42,y,84,20,'#c87533');for(let xx=px-38;xx<px+42;xx+=6)g+=`<line x1="${xx}" y1="${y}" x2="${xx}" y2="${y+20}" stroke="#8a4f1f"/>`;}}
+  g+=R(px-55,104,110,10,'#9aa3ad')+R(px-55,206,110,10,'#9aa3ad')+lens(px,160,44);
+  if(o.labels){
+    const L=(y1,xa,y2,t,c)=>`<line x1="${xa}" y1="${y1}" x2="598" y2="${y2}" stroke="${c}" stroke-width="1"/>`+T(604,y2+4,t,13,c,'start',700);
+    if(o.mag)g+=L(63,566,58,'磁铁（固定在外壳上）','#d23c3c');
+    if(o.coil)g+=L(92,px+42,88,'线圈（铜线绕在镜筒上）','#c87533');
+    g+=L(109,px+55,118,'镜筒（能前后滑）','var(--muted)')+L(150,px+6,148,'对焦镜片','var(--glass)');
+    if(o.spring)g+=T(256,118,'小弹簧',12,'var(--knobB)','start',700);}
+  return {g,px};
+}
+function currentBar(I,x0=40,y=112){const c=x0+90,w=90*I;return T(c,y-12,`电流 ${Math.round(I*100)}%`,13,'var(--fg)','middle',700)+R(x0,y,180,14,'var(--line)')+R(Math.min(c,c+w),y,Math.abs(w),14,'var(--beam)')+`<line x1="${c}" y1="${y-3}" x2="${c}" y2="${y+17}" stroke="var(--fg)"/>`;}
+
+/* ===== 1 音圈怎么推镜片 ===== */
+const s1={coil:0,mag:0,mode:'still',spring:0,I:0.4};
+let x1=0,v1=0,hit1=-9,I1=0;
+function sim1(){
+  let F=0,c=3;
+  if(s1.mode==='still'){x1*=0.9;v1=0;I1=0;return;}
+  if(s1.mode==='drive'){I1=0.6*(Math.sin(TT*Math.PI/2.4)>=0?1:-1);F=6*I1;}
+  else if(s1.mode==='off'){I1=0;F=30*Math.sin(TT*5);c=0.5;}
+  else{I1=s1.I;F=6*I1-(s1.spring?6*x1:0);}
+  v1+=(F-c*v1)*DT;x1+=v1*DT;
+  if(x1>1){x1=1;if(v1>0.3)hit1=TT;v1=Math.min(v1,0);}if(x1<-1){x1=-1;if(v1<-0.3)hit1=TT;v1=Math.max(v1,0);}
+}
+function draw1(){
+  sim1();
+  const a=actuator(x1,{coil:s1.coil>.5,mag:s1.mag>.5,spring:s1.mode==='free'&&s1.spring,labels:1,frameLabel:1});let g=a.g;
+  if(s1.mode!=='still'&&s1.mode!=='off'){g+=currentBar(I1);
+    if(Math.abs(I1)>0.03&&s1.mag>.5&&s1.coil>.5){g+=arrow(a.px,302,a.px+80*Math.sign(I1)*Math.min(1,Math.abs(I1)*1.6),302,'var(--card)',3)+T(a.px-12*Math.sign(I1),306,I1>0?'推':'拉',13,'var(--card)',I1>0?'end':'start',700);}}
+  let top='';
+  if(s1.mode==='drive')top=I1>0?'通电 → 线圈被磁铁推着走':'电流反过来 → 往回拉';
+  else if(s1.mode==='off')top='没电 = 没有力：镜筒是松的，一晃就两头撞';
+  else if(s1.mode==='free')top=s1.spring?'有弹簧：电流越大，停得越远；电流 0，弹簧拉回原位':(Math.abs(s1.I)>0.02?'没弹簧：固定电流 → 一直加速，撞到头才停':'没弹簧、没电流：停在哪算哪');
+  if(top)g+=T(420,24,top,15,s1.mode==='off'||(s1.mode==='free'&&!s1.spring&&Math.abs(s1.I)>0.02)?'var(--bad)':'var(--ok)','middle',700);
+  if(s1.mode==='off'){g+=T(130,120,'〰 关机摇一摇 〰',14,'var(--bad)','middle',700);if(TT-hit1<0.25)g+=T(x1>0?600:240,200,'咔哒',16,'var(--bad)',x1>0?'start':'end',700);}
+  $('svg1').innerHTML=g;$('f1V').textContent=Math.round(s1.I*100)+'%';
+}
+ANIM.push(()=>draw1());
+const st1=stepper(1,[
+ {t:'对焦镜片装在一个小<b>镜筒</b>里，镜筒能沿着光的方向前后滑。手机摄像头、微单镜头里都有这样一组。',s:{coil:0,mag:0,mode:'still'}},
+ {t:'镜筒外面绕一圈细铜线，这就是<b>线圈</b>。“音圈”这个名字来自喇叭：喇叭纸盆后面也粘着这样一个线圈。',s:{coil:1,mag:0,mode:'still'}},
+ {t:'外壳上固定着<b>磁铁</b>，线圈正好夹在磁铁中间的缝里。',s:{coil:1,mag:1,mode:'still'}},
+ {t:'线圈一<b>通电</b>，磁铁就<b>推</b>它；电流越大推得越猛，<b>电流反过来就往回拉</b>。没有齿轮、没有螺纹，镜筒直接被推着走，所以又<b>快</b>又<b>安静</b>。',s:{coil:1,mag:1,mode:'drive'}},
+ {t:'<b>没电就没有力</b>，镜筒是松的。很多微单镜头关机后摇一摇会“咔哒”响，就是它在两头撞。手机摄像头则加了一个<b>小弹簧</b>把它拉回原位（下面“自己玩”可以试）。',s:{coil:1,mag:1,mode:'off'}}
+],s1,draw1);
+const free1=()=>{s1.coil=1;s1.mag=1;s1.mode='free';$('n1').textContent='自己玩';$('c1').innerHTML=s1.spring?'<b>手机摄像头</b>：弹簧和电磁力互相较劲，电流多大，就停在多远。简单，但弹簧会晃、不够准。':'<b>微单镜头</b>：没有弹簧，给一个固定电流它就一路冲到头。要停在中间，得靠下一张图的“尺子 + 闭环”。';};
+$('f1').addEventListener('input',()=>{s1.I=+$('f1').value/100;free1();});
+$('f1a').onclick=()=>{s1.spring=1;$('f1a').setAttribute('aria-pressed','true');$('f1b').setAttribute('aria-pressed','false');free1();};
+$('f1b').onclick=()=>{s1.spring=0;$('f1b').setAttribute('aria-pressed','true');$('f1a').setAttribute('aria-pressed','false');free1();};
+s1.spring=1;
+
+/* ===== 2 闭环停住 ===== */
+const s2={sensor:0,loop:0,dist:0,jump:0,rs:'a',I0:0.35,xt:0.4,K:3,free:0};
+let x2=-0.8,v2=0,rs2='',push2=0,I2=0,xt2=0.4;
+function sim2(){
+  if(s2.rs!==rs2){rs2=s2.rs;x2=-0.8;v2=0;}
+  xt2=s2.jump?(Math.floor(TT/1.8)%2?0.6:-0.6):s2.xt;
+  I2=s2.loop?clamp(s2.K*(xt2-x2)-0.6*v2,-1,1):s2.I0;
+  let Fd=0;if(s2.dist&&(TT%2.6)<0.12)Fd=25;if(push2>0){Fd=-28;push2-=DT;}
+  v2+=(6*I2-0.5*v2+Fd)*DT;x2+=v2*DT;
+  if(x2>1){x2=1;v2=Math.min(v2,0);}if(x2<-1){x2=-1;v2=Math.max(v2,0);}
+  return Fd;
+}
+function draw2(){
+  const Fd=sim2();
+  const a=actuator(x2,{coil:1,mag:1});let g=a.g;
+  const tx=CX+TRV*xt2;
+  g+=`<line x1="${tx}" y1="40" x2="${tx}" y2="284" stroke="var(--ok)" stroke-width="2" stroke-dasharray="6 4"/>`+T(tx,36,'目标',12,'var(--ok)','middle',700);
+  if(Fd)g+=arrow(a.px+(Fd>0?-90:90),190,a.px+(Fd>0?-60:60),190,'var(--bad)',4)+T(a.px+(Fd>0?-94:94),186,'振',13,'var(--bad)',Fd>0?'end':'start',700);
+  if(s2.sensor>.5){
+    g+=`<line x1="${a.px}" y1="216" x2="${a.px}" y2="294" stroke="var(--muted)" stroke-dasharray="2 3"/>`;
+    for(let k=0;k<12;k++)g+=R(a.px-60+k*10,294,10,8,k%2?'var(--fg)':'var(--surface)','var(--fg)',0.5,0);
+    g+=T(a.px-66,302,'尺子（跟镜筒走）',11,'var(--muted)','end',700)+R(CX-12,304,24,12,'#1d2330','var(--muted)',1,2)+T(CX+18,315,'读数头（固定）',11,'var(--muted)','start',700);
+    g+=`<path d="M${CX+12},310 H720 V214" fill="none" stroke="var(--card)" stroke-width="1.5"/>`;}
+  // 控制卡
+  const on=s2.loop>.5;
+  g+=`<g opacity="${on||s2.sensor>.5?1:.55}">`+R(606,40,226,174,'var(--card-fill)','var(--card)',1.5,10)+T(719,62,on?'控制卡（伺服环）':'控制卡',14,'var(--card)','middle',700);
+  const mm=v=>(v*2).toFixed(2)+' mm';
+  g+=T(620,88,`目标：${mm(xt2)}`,13,'var(--fg)','start')+T(620,110,s2.sensor>.5?`实际：${mm(x2)}`:'实际：？（不知道）',13,'var(--fg)','start');
+  g+=T(620,132,on?`误差：${mm(xt2-x2)}`:'误差：算不了',13,on?'var(--fg)':'var(--muted)','start');
+  g+=T(620,154,on?'电流 = 误差 × 力度':'电流：固定一个值',13,'var(--muted)','start')+'</g>';
+  g+=currentBar(I2,630,184).replace(/font-size="13"/,'font-size="12"');
+  let top,c='var(--ok)';const e=Math.abs(xt2-x2)*2;
+  if(!s2.sensor&&!on){top='固定电流：一直加速，撞到头 ✗（停不到目标）';c='var(--bad)';}
+  else if(!on)top='有了尺子：随时知道镜筒在哪';
+  else if(s2.free)top=s2.K<1.5?'力度小：走得慢吞吞':s2.K>6?'力度大：冲过头、来回晃（要调参数）':`力度合适　误差 ${e.toFixed(2)} mm`;
+  else if(s2.dist)top=Fd?'被振了一下 → 尺子发现 → 马上推回来':`误差 ${e.toFixed(2)} mm${e<0.03?' ✓ 停住了':''}`;
+  else top=`误差 ${e.toFixed(2)} mm${e<0.03?' ✓ 停在目标上':''}`;
+  if(s2.free&&s2.K>6)c='var(--proj2)';if(s2.free&&s2.K<1.5)c='var(--proj2)';
+  g+=T(420,20,top,15,c,'middle',700);
+  $('svg2').innerHTML=g;$('f2tV').textContent=(s2.xt*2).toFixed(1)+' mm';$('f2kV').textContent=s2.K.toFixed(1);
+}
+ANIM.push(()=>draw2());
+const st2=stepper(2,[
+ {t:'没弹簧的音圈，只给一个<b>固定电流</b>：它不会停在半路，而是一直加速，<b>撞到头</b>才停。光靠电流，停不到目标。',s:{sensor:0,loop:0,dist:0,jump:0,rs:'a',I0:0.35,free:0}},
+ {t:'加一把<b>尺子</b>（直线标尺，第 09 课讲过）：尺子跟着镜筒走，<b>读数头</b>固定，控制卡随时知道镜筒在哪。',s:{sensor:1,loop:0,dist:0,jump:0,rs:'b',I0:0,free:0}},
+ {t:'<b>闭环</b>：控制卡每隔很短时间算一次：误差 = 目标 − 实际，电流 = 误差 × 力度。离得远就推得猛，到了就不推，<b>停在目标上</b>。',s:{sensor:1,loop:1,dist:0,jump:0,rs:'c',free:0}},
+ {t:'被<b>振一下</b>（每隔几秒自动推一次）：尺子马上发现偏了，控制卡立刻反推回来。镜筒一直被<b>盯着</b>，所以停得准。',s:{sensor:1,loop:1,dist:1,jump:0,free:0}},
+ {t:'目标来回跳，它马上跟上（动画放慢了，真机是毫秒级）。相机连续对焦就是这样：<b>机身芯片一直跑着这个伺服环</b>。我们要用音圈，就是在控制卡里多跑一个这样的环。',s:{sensor:1,loop:1,dist:0,jump:1,free:0}}
+],s2,draw2);
+const free2=()=>{s2.sensor=1;s2.loop=1;s2.dist=0;s2.jump=0;s2.free=1;$('n2').textContent='自己玩';$('c2').innerHTML='拖“力度”试试：太小走得慢，太大会冲过头来回晃。调这个参数，就是写伺服环时要做的事（你写控制卡时应该见过）。';};
+$('f2t').addEventListener('input',()=>{s2.xt=+$('f2t').value/100;free2();});
+$('f2k').addEventListener('input',()=>{s2.K=+$('f2k').value;free2();});
+$('f2p').onclick=()=>{free2();push2=0.12;};
+
+/* ===== 3 音圈还是丝杆 ===== */
+const s3={n:1,concl:0,need:'once'};
+const ROWS3=[
+ {k:'快不快',once:'我们：不急',fast:'我们：要快',a:'4 mm 约 0.4 秒',b:'几毫秒',w:'b'},
+ {k:'安静',once:'我们：无所谓',fast:'我们：无所谓',a:'有电机声',b:'几乎没声（拍视频要）',w:'b'},
+ {k:'要多做什么',once:'我们：越少越好',fast:'我们：能做',a:'控制卡已有 STEP/DIR，接上就走',b:'+ 尺子 + 伺服环 + 调参数',w:'a'},
+ {k:'断电以后',once:'运输、停机时',fast:'运输、停机时',a:'螺纹咬住不动',b:'松了；开机先找零（相机也这样）',w:'a'}
+];
+function draw3(){
+  let g='';
+  g+=R(180,26,310,36,'var(--surface)','var(--line)',1,8)+R(510,26,310,36,'var(--surface)','var(--line)',1,8);
+  g+=R(196,40,60,8,'#c9cdd3')+R(218,36,16,16,'#d4a72c')+T(345,50,'丝杆 + 步进',15,'var(--fg)','middle',700);
+  g+=R(524,34,52,5,'#3a4150')+R(530,40,40,8,'#c87533')+R(524,49,52,5,'#3a4150')+T(690,50,'音圈 + 尺子 + 伺服环',15,'var(--fg)','middle',700);
+  ROWS3.forEach((r,i)=>{if(i>=Math.round(s3.n))return;const y=96+i*44;
+    const dim=s3.need==='once'&&i<2&&s3.concl>.5;
+    g+=`<g opacity="${dim?.45:1}">`;
+    g+=T(24,y,r.k,15,'var(--fg)','start',700)+T(24,y+17,s3.need==='fast'?r.fast:r.once,11,'var(--muted)','start');
+    const cell=(cx,txt,win)=>(win?R(cx-150,y-20,300,32,'var(--band)','none',0,8):'')+T(cx,y+1,(win?'✓ ':'')+txt,14,win?'var(--ok)':'var(--fg)','middle',win?700:400);
+    g+=cell(335,r.a,r.w==='a')+cell(665,r.b,r.w==='b')+'</g>';});
+  if(s3.concl>.5){
+    if(s3.need==='once'){g+=R(20,272,800,44,'var(--card-fill)','var(--card)',1.5,10)+T(420,290,'第一台 → 丝杆：只为验证 50 m 光学，变量越少越好',15,'var(--card)','middle',700)+T(420,309,'以后要边扫边对焦 → 换音圈 Z 模块（第 02 课定的：Z 模块可换）',12,'var(--fg)','middle');}
+    else{g+=R(20,272,800,44,'color-mix(in srgb,var(--proj2) 14%,transparent)','var(--proj2)',1.5,10)+T(420,290,'边扫边对焦 → 音圈：快是硬要求',15,'var(--proj2)','middle',700)+T(420,309,'多出来的伺服环，正好是写控制卡的活',12,'var(--fg)','middle');}}
+  $('svg3').innerHTML=g;
+}
+const st3=stepper(3,[
+ {t:'<b>快</b>：音圈完胜，几毫秒；丝杆走完 4 mm 要约 0.4 秒。但我们只在开打前设一次距离，<b>不急</b>。',s:{n:1,concl:0,need:'once'}},
+ {t:'<b>安静</b>：音圈几乎没声，所以相机拍视频离不开它。我们打激光，<b>无所谓</b>。',s:{n:2,concl:0,need:'once'}},
+ {t:'<b>要多做什么</b>：丝杆用控制卡已有的 STEP/DIR，接上就走；音圈要加尺子、写伺服环、调参数。第一台<b>越少越好</b>。',s:{n:3,concl:0,need:'once'}},
+ {t:'<b>断电以后</b>：丝杆咬住不动；音圈松了，开机先找一次零（相机也这样，加运输锁就不怕运输）。',s:{n:4,concl:0,need:'once'}},
+ {t:'结论：<b>第一台用丝杆</b>，只为验证 50 m 光学；以后要<b>边扫边对焦</b>（打曲面、打动目标），就换音圈 Z 模块。伺服环正好是你写控制卡的强项。',s:{n:4,concl:1,need:'once'}}
+],s3,draw3);
+const need3=n=>{s3.need=n;s3.n=4;s3.concl=1;draw3();$('f3a').setAttribute('aria-pressed',n==='once'?'true':'false');$('f3b').setAttribute('aria-pressed',n==='fast'?'true':'false');$('n3').textContent='自己玩';$('c3').innerHTML=n==='once'?'只设一次距离：快和安静都用不上，<b>丝杆</b>最省事。':'边扫边对焦：快变成了硬要求，<b>音圈</b>胜出；多出来的伺服环由控制卡来跑。';};
+$('f3a').onclick=()=>need3('once');$('f3b').onclick=()=>need3('fast');
+
+window.__beforeExport=()=>{st1.go(3,true);st2.go(2,true);st3.go(4,true);};
+const QS=[
+ {q:'音圈马达靠什么推镜片？',o:['线圈通电后被磁铁推','齿轮带着转'],a:0,e:['对。没有齿轮、没有螺纹，直接推。','音圈里没有齿轮。']},
+ {q:'没弹簧的音圈，只给一个固定电流，镜筒会怎样？',o:['停在半路某个位置','一直加速，撞到头'],a:1,e:['没有东西和它平衡，它不会自己停。','对。所以要“尺子 + 闭环”才能停在目标上。']},
+ {q:'相机镜头用音圈，主要图什么？',o:['快、安静','断电能锁住'],a:0,e:['对。连续对焦要快，拍视频要安静。','恰恰相反：音圈断电就松了。']},
+ {q:'我们第一台先用丝杆，主要是因为？',o:['音圈不好','现在用不上它的快，丝杆接上 STEP/DIR 就能用'],a:1,e:['音圈很好，只是第一台用不上它的长处。','对。以后要边扫边对焦再换音圈。']}
+];
+$('quiz').innerHTML=QS.map((q,i)=>`<div class="q" data-i="${i}"><p>Q${i+1}. ${q.q}</p><div class="row">${q.o.map((o,j)=>`<button data-j="${j}">${o}</button>`).join('')}</div><div class="fb" aria-live="polite"></div></div>`).join('');
+document.querySelectorAll('.q button').forEach(b=>b.onclick=()=>{const qd=b.closest('.q'),q=QS[+qd.dataset.i],j=+b.dataset.j;
+  qd.querySelectorAll('button').forEach(x=>x.classList.remove('right','wrong'));b.classList.add(j===q.a?'right':'wrong');
+  qd.querySelector('.fb').textContent=(j===q.a?'✓ ':'✗ ')+q.e[j];});
+</script>
