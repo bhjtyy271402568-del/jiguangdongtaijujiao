@@ -2,7 +2,7 @@
 <rect width="940" height="510" rx="16" fill="#ffffff"/>
 <text x="24" y="34" font-size="20" font-weight="700" fill="#111">课程路线图</text>
 <text x="150" y="34" font-size="13" fill="#666">先懂原理 → 定结构 → 搭样机验证 → 再做产品</text>
-<path d="M110,110 L350,110 L590,110 L830,110 C920,110 920,240 830,240 L590,240 L350,240 L110,240 C20,240 20,370 110,370 L350,370 L590,370" fill="none" stroke="#cbd5e1" stroke-width="6" stroke-linecap="round"/>
+<path d="M110,110 L350,110 L590,110 L830,110 C920,110 920,240 830,240 L590,240 L350,240 L110,240 C20,240 20,370 110,370 L350,370 L590,370 L830,370" fill="none" stroke="#cbd5e1" stroke-width="6" stroke-linecap="round"/>
 <circle cx="110" cy="110" r="22" fill="#16a34a" stroke="#15803d" stroke-width="3"/>
 <text x="110" y="116" font-size="17" text-anchor="middle" fill="#fff" font-weight="700">✓</text>
 <text x="110" y="158" font-size="15" text-anchor="middle" fill="#111" font-weight="700">光的旅程</text>
@@ -43,11 +43,15 @@
 <text x="350" y="376" font-size="17" text-anchor="middle" fill="#fff" font-weight="700">✓</text>
 <text x="350" y="418" font-size="15" text-anchor="middle" fill="#111" font-weight="700">Z轴传动设计</text>
 <text x="350" y="436" font-size="12" text-anchor="middle" fill="#666">3D·16项校核</text>
-<circle cx="590" cy="370" r="22" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
-<text x="590" y="376" font-size="17" text-anchor="middle" fill="#ea580c" font-weight="700">⑪</text>
-<text x="590" y="418" font-size="15" text-anchor="middle" fill="#111" font-weight="700">零件选型</text>
-<text x="590" y="436" font-size="12" text-anchor="middle" fill="#666">真实型号·再校核</text>
-<text x="590" y="338" font-size="12" text-anchor="middle" fill="#ea580c" font-weight="700">下一课 ▼</text>
+<circle cx="590" cy="370" r="22" fill="#16a34a" stroke="#15803d" stroke-width="3"/>
+<text x="590" y="376" font-size="17" text-anchor="middle" fill="#fff" font-weight="700">✓</text>
+<text x="590" y="418" font-size="15" text-anchor="middle" fill="#111" font-weight="700">机构对比</text>
+<text x="590" y="436" font-size="12" text-anchor="middle" fill="#666">六种·3D+2D·评分</text>
+<circle cx="830" cy="370" r="22" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+<text x="830" y="376" font-size="17" text-anchor="middle" fill="#ea580c" font-weight="700">⑫</text>
+<text x="830" y="418" font-size="15" text-anchor="middle" fill="#111" font-weight="700">零件选型</text>
+<text x="830" y="436" font-size="12" text-anchor="middle" fill="#666">真实型号·再校核</text>
+<text x="830" y="338" font-size="12" text-anchor="middle" fill="#ea580c" font-weight="700">下一课 ▼</text>
 <rect x="20" y="464" width="900" height="28" rx="6" fill="#f1f5f9"/>
 <text x="470" y="483" font-size="13" text-anchor="middle" fill="#334155">终点：《5–50 m 前聚焦系统规格》＝ 控制卡（项目①）+ 调焦望远镜（项目②，丝杠步进）+ 激光器（M²≤1.2）</text>
 </svg>
