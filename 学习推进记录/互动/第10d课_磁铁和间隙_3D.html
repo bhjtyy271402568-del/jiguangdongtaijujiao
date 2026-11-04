@@ -1,0 +1,350 @@
+<meta charset="utf-8">
+<title>磁铁和间隙</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@700;900&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* 布局：与第 01 课相同；第 11 课：Z 轴传动链 v0.4 的真实 3D 模型 + 设计师式分步讲解 + 设计校核 */
+:root{
+  --bg:#f4f6f9; --surface:#ffffff; --fg:#151a23; --muted:#5d6676; --line:#d8dee7;
+  --beam:#e5383b; --beam-soft:#f6b3b4; --glass:#2b7bb9; --glass-fill:#dcecf8;
+  --ok:#17914f; --bad:#d23c3c; --proj2:#e0701c; --card:#2c5fd6; --card-fill:#e2eafc;
+  --metal:#7b8697; --work:#d7d3cf; --work-line:#8a817a; --band:#17914f22;
+  --knobA:#7c3aed; --knobB:#0e8a8a;
+  --f-body:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --f-display:"Noto Serif SC","Songti SC",serif;
+  --f-num:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1218; --surface:#171c25; --fg:#e7ebf1; --muted:#9aa4b4; --line:#2b3240;
+  --beam:#ff5c60; --beam-soft:#7a2a2d; --glass:#6db5ee; --glass-fill:#1c3448;
+  --ok:#3fd082; --bad:#ff6b6b; --proj2:#ff9a4a; --card:#82a6ff; --card-fill:#1d2a4a;
+  --metal:#8c97a8; --work:#3a3633; --work-line:#7d746c; --band:#3fd08226;
+  --knobA:#b08cff; --knobB:#4fd1c5; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1218; --surface:#171c25; --fg:#e7ebf1; --muted:#9aa4b4; --line:#2b3240;
+  --beam:#ff5c60; --beam-soft:#7a2a2d; --glass:#6db5ee; --glass-fill:#1c3448;
+  --ok:#3fd082; --bad:#ff6b6b; --proj2:#ff9a4a; --card:#82a6ff; --card-fill:#1d2a4a;
+  --metal:#8c97a8; --work:#3a3633; --work-line:#7d746c; --band:#3fd08226;
+  --knobA:#b08cff; --knobB:#4fd1c5; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:15px;line-height:1.65}
+.wrap{max-width:900px;margin:0 auto;padding-block:28px 56px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:flex;flex-direction:column;gap:28px}
+header{display:flex;flex-direction:column;gap:6px}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--muted)}
+h1{font-family:var(--f-display);font-weight:900;font-size:clamp(28px,5vw,40px);margin:0;line-height:1.2;text-wrap:balance}
+h1 .red{color:var(--beam)}
+.lede{color:var(--muted);margin:0;max-width:60ch}
+section{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:14px;min-width:0}
+h2{font-family:var(--f-display);font-size:21px;margin:0;display:flex;gap:10px;align-items:baseline;text-wrap:balance}
+h2 .n{font-family:var(--f-num);font-size:13px;color:var(--beam)}
+.try{font-size:13px;color:var(--muted);margin:0}
+.try b{color:var(--fg);font-weight:500}
+.stage{overflow-x:auto;border-radius:10px;background:var(--bg)}
+.stage svg{display:block;width:100%;height:auto}
+.controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px 20px}
+.ctl{display:flex;flex-direction:column;gap:4px;min-width:0}
+.ctl label{font-size:13px;display:flex;justify-content:space-between;gap:8px}
+.ctl label span{font-family:var(--f-num);color:var(--muted);font-size:12px}
+input[type=range]{width:100%;accent-color:var(--beam)}
+.ctl.a input{accent-color:var(--knobA)} .ctl.b input{accent-color:var(--knobB)}
+.ctl.a label{color:var(--knobA)} .ctl.b label{color:var(--knobB)}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+button{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--surface);color:var(--fg);
+  border-radius:999px;padding:6px 14px;cursor:pointer}
+button:hover{border-color:var(--muted)}
+button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--card);outline-offset:2px}
+button[aria-pressed=true]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.readout{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.cell{border-top:2px solid var(--line);padding-top:6px;min-width:0}
+.cell .k{font-size:12px;color:var(--muted)}
+.cell .v{font-family:var(--f-num);font-size:20px;font-variant-numeric:tabular-nums}
+.chip{display:inline-block;font-size:13px;font-weight:500;padding:2px 10px;border-radius:999px}
+.chip.ok{background:var(--band);color:var(--ok)}
+.chip.bad{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+.chip.a{background:color-mix(in srgb,var(--knobA) 15%,transparent);color:var(--knobA)}
+.chip.b{background:color-mix(in srgb,var(--knobB) 15%,transparent);color:var(--knobB)}
+.note{font-size:12px;color:var(--muted);margin:0}
+.facts{display:grid;grid-template-columns:7.5em 1fr;gap:4px 14px;font-size:14px;margin:0}
+.facts dt{color:var(--muted)} .facts dd{margin:0;min-width:0}
+.cap{font-size:15px;margin:0;font-weight:500}
+.verdicts{display:flex;flex-wrap:wrap;gap:8px}
+.verdicts .chip{font-weight:400}
+.quiz{display:flex;flex-direction:column;gap:16px}
+.q p{margin:0 0 6px;font-weight:500}
+.q .fb{font-size:14px;margin-top:6px;min-height:1.6em}
+.q button.right{border-color:var(--ok);color:var(--ok)}
+.q button.wrong{border-color:var(--bad);color:var(--bad)}
+footer{font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+footer b{color:var(--fg)}
+svg text{font-family:var(--f-body)}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+.lv{font-size:12px;font-weight:700;padding:1px 8px;border-radius:999px;margin-left:6px}
+.lv.e{background:var(--band);color:var(--ok)} .lv.m{background:color-mix(in srgb,var(--proj2) 18%,transparent);color:var(--proj2)} .lv.h{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+.info{border-left:3px solid var(--card);padding:8px 12px;background:var(--card-fill);border-radius:0 8px 8px 0;min-height:64px}
+.info b{display:inline} .info p{margin:4px 0 0;font-size:14px}
+.part{cursor:pointer;transition:transform .6s ease}
+.part:hover > :first-child,.part.sel > :first-child{filter:drop-shadow(0 0 4px var(--card))}
+@media (prefers-reduced-motion: reduce){.part{transition:none}}
+</style>
+<style>
+.q-big{font-family:var(--f-display);font-size:clamp(20px,3.6vw,26px);font-weight:900;margin:0;text-wrap:balance}
+.cap-box{display:flex;gap:12px;align-items:flex-start;background:var(--card-fill);border-radius:10px;padding:12px 14px;min-height:72px}
+.cap-box .no{font-family:var(--f-num);font-size:13px;color:var(--card);white-space:nowrap;padding-top:3px}
+.cap-box p{margin:0;font-size:16px;line-height:1.6}
+.cap-box b{color:var(--beam)}
+.stepbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.dots{display:flex;gap:6px;margin-left:4px}
+.dots i{width:9px;height:9px;border-radius:50%;background:var(--line);display:block}
+.dots i.on{background:var(--card)}
+.free{border-top:1px dashed var(--line);padding-top:12px;display:flex;flex-direction:column;gap:10px}
+.free .t{font-size:13px;color:var(--muted)}
+.big-next{background:var(--card);color:#fff;border-color:var(--card);font-weight:700}
+.concl{font-size:15px;font-weight:700;color:var(--ok);margin:0}
+</style>
+<style>
+.v3d{position:relative;height:clamp(380px,62vw,560px);border-radius:10px;background:radial-gradient(ellipse at 50% 35%,var(--surface),var(--bg) 75%);overflow:hidden;touch-action:none;cursor:grab}
+.v3d canvas{display:block;width:100%;height:100%}
+#load{position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);font-size:14px;text-align:center;padding:16px}
+.hud{position:absolute;left:10px;top:10px;font-size:12px;font-family:var(--f-num);background:color-mix(in srgb,var(--surface) 85%,transparent);border:1px solid var(--line);border-radius:8px;padding:4px 10px;pointer-events:none;max-width:calc(100% - 20px)}
+.hud b{color:var(--beam);font-weight:500}
+.lbl{position:absolute;left:0;top:0;pointer-events:none;font-size:12px;font-weight:700;padding:2px 9px;border-radius:999px;background:var(--fg);color:var(--bg);white-space:nowrap;transform:translate(-50%,calc(-100% - var(--h,16px)));transition:opacity .25s}
+.lbl::after{content:"";position:absolute;left:50%;top:100%;width:1.5px;height:var(--h,16px);background:var(--fg)}
+.lbl.r{background:var(--beam);color:#fff}.lbl.r::after{background:var(--beam)}
+.checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.ck{border:1px solid var(--line);border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;gap:3px;min-width:0}
+.ck .q{font-size:13px;font-weight:500}
+.ck .v{font-family:var(--f-num);font-size:18px;color:var(--fg);overflow-wrap:anywhere}
+.ck .c{font-size:12px;color:var(--muted)}
+.ck .s{font-size:11px;color:var(--muted)}
+.ck.ok{border-top:3px solid var(--ok)} .ck.no{border-top:3px solid var(--proj2)}
+code{font-family:var(--f-num);font-size:12px}
+</style>
+<div class="wrap">
+<header>
+  <div class="eyebrow">激光扫描系统入门 · 第 10 课补课（3D）</div>
+  <h1>磁铁干什么用？丝杆的<span class="red">缝</span>去哪了？</h1>
+  <p class="lede">上次文字答过的两个问题，这次用 3D 模型看。都切开了一半，能看到里面。点“下一步”往下走；也可以拖动旋转、缩放。</p>
+</header>
+<section aria-labelledby="s1">
+  <p class="q-big" id="s1">问题 1：电流加在线圈上，磁铁有什么用？</p>
+  <div class="v3d" id="va"><div class="hud" id="hudA"></div></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="nA"></span><p id="cA"></p></div>
+  <div class="stepbar"><button id="pA">← 上一步</button><button id="xA" class="big-next">下一步 →</button><span class="dots" id="dA"></span></div>
+  <div class="free"><span class="t">自己玩：</span>
+    <div class="ctl"><label for="fI">线圈电流（负的就是反向）<span id="fIV"></span></label><input id="fI" type="range" min="-100" max="100" step="1" value="60"></div>
+    <div class="row"><button id="bMag" aria-pressed="true">拿掉磁铁</button><button id="bMM" aria-pressed="false">换成动磁式</button><button id="bStep">看步进电机</button></div></div>
+  <p class="concl">记住一句：磁铁负责造出“磁场”，线圈里的电流负责“油门”和“方向”；没有磁场，电流再大也推不动。</p>
+</section>
+<section aria-labelledby="s2">
+  <p class="q-big" id="s2">问题 2：丝杆螺母也有缝，为什么还选丝杆、不选齿轮齿条？</p>
+  <div class="v3d" id="vb"><div class="hud" id="hudB"></div></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="nB"></span><p id="cB"></p></div>
+  <div class="stepbar"><button id="pB">← 上一步</button><button id="xB" class="big-next">下一步 →</button><span class="dots" id="dB"></span></div>
+  <div class="free"><span class="t">自己玩：</span>
+    <div class="ctl"><label for="fP">电机转角（来回拖，看镜片什么时候不动）<span id="fPV"></span></label><input id="fP" type="range" min="-2" max="2" step="0.01" value="0"></div>
+    <div class="row"><button id="bNut" aria-pressed="false">换成消隙螺母</button><button id="bPush">推一下（齿条 vs 螺母）</button><button id="bTurn">都转一圈</button></div></div>
+  <p class="concl">记住一句：丝杆和齿轮都有缝，也都能消；选丝杆是因为它推不回去（断电咬得住），而且转一圈只走 1 mm（细）。</p>
+</section>
+<section aria-labelledby="s3"><h2 id="s3"><span class="n">✓</span>小测</h2><div class="quiz" id="quiz"></div></section>
+<footer>
+  <div><b>本课对项目的推进：</b></div>
+  <div>· 确认 v0.4 的两个选择：Z 轴用<b>消隙螺母</b>（Z08）消缝；用<b>丝杆导程 1 mm</b> 而不是齿轮齿条（自锁、分辨率细）</div>
+  <div>· 给 Z 模块 v2（音圈）记一条：优先选<b>动磁式</b>，动的部分没有电线（和第 09 课“动的部分不拖线”一致）</div>
+</footer>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+const $=id=>document.getElementById(id);
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const V3=(x,y,z)=>new THREE.Vector3(x,y,z);
+const CUT=new THREE.Plane(V3(0,0,-1),0);                     // 切掉朝向观众的一半（z > 0）
+function std(color,o={}){return new THREE.MeshStandardMaterial(Object.assign({color,metalness:0.1,roughness:0.5,side:THREE.DoubleSide},o));}
+function ringGeo(ro,ri,len,seg=72){const s=new THREE.Shape();s.absarc(0,0,ro,0,Math.PI*2,false);const h=new THREE.Path();h.absarc(0,0,ri,0,Math.PI*2,true);s.holes.push(h);
+  const g=new THREE.ExtrudeGeometry(s,{depth:len,bevelEnabled:false,curveSegments:seg});g.translate(0,0,-len/2);g.rotateY(Math.PI/2);return g;}
+class HelixX extends THREE.Curve{constructor(r,p,x0,x1){super();this.r=r;this.p=p;this.x0=x0;this.x1=x1;}
+  getPoint(t,o=new THREE.Vector3()){const x=this.x0+(this.x1-this.x0)*t,a=2*Math.PI*(x-this.x0)/this.p;return o.set(x,this.r*Math.cos(a),this.r*Math.sin(a));}}
+const helix=(r,p,x0,x1,tr,mat)=>new THREE.Mesh(new THREE.TubeGeometry(new HelixX(r,p,x0,x1),Math.round((x1-x0)/p*28),tr,8,false),mat);
+function viewer(id){
+  const box=$(id),scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(30,box.clientWidth/box.clientHeight,1,4000);
+  const renderer=new THREE.WebGLRenderer({antialias:true,alpha:true,preserveDrawingBuffer:true});renderer.setPixelRatio(Math.min(2,devicePixelRatio));renderer.setSize(box.clientWidth,box.clientHeight);renderer.localClippingEnabled=true;box.appendChild(renderer.domElement);
+  scene.add(new THREE.HemisphereLight(0xffffff,0x5d6676,0.95));const d=new THREE.DirectionalLight(0xffffff,0.8);d.position.set(120,200,160);scene.add(d);const d2=new THREE.DirectionalLight(0xffffff,0.35);d2.position.set(-150,60,-120);scene.add(d2);
+  const controls=new THREE.OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.dampingFactor=0.12;
+  const V={box,scene,camera,renderer,controls,labels:[],tw:null,
+    fly(p,t,dur=900){V.tw={p0:camera.position.clone(),t0:controls.target.clone(),p1:V3(...p),t1:V3(...t),s:performance.now(),d:reduce?1:dur};},
+    frame(){if(V.tw){const k=Math.min(1,(performance.now()-V.tw.s)/V.tw.d),e=k<.5?2*k*k:1-(-2*k+2)**2/2;camera.position.lerpVectors(V.tw.p0,V.tw.p1,e);controls.target.lerpVectors(V.tw.t0,V.tw.t1,e);if(k>=1)V.tw=null;}
+      controls.update();renderer.render(scene,camera);
+      box.querySelectorAll('.lbl').forEach(e=>e.remove());const w=box.clientWidth,h=box.clientHeight;
+      V.labels.forEach(([pf,txt,cls,dy])=>{const c=(typeof pf==='function'?pf():pf).clone().project(camera);if(c.z>1)return;const el=document.createElement('div');el.className='lbl'+(cls?' '+cls:'');el.textContent=txt;el.style.setProperty('--h',(16+(dy||0))+'px');el.style.left=((c.x+1)/2*w)+'px';el.style.top=((1-c.y)/2*h)+'px';box.appendChild(el);});}};
+  new ResizeObserver(()=>{camera.aspect=box.clientWidth/box.clientHeight;camera.updateProjectionMatrix();renderer.setSize(box.clientWidth,box.clientHeight);}).observe(box);
+  return V;}
+function stepperUI(k,steps,go){let i=0;const set=n=>{i=Math.max(0,Math.min(steps.length-1,n));go(steps[i]);$('c'+k).innerHTML=steps[i].t;$('n'+k).textContent=`第 ${i+1} / ${steps.length} 步`;
+    $('d'+k).innerHTML=steps.map((_,j)=>`<i class="${j<=i?'on':''}"></i>`).join('');$('p'+k).disabled=i===0;$('x'+k).textContent=i===steps.length-1?'从头再看 ↺':'下一步 →';};
+  $('p'+k).onclick=()=>set(i-1);$('x'+k).onclick=()=>set(i===steps.length-1?0:i+1);return {set,get i(){return i;}};}
+if(!window.THREE||!THREE.OrbitControls){['va','vb'].forEach(id=>$(id).insertAdjacentHTML('beforeend','<div id="load" style="position:absolute;inset:0;display:grid;place-items:center;color:var(--muted)">3D 库没加载上（需要联网）</div>'));}
+else{
+/* ================= A 音圈：磁铁有什么用 ================= */
+const A=viewer('va');
+const cut=m=>{m.clippingPlanes=[CUT];return m;};
+const magG=new THREE.Group();A.scene.add(magG);                        // 磁路（磁铁 + 铁芯 + 外壳）
+const yoke=new THREE.Mesh(ringGeo(12,9,36),cut(std(0x8c96a6)));magG.add(yoke);
+const endP=new THREE.Mesh(ringGeo(25,9,2),cut(std(0x8c96a6)));endP.position.x=-19;magG.add(endP);
+const magN=new THREE.Mesh(ringGeo(19.5,16.5,30),cut(std(0xd23c3c)));magG.add(magN);
+const magS=new THREE.Mesh(ringGeo(22.5,19.5,30),cut(std(0x2b7bb9)));magG.add(magS);
+const shell=new THREE.Mesh(ringGeo(25,22.5,36),cut(std(0x6b7686)));magG.add(shell);
+const fieldG=new THREE.Group();magG.add(fieldG);const arrows=[];
+for(const x of [-11,-5.5,0,5.5,11])for(const a of [Math.PI/2,Math.PI,1.5*Math.PI]){const dir=V3(0,-Math.cos(a),-Math.sin(a)),org=V3(x,16.2*Math.cos(a),16.2*Math.sin(a));
+  const ar=new THREE.ArrowHelper(dir,org,3.6,0x0ec5e8,1.3,1.0);fieldG.add(ar);arrows.push(ar);}
+const coilG=new THREE.Group();A.scene.add(coilG);                      // 线圈 + 骨架
+const coil=new THREE.Mesh(ringGeo(15.5,13,12),cut(std(0xc87533)));coilG.add(coil);
+for(let k=-5;k<=5;k++){const t=new THREE.Mesh(new THREE.TorusGeometry(15.55,0.12,6,72),cut(std(0x8a4f1f)));t.rotation.y=Math.PI/2;t.position.x=k;coilG.add(t);}
+const bob=new THREE.Mesh(ringGeo(13,12.4,30),cut(std(0xe7d9b8)));bob.position.x=9;coilG.add(bob);
+const dots=[];const dotM=cut(std(0xfacc15,{emissive:0x8a6d00}));
+for(const x of [-4,0,4])for(let k=0;k<18;k++){const s=new THREE.Mesh(new THREE.SphereGeometry(0.55,10,8),dotM);s.userData={x,a0:k/18*Math.PI*2};coilG.add(s);dots.push(s);}
+function lensGroup(){const g=new THREE.Group();g.add(new THREE.Mesh(ringGeo(13,5.2,1.6),std(0xe7d9b8)));const L=new THREE.Mesh(new THREE.SphereGeometry(5.4,40,20),std(0x9fd2f5,{transparent:true,opacity:.75,roughness:.15}));L.scale.set(0.32,1,1);g.add(L);return g;}
+const lensC=lensGroup();lensC.position.x=24;coilG.add(lensC);
+const lensM=lensGroup();lensM.position.x=21;magG.add(lensM);
+const beamA=new THREE.Mesh(new THREE.CylinderGeometry(2.2,2.2,120,24,1,true),std(0xe5383b,{transparent:true,opacity:.22}));beamA.rotation.z=Math.PI/2;beamA.position.x=10;A.scene.add(beamA);
+const forceA=new THREE.ArrowHelper(V3(1,0,0),V3(),10,0xe5383b,4,3);A.scene.add(forceA);
+let wire=null;const wireM=std(0xd23c3c);
+function setWire(xc,moving){if(wire){A.scene.remove(wire);wire.geometry.dispose();}
+  const p=moving?[V3(xc+6,14.5,-3),V3(xc+12,19,-5),V3(23,27,-6),V3(23,36,-6)]:[V3(6,14.5,-3),V3(12,19,-5),V3(23,27,-6),V3(23,36,-6)];
+  wire=new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(p),40,0.55,8,false),wireM);A.scene.add(wire);}
+// 步进电机（同一场景里放在右边）
+const SX=120,stG=new THREE.Group();stG.position.x=SX;A.scene.add(stG);
+const rotor=new THREE.Group();stG.add(rotor);
+for(const [c,ts] of [[0xd23c3c,0],[0x2b7bb9,Math.PI]]){const g=new THREE.CylinderGeometry(7,7,14,40,1,false,ts,Math.PI);g.rotateZ(Math.PI/2);rotor.add(new THREE.Mesh(g,std(c)));}
+stG.add(new THREE.Mesh(ringGeo(19,16,14),std(0x8c96a6)));const poles=[];
+for(let k=0;k<4;k++){const a=k*Math.PI/2,pg=new THREE.Group();pg.rotation.x=a;stG.add(pg);
+  const core=new THREE.Mesh(new THREE.BoxGeometry(12,7,4),std(0x8c96a6));core.position.y=12.5;core.rotation.z=Math.PI/2;pg.add(core);
+  const cm=std(0xc87533,{emissive:0x000000});const cl=new THREE.Mesh(new THREE.BoxGeometry(10,4.5,8),cm);cl.position.y=12.8;pg.add(cl);poles.push(cm);}
+const SA={mag:1,I:0.6,mm:0,osc:0,cam:'main'};let xc=0,xm=0,Ishow=0,stepK=0,stepT=0,rotA=0;
+const CAMA={main:[[78,52,150],[8,-2,0]],step:[[SX+108,22,30],[SX,0,0]]};
+const LA={main:[[()=>V3(xc,16,0),'线圈（通电）',null,0],[()=>V3((SA.mm?xm+21:xc+24),6,0),'镜片',null,0]],
+  mag:[[V3(-16,23,0),'磁铁（红 = N 极面）',null,40],[V3(-18,-10.5,0),'铁芯',null,0],[V3(8,-13,0),'磁场（青色箭头）',null,0]],
+  stepper:[[V3(SX,19,0),'4 组线圈轮流通电'],[()=>V3(SX,0,7),'磁铁转子',null,30]]};
+function goA(s){Object.assign(SA,s.s);A.fly(...CAMA[SA.cam==='step'?'step':'main']);
+  A.labels=SA.cam==='step'?LA.stepper:(SA.mag?LA.main.concat(LA.mag):LA.main);syncA();}
+function syncA(){$('bMag').textContent=SA.mag?'拿掉磁铁':'装上磁铁';$('bMag').setAttribute('aria-pressed',!SA.mag);$('bMM').textContent=SA.mm?'换成动圈式':'换成动磁式';$('bStep').textContent=SA.cam==='step'?'回到音圈':'看步进电机';$('fIV').textContent=Math.round(SA.I*100)+'%';}
+const stA=stepperUI('A',[
+ {t:'先只看<b>线圈</b>（铜色，绕在镜片的骨架上）。线圈通了电，黄色小点就是在流动的电流，可是<b>没有磁铁</b>：一动不动，推力 0。',s:{mag:0,I:0.6,mm:0,osc:0,cam:'main'}},
+ {t:'装上<b>磁铁</b>（切开一半看里面）：红色是 N 极面。它在线圈待的那条缝里造出<b>磁场</b>（青色箭头，从磁铁穿过线圈，指向中间的铁芯）。现在没通电，还是不动。',s:{mag:1,I:0,mm:0,osc:0,cam:'main'}},
+ {t:'通电：泡在磁场里的导线<b>被推</b>（红色箭头），线圈带着镜片往前走。推力 = 磁场强弱 × 电流大小 × 线圈总长。<b>磁铁出“场”，电流当“油门”</b>。',s:{mag:1,I:0.7,mm:0,osc:0,cam:'main'}},
+ {t:'电流<b>反过来</b>（小点倒着流），推力也反过来，镜片往回走。永磁铁的强弱是固定的、改不了，所以能调的只有线圈里的电流。',s:{mag:1,I:-0.7,mm:0,osc:0,cam:'main'}},
+ {t:'也有<b>反过来</b>做的“<b>动磁式</b>”：线圈固定在外壳上，磁铁带着镜片走。好处是动的部分<b>没有电线</b>（看那根红线：动圈式里它要跟着来回弯）。',s:{mag:1,I:0.7,mm:1,osc:1,cam:'main'}},
+ {t:'<b>步进电机</b>里也是线圈 + 磁铁：四组线圈围成一圈轮流通电，中间的磁铁转子就一格一格地转过去。音圈相当于把它<b>摊平</b>了，所以是直着推。',s:{cam:'step',osc:0}}
+],goA);
+A.camera.position.set(...CAMA.main[0]);A.controls.target.set(...CAMA.main[1]);stA.set(0);
+const freeA=t=>{$('nA').textContent='自己玩';$('cA').innerHTML=t;};
+$('fI').addEventListener('input',()=>{SA.I=+$('fI').value/100;SA.osc=0;if(SA.cam==='step'){SA.cam='main';A.fly(...CAMA.main);A.labels=LA.main.concat(SA.mag?LA.mag:[]);}syncA();freeA(SA.mag?`电流 ${Math.round(SA.I*100)}%：电流越大推得越远，负的就往回拉。`:'没有磁铁：电流再大也推不动。');});
+$('bMag').onclick=()=>{SA.mag=SA.mag?0:1;A.labels=SA.cam==='step'?LA.stepper:LA.main.concat(SA.mag?LA.mag:[]);syncA();freeA(SA.mag?'装上磁铁：有了磁场，通电就有推力。':'拿掉磁铁：线圈照样有电流在流，但推力变成 0。');};
+$('bMM').onclick=()=>{SA.mm=SA.mm?0:1;syncA();freeA(SA.mm?'动磁式：线圈不动，磁铁带着镜片走，电线不用跟着弯。':'动圈式：线圈带着镜片走，电线要跟着弯。');};
+$('bStep').onclick=()=>{SA.cam=SA.cam==='step'?'main':'step';A.fly(...CAMA[SA.cam==='step'?'step':'main']);A.labels=SA.cam==='step'?LA.stepper:LA.main.concat(SA.mag?LA.mag:[]);syncA();if(SA.cam==='step')freeA(LA.stepper&&'步进电机：线圈一组一组轮流通电，转子跟着一格一格转。');};
+/* ================= B 丝杆的缝 vs 齿轮齿条 ================= */
+const B=viewer('vb');
+const PT=4,G=0.95;                                                     // 螺距（画成 4 = 1 mm）、单边缝
+const screw=new THREE.Group();B.scene.add(screw);
+const scm=std(0xb8bec8);screw.add(new THREE.Mesh(new THREE.CylinderGeometry(4.9,4.9,130,40).rotateZ(Math.PI/2),scm));
+screw.add(helix(4.9,PT,-65,65,1.3,std(0x9aa3ad)));
+const mark=new THREE.Mesh(new THREE.BoxGeometry(6,0.6,0.6),std(0xe5383b));mark.position.set(-62,5.2,0);screw.add(mark);   // 端头红线：看出丝杆在转
+const motor=new THREE.Mesh(new THREE.BoxGeometry(18,18,18),std(0x4a5262));motor.position.x=-75;B.scene.add(motor);
+const nutN=new THREE.Group();B.scene.add(nutN);                       // 普通螺母
+nutN.add(new THREE.Mesh(ringGeo(12,7.2,18),cut(std(0xc9a24a))));
+const nthr=helix(6.6,PT,-9,9,0.7,cut(std(0x8a6d1d)));nutN.add(nthr);
+const nutA=new THREE.Group(),nutB=new THREE.Group();B.scene.add(nutA);nutA.add(nutB);   // 消隙螺母：A 带着 B
+nutA.add(new THREE.Mesh(ringGeo(12,7.2,8),cut(std(0xf3ecd8))));nutA.add(helix(6.6,PT,-4,4,0.7,cut(std(0x8a6d1d))));
+nutB.add(new THREE.Mesh(ringGeo(12,7.2,8),cut(std(0xf3ecd8))));nutB.add(helix(6.6,PT,-4,4,0.7,cut(std(0x8a6d1d))));nutB.position.x=12+2*G;
+const spr=helix(9.5,1.0,4,12+2*G-4,0.35,cut(std(0x8c96a6)));nutA.add(spr);
+const sprArrows=[new THREE.ArrowHelper(V3(-1,0,0),V3(3,15,0),6,0xe5383b,2.4,1.8),new THREE.ArrowHelper(V3(1,0,0),V3(12+2*G-3,15,0),6,0xe5383b,2.4,1.8)];sprArrows.forEach(a=>nutA.add(a));
+function lensPost(){const g=new THREE.Group();const p=new THREE.Mesh(new THREE.BoxGeometry(2.4,16,2.4),std(0x6b7686));p.position.y=20;g.add(p);
+  const L=new THREE.Mesh(new THREE.SphereGeometry(6,40,20),std(0x9fd2f5,{transparent:true,opacity:.8,roughness:.15}));L.scale.set(0.3,1,1);L.position.y=33;g.add(L);return g;}
+nutN.add(lensPost());nutA.add(lensPost());
+// 齿轮齿条（放在下面）
+const RG=20,ZT=20,GY=-48,rackG=new THREE.Group(),gear=new THREE.Group();B.scene.add(rackG);B.scene.add(gear);gear.position.set(0,GY,0);
+{const s=new THREE.Shape();const n=ZT,ra=RG+2,rf=RG-2.5;for(let k=0;k<n;k++){const a0=k/n*Math.PI*2,da=Math.PI*2/n;
+   const pts=[[rf,a0],[rf,a0+da*0.18],[ra,a0+da*0.32],[ra,a0+da*0.58],[rf,a0+da*0.72],[rf,a0+da]];pts.forEach(([r,a],j)=>{const x=r*Math.cos(a),y=r*Math.sin(a);if(k===0&&j===0)s.moveTo(x,y);else s.lineTo(x,y);});}
+ const h=new THREE.Path();h.absarc(0,0,4,0,Math.PI*2,true);s.holes.push(h);const g=new THREE.ExtrudeGeometry(s,{depth:8,bevelEnabled:false});g.translate(0,0,-4);
+ gear.add(new THREE.Mesh(g,std(0xb8bec8)));const gm=new THREE.Mesh(new THREE.BoxGeometry(1,RG-6,8.4),std(0xe5383b));gm.position.y=(RG-6)/2+3;gear.add(gm);}
+const pc=2*Math.PI*RG/ZT;rackG.position.y=GY-RG;
+{const bar=new THREE.Mesh(new THREE.BoxGeometry(150,7,8),std(0x9aa3ad));bar.position.set(0,-6,0);rackG.add(bar);}
+for(let x=-74;x<=74;x+=pc){const t=new THREE.Mesh(new THREE.CylinderGeometry(0.9,2.6,4.5,4,1).rotateY(Math.PI/4),std(0x9aa3ad));t.scale.set(1,1,1.6);t.position.set(x+pc/2,-0.25,0);rackG.add(t);}
+const rackLens=lensPost();rackLens.position.set(68,0,0);rackG.add(rackLens);
+const pushR=new THREE.ArrowHelper(V3(-1,0,0),V3(110,GY-RG-6,0),22,0xe5383b,7,5),pushN=new THREE.ArrowHelper(V3(-1,0,0),V3(40,0,0),22,0xe5383b,7,5);B.scene.add(pushR);B.scene.add(pushN);
+const SB={mode:'still',anti:0,rack:0};let phi=0,xn=2,xa=1,tB=0,rackX=0,gearA=0,turnT=-1,pushT=-1,lastLens=0,idle=0,turnsAcc=0;
+const sOf=p=>2-PT*p/(2*Math.PI),sAof=p=>1-PT*p/(2*Math.PI);
+const CAMB={near:[[62,46,124],[2,12,0]],both:[[55,20,300],[0,-22,0]]};
+const LB={nut:[[()=>V3(xn,40,0),'镜片'],[()=>V3(xn-2,12,0),'螺母的牙（缝画大了）',null,40],[V3(-62,6,0),'丝杆',null,0]],
+  anti:[[()=>V3(xa,12,0),'半螺母 A',null,0],[()=>V3(xa+12+2*G,12,0),'半螺母 B',null,0],[()=>V3(xa+6+G,10,0),'弹簧往两边顶',null,44]],
+  both:[[()=>V3(xn,40,0),'丝杆 + 螺母',null,0],[()=>V3(rackX+68,GY-RG+39,0),'齿条上的镜片',null,0],[V3(0,GY+RG+2,0),'齿轮',null,0]]};
+function goB(s){Object.assign(SB,s.s);tB=0;turnT=-1;pushT=-1;
+  if(SB.mode==='turn')turnT=0;if(SB.mode==='push')pushT=0;
+  B.fly(...CAMB[SB.rack?'both':'near']);B.labels=SB.rack?LB.both:(SB.anti?LB.anti:LB.nut);syncB();}
+function syncB(){$('bNut').textContent=SB.anti?'换回普通螺母':'换成消隙螺母';$('bNut').setAttribute('aria-pressed',!!SB.anti);
+  nutN.visible=!SB.anti;nutA.visible=!!SB.anti;rackG.visible=gear.visible=!!SB.rack;}
+const stB=stepperUI('B',[
+ {t:'这是丝杆和螺母（螺母切开一半，<b>缝故意画大了</b>）。螺母的牙卡在丝杆的槽里，两边都还留着一点缝。镜片装在螺母上。',s:{mode:'still',anti:0,rack:0}},
+ {t:'电机一直往一个方向转（看丝杆端头的红线在转）：牙贴住槽的一边，螺母和镜片跟着走。',s:{mode:'one',anti:0,rack:0}},
+ {t:'来回换方向：每次换向，丝杆都要先<b>空转</b>一小段，让牙从槽的这一边走到那一边，这段时间镜片<b>一动不动</b>（左上角会提示）。这就是<b>回差</b>。',s:{mode:'osc',anti:0,rack:0}},
+ {t:'<b>消隙螺母</b>：螺母切成两半，中间一根<b>弹簧</b>把它们往两边顶，半螺母 A 贴住槽的左边、B 贴住右边。不管往哪转，总有一半马上推着走 → <b>不空转</b>。',s:{mode:'osc',anti:1,rack:0}},
+ {t:'齿轮齿条也一样有缝，也有带弹簧的消隙齿轮。所以“有缝”不是区别。真正的区别在下面两步。',s:{mode:'still',anti:1,rack:1}},
+ {t:'<b>区别 1：咬不咬得住。</b>同样推一下（红箭头）：推齿条，齿轮被推着转，镜片滑走了；推螺母，丝杆<b>纹丝不动</b>（螺纹太平，推不转它）。断电时就靠这个。',s:{mode:'push',anti:1,rack:1}},
+ {t:'<b>区别 2：粗还是细。</b>都转一圈：小齿轮（20 齿）让齿条走约 <b>31 mm</b>；丝杆只让螺母走 <b>1 mm</b>。同一个电机，丝杆细 30 倍，正适合我们“几微米级、只走 4 mm”。',s:{mode:'turn',anti:1,rack:1}}
+],goB);
+B.camera.position.set(...CAMB.near[0]);B.controls.target.set(...CAMB.near[1]);stB.set(0);
+const freeB=t=>{$('nB').textContent='自己玩';$('cB').innerHTML=t;};
+$('fP').addEventListener('input',()=>{SB.mode='user';phi=+$('fP').value*2*Math.PI;$('fPV').textContent=(+$('fP').value).toFixed(2)+' 圈';if(SB.rack){SB.rack=0;B.fly(...CAMB.near);B.labels=SB.anti?LB.anti:LB.nut;syncB();}freeB(SB.anti?'消隙螺母：拖到哪，镜片马上跟到哪。':'普通螺母：往回拖时，先要拖过一段“空转”，镜片才开始动。');});
+$('bNut').onclick=()=>{SB.anti=SB.anti?0:1;B.labels=SB.rack?LB.both:(SB.anti?LB.anti:LB.nut);syncB();freeB(SB.anti?'换成消隙螺母：两个半螺母被弹簧顶开，各贴一边。':'换回普通螺母：两边都有缝。');};
+$('bPush').onclick=()=>{SB.rack=1;SB.mode='push';pushT=0;B.fly(...CAMB.both);B.labels=LB.both;syncB();freeB('推一下：齿条被推着走、齿轮跟着转；螺母推不动丝杆。');};
+$('bTurn').onclick=()=>{SB.rack=1;SB.mode='turn';turnT=0;B.fly(...CAMB.both);B.labels=LB.both;syncB();freeB('都转一圈：齿条走约 31 mm，螺母只走 1 mm。');};
+/* —— 动画循环 —— */
+let last=performance.now();
+(function loop(now){const dt=Math.min(0.05,(now-last)/1000);last=now;const t=now/1000;
+  // A
+  const B_=SA.mag?1:0;let I=SA.osc&&!reduce?0.75*Math.sin(t*1.3):SA.I;Ishow=I;const F=I*B_;
+  const tgt=7*F;if(SA.mm){xm+=(-tgt-xm)*Math.min(1,dt*4);xc+=(0-xc)*Math.min(1,dt*4);}else{xc+=(tgt-xc)*Math.min(1,dt*4);xm+=(0-xm)*Math.min(1,dt*4);}
+  const sv=SA.cam==='step';magG.visible=coilG.visible=beamA.visible=!sv;if(wire)wire.visible=!sv;stG.visible=sv;
+  coilG.position.x=xc;magG.position.x=xm;lensC.visible=!SA.mm;lensM.visible=!!SA.mm;
+  [magN,magS,yoke,endP,shell].forEach(m=>m.visible=!!SA.mag);fieldG.visible=!!SA.mag;
+  arrows.forEach((a,i)=>{const o=0.55+0.45*Math.sin(t*4-i*0.5);a.line.material.transparent=a.cone.material.transparent=true;a.line.material.opacity=a.cone.material.opacity=o;});
+  dots.forEach(d=>{const a=d.userData.a0+t*3.5*I;d.position.set(d.userData.x,15.9*Math.cos(a),15.9*Math.sin(a));d.visible=Math.abs(I)>0.02;});
+  const lx=SA.mm?xm+21:xc+24;forceA.position.set(lx,0,0);forceA.visible=Math.abs(F)>0.03&&SA.cam!=='step';
+  if(forceA.visible){const dir=SA.mm?-Math.sign(F):Math.sign(F);forceA.setDirection(V3(dir,0,0));forceA.setLength(6+16*Math.abs(F),4,3);}
+  setWire(xc,!SA.mm);wire.visible=!sv;
+  if(t-stepT>0.8){stepT=t;stepK=(stepK+1)%4;}rotA+=(stepK*Math.PI/2-rotA+(stepK===0&&rotA>Math.PI?2*Math.PI:0))*Math.min(1,dt*8);if(rotA>=2*Math.PI-0.01&&stepK===0)rotA-=2*Math.PI;
+  rotor.rotation.x=rotA+Math.PI/2;poles.forEach((m,k)=>{m.emissive.setHex(k===stepK?0xff7a1a:0x000000);m.emissiveIntensity=k===stepK?0.9:0;});
+  $('hudA').innerHTML=SA.cam==='step'?`第 <b>${stepK+1}</b> 组线圈通电 → 转子转到它对面`:`电流 <b>${Math.round(I*100)}%</b> · 磁铁 ${SA.mag?'有':'<b>无</b>'} · 推力 <b>${(Math.abs(F)*100).toFixed(0)}</b>${SA.mm?' · 动磁式':' · 动圈式'}`;
+  A.frame();
+  // B
+  tB+=dt;let dphi=0;
+  if(SB.mode==='one'&&!reduce){dphi=dt*1.2;phi+=dphi;if(sOf(phi)<-30)phi=0,xn=2,xa=1;}
+  else if(SB.mode==='osc'&&!reduce){const np=2*Math.PI*0.95*Math.sin(tB*0.9);dphi=np-phi;phi=np;}
+  const s=sOf(phi),sa=sAof(phi);
+  const xn0=xn;xn=Math.max(s-G,Math.min(s+G,xn));xa=sa-G;
+  if(SB.mode==='turn'){turnT+=dt;const u=Math.min(1,turnT/3);phi=u*2*Math.PI;gearA=u*2*Math.PI;rackX=-RG*gearA;if(turnT>4.5){turnT=0;}}
+  else if(SB.mode==='push'){pushT+=dt;const u=pushT%3.2;rackX=u<1.6?-Math.min(1,u/1.2)*40:-40*(1-Math.min(1,(u-1.6)/1.2));gearA=-rackX/RG;}
+  else{rackX*=0.9;gearA*=0.9;}
+  screw.rotation.x=phi;nutN.position.x=xn;nutA.position.x=SB.mode==='turn'?sOf(phi)-1-G:xa;
+  if(SB.mode==='turn')xn=sOf(phi);
+  rackG.position.x=rackX;gear.rotation.z=gearA;
+  pushR.visible=pushN.visible=SB.mode==='push'&&(pushT%3.2)<1.6;pushR.position.set(rackX+68+26,GY-RG+24,0);pushN.position.set((SB.anti?xa:xn)+26,24,0);
+  sprArrows.forEach(a=>a.visible=!!SB.anti);
+  const lensNow=SB.anti?xa:xn,moved=Math.abs(lensNow-lastLens)>1e-4;lastLens=lensNow;
+  if(Math.abs(dphi)>1e-4&&!moved&&!SB.anti)idle=0.35;else idle=Math.max(0,idle-dt);
+  $('hudB').innerHTML=SB.rack?(SB.mode==='turn'?`都转了 <b>${(Math.min(1,turnT/3)).toFixed(2)}</b> 圈 · 齿条走 <b>${(Math.abs(rackX)/PT).toFixed(1)} mm</b> · 螺母走 <b>${(Math.min(1,turnT/3)).toFixed(2)} mm</b>`:(SB.mode==='push'?'同样推一下：齿条 <b>滑走</b> · 螺母 <b>不动</b>':'齿轮齿条 vs 丝杆螺母')):
+    (idle>0?'<b>⚠ 空转：电机在转，镜片没动</b>':`电机转了 ${(phi/(2*Math.PI)).toFixed(2)} 圈 · 镜片在 ${((2-lensNow)/PT).toFixed(2)} mm`);
+  B.frame();
+  requestAnimationFrame(loop);})(last);
+window.__ready=true;window.stA=stA;window.stB=stB;
+}
+const QS=[
+ {q:'把磁铁拿掉，线圈照样通电，会怎样？',o:['不动，推力是 0','照样被推，只是慢一点'],a:0,e:['对。没有磁场，电流再大也没有推力。','没有磁场就没有推力。']},
+ {q:'普通螺母换方向时，镜片为什么会停一下？',o:['螺母的牙要先走过槽里的缝','电机力气不够'],a:0,e:['对。这段空走就是回差；消隙螺母把它消掉。','和力气无关，是缝。']},
+ {q:'齿轮齿条不适合我们，最关键的原因是？',o:['齿轮有缝','推齿条齿轮会转（断电咬不住），而且一圈走 31 mm 太粗'],a:1,e:['丝杆也有缝，两者都能消，这不是区别。','对。']}
+];
+$('quiz').innerHTML=QS.map((q,i)=>`<div class="q" data-i="${i}"><p>Q${i+1}. ${q.q}</p><div class="row">${q.o.map((o,j)=>`<button data-j="${j}">${o}</button>`).join('')}</div><div class="fb" aria-live="polite"></div></div>`).join('');
+document.querySelectorAll('.q button').forEach(b=>b.onclick=()=>{const qd=b.closest('.q'),q=QS[+qd.dataset.i],j=+b.dataset.j;
+  qd.querySelectorAll('button').forEach(x=>x.classList.remove('right','wrong'));b.classList.add(j===q.a?'right':'wrong');
+  qd.querySelector('.fb').textContent=(j===q.a?'✓ ':'✗ ')+q.e[j];});
+</script>
