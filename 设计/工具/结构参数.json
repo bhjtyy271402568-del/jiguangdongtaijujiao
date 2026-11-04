@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-03",
- "version": "0.3",
+ "generated": "2026-11-04",
+ "version": "0.4",
  "P": {
-  "VERSION": "0.3",
+  "VERSION": "0.4",
   "RED_COMBINER": false,
   "HX": 370,
   "HW": 170,
@@ -32,8 +32,8 @@
   "ZB_W": 80,
   "ZB_T": 8,
   "RISER_H": 8,
-  "RAIL_X0": 78,
-  "RAIL_X1": 132,
+  "RAIL_X0": 70,
+  "RAIL_X1": 125,
   "RAIL_W": 7,
   "RAIL_H": 5,
   "CAR_L": 23,
@@ -41,20 +41,38 @@
   "CAR_H": 8,
   "X_L1_INF": 96,
   "X_OBJ": 216.0,
-  "STROKE": 10,
+  "STOP_REAR": 76.5,
+  "STOP_FRONT": 111.5,
   "L1_D": 12.7,
+  "LEAD": 1.0,
+  "STEPS": 200,
+  "MICRO": 16,
   "SCREW_Y": -20,
   "SCREW_Z": 30,
   "SCREW_D": 5,
-  "SCREW_X0": 66,
-  "SCREW_X1": 134,
+  "SCREW_J": 4,
+  "SCREW_X0": 60.5,
+  "SCREW_TH0": 77,
+  "SCREW_TH1": 126,
+  "SCREW_X1": 135,
+  "BRG_OD": 11,
+  "BRG_ID": 4,
+  "BRG_W": 4,
+  "FB_X0": 65,
+  "FB_L": 10,
+  "SB_X0": 126,
+  "SB_L": 8,
+  "CPL_D": 12,
+  "CPL_X0": 52.5,
+  "CPL_L": 12,
   "MOTOR": 28,
   "MOTOR_L": 32,
-  "MOTOR_X0": 18,
-  "HOME_X": 81,
-  "LIMIT_X": 107,
+  "MOTOR_X0": 16,
+  "MM_T": 4,
+  "HOME_X": 86.5,
+  "LIMIT_X": 100.5,
   "SHADE_D": 30,
-  "SHADE_X0": 116,
+  "SHADE_X0": 138,
   "SHADE_X1": 198,
   "OBJ_D": 40,
   "OBJ_TUBE_OD": 50,
@@ -74,7 +92,9 @@
   "WIN_T": 4,
   "WIN_FR_OD": 80,
   "WIN_TILT": 3,
-  "OUT_Z": 77
+  "OUT_Z": 77,
+  "XL_50M": 95.55,
+  "XL_5M": 91.5
  },
  "groups": {
   "H": "壳体",
@@ -208,7 +228,7 @@
    "g": "Z",
    "name": "Z 轴底座",
    "qty": 1,
-   "spec": "导轨、动镜、遮光筒、物镜都装在它上面 → 保证同轴",
+   "spec": "导轨、丝杠、动镜、遮光筒、物镜都装在它上面 → 保证同轴",
    "make": "做",
    "ref": "CN205899130U Z 轴底座"
   },
@@ -226,27 +246,54 @@
    "g": "Z",
    "name": "微型直线导轨",
    "qty": 1,
-   "spec": "7 mm 宽，长 54；关键：横向晃动 ≤ 3 μm",
+   "spec": "MGN7 型，长 55，孔距 15；关键：横向晃动 ≤ 3 μm（预压 Z0/ZF）",
    "make": "买",
    "ref": "S016/S017（导轨资料）"
   },
   {
+   "id": "Z02b_RailScrews",
+   "g": "Z",
+   "name": "导轨螺钉",
+   "qty": 4,
+   "spec": "M2×6 内六角",
+   "make": "买",
+   "ref": "—"
+  },
+  {
    "id": "Z03_Carriage",
    "g": "Z",
-   "name": "滑座",
+   "name": "滑块",
    "qty": 1,
-   "spec": "导轨配套滑块",
+   "spec": "MGN7C 型，导轨配套",
    "make": "买",
    "ref": "CN205899130U 滑座"
+  },
+  {
+   "id": "Z03b_EndSeals",
+   "g": "Z",
+   "name": "滑块端部密封",
+   "qty": 2,
+   "spec": "滑块两端，挡灰",
+   "make": "买",
+   "ref": "导轨配套"
   },
   {
    "id": "Z04_LensHolder",
    "g": "Z",
    "name": "动镜镜座",
    "qty": 1,
-   "spec": "装在滑座上，轻量化",
+   "spec": "6061 铝；底板 4 颗螺钉锁在滑块上，立板夹镜片",
    "make": "做",
    "ref": "CN120928524B 镜片安装结构"
+  },
+  {
+   "id": "Z04b_HolderScrews",
+   "g": "Z",
+   "name": "镜座螺钉",
+   "qty": 4,
+   "spec": "M2×5",
+   "make": "买",
+   "ref": "—"
   },
   {
    "id": "Z05_L1",
@@ -260,81 +307,162 @@
   {
    "id": "Z06_L1Ring",
    "g": "Z",
-   "name": "动镜压圈",
+   "name": "动镜螺纹压圈",
    "qty": 1,
-   "spec": "—",
+   "spec": "旋进镜座孔里压住镜片",
    "make": "做",
-   "ref": "—"
+   "ref": "常见镜座压圈"
   },
   {
-   "id": "Z07_NutArm",
+   "id": "Z07_CarriageTab",
    "g": "Z",
-   "name": "螺母连接臂",
+   "name": "滑块推板",
    "qty": 1,
-   "spec": "滑座 → 丝杠螺母",
+   "spec": "装在滑块侧面，接受球头的推力",
    "make": "做",
-   "ref": "—"
+   "ref": "v0.4（浮动接头）"
   },
   {
-   "id": "Z08_Nut",
+   "id": "Z07b_NutBracket",
    "g": "Z",
-   "name": "预紧丝杠螺母",
+   "name": "螺母支架",
    "qty": 1,
-   "spec": "消回差",
-   "make": "买",
-   "ref": "【推算】回差对策"
+   "spec": "用 2 颗螺钉锁在螺母法兰上，装钢球",
+   "make": "做",
+   "ref": "v0.4（浮动接头）"
   },
   {
-   "id": "Z21_FloatJoint",
+   "id": "Z07c_BracketScrews",
    "g": "Z",
-   "name": "浮动接头",
-   "qty": 1,
-   "spec": "螺母和滑座之间，隔离丝杠跳动，只传轴向力",
-   "make": "买",
-   "ref": "v0.3 优化"
-  },
-  {
-   "id": "Z23_HardStops",
-   "g": "Z",
-   "name": "机械硬限位块",
+   "name": "支架螺钉",
    "qty": 2,
-   "spec": "导轨两端，防失控撞击",
-   "make": "做",
-   "ref": "v0.3 优化"
+   "spec": "M2×6",
+   "make": "买",
+   "ref": "—"
+  },
+  {
+   "id": "Z21_FloatBall",
+   "g": "Z",
+   "name": "浮动接头钢球",
+   "qty": 1,
+   "spec": "Ø4 轴承钢球：点接触只传前后推力，丝杠的摆动不传给镜片",
+   "make": "买",
+   "ref": "v0.3 浮动接头 → v0.4 球头"
+  },
+  {
+   "id": "Z21b_PreloadSpring",
+   "g": "Z",
+   "name": "浮动接头拉簧",
+   "qty": 1,
+   "spec": "把推板拉向钢球，始终贴紧（零间隙）",
+   "make": "买",
+   "ref": "v0.4"
+  },
+  {
+   "id": "Z08_NutHousing",
+   "g": "Z",
+   "name": "消隙螺母外壳（带法兰）",
+   "qty": 1,
+   "spec": "黄铜；里面装两个半螺母 + 弹簧",
+   "make": "买",
+   "ref": "R054 预紧思路；常见消隙螺母"
+  },
+  {
+   "id": "Z08a_HalfNutA",
+   "g": "Z",
+   "name": "半螺母 A（固定）",
+   "qty": 1,
+   "spec": "POM，和外壳固定",
+   "make": "买",
+   "ref": "同上"
+  },
+  {
+   "id": "Z08b_HalfNutB",
+   "g": "Z",
+   "name": "半螺母 B（浮动）",
+   "qty": 1,
+   "spec": "POM，只能前后滑、不能转",
+   "make": "买",
+   "ref": "同上"
+  },
+  {
+   "id": "Z08c_NutSpring",
+   "g": "Z",
+   "name": "消隙弹簧",
+   "qty": 1,
+   "spec": "把两个半螺母往两边顶，贴住螺纹两侧 → 无回差",
+   "make": "买",
+   "ref": "同上"
   },
   {
    "id": "Z09_Screw",
    "g": "Z",
    "name": "丝杠",
    "qty": 1,
-   "spec": "Ø5，导程 1 mm",
+   "spec": "Ø5 精密导螺杆，导程 1 mm，不锈钢；两端轴颈 Ø4",
    "make": "买",
-   "ref": "【推算】"
+   "ref": "R010 丝杠传动链"
   },
   {
    "id": "Z10_BearingFix",
    "g": "Z",
    "name": "固定端轴承座",
    "qty": 1,
-   "spec": "成对角接触轴承",
+   "spec": "6061 铝；孔里装一对轴承",
    "make": "做",
-   "ref": "—"
+   "ref": "R010 轴承座；丝杠“固定—支撑”标准做法"
+  },
+  {
+   "id": "Z10b_LockNut",
+   "g": "Z",
+   "name": "锁紧螺母",
+   "qty": 1,
+   "spec": "M4 细牙，锁住轴承内圈",
+   "make": "买",
+   "ref": "同上"
+  },
+  {
+   "id": "Z10d_BearingPair",
+   "g": "Z",
+   "name": "固定端轴承（成对）",
+   "qty": 2,
+   "spec": "694 角接触，背靠背：前后推力都能扛",
+   "make": "买",
+   "ref": "同上"
   },
   {
    "id": "Z11_BearingSup",
    "g": "Z",
    "name": "支撑端轴承座",
    "qty": 1,
-   "spec": "—",
+   "spec": "6061 铝；只托住，不限轴向（让丝杠热胀）",
    "make": "做",
-   "ref": "—"
+   "ref": "同上"
+  },
+  {
+   "id": "Z11b_BearingSup",
+   "g": "Z",
+   "name": "支撑端轴承",
+   "qty": 1,
+   "spec": "694 深沟",
+   "make": "买",
+   "ref": "同上"
   },
   {
    "id": "Z12_Coupling",
    "g": "Z",
-   "name": "联轴器",
+   "name": "波纹管联轴器",
    "qty": 1,
-   "spec": "Ø14 膜片式",
+   "spec": "Ø12×12，两端夹紧；吸收电机轴和丝杠的歪斜，转起来没有间隙",
+   "make": "买",
+   "ref": "R010 联轴器"
+  },
+  {
+   "id": "Z12b_ClampScrews",
+   "g": "Z",
+   "name": "联轴器夹紧螺钉",
+   "qty": 2,
+   "spec": "M1.6",
    "make": "买",
    "ref": "—"
   },
@@ -343,17 +471,44 @@
    "g": "Z",
    "name": "步进电机",
    "qty": 1,
-   "spec": "NEMA 11（28 mm），16 细分约 0.31 μm/步",
+   "spec": "NEMA 11（28×28×32），16 细分约 0.31 μm/步",
    "make": "买",
    "ref": "【推算】"
   },
   {
+   "id": "Z13b_MotorShaft",
+   "g": "Z",
+   "name": "电机轴",
+   "qty": 1,
+   "spec": "Ø5（电机自带）",
+   "make": "买",
+   "ref": "—"
+  },
+  {
+   "id": "Z13c_MotorConn",
+   "g": "Z",
+   "name": "电机接线头",
+   "qty": 1,
+   "spec": "4 线",
+   "make": "买",
+   "ref": "—"
+  },
+  {
    "id": "Z14_MotorMount",
    "g": "Z",
-   "name": "电机座",
+   "name": "电机座板",
    "qty": 1,
-   "spec": "—",
+   "spec": "6061 铝，止口 Ø22 定心",
    "make": "做",
+   "ref": "—"
+  },
+  {
+   "id": "Z14b_MountScrews",
+   "g": "Z",
+   "name": "电机螺钉",
+   "qty": 4,
+   "spec": "M2.5×6，孔距 23",
+   "make": "买",
    "ref": "—"
   },
   {
@@ -361,7 +516,7 @@
    "g": "Z",
    "name": "原点光电开关",
    "qty": 1,
-   "spec": "槽型光耦",
+   "spec": "槽型光耦；在 5 m 端外 2 mm",
    "make": "买",
    "ref": "CN120928524B 探测器模块"
   },
@@ -370,7 +525,7 @@
    "g": "Z",
    "name": "限位光电开关",
    "qty": 1,
-   "spec": "槽型光耦",
+   "spec": "槽型光耦；在 50 m 端外 2 mm",
    "make": "买",
    "ref": "—"
   },
@@ -379,9 +534,36 @@
    "g": "Z",
    "name": "挡光片",
    "qty": 1,
-   "spec": "装在滑座上，伸进光电开关",
+   "spec": "装在滑块上，伸进光电开关",
    "make": "做",
    "ref": "CN120928524B 遮光片"
+  },
+  {
+   "id": "Z23_HardStops",
+   "g": "Z",
+   "name": "机械硬限位块",
+   "qty": 2,
+   "spec": "工作区两端外 3.5 / 4.5 mm，防失控撞击",
+   "make": "做",
+   "ref": "v0.3 优化"
+  },
+  {
+   "id": "Z23b_Bumpers",
+   "g": "Z",
+   "name": "限位缓冲垫",
+   "qty": 2,
+   "spec": "聚氨酯 1 mm",
+   "make": "买",
+   "ref": "—"
+  },
+  {
+   "id": "Z24_TransportLock",
+   "g": "Z",
+   "name": "运输锁（红色）",
+   "qty": 1,
+   "spec": "运输时把滑块锁在底座上；开机前必须拆",
+   "make": "做",
+   "ref": "R031 AGV3D Shipping Clamp"
   },
   {
    "id": "Z18_ShadeTube",
@@ -619,5 +801,7 @@
   }
  ],
  "travel": 4.05,
- "s0": 120.0
+ "s0": 120.0,
+ "f1": -30.0,
+ "f2": 150.0
 }

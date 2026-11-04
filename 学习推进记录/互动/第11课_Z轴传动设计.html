@@ -1,0 +1,344 @@
+<meta charset="utf-8">
+<title>Z 轴传动设计</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@700;900&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* 布局：与第 01 课相同；第 11 课：Z 轴传动链 v0.4 的真实 3D 模型 + 设计师式分步讲解 + 设计校核 */
+:root{
+  --bg:#f4f6f9; --surface:#ffffff; --fg:#151a23; --muted:#5d6676; --line:#d8dee7;
+  --beam:#e5383b; --beam-soft:#f6b3b4; --glass:#2b7bb9; --glass-fill:#dcecf8;
+  --ok:#17914f; --bad:#d23c3c; --proj2:#e0701c; --card:#2c5fd6; --card-fill:#e2eafc;
+  --metal:#7b8697; --work:#d7d3cf; --work-line:#8a817a; --band:#17914f22;
+  --knobA:#7c3aed; --knobB:#0e8a8a;
+  --f-body:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --f-display:"Noto Serif SC","Songti SC",serif;
+  --f-num:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1218; --surface:#171c25; --fg:#e7ebf1; --muted:#9aa4b4; --line:#2b3240;
+  --beam:#ff5c60; --beam-soft:#7a2a2d; --glass:#6db5ee; --glass-fill:#1c3448;
+  --ok:#3fd082; --bad:#ff6b6b; --proj2:#ff9a4a; --card:#82a6ff; --card-fill:#1d2a4a;
+  --metal:#8c97a8; --work:#3a3633; --work-line:#7d746c; --band:#3fd08226;
+  --knobA:#b08cff; --knobB:#4fd1c5; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1218; --surface:#171c25; --fg:#e7ebf1; --muted:#9aa4b4; --line:#2b3240;
+  --beam:#ff5c60; --beam-soft:#7a2a2d; --glass:#6db5ee; --glass-fill:#1c3448;
+  --ok:#3fd082; --bad:#ff6b6b; --proj2:#ff9a4a; --card:#82a6ff; --card-fill:#1d2a4a;
+  --metal:#8c97a8; --work:#3a3633; --work-line:#7d746c; --band:#3fd08226;
+  --knobA:#b08cff; --knobB:#4fd1c5; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:15px;line-height:1.65}
+.wrap{max-width:900px;margin:0 auto;padding-block:28px 56px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:flex;flex-direction:column;gap:28px}
+header{display:flex;flex-direction:column;gap:6px}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--muted)}
+h1{font-family:var(--f-display);font-weight:900;font-size:clamp(28px,5vw,40px);margin:0;line-height:1.2;text-wrap:balance}
+h1 .red{color:var(--beam)}
+.lede{color:var(--muted);margin:0;max-width:60ch}
+section{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:14px;min-width:0}
+h2{font-family:var(--f-display);font-size:21px;margin:0;display:flex;gap:10px;align-items:baseline;text-wrap:balance}
+h2 .n{font-family:var(--f-num);font-size:13px;color:var(--beam)}
+.try{font-size:13px;color:var(--muted);margin:0}
+.try b{color:var(--fg);font-weight:500}
+.stage{overflow-x:auto;border-radius:10px;background:var(--bg)}
+.stage svg{display:block;width:100%;height:auto}
+.controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px 20px}
+.ctl{display:flex;flex-direction:column;gap:4px;min-width:0}
+.ctl label{font-size:13px;display:flex;justify-content:space-between;gap:8px}
+.ctl label span{font-family:var(--f-num);color:var(--muted);font-size:12px}
+input[type=range]{width:100%;accent-color:var(--beam)}
+.ctl.a input{accent-color:var(--knobA)} .ctl.b input{accent-color:var(--knobB)}
+.ctl.a label{color:var(--knobA)} .ctl.b label{color:var(--knobB)}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+button{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--surface);color:var(--fg);
+  border-radius:999px;padding:6px 14px;cursor:pointer}
+button:hover{border-color:var(--muted)}
+button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--card);outline-offset:2px}
+button[aria-pressed=true]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.readout{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.cell{border-top:2px solid var(--line);padding-top:6px;min-width:0}
+.cell .k{font-size:12px;color:var(--muted)}
+.cell .v{font-family:var(--f-num);font-size:20px;font-variant-numeric:tabular-nums}
+.chip{display:inline-block;font-size:13px;font-weight:500;padding:2px 10px;border-radius:999px}
+.chip.ok{background:var(--band);color:var(--ok)}
+.chip.bad{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+.chip.a{background:color-mix(in srgb,var(--knobA) 15%,transparent);color:var(--knobA)}
+.chip.b{background:color-mix(in srgb,var(--knobB) 15%,transparent);color:var(--knobB)}
+.note{font-size:12px;color:var(--muted);margin:0}
+.facts{display:grid;grid-template-columns:7.5em 1fr;gap:4px 14px;font-size:14px;margin:0}
+.facts dt{color:var(--muted)} .facts dd{margin:0;min-width:0}
+.cap{font-size:15px;margin:0;font-weight:500}
+.verdicts{display:flex;flex-wrap:wrap;gap:8px}
+.verdicts .chip{font-weight:400}
+.quiz{display:flex;flex-direction:column;gap:16px}
+.q p{margin:0 0 6px;font-weight:500}
+.q .fb{font-size:14px;margin-top:6px;min-height:1.6em}
+.q button.right{border-color:var(--ok);color:var(--ok)}
+.q button.wrong{border-color:var(--bad);color:var(--bad)}
+footer{font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+footer b{color:var(--fg)}
+svg text{font-family:var(--f-body)}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+.lv{font-size:12px;font-weight:700;padding:1px 8px;border-radius:999px;margin-left:6px}
+.lv.e{background:var(--band);color:var(--ok)} .lv.m{background:color-mix(in srgb,var(--proj2) 18%,transparent);color:var(--proj2)} .lv.h{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+.info{border-left:3px solid var(--card);padding:8px 12px;background:var(--card-fill);border-radius:0 8px 8px 0;min-height:64px}
+.info b{display:inline} .info p{margin:4px 0 0;font-size:14px}
+.part{cursor:pointer;transition:transform .6s ease}
+.part:hover > :first-child,.part.sel > :first-child{filter:drop-shadow(0 0 4px var(--card))}
+@media (prefers-reduced-motion: reduce){.part{transition:none}}
+</style>
+<style>
+.q-big{font-family:var(--f-display);font-size:clamp(20px,3.6vw,26px);font-weight:900;margin:0;text-wrap:balance}
+.cap-box{display:flex;gap:12px;align-items:flex-start;background:var(--card-fill);border-radius:10px;padding:12px 14px;min-height:72px}
+.cap-box .no{font-family:var(--f-num);font-size:13px;color:var(--card);white-space:nowrap;padding-top:3px}
+.cap-box p{margin:0;font-size:16px;line-height:1.6}
+.cap-box b{color:var(--beam)}
+.stepbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.dots{display:flex;gap:6px;margin-left:4px}
+.dots i{width:9px;height:9px;border-radius:50%;background:var(--line);display:block}
+.dots i.on{background:var(--card)}
+.free{border-top:1px dashed var(--line);padding-top:12px;display:flex;flex-direction:column;gap:10px}
+.free .t{font-size:13px;color:var(--muted)}
+.big-next{background:var(--card);color:#fff;border-color:var(--card);font-weight:700}
+.concl{font-size:15px;font-weight:700;color:var(--ok);margin:0}
+</style>
+<style>
+.v3d{position:relative;height:clamp(380px,62vw,560px);border-radius:10px;background:radial-gradient(ellipse at 50% 35%,var(--surface),var(--bg) 75%);overflow:hidden;touch-action:none;cursor:grab}
+.v3d canvas{display:block;width:100%;height:100%}
+#load{position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);font-size:14px;text-align:center;padding:16px}
+.hud{position:absolute;left:10px;top:10px;font-size:12px;font-family:var(--f-num);background:color-mix(in srgb,var(--surface) 85%,transparent);border:1px solid var(--line);border-radius:8px;padding:4px 10px;pointer-events:none;max-width:calc(100% - 20px)}
+.hud b{color:var(--beam);font-weight:500}
+.lbl{position:absolute;left:0;top:0;pointer-events:none;font-size:12px;font-weight:700;padding:2px 9px;border-radius:999px;background:var(--fg);color:var(--bg);white-space:nowrap;transform:translate(-50%,calc(-100% - var(--h,16px)));transition:opacity .25s}
+.lbl::after{content:"";position:absolute;left:50%;top:100%;width:1.5px;height:var(--h,16px);background:var(--fg)}
+.lbl.r{background:var(--beam);color:#fff}.lbl.r::after{background:var(--beam)}
+.checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.ck{border:1px solid var(--line);border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;gap:3px;min-width:0}
+.ck .q{font-size:13px;font-weight:500}
+.ck .v{font-family:var(--f-num);font-size:18px;color:var(--fg);overflow-wrap:anywhere}
+.ck .c{font-size:12px;color:var(--muted)}
+.ck .s{font-size:11px;color:var(--muted)}
+.ck.ok{border-top:3px solid var(--ok)} .ck.no{border-top:3px solid var(--proj2)}
+code{font-family:var(--f-num);font-size:12px}
+</style>
+<div class="wrap">
+<header>
+  <div class="eyebrow">激光扫描系统入门 · 第 11 课</div>
+  <h1>像机械设计师一样，把 <span class="red">Z 轴</span>设计到位</h1>
+  <p class="lede">下面是 v0.4 的真实 3D 模型（CadQuery 生成，干涉 0 处）。点“下一步”，按设计师的顺序一个零件一个零件看：它为什么在那、算过没有。可以拖动旋转、滚轮或双指缩放、点任意零件看说明。</p>
+</header>
+<section aria-labelledby="s1">
+  <p class="q-big" id="s1">电机一转，镜片怎么准确地走到位？</p>
+  <div class="v3d" id="v3d"><div id="load">正在加载 3D 模型（约 3 MB）…</div><div class="hud" id="hud"></div></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n1"></span><p id="c1"></p></div>
+  <div class="stepbar"><button id="p1">← 上一步</button><button id="x1" class="big-next">下一步 →</button><span class="dots" id="d1"></span></div>
+  <div class="free"><span class="t">自己玩：</span>
+    <div class="ctl"><label for="fL">对焦距离（拖它，丝杠会转、镜片会走）<span id="fLV"></span></label><input id="fL" type="range" min="5" max="50" step="0.5" value="20"></div>
+    <div class="row"><button id="bEx" aria-pressed="false">爆炸图</button><button id="bSec" aria-pressed="false">剖开螺母</button><button id="bLock" aria-pressed="false">装上运输锁</button><button id="bHome">演示找原点</button><button id="bView">看全貌</button></div>
+    <div class="info" id="info"><b>点任意零件</b><p>会显示它叫什么、为什么这样设计、参考了哪份资料。</p></div>
+  </div>
+  <p class="concl">记住一句：机械设计 = 每个零件都回答一个“为什么”，再用数字证明它够用。</p>
+</section>
+<section aria-labelledby="s2">
+  <h2 id="s2"><span class="n">✓</span>设计校核：算过了才算设计完</h2>
+  <p class="try">数字由 <code>设计/工具/Z轴传动计算.py</code> 算出；运动部分质量从 3D 模型按“体积 × 密度”算。标【假设】的是典型值，选好具体型号后换成规格书数据再算一遍。</p>
+  <div class="checks" id="checks"></div>
+</section>
+<section aria-labelledby="s3"><h2 id="s3"><span class="n">✓</span>小测</h2><div class="quiz" id="quiz"></div></section>
+<footer>
+  <div><b>本课对项目的推进（结构 v0.4）：</b></div>
+  <div>· Z 轴传动链按机械设计重做：固定—支撑轴承、消隙螺母、球头浮动接头、波纹管联轴器、电机止口、硬限位 + 缓冲垫、运输锁；全机 77 种零件，<b>干涉 0、挡光 0</b></div>
+  <div>· 顺手修正了 v0.3 的两处错误：原点开关放在挡光片走不到的位置；导轨比滑块的行程短（滑块会探出导轨）</div>
+  <div>· 设计计算 16 项全过；电机力矩安全系数约 8 → 选型时可以考虑更短的电机</div>
+  <div>· 文件：<code>设计/CAD/调焦头_v0.4.step</code>、<code>设计/Z轴传动设计_v0.1.md</code>、<code>设计/工具/Z轴传动计算结果.md</code></div>
+</footer>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+<script>
+const SP=/*@SP*/{"P":{"VERSION":"0.4","RED_COMBINER":false,"HX":370,"HW":170,"HH":120,"WALL":6,"FLOOR":8,"LID":6,"PART_X":238,"AXIS_Z":45,"COLL_D":30,"COLL_L":80,"COLL_X0":-135,"FLANGE_OD":64,"FLANGE_T":12,"CLAMP_OD":44,"CLAMP_L":43,"APER_X":11,"APER_OD":40,"APER_ID":10,"COMB_X":34,"COMB_D":25.4,"RED_D":12,"RED_L":40,"RED_Y":-40,"ZB_X0":16,"ZB_X1":236,"ZB_W":80,"ZB_T":8,"RISER_H":8,"RAIL_X0":70,"RAIL_X1":125,"RAIL_W":7,"RAIL_H":5,"CAR_L":23,"CAR_W":17,"CAR_H":8,"X_L1_INF":96,"X_OBJ":216.0,"STOP_REAR":76.5,"STOP_FRONT":111.5,"L1_D":12.7,"LEAD":1.0,"STEPS":200,"MICRO":16,"SCREW_Y":-20,"SCREW_Z":30,"SCREW_D":5,"SCREW_J":4,"SCREW_X0":60.5,"SCREW_TH0":77,"SCREW_TH1":126,"SCREW_X1":135,"BRG_OD":11,"BRG_ID":4,"BRG_W":4,"FB_X0":65,"FB_L":10,"SB_X0":126,"SB_L":8,"CPL_D":12,"CPL_X0":52.5,"CPL_L":12,"MOTOR":28,"MOTOR_L":32,"MOTOR_X0":16,"MM_T":4,"HOME_X":86.5,"LIMIT_X":100.5,"SHADE_D":30,"SHADE_X0":138,"SHADE_X1":198,"OBJ_D":40,"OBJ_TUBE_OD":50,"XYM_X0":198,"XYM_T":12,"XYM_S":70,"GAL_X":282,"MIR_GAP":32,"GAL_D":30,"GAL_L":48,"BR_X0":252,"BR_X1":312,"BR_Y":26,"BR_Z0":20,"BR_Z1":100,"WIN_D":60,"WIN_T":4,"WIN_FR_OD":80,"WIN_TILT":3,"OUT_Z":77,"XL_50M":95.55,"XL_5M":91.5},"f2":150.0,"version":"0.4"}/*@end*/;
+const BOM=/*@BOM*/[{"id":"H01_Base","g":"H","name":"光路底座（含隔断）","qty":1,"spec":"6061 铝，整体铣削；隔断把腔体分为 Z 腔 / 振镜腔","make":"做","ref":"CN213163617U 光路底座 + 隔断"},{"id":"H02_Lid","g":"H","name":"光路上盖","qty":1,"spec":"6061 铝 6 mm，周边 M3 螺钉 + 密封条","make":"做","ref":"CN213163617U 光路上盖"},{"id":"H03_LidScrews","g":"H","name":"上盖螺钉","qty":12,"spec":"M3×8 内六角","make":"买","ref":"—"},{"id":"H04_MountPlate","g":"H","name":"安装接口板（在重心下）","qty":1,"spec":"4×M6 + 2 定位销，接云台 / 支架；位置按重心自动放","make":"做","ref":"v0.3 优化"},{"id":"H05_Breather","g":"H","name":"防水透气阀","qty":1,"spec":"M12，平衡内外气压、防水防尘","make":"买","ref":"v0.3 优化（户外）"},{"id":"H06_LidGasket","g":"H","name":"上盖密封条","qty":1,"spec":"装在底座顶面密封槽里","make":"买","ref":"v0.3 优化（户外）"},{"id":"H07_HeatSink","g":"H","name":"底部散热鳍片","qty":1,"spec":"振镜驱动板下方，外置","make":"做","ref":"v0.3 优化（散热）"},{"id":"I01_Collimator","g":"I","name":"激光准直输出头（QBH，占位）","qty":1,"spec":"Ø30×80；激光器配套或另配，决定出光直径（按 4 mm 设计）","make":"买","ref":"激光器附带"},{"id":"I02_FiberCable","g":"I","name":"光纤铠缆（示意）","qty":1,"spec":"—","make":"买","ref":"—"},{"id":"I03_TiltFlange","g":"I","name":"两轴俯仰法兰","qty":1,"spec":"3 颗推拉螺钉调俯仰，装在后壁","make":"做","ref":"参考常见准直器座"},{"id":"I04_Clamp","g":"I","name":"准直器夹紧套","qty":1,"spec":"开口夹紧，内径按准直器","make":"做","ref":"—"},{"id":"I05_TiltScrews","g":"I","name":"推拉调节螺钉","qty":3,"spec":"M4 细牙","make":"买","ref":"—"},{"id":"I06_Aperture","g":"I","name":"入口光阑（可选水冷）","qty":1,"spec":"铜，内孔 Ø10，挡杂散光","make":"做","ref":"SCANLAB varioSCAN 水冷入口光阑（R030）"},{"id":"Z01_ZBase","g":"Z","name":"Z 轴底座","qty":1,"spec":"导轨、丝杠、动镜、遮光筒、物镜都装在它上面 → 保证同轴","make":"做","ref":"CN205899130U Z 轴底座"},{"id":"Z22_Riser","g":"Z","name":"导轨垫高块","qty":1,"spec":"8 mm，降低镜心到导轨的力臂","make":"做","ref":"v0.3 优化（阿贝误差）"},{"id":"Z02_Rail","g":"Z","name":"微型直线导轨","qty":1,"spec":"MGN7 型，长 55，孔距 15；关键：横向晃动 ≤ 3 μm（预压 Z0/ZF）","make":"买","ref":"S016/S017（导轨资料）"},{"id":"Z02b_RailScrews","g":"Z","name":"导轨螺钉","qty":4,"spec":"M2×6 内六角","make":"买","ref":"—"},{"id":"Z03_Carriage","g":"Z","name":"滑块","qty":1,"spec":"MGN7C 型，导轨配套","make":"买","ref":"CN205899130U 滑座"},{"id":"Z03b_EndSeals","g":"Z","name":"滑块端部密封","qty":2,"spec":"滑块两端，挡灰","make":"买","ref":"导轨配套"},{"id":"Z04_LensHolder","g":"Z","name":"动镜镜座","qty":1,"spec":"6061 铝；底板 4 颗螺钉锁在滑块上，立板夹镜片","make":"做","ref":"CN120928524B 镜片安装结构"},{"id":"Z04b_HolderScrews","g":"Z","name":"镜座螺钉","qty":4,"spec":"M2×5","make":"买","ref":"—"},{"id":"Z05_L1","g":"Z","name":"动镜 f = −30 mm","qty":1,"spec":"Ø12.7 负透镜，1064 增透","make":"买","ref":"【推算】v0.5"},{"id":"Z06_L1Ring","g":"Z","name":"动镜螺纹压圈","qty":1,"spec":"旋进镜座孔里压住镜片","make":"做","ref":"常见镜座压圈"},{"id":"Z07_CarriageTab","g":"Z","name":"滑块推板","qty":1,"spec":"装在滑块侧面，接受球头的推力","make":"做","ref":"v0.4（浮动接头）"},{"id":"Z07b_NutBracket","g":"Z","name":"螺母支架","qty":1,"spec":"用 2 颗螺钉锁在螺母法兰上，装钢球","make":"做","ref":"v0.4（浮动接头）"},{"id":"Z07c_BracketScrews","g":"Z","name":"支架螺钉","qty":2,"spec":"M2×6","make":"买","ref":"—"},{"id":"Z21_FloatBall","g":"Z","name":"浮动接头钢球","qty":1,"spec":"Ø4 轴承钢球：点接触只传前后推力，丝杠的摆动不传给镜片","make":"买","ref":"v0.3 浮动接头 → v0.4 球头"},{"id":"Z21b_PreloadSpring","g":"Z","name":"浮动接头拉簧","qty":1,"spec":"把推板拉向钢球，始终贴紧（零间隙）","make":"买","ref":"v0.4"},{"id":"Z08_NutHousing","g":"Z","name":"消隙螺母外壳（带法兰）","qty":1,"spec":"黄铜；里面装两个半螺母 + 弹簧","make":"买","ref":"R054 预紧思路；常见消隙螺母"},{"id":"Z08a_HalfNutA","g":"Z","name":"半螺母 A（固定）","qty":1,"spec":"POM，和外壳固定","make":"买","ref":"同上"},{"id":"Z08b_HalfNutB","g":"Z","name":"半螺母 B（浮动）","qty":1,"spec":"POM，只能前后滑、不能转","make":"买","ref":"同上"},{"id":"Z08c_NutSpring","g":"Z","name":"消隙弹簧","qty":1,"spec":"把两个半螺母往两边顶，贴住螺纹两侧 → 无回差","make":"买","ref":"同上"},{"id":"Z09_Screw","g":"Z","name":"丝杠","qty":1,"spec":"Ø5 精密导螺杆，导程 1 mm，不锈钢；两端轴颈 Ø4","make":"买","ref":"R010 丝杠传动链"},{"id":"Z10_BearingFix","g":"Z","name":"固定端轴承座","qty":1,"spec":"6061 铝；孔里装一对轴承","make":"做","ref":"R010 轴承座；丝杠“固定—支撑”标准做法"},{"id":"Z10b_LockNut","g":"Z","name":"锁紧螺母","qty":1,"spec":"M4 细牙，锁住轴承内圈","make":"买","ref":"同上"},{"id":"Z10d_BearingPair","g":"Z","name":"固定端轴承（成对）","qty":2,"spec":"694 角接触，背靠背：前后推力都能扛","make":"买","ref":"同上"},{"id":"Z11_BearingSup","g":"Z","name":"支撑端轴承座","qty":1,"spec":"6061 铝；只托住，不限轴向（让丝杠热胀）","make":"做","ref":"同上"},{"id":"Z11b_BearingSup","g":"Z","name":"支撑端轴承","qty":1,"spec":"694 深沟","make":"买","ref":"同上"},{"id":"Z12_Coupling","g":"Z","name":"波纹管联轴器","qty":1,"spec":"Ø12×12，两端夹紧；吸收电机轴和丝杠的歪斜，转起来没有间隙","make":"买","ref":"R010 联轴器"},{"id":"Z12b_ClampScrews","g":"Z","name":"联轴器夹紧螺钉","qty":2,"spec":"M1.6","make":"买","ref":"—"},{"id":"Z13_Motor","g":"Z","name":"步进电机","qty":1,"spec":"NEMA 11（28×28×32），16 细分约 0.31 μm/步","make":"买","ref":"【推算】"},{"id":"Z13b_MotorShaft","g":"Z","name":"电机轴","qty":1,"spec":"Ø5（电机自带）","make":"买","ref":"—"},{"id":"Z13c_MotorConn","g":"Z","name":"电机接线头","qty":1,"spec":"4 线","make":"买","ref":"—"},{"id":"Z14_MotorMount","g":"Z","name":"电机座板","qty":1,"spec":"6061 铝，止口 Ø22 定心","make":"做","ref":"—"},{"id":"Z14b_MountScrews","g":"Z","name":"电机螺钉","qty":4,"spec":"M2.5×6，孔距 23","make":"买","ref":"—"},{"id":"Z15_HomeSensor","g":"Z","name":"原点光电开关","qty":1,"spec":"槽型光耦；在 5 m 端外 2 mm","make":"买","ref":"CN120928524B 探测器模块"},{"id":"Z16_LimitSensor","g":"Z","name":"限位光电开关","qty":1,"spec":"槽型光耦；在 50 m 端外 2 mm","make":"买","ref":"—"},{"id":"Z17_Flag","g":"Z","name":"挡光片","qty":1,"spec":"装在滑块上，伸进光电开关","make":"做","ref":"CN120928524B 遮光片"},{"id":"Z23_HardStops","g":"Z","name":"机械硬限位块","qty":2,"spec":"工作区两端外 3.5 / 4.5 mm，防失控撞击","make":"做","ref":"v0.3 优化"},{"id":"Z23b_Bumpers","g":"Z","name":"限位缓冲垫","qty":2,"spec":"聚氨酯 1 mm","make":"买","ref":"—"},{"id":"Z24_TransportLock","g":"Z","name":"运输锁（红色）","qty":1,"spec":"运输时把滑块锁在底座上；开机前必须拆","make":"做","ref":"R031 AGV3D Shipping Clamp"},{"id":"Z18_ShadeTube","g":"Z","name":"遮光筒","qty":1,"spec":"Ø30，挡杂散光、防尘，不受力","make":"做","ref":"CN205899130U 遮光座"},{"id":"Z19_ShadeSaddle","g":"Z","name":"遮光筒支座","qty":2,"spec":"—","make":"做","ref":"CN205899130U 遮光座"},{"id":"Z20_TempSensor","g":"Z","name":"温度传感器","qty":1,"spec":"用于热胀补偿（10 K → 28 μm）","make":"买","ref":"【推算】"},{"id":"O01_XYMount","g":"O","name":"物镜 XY 对中座","qty":1,"spec":"4 颗顶丝对中","make":"做","ref":"—"},{"id":"O02_ObjTube","g":"O","name":"物镜筒","qty":1,"spec":"—","make":"做","ref":"CN205899130U 聚焦透镜筒"},{"id":"O03_Objective","g":"O","name":"物镜 f = 150 mm","qty":1,"spec":"Ø40，熔石英分离式双片或非球面单片（大功率不用胶合），通光 ≥ 28 mm","make":"买","ref":"【推算】v0.5 / v0.3 优化"},{"id":"O04_ObjRing","g":"O","name":"物镜压圈","qty":1,"spec":"—","make":"做","ref":"—"},{"id":"O05_CenterScrews","g":"O","name":"对中顶丝 / 弹簧顶销","qty":3,"spec":"M4 顶丝 ×2 + 弹簧顶销 ×1，三点对中","make":"买","ref":"—"},{"id":"G01_Bracket","g":"G","name":"振镜内支架","qty":1,"spec":"铝块，内部通光腔；X/Y 电机从两面插入","make":"做","ref":"CN205899130U 内支架"},{"id":"G02_MotorX","g":"G","name":"X 振镜电机（占位）","qty":1,"spec":"30 mm 口径级，按型号替换","make":"买","ref":"—"},{"id":"G03_ClampX","g":"G","name":"X 电机夹","qty":1,"spec":"包裹式夹紧","make":"做","ref":"CN205899130U 电机夹"},{"id":"G04_MirrorX","g":"G","name":"X 镜片","qty":1,"spec":"1064 高反","make":"买","ref":"随振镜"},{"id":"G05_MotorY","g":"G","name":"Y 振镜电机（占位）","qty":1,"spec":"—","make":"买","ref":"—"},{"id":"G06_ClampY","g":"G","name":"Y 电机夹","qty":1,"spec":"—","make":"做","ref":"CN205899130U 电机夹"},{"id":"G07_MirrorY","g":"G","name":"Y 镜片","qty":1,"spec":"比 X 镜大","make":"买","ref":"随振镜"},{"id":"G08_DriverX","g":"G","name":"X 振镜驱动板","qty":1,"spec":"随振镜；带散热块","make":"买","ref":"CN205899130U 驱动板"},{"id":"G09_DriverY","g":"G","name":"Y 振镜驱动板","qty":1,"spec":"—","make":"买","ref":"CN205899130U 驱动板"},{"id":"G10_ThermalPads","g":"G","name":"导热垫","qty":2,"spec":"驱动板功率器件 → 底板 → 散热鳍片","make":"买","ref":"v0.3 优化（散热）"},{"id":"W01_WinFrame","g":"W","name":"保护窗框","qty":1,"spec":"快拆，4 颗螺钉","make":"做","ref":"CN205899130U 保护窗口"},{"id":"W02_Window","g":"W","name":"保护窗镜片","qty":1,"spec":"Ø60×4，1064 双面增透，倾斜 3° 安装（防反射回激光器）","make":"买","ref":"CN205899130U 保护窗镜片 / v0.3 优化"},{"id":"W03_ORing","g":"W","name":"O 型圈","qty":1,"spec":"密封防尘","make":"买","ref":"—"},{"id":"W04_AirKnife","g":"W","name":"窗口吹气嘴","qty":1,"spec":"接干燥压缩空气，吹走窗口灰尘","make":"买","ref":"v0.3 优化（户外）"},{"id":"E01_StepDriver","g":"E","name":"步进驱动板","qty":1,"spec":"STEP/DIR/EN 输入","make":"买","ref":"—"},{"id":"E02_DB25","g":"E","name":"DB25 接口","qty":1,"spec":"XY2-100（X/Y）+ 步进信号，接控制卡","make":"买","ref":"控制卡方案包 J2/J3"},{"id":"E03_PowerConn","g":"E","name":"电源航空插头","qty":1,"spec":"振镜 ±15 V / 步进 24 V","make":"买","ref":"—"},{"id":"E04_GroundStud","g":"E","name":"接地柱","qty":1,"spec":"M4","make":"买","ref":"—"}]/*@end*/;
+const CALC=/*@CALC*/{"rows":[{"grp":"精度","k":"一步走多少","v":"0.31 μm","crit":"≪ 50 m 处容差 ±50 μm","ok":"✓","src":"【推算】导程 / (200×16)"},{"grp":"速度","k":"5 m ↔ 50 m 全程","v":"0.45 s","crit":"设一次距离：< 1 s 即可","ok":"✓","src":"【推算】600 rpm + 50 ms 加速"},{"grp":"受力","k":"推动滑座要多大力","v":"0.31 N","crit":"—","ok":"✓","src":"【推算】运动质量 51 g【CAD】"},{"grp":"受力","k":"电机要出的力矩","v":"3.8 mN·m","crit":"可用约 30 mN·m，安全系数 ≥ 2","ok":"✓","src":"【推算】其中消隙预紧 2.3、加速 1.2、推力 0.12"},{"grp":"受力","k":"力矩安全系数","v":"8.0","crit":"≥ 2","ok":"✓","src":"【推算】"},{"grp":"断电","k":"导程 1 mm 会不会被推回去","v":"螺旋角 4.0° < 摩擦角 5.9°","crit":"螺旋角 < 摩擦角 → 自锁","ok":"✓","src":"【推算】μ = 0.10【假设】"},{"grp":"断电","k":"对比：导程 4 mm","v":"螺旋角 23.0° > 摩擦角 5.9°","crit":"不自锁 → 断电要靠电机保持","ok":"✗","src":"【推算】（说明为什么不选大导程）"},{"grp":"间隙","k":"螺母回差","v":"0（弹簧预紧）","crit":"预紧力 5 N > 最大推力 0.31 N","ok":"✓","src":"【假设】预紧力；消隙螺母"},{"grp":"间隙","k":"联轴器扭转变形 → 位置误差","v":"0.03 μm","crit":"≪ ±50 μm","ok":"✓","src":"【推算】k = 20 N·m/rad【假设】"},{"grp":"丝杠","k":"临界转速（固定—支撑）","v":"202,188 rpm","crit":"≫ 600 rpm","ok":"✓","src":"【推算】跨距 60 mm"},{"grp":"丝杠","k":"压杆失稳力","v":"13,570 N","crit":"≫ 5.3 N","ok":"✓","src":"【推算】"},{"grp":"温度","k":"丝杠和铝底座热胀差（10 K）","v":"1.6 μm","crit":"支撑端浮动吸收；≪ 容差","ok":"✓","src":"【推算】不锈钢 17.3 / 铝 23.6 ×10⁻⁶/K"},{"grp":"温度","k":"动镜—物镜距离热胀（10 K）","v":"28 μm","crit":"< ±50 μm；温度传感器可补偿","ok":"✓","src":"【推算】铝底座 120 mm"},{"grp":"行程","k":"工作行程（5–50 m）","v":"4.05 mm","crit":"滑座 X 91.5–95.6","ok":"✓","src":"【推算】f2² (1/5 m − 1/50 m)"},{"grp":"行程","k":"原点 / 限位到工作区","v":"2.0 / 2.0 mm","crit":"> 1 mm：开关不会在工作区内误触发","ok":"✓","src":"【CAD】HOME_X / LIMIT_X、挡光片宽 6"},{"grp":"行程","k":"硬限位到工作区","v":"3.5 / 4.5 mm","crit":"开关失效时最后一道保护","ok":"✓","src":"【CAD】"}],"mass_g":50.9,"step_um":0.3125,"t_full":0.45499999999999996,"T_need_mNm":3.764140210267042,"SF":7.9699475376002775,"lam":4.046108071701114,"phi":5.910638915404559,"lam4":22.997007671790534,"travel":4.05}/*@end*/;
+const $=id=>document.getElementById(id);
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const P=SP.P, F2=SP.f2, XINF=P.X_L1_INF, LEAD=P.LEAD;
+const xlOf=L=>XINF-F2*F2/(L*1000), LOf=xl=>F2*F2/((XINF-xl)*1000);
+/* —— 每个零件“为什么” —— */
+const WHY={
+ Z01:'所有东西的“地基”：导轨、丝杠、物镜都装在它上面，壳体变形也不会让它们错开（第 09 课）。',
+ Z22:'把导轨垫高 8 mm，离镜心近：滑块晃一点，镜片晃得更少。',
+ Z02:'扛住滑块、管住方向；丝杠只管推。关键指标：横向晃动 ≤ 3 μm（50 m 处 1 μm → 0.33 mm）。',
+ Z02b:'4 颗螺钉沉在导轨的沉头孔里，滑块从上面走过去不会碰。',
+ Z03:'骑在导轨上，里面有滚珠，走起来顺、不晃。',Z03b:'滑块两端的密封片，挡灰。',
+ Z04:'底板 4 颗螺钉锁在滑块上；立板上有台阶孔放镜片。',Z04b:'镜座螺钉。',
+ Z05:'被推来推去的就是它：负透镜 f −30。它离物镜越远，焦点越近。',
+ Z06:'旋进镜座孔里把镜片轻轻压住；压太紧镜片会变形。',
+ Z07:'滑块侧面的推板，钢球顶在这里。',Z07b:'锁在螺母法兰上，前面装一颗钢球。',Z07c:'支架螺钉。',
+ Z21:'点接触：只传前后推力；丝杠转动时的一点摆动、螺母的一点歪斜，都不会传给镜片。',
+ Z21b:'小拉簧把推板拉向钢球，两者永远贴紧 → 这里也没有缝。',
+ Z08:'消隙螺母的外壳（带法兰），里面是两个半螺母 + 一根弹簧。',
+ Z08a:'半螺母 A：和外壳固定，贴住螺纹的一侧。',
+ Z08b:'半螺母 B：只能前后滑、不能转，被弹簧推着贴住螺纹的另一侧。',
+ Z08c:'把两个半螺母往两边顶：一个贴左侧、一个贴右侧 → 回差 = 0。预紧 5 N，比推滑块要的 0.3 N 大得多。',
+ Z09:'Ø5、导程 1 mm：转一圈走 1 mm。螺纹很“平”（螺旋角 4°），推螺母推不动它 → 自锁。',
+ Z10:'固定端：一对轴承装在这里，丝杠前后都不能窜。',
+ Z10d:'两只轴承背靠背：一只扛往前的推力，一只扛往后的推力。（拆开能看到里面的钢珠）',
+ Z10b:'锁紧螺母：把轴承内圈锁死在丝杠上。',
+ Z11:'支撑端：只托住丝杠、不卡死前后 → 丝杠受热伸长时不会被顶弯。机床丝杠都是“一头固定、一头支撑”。',
+ Z11b:'支撑端轴承：外圈可以在孔里轻轻滑。',
+ Z12:'电机轴和丝杠不可能绝对同心；波纹管能弯（吸收歪斜）但扭不动（转起来没有间隙，算下来只差 0.03 μm）。',
+ Z12b:'两颗小螺钉把联轴器夹紧在两根轴上（转起来能看到它们在转）。',
+ Z13:'NEMA 11 步进电机：一圈 200 步 × 16 细分 = 3200 小步，一步镜片走 0.31 μm。',
+ Z13b:'电机轴，削了一个平面，联轴器夹得更牢。',Z13c:'4 根线接步进驱动器（STEP / DIR / EN）。',
+ Z14:'电机前面那圈凸台（止口）插进座板的孔里，自动对中，不用调。',Z14b:'4 颗螺钉把电机锁在座板上（孔距 23 mm）。',
+ Z15:'开机找零：往 5 m 方向慢慢走，挡光片一切进来就是原点（在工作区外 2 mm）。',
+ Z16:'另一头的电子限位（在 50 m 端外 2 mm）。',Z17:'挡光片：跟滑块一起走，切进光电开关。',
+ Z23:'最后一道保护：开关坏了，滑块撞到它也不会撞坏别的（离工作区 3.5 / 4.5 mm）。',Z23b:'聚氨酯缓冲垫，撞上时软一点。',
+ Z24:'运输时把滑块锁在底座上，防颠坏导轨和镜片；开机前必须拆（所以是红色）。',
+ Z18:'遮光筒：挡杂散光、防尘，不受力。',Z19:'遮光筒支座。',Z20:'测温度，用来补偿热胀（10 K → 28 μm）。',
+ O01:'物镜的调心座：三颗螺钉微调物镜和动镜同轴。',O02:'物镜镜筒。',O03:'物镜 f 150，不动。',O04:'物镜压圈。',O05:'调心螺钉。'
+};
+const keyOf=id=>id.split('_')[0];
+const MOV=['Z03_Carriage','Z03b_EndSeals','Z04_LensHolder','Z04b_HolderScrews','Z05_L1','Z06_L1Ring','Z07_CarriageTab','Z07b_NutBracket','Z07c_BracketScrews','Z21_FloatBall','Z21b_PreloadSpring','Z08_NutHousing','Z08a_HalfNutA','Z08b_HalfNutB','Z08c_NutSpring','Z17_Flag'];
+const ROT=['Z09_Screw','Z12_Coupling','Z12b_ClampScrews','Z13b_MotorShaft','Z10b_LockNut'];
+const EXP={Z13:[-30,0,0],Z13b:[-30,0,0],Z13c:[-30,0,0],Z14:[-15,0,0],Z14b:[-8,0,0],Z12:[0,0,24],Z12b:[0,0,24],
+ Z10:[0,-28,0],Z10d:[0,0,26],Z10b:[6,0,26],Z11:[0,-28,0],Z11b:[0,0,26],
+ Z08:[0,-40,0],Z08a:[-7,-20,0],Z08c:[0,-20,0],Z08b:[7,-20,0],Z07b:[-8,-12,12],Z07c:[-12,-12,12],Z21:[-8,-6,18],Z21b:[-8,-2,24],
+ Z07:[0,-4,20],Z03:[0,0,14],Z03b:[0,0,14],Z04:[0,0,32],Z04b:[0,0,40],Z05:[12,0,32],Z06:[20,0,32],Z17:[0,10,14],
+ Z15:[0,18,0],Z16:[0,18,0],Z23:[0,14,10],Z23b:[0,14,10],Z24:[0,-12,30],Z02:[0,0,6],Z02b:[0,0,11],
+ O01:[24,0,0],O02:[30,0,0],O03:[36,0,0],O04:[42,0,0],O05:[24,0,0],Z18:[0,0,0]};
+/* —— 分步：设计师的顺序 —— */
+const D0=[0.55,0.62,1], DB=[0.3,1.3,-0.8], RT=P.FLOOR+P.ZB_T+P.RISER_H+P.RAIL_H;
+const STEPS=[
+ {t:'这就是 Z 轴：<b>电机转 → 丝杠转 → 螺母带着滑块走 → 动镜前后移 4 mm</b>，焦点就在 5–50 m 之间变。下面按机械设计师的顺序，一个零件一个零件看它为什么在那。',hl:'all',dir:D0,lab:[['Z13_Motor','电机'],['Z09_Screw','丝杠'],['Z05_L1','动镜',null,34],['O03_Objective','物镜']],mode:'sweep'},
+ {t:'第一步先定<b>基准</b>：导轨、丝杠、物镜全装在<b>同一块 Z 底座</b>上（第 09 课）。导轨下面垫高 8 mm，离镜心更近：滑块晃一点，镜片晃得更少。',hl:['Z01','Z22','Z02','Z02b','O01','O02','O03','O04','O05'],dir:D0,lab:[['Z01_ZBase','Z 底座'],['Z22_Riser','垫高块'],['Z02_Rail','导轨']],mode:'hold'},
+ {t:'<b>滑块</b>骑在导轨上（两端有密封片挡灰）。<b>镜座</b>用 4 颗螺钉锁在滑块上，动镜放进台阶孔，用<b>螺纹压圈</b>压住。注意：滑块上<b>没有一根电线</b>。',hl:['Z02','Z03','Z03b','Z04','Z04b','Z05','Z06'],dir:D0,lab:[['Z03_Carriage','滑块'],['Z04_LensHolder','镜座',null,56],['Z05_L1','动镜']],mode:'hold'},
+ {t:'<b>电机</b>前面那圈凸台（<b>止口</b>）插进座板的孔里，自动对中。电机轴和丝杠不可能绝对同心，中间用<b>波纹管联轴器</b>：能弯（吸收歪斜），扭不动（没有间隙）。',hl:['Z13','Z13b','Z13c','Z14','Z14b','Z12','Z12b'],ex:0.45,dir:D0,lab:[['Z13_Motor','步进电机'],['Z14_MotorMount','电机座板'],['Z12_Coupling','波纹管联轴器']],mode:'sweep'},
+ {t:'丝杠两头装法不一样：电机这头是<b>固定端</b>，一对轴承背靠背，前推后拉都扛得住，再用锁紧螺母锁死；另一头是<b>支撑端</b>，只托着不卡死，丝杠受热能自由伸长。机床丝杠都这样装。',hl:['Z09','Z10','Z10d','Z10b','Z11','Z11b'],ex:1,dir:D0,lab:[['Z10d_BearingPair','一对轴承（固定端）'],['Z11b_BearingSup','一只轴承（支撑端）']],mode:'hold'},
+ {t:'你问的“丝杆也有缝”，答案在这里：螺母里是<b>两个半螺母</b>，中间一根<b>弹簧</b>把它们往两边顶，一个贴住螺纹左侧、一个贴住右侧 → <b>缝没了</b>。弹簧 5 N，比推滑块要的 0.3 N 大得多，换方向也不会松。',hl:['Z09','Z08','Z08a','Z08b','Z08c'],sec:1,dir:D0,lab:[['Z08a_HalfNutA','半螺母 A'],['Z08c_NutSpring','弹簧',null,50],['Z08b_HalfNutB','半螺母 B']],mode:'hold',arrows:1},
+ {t:'螺母不直接固定在滑块上：螺母支架上一颗<b>钢球</b>顶着滑块的推板，小<b>拉簧</b>让它们一直贴紧。钢球只传前后推力；丝杠转动时的一点摆动，不会把镜片带歪。',hl:['Z07','Z07b','Z07c','Z21','Z21b','Z08','Z03'],dir:[-0.75,1.0,0.9],lab:[['Z21_FloatBall','钢球',null,46],['Z07_CarriageTab','推板'],['Z07b_NutBracket','螺母支架',null,92]],mode:'hold'},
+ {t:'断电会不会被推回去？导程 1 mm 的螺纹很“平”：螺旋角 <b>4.0°</b>，比摩擦角 <b>5.9°</b> 小 → 推螺母推不动丝杠，<b>自己锁住</b>。（导程 4 mm 时螺旋角 23°，就锁不住了。）',hl:['Z09','Z08','Z08a','Z08b','Z08c','Z07b'],dir:D0,lab:[['Z09_Screw','螺旋角 4.0° < 5.9°：自锁']],mode:'hold'},
+ {t:'开机先往 5 m 方向慢慢走，<b>挡光片</b>切进<b>原点开关</b>那一刻就是零点（在工作区外 2 mm）。另一头有<b>限位开关</b>。万一开关坏了，红色<b>硬限位</b> + 缓冲垫挡住滑块。',hl:['Z15','Z16','Z17','Z23','Z23b','Z03','Z03b'],dir:DB,lab:[['Z15_HomeSensor','原点开关'],['Z16_LimitSensor','限位开关'],['Z17_Flag','挡光片',null,40],['Z23_HardStops','硬限位',null,0,[P.STOP_REAR-2,6,RT+4]],['Z23_HardStops','硬限位',null,0,[P.STOP_FRONT+2,6,RT+4]]],mode:'home'},
+ {t:'运输时装上红色<b>运输锁</b>，把滑块锁在底座上，防止颠坏导轨和镜片（参考 R031 AGV3D）；开机前必须拆。',hl:['Z24','Z03','Z03b','Z04'],lock:1,dir:D0,lab:[['Z24_TransportLock','运输锁（开机前拆）']],mode:'hold'},
+ {t:'全部装好。拖下面的“对焦距离”试试：50 m → 5 m，镜片只走 <b>4.05 mm</b>，电机转 4 圈多。这套 Z 轴的 16 项设计校核<b>全部通过</b>（往下看）。',hl:'all',dir:D0,lab:[['Z05_L1','动镜'],['Z08_NutHousing','消隙螺母'],['Z12_Coupling','联轴器']],mode:'sweep'}
+];
+/* —— 三维 —— */
+let scene,camera,renderer,controls,root,parts={},meshes=[],stripe,ready=false;
+const S={dx:xlOf(20)-XINF,ex:0,sec:0},T={dx:S.dx,ex:0,sec:0};
+let lock=0,mode='sweep',step=0,labels=[],arrowObjs=[],homeT=-1,camTw=null,userL=20,clickInfo=null;
+function init(){
+  const box=$('v3d');
+  if(!window.THREE||!THREE.GLTFLoader){$('load').textContent='3D 库没加载上（需要联网）。可以在仓库里下载 设计/CAD/调焦头_v0.4.step 查看。';return;}
+  scene=new THREE.Scene();
+  camera=new THREE.PerspectiveCamera(30,box.clientWidth/box.clientHeight,1,5000);
+  renderer=new THREE.WebGLRenderer({antialias:true,alpha:true,preserveDrawingBuffer:true});renderer.setPixelRatio(Math.min(2,devicePixelRatio));renderer.setSize(box.clientWidth,box.clientHeight);box.appendChild(renderer.domElement);
+  scene.add(new THREE.HemisphereLight(0xffffff,0x667080,0.95));const dl=new THREE.DirectionalLight(0xffffff,0.75);dl.position.set(200,400,300);scene.add(dl);const dl2=new THREE.DirectionalLight(0xffffff,0.3);dl2.position.set(-300,100,-200);scene.add(dl2);
+  controls=new THREE.OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.dampingFactor=0.12;
+  new THREE.GLTFLoader().load('z_axis_v0.4.json',g=>{root=g.scene;scene.add(root);
+    root.updateMatrixWorld(true);const RX=/^[A-Z]\d\d[a-z]?_/;
+    root.traverse(o=>{if(!o.isMesh)return;let p=o;while(p&&!RX.test(p.name))p=p.parent;if(!p)return;while(p.parent&&RX.test(p.parent.name))p=p.parent;const id=p.name.replace(/_\d+$/,'');
+      if(!parts[id])parts[id]={node:p,meshes:[],base:p.position.clone(),baseQ:p.quaternion.clone()};
+      const m=o.material.clone();m.metalness=0.05;m.roughness=0.55;m.userData={op:m.opacity,tr:m.transparent};o.material=m;o.userData.id=id;parts[id].meshes.push(o);meshes.push(o);
+      if(!/Z10d|Z11b|Z08c|Z21b|R0|Z09/.test(id)){const e=new THREE.LineSegments(new THREE.EdgesGeometry(o.geometry,35),new THREE.LineBasicMaterial({color:0x1b2230,transparent:true,opacity:0.35}));o.add(e);o.userData.edge=e;}});
+    root.updateMatrixWorld(true);for(const id in parts){const pt=parts[id];pt.box=new THREE.Box3().setFromObject(pt.node);}
+    // 丝杠螺纹示意线（从 结构参数.json 的导程、螺纹段生成），跟丝杠一起转
+    const par=parts['Z09_Screw'].node.parent;
+    class Helix extends THREE.Curve{getPoint(t,o=new THREE.Vector3()){const x=P.SCREW_TH0+(P.SCREW_TH1-P.SCREW_TH0)*t,a=2*Math.PI*(x-P.SCREW_TH0)/LEAD,r=P.SCREW_D/2;return o.set(x,r*Math.cos(a),r*Math.sin(a));}}
+    stripe=new THREE.Mesh(new THREE.TubeGeometry(new Helix(),Math.round((P.SCREW_TH1-P.SCREW_TH0)/LEAD*14),0.16,5,false),new THREE.MeshStandardMaterial({color:0x4a5160,roughness:.5,transparent:true}));
+    stripe.userData.id='Z09_Screw';
+    const ax=par.worldToLocal(new THREE.Vector3(0,P.SCREW_Z,-P.SCREW_Y));stripe.userData.ax=ax;stripe.position.set(0,ax.y,ax.z);
+    if(Math.abs(par.worldToLocal(new THREE.Vector3(0,1,0)).z-par.worldToLocal(new THREE.Vector3(0,0,0)).z)>0.5)stripe.userData.cadFrame=true;
+    par.add(stripe);parts['Z09_Screw'].meshes.push(stripe);meshes.push(stripe);
+    $('load').remove();ready=true;go(0,true);});
+  let down=null;const ray=new THREE.Raycaster(),mv=new THREE.Vector2();
+  renderer.domElement.addEventListener('pointerdown',e=>down=[e.clientX,e.clientY]);
+  renderer.domElement.addEventListener('pointerup',e=>{if(!down||Math.hypot(e.clientX-down[0],e.clientY-down[1])>5||!ready)return;const r=renderer.domElement.getBoundingClientRect();mv.x=(e.clientX-r.left)/r.width*2-1;mv.y=-(e.clientY-r.top)/r.height*2+1;
+    ray.setFromCamera(mv,camera);const hit=ray.intersectObjects(meshes.filter(m=>m.visible&&m.material.opacity>0.3&&!/^R0/.test(m.userData.id)),false)[0];if(hit)showInfo(hit.object.userData.id);});
+  new ResizeObserver(()=>{camera.aspect=box.clientWidth/box.clientHeight;camera.updateProjectionMatrix();renderer.setSize(box.clientWidth,box.clientHeight);}).observe(box);
+  let last=performance.now();(function loop(now){const dt=Math.min(0.05,(now-last)/1000);last=now;tick(dt,now/1000);controls.update();renderer.render(scene,camera);drawLabels();requestAnimationFrame(loop);})(last);
+}
+function cad2world(v){return new THREE.Vector3(v[0],v[2],-v[1]);}
+function dirLocal(par,w){const o=par.worldToLocal(new THREE.Vector3());return par.worldToLocal(w.clone()).sub(o);}
+function apply(){
+  const th=2*Math.PI*S.dx/LEAD;
+  for(const id in parts){const pt=parts[id],par=pt.node.parent,k=keyOf(id);
+    const off=new THREE.Vector3();
+    const e=EXP[k];if(e&&S.ex>0.001)off.add(dirLocal(par,cad2world(e).multiplyScalar(S.ex)));
+    if(MOV.includes(id))off.add(dirLocal(par,new THREE.Vector3(S.dx,0,0)));
+    if(ROT.includes(id)){const ax=par.worldToLocal(new THREE.Vector3(0,P.SCREW_Z,-P.SCREW_Y));const q=new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(1,0,0),th);
+      const c=new THREE.Vector3(0,ax.y,ax.z);const rc=c.clone().applyQuaternion(q);pt.node.quaternion.copy(pt.baseQ).premultiply(q);pt.node.position.copy(pt.base).applyQuaternion(q).add(c).sub(rc).add(off);}
+    else pt.node.position.copy(pt.base).add(off);
+    if(id==='Z24_TransportLock')pt.node.visible=lock>0;}
+  if(stripe){stripe.rotation.x=th;const e=EXP.Z09;stripe.position.x=0;}
+  const nh=parts['Z08_NutHousing'];if(nh)nh.meshes.forEach(m=>{const hl=isHl('Z08_NutHousing');const op=S.sec>0.5?0.13:(hl?1:0.1);m.material.opacity=op;m.material.transparent=op<1;m.material.depthWrite=op>=1;if(m.userData.edge)m.userData.edge.material.opacity=op<1?0.08:0.35;});
+}
+function isHl(id){const h=STEPS[step].hl;if(h==='all'||free)return true;return h.includes(keyOf(id));}
+let free=false;
+function setHl(){for(const id in parts){const on=isHl(id);parts[id].meshes.forEach(m=>{const u=m.material.userData,beam=/^R0/.test(id);
+  const op=on?(u.op??1):(beam?0.05:0.09);m.material.opacity=op;m.material.transparent=on?(u.tr||op<1):true;m.material.depthWrite=on&&!beam&&op>=1;if(m.userData.edge)m.userData.edge.material.opacity=on?0.35:0.04;});}}
+function fit(ids,dir,exT){const b=new THREE.Box3();
+  ids.forEach(id=>{const pt=parts[id];if(!pt)return;const bb=pt.box.clone();const e=EXP[keyOf(id)];if(e&&exT)bb.translate(cad2world(e).multiplyScalar(exT));b.union(bb);});
+  if(b.isEmpty())return;const c=b.getCenter(new THREE.Vector3()),s=b.getSize(new THREE.Vector3()).length();
+  const d=new THREE.Vector3(...dir).normalize(),dist=s/(2*Math.tan(camera.fov*Math.PI/360))*0.8+15;
+  camTw={p0:camera.position.clone(),t0:controls.target.clone(),p1:c.clone().add(d.multiplyScalar(dist)),t1:c,start:performance.now(),dur:reduce?1:900};}
+function idsOf(hl){return hl==='all'?Object.keys(parts):Object.keys(parts).filter(id=>hl.includes(keyOf(id)));}
+function go(n,instant){step=Math.max(0,Math.min(STEPS.length-1,n));free=false;const s=STEPS[step];
+  T.ex=s.ex||0;T.sec=s.sec||0;lock=s.lock||0;mode=s.mode;homeT=mode==='home'?performance.now()/1000:-1;
+  if(mode==='hold')T.dx=xlOf(20)-XINF;
+  setHl();fit(s.hl==='all'?Object.keys(parts).filter(i=>!/^R0/.test(i)):idsOf(s.hl),s.dir,T.ex);if(instant&&camTw){camTw.dur=1;}
+  labels=s.lab.slice();setArrows(!!s.arrows);
+  $('c1').innerHTML=s.t;$('n1').textContent=`第 ${step+1} / ${STEPS.length} 步`;
+  $('d1').innerHTML=STEPS.map((_,j)=>`<i class="${j<=step?'on':''}"></i>`).join('');
+  $('p1').disabled=step===0;$('x1').textContent=step===STEPS.length-1?'从头再看 ↺':'下一步 →';
+  syncBtns();}
+function syncBtns(){$('bEx').setAttribute('aria-pressed',T.ex>0.5);$('bSec').setAttribute('aria-pressed',T.sec>0.5);$('bLock').setAttribute('aria-pressed',lock>0);$('fL').disabled=lock>0;}
+function setArrows(on){arrowObjs.forEach(a=>scene.remove(a));arrowObjs=[];if(!on||!ready)return;
+  [['Z08a_HalfNutA',-1],['Z08b_HalfNutB',1]].forEach(([id,sg])=>{const pt=parts[id];if(!pt)return;const a=new THREE.ArrowHelper(new THREE.Vector3(sg,0,0),new THREE.Vector3(),9,0xe5383b,3.5,2.6);a.userData={id,sg};scene.add(a);arrowObjs.push(a);});}
+function tick(dt,t){
+  if(!ready)return;
+  if(mode==='sweep'&&!lock&&!reduce)T.dx=xlOf(12)-XINF+(xlOf(50)-xlOf(5))/2*Math.sin(t*0.7)+((xlOf(50)+xlOf(5))/2-xlOf(12));
+  if(mode==='home'&&homeT>0){const u=t-homeT,xh=P.HOME_X+3,x5=P.XL_5M;let xl;
+    if(u<2.2)xl=x5+(xh-x5)*Math.min(1,u/2.2);else if(u<3.4)xl=xh;else if(u<5.4)xl=xh+(x5-xh)*Math.min(1,(u-3.4)/2);else{xl=x5;if(u>7)homeT=t;}
+    T.dx=xl-XINF;labels=STEPS[step].lab.slice();if(u>=2.2&&u<3.4)labels.push(['Z15_HomeSensor','挡住了 → 这就是零点','r']);}
+  if(mode==='user')T.dx=xlOf(userL)-XINF;
+  const k=Math.min(1,dt*(mode==='home'||mode==='sweep'?20:6));S.dx+=(T.dx-S.dx)*k;S.ex+=(T.ex-S.ex)*Math.min(1,dt*5);S.sec+=(T.sec-S.sec)*Math.min(1,dt*6);
+  if(reduce){S.ex=T.ex;S.sec=T.sec;}
+  apply();
+  arrowObjs.forEach(a=>{const pt=parts[a.userData.id];const b=new THREE.Box3().setFromObject(pt.node);const c=b.getCenter(new THREE.Vector3());const sg=a.userData.sg;a.position.copy(c).add(new THREE.Vector3(sg*(b.getSize(new THREE.Vector3()).x/2+0.5),9,0));a.setDirection(new THREE.Vector3(sg,0,0));});
+  if(camTw){const p=Math.min(1,(performance.now()-camTw.start)/camTw.dur),e=p<.5?2*p*p:1-(-2*p+2)**2/2;camera.position.lerpVectors(camTw.p0,camTw.p1,e);controls.target.lerpVectors(camTw.t0,camTw.t1,e);if(p>=1)camTw=null;}
+  const xl=XINF+S.dx,L=LOf(xl),back=P.XL_50M-xl;
+  $('hud').innerHTML=lock?'<b>运输锁装着</b>：滑块动不了':`对焦 <b>${L>99?'99+':L.toFixed(1)} m</b> · 镜片后退 ${back.toFixed(2)} mm · 电机 ${(back/LEAD).toFixed(2)} 圈`;
+}
+function drawLabels(){const box=$('v3d');box.querySelectorAll('.lbl').forEach(e=>e.remove());if(!ready)return;
+  const w=box.clientWidth,h=box.clientHeight;
+  labels.forEach(([id,txt,cls,dy,pt3])=>{const pt=parts[id];if(!pt||!pt.node.visible)return;let c;if(pt3)c=cad2world(pt3);else{const b=new THREE.Box3().setFromObject(pt.node);c=b.getCenter(new THREE.Vector3());c.y=b.max.y;}c.project(camera);
+    if(c.z>1)return;const d=document.createElement('div');d.className='lbl'+(cls?' '+cls:'');d.textContent=txt;d.style.setProperty('--h',(16+(dy||0))+'px');d.style.left=((c.x+1)/2*w)+'px';d.style.top=((1-c.y)/2*h)+'px';box.appendChild(d);});}
+function showInfo(id){const b=BOM.find(x=>x.id===id),k=keyOf(id);if(!b){return;}
+  $('info').innerHTML=`<b>${b.name}</b>　<span class="chip ${b.make==='做'?'a':'b'}">${b.make==='做'?'自己做':'外购'}</span><p>${WHY[k]||b.spec}</p><p class="note">规格：${b.spec}　·　参考：${b.ref}</p>`;
+  labels=[[id,b.name]];}
+$('p1').onclick=()=>go(step-1);$('x1').onclick=()=>go(step===STEPS.length-1?0:step+1);
+const toFree=()=>{if(!free){free=true;setHl();labels=[];$('n1').textContent='自己玩';}};
+$('fL').addEventListener('input',()=>{userL=+$('fL').value;$('fLV').textContent=userL+' m';toFree();mode='user';$('c1').innerHTML=`对焦 ${userL} m：镜片停在离 50 m 位置 ${(P.XL_50M-xlOf(userL)).toFixed(2)} mm 的地方。离得越近，镜片越往后（离物镜越远）。`;});
+$('bEx').onclick=()=>{toFree();T.ex=T.ex>0.5?0:1;syncBtns();fit(Object.keys(parts).filter(i=>!/^R0/.test(i)),D0,T.ex);};
+$('bSec').onclick=()=>{toFree();T.sec=T.sec>0.5?0:1;setArrows(T.sec>0.5);syncBtns();if(T.sec>0.5)fit(['Z08_NutHousing','Z07b_NutBracket'],D0,T.ex);};
+$('bLock').onclick=()=>{toFree();lock=lock?0:1;if(lock){mode='lockd';}syncBtns();};
+$('bHome').onclick=()=>{toFree();lock=0;mode='home';homeT=performance.now()/1000;syncBtns();fit(['Z15_HomeSensor','Z16_LimitSensor','Z17_Flag','Z03_Carriage'],DB,T.ex);$('c1').innerHTML='找原点：往 5 m 方向慢慢走，挡光片切进原点开关的那一刻记为零点，再走回工作位置。';};
+$('bView').onclick=()=>{fit(Object.keys(parts).filter(i=>!/^R0/.test(i)),D0,T.ex);};
+$('fLV').textContent=userL+' m';
+/* —— 校核卡片 —— */
+const QQ={'一步走多少':'电机走一步，镜片动多少？','5 m ↔ 50 m 全程':'从 5 m 调到 50 m 要多久？','推动滑座要多大力':'推滑块要多大力？','电机要出的力矩':'电机力气够吗？','力矩安全系数':'力气富余几倍？','导程 1 mm 会不会被推回去':'断电会被推回去吗？','对比：导程 4 mm':'换成导程 4 mm 呢？','螺母回差':'丝杠和螺母的缝呢？','联轴器扭转变形 → 位置误差':'联轴器会扭吗？','临界转速（固定—支撑）':'丝杠转快了会甩吗？','压杆失稳力':'丝杠会被压弯吗？','丝杠和铝底座热胀差（10 K）':'热了丝杠会被顶住吗？','动镜—物镜距离热胀（10 K）':'热了焦点会跑吗？','工作行程（5–50 m）':'镜片要走多远？','原点 / 限位到工作区':'开关会在工作区误触发吗？','硬限位到工作区':'开关坏了怎么办？'};
+$('checks').innerHTML=CALC.rows.map(r=>{const cmp=r.k.startsWith('对比');return `<div class="ck ${r.ok==='✓'?'ok':'no'}"><span class="q">${QQ[r.k]||r.k}</span><span class="v">${r.v}</span><span class="c">${cmp?'✗ 不自锁 → 所以不选它':(r.ok+' '+r.crit)}</span><span class="s">${r.src}</span></div>`;}).join('');
+/* —— 小测 —— */
+const QS=[
+ {q:'丝杠两头的轴承为什么装法不一样？',o:['一头固定、一头只托住：让丝杠受热能伸长','随便装的，哪样都行'],a:0,e:['对。两头都卡死，丝杠一热就会被顶弯。','两头都卡死的话，丝杠受热伸长会被顶弯。']},
+ {q:'消隙螺母靠什么把缝消掉？',o:['两个半螺母被弹簧顶开，分别贴住螺纹两侧','把螺母拧得特别紧'],a:0,e:['对。所以换方向时不会先空走一段。','拧紧不能消缝，还会卡死。']},
+ {q:'为什么选导程 1 mm，不选 4 mm？',o:['1 mm 能自锁、一步更细；4 mm 断电会被推回去','4 mm 太贵了'],a:0,e:['对。螺旋角 4° < 摩擦角 5.9°；4 mm 时是 23°。','不是价格问题，是自锁和分辨率。']}
+];
+$('quiz').innerHTML=QS.map((q,i)=>`<div class="q" data-i="${i}"><p>Q${i+1}. ${q.q}</p><div class="row">${q.o.map((o,j)=>`<button data-j="${j}">${o}</button>`).join('')}</div><div class="fb" aria-live="polite"></div></div>`).join('');
+document.querySelectorAll('.q button').forEach(b=>b.onclick=()=>{const qd=b.closest('.q'),q=QS[+qd.dataset.i],j=+b.dataset.j;
+  qd.querySelectorAll('button').forEach(x=>x.classList.remove('right','wrong'));b.classList.add(j===q.a?'right':'wrong');
+  qd.querySelector('.fb').textContent=(j===q.a?'✓ ':'✗ ')+q.e[j];});
+window.go=go;window.__ready=()=>ready;
+init();
+</script>

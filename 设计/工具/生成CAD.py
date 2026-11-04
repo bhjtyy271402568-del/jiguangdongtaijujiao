@@ -29,8 +29,17 @@ GC = {"H": (.70, .74, .78, 1), "I": (.86, .30, .30, 1), "Z": (.95, .60, .20, 1),
 GLASS = (.55, .80, .98, .55)
 V = P["VERSION"]
 assy = cq.Assembly(name="FocusHead_v" + V.replace(".", "_"))
+SHP = {}                                                                       # 零件形状登记（导出 Z 轴子装配、算质量用）
 def add(pid, shape, color=None):
-    g = pid[0]; assy.add(shape, name=pid, color=cq.Color(*(color or GC.get(g, (.6, .6, .6, 1)))))
+    g = pid[0]; col = color or GC.get(g, (.6, .6, .6, 1)); SHP[pid] = (shape, col)
+    assy.add(shape, name=pid, color=cq.Color(*col))
+def sphere(r, c): return cq.Workplane().sphere(r).translate(c)
+def coil(x0, x1, y, z, R, wr, pitch):
+    """沿 X 的弹簧，用一叠细圆环示意（真螺旋扫掠的网格太大，网页 3D 加载慢）"""
+    s = None; n = max(2, int((x1 - x0 - 2 * wr) / pitch) + 1); p = (x1 - x0 - 2 * wr) / (n - 1)
+    for k in range(n):
+        r = ring(2 * (R + wr), 2 * (R - wr), wr * 2, (x0 + wr + k * p, y, z)); s = r if s is None else s.union(r)
+    return s
 
 # ================= H 壳体 =================
 fl = P["FLOOR"]; lid = P["LID"]; px = P["PART_X"]; iy = HW / 2 - WA; ix0, ix1 = WA, HX - WA
@@ -83,7 +92,9 @@ if P["RED_COMBINER"]:
     add("I09_RedModule", cyl(P["RED_D"], P["RED_L"], (cbx, P["RED_Y"], A), "Y"), (.95, .40, .40, 1))
     add("I10_RedHolder", box(cbx - 9, cbx + 9, P["RED_Y"] - 7, P["RED_Y"] + 7, fl, A - P["RED_D"] / 2).union(ring(18, P["RED_D"], 10, (cbx, P["RED_Y"], A), "Y")))
 
-# ================= Z 调焦机构 =================
+# ================= Z 调焦机构（v0.4：传动链按机械设计重做）=================
+# 电机 → 波纹管联轴器 → 丝杠（固定端一对轴承背靠背 / 支撑端一只轴承可轴向滑）→ 消隙螺母（两个半螺母 + 弹簧）
+# → 螺母支架上的钢球 → 滑块推板（拉簧保持贴紧）→ 滑块（MGN7C）→ 镜座 → 动镜
 zt = fl + P["ZB_T"]; zb = box(P["ZB_X0"], P["ZB_X1"], -P["ZB_W"] / 2, P["ZB_W"] / 2, fl, zt)
 for x in (P["ZB_X0"] + 8, P["ZB_X1"] - 8):
     for y in (-P["ZB_W"] / 2 + 8, P["ZB_W"] / 2 - 8): zb = zb.cut(cyl(3.4, 20, (x, y, zt), "Z"))
@@ -91,34 +102,110 @@ add("Z01_ZBase", zb)
 r0 = zt + P["RISER_H"]                                                        # 垫高块顶面
 add("Z22_Riser", box(P["RAIL_X0"] - 4, P["RAIL_X1"] + 4, -8, 8, zt, r0))
 rt = r0 + P["RAIL_H"]
-add("Z02_Rail", box(P["RAIL_X0"], P["RAIL_X1"], -P["RAIL_W"] / 2, P["RAIL_W"] / 2, r0, rt), (.55, .57, .60, 1))
-add("Z23_HardStops", box(P["RAIL_X0"] - 4, P["RAIL_X0"] - 1, 4, 8, r0, rt + 4).union(box(P["SHADE_X0"] - 4, P["SHADE_X0"] - 1, 4, 8, r0, rt + 4)), (.85, .2, .2, 1))   # 装在垫高块上、导轨旁边，挡住滑座
-xl = P["X_L1_INF"]; ct = rt + P["CAR_H"]
-add("Z03_Carriage", box(xl - P["CAR_L"] / 2, xl + P["CAR_L"] / 2, -P["CAR_W"] / 2, P["CAR_W"] / 2, rt, ct), (.45, .47, .50, 1))
-lh = box(xl - 4, xl + 4, -14, 14, ct, A + 14).cut(cyl(11, 12, (xl, 0, A))).cut(cyl(P["L1_D"] + .3, 3.2, (xl + 2.5, 0, A)))
+rail = box(P["RAIL_X0"], P["RAIL_X1"], -P["RAIL_W"] / 2, P["RAIL_W"] / 2, r0, rt)
+rhx = [P["RAIL_X0"] + 5 + 15 * k for k in range(4)]                           # 孔距 15，离端 5
+for x in rhx: rail = rail.cut(cyl(2.4, 12, (x, 0, rt), "Z")).cut(cyl(4.2, 2.4, (x, 0, rt), "Z"))
+add("Z02_Rail", rail, (.55, .57, .60, 1))
+add("Z02b_RailScrews", screws([(x, 0, rt - 0.62) for x in rhx], 3.6, 1.1), (.20, .20, .22, 1))
+xl = P["X_L1_INF"]; ct = rt + P["CAR_H"]; hw = P["CAR_W"] / 2
+def ushape(x0, x1):                                                           # 骑在导轨上的 U 形截面
+    return box(x0, x1, -hw, hw, rt - 3, ct).cut(box(x0 - 1, x1 + 1, -P["RAIL_W"] / 2 - 0.1, P["RAIL_W"] / 2 + 0.1, rt - 4, rt))
+car = ushape(xl - 10.5, xl + 10.5)
+for dx in (-4, 4):
+    for dy in (-6, 6): car = car.cut(cyl(1.6, 6, (xl + dx, dy, ct), "Z"))
+add("Z03_Carriage", car, (.45, .47, .50, 1))
+add("Z03b_EndSeals", ushape(xl - 11.5, xl - 10.5).union(ushape(xl + 10.5, xl + 11.5)), (.70, .15, .15, 1))
+# 镜座：底板 + 立板，镜片和螺纹压圈装在立板的台阶孔里
+lh = box(xl - 8, xl + 8, -hw, hw, ct, ct + 2.5).union(box(xl - 3, xl + 3, -11, 11, ct, A + 11))
+lh = lh.cut(cyl(11, 20, (xl, 0, A))).cut(cyl(P["L1_D"] + 0.2, 4.5, (xl + 0.75, 0, A)))
+hp = [(xl + dx, dy) for dx in (-6, 6) for dy in (-5.5, 5.5)]
+for (x, y) in hp: lh = lh.cut(cyl(2.2, 6, (x, y, ct + 1.25), "Z"))
 add("Z04_LensHolder", lh)
-add("Z05_L1", cyl(P["L1_D"], 3, (xl + 2.5, 0, A)), GLASS)
-add("Z06_L1Ring", ring(16, 10, 2, (xl + 5, 0, A)), (.25, .25, .28, 1))
-sy, sz = P["SCREW_Y"], P["SCREW_Z"]; cw = P["CAR_W"] / 2
-add("Z07_NutArm", box(xl - 5, xl + 5, -cw - 1, -cw, rt + 0.5, ct - 0.5))                      # 连接板贴在滑座侧面
-add("Z21_FloatJoint", cyl(8, (-cw - 1) - (sy + 7), (xl, ((-cw - 1) + (sy + 7)) / 2, sz), "Y"), (.75, .60, .20, 1))
-add("Z08_Nut", ring(14, P["SCREW_D"], 16, (xl, sy, sz)), (.80, .70, .30, 1))
-add("Z09_Screw", cyl(P["SCREW_D"], P["SCREW_X1"] - P["SCREW_X0"], ((P["SCREW_X0"] + P["SCREW_X1"]) / 2, sy, sz)), (.75, .75, .78, 1))
-add("Z10_BearingFix", box(P["SCREW_X0"], P["SCREW_X0"] + 10, sy - 10, sy + 10, zt, sz + 10).cut(cyl(P["SCREW_D"] + 1, 20, (P["SCREW_X0"] + 5, sy, sz))))
-add("Z11_BearingSup", box(P["SCREW_X1"] - 8, P["SCREW_X1"], sy - 9, sy + 5, zt, sz + 7).cut(cyl(P["SCREW_D"] + 1, 20, (P["SCREW_X1"] - 4, sy, sz))))
+add("Z04b_HolderScrews", screws([(x, y, ct + 3.2) for (x, y) in hp], 3.6, 1.4), (.20, .20, .22, 1))
+add("Z05_L1", cyl(P["L1_D"], 3, (xl, 0, A)), GLASS)
+add("Z06_L1Ring", ring(12.8, 10, 1.5, (xl + 2.25, 0, A)), (.25, .25, .28, 1))
+# 浮动接头：螺母支架上的钢球顶住滑块推板，拉簧让它们始终贴紧
+sy, sz = P["SCREW_Y"], P["SCREW_Z"]
+add("Z07_CarriageTab", box(xl - 11.5, xl - 9, -14, -hw, sz - 5, ct))
+xn = xl - 2.5                                                                 # 螺母法兰端面
+nb = box(xn - 2.5, xn, sy - 10, -11, sz - 9, sz + 9).cut(cyl(7, 10, (xn - 1.25, sy, sz)))
+for dz in (-7.5, 7.5): nb = nb.cut(cyl(2.2, 10, (xn - 1.25, sy, sz + dz)))
+add("Z07b_NutBracket", nb)
+add("Z07c_BracketScrews", screws([(xn - 3.25, sy, sz + dz) for dz in (-7.5, 7.5)], 3.6, 1.5, "X"), (.20, .20, .22, 1))
+add("Z21_FloatBall", sphere(2, (xl - 7, -13, sz)), (.85, .86, .90, 1))
+add("Z21b_PreloadSpring", coil(xl - 9, xl - 5, -12, sz - 3.5, 1.0, 0.2, 0.6), (.60, .62, .66, 1))
+# 消隙螺母：外壳（法兰 + 筒）里装半螺母 A、弹簧、半螺母 B
+nh = ring(20, 5.4, 3, (xn + 1.5, sy, sz)).union(ring(12, 10.2, 15, (xn + 10.5, sy, sz))).union(ring(12, 5.4, 0.5, (xn + 17.75, sy, sz)))
+for dz in (-7.5, 7.5): nh = nh.cut(cyl(2.2, 4, (xn + 1.5, sy, sz + dz)))
+add("Z08_NutHousing", nh, (.80, .66, .30, 1))
+add("Z08a_HalfNutA", ring(10, P["SCREW_D"], 5.5, (xn + 6.25, sy, sz)), (.95, .95, .92, 1))
+add("Z08c_NutSpring", coil(xn + 9, xn + 12, sy, sz, 3.9, 0.3, 0.75), (.60, .62, .66, 1))
+add("Z08b_HalfNutB", ring(10, P["SCREW_D"], 5.5, (xn + 14.75, sy, sz)), (.95, .95, .92, 1))
+# 丝杠：轴颈 Ø4 | 螺纹 Ø5（每 1 mm 一道槽，示意螺纹）| 轴颈 Ø4
+x0s, t0, t1, x1s, J = P["SCREW_X0"], P["SCREW_TH0"], P["SCREW_TH1"], P["SCREW_X1"], P["SCREW_J"]
+scr = cyl(J, t0 - x0s, ((x0s + t0) / 2, sy, sz)).union(cyl(P["SCREW_D"], t1 - t0, ((t0 + t1) / 2, sy, sz))).union(cyl(J, x1s - t1, ((t1 + x1s) / 2, sy, sz)))
+gr = None
+for k in range(int(t1 - t0) - 1):
+    r = ring(P["SCREW_D"] + 1, P["SCREW_D"] - 0.6, 0.35, (t0 + 1 + k * P["LEAD"], sy, sz)); gr = r if gr is None else gr.union(r)
+add("Z09_Screw", scr.cut(gr), (.75, .75, .78, 1))
+def bearing(xc):                                                              # 外圈 + 内圈 + 8 颗钢珠
+    b = ring(P["BRG_OD"], P["BRG_OD"] - 1.6, P["BRG_W"], (xc, sy, sz)).union(ring(P["BRG_ID"] + 1.6, P["BRG_ID"], P["BRG_W"], (xc, sy, sz)))
+    rm = (P["BRG_OD"] + P["BRG_ID"]) / 4
+    for k in range(8):
+        a = 2 * math.pi * k / 8; b = b.union(sphere(0.85, (xc, sy + rm * math.cos(a), sz + rm * math.sin(a))))
+    return b
+def brg_block(x0, L, step):                                                   # 轴承座：带安装脚
+    k = box(x0, x0 + L, sy - 10, sy + 10, zt, sz + 10).union(box(x0, x0 + L, sy - 14, sy + 10, zt, zt + 4))
+    k = k.cut(cyl(P["BRG_OD"], L - step + 0.01, (x0 + step + (L - step) / 2, sy, sz)))
+    if step: k = k.cut(cyl(7, 3 * L, (x0, sy, sz)))
+    for x in (x0 + 2.5, x0 + L - 2.5): k = k.cut(cyl(2.4, 20, (x, sy - 12, zt), "Z"))
+    return k
+f0, fL = P["FB_X0"], P["FB_L"]
+add("Z10_BearingFix", brg_block(f0, fL, 1))                                   # 电机侧 1 mm 挡肩
+add("Z10d_BearingPair", bearing(f0 + 3).union(bearing(f0 + 7)), (.78, .80, .84, 1))
+add("Z10b_LockNut", ring(8, J, 2, (f0 + fL + 1, sy, sz)), (.25, .25, .28, 1))
+s0_, sL = P["SB_X0"], P["SB_L"]
+add("Z11_BearingSup", brg_block(s0_, sL, 0))
+add("Z11b_BearingSup", bearing(s0_ + sL / 2), (.78, .80, .84, 1))
+# 联轴器：两端夹紧毂 + 中间波纹
+c0, cL, cd = P["CPL_X0"], P["CPL_L"], P["CPL_D"]
+cp = ring(cd, 5, 3.5, (c0 + 1.75, sy, sz)).union(ring(cd, J, 3.5, (c0 + cL - 1.75, sy, sz))).union(ring(cd - 2.5, cd - 3.5, cL - 7, (c0 + cL / 2, sy, sz)))
+for k in range(5): cp = cp.union(ring(cd, cd - 3, 0.5, (c0 + 4 + k, sy, sz)))
+for xc in (c0 + 1.75, c0 + cL - 1.75):
+    cp = cp.cut(box(xc - 1.75, xc + 1.75, sy - 0.3, sy + 0.3, sz + 2, sz + 7)).cut(cyl(1.7, 14, (xc, sy, sz + 3.6), "Y"))
+add("Z12_Coupling", cp, (.80, .80, .82, 1))
+csx = None
+for xc in (c0 + 1.75, c0 + cL - 1.75):
+    t = cyl(1.6, 10, (xc, sy, sz + 3.6), "Y").union(cyl(2.8, 1.2, (xc, sy + 6.6, sz + 3.6), "Y")); csx = t if csx is None else csx.union(t)
+add("Z12b_ClampScrews", csx, (.20, .20, .22, 1))
+# 电机 NEMA 11：机身 + 法兰（倒角）+ 止口 + 轴（带削平）+ 接线头
 mx = P["MOTOR_X0"]; m = P["MOTOR"]; me = mx + P["MOTOR_L"]
-add("Z12_Coupling", cyl(14, P["SCREW_X0"] - me - 4, ((me + 4 + P["SCREW_X0"]) / 2, sy, sz)), (.80, .80, .82, 1))
-add("Z13_Motor", box(mx, me, sy - m / 2, sy + m / 2, sz - m / 2, sz + m / 2).union(cyl(22, 2, (me + 1, sy, sz))), (.18, .20, .24, 1))
-add("Z14_MotorMount", box(me, me + 4, sy - m / 2 - 1, sy + m / 2 + 1, zt, sz + m / 2 + 1).cut(cyl(23, 10, (me + 2, sy, sz))).cut(cyl(8, 10, (me + 2, sy, sz))))
+mb = box(mx, me, sy - m / 2, sy + m / 2, sz - m / 2, sz + m / 2).edges("|X").chamfer(2.5)
+for k in range(4): mb = mb.cut(ring(m + 2, m - 0.6, 0.6, (mx + 6 + k * 5, sy, sz)))  # 机身分段线
+mpts = [(sy + dy, sz + dz) for dy in (-11.5, 11.5) for dz in (-11.5, 11.5)]
+for (y, z) in mpts: mb = mb.cut(cyl(2.5, 8, (me, y, z)))
+add("Z13_Motor", mb.union(cyl(22, 1.5, (me + 0.75, sy, sz))), (.18, .20, .24, 1))
+add("Z13b_MotorShaft", cyl(5, c0 + 3.5 - me - 1.5, ((me + 1.5 + c0 + 3.5) / 2, sy, sz)).cut(box(me + 4, c0 + 4, sy - 3, sy + 3, sz + 2, sz + 3)), (.85, .85, .88, 1))
+add("Z13c_MotorConn", box(mx + 3, mx + 13, sy - m / 2 - 4, sy - m / 2, sz - 4, sz + 4), (.92, .92, .90, 1))
+mt = P["MM_T"]
+mm = box(me, me + mt, sy - 16, sy + 16, zt, sz + 16).cut(cyl(22.2, 10, (me + 2, sy, sz)))
+for (y, z) in mpts: mm = mm.cut(cyl(2.7, 10, (me + 2, y, z)))
+for y in (sy - 14, sy + 14): mm = mm.cut(cyl(2.4, 16, (me + mt / 2, y, zt), "Z"))   # 底面两个螺纹孔，从 Z 底座下面锁
+add("Z14_MotorMount", mm)
+add("Z14b_MountScrews", screws([(me + mt + 0.8, y, z) for (y, z) in mpts], 4.4, 1.6, "X"), (.20, .20, .22, 1))
 def slot_sensor(x):
     return box(x - 6, x + 6, 10, 22, zt, zt + 14).cut(box(x - 7, x + 7, 14.5, 17.5, zt + 4, zt + 15))
 add("Z15_HomeSensor", slot_sensor(P["HOME_X"]), (.15, .15, .17, 1))
 add("Z16_LimitSensor", slot_sensor(P["LIMIT_X"]), (.15, .15, .17, 1))
-add("Z17_Flag", box(xl - 3, xl + 3, 15.5, 16.5, zt + 6, rt + 4).union(box(xl - 3, xl + 3, cw, 16.5, rt + 2, rt + 4)), (.85, .85, .2, 1))
+add("Z17_Flag", box(xl - 3, xl + 3, 15.5, 16.5, zt + 6, rt + 4).union(box(xl - 3, xl + 3, hw, 16.5, rt + 2, rt + 4)), (.85, .85, .2, 1))
+sr, sf = P["STOP_REAR"], P["STOP_FRONT"]
+add("Z23_HardStops", box(sr - 3, sr - 1, 4, 8, r0, rt + 4).union(box(sf + 1, sf + 3, 4, 8, r0, rt + 4)), (.85, .2, .2, 1))
+add("Z23b_Bumpers", box(sr - 1, sr, 4, 8, rt - 2, rt + 4).union(box(sf, sf + 1, 4, 8, rt - 2, rt + 4)), (.10, .10, .10, 1))
+add("Z24_TransportLock", box(xl + 4, xl + 11, -13.5, -hw, zt, ct).union(cyl(3.6, 1.4, (xl + 7.5, -11, ct + 0.7), "Z")), (.90, .10, .10, 1))
 sh = P["SHADE_D"]
 add("Z18_ShadeTube", ring(sh, sh - 3, P["SHADE_X1"] - P["SHADE_X0"], ((P["SHADE_X0"] + P["SHADE_X1"]) / 2, 0, A)), (.85, .87, .90, .45))
 sad = None
-for x in (P["SHADE_X0"] + 33, P["SHADE_X1"] - 13):
+for x in (P["SHADE_X0"] + 15, P["SHADE_X1"] - 13):
     t = box(x - 5, x + 5, -sh / 2 - 1.5, sh / 2 + 1.5, zt, A).cut(cyl(sh, 12, (x, 0, A)))
     sad = t if sad is None else sad.union(t)
 add("Z19_ShadeSaddle", sad)
@@ -203,8 +290,23 @@ assy.add(cyl(20, wy + 80, (gx, (wy + 80) / 2, OZ), "Y"), name="R05_BeamOut", col
 
 # ================= 输出 =================
 out = os.path.join(here, "..", "CAD"); os.makedirs(out, exist_ok=True)
+# Z 轴子装配（给课件 3D 用）：Z 零件 + 物镜组件 + 两段光束。先导出它：网格会被缓存，整机 GLB 也沿用这个精度
+za = cq.Assembly(name="Z_Axis_v" + V.replace(".", "_"))
+for pid, (shp, col) in SHP.items():
+    if pid[0] == "Z" or pid.startswith("O0"): za.add(shp, name=pid, color=cq.Color(*col))
+za.add(cyl(4, xl - P["APER_X"], ((P["APER_X"] + xl) / 2, 0, A)), name="R01_Beam", color=cq.Color(*GC["R"]))
+za.add(cq.Workplane().add(cq.Solid.makeCone(2, 10.5, xo - xl, cq.Vector(xl, 0, A), cq.Vector(1, 0, 0))), name="R02_BeamExpand", color=cq.Color(*GC["R"]))
+za.export(os.path.join(out, f"z_axis_v{V}.glb"), "GLTF", tolerance=0.05, angularTolerance=0.3)
 assy.export(os.path.join(out, f"调焦头_v{V}.step"))
 assy.export(os.path.join(out, f"focus_head_v{V}.glb"), "GLTF", tolerance=0.08, angularTolerance=0.15)
+# 运动部分质量（体积 × 密度）→ Z轴运动质量.json（给 Z轴传动计算.py）
+RHO = {"Z03_Carriage": 7.85, "Z03b_EndSeals": 1.2, "Z04_LensHolder": 2.7, "Z04b_HolderScrews": 7.85, "Z05_L1": 2.2, "Z06_L1Ring": 2.7,
+       "Z07_CarriageTab": 2.7, "Z07b_NutBracket": 2.7, "Z07c_BracketScrews": 7.85, "Z21_FloatBall": 7.85, "Z21b_PreloadSpring": 7.85,
+       "Z08_NutHousing": 8.5, "Z08a_HalfNutA": 1.41, "Z08b_HalfNutB": 1.41, "Z08c_NutSpring": 7.85, "Z17_Flag": 2.7}
+def vol(w): return sum(v.Volume() for v in (w.vals() if hasattr(w, "vals") else [w]))
+mass = {k: round(vol(SHP[k][0]) * RHO[k] / 1000, 2) for k in RHO}
+json.dump(dict(moving_g=mass, total_g=round(sum(mass.values()), 1), rho_g_cm3=RHO), open(os.path.join(here, "Z轴运动质量.json"), "w"), ensure_ascii=False, indent=1)
+print("Z 轴运动部分质量", round(sum(mass.values()), 1), "g")
 comp = assy.toCompound()
 def view(name, d):
     p = os.path.join(out, f"调焦头_v0.2_{name}.svg")
