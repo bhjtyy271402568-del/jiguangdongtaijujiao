@@ -1,0 +1,373 @@
+<title>镜片怎么动起来</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@700;900&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* 布局：与第 01、02 课相同的“实验台”纵向课程；第 10 课：丝杆怎么把转动变成移动、为什么不用音圈/齿轮/皮带、Z 模块买还是做 */
+:root{
+  --bg:#f4f6f9; --surface:#ffffff; --fg:#151a23; --muted:#5d6676; --line:#d8dee7;
+  --beam:#e5383b; --beam-soft:#f6b3b4; --glass:#2b7bb9; --glass-fill:#dcecf8;
+  --ok:#17914f; --bad:#d23c3c; --proj2:#e0701c; --card:#2c5fd6; --card-fill:#e2eafc;
+  --metal:#7b8697; --work:#d7d3cf; --work-line:#8a817a; --band:#17914f22;
+  --knobA:#7c3aed; --knobB:#0e8a8a;
+  --f-body:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --f-display:"Noto Serif SC","Songti SC",serif;
+  --f-num:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1218; --surface:#171c25; --fg:#e7ebf1; --muted:#9aa4b4; --line:#2b3240;
+  --beam:#ff5c60; --beam-soft:#7a2a2d; --glass:#6db5ee; --glass-fill:#1c3448;
+  --ok:#3fd082; --bad:#ff6b6b; --proj2:#ff9a4a; --card:#82a6ff; --card-fill:#1d2a4a;
+  --metal:#8c97a8; --work:#3a3633; --work-line:#7d746c; --band:#3fd08226;
+  --knobA:#b08cff; --knobB:#4fd1c5; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1218; --surface:#171c25; --fg:#e7ebf1; --muted:#9aa4b4; --line:#2b3240;
+  --beam:#ff5c60; --beam-soft:#7a2a2d; --glass:#6db5ee; --glass-fill:#1c3448;
+  --ok:#3fd082; --bad:#ff6b6b; --proj2:#ff9a4a; --card:#82a6ff; --card-fill:#1d2a4a;
+  --metal:#8c97a8; --work:#3a3633; --work-line:#7d746c; --band:#3fd08226;
+  --knobA:#b08cff; --knobB:#4fd1c5; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:15px;line-height:1.65}
+.wrap{max-width:900px;margin:0 auto;padding-block:28px 56px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:flex;flex-direction:column;gap:28px}
+header{display:flex;flex-direction:column;gap:6px}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--muted)}
+h1{font-family:var(--f-display);font-weight:900;font-size:clamp(28px,5vw,40px);margin:0;line-height:1.2;text-wrap:balance}
+h1 .red{color:var(--beam)}
+.lede{color:var(--muted);margin:0;max-width:60ch}
+section{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:14px;min-width:0}
+h2{font-family:var(--f-display);font-size:21px;margin:0;display:flex;gap:10px;align-items:baseline;text-wrap:balance}
+h2 .n{font-family:var(--f-num);font-size:13px;color:var(--beam)}
+.try{font-size:13px;color:var(--muted);margin:0}
+.try b{color:var(--fg);font-weight:500}
+.stage{overflow-x:auto;border-radius:10px;background:var(--bg)}
+.stage svg{display:block;width:100%;height:auto}
+.controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px 20px}
+.ctl{display:flex;flex-direction:column;gap:4px;min-width:0}
+.ctl label{font-size:13px;display:flex;justify-content:space-between;gap:8px}
+.ctl label span{font-family:var(--f-num);color:var(--muted);font-size:12px}
+input[type=range]{width:100%;accent-color:var(--beam)}
+.ctl.a input{accent-color:var(--knobA)} .ctl.b input{accent-color:var(--knobB)}
+.ctl.a label{color:var(--knobA)} .ctl.b label{color:var(--knobB)}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+button{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--surface);color:var(--fg);
+  border-radius:999px;padding:6px 14px;cursor:pointer}
+button:hover{border-color:var(--muted)}
+button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--card);outline-offset:2px}
+button[aria-pressed=true]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.readout{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.cell{border-top:2px solid var(--line);padding-top:6px;min-width:0}
+.cell .k{font-size:12px;color:var(--muted)}
+.cell .v{font-family:var(--f-num);font-size:20px;font-variant-numeric:tabular-nums}
+.chip{display:inline-block;font-size:13px;font-weight:500;padding:2px 10px;border-radius:999px}
+.chip.ok{background:var(--band);color:var(--ok)}
+.chip.bad{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+.chip.a{background:color-mix(in srgb,var(--knobA) 15%,transparent);color:var(--knobA)}
+.chip.b{background:color-mix(in srgb,var(--knobB) 15%,transparent);color:var(--knobB)}
+.note{font-size:12px;color:var(--muted);margin:0}
+.facts{display:grid;grid-template-columns:7.5em 1fr;gap:4px 14px;font-size:14px;margin:0}
+.facts dt{color:var(--muted)} .facts dd{margin:0;min-width:0}
+.cap{font-size:15px;margin:0;font-weight:500}
+.verdicts{display:flex;flex-wrap:wrap;gap:8px}
+.verdicts .chip{font-weight:400}
+.quiz{display:flex;flex-direction:column;gap:16px}
+.q p{margin:0 0 6px;font-weight:500}
+.q .fb{font-size:14px;margin-top:6px;min-height:1.6em}
+.q button.right{border-color:var(--ok);color:var(--ok)}
+.q button.wrong{border-color:var(--bad);color:var(--bad)}
+footer{font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+footer b{color:var(--fg)}
+svg text{font-family:var(--f-body)}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+.lv{font-size:12px;font-weight:700;padding:1px 8px;border-radius:999px;margin-left:6px}
+.lv.e{background:var(--band);color:var(--ok)} .lv.m{background:color-mix(in srgb,var(--proj2) 18%,transparent);color:var(--proj2)} .lv.h{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+.info{border-left:3px solid var(--card);padding:8px 12px;background:var(--card-fill);border-radius:0 8px 8px 0;min-height:64px}
+.info b{display:inline} .info p{margin:4px 0 0;font-size:14px}
+.part{cursor:pointer;transition:transform .6s ease}
+.part:hover > :first-child,.part.sel > :first-child{filter:drop-shadow(0 0 4px var(--card))}
+@media (prefers-reduced-motion: reduce){.part{transition:none}}
+</style>
+<style>
+.q-big{font-family:var(--f-display);font-size:clamp(20px,3.6vw,26px);font-weight:900;margin:0;text-wrap:balance}
+.cap-box{display:flex;gap:12px;align-items:flex-start;background:var(--card-fill);border-radius:10px;padding:12px 14px;min-height:72px}
+.cap-box .no{font-family:var(--f-num);font-size:13px;color:var(--card);white-space:nowrap;padding-top:3px}
+.cap-box p{margin:0;font-size:16px;line-height:1.6}
+.cap-box b{color:var(--beam)}
+.stepbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.dots{display:flex;gap:6px;margin-left:4px}
+.dots i{width:9px;height:9px;border-radius:50%;background:var(--line);display:block}
+.dots i.on{background:var(--card)}
+.free{border-top:1px dashed var(--line);padding-top:12px;display:flex;flex-direction:column;gap:10px}
+.free .t{font-size:13px;color:var(--muted)}
+.big-next{background:var(--card);color:#fff;border-color:var(--card);font-weight:700}
+.concl{font-size:15px;font-weight:700;color:var(--ok);margin:0}
+</style>
+<div class="wrap">
+<header>
+  <div class="eyebrow">激光扫描系统入门 · 第 10 课</div>
+  <h1>镜片怎么<span class="red">动</span>起来？</h1>
+  <p class="lede">三个问题：电机在转，镜片为什么直着走？为什么不用音圈、齿轮、皮带？Z 这部分是买还是自己做？每张图都点“下一步”往下看。</p>
+</header>
+<section aria-labelledby="s1">
+  <p class="q-big" id="s1">问题 1：电机明明在转，镜片为什么是直着走？</p>
+  <div class="stage"><svg id="svg1" data-export="10-1_丝杆怎么把转变成走" viewBox="0 0 840 320" role="img" aria-label="问题 1：电机明明在转，镜片为什么是直着走？"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n1"></span><p id="c1"></p></div>
+  <div class="stepbar"><button id="p1">← 上一步</button><button id="x1" class="big-next">下一步 →</button><span class="dots" id="d1"></span></div>
+  <div class="free"><span class="t">自己玩：</span><div class="ctl"><label for="f1">控制卡发了多少个脉冲<span id="f1V"></span></label><input id="f1" type="range" min="0" max="12800" step="160" value="3200"></div><div class="row"><button id="f1r" aria-pressed="false">拿掉导轨</button></div></div>
+  <p class="concl">记住一句：螺母被导轨卡住转不了，丝杆一转，它只能直着走；转一圈走一格（我们是 1 mm）。</p>
+</section>
+<section aria-labelledby="s2">
+  <p class="q-big" id="s2">问题 2：为什么不用音圈、齿轮、皮带？</p>
+  <p class="note" style="margin-top:-6px">来源：S018 Akribis 音圈电机规格（机械时间常数约 4–17 ms）；丝杆参数来自 BOM v0.3（导程 1 mm、16 细分）</p>
+  <div class="stage"><svg id="svg2" data-export="10-2_四种传动比一比" viewBox="0 0 840 320" role="img" aria-label="问题 2：为什么不用音圈、齿轮、皮带？"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n2"></span><p id="c2"></p></div>
+  <div class="stepbar"><button id="p2">← 上一步</button><button id="x2" class="big-next">下一步 →</button><span class="dots" id="d2"></span></div>
+  <div class="free"><span class="t">自己玩：换一种传动，再换一个要求</span><div class="row"><button id="f2a">齿轮</button><button id="f2b">皮带</button><button id="f2c">音圈</button><button id="f2d">丝杆</button></div><div class="row"><button id="f2e" aria-pressed="false">要求改成：边扫边对焦</button></div></div>
+  <p class="concl">记住一句：我们设一次距离就不动，不要求快，但要稳；丝杆断电自己咬住，最合适。只有要边扫边对焦时，才换音圈。</p>
+</section>
+<section aria-labelledby="s3">
+  <p class="q-big" id="s3">问题 3：Z 这部分，买现成的还是自己搭？</p>
+  <p class="note" style="margin-top:-6px">来源：R036 RAYLASE AXIALSCAN RD14 规格书（工作距离 200–695 mm、跟随误差 &lt; 1 ms、入口 5 mm）</p>
+  <div class="stage"><svg id="svg3" data-export="10-3_买还是做" viewBox="0 0 840 320" role="img" aria-label="问题 3：Z 这部分，买现成的还是自己搭？"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n3"></span><p id="c3"></p></div>
+  <div class="stepbar"><button id="p3">← 上一步</button><button id="x3" class="big-next">下一步 →</button><span class="dots" id="d3"></span></div>
+  <div class="free"><span class="t">自己玩：你要做的是——</span><div class="row"><button id="f3a">第一台样机</button><button id="f3b">小批量产品</button><button id="f3c">近距离、边扫边对焦</button></div></div>
+  <p class="concl">记住一句：第一台先买电动平移台，装上镜片就能验证；50 m 光点验证通过以后，再做自己集成的壳体。</p>
+</section>
+<section aria-labelledby="s7">
+  <h2 id="s7"><span class="n">✓</span>小测</h2>
+  <div class="quiz" id="quiz"></div>
+</section>
+<footer>
+  <div><b>本课对项目的推进：</b></div>
+  <div>· Z 驱动确认：<b>丝杆 + 步进</b>（前提：设一次距离、光斑 ≤ 5 mm、要断电锁住）；要边扫边对焦时换音圈，走 XY2-100 的 Z 通道</div>
+  <div>· 新建议：<b>第一台样机的 Z 用现成电动平移台</b>（行程 ≥ 5 mm、步进电机、带原点开关）+ 两个镜座 + 一块底板，先验证 50 m 光点</div>
+  <div>· v0.3 / v0.4 的集成壳体留到产品阶段；整套商业 Z 模块不适合 50 m（按 0.2–0.7 m 设计）</div>
+</footer>
+</div>
+<script>
+
+const $=id=>document.getElementById(id);
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const T=(x,y,t,s=14,c='var(--fg)',a='middle',w=400)=>`<text x="${x}" y="${y}" font-size="${s}" fill="${c}" text-anchor="${a}" font-weight="${w}">${t}</text>`;
+/* 通用：分步 + 补间动画 */
+function stepper(k,steps,state,draw){
+  let i=0,anim=0;
+  const dots=$('d'+k);dots.innerHTML=steps.map(()=>'<i></i>').join('');
+  function go(n,instant){i=Math.max(0,Math.min(steps.length-1,n));const to={...state,...steps[i].s},from={...state},t0=performance.now(),dur=(reduce||instant)?0:700;
+    cancelAnimationFrame(anim);
+    const tick=now=>{const p=dur?Math.min(1,(now-t0)/dur):1,e=p<.5?2*p*p:1-(-2*p+2)**2/2;
+      for(const key in to){if(typeof to[key]==='number')state[key]=from[key]+(to[key]-from[key])*e;else state[key]=to[key];}
+      draw();if(p<1)anim=requestAnimationFrame(tick);};
+    if(!dur){for(const key in to)state[key]=to[key];draw();}else anim=requestAnimationFrame(tick);
+    $('c'+k).innerHTML=steps[i].t;$('n'+k).textContent=`第 ${i+1} / ${steps.length} 步`;
+    dots.querySelectorAll('i').forEach((d,j)=>d.classList.toggle('on',j<=i));
+    $('p'+k).disabled=i===0;$('x'+k).textContent=i===steps.length-1?'从头再看 ↺':'下一步 →';}
+  $('p'+k).onclick=()=>go(i-1);$('x'+k).onclick=()=>go(i===steps.length-1?0:i+1);
+  go(0,true);return {go,n:steps.length};
+}
+
+const R=(x,y,w,h,f,s='none',sw=0,rx=3,extra='')=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${rx}" fill="${f}" stroke="${s}" stroke-width="${sw}" ${extra}/>`;
+const lens=(x,y,ry=20)=>`<ellipse cx="${x}" cy="${y}" rx="6" ry="${ry}" fill="var(--glass-fill)" stroke="var(--glass)" stroke-width="2"/>`;
+const arrow=(x1,y1,x2,y2,c,w=3)=>{const a=Math.atan2(y2-y1,x2-x1),h=10;return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${c}" stroke-width="${w}"/><polygon points="${x2},${y2} ${x2-h*Math.cos(a-0.45)},${y2-h*Math.sin(a-0.45)} ${x2-h*Math.cos(a+0.45)},${y2-h*Math.sin(a+0.45)}" fill="${c}"/>`;};
+let TT=0;const ANIM=[];(function loop(){TT+=0.016;ANIM.forEach(f=>f(TT));requestAnimationFrame(loop);})();
+const SKIN='#f0c29b',SKIN_L='#b07c55';
+const hexPts=(cx,cy,r,a)=>Array.from({length:6},(_,k)=>{const t=a+k*Math.PI/3;return `${(cx+r*Math.cos(t)).toFixed(1)},${(cy+r*Math.sin(t)).toFixed(1)}`;}).join(' ');
+
+/* ===== 1 丝杆怎么把转变成走 ===== */
+const s1={hand:1,motor:0,rail:0,free:0,pitch:0,pulse:0,play:0,pulses:3200,railOff:0};
+const P1=40, AX=165;           // 一个导程画成 40 px；丝杆轴线 y
+function draw1(){
+  const play=s1.play>.5, free=play?s1.railOff>.5:s1.free>.5, motor=s1.motor>.5, rail=play?!(s1.railOff>.5):s1.rail>.5, pulse=s1.pulse>.5;
+  let turns;
+  if(play)turns=s1.pulses/3200;
+  else if(pulse)turns=1+(TT*0.08)%2;
+  else turns=2+1.8*Math.sin(TT*0.8);
+  const th=2*Math.PI*turns, nx=free?280:200+P1*turns, nth=free?th:0;
+  let g='';
+  // 左边：手拧的螺栓头 或 电机
+  if(!motor){g+=`<polygon points="84,141 110,141 110,189 84,189" fill="#9aa3ad" stroke="#6b7686"/>`+T(97,128,'⟳',24,'var(--card)','middle',700)+T(97,214,'用手拧',12,'var(--card)','middle',700);}
+  else{g+=R(28,135,68,60,'#1d2330','var(--muted)',1)+R(96,155,16,20,'#9aa3ad')+T(62,214,'电机',13,'var(--fg)','middle',700)+T(62,173,'⟳',24,'#facc15','middle',700);}
+  // 丝杆 + 螺纹（转一圈，螺纹看起来正好走一格）
+  g+=R(110,AX-14,490,28,'#c9cdd3','none',0,2);
+  const off=((P1*turns)%P1+P1)%P1;
+  for(let x=110+off-P1;x<600;x+=P1){if(x<104)continue;g+=`<line x1="${x-6}" y1="${AX-14}" x2="${x+6}" y2="${AX+14}" stroke="#7b8697" stroke-width="2"/>`;}
+  g+=T(560,AX+34,motor?'丝杆':'螺栓',12,'var(--muted)','middle',700);
+  // 导程标记
+  if(s1.pitch>.5&&!free){let x=110+off;while(x<nx+44)x+=P1;
+    g+=`<path d="M${x},${AX-20} V${AX-28} H${x+P1} V${AX-20}" fill="none" stroke="var(--beam)" stroke-width="2"/>`+T(x+P1/2,AX-34,'一格',13,'var(--beam)','middle',700);}
+  // 导轨 + 滑块
+  if(rail){g+=R(130,232,470,16,'var(--metal)')+T(365,270,'导轨：滑块卡在里面，螺母转不了',13,'var(--fg)','middle',700);
+    g+=R(nx-22,AX+27,44,40,'#55606e')+R(nx-34,224,68,16,'#55606e');}
+  // 螺母（侧面看：棱线位置随转角变）
+  g+=R(nx-32,AX-27,64,54,'#d4a72c','#8a6d1d',1.5,3);
+  for(let k=0;k<6;k++){const t=nth+k*Math.PI/3;if(Math.cos(t)>0.05){const y=AX+27*Math.sin(t);g+=`<line x1="${nx-32}" y1="${y}" x2="${nx+32}" y2="${y}" stroke="#8a6d1d" stroke-width="1.5"/>`;}}
+  g+=T(nx,AX+5,'螺母',12,'#3a2a00','middle',700);
+  // 镜片（真零件时）
+  if(motor&&rail){g+=R(nx-4,92,8,46,'#6b7686')+lens(nx,70,22)+T(nx+16,56,'镜片',12,'var(--fg)','start',700);}
+  // 手指
+  if(s1.hand>.02){const o=s1.hand;
+    g+=`<g opacity="${o}"><ellipse cx="${nx}" cy="${AX-36}" rx="36" ry="11" fill="${SKIN}" stroke="${SKIN_L}"/><ellipse cx="${nx}" cy="${AX+36}" rx="36" ry="11" fill="${SKIN}" stroke="${SKIN_L}"/>`+T(nx,AX-56,'手捏住螺母',13,'var(--fg)','middle',700)+'</g>';}
+  // 顶部读数
+  if(free)g+=T(380,30,'螺母跟着一起转，原地不走 ✗',16,'var(--bad)','middle',700);
+  else if(pulse)g+=T(380,30,'每个脉冲：转 1/3200 圈，走约 0.3 μm',15,'var(--ok)','middle',700);
+  else if(play)g+=T(380,30,`${s1.pulses} 个脉冲 → 转 ${turns.toFixed(2)} 圈 → 镜片走 ${turns.toFixed(2)} mm`,15,'var(--ok)','middle',700);
+  else if(s1.pitch>.5)g+=T(380,30,`转了 ${turns.toFixed(1)} 圈 → 走了 ${turns.toFixed(1)} 格（${turns.toFixed(1)} mm）`,15,'var(--ok)','middle',700);
+  else g+=T(380,30,'螺母不转，只能沿着螺纹直着走 ✓',16,'var(--ok)','middle',700);
+  // 脉冲
+  if(pulse){g+=R(16,44,92,30,'var(--card-fill)','var(--card)',1.5,6)+T(62,64,'控制卡',13,'var(--card)','middle',700);
+    g+=`<line x1="62" y1="74" x2="62" y2="135" stroke="var(--card)" stroke-width="2"/>`;
+    for(let k=0;k<2;k++){const py=76+((TT*30+k*28)%52);g+=`<path d="M62,${py} h8 v6 h-8" fill="none" stroke="var(--beam)" stroke-width="2"/>`;}
+    g+=T(76,108,'STEP 脉冲',11,'var(--beam)','start',700);}
+  // 右边：从侧面看过去
+  const ex=737;
+  g+=R(652,44,172,244,'var(--surface)','var(--line)',1,10)+T(ex,68,'从右往左看',13,'var(--muted)','middle',700);
+  if(rail)g+=R(690,232,94,16,'var(--metal)')+R(ex-12,200,24,34,'#55606e');
+  g+=`<polygon points="${hexPts(ex,AX,46,nth+Math.PI/6)}" fill="#d4a72c" stroke="#8a6d1d" stroke-width="1.5"/>`;
+  g+=`<circle cx="${ex}" cy="${AX}" r="16" fill="#c9cdd3" stroke="#7b8697"/><line x1="${ex}" y1="${AX}" x2="${ex+15*Math.cos(th)}" y2="${AX+15*Math.sin(th)}" stroke="var(--beam)" stroke-width="3"/>`;
+  if(s1.hand>.02)g+=`<g opacity="${s1.hand}"><ellipse cx="${ex}" cy="${AX-50}" rx="30" ry="9" fill="${SKIN}" stroke="${SKIN_L}"/><ellipse cx="${ex}" cy="${AX+50}" rx="30" ry="9" fill="${SKIN}" stroke="${SKIN_L}"/></g>`;
+  g+=T(ex,276,free?'螺母跟着转 ✗':'螺母不转 ✓',13,free?'var(--bad)':'var(--ok)','middle',700);
+  $('svg1').innerHTML=g;$('f1V').textContent=s1.pulses+' 个';
+}
+ANIM.push(()=>draw1());
+const st1=stepper(1,[
+ {t:'先看生活里的：一根<b>螺栓</b>和一个<b>螺母</b>。用手<b>捏住螺母</b>不让它转，再去拧螺栓，螺母就<b>沿着螺栓直着走</b>。',s:{hand:1,motor:0,rail:0,free:0,pitch:0,pulse:0,play:0}},
+ {t:'如果<b>松开手</b>，螺母就跟着螺栓<b>一起转</b>，原地不走（看右边的小图）。所以关键在于：<b>螺母不能转</b>。',s:{hand:0,motor:0,rail:0,free:1,pitch:0,pulse:0,play:0}},
+ {t:'换成真零件：<b>电机</b>代替手去拧，这根螺栓就是<b>丝杆</b>；<b>导轨</b>代替捏住螺母的手。螺母连着滑块，滑块卡在导轨里，转不了，只能走。',s:{hand:0,motor:1,rail:1,free:0,pitch:0,pulse:0,play:0}},
+ {t:'螺纹是一圈圈斜着绕上去的。丝杆<b>转一圈</b>，螺母正好走<b>一格</b>（相邻两道螺纹的距离，叫<b>导程</b>）。我们选的导程是 1 mm。',s:{hand:0,motor:1,rail:1,free:0,pitch:1,pulse:0,play:0}},
+ {t:'<b>步进电机</b>把一圈分成 3200 小步。控制卡每发 1 个<b>脉冲</b>，它就转一小格，镜片走约 0.3 μm，大概是<b>头发丝的两百分之一</b>。',s:{hand:0,motor:1,rail:1,free:0,pitch:0,pulse:1,play:0}}
+],s1,draw1);
+$('f1').addEventListener('input',()=>{s1.pulses=+$('f1').value;s1.play=1;s1.hand=0;s1.motor=1;s1.pitch=0;s1.pulse=0;});
+$('f1r').onclick=()=>{s1.play=1;s1.hand=0;s1.motor=1;s1.pitch=0;s1.pulse=0;s1.railOff=s1.railOff>.5?0:1;$('f1r').setAttribute('aria-pressed',s1.railOff?'true':'false');$('f1r').textContent=s1.railOff?'装回导轨':'拿掉导轨';};
+
+/* ===== 2 四种传动比一比 ===== */
+const s2={mech:'req',fast:0,verdict:0};
+const M2={
+ gear:{name:'齿轮 + 齿条',rows:[['✓','快'],['✗','齿和齿之间有缝'],['✗','在缝里来回晃']]},
+ belt:{name:'皮带',rows:[['✓','快，走得远'],['✗','有弹性，推一下先伸长'],['✗','像橡皮筋来回弹']]},
+ vc:{name:'音圈电机',rows:[['✓','最快：几毫秒'],['△','要加光栅尺 + 伺服板'],['✗','断电没力气，会滑走']]},
+ screw:{name:'丝杆 + 步进',rows:[['✓','4 mm 约 0.4 秒，够用'],['✓','一步约 0.3 μm'],['✓','螺纹咬住，推不回去']]}
+};
+function rows2(){
+  if(s2.mech==='req')return [['','不用快：设一次距离就不动'],['','准：50 m 处 ±50 μm'],['','不跑：振动是最大的误差']].map((r,i)=>i===0&&s2.fast?['','要快：几毫秒内跟上扫描']:r);
+  const r=M2[s2.mech].rows.map(x=>x.slice());
+  if(s2.fast){if(s2.mech==='screw')r[0]=['✗','太慢，跟不上扫描'];}
+  return r;
+}
+function draw2(){
+  const m=s2.mech, shake=m!=='req';
+  const by=shake?2.5*Math.sin(TT*45):0;
+  let d=0;
+  if(m==='gear')d=7*Math.tanh(4*Math.sin(TT*26));
+  else if(m==='belt')d=13*Math.sin(TT*6);
+  else if(m==='vc')d=58+3*Math.sin(TT*30);
+  const cx=380+d;
+  let g='';
+  if(shake)g+=T(30,34,'〰 断电 + 振动 〰',14,'var(--bad)','start',700);
+  // 目标线
+  g+=`<line x1="380" y1="46" x2="380" y2="258" stroke="var(--muted)" stroke-dasharray="5 4"/>`+T(380,40,'目标位置',12,'var(--muted)','middle',700);
+  g+=R(20,262+by,540,12,'var(--metal)')+T(290,298,'底座',12,'var(--muted)');
+  if(m==='req'){
+    g+=R(cx-30,200,60,26,'#55606e')+R(cx-4,110,8,90,'#6b7686')+lens(cx,100,22)+T(cx+14,74,'动镜',12,'var(--fg)','start',700);
+    g+=T(180,150,'选哪种传动？',22,'var(--fg)','middle',700)+T(180,180,'先看右边三道考题',14,'var(--muted)','middle');
+  }else{
+    // 各机构
+    if(m==='gear'){
+      g+=R(cx-250,234+by,230,10,'#9aa3ad')+R(cx-28,224+by,10,20,'#9aa3ad');for(let x=cx-246;x<cx-24;x+=12)g+=`<polygon points="${x},${234+by} ${x+5},${227+by} ${x+10},${234+by}" fill="#9aa3ad"/>`;
+      const a=(cx-380)/30;let teeth='';for(let k=0;k<14;k++){const t=a+k*2*Math.PI/14;teeth+=`<rect x="-4" y="-38" width="8" height="10" fill="#7b8697" transform="rotate(${t*180/Math.PI})"/>`;}
+      g+=`<g transform="translate(150 ${190+by})">${teeth}<circle r="30" fill="#9aa3ad" stroke="#7b8697"/><circle r="5" fill="#55606e"/></g>`+T(150,140,'齿轮',12,'var(--fg)','middle',700)+T(cx-140,258+by,'齿条',12,'var(--fg)','middle',700);
+      g+=`<circle cx="250" cy="96" r="40" fill="var(--surface)" stroke="var(--bad)" stroke-width="2"/><polygon points="226,110 236,84 246,110" fill="#7b8697"/><polygon points="${252+d*0.5},110 ${262+d*0.5},84 ${272+d*0.5},110" fill="#9aa3ad"/>`+T(250,124,'有缝',12,'var(--bad)','middle',700)+`<line x1="230" y1="130" x2="180" y2="160" stroke="var(--bad)" stroke-width="1.5"/>`;
+    }else if(m==='belt'){
+      const sag=6*Math.sin(TT*6+1);
+      g+=`<circle cx="70" cy="${238+by}" r="13" fill="#9aa3ad"/><circle cx="530" cy="${238+by}" r="13" fill="#9aa3ad"/>`+R(52,190+by,36,34,'#1d2330','var(--muted)',1)+T(70,182,'电机',12,'var(--fg)','middle',700);
+      g+=`<path d="M70,${225+by} Q${(70+cx)/2},${225+sag+by} ${cx-30},${226+by} M${cx+30},${226+by} Q${(cx+530)/2},${225-sag+by} 530,${225+by} M70,${251+by} H530" stroke="#2b2b2b" stroke-width="4" fill="none"/>`+T(200,214+by,'皮带',12,'var(--fg)','middle',700);
+    }else if(m==='vc'){
+      g+=R(110,198+by,150,40,'#3a4150')+R(110,198+by,75,8,'#d23c3c')+R(185,198+by,75,8,'#2b7bb9')+T(185,190+by,'磁铁',12,'var(--fg)','middle',700);
+      g+=R(cx-160,206+by,130,24,'#c87533');for(let x=cx-156;x<cx-32;x+=8)g+=`<line x1="${x}" y1="${206+by}" x2="${x}" y2="${230+by}" stroke="#8a4f1f"/>`;
+      g+=T(cx-95,252+by,'线圈（通电被推）',12,'var(--fg)','middle',700)+R(476,196+by,10,40,'var(--proj2)')+T(481,190+by,'挡块',11,'var(--proj2)','middle',700);
+    }else if(m==='screw'){
+      g+=R(20,188+by,40,44,'#1d2330','var(--muted)',1)+T(40,182,'电机',12,'var(--fg)','middle',700)+R(60,206+by,480,14,'#c9cdd3');
+      for(let x=64;x<540;x+=10)g+=`<line x1="${x-3}" y1="${206+by}" x2="${x+3}" y2="${220+by}" stroke="#7b8697" stroke-width="1.2"/>`;
+      g+=R(70,248+by,470,10,'var(--metal)');
+      g+=`<circle cx="190" cy="92" r="38" fill="var(--surface)" stroke="var(--ok)" stroke-width="2"/>`+R(190,70,30,44,'#c8a27a','#8a6d4a',1,2);
+      for(let x=166;x<214;x+=6)g+=`<line x1="${x}" y1="87" x2="${x+3}" y2="97" stroke="#7b8697" stroke-width="1.2"/>`;
+      g+=R(164,88,50,6,'#9aa3ad')+R(160,80,5,22,'#9aa3ad')+arrow(158,92,126,92,'var(--ok)',2)+T(126,82,'拔',12,'var(--ok)','middle',700)+T(190,146,'像拧进木头的螺丝',12,'var(--ok)','middle',700)+T(190,162,'直接拔，拔不出来',12,'var(--ok)','middle',700);
+    }
+    g+=R(cx-30,200+by,60,26,'#55606e')+R(cx-4,110+by,8,90,'#6b7686')+lens(cx,100+by,22);
+    g+=T(30,62,M2[m].name,16,'var(--fg)','start',700);
+    g+=m==='screw'?T(cx+40,140,'纹丝不动',13,'var(--ok)','start',700):T(cx+40,140+by,m==='vc'?'滑走了':'来回晃',13,'var(--bad)','start',700);
+  }
+  // 右边三道考题
+  const Q=['① 快不快','② 准不准','③ 断电、振动后还在原位吗'];
+  g+=R(578,44,250,232,'var(--surface)','var(--line)',1,10);
+  rows2().forEach(([v,t],i)=>{const y=82+i*72;
+    g+=T(594,y,Q[i],13,'var(--muted)','start',700);
+    const c=v==='✓'?'var(--ok)':v==='✗'?'var(--bad)':v==='△'?'var(--proj2)':'var(--card)';
+    if(v)g+=T(600,y+28,v,20,c,'start',700);
+    g+=T(v?628:594,y+26,t,14,c,'start',700);});
+  if(s2.verdict)g+=T(703,300,s2.fast?'→ 改选音圈 / 振镜电机':'→ 我们选丝杆 ✓',15,s2.fast?'var(--proj2)':'var(--ok)','middle',700);
+  $('svg2').innerHTML=g;
+}
+ANIM.push(()=>draw2());
+const st2=stepper(2,[
+ {t:'先定考题。我们的 Z <b>设一次距离</b>就不动了，所以<b>不用快</b>；但要<b>准</b>，而且<b>断电、振动时不能跑</b>（前面算过：振动是最大的误差）。',s:{mech:'req',fast:0,verdict:0}},
+ {t:'<b>齿轮 + 齿条</b>：齿轮转，齿条就直着走。可是齿和齿之间<b>有缝</b>，一振动，镜片就在缝里<b>来回晃</b>。',s:{mech:'gear',fast:0,verdict:0}},
+ {t:'<b>皮带</b>（3D 打印机常用）走得远、走得快。但皮带<b>像橡皮筋</b>，有弹性，一振动就<b>来回弹</b>。',s:{mech:'belt',fast:0,verdict:0}},
+ {t:'<b>音圈电机</b>和喇叭一个原理：线圈通电，被磁铁推开。它<b>最快</b>，几毫秒就到位；但它是靠电流“顶”着镜片，<b>断电就没力气</b>，镜片会滑走。要停得准，还得加光栅尺和伺服板。',s:{mech:'vc',fast:0,verdict:0}},
+ {t:'<b>丝杆</b>慢一点（4 mm 约 0.4 秒），但螺纹<b>咬住</b>了：就像拧进木头的螺丝，直接拔是拔不出来的（这叫<b>自锁</b>）。断电、振动都不跑 ✓，所以我们选丝杆。',s:{mech:'screw',fast:0,verdict:1}}
+],s2,draw2);
+const pick2=m=>{s2.mech=m;s2.verdict=1;};
+$('f2a').onclick=()=>pick2('gear');$('f2b').onclick=()=>pick2('belt');$('f2c').onclick=()=>pick2('vc');$('f2d').onclick=()=>pick2('screw');
+$('f2e').onclick=()=>{s2.fast=s2.fast?0:1;s2.verdict=1;if(s2.mech==='req')s2.mech='screw';$('f2e').setAttribute('aria-pressed',s2.fast?'true':'false');};
+
+/* ===== 3 买还是做 ===== */
+const s3={hl:-1,v1:0,v2:0,v3:0,path:0,mode:'proto'};
+function draw3(){
+  let g='';const X=[20,290,560],W=260;
+  const sel=s3.hl;
+  X.forEach((x,i)=>{const on=sel===i;g+=`<g opacity="${sel<0||on?1:.42}">`+R(x,40,W,240,'var(--surface)',on?'var(--card)':'var(--line)',on?3:1,12);
+    g+=T(x+W/2,66,['① 买整套 Z 模块','② 买电动平移台，装镜片','③ 自己设计，全部集成'][i],15,'var(--fg)','middle',700);
+    if(i===0){g+=R(x+40,110,160,64,'#3a4150','none',0,10)+lens(x+80,142,16)+lens(x+150,142,24)+R(x+200,134,40,16,'#9aa3ad')+T(x+120,100,'商业产品（如 R036）',12,'var(--muted)','middle');
+      g+=`<path d="M${x+40},142 H${x+10}" stroke="var(--beam)" stroke-width="2"/>`;
+      g+=T(x+W/2,206,'很快：不到 1 毫秒',13,'var(--fg)')+T(x+W/2,226,'但按 0.2–0.7 m 设计',13,'var(--fg)')+T(x+W/2,246,'配 14 mm 振镜',13,'var(--fg)');}
+    if(i===1){const o=10*Math.sin(TT*1.2);
+      g+=R(x+20,178,220,10,'var(--metal)')+R(x+36,146,120,32,'#55606e')+R(x+156,152,30,22,'#1d2330','var(--muted)',1)+R(x+44+o,136,80,10,'#9aa3ad');
+      g+=R(x+80+o,104,6,32,'#6b7686')+lens(x+83+o,96,14)+R(x+212,118,8,60,'#6b7686')+lens(x+216,110,22);
+      g+=T(x+90,170,'平移台',11,'#e7ebf1','middle',700)+T(x+204,104,'物镜',11,'var(--muted)','end')+T(x+94+o,100,'动镜',11,'var(--muted)','start');
+      g+=T(x+W/2,206,'电机、丝杆、导轨、原点开关',13,'var(--fg)')+T(x+W/2,226,'厂家已经装好、调好',13,'var(--fg)')+T(x+W/2,246,'我们只做镜座和底板',13,'var(--fg)');}
+    if(i===2){g+=R(x+30,96,200,84,'none','var(--muted)',2,10)+R(x+30,92,200,6,'var(--muted)');
+      g+=R(x+48,128,24,14,'#1d2330','var(--muted)',1)+R(x+72,132,70,6,'#c9cdd3')+R(x+92,120,16,24,'#d4a72c')+lens(x+100,112,10)+lens(x+160,135,22)+`<line x1="${x+190}" y1="120" x2="${x+212}" y2="150" stroke="var(--glass)" stroke-width="4"/>`+R(x+226,124,6,30,'var(--glass-fill)','var(--glass)',1.5,2);
+      g+=T(x+W/2,206,'就是 v0.3 那套 3D 结构',13,'var(--fg)')+T(x+W/2,226,'密封、紧凑，做多了便宜',13,'var(--fg)')+T(x+W/2,246,'每个零件都要自己装调',13,'var(--fg)');}
+    const v=[s3.v1,s3.v2,s3.v3][i];
+    if(v>.5){let txt,c;
+      if(i===0){[txt,c]=s3.mode==='near'?['✓ 这种需求，直接买','var(--ok)']:['✗ 打 50 m 对不上','var(--bad)'];}
+      if(i===1){[txt,c]=s3.mode==='proto'?['✓ 第一台样机就用它','var(--ok)']:['△ 能用，但不密封','var(--proj2)'];}
+      if(i===2){[txt,c]=s3.mode==='prod'?['✓ 产品就用它','var(--ok)']:['→ 样机通过后再做','var(--proj2)'];}
+      g+=T(x+W/2,270,txt,14,c,'middle',700);}
+    g+='</g>';});
+  if(s3.path>.5){g+=arrow(420,300,680,300,'var(--card)',2.5)+T(400,305,'先 ②',13,'var(--card)','end',700)+T(700,305,'后 ③',13,'var(--card)','start',700)+T(550,316,'50 m 光点验证通过',11,'var(--card)','middle',700);}
+  $('svg3').innerHTML=g;
+}
+ANIM.push(()=>draw3());
+const st3=stepper(3,[
+ {t:'Z 这部分有<b>三条路</b>：整套买、买半成品自己装镜片、全部自己做。',s:{hl:-1,v1:0,v2:0,v3:0,path:0,mode:'proto'}},
+ {t:'<b>① 整套买</b>：商业 Z 模块很快（不到 1 毫秒），可它的镜片是为 <b>0.2–0.7 m</b>、14 mm 振镜设计的（R036）。我们要打 50 m，配 30 mm 振镜，<b>对不上</b>；而且它的“快”我们也用不上。',s:{hl:0,v1:1,v2:0,v3:0,path:0,mode:'proto'}},
+ {t:'<b>② 买电动平移台</b>：电机、丝杆、导轨、原点开关<b>厂家已经装好、调好</b>，接上驱动器就能动。我们只做两个镜座、一块底板，再把镜片对正。这就是你说的“<b>买一个调一调装一装</b>”。',s:{hl:1,v1:1,v2:1,v3:0,path:0,mode:'proto'}},
+ {t:'<b>③ 自己集成</b>：就是 v0.3 那套 3D 结构，密封、紧凑，做多了便宜。但每个零件都要自己装、自己调，<b>第一台不划算</b>。',s:{hl:2,v1:1,v2:1,v3:1,path:0,mode:'proto'}},
+ {t:'所以路线是：<b>先用 ② 搭样机</b>，验证 50 m 光点真的 ≤ 5 mm；<b>通过了再做 ③</b>。两种都用 STEP/DIR 接控制卡，接法一样。',s:{hl:1,v1:1,v2:1,v3:1,path:1,mode:'proto'}}
+],s3,draw3);
+const mode3=(m,h)=>{s3.mode=m;s3.hl=h;s3.v1=1;s3.v2=1;s3.v3=1;s3.path=0;};
+$('f3a').onclick=()=>mode3('proto',1);$('f3b').onclick=()=>mode3('prod',2);$('f3c').onclick=()=>mode3('near',0);
+
+window.__beforeExport=()=>{st1.go(3,true);st2.go(4,true);st3.go(4,true);};
+const QS=[
+ {q:'拧螺栓的时候，螺母为什么会直着走？',o:['螺母被捏住（被导轨卡住），转不了','螺栓转着转着变长了'],a:0,e:['对。螺母不能转，就只能沿着螺纹走。','螺栓长度不变；是螺母被卡住不能转。']},
+ {q:'丝杆导程 1 mm，电机转了 3 圈，镜片走多远？',o:['3 mm','1 mm'],a:0,e:['对。转一圈走一格，一格 1 mm。','转一圈走 1 mm，转 3 圈就是 3 mm。']},
+ {q:'断电以后被振了一下，哪种传动的镜片还在原位？',o:['音圈','丝杆'],a:1,e:['音圈靠电流顶着，断电就没力气了。','对。螺纹咬住，推不动（自锁）。']},
+ {q:'第一台样机的 Z，怎么做最快？',o:['买整套商业 Z 模块','买电动平移台，自己装镜片'],a:1,e:['商业模块是为 0.2–0.7 m 设计的，打 50 m 对不上。','对。厂家已经把电机、丝杆、导轨调好了。']}
+];
+$('quiz').innerHTML=QS.map((q,i)=>`<div class="q" data-i="${i}"><p>Q${i+1}. ${q.q}</p><div class="row">${q.o.map((o,j)=>`<button data-j="${j}">${o}</button>`).join('')}</div><div class="fb" aria-live="polite"></div></div>`).join('');
+document.querySelectorAll('.q button').forEach(b=>b.onclick=()=>{const qd=b.closest('.q'),q=QS[+qd.dataset.i],j=+b.dataset.j;
+  qd.querySelectorAll('button').forEach(x=>x.classList.remove('right','wrong'));b.classList.add(j===q.a?'right':'wrong');
+  qd.querySelector('.fb').textContent=(j===q.a?'✓ ':'✗ ')+q.e[j];});
+</script>
