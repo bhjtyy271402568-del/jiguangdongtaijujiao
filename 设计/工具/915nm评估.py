@@ -30,12 +30,12 @@ md += ["", "## 2. 焦深（光斑基本不变的前后范围）\n", "| 光源 | 
 for name, M2 in rows:
     md.append(f"| {name} | ±{dof(M2, spot(M2, 1))*1000:.0f} mm | ±{dof(M2, spot(M2, 3))*1000:.0f} mm | ±{dof(M2, spot(M2, 10)):.1f} m |")
 # 行程
-dl = lambda L, f2=F2: f2 ** 2 / (L * 1000)                     # 动镜离“对焦无穷远”位置后退 mm
+dl = lambda L, f2=F2: f2 ** 2 / (L * 1000 - f2)                # 动镜离“对焦无穷远”位置后退 mm（薄透镜牛顿式，L 从物镜量起；v0.1 曾用近似 f2²/L，近处偏小）
 need = dl(1) - dl(10)
 car = P["CAR_L"] / 2; xmin = P["STOP_REAR"] + car; xmax = P["STOP_FRONT"] - car
-dmax = P["X_L1_INF"] - xmin; Lmin = F2 ** 2 / dmax / 1000
+dmax = P["X_L1_INF"] - xmin; Lmin = (F2 + F2 ** 2 / dmax) / 1000
 md += ["", "## 3. 现在的结构够不够（模型不改）\n",
-       f"- 对焦 1 m 时动镜要后退 {dl(1):.1f} mm，10 m 时 {dl(10):.2f} mm → 1–10 m 需要行程 **{need:.1f} mm**（现在 5–50 m 只要 4.05 mm）【推算】",
+       f"- 对焦 1 m 时动镜要后退 {dl(1):.1f} mm，10 m 时 {dl(10):.2f} mm → 1–10 m 需要行程 **{need:.1f} mm**（现在 5–50 m 只要 {dl(5)-dl(50):.2f} mm）【推算】",
        f"- 现在硬限位之间滑座可走 X {xmin:.1f}–{xmax:.1f}，最多后退 {dmax:.1f} mm → 最近只能对焦到约 **{Lmin:.1f} m**；**1–{Lmin:.1f} m 够不着**",
        "- 两种改法（以后再改模型）：", "",
        "| 改法 | 1–10 m 行程 | 代价 |", "|---|---|---|"]
