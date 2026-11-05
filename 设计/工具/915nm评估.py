@@ -59,7 +59,7 @@ for L, d in TGT:
 md.append(f"\n- 出光口径加大也能缩小光斑：D 20 → 30 mm，光斑 × 0.67（振镜口径要 ≥ 45 mm）")
 CURVE_D = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 json.dump(dict(lam_nm=915, D_mm=DOUT * 1000, sources=[dict(name=n, m2=round(m, 1)) for n, m in rows],
-               curve=dict(dist=CURVE_D, series=[dict(m2=m, d=[round(spot(m, L) * 1000, 2) for L in CURVE_D]) for m in (1.2, 5, 13, 27, 40)]),
+               curve=dict(dist=CURVE_D, series=[dict(m2=m, d=[round(spot(m, L) * 1000, 2) for L in CURVE_D]) for m in (1.2, round(m2max(0.005, 10), 1), 40)]),
                req=req, travel=dict(need=round(need, 1), dmax=round(dmax, 1), Lmin=round(Lmin, 1))),
           open(os.path.join(here, "915nm评估.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 open(os.path.join(here, "915nm评估结果.md"), "w", encoding="utf-8").write("\n".join(md) + "\n")
