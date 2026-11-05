@@ -48,5 +48,19 @@ md += ["", "## 4. 其他要换 / 要注意的",
        "- 焦距随波长略变（色散）→ Z 位置表按 915 nm 重新标定",
        "- 大功率半导体（几十到几百瓦连续）：动镜处 4 mm 光束功率密度高，选熔石英 + 高损伤阈值膜；注意热透镜",
        "- 振镜口径：20 mm 光束配 30 mm 振镜够用；若要更小光斑可把出光加大（光斑 ∝ 1/D），振镜要跟着加大"]
+# 5. 反过来：想要多大光斑，激光器 M² 至少要多小（M² ≤ π·D·d / (4·λ·L)）
+def m2max(d, L, Dm=DOUT): return math.pi * Dm * d / (4 * LAM * L)
+TGT = [(1, 0.5), (1, 1), (1, 2), (10, 1), (10, 2), (10, 5), (10, 10)]
+md += ["", "## 5. 想要多大光斑 → 激光器 M² 至少要多小（出光 20 mm）\n", "| 距离 | 光斑要 ≤ | M² 要 ≤ | 相当于 BPP ≤ (mm·mrad) |", "|---|---|---|---|"]
+req = []
+for L, d in TGT:
+    m = m2max(d / 1000, L); req.append(dict(L=L, d=d, m2=round(m, 1), bpp=round(m * LAM * 1e6 / math.pi, 2)))
+    md.append(f"| {L} m | {d} mm | {m:.1f} | {m * LAM * 1e6 / math.pi:.2f} |")
+md.append(f"\n- 出光口径加大也能缩小光斑：D 20 → 30 mm，光斑 × 0.67（振镜口径要 ≥ 45 mm）")
+CURVE_D = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+json.dump(dict(lam_nm=915, D_mm=DOUT * 1000, sources=[dict(name=n, m2=round(m, 1)) for n, m in rows],
+               curve=dict(dist=CURVE_D, series=[dict(m2=m, d=[round(spot(m, L) * 1000, 2) for L in CURVE_D]) for m in (1.2, 5, 13, 27, 40)]),
+               req=req, travel=dict(need=round(need, 1), dmax=round(dmax, 1), Lmin=round(Lmin, 1))),
+          open(os.path.join(here, "915nm评估.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 open(os.path.join(here, "915nm评估结果.md"), "w", encoding="utf-8").write("\n".join(md) + "\n")
 print("\n".join(md))
