@@ -2,12 +2,12 @@
  "moving_g": {
   "Z03_Carriage": 27.08,
   "Z03b_EndSeals": 0.4,
-  "Z04_LensHolder": 5.84,
+  "Z04_LensHolder": 4.96,
   "Z04b_HolderScrews": 0.45,
   "Z05_L1": 0.84,
   "Z06_L1Ring": 0.2,
-  "Z07_CarriageTab": 0.45,
-  "Z07b_NutBracket": 2.0,
+  "Z07_CarriageTab": 0.44,
+  "Z07b_NutBracket": 1.96,
   "Z07c_BracketScrews": 0.24,
   "Z21_FloatBall": 0.26,
   "Z21b_PreloadSpring": 0.06,
@@ -17,7 +17,7 @@
   "Z08c_NutSpring": 0.28,
   "Z17_Flag": 0.41
  },
- "total_g": 50.9,
+ "total_g": 50.0,
  "rho_g_cm3": {
   "Z03_Carriage": 7.85,
   "Z03b_EndSeals": 1.2,
