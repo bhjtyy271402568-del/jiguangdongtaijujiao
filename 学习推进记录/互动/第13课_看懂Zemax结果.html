@@ -1,0 +1,333 @@
+<meta charset="utf-8">
+<title>看懂 Zemax 结果</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@700;900&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* 第 13 课：看懂 Zemax 结果——光线怎么算、点列图是什么、RMS 波前是什么（真实光线追迹，镜片尺寸放大画） */
+:root{
+  --bg:#f4f6f9; --surface:#ffffff; --fg:#151a23; --muted:#5d6676; --line:#d8dee7;
+  --beam:#e5383b; --beam-soft:#f6b3b4; --glass:#2b7bb9; --glass-fill:#dcecf8;
+  --ok:#17914f; --bad:#d23c3c; --proj2:#e0701c; --card:#2c5fd6; --card-fill:#e2eafc;
+  --metal:#7b8697; --band:#17914f22; --wave:#0ea5c6;
+  --f-body:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --f-display:"Noto Serif SC","Songti SC",serif;
+  --f-num:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1218; --surface:#171c25; --fg:#e7ebf1; --muted:#9aa4b4; --line:#2b3240;
+  --beam:#ff5c60; --beam-soft:#7a2a2d; --glass:#6db5ee; --glass-fill:#1c3448;
+  --ok:#3fd082; --bad:#ff6b6b; --proj2:#ff9a4a; --card:#82a6ff; --card-fill:#1d2a4a;
+  --metal:#8c97a8; --band:#3fd08226; --wave:#4fd1e6; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1218; --surface:#171c25; --fg:#e7ebf1; --muted:#9aa4b4; --line:#2b3240;
+  --beam:#ff5c60; --beam-soft:#7a2a2d; --glass:#6db5ee; --glass-fill:#1c3448;
+  --ok:#3fd082; --bad:#ff6b6b; --proj2:#ff9a4a; --card:#82a6ff; --card-fill:#1d2a4a;
+  --metal:#8c97a8; --band:#3fd08226; --wave:#4fd1e6; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:15px;line-height:1.65}
+.wrap{max-width:900px;margin:0 auto;padding-block:28px 56px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:flex;flex-direction:column;gap:28px}
+header{display:flex;flex-direction:column;gap:6px}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--muted)}
+h1{font-family:var(--f-display);font-weight:900;font-size:clamp(28px,5vw,40px);margin:0;line-height:1.2;text-wrap:balance}
+.lede{color:var(--muted);margin:0;max-width:62ch}
+section{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:14px;min-width:0}
+h2{font-family:var(--f-display);font-size:21px;margin:0;display:flex;gap:10px;align-items:baseline;text-wrap:balance}
+h2 .n{font-family:var(--f-num);font-size:13px;color:var(--beam)}
+.stage{overflow-x:auto;border-radius:10px;background:var(--bg)}
+.stage svg{display:block;width:100%;height:auto}
+.ctl{display:flex;flex-direction:column;gap:4px;min-width:0}
+.ctl label{font-size:13px;display:flex;justify-content:space-between;gap:8px}
+.ctl label span{font-family:var(--f-num);color:var(--muted);font-size:12px}
+input[type=range]{width:100%;accent-color:var(--beam)}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+button{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--surface);color:var(--fg);
+  border-radius:999px;padding:6px 14px;cursor:pointer}
+button:hover{border-color:var(--muted)}
+button:disabled{opacity:.45;cursor:default}
+button:focus-visible,input:focus-visible{outline:2px solid var(--card);outline-offset:2px}
+button[aria-pressed=true]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.note{font-size:12px;color:var(--muted);margin:0}
+.quiz{display:flex;flex-direction:column;gap:16px}
+.q p{margin:0 0 6px;font-weight:500}
+.q .fb{font-size:14px;margin-top:6px;min-height:1.6em}
+.q button.right{border-color:var(--ok);color:var(--ok)}
+.q button.wrong{border-color:var(--bad);color:var(--bad)}
+footer{font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+footer b{color:var(--fg)}
+svg text{font-family:var(--f-body)}
+.q-big{font-family:var(--f-display);font-size:clamp(20px,3.6vw,26px);font-weight:900;margin:0;text-wrap:balance}
+.cap-box{display:flex;gap:12px;align-items:flex-start;background:var(--card-fill);border-radius:10px;padding:12px 14px;min-height:72px}
+.cap-box .no{font-family:var(--f-num);font-size:13px;color:var(--card);white-space:nowrap;padding-top:3px}
+.cap-box p{margin:0;font-size:16px;line-height:1.6}
+.cap-box b{color:var(--beam)}
+.stepbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.dots{display:flex;gap:6px;margin-left:4px}
+.dots i{width:9px;height:9px;border-radius:50%;background:var(--line);display:block}
+.dots i.on{background:var(--card)}
+.free{border-top:1px dashed var(--line);padding-top:12px;display:flex;flex-direction:column;gap:10px}
+.free .t{font-size:13px;color:var(--muted)}
+.big-next{background:var(--card);color:#fff;border-color:var(--card);font-weight:700}
+.concl{font-size:15px;font-weight:700;color:var(--ok);margin:0}
+.check{display:grid;grid-template-columns:2.2em 1fr;gap:10px 12px;margin:0;align-items:start}
+.check .k{font-family:var(--f-num);font-size:13px;color:#fff;background:var(--card);border-radius:999px;width:1.9em;height:1.9em;display:grid;place-items:center}
+.check p{margin:0}
+.check b{color:var(--beam)}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+<div class="wrap">
+<header>
+  <div class="eyebrow">激光扫描系统入门 · 第 13 课</div>
+  <h1>看懂 Zemax 的结果</h1>
+  <p class="lede">Codex 给你的结果里，最常见的就三样东西：光线图、点列图、RMS 波前。下面三张图，每张讲清楚其中一样。图里的光线是真的按折射定律算出来的，只是把镜片画得特别“猛”，让误差看得清。</p>
+</header>
+
+<section aria-labelledby="s1">
+  <p class="q-big" id="s1">问题 1：Zemax 到底在算什么？</p>
+  <div class="stage"><svg id="svg1" data-export="13-1_Zemax在算什么" viewBox="0 0 840 320" role="img" aria-label="问题 1：Zemax 到底在算什么？"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n1"></span><p id="c1"></p></div>
+  <div class="stepbar"><button id="p1">← 上一步</button><button id="x1" class="big-next">下一步 →</button><span class="dots" id="d1"></span></div>
+  <div class="free"><span class="t">自己玩：</span>
+    <div class="row"><button id="m1A">弯面朝来光（正放）</button><button id="m1B">平面朝来光（反放）</button><button id="m1I">理想透镜</button></div>
+    <div class="ctl"><label for="f1">光束粗细（越粗，镜片要拐的弯越猛）<span id="f1V"></span></label><input id="f1" type="range" min="15" max="58" step="1" value="55"></div></div>
+  <p class="concl">记住一句：Zemax 就是把光线一条一条按折射定律算到底；真实球面镜边上的光会拐过头（球差），所以聚不成一个点。</p>
+</section>
+
+<section aria-labelledby="s2">
+  <p class="q-big" id="s2">问题 2：点列图（Spot Diagram）上那一团点是什么？</p>
+  <div class="stage"><svg id="svg2" data-export="13-2_点列图是什么" viewBox="0 0 840 320" role="img" aria-label="问题 2：点列图上那一团点是什么？"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n2"></span><p id="c2"></p></div>
+  <div class="stepbar"><button id="p2">← 上一步</button><button id="x2" class="big-next">下一步 →</button><span class="dots" id="d2"></span></div>
+  <div class="free"><span class="t">自己玩：</span>
+    <div class="ctl"><label for="f2s">纸放在哪（前后挪）<span id="f2sV"></span></label><input id="f2s" type="range" min="-40" max="40" step="0.5" value="0"></div>
+    <div class="ctl"><label for="f2h">光束粗细<span id="f2hV"></span></label><input id="f2h" type="range" min="15" max="58" step="1" value="55"></div>
+    <div class="row"><button id="f2o">自动找最挤的位置（= 优化）</button></div></div>
+  <p class="concl">记住一句：点列图 = 在焦点放一张纸、正面看光线打的点；点都落在黑圈（艾里斑）里 = 镜片够好，再好也看不出区别。</p>
+</section>
+
+<section aria-labelledby="s3">
+  <p class="q-big" id="s3">问题 3：“RMS 波前 0.07 waves”是什么意思？</p>
+  <div class="stage"><svg id="svg3" data-export="13-3_RMS波前是什么" viewBox="0 0 840 320" role="img" aria-label="问题 3：RMS 波前 0.07 waves 是什么意思？"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n3"></span><p id="c3"></p></div>
+  <div class="stepbar"><button id="p3">← 上一步</button><button id="x3" class="big-next">下一步 →</button><span class="dots" id="d3"></span></div>
+  <div class="free"><span class="t">自己玩：</span>
+    <div class="ctl"><label for="f3">镜片误差（RMS 波前，单位：波长）<span id="f3V"></span></label><input id="f3" type="range" min="0" max="0.25" step="0.005" value="0.07"></div></div>
+  <p class="concl">记住一句：RMS 波前 = 镜片把波峰“掰歪”了平均几个波长；≤ 0.07 波长，焦点亮度还有八成以上，算合格。</p>
+</section>
+
+<section aria-labelledby="s4">
+  <h2 id="s4"><span class="n">→</span>拿到 Codex 的结果，按这个顺序看</h2>
+  <div class="check">
+    <span class="k">1</span><p>先看<b>理想透镜</b>那一份：每个配置的 RMS 光斑都接近 0 → 说明表填对了，后面的结果可信。（问题 1 第 2 步）</p>
+    <span class="k">2</span><p>再看每个方案的 <b>RMS 波前</b>：≤ 0.07 waves 就打勾，超过就打叉。只在打勾的方案里挑。（问题 3）</p>
+    <span class="k">3</span><p>最后看<b>动镜行程</b>（1 m 与 10 m 两个配置的间距差），跟现在结构能走的 8 mm 比。行程短、又打勾的方案最好。</p>
+  </div>
+  <p class="note">点列图只当“看一眼”：点都在黑圈里就好；点在黑圈外，回头看 RMS 波前那个数就够了。</p>
+</section>
+
+<section aria-labelledby="s7"><h2 id="s7"><span class="n">✓</span>小测</h2><div class="quiz" id="quiz"></div></section>
+<footer>
+  <div><b>本课对项目的推进：</b></div>
+  <div>· 能自己读 Codex 的结果：只看三样——理想透镜那份对不对、每个方案的 RMS 波前打不打勾、动镜行程够不够</div>
+  <div>· 明白了为什么要试“正放 / 反放 / 双胶合 / 短焦”：都是在比谁的球差小</div>
+  <div>· 和激光器连起来：常见 915 nm 光纤激光器 M² ≈ 40，光斑本来就是“完美光斑”的 40 倍，镜片这点误差几乎看不出来；只有激光器接近单模时，0.07 波长这条线才要卡死</div>
+</footer>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const T=(x,y,t,s=14,c='var(--fg)',a='middle',w=400)=>`<text x="${x}" y="${y}" font-size="${s}" fill="${c}" text-anchor="${a}" font-weight="${w}">${t}</text>`;
+function stepper(k,steps,state,draw){
+  let i=0,anim=0;
+  const dots=$('d'+k);dots.innerHTML=steps.map(()=>'<i></i>').join('');
+  function go(n,instant){i=Math.max(0,Math.min(steps.length-1,n));const to={...state,...steps[i].s},from={...state},t0=performance.now(),dur=(reduce||instant)?0:700;
+    cancelAnimationFrame(anim);
+    const tick=now=>{const p=dur?Math.min(1,(now-t0)/dur):1,e=p<.5?2*p*p:1-(-2*p+2)**2/2;
+      for(const key in to){if(typeof to[key]==='number')state[key]=from[key]+(to[key]-from[key])*e;else state[key]=to[key];}
+      draw();if(p<1)anim=requestAnimationFrame(tick);};
+    if(!dur){for(const key in to)state[key]=to[key];draw();}else anim=requestAnimationFrame(tick);
+    $('c'+k).innerHTML=steps[i].t;$('n'+k).textContent=`第 ${i+1} / ${steps.length} 步`;
+    dots.querySelectorAll('i').forEach((d,j)=>d.classList.toggle('on',j<=i));
+    $('p'+k).disabled=i===0;$('x'+k).textContent=i===steps.length-1?'从头再看 ↺':'下一步 →';}
+  $('p'+k).onclick=()=>go(i-1);$('x'+k).onclick=()=>go(i===steps.length-1?0:i+1);
+  go(0,true);return {go,n:steps.length};
+}
+const arrow=(x1,y1,x2,y2,c,w=3)=>{const a=Math.atan2(y2-y1,x2-x1),h=9;return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${c}" stroke-width="${w}"/><polygon points="${x2},${y2} ${x2-h*Math.cos(a-0.45)},${y2-h*Math.sin(a-0.45)} ${x2-h*Math.cos(a+0.45)},${y2-h*Math.sin(a+0.45)}" fill="${c}"/>`;};
+let TT=0;const ANIM=[];(function loop(){TT+=0.016;ANIM.forEach(f=>f(TT));requestAnimationFrame(loop);})();
+
+/* ===== 真实光线追迹（2D，平凸镜 n = 1.5，R = 100，中心厚 24；坐标原点在光轴上） ===== */
+const NG=1.5,RL=100,TH=24,LH=62;
+function refr(d,m,n1,n2){let c=-(d[0]*m[0]+d[1]*m[1]);if(c<0){m=[-m[0],-m[1]];c=-c;}const e=n1/n2,k=1-e*e*(1-c*c);if(k<0)return null;const s=e*c-Math.sqrt(k);return [e*d[0]+s*m[0],e*d[1]+s*m[1]];}
+function hit(p,d,S){if(S.t==='p'){const t=(S.x-p[0])/d[0];return [[p[0]+t*d[0],p[1]+t*d[1]],[-1,0]];}
+  const cx=S.x+S.R,ox=p[0]-cx,oy=p[1],b=ox*d[0]+oy*d[1],c=ox*ox+oy*oy-S.R*S.R,D=b*b-c;
+  const t=S.R>0?-b-Math.sqrt(D):-b+Math.sqrt(D),q=[p[0]+t*d[0],p[1]+t*d[1]];return [q,[(q[0]-cx)/Math.abs(S.R),q[1]/Math.abs(S.R)]];}
+const surfs=(mode,x0)=>mode==='B'?[{t:'p',x:x0},{t:'s',x:x0+TH,R:-RL}]:[{t:'s',x:x0,R:RL},{t:'p',x:x0+TH}];
+const FI=200;                                   // 理想透镜焦距（同一片镜子的“该有的”焦距）
+function trace(h,mode,x0,xs){                   // h：入射高度（向上为正）；返回折线点 + 出射方向
+  if(mode==='I'){const xl=x0+TH/2;return {pts:[[xs,h],[xl,h]],p:[xl,h],d:(()=>{const dx=FI,dy=-h,L=Math.hypot(dx,dy);return [dx/L,dy/L];})()};}
+  let p=[xs,h],d=[1,0];const ns=[1,NG,1],pts=[p];
+  for(const [i,S] of surfs(mode,x0).entries()){const r=hit(p,d,S);p=r[0];pts.push(p);d=refr(d,r[1],ns[i],ns[i+1]);}
+  return {pts,p,d};}
+const atX=(r,x)=>r.p[1]+(x-r.p[0])*r.d[1]/r.d[0];
+const cross=r=>r.p[0]-r.p[1]*r.d[0]/r.d[1];
+const parax=(mode,x0)=>cross(trace(0.5,mode,x0,0));
+function lensPath(mode,x0,cy){const pts=[];const N=24;
+  if(mode==='I')return '';
+  if(mode==='A'){for(let k=0;k<=N;k++){const y=-LH+2*LH*k/N;pts.push([x0+RL-Math.sqrt(RL*RL-y*y),y]);}pts.push([x0+TH,LH],[x0+TH,-LH]);}
+  else{pts.push([x0,-LH],[x0,LH]);for(let k=0;k<=N;k++){const y=LH-2*LH*k/N;pts.push([x0+TH-RL+Math.sqrt(RL*RL-y*y),y]);}}
+  return `<path d="M${pts.map(p=>`${p[0].toFixed(1)},${(cy+p[1]).toFixed(1)}`).join(' L')} Z" fill="var(--glass-fill)" stroke="var(--glass)" stroke-width="2"/>`;}
+function idealLens(x,cy){return `<line x1="${x}" y1="${cy-LH}" x2="${x}" y2="${cy+LH}" stroke="var(--glass)" stroke-width="3"/><polygon points="${x},${cy-LH-8} ${x-7},${cy-LH+4} ${x+7},${cy-LH+4}" fill="var(--glass)"/><polygon points="${x},${cy+LH+8} ${x-7},${cy+LH-4} ${x+7},${cy+LH-4}" fill="var(--glass)"/>`;}
+const heights=hm=>{const a=[];for(let k=1;k<=6;k++){const h=hm*k/6;a.push(h,-h);}return a;};
+const rayCol=(h,hm)=>{const t=Math.abs(h)/hm;return t>0.95?'var(--beam)':t>0.6?'var(--proj2)':'#e8b04a';};
+
+/* ===== 1 Zemax 在算什么 ===== */
+const s1={mode:'I',one:1,norm:1,hm:55,spread:0};
+const X1=260,CY=160;
+function draw1(){
+  const mode=s1.mode,hm=s1.hm;let g=`<line x1="20" y1="${CY}" x2="820" y2="${CY}" stroke="var(--muted)" stroke-width="1" stroke-dasharray="4 5"/>`+T(814,CY-6,'光轴',11,'var(--muted)','end');
+  g+=mode==='I'?idealLens(X1+TH/2,CY):lensPath(mode,X1,CY);
+  const hs=s1.one>0.5?[45]:heights(hm);const xs=[];
+  for(const h of hs){const r=trace(h,mode,X1,30);const xe=700;const ye=atX(r,xe);
+    const pts=[...r.pts,[xe,ye]].map(p=>`${p[0].toFixed(1)},${(CY-p[1]).toFixed(1)}`).join(' ');
+    g+=`<polyline points="${pts}" fill="none" stroke="${rayCol(h,hm)}" stroke-width="${s1.one>0.5?2.6:1.6}"/>`;
+    xs.push(cross(r));
+    if(s1.one>0.5&&s1.norm>0.5&&mode!=='I'){const S=surfs(mode,X1);r.pts.slice(1).forEach((p,i)=>{const Sx=S[i];let nx=-1,ny=0;if(Sx.t==='s'){nx=(p[0]-(Sx.x+Sx.R))/Math.abs(Sx.R);ny=p[1]/Math.abs(Sx.R);}
+      g+=`<line x1="${p[0]-nx*36}" y1="${CY-(p[1]-ny*36)}" x2="${p[0]+nx*36}" y2="${CY-(p[1]+ny*36)}" stroke="var(--muted)" stroke-width="1.2" stroke-dasharray="3 3"/>`;});
+      g+=T(r.pts[1][0]-40,CY-r.pts[1][1]-30,'虚线 = 镜面的“垂直方向”',11,'var(--muted)','middle');
+      g+=T(560,CY-58,'拐多少弯：只由入射角和玻璃决定（折射定律）',12,'var(--fg)','middle',700);}
+  }
+  g+=T(30,CY-hm-8>20?CY-hm-10:24,s1.one>0.5?'一条光线':`${hs.length} 条光线`,12,'var(--muted)','start',700);
+  if(s1.one<0.5){const mn=Math.min(...xs),mx=Math.max(...xs),sp=mx-mn;
+    xs.forEach((x,i)=>{g+=`<line x1="${x}" y1="${CY-5}" x2="${x}" y2="${CY+5}" stroke="${rayCol(hs[i],hm)}" stroke-width="2"/>`;});
+    if(sp<1.5){g+=`<circle cx="${mn}" cy="${CY}" r="6" fill="none" stroke="var(--ok)" stroke-width="2.5"/>`+T(mn,CY+44,'全部汇到一个点 = 焦点',13,'var(--ok)','middle',700);}
+    else{const ref=(()=>{const q=heights(55).map(h=>cross(trace(h,'A',X1,30)));return Math.max(...q)-Math.min(...q);})(),k=sp/ref;
+      const msg=mode==='B'?`散开的一段是正放时的 ${k.toFixed(1)} 倍`:hm<54?`散开的一段只剩光束全粗时的 ${Math.round(k*100)}%`:'没汇到一点：散开了一段';
+      g+=`<path d="M${mn},${CY+26} V${CY+34} H${mx} V${CY+26}" fill="none" stroke="var(--bad)" stroke-width="2"/>`+T((mn+mx)/2,CY+54,msg,13,'var(--bad)','middle',700);
+      g+=T((mn+mx)/2,CY+72,'越靠边的光（红）越早穿过光轴',12,'var(--bad)','middle');}}
+  const top=mode==='I'?'理想透镜（Zemax 里叫 Paraxial）：没有误差':mode==='A'?'真实平凸镜，弯面朝着来光（正放）':'同一片镜子翻过来：平面朝着来光（反放）';
+  g+=T(420,24,top,15,mode==='I'?'var(--ok)':mode==='A'?'var(--fg)':'var(--bad)','middle',700);
+  g+=T(800,312,'镜片和光束都放大画；光线是真算的',11,'var(--muted)','end');
+  $('svg1').innerHTML=g;$('f1V').textContent=Math.round(hm/55*100)+'%';
+  ['A','B','I'].forEach(m=>$('m1'+m).setAttribute('aria-pressed',String(mode===m&&s1.one<0.5)));
+}
+const st1=stepper(1,[
+ {t:'先只看<b>一条光线</b>。它碰到镜面会拐个弯，就像筷子插进水里看着像折了。Zemax 只会做这一件事：按<b>折射定律</b>算它拐多大弯。拐多少，只看光线和镜面“垂直方向”（虚线）的夹角，再加上玻璃的种类。',s:{mode:'A',one:1,norm:1,hm:55}},
+ {t:'光束其实是很多条光线，Zemax 就<b>一条一条</b>地算。先看<b>理想透镜</b>（Zemax 里叫 Paraxial）：所有光线都汇到同一点。这种透镜现实里没有，只用来检查“表填对没有”，Codex 第 1 步就是这个。',s:{mode:'I',one:0,norm:0,hm:55}},
+ {t:'换成<b>真实</b>的平凸镜：表面是球面，越靠边的光线拐得越<b>过头</b>，越早穿过光轴，光就没汇成一个点，散开了一段。这叫<b>球差</b>，是光斑变大的主要原因。',s:{mode:'A',one:0,norm:0,hm:55}},
+ {t:'同一片镜子<b>翻过来</b>（平面朝来光）：散得更厉害，大约是正放的 4 倍。规律：<b>弯面朝着平行光那一侧</b>，光在两个面上分摊着拐，每次都拐得少，误差就小。所以 Codex 正反都试了一遍。',s:{mode:'B',one:0,norm:0,hm:55}},
+ {t:'光束<b>细一点</b>，镜片就不用拐那么猛的弯，球差一下子小很多。双胶合镜、短焦方案也是一样的道理：每种结构都是在比<b>谁散得少</b>。到底哪种好，只能靠 Zemax 一条条算出来，这就是 Codex 跑好几种结构的原因。',s:{mode:'A',one:0,norm:0,hm:30}}
+],s1,draw1);
+const free1=(t)=>{s1.one=0;s1.norm=0;$('n1').textContent='自己玩';$('c1').innerHTML=t;draw1();};
+$('m1A').onclick=()=>{s1.mode='A';free1('正放：弯面朝来光，散得少。');};
+$('m1B').onclick=()=>{s1.mode='B';free1('反放：平面朝来光，散得多。');};
+$('m1I').onclick=()=>{s1.mode='I';free1('理想透镜：全部汇到一点（现实里没有）。');};
+$('f1').addEventListener('input',()=>{s1.hm=+$('f1').value;if(s1.mode==='I')s1.mode='A';free1(`光束粗细 ${Math.round(s1.hm/55*100)}%：越粗，边上的光拐得越猛，散得越开。`);});
+
+/* ===== 2 点列图 ===== */
+const X2=110,LAMP=0.21,ZF=24,PC=[690,165],PR=118;  // LAMP：画图用的“波长”（像素）
+const s2={hm:55,scr:-25,face:0,rms:0,airy:0};
+function spotPts(hm,xsAbs){const out=[];const ring=8;out.push([0,0,0]);
+  for(let k=1;k<=ring;k++){const h=hm*k/ring,r=trace(h,'A',X2,0),y=atX(r,xsAbs),n=6*k;for(let j=0;j<n;j++){const a=2*Math.PI*j/n;out.push([y*Math.cos(a),y*Math.sin(a),k/ring]);}}
+  return out;}
+function rmsAt(hm,xs){const p=spotPts(hm,xs);let s=0;p.forEach(q=>s+=q[0]*q[0]+q[1]*q[1]);return Math.sqrt(s/p.length);}
+function bestX(hm){const f0=parax('A',X2);let a=f0-40,b=f0+5;for(let k=0;k<60;k++){const m1=a+(b-a)*0.382,m2=a+(b-a)*0.618;if(rmsAt(hm,m1)<rmsAt(hm,m2))b=m2;else a=m1;}return (a+b)/2;}
+const airyR=hm=>1.22*LAMP*FI/(2*hm);
+function draw2(){
+  const hm=s2.hm,f0=parax('A',X2),xs=f0+s2.scr;
+  let g=`<line x1="10" y1="${CY}" x2="520" y2="${CY}" stroke="var(--muted)" stroke-width="1" stroke-dasharray="4 5"/>`+lensPath('A',X2,CY);
+  for(const h of heights(hm)){const r=trace(h,'A',X2,10);const xe=470,ye=atX(r,xe);
+    g+=`<polyline points="${[...r.pts,[xe,ye]].map(p=>`${p[0].toFixed(1)},${(CY-p[1]).toFixed(1)}`).join(' ')}" fill="none" stroke="${rayCol(h,hm)}" stroke-width="1.4" opacity=".9"/>`;}
+  // 屏幕（纸）
+  g+=`<rect x="${xs-3}" y="${CY-70}" width="6" height="140" rx="2" fill="var(--surface)" stroke="var(--fg)" stroke-width="1.5" opacity=".9"/>`+T(xs,CY-78,'一张纸',12,'var(--fg)','middle',700);
+  g+=T(300,CY+90,'侧面看',12,'var(--muted)','middle');
+  // 正面看
+  const fa=s2.face;
+  if(fa>0.02){const [cx,cy]=PC;
+    g+=`<g opacity="${fa}"><defs><clipPath id="clp2"><circle cx="${cx}" cy="${cy}" r="${PR}"/></clipPath></defs><circle cx="${cx}" cy="${cy}" r="${PR}" fill="var(--surface)" stroke="var(--line)" stroke-width="1.5"/>`;
+    g+=`<g clip-path="url(#clp2)">`;
+    spotPts(hm,xs).forEach(q=>{g+=`<circle cx="${(cx+q[0]*ZF).toFixed(1)}" cy="${(cy+q[1]*ZF).toFixed(1)}" r="2.3" fill="${q[2]>0.95?'var(--beam)':q[2]>0.6?'var(--proj2)':'#e8b04a'}"/>`;});
+    const rr=rmsAt(hm,xs),ar=airyR(hm);
+    if(s2.airy>0.02)g+=`<circle cx="${cx}" cy="${cy}" r="${ar*ZF}" fill="none" stroke="var(--fg)" stroke-width="2.5" opacity="${s2.airy}"/>`;
+    if(s2.rms>0.02)g+=`<circle cx="${cx}" cy="${cy}" r="${Math.max(1,rr*ZF)}" fill="none" stroke="var(--card)" stroke-width="2" stroke-dasharray="5 3" opacity="${s2.rms}"/>`;
+    g+='</g>'+T(cx,cy-PR-10,'转过来，正面看这张纸（放大画）',12,'var(--fg)','middle',700);
+    if(s2.rms>0.5)g+=T(20,288,`蓝虚线圈：RMS 半径 = 点离中心的平均距离`,12,'var(--card)','start',700);
+    if(s2.airy>0.5){const ok=rr<=ar;g+=T(20,308,`黑圈：艾里斑（光本身最小只能聚这么大）`,12,'var(--fg)','start',700);
+      g+=T(420,24,ok?'点都缩进黑圈里 → 镜片够好，光斑由光本身决定':'点跑出黑圈 → 镜片拖后腿（球差太大）',15,ok?'var(--ok)':'var(--bad)','middle',700);}
+    g+='</g>';
+    g+=`<line x1="${xs+6}" y1="${CY}" x2="${cx-PR-6}" y2="${cy}" stroke="var(--muted)" stroke-width="1" stroke-dasharray="2 4" opacity="${fa}"/>`;}
+  if(s2.airy<0.5)g+=T(420,24,s2.face<0.5?'在焦点附近竖一张纸，光线打在纸上':'每条光线在纸上留一个点 → 这就是点列图',15,'var(--fg)','middle',700);
+  $('svg2').innerHTML=g;$('f2sV').textContent=(s2.scr>0?'往后 ':s2.scr<0?'往前 ':'')+Math.abs(s2.scr).toFixed(0);$('f2hV').textContent=Math.round(hm/55*100)+'%';
+}
+const BX55=bestX(55)-parax('A',X2),BX25=bestX(25)-parax('A',X2);
+const st2=stepper(2,[
+ {t:'还是那片镜子（正放）。在焦点附近<b>竖一张纸</b>，光线都打在纸上。',s:{hm:55,scr:-25,face:0,rms:0,airy:0}},
+ {t:'<b>转过来，正面</b>看这张纸：每条光线留下一个点，这一团点就叫<b>点列图</b>（Spot Diagram）。点越挤，光斑越小。',s:{hm:55,scr:-25,face:1,rms:0,airy:0}},
+ {t:'把纸<b>前后挪</b>：点一会儿散、一会儿聚，最挤的地方就是“最佳焦点”。Zemax 的<b>优化</b>就是自动去找这个位置。我们的系统里挪的不是纸而是动镜，道理一样，Codex 求“动镜停哪”就是这么求出来的。',s:{hm:55,scr:BX55,face:1,rms:0,airy:0}},
+ {t:'怎么用一个数给这团点打分？量每个点离中心多远，取平均，叫 <b>RMS 半径</b>（蓝虚线圈）。结果表里的 “RMS spot radius” 就是它。',s:{hm:55,scr:BX55,face:1,rms:1,airy:0}},
+ {t:'黑圈叫<b>艾里斑</b>：光是一种波，就算镜片完美无缺，也聚不成一个点，最小就这么大。现在点跑到黑圈外面了，说明<b>镜片拖了后腿</b>。',s:{hm:55,scr:BX55,face:1,rms:1,airy:1}},
+ {t:'光束换细一点（镜片“不用那么猛”）：点<b>缩进黑圈</b>里了，说明镜片已经够好，再好也看不出区别。点列图带黑圈，就是用来做这个判断的。',s:{hm:25,scr:BX25,face:1,rms:1,airy:1}}
+],s2,draw2);
+const free2=t=>{s2.face=1;s2.rms=1;s2.airy=1;$('n2').textContent='自己玩';$('c2').innerHTML=t;draw2();};
+$('f2s').addEventListener('input',()=>{s2.scr=+$('f2s').value;free2('前后挪纸：看点什么时候最挤。');});
+$('f2h').addEventListener('input',()=>{s2.hm=+$('f2h').value;free2(`光束粗细 ${Math.round(s2.hm/55*100)}%：越粗，点越容易跑出黑圈。`);});
+$('f2o').onclick=()=>{const tgt=bestX(s2.hm)-parax('A',X2),from=s2.scr,t0=performance.now();
+  const tick=now=>{const p=reduce?1:Math.min(1,(now-t0)/900);s2.scr=from+(tgt-from)*(1-(1-p)**3);$('f2s').value=s2.scr;free2('优化：Zemax 自动把纸挪到点最挤的位置。');if(p<1)requestAnimationFrame(tick);};requestAnimationFrame(tick);};
+
+/* ===== 3 RMS 波前 ===== */
+const s3={w:0,after:0,ref:0,ruler:0};
+const XL=170,FX=470,LAMD=26,HB=72,AMP=1.5;   // LAMD：画出来的波长（像素）；AMP：偏差放大倍数
+function strehl(w){return Math.exp(-((2*Math.PI*w)**2));}
+function draw3(){
+  const w=s3.w;let g=`<line x1="10" y1="${CY}" x2="560" y2="${CY}" stroke="var(--muted)" stroke-width="1" stroke-dasharray="4 5"/>`;
+  const ph=reduce?0.5:(TT*0.6)%1;
+  // 来光：竖直波峰
+  for(let k=0;k<7;k++){const x=20+(k+ph)*LAMD;if(x>XL-4)continue;g+=`<line x1="${x}" y1="${CY-HB}" x2="${x}" y2="${CY+HB}" stroke="var(--wave)" stroke-width="2.2"/>`;}
+  g+=arrow(30,CY-HB-14,90,CY-HB-14,'var(--beam)',2)+T(60,CY-HB-22,'光线方向',11,'var(--beam)','middle',700);
+  g+=`<ellipse cx="${XL}" cy="${CY}" rx="9" ry="${HB+8}" fill="var(--glass-fill)" stroke="var(--glass)" stroke-width="2"/>`+T(XL,CY+HB+28,'镜片',12,'var(--fg)','middle',700);
+  // 透镜后：以焦点为中心的圆弧（真实的带偏差）
+  const R0=FX-XL,amax=Math.atan(HB/R0);
+  const dev=rho=>3.354*w*rho**4;                                  // 单位：波长；边缘超前（球差），去掉平均后 RMS = w
+  if(s3.after>0.02){for(let k=0;k<12;k++){const R=R0-(k+ph)*LAMD;if(R<40)continue;
+      let pr='',pi='';for(let j=0;j<=24;j++){const a=-amax+2*amax*j/24,rho=Math.abs(Math.sin(a)/Math.sin(amax)),rr=R-dev(rho)*LAMD*AMP;
+        pr+=(j?'L':'M')+(FX-rr*Math.cos(a)).toFixed(1)+','+(CY+rr*Math.sin(a)).toFixed(1);pi+=(j?'L':'M')+(FX-R*Math.cos(a)).toFixed(1)+','+(CY+R*Math.sin(a)).toFixed(1);}
+      if(s3.ref>0.5&&w>0.005)g+=`<path d="${pi}" fill="none" stroke="var(--muted)" stroke-width="1.2" stroke-dasharray="3 3" opacity="${s3.after}"/>`;
+      g+=`<path d="${pr}" fill="none" stroke="${w>0.07+1e-6&&s3.ref>0.5?'var(--bad)':'var(--wave)'}" stroke-width="2.2" opacity="${s3.after}"/>`;}
+    g+=`<circle cx="${FX}" cy="${CY}" r="4" fill="var(--beam)" opacity="${s3.after}"/>`+T(FX,CY+HB+28,'焦点',12,'var(--beam)','middle',700);}
+  // 尺子：一个波长
+  if(s3.ruler>0.02){const x=60;g+=`<g opacity="${s3.ruler}"><path d="M${x},${CY+HB+40} v8 h${LAMD} v-8" fill="none" stroke="var(--fg)" stroke-width="1.6"/>`+T(x+LAMD/2+4,CY+HB+66,'1 个波长 = 915 nm（尺子）',11,'var(--fg)','start',700)+'</g>';}
+  if(s3.ref>0.5&&w>0.005)g+=T(320,CY-HB-14,'虚线 = 完美的圆弧；实线 = 实际（边上走快了）',11,'var(--muted)','middle');
+  // 右侧：焦点正面看
+  const S=strehl(w),cx=705,cy=150;
+  g+=`<rect x="590" y="40" width="230" height="250" rx="10" fill="var(--surface)" stroke="var(--line)"/>`+T(cx,64,'焦点（正面看）',13,'var(--fg)','middle',700);
+  g+=`<defs><radialGradient id="glo"><stop offset="0" stop-color="#ff4d4f" stop-opacity="1"/><stop offset=".45" stop-color="#ff4d4f" stop-opacity=".55"/><stop offset="1" stop-color="#ff4d4f" stop-opacity="0"/></radialGradient></defs>`;
+  if(s3.after>0.5){g+=`<circle cx="${cx}" cy="${cy}" r="${38+30*(1-S)}" fill="url(#glo)" opacity="${(1-S)*0.55}"/>`+`<circle cx="${cx}" cy="${cy}" r="30" fill="url(#glo)" opacity="${0.15+0.85*S}"/>`;
+    g+=T(cx,232,`中心亮度 ${Math.round(S*100)}%`,18,S>=0.8?'var(--ok)':'var(--bad)','middle',700)+T(cx,254,'（完美镜片 = 100%）',11,'var(--muted)','middle');
+    g+=T(cx,276,`RMS 波前 ${w.toFixed(2)} λ ≈ ${Math.round(w*915)} nm`,12,'var(--fg)','middle',700);}
+  else g+=T(cx,cy+5,'光还没到',12,'var(--muted)','middle');
+  const top=s3.after<0.5?'光也是一种波：平行光的波峰是一排竖线':w<0.005?'理想镜片：波峰变成圆弧，一齐收到焦点':w<=0.0705?'偏差 ≤ 0.07 个波长：合格，和完美镜片几乎没区别':'偏差太大：波峰到焦点时没对齐，中心变暗';
+  g+=T(300,24,top,15,s3.after<0.5||w<0.005?'var(--fg)':w<=0.0705?'var(--ok)':'var(--bad)','middle',700);
+  $('svg3').innerHTML=g;$('f3V').textContent=w.toFixed(3)+' λ';
+}
+ANIM.push(()=>draw3());
+const st3=stepper(3,[
+ {t:'光也是一种<b>波</b>，像水面的波纹。平行光的<b>波峰</b>（青色）是一排竖线，一起往前走；光线的方向总是和波峰垂直。',s:{w:0,after:0,ref:0,ruler:0}},
+ {t:'<b>完美的镜片</b>把直的波峰“掰”成以焦点为中心的<b>圆弧</b>，所有地方同时到达焦点，叠在一起最亮。',s:{w:0,after:1,ref:0,ruler:0}},
+ {t:'<b>真实镜片</b>掰得不够准：边上的波峰走快了一点（实线和虚线对不上）。到达焦点时没对齐，一部分光散到旁边，<b>中心变暗</b>。',s:{w:0.15,after:1,ref:1,ruler:0}},
+ {t:'偏差有多大？拿<b>一个波长</b>（915 nm）当尺子，把各处的偏差平均起来，就是 <b>RMS 波前</b>。Zemax 写 “0.15 waves”，意思是平均差了 0.15 个波长，中心亮度只剩约 4 成。',s:{w:0.15,after:1,ref:1,ruler:1}},
+ {t:'合格线是 <b>0.07 个波长</b>（约 64 nm，比头发细一千倍）：中心亮度还有八成以上，和完美镜片几乎分不出来。好比一排人齐步走到终点，前后差这么一点，还算“同时到”。',s:{w:0.07,after:1,ref:1,ruler:1}}
+],s3,draw3);
+$('f3').addEventListener('input',()=>{s3.w=+$('f3').value;s3.after=1;s3.ref=1;s3.ruler=1;$('n3').textContent='自己玩';$('c3').innerHTML=`RMS 波前 ${s3.w.toFixed(3)} λ：中心亮度约 ${Math.round(strehl(s3.w)*100)}%。${s3.w<=0.0705?'合格。':'超过 0.07，不合格。'}`;});
+
+window.__beforeExport=()=>{st1.go(3,true);st2.go(4,true);st3.go(4,true);};
+const QS=[
+ {q:'Zemax 是怎么算出光斑大小的？',o:['把光线一条一条按折射定律算到底，看它们落在哪','给镜片拍照再测量'],a:0,e:['对。所以叫“光线追迹”。','它不拍照，是一条条算光线。']},
+ {q:'点列图上的点都落在黑圈（艾里斑）里面，说明什么？',o:['镜片够好，光斑由光本身决定','镜片有问题'],a:0,e:['对。再好的镜片也小不过黑圈。','正好相反：点都在黑圈里是好事。']},
+ {q:'方案甲 RMS 波前 0.05 waves，方案乙 0.20 waves，哪个合格？',o:['甲','乙'],a:0,e:['对。≤ 0.07 才合格，数越小越好。','0.20 超过 0.07 了，中心亮度只剩约 2 成。']},
+ {q:'一片平凸镜放在平行光里，弯面应该朝哪边？',o:['朝着平行光那一侧','朝着焦点那一侧'],a:0,e:['对。光在两个面上分摊着拐弯，球差最小。','这样放反了，球差大约变成 4 倍。']}
+];
+$('quiz').innerHTML=QS.map((q,i)=>`<div class="q" data-i="${i}"><p>Q${i+1}. ${q.q}</p><div class="row">${q.o.map((o,j)=>`<button data-j="${j}">${o}</button>`).join('')}</div><div class="fb" aria-live="polite"></div></div>`).join('');
+document.querySelectorAll('.q button').forEach(b=>b.onclick=()=>{const qd=b.closest('.q'),q=QS[+qd.dataset.i],j=+b.dataset.j;
+  qd.querySelectorAll('button').forEach(x=>x.classList.remove('right','wrong'));b.classList.add(j===q.a?'right':'wrong');
+  qd.querySelector('.fb').textContent=(j===q.a?'✓ ':'✗ ')+q.e[j];});
+</script>
