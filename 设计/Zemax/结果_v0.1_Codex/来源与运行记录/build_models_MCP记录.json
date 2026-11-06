@@ -1,0 +1,80 @@
+[
+  {
+    "tool": "zemax_connect",
+    "error": false,
+    "result": {
+      "ok": true,
+      "mode": "standalone",
+      "edition": "Premium",
+      "samples_dir": "C:\\Users\\Administrator\\Documents\\Zemax\\SAMPLES",
+      "system_file": "C:\\Users\\Administrator\\Documents\\Zemax\\SAMPLES\\LENS.zos",
+      "mode_is_sequential": true
+    }
+  },
+  {
+    "tool": "zemax_eval",
+    "error": false,
+    "result": {
+      "ok": true,
+      "result": {
+        "output": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1",
+        "ideal": [
+          {
+            "name": "01_理想长焦",
+            "travel_mm": 24.186324275903246
+          },
+          {
+            "name": "02_理想短焦",
+            "travel_mm": 5.514330451358163
+          }
+        ],
+        "real": [
+          {
+            "name": "03_长焦_平凸",
+            "travel_mm": 24.366055421839647,
+            "wfe_max": 0.11152889907311528,
+            "flips": [
+              true,
+              true
+            ]
+          },
+          {
+            "name": "04_长焦_双胶合",
+            "travel_mm": 24.533773036983476,
+            "wfe_max": 0.024090938689535324,
+            "flips": [
+              true,
+              true
+            ]
+          },
+          {
+            "name": "05_短焦_平凸",
+            "travel_mm": 5.26288258453301,
+            "wfe_max": 0.6614149954801195,
+            "flips": [
+              true,
+              true
+            ]
+          },
+          {
+            "name": "06_短焦_双胶合",
+            "travel_mm": 5.342403930798596,
+            "wfe_max": 0.10928143525284102,
+            "flips": [
+              false,
+              true
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "tool": "zemax_disconnect",
+    "error": false,
+    "result": {
+      "ok": true,
+      "disconnected": true
+    }
+  }
+]

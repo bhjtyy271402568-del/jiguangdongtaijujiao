@@ -1,0 +1,51 @@
+[
+  {
+    "tool": "zemax_connect",
+    "error": false,
+    "result": {
+      "ok": true,
+      "mode": "standalone",
+      "edition": "Premium",
+      "samples_dir": "C:\\Users\\Administrator\\Documents\\Zemax\\SAMPLES",
+      "system_file": "C:\\Users\\Administrator\\Documents\\Zemax\\SAMPLES\\LENS.zos",
+      "mode_is_sequential": true
+    }
+  },
+  {
+    "tool": "zemax_eval",
+    "error": false,
+    "result": {
+      "ok": true,
+      "result": [
+        {
+          "name": "03_长焦_平凸",
+          "travel_mm": 24.373196616151006,
+          "worst_wfe": 0.11152754229438938
+        },
+        {
+          "name": "04_长焦_双胶合",
+          "travel_mm": 24.526721804595013,
+          "worst_wfe": 0.023597338667042857
+        },
+        {
+          "name": "05_短焦_平凸",
+          "travel_mm": 5.289147648175501,
+          "worst_wfe": 0.661407386584941
+        },
+        {
+          "name": "06_短焦_双胶合",
+          "travel_mm": 5.340933337492203,
+          "worst_wfe": 0.10928086494321712
+        }
+      ]
+    }
+  },
+  {
+    "tool": "zemax_disconnect",
+    "error": false,
+    "result": {
+      "ok": true,
+      "disconnected": true
+    }
+  }
+]

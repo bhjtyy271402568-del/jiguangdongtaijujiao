@@ -1,0 +1,425 @@
+{
+  "all_pass": true,
+  "checks": [
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\01_理想长焦.zmx",
+      "configuration": 1,
+      "gap_mm": 146.4705882353,
+      "L_mm": 1000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\01_理想长焦.zmx",
+      "configuration": 2,
+      "gap_mm": 132.1621621622,
+      "L_mm": 2000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\01_理想长焦.zmx",
+      "configuration": 3,
+      "gap_mm": 127.8947368421,
+      "L_mm": 3000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\01_理想长焦.zmx",
+      "configuration": 4,
+      "gap_mm": 124.6391752577,
+      "L_mm": 5000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\01_理想长焦.zmx",
+      "configuration": 5,
+      "gap_mm": 122.2842639594,
+      "L_mm": 10000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\01_理想长焦.zos",
+      "configuration": 1,
+      "gap_mm": 146.470588235294,
+      "L_mm": 1000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\01_理想长焦.zos",
+      "configuration": 2,
+      "gap_mm": 132.162162162162,
+      "L_mm": 2000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\01_理想长焦.zos",
+      "configuration": 3,
+      "gap_mm": 127.894736842105,
+      "L_mm": 3000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\01_理想长焦.zos",
+      "configuration": 4,
+      "gap_mm": 124.639175257732,
+      "L_mm": 5000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\01_理想长焦.zos",
+      "configuration": 5,
+      "gap_mm": 122.284263959391,
+      "L_mm": 10000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\02_理想短焦.zmx",
+      "configuration": 1,
+      "gap_mm": 66.08108108108,
+      "L_mm": 1000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\02_理想短焦.zmx",
+      "configuration": 2,
+      "gap_mm": 62.92207792208,
+      "L_mm": 2000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\02_理想短焦.zmx",
+      "configuration": 3,
+      "gap_mm": 61.92307692308,
+      "L_mm": 3000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\02_理想短焦.zmx",
+      "configuration": 4,
+      "gap_mm": 61.1421319797,
+      "L_mm": 5000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\02_理想短焦.zmx",
+      "configuration": 5,
+      "gap_mm": 60.56675062972,
+      "L_mm": 10000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\02_理想短焦.zos",
+      "configuration": 1,
+      "gap_mm": 66.0810810810811,
+      "L_mm": 1000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\02_理想短焦.zos",
+      "configuration": 2,
+      "gap_mm": 62.9220779220779,
+      "L_mm": 2000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\02_理想短焦.zos",
+      "configuration": 3,
+      "gap_mm": 61.9230769230769,
+      "L_mm": 3000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\02_理想短焦.zos",
+      "configuration": 4,
+      "gap_mm": 61.1421319796954,
+      "L_mm": 5000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\02_理想短焦.zos",
+      "configuration": 5,
+      "gap_mm": 60.5667506297229,
+      "L_mm": 10000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\03_长焦_平凸.zmx",
+      "configuration": 1,
+      "gap_mm": 146.1082870843,
+      "L_mm": 1000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\03_长焦_平凸.zmx",
+      "configuration": 2,
+      "gap_mm": 131.713702143,
+      "L_mm": 2000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\03_长焦_平凸.zmx",
+      "configuration": 3,
+      "gap_mm": 127.4062527361,
+      "L_mm": 3000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\03_长焦_平凸.zmx",
+      "configuration": 4,
+      "gap_mm": 124.1165002483,
+      "L_mm": 5000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\03_长焦_平凸.zmx",
+      "configuration": 5,
+      "gap_mm": 121.7350904681,
+      "L_mm": 10000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\03_长焦_平凸.zos",
+      "configuration": 1,
+      "gap_mm": 146.108287084282,
+      "L_mm": 1000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\03_长焦_平凸.zos",
+      "configuration": 2,
+      "gap_mm": 131.71370214304,
+      "L_mm": 2000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\03_长焦_平凸.zos",
+      "configuration": 3,
+      "gap_mm": 127.40625273605,
+      "L_mm": 3000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\03_长焦_平凸.zos",
+      "configuration": 4,
+      "gap_mm": 124.116500248265,
+      "L_mm": 5000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\03_长焦_平凸.zos",
+      "configuration": 5,
+      "gap_mm": 121.735090468131,
+      "L_mm": 10000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\04_长焦_双胶合.zmx",
+      "configuration": 1,
+      "gap_mm": 142.0388009814,
+      "L_mm": 1000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\04_长焦_双胶合.zmx",
+      "configuration": 2,
+      "gap_mm": 127.5436548839,
+      "L_mm": 2000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\04_长焦_双胶合.zmx",
+      "configuration": 3,
+      "gap_mm": 123.2120221339,
+      "L_mm": 3000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\04_长焦_双胶合.zmx",
+      "configuration": 4,
+      "gap_mm": 119.9052089923,
+      "L_mm": 5000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\04_长焦_双胶合.zmx",
+      "configuration": 5,
+      "gap_mm": 117.5120791768,
+      "L_mm": 10000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\04_长焦_双胶合.zos",
+      "configuration": 1,
+      "gap_mm": 142.038800981417,
+      "L_mm": 1000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\04_长焦_双胶合.zos",
+      "configuration": 2,
+      "gap_mm": 127.543654883885,
+      "L_mm": 2000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\04_长焦_双胶合.zos",
+      "configuration": 3,
+      "gap_mm": 123.212022133872,
+      "L_mm": 3000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\04_长焦_双胶合.zos",
+      "configuration": 4,
+      "gap_mm": 119.905208992267,
+      "L_mm": 5000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\04_长焦_双胶合.zos",
+      "configuration": 5,
+      "gap_mm": 117.512079176822,
+      "L_mm": 10000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\05_短焦_平凸.zmx",
+      "configuration": 1,
+      "gap_mm": 63.23991437009,
+      "L_mm": 1000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\05_短焦_平凸.zmx",
+      "configuration": 2,
+      "gap_mm": 60.22303959263,
+      "L_mm": 2000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\05_短焦_平凸.zmx",
+      "configuration": 3,
+      "gap_mm": 59.26153546894,
+      "L_mm": 3000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\05_短焦_平凸.zmx",
+      "configuration": 4,
+      "gap_mm": 58.50755664749,
+      "L_mm": 5000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\05_短焦_平凸.zmx",
+      "configuration": 5,
+      "gap_mm": 57.95076672191,
+      "L_mm": 10000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\05_短焦_平凸.zos",
+      "configuration": 1,
+      "gap_mm": 63.23991437009,
+      "L_mm": 1000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\05_短焦_平凸.zos",
+      "configuration": 2,
+      "gap_mm": 60.223039592627,
+      "L_mm": 2000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\05_短焦_平凸.zos",
+      "configuration": 3,
+      "gap_mm": 59.2615354689406,
+      "L_mm": 3000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\05_短焦_平凸.zos",
+      "configuration": 4,
+      "gap_mm": 58.5075566474913,
+      "L_mm": 5000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\05_短焦_平凸.zos",
+      "configuration": 5,
+      "gap_mm": 57.9507667219145,
+      "L_mm": 10000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\06_短焦_双胶合.zmx",
+      "configuration": 1,
+      "gap_mm": 58.75484296586,
+      "L_mm": 1000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\06_短焦_双胶合.zmx",
+      "configuration": 2,
+      "gap_mm": 55.70409912848,
+      "L_mm": 2000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\06_短焦_双胶合.zmx",
+      "configuration": 3,
+      "gap_mm": 54.73421904505,
+      "L_mm": 3000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\06_短焦_双胶合.zmx",
+      "configuration": 4,
+      "gap_mm": 53.97448823159,
+      "L_mm": 5000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\06_短焦_双胶合.zmx",
+      "configuration": 5,
+      "gap_mm": 53.41390962837,
+      "L_mm": 10000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\06_短焦_双胶合.zos",
+      "configuration": 1,
+      "gap_mm": 58.7548429658573,
+      "L_mm": 1000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\06_短焦_双胶合.zos",
+      "configuration": 2,
+      "gap_mm": 55.7040991284761,
+      "L_mm": 2000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\06_短焦_双胶合.zos",
+      "configuration": 3,
+      "gap_mm": 54.7342190450527,
+      "L_mm": 3000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\06_短焦_双胶合.zos",
+      "configuration": 4,
+      "gap_mm": 53.9744882315944,
+      "L_mm": 5000.0,
+      "pass": true
+    },
+    {
+      "file": "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\06_短焦_双胶合.zos",
+      "configuration": 5,
+      "gap_mm": 53.4139096283651,
+      "L_mm": 10000.0,
+      "pass": true
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+﻿本机复算顺序
+1. Zemax MCP 连接采用独立实例（standalone），不清空正在使用的界面文件。
+2. 所用 Python：F:\激光动态聚焦系统\Zemax_MCP_适配检查_2026-11-05\.venv\Scripts\python.exe
+3. 原始工作脚本：F:\激光动态聚焦系统\Claude_Zemax任务审查
+4. 用 zemax_mcp_run.py 依次运行 build_models.py、refine_selected.py、gaussian_and_range.py、export_verify.py。
+   调用格式：python.exe -X utf8 zemax_mcp_run.py job.py
+5. 普通 Python 运行 render_report.py（需要 matplotlib、numpy）。
+MCP 服务仓库：https://github.com/webworn/zemax-mcp-server
+任务通过 MCP 的 zemax_eval 批量调用 ZOS-API，完整数值在原始数据，成功调用记录在来源与运行记录。
+脚本副本记录本机路径；转移电脑需要修改路径并配置本地 OpticStudio/MCP。模型本身可直接在 Zemax 打开。

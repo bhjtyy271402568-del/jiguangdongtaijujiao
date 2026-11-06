@@ -1,0 +1,54 @@
+{
+  "scope": "isolated script review; not a real-lens qualification",
+  "source_sha256": "b064e52d5466e42dacd0a4acd63a98c3870298fd5be058f93e7eed957708413f",
+  "connection": "standalone instead of interactive extension",
+  "all_pass": true,
+  "lens_units": "Millimeters",
+  "epd_mm": 4.0,
+  "wavelength_um": 0.915,
+  "surfaces": 5,
+  "configurations": 5,
+  "rows": [
+    {
+      "configuration": 1,
+      "L_m": 1,
+      "d_mm": 146.470588235294,
+      "d_formula_mm": 146.47058823529412,
+      "rms_geometric_radius_um": 2.676254208840665e-11,
+      "geometric_diameter_at_positive_lens_mm": 23.529411764705866
+    },
+    {
+      "configuration": 2,
+      "L_m": 2,
+      "d_mm": 132.162162162162,
+      "d_formula_mm": 132.16216216216216,
+      "rms_geometric_radius_um": 9.206308682640728e-11,
+      "geometric_diameter_at_positive_lens_mm": 21.6216216216216
+    },
+    {
+      "configuration": 3,
+      "L_m": 3,
+      "d_mm": 127.894736842105,
+      "d_formula_mm": 127.89473684210526,
+      "rms_geometric_radius_um": 2.1268675000382337e-10,
+      "geometric_diameter_at_positive_lens_mm": 21.052631578947334
+    },
+    {
+      "configuration": 4,
+      "L_m": 5,
+      "d_mm": 124.639175257732,
+      "d_formula_mm": 124.63917525773195,
+      "rms_geometric_radius_um": 9.45489028888276e-11,
+      "geometric_diameter_at_positive_lens_mm": 20.618556701030933
+    },
+    {
+      "configuration": 5,
+      "L_m": 10,
+      "d_mm": 122.284263959391,
+      "d_formula_mm": 122.28426395939087,
+      "rms_geometric_radius_um": 4.843460708482925e-10,
+      "geometric_diameter_at_positive_lens_mm": 20.3045685279188
+    }
+  ],
+  "original_script_unchanged": true
+}

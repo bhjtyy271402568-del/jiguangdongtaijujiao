@@ -1,0 +1,156 @@
+[
+  {
+    "tool": "zemax_connect",
+    "error": false,
+    "result": {
+      "ok": true,
+      "mode": "standalone",
+      "edition": "Premium",
+      "samples_dir": "C:\\Users\\Administrator\\Documents\\Zemax\\SAMPLES",
+      "system_file": "C:\\Users\\Administrator\\Documents\\Zemax\\SAMPLES\\LENS.zos",
+      "mode_is_sequential": true
+    }
+  },
+  {
+    "tool": "zemax_eval",
+    "error": false,
+    "result": {
+      "ok": true,
+      "result": {
+        "gaussian_cases": 60,
+        "dense_cases": 38,
+        "m2_at_10m": [
+          {
+            "name": "01_理想长焦",
+            "configuration": 5,
+            "L_m": 10.0,
+            "M2": 1.0,
+            "input_physical_diameter_mm": 4.0,
+            "embedded_waist_radius_mm": 2.0,
+            "target_diameter_mm": 0.5737694853400808,
+            "definition": "unclipped M2 equivalent Gaussian, no real-lens aberrations"
+          },
+          {
+            "name": "01_理想长焦",
+            "configuration": 5,
+            "L_m": 10.0,
+            "M2": 3.0,
+            "input_physical_diameter_mm": 4.0,
+            "embedded_waist_radius_mm": 1.1547005383792517,
+            "target_diameter_mm": 1.7213084560202412,
+            "definition": "unclipped M2 equivalent Gaussian, no real-lens aberrations"
+          },
+          {
+            "name": "01_理想长焦",
+            "configuration": 5,
+            "L_m": 10.0,
+            "M2": 5.0,
+            "input_physical_diameter_mm": 4.0,
+            "embedded_waist_radius_mm": 0.8944271909999159,
+            "target_diameter_mm": 2.868847426700406,
+            "definition": "unclipped M2 equivalent Gaussian, no real-lens aberrations"
+          },
+          {
+            "name": "01_理想长焦",
+            "configuration": 5,
+            "L_m": 10.0,
+            "M2": 8.0,
+            "input_physical_diameter_mm": 4.0,
+            "embedded_waist_radius_mm": 0.7071067811865475,
+            "target_diameter_mm": 4.5901558827206435,
+            "definition": "unclipped M2 equivalent Gaussian, no real-lens aberrations"
+          },
+          {
+            "name": "01_理想长焦",
+            "configuration": 5,
+            "L_m": 10.0,
+            "M2": 9.0,
+            "input_physical_diameter_mm": 4.0,
+            "embedded_waist_radius_mm": 0.6666666666666666,
+            "target_diameter_mm": 5.163925368060714,
+            "definition": "unclipped M2 equivalent Gaussian, no real-lens aberrations"
+          },
+          {
+            "name": "01_理想长焦",
+            "configuration": 5,
+            "L_m": 10.0,
+            "M2": 10.0,
+            "input_physical_diameter_mm": 4.0,
+            "embedded_waist_radius_mm": 0.6324555320336759,
+            "target_diameter_mm": 5.7376948534008,
+            "definition": "unclipped M2 equivalent Gaussian, no real-lens aberrations"
+          },
+          {
+            "name": "02_理想短焦",
+            "configuration": 5,
+            "L_m": 10.0,
+            "M2": 1.0,
+            "input_physical_diameter_mm": 4.0,
+            "embedded_waist_radius_mm": 2.0,
+            "target_diameter_mm": 0.5781382885288736,
+            "definition": "unclipped M2 equivalent Gaussian, no real-lens aberrations"
+          },
+          {
+            "name": "02_理想短焦",
+            "configuration": 5,
+            "L_m": 10.0,
+            "M2": 3.0,
+            "input_physical_diameter_mm": 4.0,
+            "embedded_waist_radius_mm": 1.1547005383792517,
+            "target_diameter_mm": 1.7344148655866212,
+            "definition": "unclipped M2 equivalent Gaussian, no real-lens aberrations"
+          },
+          {
+            "name": "02_理想短焦",
+            "configuration": 5,
+            "L_m": 10.0,
+            "M2": 5.0,
+            "input_physical_diameter_mm": 4.0,
+            "embedded_waist_radius_mm": 0.8944271909999159,
+            "target_diameter_mm": 2.8906914426443575,
+            "definition": "unclipped M2 equivalent Gaussian, no real-lens aberrations"
+          },
+          {
+            "name": "02_理想短焦",
+            "configuration": 5,
+            "L_m": 10.0,
+            "M2": 8.0,
+            "input_physical_diameter_mm": 4.0,
+            "embedded_waist_radius_mm": 0.7071067811865475,
+            "target_diameter_mm": 4.625106308230971,
+            "definition": "unclipped M2 equivalent Gaussian, no real-lens aberrations"
+          },
+          {
+            "name": "02_理想短焦",
+            "configuration": 5,
+            "L_m": 10.0,
+            "M2": 9.0,
+            "input_physical_diameter_mm": 4.0,
+            "embedded_waist_radius_mm": 0.6666666666666666,
+            "target_diameter_mm": 5.2032445967598555,
+            "definition": "unclipped M2 equivalent Gaussian, no real-lens aberrations"
+          },
+          {
+            "name": "02_理想短焦",
+            "configuration": 5,
+            "L_m": 10.0,
+            "M2": 10.0,
+            "input_physical_diameter_mm": 4.0,
+            "embedded_waist_radius_mm": 0.6324555320336759,
+            "target_diameter_mm": 5.781382885288736,
+            "definition": "unclipped M2 equivalent Gaussian, no real-lens aberrations"
+          }
+        ],
+        "note": "Source files not overwritten. Gaussian result conditional on 4mm physical input diameter; clipped/aberrated real laser not qualified."
+      }
+    }
+  },
+  {
+    "tool": "zemax_disconnect",
+    "error": false,
+    "result": {
+      "ok": true,
+      "disconnected": true
+    }
+  }
+]

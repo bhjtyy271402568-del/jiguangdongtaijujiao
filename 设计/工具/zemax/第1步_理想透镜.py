@@ -58,6 +58,9 @@ def step(msg, where):
 def main():
     ZOSAPI, app = connect()
     S = app.PrimarySystem
+    # 注意：New 会清空 OpticStudio 里当前打开的设计（Codex 审查发现，2026-11-06）
+    if input("这会清空 OpticStudio 当前打开的设计，已另存过请输入 y 继续：").strip().lower() != "y":
+        sys.exit("已取消，未改动任何东西")
     S.New(False)
     sd = S.SystemData
 

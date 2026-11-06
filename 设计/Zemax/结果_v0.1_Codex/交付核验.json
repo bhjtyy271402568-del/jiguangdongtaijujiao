@@ -1,0 +1,964 @@
+{
+  "main_models_zos": 6,
+  "main_models_zmx": 6,
+  "local_link_count": 51,
+  "missing_local_links": [],
+  "original_script_unchanged": true,
+  "files": [
+    {
+      "path": "先看这个_结果与操作复盘.html",
+      "bytes": 28845,
+      "sha256": "90475a541eb9a4807bf3ad60eb003cf3c2905aa74fe7d7195f14d5a83982ba0d"
+    },
+    {
+      "path": "原始数据\\01_理想长焦_10m_Spot.CFG",
+      "bytes": 18448,
+      "sha256": "aaae2436354216b24dd3bfcc0d458e0102ce602bb1078bfb95d6b94605909609"
+    },
+    {
+      "path": "原始数据\\01_理想长焦_10m_Zemax波前.txt",
+      "bytes": 3566,
+      "sha256": "26c77ea6034bfeb764782fc1dfc0c3b37fdd053a0489d4370d957e0d012e5198"
+    },
+    {
+      "path": "原始数据\\01_理想长焦_10m_Zemax点列图.txt",
+      "bytes": 906,
+      "sha256": "5cd15a85a4bb93bd0f9611a9e0eede02e6ff1ab61a186615058afc3fe93bcf6c"
+    },
+    {
+      "path": "原始数据\\01_理想长焦_1m_Spot.CFG",
+      "bytes": 18448,
+      "sha256": "bcf0f6ed5203dc17f5325ce448d40f7fea7a0b6e6b30148d8620666bdc07ee28"
+    },
+    {
+      "path": "原始数据\\01_理想长焦_1m_Zemax波前.txt",
+      "bytes": 3566,
+      "sha256": "c1a0cce2ae31ea74aadf34ddc120400b8543bd8c262f28de6bc6c4d07276cc77"
+    },
+    {
+      "path": "原始数据\\01_理想长焦_1m_Zemax点列图.txt",
+      "bytes": 906,
+      "sha256": "2ebc8a9266997edba6dd3bbbf078e810343060f8e5bdb61830214a22783446e8"
+    },
+    {
+      "path": "原始数据\\02_理想短焦_10m_Spot.CFG",
+      "bytes": 18448,
+      "sha256": "aaae2436354216b24dd3bfcc0d458e0102ce602bb1078bfb95d6b94605909609"
+    },
+    {
+      "path": "原始数据\\02_理想短焦_10m_Zemax波前.txt",
+      "bytes": 3566,
+      "sha256": "e2d1337aee88398ac70c0389737fe0bcbd2dcf2541ad1277c8f50d3ca3945a19"
+    },
+    {
+      "path": "原始数据\\02_理想短焦_10m_Zemax点列图.txt",
+      "bytes": 906,
+      "sha256": "b2cdd5943733ceefdcb8fe9b82c9f214ca255101b5f378db6f5e37b712a85444"
+    },
+    {
+      "path": "原始数据\\02_理想短焦_1m_Spot.CFG",
+      "bytes": 18448,
+      "sha256": "bcf0f6ed5203dc17f5325ce448d40f7fea7a0b6e6b30148d8620666bdc07ee28"
+    },
+    {
+      "path": "原始数据\\02_理想短焦_1m_Zemax波前.txt",
+      "bytes": 3566,
+      "sha256": "69cc13582e82293cf77acb298e6f0c67f06af07a7d8008e6943d0018273130ef"
+    },
+    {
+      "path": "原始数据\\02_理想短焦_1m_Zemax点列图.txt",
+      "bytes": 906,
+      "sha256": "843db283bb23ff92af859e276c9c3274d3adfc954047f0a5095a45b9c38a6bb3"
+    },
+    {
+      "path": "原始数据\\03_长焦_平凸_10m_Spot.CFG",
+      "bytes": 18448,
+      "sha256": "aaae2436354216b24dd3bfcc0d458e0102ce602bb1078bfb95d6b94605909609"
+    },
+    {
+      "path": "原始数据\\03_长焦_平凸_10m_Zemax波前.txt",
+      "bytes": 3568,
+      "sha256": "62d49f1328ab468c60229ca14267a5062760ea1ea97a59439abdc1e13dd1c50b"
+    },
+    {
+      "path": "原始数据\\03_长焦_平凸_10m_Zemax点列图.txt",
+      "bytes": 910,
+      "sha256": "b68ca0b1e9de3af8885f2786cb084fef102edfce182d535b3bbc22d7af25df00"
+    },
+    {
+      "path": "原始数据\\03_长焦_平凸_1m_Spot.CFG",
+      "bytes": 18448,
+      "sha256": "bcf0f6ed5203dc17f5325ce448d40f7fea7a0b6e6b30148d8620666bdc07ee28"
+    },
+    {
+      "path": "原始数据\\03_长焦_平凸_1m_Zemax波前.txt",
+      "bytes": 3568,
+      "sha256": "a9e6ffff9ff567e4b4e25142367a08068796ae87c8e9bce6a5e84c1951def421"
+    },
+    {
+      "path": "原始数据\\03_长焦_平凸_1m_Zemax点列图.txt",
+      "bytes": 910,
+      "sha256": "c66f5755b6fad3dd4b6df0d8c938fdb6f088f62f5ecff25aab61a231456b5486"
+    },
+    {
+      "path": "原始数据\\03_长焦_平凸_N0P0.json",
+      "bytes": 2987,
+      "sha256": "7aad70029f4a48410b62fb358438198f6e95bea6b12523ad547ee2243606387e"
+    },
+    {
+      "path": "原始数据\\03_长焦_平凸_N0P1.json",
+      "bytes": 2997,
+      "sha256": "685531c61e7a398cd07f08133a82d634fd158184e25321e962f1772644050901"
+    },
+    {
+      "path": "原始数据\\03_长焦_平凸_N1P0.json",
+      "bytes": 2994,
+      "sha256": "d29c639206e6da45a772b9bfb0dcb9cc419a3aa582aed129ecce652bc9c69ccd"
+    },
+    {
+      "path": "原始数据\\03_长焦_平凸_N1P1.json",
+      "bytes": 3005,
+      "sha256": "6b5284077f83fb35cbb79b4d3f4d03b8651edd7a1c77c42ee8e22c1db8a51c6c"
+    },
+    {
+      "path": "原始数据\\04_长焦_双胶合_10m_Spot.CFG",
+      "bytes": 18448,
+      "sha256": "aaae2436354216b24dd3bfcc0d458e0102ce602bb1078bfb95d6b94605909609"
+    },
+    {
+      "path": "原始数据\\04_长焦_双胶合_10m_Zemax波前.txt",
+      "bytes": 3574,
+      "sha256": "7253fe21206701fb77133ebc3925145bf8c5d985f0bf00dbe1e91e76f5efca57"
+    },
+    {
+      "path": "原始数据\\04_长焦_双胶合_10m_Zemax点列图.txt",
+      "bytes": 914,
+      "sha256": "705eb4aa4adaae0fe6d6457f6f171d6a277fd07ef3f108346f2f8176f13ac277"
+    },
+    {
+      "path": "原始数据\\04_长焦_双胶合_1m_Spot.CFG",
+      "bytes": 18448,
+      "sha256": "bcf0f6ed5203dc17f5325ce448d40f7fea7a0b6e6b30148d8620666bdc07ee28"
+    },
+    {
+      "path": "原始数据\\04_长焦_双胶合_1m_Zemax波前.txt",
+      "bytes": 3574,
+      "sha256": "2d1bf9550484e89a497bada1e89bf792891f61248b90fc620a0a94dedb649d90"
+    },
+    {
+      "path": "原始数据\\04_长焦_双胶合_1m_Zemax点列图.txt",
+      "bytes": 914,
+      "sha256": "0cfc41f8c9c8acbc187a2b0523f49555270b8e4652e3c6da6af255ae8d32b958"
+    },
+    {
+      "path": "原始数据\\04_长焦_双胶合_N0P0.json",
+      "bytes": 2998,
+      "sha256": "7911f730e5902daf34f6e4761f7d3d8060e241d2cdbaa72618bf893baa58ee7a"
+    },
+    {
+      "path": "原始数据\\04_长焦_双胶合_N0P1.json",
+      "bytes": 3012,
+      "sha256": "b1e4fc4197a21b27cecfb0dcec02419abd4d6efef8a71d8ea4204f327c0ddbb0"
+    },
+    {
+      "path": "原始数据\\04_长焦_双胶合_N1P0.json",
+      "bytes": 2998,
+      "sha256": "4b8ecf37dd77b0ba21cfaf860e7adc53a2c70ddeead9223eb59df268942c3407"
+    },
+    {
+      "path": "原始数据\\04_长焦_双胶合_N1P1.json",
+      "bytes": 3023,
+      "sha256": "595545dc7fc99536c36648cc9ffa2fb3c4abebbe68840c5873caf22c998030d2"
+    },
+    {
+      "path": "原始数据\\05_短焦_平凸_10m_Spot.CFG",
+      "bytes": 18448,
+      "sha256": "aaae2436354216b24dd3bfcc0d458e0102ce602bb1078bfb95d6b94605909609"
+    },
+    {
+      "path": "原始数据\\05_短焦_平凸_10m_Zemax波前.txt",
+      "bytes": 3568,
+      "sha256": "ac27a1daf0dadd19f7d582e36ad016fad08a816a06af03cc275b4a11057453c6"
+    },
+    {
+      "path": "原始数据\\05_短焦_平凸_10m_Zemax点列图.txt",
+      "bytes": 910,
+      "sha256": "c5e139193ccb970eaa0f8cc5ef0a2a7c817e9d7ad50e3c4ea265a1afc07752d6"
+    },
+    {
+      "path": "原始数据\\05_短焦_平凸_1m_Spot.CFG",
+      "bytes": 18448,
+      "sha256": "bcf0f6ed5203dc17f5325ce448d40f7fea7a0b6e6b30148d8620666bdc07ee28"
+    },
+    {
+      "path": "原始数据\\05_短焦_平凸_1m_Zemax波前.txt",
+      "bytes": 3568,
+      "sha256": "7758b2c0282d82a96df7621b0a1ad30f4670f4729b8fe0e47f23e1eeb474d61b"
+    },
+    {
+      "path": "原始数据\\05_短焦_平凸_1m_Zemax点列图.txt",
+      "bytes": 910,
+      "sha256": "67700ee59d0488825c49273db99e92bc8e409b23091db51aca4d430f227dd405"
+    },
+    {
+      "path": "原始数据\\05_短焦_平凸_N0P0.json",
+      "bytes": 2966,
+      "sha256": "6f24a6a66aa67b6d4402ec3687693b64428b74e6b4341c5ee176a0973bd8af41"
+    },
+    {
+      "path": "原始数据\\05_短焦_平凸_N0P1.json",
+      "bytes": 2977,
+      "sha256": "fe23ab0b4bf223cca07f39f525f877494107dade2247b73927285a0da4cee953"
+    },
+    {
+      "path": "原始数据\\05_短焦_平凸_N1P0.json",
+      "bytes": 2969,
+      "sha256": "69229228de447288507b31e13efa4ce1122a1602a4b273e2de1bad3287fdd3fc"
+    },
+    {
+      "path": "原始数据\\05_短焦_平凸_N1P1.json",
+      "bytes": 2983,
+      "sha256": "ddcb6cda3d9b27ca6d2437e35e2fcf0968bb56536ab8873ed41037ef2a2ceff5"
+    },
+    {
+      "path": "原始数据\\06_短焦_双胶合_10m_Spot.CFG",
+      "bytes": 18448,
+      "sha256": "aaae2436354216b24dd3bfcc0d458e0102ce602bb1078bfb95d6b94605909609"
+    },
+    {
+      "path": "原始数据\\06_短焦_双胶合_10m_Zemax波前.txt",
+      "bytes": 3574,
+      "sha256": "b6a8470f411dde27da165bfe67475114bf62025d60724656549569f4d22ac28e"
+    },
+    {
+      "path": "原始数据\\06_短焦_双胶合_10m_Zemax点列图.txt",
+      "bytes": 914,
+      "sha256": "c7369e6c13f0aac62adc50a2d9e82182e3d5ab2c8ee03673373b3984318890c3"
+    },
+    {
+      "path": "原始数据\\06_短焦_双胶合_1m_Spot.CFG",
+      "bytes": 18448,
+      "sha256": "bcf0f6ed5203dc17f5325ce448d40f7fea7a0b6e6b30148d8620666bdc07ee28"
+    },
+    {
+      "path": "原始数据\\06_短焦_双胶合_1m_Zemax波前.txt",
+      "bytes": 3574,
+      "sha256": "0dbeb35c7726b08d8abe78e89df26404b702bcf9755e67ee687d831e8089187d"
+    },
+    {
+      "path": "原始数据\\06_短焦_双胶合_1m_Zemax点列图.txt",
+      "bytes": 914,
+      "sha256": "40f92293bb5a9d0ee13366435dbacc8b9dd680a45524617e7771811769db2553"
+    },
+    {
+      "path": "原始数据\\06_短焦_双胶合_N0P0.json",
+      "bytes": 2978,
+      "sha256": "6e48fa4dbf31b3269ca775ccc31a28c9435b9af3c76ef224d6c1c1c7d18b6d5f"
+    },
+    {
+      "path": "原始数据\\06_短焦_双胶合_N0P1.json",
+      "bytes": 3009,
+      "sha256": "ba465de1e76d3659cef66841094199b109589c5e80b86d16f762cfbae3c0ac8b"
+    },
+    {
+      "path": "原始数据\\06_短焦_双胶合_N1P0.json",
+      "bytes": 2976,
+      "sha256": "006eeec94fa7efd0569b190e3faea17f29b0c71c61765e93300a3d960851d482"
+    },
+    {
+      "path": "原始数据\\06_短焦_双胶合_N1P1.json",
+      "bytes": 2993,
+      "sha256": "f29f651376a3a80f427f0f674d2c72392d60f0fe5ba7256d0b31278f8156dc5a"
+    },
+    {
+      "path": "原始数据\\双胶合_每0.5m复核.json",
+      "bytes": 7818,
+      "sha256": "d10a3000e3d70cee2c28b55f1b7df48a87da7ae1ea0989ee1f5222148a7453fc"
+    },
+    {
+      "path": "原始数据\\文件重开核验.json",
+      "bytes": 13289,
+      "sha256": "3b0916a5ceab8cef5275e2a2a82ffb91c2f25a9fc1bf7d981c258ae47b8d9309"
+    },
+    {
+      "path": "原始数据\\绘图数据.json",
+      "bytes": 5185105,
+      "sha256": "787993b02e66b98007bd49af316499a5a041cd441a565a2ba6ac6ae79b0d4ffa"
+    },
+    {
+      "path": "原始数据\\计算结果.json",
+      "bytes": 105945,
+      "sha256": "5a8bf1dedcce223ddcb11884f2d64e05ad02762691a71191224fa72862aeaac4"
+    },
+    {
+      "path": "原始数据\\高斯光束条件评估.json",
+      "bytes": 19136,
+      "sha256": "8cb158fb003f4fa5c98c38baeacc694f221f0e94c3e1ef43f1983a48ebdbe4ed"
+    },
+    {
+      "path": "图\\01_理想长焦_10m_全光路.png",
+      "bytes": 9590,
+      "sha256": "e3e990099102cf944c94183e58527d6e4c56b8a1f88cbebb0c425cb63555b7f3"
+    },
+    {
+      "path": "图\\01_理想长焦_10m_镜组放大.png",
+      "bytes": 8050,
+      "sha256": "4c176cf0bcea8a02541fec1f8e841f6567d54c616d7479c94d696791f694b016"
+    },
+    {
+      "path": "图\\01_理想长焦_1m_全光路.png",
+      "bytes": 11311,
+      "sha256": "7d954356de6c980e1db91cbda2843b5cd866f400d9b22637d943657b792147f8"
+    },
+    {
+      "path": "图\\01_理想长焦_1m_镜组放大.png",
+      "bytes": 8532,
+      "sha256": "3c06a51be351baa935b865965d77d1cb16ba06cb1395c90c3a8905e32af3efc1"
+    },
+    {
+      "path": "图\\01_理想长焦_点列图.png",
+      "bytes": 148306,
+      "sha256": "b0f2f1f68e927181340acaecda03b31b64ee7462f7411e6672a332b4bac877e7"
+    },
+    {
+      "path": "图\\01_理想长焦_点列图.svg",
+      "bytes": 480680,
+      "sha256": "ef5c485258d9111f9a3cf816694806a5d19d656e772ca0277c5dcadbd7b37ff6"
+    },
+    {
+      "path": "图\\02_理想短焦_10m_全光路.png",
+      "bytes": 9338,
+      "sha256": "2933ad163f522969070a4b4d32b191625c83a8e23a90fc5441ea2014e7ab9453"
+    },
+    {
+      "path": "图\\02_理想短焦_10m_镜组放大.png",
+      "bytes": 9632,
+      "sha256": "dad0336709b7bb3b11ebf53848e8bf272bb170ce0ce1c64ad188da3665dbc7d9"
+    },
+    {
+      "path": "图\\02_理想短焦_1m_全光路.png",
+      "bytes": 11031,
+      "sha256": "7fe94cd544c7c37c646cd8b0b1e086f8f52755298ff8efe404296ce2627f7715"
+    },
+    {
+      "path": "图\\02_理想短焦_1m_镜组放大.png",
+      "bytes": 9924,
+      "sha256": "999241efbe878e4b24c789c419f545bc3a4845ea3c36c0f8bd88c566bb00290e"
+    },
+    {
+      "path": "图\\02_理想短焦_点列图.png",
+      "bytes": 154583,
+      "sha256": "14d936f4f91d36825e11f4c1b0de92bd1edfa78ffa484a56ca8393fe07fd8f45"
+    },
+    {
+      "path": "图\\02_理想短焦_点列图.svg",
+      "bytes": 483685,
+      "sha256": "9e5d6f9cc881638eec6faa772eee9358a635df37ee8de3588781d11ac77ae422"
+    },
+    {
+      "path": "图\\03_长焦_平凸_10m_全光路.png",
+      "bytes": 9650,
+      "sha256": "1b795656f75b347b52624460e76cf54238561f0f00fba697346ac035d1878e2c"
+    },
+    {
+      "path": "图\\03_长焦_平凸_10m_镜组放大.png",
+      "bytes": 8878,
+      "sha256": "c28a73575fcafb539585208800c7a3d7291f72214046414fa0133f43167bb6a6"
+    },
+    {
+      "path": "图\\03_长焦_平凸_1m_全光路.png",
+      "bytes": 12019,
+      "sha256": "49ed17178ab3988af5e04469f3e24a529fd7b07a7ec9220665d1e123cc9a6735"
+    },
+    {
+      "path": "图\\03_长焦_平凸_1m_镜组放大.png",
+      "bytes": 9215,
+      "sha256": "96134adfb872643cfcb29158f529cd82de1b8909645d90d5463ca68b3c4e5513"
+    },
+    {
+      "path": "图\\03_长焦_平凸_点列图.png",
+      "bytes": 233629,
+      "sha256": "650312e3b2901729277c9d1b120a8448ef0af286517fc1e29b551d7f3c10c44a"
+    },
+    {
+      "path": "图\\03_长焦_平凸_点列图.svg",
+      "bytes": 477237,
+      "sha256": "fba52623e9849f6c8ee2483161dd05c7c95c2b1ce5ed18f3242f5184eb654e4c"
+    },
+    {
+      "path": "图\\04_长焦_双胶合_10m_全光路.png",
+      "bytes": 11541,
+      "sha256": "f0b49a59d8354ab3f967cb7a0c85bfef4121f0d77c15081b7b1c9b5e19b481a1"
+    },
+    {
+      "path": "图\\04_长焦_双胶合_10m_镜组放大.png",
+      "bytes": 9997,
+      "sha256": "32141e285df553027c995279d387d0e7a9324b34d3e0eacb75c76059554ce99f"
+    },
+    {
+      "path": "图\\04_长焦_双胶合_1m_全光路.png",
+      "bytes": 12861,
+      "sha256": "c1099586d73f54006d862c2372632225ca17066c083a6f3b45bb9714290651df"
+    },
+    {
+      "path": "图\\04_长焦_双胶合_1m_镜组放大.png",
+      "bytes": 10281,
+      "sha256": "6e97d45950e20a5391aaec668f48ec89f86a2eb26612813baba48b5c0c57323c"
+    },
+    {
+      "path": "图\\04_长焦_双胶合_点列图.png",
+      "bytes": 219608,
+      "sha256": "9417269c610be95c25ab312b33dae4d29a104931fcf2900fcb3e27f8b0dec20e"
+    },
+    {
+      "path": "图\\04_长焦_双胶合_点列图.svg",
+      "bytes": 480024,
+      "sha256": "4c88ad6838b6103099226e2ffbb2d2317069d95e864d7384c3b329309827c6b7"
+    },
+    {
+      "path": "图\\05_短焦_平凸_10m_全光路.png",
+      "bytes": 10098,
+      "sha256": "1c2e68930bcdd18a372e6f77cbb60bd33aa7ff6f8f507b00f3b85b568c2e44a4"
+    },
+    {
+      "path": "图\\05_短焦_平凸_10m_镜组放大.png",
+      "bytes": 10783,
+      "sha256": "a8e08d8a4ddf35354fd4d59bc73d68e8d73c721e2e7ea1d42ae41ac4780935d1"
+    },
+    {
+      "path": "图\\05_短焦_平凸_1m_全光路.png",
+      "bytes": 11575,
+      "sha256": "e73d38ff572a1a7dcfb39d72d3017840e7f45f17553c50b63e41e84fa2d139b6"
+    },
+    {
+      "path": "图\\05_短焦_平凸_1m_镜组放大.png",
+      "bytes": 10982,
+      "sha256": "1cf18e9fd5260a344646becdf5887950705047aa62ac95c615c59d1e13d161ed"
+    },
+    {
+      "path": "图\\05_短焦_平凸_点列图.png",
+      "bytes": 205702,
+      "sha256": "bccb4392cebe55a63e6edf012dc1fc999617ad008870e70cd90c207e141b6cc3"
+    },
+    {
+      "path": "图\\05_短焦_平凸_点列图.svg",
+      "bytes": 477566,
+      "sha256": "f3f8b77f2ff07423049dc9056af345b8166d57f1cc1246f171b5535a7ad1a1f5"
+    },
+    {
+      "path": "图\\06_短焦_双胶合_10m_全光路.png",
+      "bytes": 9340,
+      "sha256": "2d32d526617fa26155d54167c2650f36d29ba459beac3f00237499bc865204f0"
+    },
+    {
+      "path": "图\\06_短焦_双胶合_10m_镜组放大.png",
+      "bytes": 11242,
+      "sha256": "8b68af3ec198e6947690436b90816166906eec4f18ac55a82fce011e2ede20c0"
+    },
+    {
+      "path": "图\\06_短焦_双胶合_1m_全光路.png",
+      "bytes": 11730,
+      "sha256": "e56cb4e2c49366443e0fddfd5f6896b52b287878ff8ee0c34947a0c3a1388e96"
+    },
+    {
+      "path": "图\\06_短焦_双胶合_1m_镜组放大.png",
+      "bytes": 11542,
+      "sha256": "55fd5ffd76503d55a0a61fceebbd3708eb630d8f886ac09d22a946b74df8741e"
+    },
+    {
+      "path": "图\\06_短焦_双胶合_点列图.png",
+      "bytes": 213613,
+      "sha256": "06056890eb5e08344ae97c12a352ebecd8d7f29e16299a014b1211dc30cd9d1f"
+    },
+    {
+      "path": "图\\06_短焦_双胶合_点列图.svg",
+      "bytes": 485826,
+      "sha256": "5ffa340071c8903f85427a8957c958aa12f4665ae6790bc790ba940961fb8621"
+    },
+    {
+      "path": "图\\M2条件评估.png",
+      "bytes": 87315,
+      "sha256": "74e65478b7e99348d76e0c59622cbd695471738d4c14b92becd46bc09dc3c14d"
+    },
+    {
+      "path": "图\\M2条件评估.svg",
+      "bytes": 78140,
+      "sha256": "084db3f8d5e5a3236931d783131c071f2825294ecb6414876ec608dd88db1dd9"
+    },
+    {
+      "path": "图\\真实方案比较.png",
+      "bytes": 130272,
+      "sha256": "e55d765cae2eb3fe712f7a6824ec22aac4d3686921a1c3e1b323ef6e54213e9c"
+    },
+    {
+      "path": "图\\真实方案比较.svg",
+      "bytes": 81987,
+      "sha256": "78cd8bc45c43877717d940f7c4e42d955724574447717f711e65807004307715"
+    },
+    {
+      "path": "审查反馈与结论.txt",
+      "bytes": 2658,
+      "sha256": "dd7ae02460a30db5340d48d18f2dff07d917ad06bb298e815b04300313619a0b"
+    },
+    {
+      "path": "来源与运行记录\\AC254-075-B.zmx",
+      "bytes": 6856,
+      "sha256": "21dfef95ebd5a2122dcf5387fda806174e2760d37cbd7d7e56a9625eabdfe091"
+    },
+    {
+      "path": "来源与运行记录\\AC254-150-B.zmx",
+      "bytes": 6810,
+      "sha256": "828f57056ff464912e607dc508abf68aff1587cf5f4df13aee76ef97650a3a45"
+    },
+    {
+      "path": "来源与运行记录\\AC508-150-B.zmx",
+      "bytes": 6840,
+      "sha256": "846ded685691e884c5e1b6fe567342d119ec4ceb1317e9650bdf10a4976944cc"
+    },
+    {
+      "path": "来源与运行记录\\ACA254-075-B.zmx",
+      "bytes": 7138,
+      "sha256": "3f1504bcfd28227c7e8d4048588b89cba1b938fa6a56bf704b66acde8e34c014"
+    },
+    {
+      "path": "来源与运行记录\\build_models_MCP记录.json",
+      "bytes": 1948,
+      "sha256": "ca5cc6e50fd929d0ffdc5b1e71c19175c480472f1bf58036c33b9e0f92518775"
+    },
+    {
+      "path": "来源与运行记录\\export_verify_MCP记录.json",
+      "bytes": 805,
+      "sha256": "0dc53cc36c72351c854509ac944cb74602d577b7a5f93fa975f1591d4890ef4b"
+    },
+    {
+      "path": "来源与运行记录\\gaussian_and_range_MCP记录.json",
+      "bytes": 5666,
+      "sha256": "3ab8256f150e791188c786f496546e1a39324e3ba18735926ba555ab2fb44b2d"
+    },
+    {
+      "path": "来源与运行记录\\LA1608-B.zmx",
+      "bytes": 6020,
+      "sha256": "fbd80045cabc7f77f7d83fd2a941cac112f537ca60aa20334df7aabdf2f455d5"
+    },
+    {
+      "path": "来源与运行记录\\LA1907-B.zmx",
+      "bytes": 5782,
+      "sha256": "bfd9b6bb3320d77e193ae21a0f06a6bcfdac67bded8df87350db3699c9dfe799"
+    },
+    {
+      "path": "来源与运行记录\\LC1060-B.zmx",
+      "bytes": 5984,
+      "sha256": "b4ee2702a005d1cdaf1ff9889ff55c862a56e05d0b03323eced8371fbd06c742"
+    },
+    {
+      "path": "来源与运行记录\\LC2265-B.zmx",
+      "bytes": 5980,
+      "sha256": "eecdb370a7f5fcf1f967c5eb147259910ddfb6892dc892f52552af185a2aabe7"
+    },
+    {
+      "path": "来源与运行记录\\refine_selected_MCP记录.json",
+      "bytes": 1232,
+      "sha256": "c3679791f8159c98d2686e60a4664bd4cac5dd141fc1ff6a7afc6551de9b5d37"
+    },
+    {
+      "path": "来源与运行记录\\厂家镜片处方.json",
+      "bytes": 17864,
+      "sha256": "71353894aafeda66ebb76056c4c10b8abb2fa5f58fc69cd2a17aa50424a62b71"
+    },
+    {
+      "path": "来源与运行记录\\原脚本运行记录.txt",
+      "bytes": 1249,
+      "sha256": "3c5f518085afd4790e5e01f3efeaced6332ebadc74be71008bda20537bb12194"
+    },
+    {
+      "path": "来源与运行记录\\理想模型脚本核验.json",
+      "bytes": 1717,
+      "sha256": "49ddf3422c59ea1b3d2e3da14f0c1905972039b0365fa6fe4ea417d0a6d89a5c"
+    },
+    {
+      "path": "来源与运行记录\\第1步_理想透镜.py",
+      "bytes": 5905,
+      "sha256": "b064e52d5466e42dacd0a4acd63a98c3870298fd5be058f93e7eed957708413f"
+    },
+    {
+      "path": "来源与运行记录\\给Codex的任务说明.md",
+      "bytes": 4157,
+      "sha256": "39c73d932b9205245fb7205de30bce6a03bb808fd01706d2d3fef6b87b2d7b8e"
+    },
+    {
+      "path": "模型\\01_理想长焦.ZDA",
+      "bytes": 1809,
+      "sha256": "70f540bb509ddde8267d6c15dd79f2d22bb2cbf791b2e5eabfef7aa44b66a273"
+    },
+    {
+      "path": "模型\\01_理想长焦.zmx",
+      "bytes": 8552,
+      "sha256": "4f75d242fc5bc291fa47b3828ec987bc69defb18ff9544a0e777fdd1b9d408a1"
+    },
+    {
+      "path": "模型\\01_理想长焦.zos",
+      "bytes": 9307,
+      "sha256": "395e3fde5433ffd15660bc0b8d292cde4089d8761e821e201873b1d967ae72a3"
+    },
+    {
+      "path": "模型\\02_理想短焦.ZDA",
+      "bytes": 1809,
+      "sha256": "70f540bb509ddde8267d6c15dd79f2d22bb2cbf791b2e5eabfef7aa44b66a273"
+    },
+    {
+      "path": "模型\\02_理想短焦.zmx",
+      "bytes": 8554,
+      "sha256": "f3e7429292df70678ffe2947d2d2d604e05ae38c280804941db03305941eefea"
+    },
+    {
+      "path": "模型\\02_理想短焦.zos",
+      "bytes": 9307,
+      "sha256": "ca46cf849023839b39b75b5826b9f2827f28f77b6313e57380701a96d9b2b6d9"
+    },
+    {
+      "path": "模型\\03_长焦_平凸.ZDA",
+      "bytes": 1809,
+      "sha256": "6362ec35d4b63d511157dcabae81f9193700367709dd8a9c78982074c588b7ea"
+    },
+    {
+      "path": "模型\\03_长焦_平凸.zmx",
+      "bytes": 15572,
+      "sha256": "19cf36642ac6c3a27fa98421e15a36a29db4bccb39b788396757cdb84041c415"
+    },
+    {
+      "path": "模型\\03_长焦_平凸.zos",
+      "bytes": 18107,
+      "sha256": "a36e4d3db17cc2887c626cd00c8ead77bc790ab6675376f1dea30a0da1bb7280"
+    },
+    {
+      "path": "模型\\04_长焦_双胶合.ZDA",
+      "bytes": 1809,
+      "sha256": "2b9ff0623c377e6cc14920a75feb7fe5ed00b2ba2e031e0d938b59c4ef586f45"
+    },
+    {
+      "path": "模型\\04_长焦_双胶合.zmx",
+      "bytes": 16572,
+      "sha256": "f278e8d711f744a0e10e5abae32529334b8ea6e9d350cbb9651d011f80e9ef03"
+    },
+    {
+      "path": "模型\\04_长焦_双胶合.zos",
+      "bytes": 19463,
+      "sha256": "2f5879bffcd4b64158420791c458ea1bf09abf714d4a47625a8c76a7a86eb181"
+    },
+    {
+      "path": "模型\\05_短焦_平凸.ZDA",
+      "bytes": 1809,
+      "sha256": "2b9ff0623c377e6cc14920a75feb7fe5ed00b2ba2e031e0d938b59c4ef586f45"
+    },
+    {
+      "path": "模型\\05_短焦_平凸.zmx",
+      "bytes": 15704,
+      "sha256": "50e95febdfa1034ec5ffeeb99ea958ac9e93378cd5ce5d1c20244b1f1a58dec1"
+    },
+    {
+      "path": "模型\\05_短焦_平凸.zos",
+      "bytes": 18109,
+      "sha256": "49fdf582e134b2b46615c708aa973debeb6cd499960ef6b0422f042797c6236f"
+    },
+    {
+      "path": "模型\\06_短焦_双胶合.ZDA",
+      "bytes": 1809,
+      "sha256": "2b9ff0623c377e6cc14920a75feb7fe5ed00b2ba2e031e0d938b59c4ef586f45"
+    },
+    {
+      "path": "模型\\06_短焦_双胶合.zmx",
+      "bytes": 16480,
+      "sha256": "a3fafb3846e655422fe013748346537c789477ccca010ca6361f4d16c162097c"
+    },
+    {
+      "path": "模型\\06_短焦_双胶合.zos",
+      "bytes": 19473,
+      "sha256": "f54c1171496d8c8778309993fb5842c1e5136a6eed49342cf4e6ae8a1b907f2f"
+    },
+    {
+      "path": "模型\\朝向比较\\03_长焦_平凸_N0P0.ZDA",
+      "bytes": 1809,
+      "sha256": "6362ec35d4b63d511157dcabae81f9193700367709dd8a9c78982074c588b7ea"
+    },
+    {
+      "path": "模型\\朝向比较\\03_长焦_平凸_N0P0.zmx",
+      "bytes": 15434,
+      "sha256": "76e3d8af19cbf31b6c21103584fd4137c36ecbad76b6c0fa213657c7dfcc24df"
+    },
+    {
+      "path": "模型\\朝向比较\\03_长焦_平凸_N0P0.zos",
+      "bytes": 18061,
+      "sha256": "14546c6da4d16f1b8731a8f7f86d63ca2fd9755ca1ed404f13cc4a80b6dd2fbf"
+    },
+    {
+      "path": "模型\\朝向比较\\03_长焦_平凸_N0P1.ZDA",
+      "bytes": 1809,
+      "sha256": "6362ec35d4b63d511157dcabae81f9193700367709dd8a9c78982074c588b7ea"
+    },
+    {
+      "path": "模型\\朝向比较\\03_长焦_平凸_N0P1.zmx",
+      "bytes": 15474,
+      "sha256": "19467dbf865284ff14242a3575abdcef29dc5fef3d9bcb128f7a83c8db50a6c9"
+    },
+    {
+      "path": "模型\\朝向比较\\03_长焦_平凸_N0P1.zos",
+      "bytes": 18077,
+      "sha256": "6bfadbdc72aa6129276c961d6c676b8d2244fc0cf78d72da9c4e84b70db743c6"
+    },
+    {
+      "path": "模型\\朝向比较\\03_长焦_平凸_N1P0.ZDA",
+      "bytes": 1809,
+      "sha256": "6362ec35d4b63d511157dcabae81f9193700367709dd8a9c78982074c588b7ea"
+    },
+    {
+      "path": "模型\\朝向比较\\03_长焦_平凸_N1P0.zmx",
+      "bytes": 15450,
+      "sha256": "748430d0a573c293542762bbc34ce80541c7546f267de55c8dd95a6bd92858b2"
+    },
+    {
+      "path": "模型\\朝向比较\\03_长焦_平凸_N1P0.zos",
+      "bytes": 18077,
+      "sha256": "0e95a4da8e679973081019e91a6600378348a7a9e538d170beb6842d8f187016"
+    },
+    {
+      "path": "模型\\朝向比较\\03_长焦_平凸_N1P1.ZDA",
+      "bytes": 1809,
+      "sha256": "6362ec35d4b63d511157dcabae81f9193700367709dd8a9c78982074c588b7ea"
+    },
+    {
+      "path": "模型\\朝向比较\\03_长焦_平凸_N1P1.zmx",
+      "bytes": 15488,
+      "sha256": "12382ad67713894383e68fb3cfd27457b42e66e31780a696720cc4aaa61fb898"
+    },
+    {
+      "path": "模型\\朝向比较\\03_长焦_平凸_N1P1.zos",
+      "bytes": 18093,
+      "sha256": "6a5fdcd4e7648131bb2932c73f29e6e9b9887758205f2a78a52867d8ff61a4a5"
+    },
+    {
+      "path": "模型\\朝向比较\\04_长焦_双胶合_N0P0.ZDA",
+      "bytes": 1809,
+      "sha256": "2b9ff0623c377e6cc14920a75feb7fe5ed00b2ba2e031e0d938b59c4ef586f45"
+    },
+    {
+      "path": "模型\\朝向比较\\04_长焦_双胶合_N0P0.zmx",
+      "bytes": 16434,
+      "sha256": "49c4e6da4cd608ed29436109a5e7bed8acad56f208df836340403f360ef35553"
+    },
+    {
+      "path": "模型\\朝向比较\\04_长焦_双胶合_N0P0.zos",
+      "bytes": 19407,
+      "sha256": "100906017ddc37d90462dd73969f673eaec76342f48572f531647b2a5d57f5b0"
+    },
+    {
+      "path": "模型\\朝向比较\\04_长焦_双胶合_N0P1.ZDA",
+      "bytes": 1809,
+      "sha256": "2b9ff0623c377e6cc14920a75feb7fe5ed00b2ba2e031e0d938b59c4ef586f45"
+    },
+    {
+      "path": "模型\\朝向比较\\04_长焦_双胶合_N0P1.zmx",
+      "bytes": 16442,
+      "sha256": "bed28a9350ff55fa781375a06b4417d6a07540dfda2c7eb1c0406884c5796ba2"
+    },
+    {
+      "path": "模型\\朝向比较\\04_长焦_双胶合_N0P1.zos",
+      "bytes": 19431,
+      "sha256": "0867b20574198029ff5de410716a7da74032bbaaf9933d860e2888f030da85fc"
+    },
+    {
+      "path": "模型\\朝向比较\\04_长焦_双胶合_N1P0.ZDA",
+      "bytes": 1809,
+      "sha256": "2b9ff0623c377e6cc14920a75feb7fe5ed00b2ba2e031e0d938b59c4ef586f45"
+    },
+    {
+      "path": "模型\\朝向比较\\04_长焦_双胶合_N1P0.zmx",
+      "bytes": 16430,
+      "sha256": "2191ac931985cf3737f80a5f0f78558927bf01685b7a8828843ffe3ebf32b730"
+    },
+    {
+      "path": "模型\\朝向比较\\04_长焦_双胶合_N1P0.zos",
+      "bytes": 19423,
+      "sha256": "00e8d050f5ce01378ab22d1ecd9f7f110e11660779be9dc1a2908afa7cf2e415"
+    },
+    {
+      "path": "模型\\朝向比较\\04_长焦_双胶合_N1P1.ZDA",
+      "bytes": 1809,
+      "sha256": "2b9ff0623c377e6cc14920a75feb7fe5ed00b2ba2e031e0d938b59c4ef586f45"
+    },
+    {
+      "path": "模型\\朝向比较\\04_长焦_双胶合_N1P1.zmx",
+      "bytes": 16478,
+      "sha256": "ec2f9617bd7d7f251b46505435d730e6150ea0b37eecfcd4b4cf48f70c274447"
+    },
+    {
+      "path": "模型\\朝向比较\\04_长焦_双胶合_N1P1.zos",
+      "bytes": 19447,
+      "sha256": "624302f7ff18f18edcddee910e5d54769abb68a192f3ea47fe6c324e2dc46dbd"
+    },
+    {
+      "path": "模型\\朝向比较\\05_短焦_平凸_N0P0.ZDA",
+      "bytes": 1809,
+      "sha256": "2b9ff0623c377e6cc14920a75feb7fe5ed00b2ba2e031e0d938b59c4ef586f45"
+    },
+    {
+      "path": "模型\\朝向比较\\05_短焦_平凸_N0P0.zmx",
+      "bytes": 15570,
+      "sha256": "fa8b54588341467027d9a97a009ff8da9289ecbfb19d5c55335f0d7ae7c0795f"
+    },
+    {
+      "path": "模型\\朝向比较\\05_短焦_平凸_N0P0.zos",
+      "bytes": 18063,
+      "sha256": "a681fe8176e1ef8a509ca94d59d46d1ac7cb55416ca90a4f9e5c86c5dae3e7b6"
+    },
+    {
+      "path": "模型\\朝向比较\\05_短焦_平凸_N0P1.ZDA",
+      "bytes": 1809,
+      "sha256": "2b9ff0623c377e6cc14920a75feb7fe5ed00b2ba2e031e0d938b59c4ef586f45"
+    },
+    {
+      "path": "模型\\朝向比较\\05_短焦_平凸_N0P1.zmx",
+      "bytes": 15604,
+      "sha256": "f02846da3e3e2caf8343e1a8732e413accff4ccca8730f5710039addd38700e2"
+    },
+    {
+      "path": "模型\\朝向比较\\05_短焦_平凸_N0P1.zos",
+      "bytes": 18079,
+      "sha256": "48ad2bc533a51cb7646c0520add101ef7fbcf409704babf11ff5b71cafd00f28"
+    },
+    {
+      "path": "模型\\朝向比较\\05_短焦_平凸_N1P0.ZDA",
+      "bytes": 1809,
+      "sha256": "2b9ff0623c377e6cc14920a75feb7fe5ed00b2ba2e031e0d938b59c4ef586f45"
+    },
+    {
+      "path": "模型\\朝向比较\\05_短焦_平凸_N1P0.zmx",
+      "bytes": 15600,
+      "sha256": "75e2802d1c029220254861160f1911f8c25030ba9d6af87717060755223e11f0"
+    },
+    {
+      "path": "模型\\朝向比较\\05_短焦_平凸_N1P0.zos",
+      "bytes": 18079,
+      "sha256": "1c8501744a04f4c84cf9e4304697cf2a684d6023a07dd666cdf412b828b38b2b"
+    },
+    {
+      "path": "模型\\朝向比较\\05_短焦_平凸_N1P1.ZDA",
+      "bytes": 1809,
+      "sha256": "2b9ff0623c377e6cc14920a75feb7fe5ed00b2ba2e031e0d938b59c4ef586f45"
+    },
+    {
+      "path": "模型\\朝向比较\\05_短焦_平凸_N1P1.zmx",
+      "bytes": 15602,
+      "sha256": "70231fd8a8f8d8b42ff8d2baab9dc100456d5e2c1d920bab4375cef07e58e594"
+    },
+    {
+      "path": "模型\\朝向比较\\05_短焦_平凸_N1P1.zos",
+      "bytes": 18095,
+      "sha256": "258bd84528b22afec44e404ba6ac9081d0a9e73df964d10e306687e2ecfd1277"
+    },
+    {
+      "path": "模型\\朝向比较\\06_短焦_双胶合_N0P0.ZDA",
+      "bytes": 1809,
+      "sha256": "2b9ff0623c377e6cc14920a75feb7fe5ed00b2ba2e031e0d938b59c4ef586f45"
+    },
+    {
+      "path": "模型\\朝向比较\\06_短焦_双胶合_N0P0.zmx",
+      "bytes": 16364,
+      "sha256": "a1b18a73d4dc0cc3e5e201c1ed6d96344bd46b3644700adeda933d02c0224700"
+    },
+    {
+      "path": "模型\\朝向比较\\06_短焦_双胶合_N0P0.zos",
+      "bytes": 19433,
+      "sha256": "0785dda727be8d68b91f7cd475d27e99532bec2b2b230e1788e03ffec45817a5"
+    },
+    {
+      "path": "模型\\朝向比较\\06_短焦_双胶合_N0P1.ZDA",
+      "bytes": 1809,
+      "sha256": "2b9ff0623c377e6cc14920a75feb7fe5ed00b2ba2e031e0d938b59c4ef586f45"
+    },
+    {
+      "path": "模型\\朝向比较\\06_短焦_双胶合_N0P1.zmx",
+      "bytes": 16394,
+      "sha256": "ccb113e04e0c238ba431a1dd7aa8a81a2c0e42fbfd3a155070b831c916e17293"
+    },
+    {
+      "path": "模型\\朝向比较\\06_短焦_双胶合_N0P1.zos",
+      "bytes": 19457,
+      "sha256": "b432a043c1335044b32075d6672be176db2d82f91bf195d7a02ebecae8f0f7f5"
+    },
+    {
+      "path": "模型\\朝向比较\\06_短焦_双胶合_N1P0.ZDA",
+      "bytes": 1809,
+      "sha256": "2b9ff0623c377e6cc14920a75feb7fe5ed00b2ba2e031e0d938b59c4ef586f45"
+    },
+    {
+      "path": "模型\\朝向比较\\06_短焦_双胶合_N1P0.zmx",
+      "bytes": 16374,
+      "sha256": "7021fb9c979208624617239339a2c371de7bb2c3ccf2beb69dd2a9e18ca8e8da"
+    },
+    {
+      "path": "模型\\朝向比较\\06_短焦_双胶合_N1P0.zos",
+      "bytes": 19449,
+      "sha256": "91b7cb089fe7303163326ec2d4bd6924e20876de1eeaaa96996874330bc795e1"
+    },
+    {
+      "path": "模型\\朝向比较\\06_短焦_双胶合_N1P1.ZDA",
+      "bytes": 1809,
+      "sha256": "2b9ff0623c377e6cc14920a75feb7fe5ed00b2ba2e031e0d938b59c4ef586f45"
+    },
+    {
+      "path": "模型\\朝向比较\\06_短焦_双胶合_N1P1.zmx",
+      "bytes": 16408,
+      "sha256": "801ce886f38db8129fff1b13c127a7244230262e7172ace61e86177dd9f40aa4"
+    },
+    {
+      "path": "模型\\朝向比较\\06_短焦_双胶合_N1P1.zos",
+      "bytes": 19473,
+      "sha256": "8f91c596011771628d712a6c33da33509710e4d5c07a2b165adfb2a2186712e3"
+    },
+    {
+      "path": "运行脚本\\build_models.py",
+      "bytes": 11316,
+      "sha256": "b7bf820cd6595bfdad6aa199a079bd2b67bd9b8790d5f8c434e3db069adebd5e"
+    },
+    {
+      "path": "运行脚本\\export_verify.py",
+      "bytes": 5796,
+      "sha256": "b62f8a00350113d0bf8cfc7a089560e1b9c467b17cbde98cc763554ac6d27af5"
+    },
+    {
+      "path": "运行脚本\\extract_stock.py",
+      "bytes": 2505,
+      "sha256": "48614069376bd319c3dc08a2545a6e3e4b4576a182fc1af1e44c0aebfee3d486"
+    },
+    {
+      "path": "运行脚本\\gaussian_and_range.py",
+      "bytes": 2931,
+      "sha256": "61bf80e992c1e320ae87a98b9502b1031c93a807571d93f76eafdf8dc933266b"
+    },
+    {
+      "path": "运行脚本\\mcp_bootstrap.py",
+      "bytes": 690,
+      "sha256": "8a0a99c3b3f7c26748ef974ae0d6037e1c2c1ac1b249652f3979d40ca823030b"
+    },
+    {
+      "path": "运行脚本\\refine_selected.py",
+      "bytes": 3629,
+      "sha256": "311b2f34ce9b8378057f5364e86e97800fff3887edded29d66ffcfbb42b23454"
+    },
+    {
+      "path": "运行脚本\\render_report.py",
+      "bytes": 26429,
+      "sha256": "5048d38b7adb66f33dc334db5c2103d1853bed8ef8e47466768b3fc11b3e4b0a"
+    },
+    {
+      "path": "运行脚本\\zemax_mcp_run.py",
+      "bytes": 2513,
+      "sha256": "41f20f540c59cc3c7cd1a37ac760bc34903c27c1dafb0f0b81a0ea4cb31d4a99"
+    },
+    {
+      "path": "运行脚本\\本机复算说明.txt",
+      "bytes": 899,
+      "sha256": "c4c7783a7c8e0434e833d291e8607f52291def58e7804b9d417f055f1c7e9bed"
+    }
+  ]
+}

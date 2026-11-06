@@ -1,0 +1,20 @@
+﻿● 孔径 = 入瞳直径 4.0 mm
+    界面里在：左侧 System Explorer → Aperture
+● 波长 = 0.915 μm
+    界面里在：System Explorer → Wavelengths
+● 面 2 / 面 3 改成 Paraxial（理想薄透镜），焦距 −30 / 150
+    界面里在：Lens Data 表：Surface Type 列点开选 Paraxial，右边 Focal Length 填焦距
+● 建 5 个配置（[1, 2, 3, 5, 10] m），每个配置改 2 个厚度
+    界面里在：顶部 Setup → Editors → Multi-Configuration；THIC 2 = 两镜间距，THIC 3 = 对焦距离
+
+配置 | 距离 | 两镜间距 d | 动镜后退量 | RMS 光斑半径（μm，应≈0）
+1 | 1 m | 146.47 mm | 26.47 mm | 2.68e-11
+2 | 2 m | 132.16 mm | 12.16 mm | 9.21e-11
+3 | 3 m | 127.89 mm | 7.89 mm | 2.13e-10
+4 | 5 m | 124.64 mm | 4.64 mm | 9.45e-11
+5 | 10 m | 122.28 mm | 2.28 mm | 4.84e-10
+● 想自己看：切换配置后打开点列图
+    界面里在：Multi-Configuration 表头点配置号（或按 Ctrl+A 轮换）；Analyze → Rays & Spots → Standard Spot Diagram
+
+已保存：F:\激光动态聚焦系统\Claude_Zemax任务审查\调焦扩束_915_理想透镜.zmx
+完成。把上面这张表和 OpticStudio 界面截图发给 Claude，再做第 2 步（换真实镜片）。

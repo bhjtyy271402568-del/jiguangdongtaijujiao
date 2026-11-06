@@ -1,0 +1,87 @@
+{
+  "flip_negative": false,
+  "flip_positive": false,
+  "rows": [
+    {
+      "configuration": 1,
+      "L_m": 1.0,
+      "gap_mm": 60.82918521156264,
+      "rms_wfe_waves": 3.9221666512188067,
+      "rms_wfe_12_rings": 3.922166651108899,
+      "rms_geo_radius_mm": 2.0926511785404522,
+      "working_fno": 32.73345935844499,
+      "positive_first_beam_diameter_mm": 20.975345028968437,
+      "positive_last_vertex_z_mm": 100.00000001156263,
+      "edge_ray_errors": 0,
+      "edge_vignetted": 0
+    },
+    {
+      "configuration": 2,
+      "L_m": 2.0,
+      "gap_mm": 58.108780889366386,
+      "rms_wfe_waves": 3.538064162321229,
+      "rms_wfe_12_rings": 3.5380641625033813,
+      "rms_geo_radius_mm": 3.93707115250439,
+      "working_fno": 51.88619316232819,
+      "positive_first_beam_diameter_mm": 20.226604215352747,
+      "positive_last_vertex_z_mm": 99.99999998936639,
+      "edge_ray_errors": 0,
+      "edge_vignetted": 0
+    },
+    {
+      "configuration": 3,
+      "L_m": 3.0,
+      "gap_mm": 57.240506108432044,
+      "rms_wfe_waves": 3.4203613119892444,
+      "rms_wfe_12_rings": 3.420361312482479,
+      "rms_geo_radius_mm": 5.789291242657181,
+      "working_fno": 63.73579687419824,
+      "positive_first_beam_diameter_mm": 19.98787531001976,
+      "positive_last_vertex_z_mm": 100.00000000843204,
+      "edge_ray_errors": 0,
+      "edge_vignetted": 0
+    },
+    {
+      "configuration": 4,
+      "L_m": 5.0,
+      "gap_mm": 56.559062651062874,
+      "rms_wfe_waves": 3.3296457874437873,
+      "rms_wfe_12_rings": 3.3296457869527005,
+      "rms_geo_radius_mm": 9.49808262301199,
+      "working_fno": 77.62168201263088,
+      "positive_first_beam_diameter_mm": 19.800598298910227,
+      "positive_last_vertex_z_mm": 99.99999995106288,
+      "edge_ray_errors": 0,
+      "edge_vignetted": 0
+    },
+    {
+      "configuration": 5,
+      "L_m": 10.0,
+      "gap_mm": 56.25868100245102,
+      "rms_wfe_waves": 3.411496863340008,
+      "rms_wfe_12_rings": 3.411496863470268,
+      "rms_geo_radius_mm": 19.791652599126543,
+      "working_fno": 85.85703759038336,
+      "positive_first_beam_diameter_mm": 19.71806941275398,
+      "positive_last_vertex_z_mm": 100.00000000245102,
+      "edge_ray_errors": 0,
+      "edge_vignetted": 0
+    }
+  ],
+  "worst_wfe_waves": 3.9221666512188067,
+  "travel_mm": 4.570504209111618,
+  "optimization": {
+    "ok": true,
+    "method": "local",
+    "merit_before": 3.7477243885133706,
+    "merit_after": 3.4381180159990823,
+    "improved": true,
+    "snapshot": "C:\\Users\\Administrator\\Documents\\Zemax\\MCP\\snapshots\\LENS_20261106-002849-322_pre-optimize.zmx"
+  },
+  "gap_surface": 3,
+  "last_surface": 6,
+  "files": [
+    "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\朝向比较\\06_短焦_双胶合_N0P0.zmx",
+    "F:\\激光动态聚焦系统\\Zemax_915nm_1-10m_v0.1\\模型\\朝向比较\\06_短焦_双胶合_N0P0.zos"
+  ]
+}

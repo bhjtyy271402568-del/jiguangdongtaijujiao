@@ -1,0 +1,306 @@
+[
+  {
+    "name": "04_长焦_双胶合",
+    "L_m": 1.0,
+    "gap_mm": 142.038801,
+    "rms_wfe_waves": 0.0030693908584180155,
+    "rms_geo_radius_mm": 0.0025735091665692327,
+    "trace_pass": true
+  },
+  {
+    "name": "04_长焦_双胶合",
+    "L_m": 1.5,
+    "gap_mm": 132.111982,
+    "rms_wfe_waves": 0.01028626880326857,
+    "rms_geo_radius_mm": 0.013875510403523172,
+    "trace_pass": true
+  },
+  {
+    "name": "04_长焦_双胶合",
+    "L_m": 2.0,
+    "gap_mm": 127.543681,
+    "rms_wfe_waves": 0.015175640817404199,
+    "rms_geo_radius_mm": 0.02822338828569806,
+    "trace_pass": true
+  },
+  {
+    "name": "04_长焦_双胶合",
+    "L_m": 2.5,
+    "gap_mm": 124.917466,
+    "rms_wfe_waves": 0.01767034073379014,
+    "rms_geo_radius_mm": 0.041893571996044605,
+    "trace_pass": true
+  },
+  {
+    "name": "04_长焦_双胶合",
+    "L_m": 3.0,
+    "gap_mm": 123.212041,
+    "rms_wfe_waves": 0.019175095542964038,
+    "rms_geo_radius_mm": 0.05526195010142526,
+    "trace_pass": true
+  },
+  {
+    "name": "04_长焦_双胶合",
+    "L_m": 3.5,
+    "gap_mm": 122.01539,
+    "rms_wfe_waves": 0.020179128398339338,
+    "rms_geo_radius_mm": 0.06846764598425699,
+    "trace_pass": true
+  },
+  {
+    "name": "04_长焦_双胶合",
+    "L_m": 4.0,
+    "gap_mm": 121.129391,
+    "rms_wfe_waves": 0.02089582028499165,
+    "rms_geo_radius_mm": 0.08158198035867464,
+    "trace_pass": true
+  },
+  {
+    "name": "04_长焦_双胶合",
+    "L_m": 4.5,
+    "gap_mm": 120.446979,
+    "rms_wfe_waves": 0.021432705722193825,
+    "rms_geo_radius_mm": 0.09463492722294627,
+    "trace_pass": true
+  },
+  {
+    "name": "04_长焦_双胶合",
+    "L_m": 5.0,
+    "gap_mm": 119.905216,
+    "rms_wfe_waves": 0.021849731658822716,
+    "rms_geo_radius_mm": 0.10764505561108974,
+    "trace_pass": true
+  },
+  {
+    "name": "04_长焦_双胶合",
+    "L_m": 5.5,
+    "gap_mm": 119.464677,
+    "rms_wfe_waves": 0.022182913239103055,
+    "rms_geo_radius_mm": 0.12062886472098328,
+    "trace_pass": true
+  },
+  {
+    "name": "04_长焦_双胶合",
+    "L_m": 6.0,
+    "gap_mm": 119.099428,
+    "rms_wfe_waves": 0.0224551796190964,
+    "rms_geo_radius_mm": 0.13358232299138062,
+    "trace_pass": true
+  },
+  {
+    "name": "04_长焦_双胶合",
+    "L_m": 6.5,
+    "gap_mm": 118.791686,
+    "rms_wfe_waves": 0.022681808158580622,
+    "rms_geo_radius_mm": 0.1465148959981981,
+    "trace_pass": true
+  },
+  {
+    "name": "04_长焦_双胶合",
+    "L_m": 7.0,
+    "gap_mm": 118.528841,
+    "rms_wfe_waves": 0.022873365999379128,
+    "rms_geo_radius_mm": 0.1594544652639441,
+    "trace_pass": true
+  },
+  {
+    "name": "04_长焦_双胶合",
+    "L_m": 7.5,
+    "gap_mm": 118.301748,
+    "rms_wfe_waves": 0.023037398422279323,
+    "rms_geo_radius_mm": 0.17238452379103572,
+    "trace_pass": true
+  },
+  {
+    "name": "04_长焦_双胶合",
+    "L_m": 8.0,
+    "gap_mm": 118.103595,
+    "rms_wfe_waves": 0.02317943741891861,
+    "rms_geo_radius_mm": 0.18528184650074428,
+    "trace_pass": true
+  },
+  {
+    "name": "04_长焦_双胶合",
+    "L_m": 8.5,
+    "gap_mm": 117.92916,
+    "rms_wfe_waves": 0.023303620444286487,
+    "rms_geo_radius_mm": 0.19818293542863155,
+    "trace_pass": true
+  },
+  {
+    "name": "04_长焦_双胶合",
+    "L_m": 9.0,
+    "gap_mm": 117.77442,
+    "rms_wfe_waves": 0.02341311131033569,
+    "rms_geo_radius_mm": 0.2110963590621182,
+    "trace_pass": true
+  },
+  {
+    "name": "04_长焦_双胶合",
+    "L_m": 9.5,
+    "gap_mm": 117.636244,
+    "rms_wfe_waves": 0.02351037165982273,
+    "rms_geo_radius_mm": 0.22397703418575213,
+    "trace_pass": true
+  },
+  {
+    "name": "04_长焦_双胶合",
+    "L_m": 10.0,
+    "gap_mm": 117.512082,
+    "rms_wfe_waves": 0.023597339437648576,
+    "rms_geo_radius_mm": 0.2368730996496294,
+    "trace_pass": true
+  },
+  {
+    "name": "06_短焦_双胶合",
+    "L_m": 1.0,
+    "gap_mm": 58.7548415,
+    "rms_wfe_waves": 0.10928086550973344,
+    "rms_geo_radius_mm": 0.08890952223370761,
+    "trace_pass": true
+  },
+  {
+    "name": "06_短焦_双胶合",
+    "L_m": 1.5,
+    "gap_mm": 56.6970703,
+    "rms_wfe_waves": 0.05546386311776662,
+    "rms_geo_radius_mm": 0.06551199507389224,
+    "trace_pass": true
+  },
+  {
+    "name": "06_短焦_双胶合",
+    "L_m": 2.0,
+    "gap_mm": 55.7041007,
+    "rms_wfe_waves": 0.033525583900407094,
+    "rms_geo_radius_mm": 0.048437980592638666,
+    "trace_pass": true
+  },
+  {
+    "name": "06_短焦_双胶合",
+    "L_m": 2.5,
+    "gap_mm": 55.119445,
+    "rms_wfe_waves": 0.02194314079016824,
+    "rms_geo_radius_mm": 0.036110839283056424,
+    "trace_pass": true
+  },
+  {
+    "name": "06_短焦_双胶合",
+    "L_m": 3.0,
+    "gap_mm": 54.7342193,
+    "rms_wfe_waves": 0.015083329138334895,
+    "rms_geo_radius_mm": 0.03076131574352166,
+    "trace_pass": true
+  },
+  {
+    "name": "06_短焦_双胶合",
+    "L_m": 3.5,
+    "gap_mm": 54.4612565,
+    "rms_wfe_waves": 0.010915643205768363,
+    "rms_geo_radius_mm": 0.03447714354880388,
+    "trace_pass": true
+  },
+  {
+    "name": "06_短焦_双胶合",
+    "L_m": 4.0,
+    "gap_mm": 54.2577274,
+    "rms_wfe_waves": 0.008579965857461156,
+    "rms_geo_radius_mm": 0.044627248226460754,
+    "trace_pass": true
+  },
+  {
+    "name": "06_短焦_双胶合",
+    "L_m": 4.5,
+    "gap_mm": 54.1001278,
+    "rms_wfe_waves": 0.0075931302368101175,
+    "rms_geo_radius_mm": 0.05774298777938353,
+    "trace_pass": true
+  },
+  {
+    "name": "06_短焦_双胶合",
+    "L_m": 5.0,
+    "gap_mm": 53.9744886,
+    "rms_wfe_waves": 0.007507162450505517,
+    "rms_geo_radius_mm": 0.07214041240475745,
+    "trace_pass": true
+  },
+  {
+    "name": "06_短焦_双胶合",
+    "L_m": 5.5,
+    "gap_mm": 53.8719822,
+    "rms_wfe_waves": 0.007904630029725102,
+    "rms_geo_radius_mm": 0.08714538138347767,
+    "trace_pass": true
+  },
+  {
+    "name": "06_短焦_双胶合",
+    "L_m": 6.0,
+    "gap_mm": 53.7867596,
+    "rms_wfe_waves": 0.008503878396933631,
+    "rms_geo_radius_mm": 0.10246397210578358,
+    "trace_pass": true
+  },
+  {
+    "name": "06_短焦_双胶合",
+    "L_m": 6.5,
+    "gap_mm": 53.7147888,
+    "rms_wfe_waves": 0.009158104798623275,
+    "rms_geo_radius_mm": 0.11796089086584947,
+    "trace_pass": true
+  },
+  {
+    "name": "06_短焦_双胶合",
+    "L_m": 7.0,
+    "gap_mm": 53.653201,
+    "rms_wfe_waves": 0.009801112878100388,
+    "rms_geo_radius_mm": 0.1335704113952645,
+    "trace_pass": true
+  },
+  {
+    "name": "06_短焦_双胶合",
+    "L_m": 7.5,
+    "gap_mm": 53.5999016,
+    "rms_wfe_waves": 0.010406194948226807,
+    "rms_geo_radius_mm": 0.14924581162996678,
+    "trace_pass": true
+  },
+  {
+    "name": "06_短焦_双胶合",
+    "L_m": 8.0,
+    "gap_mm": 53.5533235,
+    "rms_wfe_waves": 0.01096464689352413,
+    "rms_geo_radius_mm": 0.16496163443289946,
+    "trace_pass": true
+  },
+  {
+    "name": "06_短焦_双胶合",
+    "L_m": 8.5,
+    "gap_mm": 53.5122698,
+    "rms_wfe_waves": 0.011475721222027327,
+    "rms_geo_radius_mm": 0.1807096091242381,
+    "trace_pass": true
+  },
+  {
+    "name": "06_短焦_双胶合",
+    "L_m": 9.0,
+    "gap_mm": 53.4758113,
+    "rms_wfe_waves": 0.011942003124289528,
+    "rms_geo_radius_mm": 0.19648907919249922,
+    "trace_pass": true
+  },
+  {
+    "name": "06_短焦_双胶合",
+    "L_m": 9.5,
+    "gap_mm": 53.4432197,
+    "rms_wfe_waves": 0.012367297333182778,
+    "rms_geo_radius_mm": 0.2122765980161804,
+    "trace_pass": true
+  },
+  {
+    "name": "06_短焦_双胶合",
+    "L_m": 10.0,
+    "gap_mm": 53.4139097,
+    "rms_wfe_waves": 0.012755679335152084,
+    "rms_geo_radius_mm": 0.22807718980263417,
+    "trace_pass": true
+  }
+]
