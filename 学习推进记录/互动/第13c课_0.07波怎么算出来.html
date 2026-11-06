@@ -1,0 +1,184 @@
+<meta charset="utf-8">
+<title>0.07 个波长怎么算</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@700;900&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* 第 13c 课：0.07 waves 怎么算出来——光程、同相叠加、均方根（一张分步图） */
+:root{
+  --bg:#f4f6f9; --surface:#ffffff; --fg:#151a23; --muted:#5d6676; --line:#d8dee7;
+  --beam:#e5383b; --beam-soft:#f6b3b4; --glass:#2b7bb9; --glass-fill:#dcecf8;
+  --ok:#17914f; --bad:#d23c3c; --proj2:#e0701c; --card:#2c5fd6; --card-fill:#e2eafc;
+  --metal:#7b8697; --band:#17914f22; --wave:#0ea5c6;
+  --f-body:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --f-display:"Noto Serif SC","Songti SC",serif;
+  --f-num:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1218; --surface:#171c25; --fg:#e7ebf1; --muted:#9aa4b4; --line:#2b3240;
+  --beam:#ff5c60; --beam-soft:#7a2a2d; --glass:#6db5ee; --glass-fill:#1c3448;
+  --ok:#3fd082; --bad:#ff6b6b; --proj2:#ff9a4a; --card:#82a6ff; --card-fill:#1d2a4a;
+  --metal:#8c97a8; --band:#3fd08226; --wave:#4fd1e6; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1218; --surface:#171c25; --fg:#e7ebf1; --muted:#9aa4b4; --line:#2b3240;
+  --beam:#ff5c60; --beam-soft:#7a2a2d; --glass:#6db5ee; --glass-fill:#1c3448;
+  --ok:#3fd082; --bad:#ff6b6b; --proj2:#ff9a4a; --card:#82a6ff; --card-fill:#1d2a4a;
+  --metal:#8c97a8; --band:#3fd08226; --wave:#4fd1e6; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:15px;line-height:1.65}
+.wrap{max-width:900px;margin:0 auto;padding-block:28px 56px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:flex;flex-direction:column;gap:28px}
+header{display:flex;flex-direction:column;gap:6px}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--muted)}
+h1{font-family:var(--f-display);font-weight:900;font-size:clamp(28px,5vw,40px);margin:0;line-height:1.2;text-wrap:balance}
+.lede{color:var(--muted);margin:0;max-width:62ch}
+section{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:14px;min-width:0}
+h2{font-family:var(--f-display);font-size:21px;margin:0;display:flex;gap:10px;align-items:baseline;text-wrap:balance}
+h2 .n{font-family:var(--f-num);font-size:13px;color:var(--beam)}
+.stage{overflow-x:auto;border-radius:10px;background:var(--bg)}
+.stage svg{display:block;width:100%;height:auto}
+.ctl{display:flex;flex-direction:column;gap:4px;min-width:0}
+.ctl label{font-size:13px;display:flex;justify-content:space-between;gap:8px}
+.ctl label span{font-family:var(--f-num);color:var(--muted);font-size:12px}
+input[type=range]{width:100%;accent-color:var(--beam)}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+button{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--surface);color:var(--fg);
+  border-radius:999px;padding:6px 14px;cursor:pointer}
+button:hover{border-color:var(--muted)}
+button:disabled{opacity:.45;cursor:default}
+button:focus-visible,input:focus-visible{outline:2px solid var(--card);outline-offset:2px}
+button[aria-pressed=true]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.note{font-size:12px;color:var(--muted);margin:0}
+.quiz{display:flex;flex-direction:column;gap:16px}
+.q p{margin:0 0 6px;font-weight:500}
+.q .fb{font-size:14px;margin-top:6px;min-height:1.6em}
+.q button.right{border-color:var(--ok);color:var(--ok)}
+.q button.wrong{border-color:var(--bad);color:var(--bad)}
+footer{font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+footer b{color:var(--fg)}
+svg text{font-family:var(--f-body)}
+.q-big{font-family:var(--f-display);font-size:clamp(20px,3.6vw,26px);font-weight:900;margin:0;text-wrap:balance}
+.cap-box{display:flex;gap:12px;align-items:flex-start;background:var(--card-fill);border-radius:10px;padding:12px 14px;min-height:72px}
+.cap-box .no{font-family:var(--f-num);font-size:13px;color:var(--card);white-space:nowrap;padding-top:3px}
+.cap-box p{margin:0;font-size:16px;line-height:1.6}
+.cap-box b{color:var(--beam)}
+.stepbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.dots{display:flex;gap:6px;margin-left:4px}
+.dots i{width:9px;height:9px;border-radius:50%;background:var(--line);display:block}
+.dots i.on{background:var(--card)}
+.free{border-top:1px dashed var(--line);padding-top:12px;display:flex;flex-direction:column;gap:10px}
+.free .t{font-size:13px;color:var(--muted)}
+.big-next{background:var(--card);color:#fff;border-color:var(--card);font-weight:700}
+.concl{font-size:15px;font-weight:700;color:var(--ok);margin:0}
+.check{display:grid;grid-template-columns:2.2em 1fr;gap:10px 12px;margin:0;align-items:start}
+.check .k{font-family:var(--f-num);font-size:13px;color:#fff;background:var(--card);border-radius:999px;width:1.9em;height:1.9em;display:grid;place-items:center}
+.check p{margin:0}
+.check b{color:var(--beam)}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+<div class="wrap">
+<header>
+  <div class="eyebrow">激光扫描系统入门 · 第 13 课问答（配图）</div>
+  <h1>“0.07 个波长”是怎么算出来的</h1>
+  <p class="lede">一张图，点“下一步”往下看。镜片和光线都放大画了；镜片的形状是按“每条光线光程一样长”真算出来的。</p>
+</header>
+<section aria-labelledby="s1">
+  <p class="q-big" id="s1">问题：RMS 波前 0.07 waves 是怎么算出来的？</p>
+  <div class="stage"><svg id="svg1" data-export="13c-1_0.07波怎么算出来" viewBox="0 0 840 360" role="img" aria-label="RMS 波前 0.07 waves 是怎么算出来的？"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n1"></span><p id="c1"></p></div>
+  <div class="stepbar"><button id="p1">← 上一步</button><button id="x1" class="big-next">下一步 →</button><span class="dots" id="d1"></span></div>
+  <div class="free"><span class="t">自己玩：</span>
+    <div class="ctl"><label for="f1">镜片误差有多大（倍数，1 = 例子里的 0.07 波长）<span id="f1V"></span></label><input id="f1" type="range" min="0" max="7" step="0.1" value="1"></div></div>
+  <p class="concl">记住一句：RMS 波前 = 各条光线到焦点的“路程差”（nm）取均方根、再除以一个波长；它就是几路光相位错开的程度，0.07 波长 ≈ 25°，几乎同相，所以合格。</p>
+</section>
+<footer>
+  <div><b>本图对项目的推进：</b>读 Codex 结果时，RMS 波前这个数 = 镜片让各路光“错相”多少；≤ 0.07 打勾。</div>
+  <div>示例数字（+80 / −60 / 0 / −60 / +80 nm）是为了好算编的；Zemax 用的是同样的算法，只是取几百到几千条光线。</div>
+</footer>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const T=(x,y,t,s=14,c='var(--fg)',a='middle',w=400)=>`<text x="${x}" y="${y}" font-size="${s}" fill="${c}" text-anchor="${a}" font-weight="${w}">${t}</text>`;
+function stepper(k,steps,state,draw){
+  let i=0,anim=0;
+  const dots=$('d'+k);dots.innerHTML=steps.map(()=>'<i></i>').join('');
+  function go(n,instant){i=Math.max(0,Math.min(steps.length-1,n));const to={...state,...steps[i].s},from={...state},t0=performance.now(),dur=(reduce||instant)?0:700;
+    cancelAnimationFrame(anim);
+    const tick=now=>{const p=dur?Math.min(1,(now-t0)/dur):1,e=p<.5?2*p*p:1-(-2*p+2)**2/2;
+      for(const key in to){if(typeof to[key]==='number')state[key]=from[key]+(to[key]-from[key])*e;else state[key]=to[key];}
+      draw();if(p<1)anim=requestAnimationFrame(tick);};
+    if(!dur){for(const key in to)state[key]=to[key];draw();}else anim=requestAnimationFrame(tick);
+    $('c'+k).innerHTML=steps[i].t;$('n'+k).textContent=`第 ${i+1} / ${steps.length} 步`;
+    dots.querySelectorAll('i').forEach((d,j)=>d.classList.toggle('on',j<=i));
+    $('p'+k).disabled=i===0;$('x'+k).textContent=i===steps.length-1?'从头再看 ↺':'下一步 →';}
+  $('p'+k).onclick=()=>go(i-1);$('x'+k).onclick=()=>go(i===steps.length-1?0:i+1);
+  go(0,true);return {go,n:steps.length};
+}
+let TT=0;const ANIM=[];(function loop(){if(!reduce)TT+=0.016;ANIM.forEach(f=>f(TT));requestAnimationFrame(loop);})();
+
+/* ===== 几何：一块“完美透镜”，形状由“各光线光程相等”反推 ===== */
+const NG=1.5,X0=20,XL=175,FX=470,CY=180,T0=44,LD=16;   // LD：画出来的一个波长（像素）
+const H=[80,40,0,-40,-80],NAME=['边','中','心','中','边'];
+const OPD=[80,-60,0,-60,80],LAM=915;                   // 例子：比中心那条多走多少 nm
+function opl(y,t){const xb=XL+t/2;return (XL-t/2-X0)+NG*t+Math.hypot(FX-xb,y);}
+const C0=opl(0,T0);
+function thick(y){let a=0,b=T0;for(let k=0;k<50;k++){const m=(a+b)/2;if(opl(y,m)<C0)a=m;else b=m;}return (a+b)/2;}
+const TH=H.map(thick);
+const lensPts=(()=>{const L=[],R=[];for(let k=0;k<=40;k++){const y=-96+192*k/40,t=thick(y);L.push([XL-t/2,y]);R.push([XL+t/2,y]);}return [...L,...R.reverse()];})();
+
+const s={five:0,scope:0,err:0,calc:0};
+function rayPath(i){const y=H[i],t=TH[i];return [[X0,y],[XL-t/2,y],[XL+t/2,y],[FX,0]];}
+function wiggle(i,ph){const P=rayPath(i);let d='',L=0;const pe=2*Math.PI*OPD[i]/LAM*s.err;
+  for(let g=0;g<3;g++){const [a,b]=[P[g],P[g+1]],len=Math.hypot(b[0]-a[0],b[1]-a[1]),ux=(b[0]-a[0])/len,uy=(b[1]-a[1])/len,n=g===1?NG:1;
+    for(let q=0;q<=len;q+=2){const x=a[0]+ux*q,y=a[1]+uy*q,o=L+n*q,dist=Math.hypot(FX-x,y);
+      const amp=5*Math.min(1,dist/60),phase=2*Math.PI*(o/LD-ph)-(g===2?pe*Math.min(1,q/40):0);
+      const w=amp*Math.sin(phase);d+=(d?'L':'M')+(x-uy*w).toFixed(1)+','+(CY-(y+ux*w)).toFixed(1);}
+    L+=n*len;}
+  return d;}
+const RC=['var(--beam)','var(--proj2)','#c99a00','var(--proj2)','var(--beam)'];
+function sumAmp(k){let re=0,im=0;OPD.forEach(o=>{const p=2*Math.PI*o/LAM*k;re+=Math.cos(p);im+=Math.sin(p);});return Math.hypot(re,im)/5;}
+function rmsNm(k){const v=OPD.map(o=>o*k),m=v.reduce((a,b)=>a+b)/5;return Math.sqrt(v.reduce((a,b)=>a+(b-m)**2,0)/5);}
+function draw(){
+  const ph=TT*0.8,k=s.err;let g=`<line x1="10" y1="${CY}" x2="520" y2="${CY}" stroke="var(--muted)" stroke-width="1" stroke-dasharray="4 5"/>`;
+  g+=`<path d="M${lensPts.map(p=>p[0].toFixed(1)+','+(CY-p[1]).toFixed(1)).join(' L')} Z" fill="var(--glass-fill)" stroke="var(--glass)" stroke-width="2"/>`+T(XL,CY+120,'镜片（中间厚、边上薄）',12,'var(--fg)','middle',700);
+  for(let i=0;i<5;i++){const op=i===2?1:s.five;if(op<0.02)continue;g+=`<path d="${wiggle(i,ph)}" fill="none" stroke="${RC[i]}" stroke-width="2" opacity="${op}"/>`;}
+  g+=`<circle cx="${FX}" cy="${CY}" r="5" fill="var(--beam)"/>`+T(FX,CY+24,'焦点',12,'var(--beam)','middle',700);
+  if(s.five<0.5){g+=`<rect x="${XL-TH[2]/2}" y="${CY-14}" width="${TH[2]}" height="28" fill="none" stroke="var(--card)" stroke-width="2" stroke-dasharray="4 3"/>`+T(XL,CY-24,'玻璃里：波被挤密',12,'var(--card)','middle',700)+T(80,CY-24,'空气里',12,'var(--muted)','middle',700);}
+  if(s.five>0.5&&s.scope<0.5){g+=T(XL+40,CY-104,'边上：玻璃薄，但斜着绕远',12,'var(--fg)','start',700)+T(XL+40,CY+150,'中间：路短，但玻璃最厚（被拖慢）',12,'var(--fg)','start',700);}
+  // 右侧面板
+  const PX=545,PW=280;g+=`<rect x="${PX}" y="20" width="${PW}" height="330" rx="10" fill="var(--surface)" stroke="var(--line)"/>`;
+  if(s.calc>0.5){const v=OPD.map(o=>Math.round(o*k)),m=v.reduce((a,b)=>a+b)/5,dv=v.map(x=>Math.round(x-m)),sq=Math.round(dv.reduce((a,b)=>a+b*b,0)/5),r=Math.sqrt(dv.reduce((a,b)=>a+b*b,0)/5);
+    const L=(n,y,t,c='var(--fg)')=>T(PX+16,y,`<tspan fill="var(--card)" font-weight="700">${n}</tspan> ${t}`,13,c,'start');
+    g+=T(PX+PW/2,46,'把错位变成一个数',14,'var(--fg)','middle',700);
+    g+=L('①',84,'5 条各比中心多走（nm）：')+T(PX+30,106,v.map(x=>(x>0?'+':'')+x).join('  '),13,'var(--fg)','start',700);
+    g+=L('②',140,`减掉平均（${m.toFixed(0)}）：`)+T(PX+30,162,dv.map(x=>(x>0?'+':'')+x).join('  '),13,'var(--fg)','start',700);
+    g+=L('③',196,`平方、求平均：${sq}`)+L('',220,`开根号：≈ ${r.toFixed(0)} nm`);
+    g+=L('④',254,`除以一个波长 ${LAM} nm：`)+T(PX+PW/2,290,`≈ ${(r/LAM).toFixed(2)} 波长`,22,r/LAM<=0.0705?'var(--ok)':'var(--bad)','middle',700);
+    g+=T(PX+PW/2,316,`相位错开 ≈ ${Math.round(r/LAM*360)}°，焦点亮度 ≈ ${Math.round(sumAmp(k)**2*100)}%`,12,'var(--muted)','middle');}
+  else if(s.scope>0.02){g+=`<g opacity="${s.scope}">`+T(PX+PW/2,44,'到达焦点的 5 路波（像示波器）',13,'var(--fg)','middle',700);
+    const x0=PX+92,x1=PX+PW-14;
+    for(let i=0;i<5;i++){const yb=78+i*38,pe=2*Math.PI*OPD[i]/LAM*k;let d='';for(let x=x0;x<=x1;x+=2){const y=yb-11*Math.sin(2*Math.PI*((x-x0)/70-ph)+pe);d+=(d?'L':'M')+x+','+y.toFixed(1);}
+      g+=T(PX+14,yb+5,NAME[i]+(k>0.02&&OPD[i]?` ${OPD[i]>0?'+':'−'}${Math.abs(Math.round(OPD[i]*k))} nm`:''),12,RC[i],'start',700)+`<path d="${d}" fill="none" stroke="${RC[i]}" stroke-width="2"/>`;}
+    const ys=78+5*38+20;let d='',A=0;let re=0,im=0;
+    for(let x=x0;x<=x1;x+=2){let v=0;for(let i=0;i<5;i++)v+=Math.sin(2*Math.PI*((x-x0)/70-ph)+2*Math.PI*OPD[i]/LAM*k);d+=(d?'L':'M')+x+','+(ys-v*4).toFixed(1);}
+    g+=`<line x1="${PX+10}" y1="${ys-34}" x2="${PX+PW-10}" y2="${ys-34}" stroke="var(--line)"/>`+T(PX+14,ys+5,'加起来',11,'var(--fg)','start',700)+`<path d="${d}" fill="none" stroke="var(--fg)" stroke-width="2.4"/>`;
+    const b=sumAmp(k)**2;g+=T(PX+PW/2,ys+50,`焦点亮度 ≈ ${Math.round(b*100)}%（完美 = 100%）`,13,b>=0.8?'var(--ok)':'var(--bad)','middle',700)+'</g>';}
+  else{g+=T(PX+PW/2,60,'一个波长 = 915 nm',13,'var(--fg)','middle',700)+`<path d="M${PX+60},100 v8 h${LD*4} v-8" fill="none" stroke="var(--fg)" stroke-width="1.5"/>`+T(PX+60+LD*2,124,'（这里画成 16 像素）',11,'var(--muted)','middle');
+    g+=T(PX+PW/2,170,'光在玻璃里慢 1.5 倍',13,'var(--fg)','middle',700)+T(PX+PW/2,194,'1 mm 玻璃 = 1.5 mm 空气',13,'var(--card)','middle',700)+T(PX+PW/2,230,'按这样折算出来的路程',12,'var(--muted)','middle')+T(PX+PW/2,250,'叫“光程”',13,'var(--fg)','middle',700);}
+  const top=s.calc>0.5?'RMS 波前 = 光程差的均方根 ÷ 波长':k>0.02?'真实镜片：有的多走、有的少走 → 相位错开 → 焦点变暗':s.scope>0.5?'5 路波同相到达 → 叠加最大 → 焦点最亮':s.five>0.5?'完美透镜：5 条光线到焦点的光程一样长':'一条光线就是一列波';
+  g+=T(270,24,top,15,s.calc>0.5?'var(--ok)':k>0.02?'var(--bad)':'var(--fg)','middle',700);
+  $('svg1').innerHTML=g;$('f1V').textContent=`${k.toFixed(1)} 倍 → ${(rmsNm(k)/LAM).toFixed(2)} 波长`;
+}
+ANIM.push(draw);
+const st=stepper(1,[
+ {t:'先看中间<b>一条光线</b>，它就是一列波（波峰一个接一个往前走）。进了玻璃，波被<b>挤密</b>，因为光在玻璃里走得慢 1.5 倍。把玻璃里的路按 1.5 倍折算成空气里的路，这样算出来的“路程”叫<b>光程</b>。',s:{five:0,scope:0,err:0,calc:0}},
+ {t:'5 条光线一起看：中间那条路最短，但穿过的玻璃最厚，被拖得最多；边上那条玻璃薄，但要斜着绕远路。<b>完美透镜</b>的形状正好让 5 条光线到焦点的<b>光程一样长</b>。这块镜片就是按这个条件算出来的形状。',s:{five:1,scope:0,err:0,calc:0}},
+ {t:'光程一样长，5 列波就是<b>同相</b>到达焦点的。像示波器上 5 路同频正弦信号，波峰对波峰，加起来最大，所以焦点<b>最亮</b>。',s:{five:1,scope:1,err:0,calc:0}},
+ {t:'<b>真实镜片</b>做不到完全相等：边上的多走几十 nm，中间的少走几十 nm。到达焦点时 5 路信号<b>相位错开</b>，加起来变小，焦点变暗。（右边示波器上标了每条多走 / 少走多少；这里把误差放大了 2 倍，好看清）',s:{five:1,scope:1,err:2,calc:0}},
+ {t:'把错位变成一个数：取出每条光线“比中心多走多少 nm”，<b>减平均</b>，<b>平方后求平均</b>，<b>开根号</b>，得到约 63 nm。再<b>除以一个波长</b>（915 nm），就是 <b>0.07 waves</b>。相当于相位错开约 25°，几路光几乎同相，焦点亮度还有 8 成多，所以合格。',s:{five:1,scope:1,err:1,calc:1}}
+],s,draw);
+$('f1').addEventListener('input',()=>{s.err=+$('f1').value;s.five=1;s.scope=1;$('n1').textContent='自己玩';const w=rmsNm(s.err)/LAM;
+  $('c1').innerHTML=`误差 ${s.err.toFixed(1)} 倍：RMS ≈ ${(w).toFixed(2)} 波长（${Math.round(w*360)}°），焦点亮度 ≈ ${Math.round(sumAmp(s.err)**2*100)}%。${w<=0.0705?'合格。':'超过 0.07，不合格。'}（右边面板切回示波器，点“下一步”看算法）`;s.calc=0;draw();});
+window.__beforeExport=()=>{st.go(4,true);};
+</script>
