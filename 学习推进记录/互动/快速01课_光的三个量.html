@@ -1,0 +1,292 @@
+<meta charset="utf-8">
+<title>光的三个量</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@700;900&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* 激光快速入门 01：光的三个量——波长、光子能量、功率密度 */
+:root{
+  --bg:#f4f6f9; --surface:#ffffff; --fg:#151a23; --muted:#5d6676; --line:#d8dee7;
+  --beam:#e5383b; --beam-soft:#f6b3b4; --glass:#2b7bb9; --glass-fill:#dcecf8;
+  --ok:#17914f; --bad:#d23c3c; --proj2:#e0701c; --card:#2c5fd6; --card-fill:#e2eafc;
+  --metal:#7b8697; --band:#17914f22; --wave:#0ea5c6;
+  --f-body:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --f-display:"Noto Serif SC","Songti SC",serif;
+  --f-num:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1218; --surface:#171c25; --fg:#e7ebf1; --muted:#9aa4b4; --line:#2b3240;
+  --beam:#ff5c60; --beam-soft:#7a2a2d; --glass:#6db5ee; --glass-fill:#1c3448;
+  --ok:#3fd082; --bad:#ff6b6b; --proj2:#ff9a4a; --card:#82a6ff; --card-fill:#1d2a4a;
+  --metal:#8c97a8; --band:#3fd08226; --wave:#4fd1e6; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1218; --surface:#171c25; --fg:#e7ebf1; --muted:#9aa4b4; --line:#2b3240;
+  --beam:#ff5c60; --beam-soft:#7a2a2d; --glass:#6db5ee; --glass-fill:#1c3448;
+  --ok:#3fd082; --bad:#ff6b6b; --proj2:#ff9a4a; --card:#82a6ff; --card-fill:#1d2a4a;
+  --metal:#8c97a8; --band:#3fd08226; --wave:#4fd1e6; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:15px;line-height:1.65}
+.wrap{max-width:900px;margin:0 auto;padding-block:28px 56px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:flex;flex-direction:column;gap:28px}
+header{display:flex;flex-direction:column;gap:6px}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--muted)}
+h1{font-family:var(--f-display);font-weight:900;font-size:clamp(28px,5vw,40px);margin:0;line-height:1.2;text-wrap:balance}
+.lede{color:var(--muted);margin:0;max-width:62ch}
+section{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:14px;min-width:0}
+h2{font-family:var(--f-display);font-size:21px;margin:0;display:flex;gap:10px;align-items:baseline;text-wrap:balance}
+h2 .n{font-family:var(--f-num);font-size:13px;color:var(--beam)}
+.stage{overflow-x:auto;border-radius:10px;background:var(--bg)}
+.stage svg{display:block;width:100%;height:auto}
+.ctl{display:flex;flex-direction:column;gap:4px;min-width:0}
+.ctl label{font-size:13px;display:flex;justify-content:space-between;gap:8px}
+.ctl label span{font-family:var(--f-num);color:var(--muted);font-size:12px}
+input[type=range]{width:100%;accent-color:var(--beam)}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+button{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--surface);color:var(--fg);
+  border-radius:999px;padding:6px 14px;cursor:pointer}
+button:hover{border-color:var(--muted)}
+button:disabled{opacity:.45;cursor:default}
+button:focus-visible,input:focus-visible{outline:2px solid var(--card);outline-offset:2px}
+button[aria-pressed=true]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.note{font-size:12px;color:var(--muted);margin:0}
+.quiz{display:flex;flex-direction:column;gap:16px}
+.q p{margin:0 0 6px;font-weight:500}
+.q .fb{font-size:14px;margin-top:6px;min-height:1.6em}
+.q button.right{border-color:var(--ok);color:var(--ok)}
+.q button.wrong{border-color:var(--bad);color:var(--bad)}
+footer{font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+footer b{color:var(--fg)}
+svg text{font-family:var(--f-body)}
+.q-big{font-family:var(--f-display);font-size:clamp(20px,3.6vw,26px);font-weight:900;margin:0;text-wrap:balance}
+.cap-box{display:flex;gap:12px;align-items:flex-start;background:var(--card-fill);border-radius:10px;padding:12px 14px;min-height:72px}
+.cap-box .no{font-family:var(--f-num);font-size:13px;color:var(--card);white-space:nowrap;padding-top:3px}
+.cap-box p{margin:0;font-size:16px;line-height:1.6}
+.cap-box b{color:var(--beam)}
+.stepbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.dots{display:flex;gap:6px;margin-left:4px}
+.dots i{width:9px;height:9px;border-radius:50%;background:var(--line);display:block}
+.dots i.on{background:var(--card)}
+.free{border-top:1px dashed var(--line);padding-top:12px;display:flex;flex-direction:column;gap:10px}
+.free .t{font-size:13px;color:var(--muted)}
+.big-next{background:var(--card);color:#fff;border-color:var(--card);font-weight:700}
+.concl{font-size:15px;font-weight:700;color:var(--ok);margin:0}
+.check{display:grid;grid-template-columns:2.2em 1fr;gap:10px 12px;margin:0;align-items:start}
+.check .k{font-family:var(--f-num);font-size:13px;color:#fff;background:var(--card);border-radius:999px;width:1.9em;height:1.9em;display:grid;place-items:center}
+.check p{margin:0}
+.check b{color:var(--beam)}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+<div class="wrap">
+<header>
+  <div class="eyebrow">激光快速入门 · 第 1 课（共 6 课）</div>
+  <h1>光的三个量：波长、光子能量、功率密度</h1>
+  <p class="lede">后面所有内容都建立在这三个量上：<b>波长</b>决定是哪种光、看不看得见、材料吃不吃；<b>光子能量</b>解释泵浦为什么能换出激光；<b>功率密度</b>解释为什么光斑越小越能烧东西。</p>
+</header>
+
+<section aria-labelledby="s1">
+  <p class="q-big" id="s1">问题 1：915、1064 nm、10.6 μm 这些数是什么？在哪？</p>
+  <div class="stage"><svg id="svg1" data-export="Q01-1_波长" viewBox="0 0 840 320" role="img" aria-label="915、1064 nm、10.6 μm 是什么，在哪"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n1"></span><p id="c1"></p></div>
+  <div class="stepbar"><button id="p1">← 上一步</button><button id="x1" class="big-next">下一步 →</button><span class="dots" id="d1"></span></div>
+  <div class="free"><span class="t">自己玩：</span><div class="ctl"><label for="f1">选一个波长<span id="f1V"></span></label><input id="f1" type="range" min="400" max="1100" step="1" value="1064"></div></div>
+  <p class="concl">记住一句：波长就是光的“颜色编号”；人眼只看得见 400–700 nm，915、1064 nm 和 CO₂ 的 10.6 μm 全是看不见的红外光，所以激光设备必须戴对应波长的防护眼镜。</p>
+</section>
+
+<section aria-labelledby="s2">
+  <p class="q-big" id="s2">问题 2：光是一份一份的，每份（光子）能量和波长什么关系？</p>
+  <div class="stage"><svg id="svg2" data-export="Q01-2_光子能量" viewBox="0 0 840 300" role="img" aria-label="光子能量和波长的关系"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n2"></span><p id="c2"></p></div>
+  <div class="stepbar"><button id="p2">← 上一步</button><button id="x2" class="big-next">下一步 →</button><span class="dots" id="d2"></span></div>
+  <div class="free"><span class="t">自己玩：</span><div class="ctl"><label for="f2">波长（功率固定）<span id="f2V"></span></label><input id="f2" type="range" min="400" max="1600" step="1" value="1064"></div></div>
+  <p class="concl">记住一句：波长越短，每个光子带的能量越大；同样功率下，短波长的光子少而“重”，长波长的光子多而“轻”。泵浦光（915）每个光子比激光（1064）大，才能换出激光，差的那点变成热。</p>
+</section>
+
+<section aria-labelledby="s3">
+  <p class="q-big" id="s3">问题 3：才 20 W，为什么聚成小点就能把金属打穿？</p>
+  <div class="stage"><svg id="svg3" data-export="Q01-3_功率密度" viewBox="0 0 840 330" role="img" aria-label="20 W 为什么聚成小点就能打穿金属"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n3"></span><p id="c3"></p></div>
+  <div class="stepbar"><button id="p3">← 上一步</button><button id="x3" class="big-next">下一步 →</button><span class="dots" id="d3"></span></div>
+  <div class="free"><span class="t">自己玩：</span><div class="ctl"><label for="f3">光斑直径（激光功率固定 20 W）<span id="f3V"></span></label><input id="f3" type="range" min="0" max="100" step="1" value="100"></div></div>
+  <p class="concl">记住一句：功率是“每秒送多少能量”，功率密度是“每平方厘米分到多少”。功率不变，光斑直径缩小 10 倍，功率密度就涨 100 倍——这就是我们拼命要小光斑的原因。</p>
+</section>
+
+<section aria-labelledby="s7"><h2 id="s7"><span class="n">✓</span>小测（只考这一课讲过的）</h2><div class="quiz" id="quiz"></div></section>
+<footer>
+  <div><b>本课对项目的推进：</b></div>
+  <div>· 915 nm（老师要的）和 1064 nm（光纤激光器）都在近红外，看不见；镜片镀膜、振镜镜片、防护眼镜都要按这个波长选</div>
+  <div>· 项目指标“10 m 处光斑 ≤ 5 mm”，本质是在保证功率密度：20 W 打在 5 mm 光斑上约 100 W/cm²，光斑大一倍就只剩四分之一</div>
+  <div>· 下一课：透镜和光纤怎么“管住”光（焦距、聚 / 散；光纤为什么能导光）</div>
+</footer>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const T=(x,y,t,s=14,c='var(--fg)',a='middle',w=400)=>`<text x="${x}" y="${y}" font-size="${s}" fill="${c}" text-anchor="${a}" font-weight="${w}">${t}</text>`;
+function stepper(k,steps,state,draw){
+  let i=0,anim=0;
+  const dots=$('d'+k);dots.innerHTML=steps.map(()=>'<i></i>').join('');
+  function go(n,instant){i=Math.max(0,Math.min(steps.length-1,n));const to={...state,...steps[i].s},from={...state},t0=performance.now(),dur=(reduce||instant)?0:700;
+    cancelAnimationFrame(anim);
+    const tick=now=>{const p=dur?Math.min(1,(now-t0)/dur):1,e=p<.5?2*p*p:1-(-2*p+2)**2/2;
+      for(const key in to){if(typeof to[key]==='number')state[key]=from[key]+(to[key]-from[key])*e;else state[key]=to[key];}
+      draw();if(p<1)anim=requestAnimationFrame(tick);};
+    if(!dur){for(const key in to)state[key]=to[key];draw();}else anim=requestAnimationFrame(tick);
+    $('c'+k).innerHTML=steps[i].t;$('n'+k).textContent=`第 ${i+1} / ${steps.length} 步`;
+    dots.querySelectorAll('i').forEach((d,j)=>d.classList.toggle('on',j<=i));
+    $('p'+k).disabled=i===0;$('x'+k).textContent=i===steps.length-1?'从头再看 ↺':'下一步 →';}
+  $('p'+k).onclick=()=>go(i-1);$('x'+k).onclick=()=>go(i===steps.length-1?0:i+1);
+  go(0,true);return {go,n:steps.length};
+}
+let TT=0;const ANIM=[];(function loop(){if(!reduce)TT+=0.016;ANIM.forEach(f=>f(TT));requestAnimationFrame(loop);})();
+const DEFS=`<defs>
+<linearGradient id="gCu" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7c89a"/><stop offset=".45" stop-color="#c9803f"/><stop offset="1" stop-color="#7a4216"/></linearGradient>
+<linearGradient id="gCuS" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#a65f27"/><stop offset="1" stop-color="#6e3a12"/></linearGradient>
+<linearGradient id="gAu" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff2bf"/><stop offset=".5" stop-color="#e2b440"/><stop offset="1" stop-color="#9a7414"/></linearGradient>
+<linearGradient id="gAuS" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#c79a26"/><stop offset="1" stop-color="#8a6610"/></linearGradient>
+<linearGradient id="gSteel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f5f7fa"/><stop offset=".5" stop-color="#c2c9d2"/><stop offset="1" stop-color="#7b8592"/></linearGradient>
+<linearGradient id="gSteelH" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8a94a1"/><stop offset=".35" stop-color="#eef1f5"/><stop offset=".7" stop-color="#b9c1cb"/><stop offset="1" stop-color="#6f7986"/></linearGradient>
+<linearGradient id="gAlu" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0f3f6"/><stop offset="1" stop-color="#a9b2bc"/></linearGradient>
+<linearGradient id="gPlate" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9dee4"/><stop offset="1" stop-color="#aeb6c0"/></linearGradient>
+<linearGradient id="gRod" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffc2c6"/><stop offset=".3" stop-color="#e8414f"/><stop offset=".75" stop-color="#a3121f"/><stop offset="1" stop-color="#5e0a12"/></linearGradient>
+<linearGradient id="gGlass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eaf6ff" stop-opacity=".95"/><stop offset=".25" stop-color="#bfe0f7" stop-opacity=".45"/><stop offset=".7" stop-color="#9cc7e6" stop-opacity=".35"/><stop offset="1" stop-color="#6fa3c9" stop-opacity=".7"/></linearGradient>
+<linearGradient id="gLens" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d7ecfb" stop-opacity=".9"/><stop offset=".5" stop-color="#f4fbff" stop-opacity=".6"/><stop offset="1" stop-color="#9cc7e6" stop-opacity=".9"/></linearGradient>
+<linearGradient id="gJacket" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd08a"/><stop offset=".5" stop-color="#f08a1c"/><stop offset="1" stop-color="#a85508"/></linearGradient>
+<linearGradient id="gYb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff59a"/><stop offset=".5" stop-color="#e3c22a"/><stop offset="1" stop-color="#9c8210"/></linearGradient>
+<linearGradient id="gPlasma" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6c6ff"/><stop offset=".5" stop-color="#c25bd9"/><stop offset="1" stop-color="#7b2a92"/></linearGradient>
+<linearGradient id="gLamp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#fff7d1"/><stop offset="1" stop-color="#f3d27a"/></linearGradient>
+<radialGradient id="gOn" cx=".35" cy=".32" r=".75"><stop offset="0" stop-color="#fff6dc"/><stop offset=".45" stop-color="#ffa346"/><stop offset="1" stop-color="#b8420a"/></radialGradient>
+<radialGradient id="gOff" cx=".35" cy=".32" r=".75"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#b9c3cf"/><stop offset="1" stop-color="#5f6b7b"/></radialGradient>
+<radialGradient id="gHalo"><stop offset="0" stop-color="#ffb347" stop-opacity=".7"/><stop offset="1" stop-color="#ffb347" stop-opacity="0"/></radialGradient>
+<radialGradient id="gSpot"><stop offset="0" stop-color="#ffffff"/><stop offset=".3" stop-color="#ff5a5f"/><stop offset="1" stop-color="#ff2d2d" stop-opacity="0"/></radialGradient>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="blur6" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+<filter id="shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000" flood-opacity=".22"/></filter>
+</defs>`;
+function beam(x1,y1,x2,y2,w=6,a=1,col='#ff2d2d'){if(a<=0.01)return '';return `<g opacity="${a}"><line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${col}" stroke-width="${w*3.2}" opacity=".28" filter="url(#blur6)" stroke-linecap="round"/><line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${col}" stroke-width="${w}" opacity=".85" stroke-linecap="round"/><line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#fff3f3" stroke-width="${Math.max(1,w/3)}" stroke-linecap="round"/></g>`;}
+function packet(x,y,ph=0,col='#ff4a2a',len=54,amp=7){let d='';for(let i=0;i<=len;i+=2){const e=Math.sin(Math.PI*i/len);d+=(i?'L':'M')+(x-len/2+i).toFixed(1)+','+(y-amp*e*Math.sin(i/len*5*Math.PI*2/2.2+ph)).toFixed(1);}return `<path d="${d}" fill="none" stroke="${col}" stroke-width="2.6" filter="url(#glow)" stroke-linecap="round"/>`;}
+function tag(n,x,y,lx,ly,text,col){return `<line x1="${x}" y1="${y}" x2="${lx}" y2="${ly}" stroke="${col}" stroke-width="1.5"/><circle cx="${x}" cy="${y}" r="3.5" fill="${col}"/><circle cx="${lx}" cy="${ly}" r="11" fill="${col}"/>`+T(lx,ly+4.5,n,12,'#fff','middle',700)+(text?T(lx+(lx>x?16:-16),ly+5,text,12.5,'var(--fg)',lx>x?'start':'end',700):'');}
+function quiz(QS){$('quiz').innerHTML=QS.map((q,i)=>`<div class="q" data-i="${i}"><p>Q${i+1}. ${q.q}</p><div class="row">${q.o.map((o,j)=>`<button data-j="${j}">${o}</button>`).join('')}</div><div class="fb" aria-live="polite"></div></div>`).join('');
+document.querySelectorAll('.q button').forEach(b=>b.onclick=()=>{const qd=b.closest('.q'),q=QS[+qd.dataset.i],j=+b.dataset.j;
+  qd.querySelectorAll('button').forEach(x=>x.classList.remove('right','wrong'));b.classList.add(j===q.a?'right':'wrong');
+  qd.querySelector('.fb').textContent=(j===q.a?'✓ ':'✗ ')+q.e[j];});}
+const C1='#e8590c',C2='#c2255c',C3='#1971c2';   // 三要素配色：① 泵浦 ② 发光材料 ③ 谐振腔
+
+/* ===== 1 波长 ===== */
+const s1={st:0,lam:1064};
+const XV0=70,XV1=300,XI1=640,XC=760;            // 可见 400–700 映射到 XV0–XV1；700–1100 映射到 XV1–XI1；10.6 μm 在 XC
+const xOf=l=>l<=700?XV0+(l-400)/300*(XV1-XV0):l<=1100?XV1+(l-700)/400*(XI1-XV1):XC;
+function visCol(l){if(l<440)return `hsl(270,80%,${40+(l-400)/2}%)`;if(l<490)return `hsl(${240-(l-440)*1.6},85%,50%)`;if(l<580)return `hsl(${160-(l-490)*1.2},80%,45%)`;if(l<645)return `hsl(${52-(l-580)*0.65},95%,50%)`;if(l<=700)return `hsl(0,90%,${50-(l-645)*0.3}%)`;return 'none';}
+function pointer(x,y,col){return `<rect x="${x-34}" y="${y-6}" width="40" height="12" rx="6" fill="url(#gSteelH)" stroke="#6b7280"/><rect x="${x-38}" y="${y-4}" width="6" height="8" rx="2" fill="#343a40"/>`+beam(x+6,y,x+40,y,2,1,col);}
+function draw1(){
+  const st=Math.round(s1.st),lam=s1.lam;let g=DEFS;const Y=170;
+  // 光谱条
+  g+=`<defs><linearGradient id="gVis" x1="0" x2="1">${[400,430,460,490,520,550,580,610,640,670,700].map((l,i)=>`<stop offset="${i/10}" stop-color="${visCol(l)}"/>`).join('')}</linearGradient><linearGradient id="gIR" x1="0" x2="1"><stop offset="0" stop-color="#5c0a0a"/><stop offset="1" stop-color="#2b2f36"/></linearGradient></defs>`;
+  g+=`<rect x="${XV0}" y="${Y}" width="${XV1-XV0}" height="34" fill="url(#gVis)"/><rect x="${XV1}" y="${Y}" width="${XI1-XV1}" height="34" fill="url(#gIR)" opacity="${st>=1?1:.25}"/><rect x="${XC-40}" y="${Y}" width="80" height="34" fill="#2b2f36" opacity="${st>=2?1:.15}"/>`;
+  g+=`<rect x="${XI1+20}" y="${Y-6}" width="24" height="46" fill="var(--bg)"/><path d="M${XI1+18},${Y-6} l10,46 M${XI1+34},${Y-6} l10,46" stroke="var(--muted)" stroke-width="1.6" opacity="${st>=2?1:.3}"/>`;
+  [400,500,600,700].forEach(l=>g+=`<line x1="${xOf(l)}" y1="${Y+34}" x2="${xOf(l)}" y2="${Y+42}" stroke="var(--muted)"/>`+T(xOf(l),Y+56,l+'',11,'var(--muted)','middle'));
+  if(st>=1)[800,900,1000,1100].forEach(l=>g+=`<line x1="${xOf(l)}" y1="${Y+34}" x2="${xOf(l)}" y2="${Y+42}" stroke="var(--muted)"/>`+T(xOf(l),Y+56,l+'',11,'var(--muted)','middle'));
+  g+=T(XV0-22,Y+56,'nm',11,'var(--muted)','end');
+  if(st>=2)g+=T(XC,Y+56,'10600 nm = 10.6 μm',11,'var(--muted)','middle');
+  // 眼睛
+  g+=`<ellipse cx="${(XV0+XV1)/2}" cy="${Y+86}" rx="26" ry="13" fill="#fff" stroke="#495057" stroke-width="2"/><circle cx="${(XV0+XV1)/2}" cy="${Y+86}" r="8" fill="#5c3d2e"/><circle cx="${(XV0+XV1)/2}" cy="${Y+86}" r="3.5" fill="#111"/>`+T((XV0+XV1)/2,Y+116,'人眼只看得见这一段：400–700 nm',12,'var(--fg)','middle',700);
+  // 器件
+  g+=pointer(xOf(532)-6,Y-60,'#37b24d')+T(xOf(532),Y-76,'绿激光笔 532',11,'var(--fg)','middle',700);
+  g+=pointer(xOf(650)-6,Y-30,'#f03e3e')+T(xOf(650)+14,Y-44,'红激光笔 650',11,'var(--fg)','middle',700);
+  if(st>=1){[[808,'808'],[915,'915'],[976,'976']].forEach(([l,t],i)=>{const x=xOf(l);g+=`<rect x="${x-9}" y="${Y-52+i*0}" width="18" height="14" rx="2" fill="url(#gAu)" stroke="#8a6610"/><line x1="${x}" y1="${Y-38}" x2="${x}" y2="${Y}" stroke="#adb5bd" stroke-dasharray="3 3"/>`+T(x,Y-58,t,11,'var(--fg)','middle',700);});
+    g+=T(xOf(900),Y-82,'半导体激光（915 / 976 常当泵浦）',11.5,'#e8590c','middle',700);
+    const x=xOf(1064);g+=`<rect x="${x-14}" y="${Y-62}" width="28" height="18" rx="4" fill="url(#gSteelH)" stroke="#6b7280"/><line x1="${x}" y1="${Y-44}" x2="${x}" y2="${Y}" stroke="#adb5bd" stroke-dasharray="3 3"/>`+T(x,Y-70,'光纤激光 1064',11,'var(--fg)','middle',700);
+    g+=T((XV1+XI1)/2,Y+86,'近红外：看不见！',13,'var(--bad)','middle',700)+T((XV1+XI1)/2,Y+106,'设备开着也看不到光束 → 必须戴对应波长的防护眼镜',11.5,'var(--bad)','middle');}
+  if(st>=2){g+=`<rect x="${XC-36}" y="${Y-56}" width="72" height="18" rx="9" fill="url(#gGlass)" stroke="#7fb3d5"/><rect x="${XC-30}" y="${Y-51}" width="60" height="8" rx="4" fill="url(#gPlasma)" opacity=".8"/><line x1="${XC}" y1="${Y-38}" x2="${XC}" y2="${Y}" stroke="#adb5bd" stroke-dasharray="3 3"/>`+T(XC,Y-64,'CO₂ 激光 10.6 μm',11,'var(--fg)','middle',700)+T(XC,Y+86,'远红外',12.5,'var(--bad)','middle',700)+T(XC,Y+104,'比 1064 长 10 倍',11,'var(--muted)','middle');}
+  // 选中的波长
+  if(st>=3){const x=xOf(lam),vis=lam>=400&&lam<=700;g+=`<polygon points="${x},${Y-6} ${x-7},${Y-18} ${x+7},${Y-18}" fill="var(--fg)"/>`+T(x,Y-24,lam+' nm',12,'var(--fg)','middle',700);
+    g+=`<rect x="560" y="246" width="250" height="60" rx="10" fill="var(--surface)" stroke="var(--line)"/>`+(vis?`<circle cx="590" cy="276" r="14" fill="${visCol(lam)}" filter="url(#glow)"/>`:`<circle cx="590" cy="276" r="14" fill="none" stroke="#868e96" stroke-dasharray="4 3"/>`)+T(614,272,vis?'看得见':'看不见',13,vis?'var(--ok)':'var(--bad)','start',700)+T(614,292,`= ${(lam/1000).toFixed(3)} μm`,11.5,'var(--muted)','start');}
+  const tops=['波长 = 光的“颜色编号”，单位 nm（纳米）','往红光外面走：近红外，人眼看不见','CO₂ 激光在更远的地方：10.6 μm','单位：1 μm = 1000 nm，1064 nm ≈ 1 μm'];
+  g+=T(420,26,tops[st],14,'var(--fg)','middle',700);
+  $('svg1').innerHTML=g;$('f1V').textContent=lam+' nm';
+}
+ANIM.push(draw1);
+const st1=stepper(1,[
+ {t:'光是一种波，<b>波长</b>就是相邻两个波峰的距离，相当于光的“颜色编号”。单位是 <b>nm（纳米）</b>，1 nm 是百万分之一毫米。人眼只看得见 <b>400–700 nm</b>：短的是紫、蓝，长的是红。激光笔的 532（绿）、650（红）就在这里。',s:{st:0}},
+ {t:'往红光外面继续走就是<b>近红外</b>，人眼<b>看不见</b>。808、915、976 nm 是常见的半导体激光（915 / 976 常给光纤激光器当泵浦），1064 nm 是光纤激光器。设备开着你也看不见光束，所以<b>必须戴对应波长的防护眼镜</b>。',s:{st:1}},
+ {t:'CO₂ 激光在很远的地方：<b>10600 nm</b>，常写成 <b>10.6 μm</b>（微米），是 1064 nm 的 10 倍，叫远红外。图里中间断开了，不然要画得很长。',s:{st:2}},
+ {t:'单位换算：1 μm = 1000 nm。所以 1064 nm ≈ 1 μm，行业里常说光纤激光器是“<b>1 微米</b>激光”，CO₂ 是“<b>10 微米</b>激光”。拖滑块看任意波长看不看得见。',s:{st:3}}
+],s1,draw1);
+$('f1').addEventListener('input',()=>{s1.lam=+$('f1').value;s1.st=3;$('n1').textContent='自己玩';draw1();const l=s1.lam;$('c1').innerHTML=`${l} nm：${l<=700?'看得见。':'看不见（近红外）。'}${Math.abs(l-915)<6?' 半导体泵浦常用。':Math.abs(l-976)<6?' 半导体泵浦常用。':Math.abs(l-1064)<6?' 光纤激光器。':''}`;});
+
+/* ===== 2 光子能量 ===== */
+const s2={st:0,lam:1064};
+const pCol=l=>l<=700?visCol(l):l<1000?'#f76707':l<1200?'#e03131':'#9c36b5';
+function stream(y,lam,label,showCount){const E=1064/lam,r=Math.max(3,9*Math.sqrt(E)),gap=Math.max(16,42*E);let g=`<line x1="150" y1="${y}" x2="800" y2="${y}" stroke="var(--line)" stroke-width="1"/>`;
+  const off=(TT*60)%gap;let n=0;for(let x=150+off;x<800;x+=gap){g+=`<circle cx="${x}" cy="${y}" r="${r}" fill="${pCol(lam)}" opacity=".9" filter="url(#glow)"/>`;n++;}
+  g+=T(140,y+5,label,12.5,'var(--fg)','end',700);if(showCount)g+=T(805,y-14,`每份 ×${E.toFixed(2)}`,11,'var(--muted)','end');return g;}
+function draw2(){
+  const st=Math.round(s2.st);let g=DEFS;
+  if(st===0){g+=stream(150,1064,'1064 nm',false);g+=T(420,200,'一颗颗小球 = 光子：光是一份一份来的',13,'var(--fg)','middle',700);}
+  if(st===1||st===2){g+=stream(90,532,'532 nm（绿）',st===2)+stream(160,1064,'1064 nm',st===2)+stream(230,1600,'1600 nm',st===2);
+    g+=T(420,280,st===1?'小球大小 = 每个光子的能量：波长越短，球越大':'功率一样：短波长球少而大，长波长球多而小（总能量相同）',13,'var(--fg)','middle',700);}
+  if(st===3){g+=stream(110,915,'泵浦 915 nm',true)+stream(190,1064,'激光 1064 nm',true);
+    const BX=200,BW=420;g+=`<rect x="${BX}" y="236" width="${BW}" height="16" rx="4" fill="#f76707" opacity=".6"/>`+T(BX-10,248,'泵浦光子',11,'var(--fg)','end',700)+`<rect x="${BX}" y="258" width="${BW*915/1064}" height="16" rx="4" fill="#e03131"/><rect x="${BX+BW*915/1064}" y="258" width="${BW*(1-915/1064)}" height="16" rx="4" fill="#862e9c"/>`+T(BX-10,270,'激光光子 + 热',11,'var(--fg)','end',700)+T(BX+BW*915/1064+BW*(1-915/1064)/2,270,'热 14%',10.5,'#fff','middle',700);
+    g+=T(420,40,'大的换小的可以，差的那点变成热；小的换不出大的',14,'var(--ok)','middle',700);}
+  if(st===4){g+=stream(150,s2.lam,`${s2.lam} nm`,true)+T(420,220,`每个光子能量是 1064 nm 的 ${(1064/s2.lam).toFixed(2)} 倍`,13,'var(--fg)','middle',700);}
+  if(st<3)g+=T(420,40,['光不是连续的水流，而是一颗颗“光子”','波长越短，每颗越大（能量越大）','同样功率：大颗的少，小颗的多'][st],14,'var(--fg)','middle',700);
+  if(st===4)g+=T(420,40,'拖滑块：波长和每颗光子的大小',14,'var(--fg)','middle',700);
+  $('svg2').innerHTML=g;$('f2V').textContent=s2.lam+' nm';
+}
+ANIM.push(draw2);
+const st2=stepper(2,[
+ {t:'光看起来是连续的，其实是一份一份来的，每一份叫一个<b>光子</b>（小球）。一束 20 W 的激光，每秒有一亿亿个（10²⁰ 量级）光子。',s:{st:0}},
+ {t:'每个光子的能量只由波长决定：<b>波长越短，能量越大</b>（球越大）。532 nm 的光子能量是 1064 nm 的 2 倍，1600 nm 的只有约 2/3。（能量 ∝ 1 / 波长）',s:{st:1}},
+ {t:'所以<b>同样功率</b>下：短波长每秒来的光子<b>少</b>但每个大，长波长每秒来的光子<b>多</b>但每个小，总能量一样。',s:{st:2}},
+ {t:'这个关系后面会反复用到：泵浦光 915 nm 每个光子比激光 1064 nm 的<b>大约 16%</b>，所以能“大换小”换出激光，差的那 14% 变成<b>热</b>。反过来，用比 1064 长的光去泵浦，就换不出来。',s:{st:3}}
+],s2,draw2);
+$('f2').addEventListener('input',()=>{s2.lam=+$('f2').value;s2.st=4;$('n2').textContent='自己玩';draw2();$('c2').innerHTML=`${s2.lam} nm：每个光子能量是 1064 nm 的 ${(1064/s2.lam).toFixed(2)} 倍。`;});
+
+/* ===== 3 功率密度 ===== */
+const s3={st:0,d:20};
+const dens=d=>20/(Math.PI*(d/20)**2);   // d 单位 mm → W/cm²
+const fmt=v=>v>=1e4?(v/1e4).toFixed(v>=1e5?0:1)+' 万':v>=10?Math.round(v)+'':v.toFixed(1);
+function draw3(){
+  const st=Math.round(s3.st),d=s3.d;let g=DEFS;
+  // 左：太阳 + 放大镜 + 纸
+  const showSun=st>=1&&st<=2;
+  g+=`<g opacity="${showSun?1:.25}"><circle cx="90" cy="70" r="30" fill="#ffd43b" filter="url(#glow)"/>`;for(let i=0;i<10;i++){const a=i/10*Math.PI*2;g+=`<line x1="${90+36*Math.cos(a)}" y1="${70+36*Math.sin(a)}" x2="${90+48*Math.cos(a)}" y2="${70+48*Math.sin(a)}" stroke="#fab005" stroke-width="3" stroke-linecap="round"/>`;}
+  g+=`<rect x="40" y="238" width="250" height="40" rx="3" fill="#f8f9fa" stroke="#ced4da" transform="skewX(-20) translate(90,0)"/>`;
+  if(st===2){g+=`<polygon points="110,150 250,150 180,252" fill="#ffe066" opacity=".35"/><ellipse cx="180" cy="150" rx="74" ry="12" fill="url(#gLens)" stroke="#5b9bd5" stroke-width="2"/><rect x="250" y="146" width="60" height="8" rx="4" fill="#5c3d2e" transform="rotate(20 254 150)"/>`;
+    g+=`<circle cx="180" cy="256" r="7" fill="#343a40"/><circle cx="180" cy="256" r="11" fill="#e8590c" opacity=".5" filter="url(#blur6)"/>`;for(let i=0;i<4;i++){const t=(TT*0.8+i/4)%1;g+=`<circle cx="${180+Math.sin(i*3)*6*t}" cy="${246-t*40}" r="${3+t*5}" fill="#adb5bd" opacity="${.5*(1-t)}"/>`;}}
+  if(st===1){for(let i=0;i<7;i++)g+=`<line x1="${110+i*24}" y1="120" x2="${100+i*24}" y2="246" stroke="#ffe066" stroke-width="2" opacity=".6"/>`;}
+  g+=`</g>`;
+  g+=T(170,312,st===2?'放大镜：同样的阳光挤进小点 → 纸烧着':st===1?'太阳光：每 cm² 约 0.1 W，只觉得暖':'',12,'var(--fg)','middle',700);
+  // 右：激光
+  const on=st===0||st>=3;
+  const LX=600,LY=128,W=20*2.6,spotR=Math.max(1.2,d/20*W/2);
+  g+=`<g opacity="${on?1:.25}"><rect x="${LX-W/2-4}" y="40" width="${W+8}" height="34" rx="5" fill="url(#gSteelH)" stroke="#6b7280"/>`+T(LX-W/2-14,62,'20 W 激光（往下打）',12,'var(--fg)','end',700);
+  g+=`<rect x="${LX-W/2}" y="74" width="${W}" height="${LY-74}" fill="#ff4d4f" opacity=".25"/><ellipse cx="${LX}" cy="${LY}" rx="${W/2+10}" ry="7" fill="url(#gLens)" stroke="#5b9bd5" stroke-width="1.5"/>`+T(LX-W/2-14,LY+4,'聚焦透镜',11.5,'#1971c2','end',700);
+  const PY=250;g+=`<polygon points="${LX-W/2},${LY} ${LX+W/2},${LY} ${LX+spotR},${PY} ${LX-spotR},${PY}" fill="#ff4d4f" opacity=".22"/>`;
+  g+=`<rect x="500" y="${PY}" width="220" height="30" rx="4" fill="url(#gSteel)" stroke="#6b7280"/>`+T(610,PY+52,'金属板',11,'var(--muted)','middle');
+  const D=dens(d);g+=`<ellipse cx="${LX}" cy="${PY}" rx="${spotR+4}" ry="${Math.max(2,(spotR+4)*0.25)}" fill="url(#gSpot)" opacity="${Math.min(1,.3+Math.log10(D+1)/7)}"/>`;
+  if(D>3e5){for(let i=0;i<5;i++){const t=(TT*1.4+i/5)%1;g+=`<circle cx="${LX+Math.sin(i*2)*8*t}" cy="${PY-8-t*44}" r="${2+t*5}" fill="#ffd8a8" opacity="${.7*(1-t)}"/>`;}}
+  g+=`</g>`;
+  // 读数
+  if(on){g+=`<rect x="640" y="100" width="190" height="120" rx="10" fill="var(--surface)" stroke="var(--line)"/>`+T(735,124,`光斑直径 ${d>=1?d.toFixed(d>=10?0:1):d.toFixed(2)} mm`,12.5,'var(--fg)','middle',700)+T(735,152,`${fmt(D)} W/cm²`,16,D>3e5?'var(--ok)':'var(--fg)','middle',700)+T(735,176,`= 阳光的 ${fmt(D/0.1)} 倍`,11.5,'var(--muted)','middle')+T(735,202,D>3e5?'金属瞬间汽化':D>1e3?'能烧木头、纸':D>20?'手放上去烫':'只觉得暖',12,D>3e5?'var(--ok)':'var(--fg)','middle',700);}
+  const tops=['功率 = 每秒送来多少能量（W = J/s）','太阳：每平方厘米只有约 0.1 W','放大镜：功率没变，面积变小 → 纸烧着','激光：20 W 聚成 0.05 mm 的点 → 约 100 万 W/cm²','拖滑块：光斑越小，功率密度涨得越快'];
+  g+=T(420,22,tops[st],14,st===3?'var(--ok)':'var(--fg)','middle',700);
+  $('svg3').innerHTML=g;$('f3V').textContent=(d>=1?d.toFixed(d>=10?0:1):d.toFixed(2))+' mm';
+}
+ANIM.push(draw3);
+const st3=stepper(3,[
+ {t:'先分清两个量。<b>能量</b>（J，焦耳）是总共多少；<b>功率</b>（W，瓦）是<b>每秒</b>送来多少能量，1 W = 每秒 1 J，像水龙头的流量。20 W 激光 = 每秒送出 20 J。这束光 20 mm 粗时，打在金属上每平方厘米只分到约 6 W，就是温热。',s:{st:0,d:20}},
+ {t:'对比太阳：晴天阳光每平方厘米约 <b>0.1 W</b>，晒着只是暖和。',s:{st:1,d:20}},
+ {t:'用放大镜把一大片阳光挤到一个小点：<b>总功率没变</b>，面积小了几百倍，每平方厘米分到的就大了几百倍，纸就烧着了。这个“每平方厘米分到多少瓦”叫<b>功率密度</b>（W/cm²）。',s:{st:2,d:20}},
+ {t:'激光同理：同样 20 W，用透镜聚到 <b>0.05 mm</b> 的点，功率密度约 <b>100 万 W/cm²</b>，是阳光的 1000 万倍，金属瞬间汽化。光斑直径缩小 10 倍，面积缩小 100 倍，功率密度涨 <b>100 倍</b>。',s:{st:3,d:0.05}},
+ {t:'拖滑块，从 20 mm 一路缩到 0.03 mm，看功率密度怎么涨。这就是为什么项目里“光斑多大”是第一指标：远处光斑大一倍，功率密度就只剩四分之一。',s:{st:4,d:2}}
+],s3,draw3);
+$('f3').addEventListener('input',()=>{const v=+$('f3').value;s3.d=0.03*Math.pow(20/0.03,v/100);s3.st=4;$('n3').textContent='自己玩';draw3();$('c3').innerHTML=`光斑 ${s3.d>=1?s3.d.toFixed(1):s3.d.toFixed(2)} mm：约 ${fmt(dens(s3.d))} W/cm²。`;});
+
+window.__beforeExport=()=>{st1.go(2,true);st2.go(3,true);st3.go(3,true);};
+quiz([
+ {q:'1064 nm 的激光，人眼看得见吗？',o:['看不见，是近红外','看得见，是红色'],a:0,e:['对。所以必须戴对应波长的防护眼镜。','人眼只看得见 400–700 nm。']},
+ {q:'10.6 μm 等于多少 nm？',o:['10600 nm','1060 nm'],a:0,e:['对。1 μm = 1000 nm。','1 μm = 1000 nm，10.6 μm = 10600 nm。']},
+ {q:'915 nm 和 1064 nm，哪个的光子能量大？',o:['915 nm（波长短）','1064 nm（波长长）'],a:0,e:['对。波长越短，每个光子能量越大。','反了：波长越短能量越大。']},
+ {q:'功率不变，光斑直径缩小到 1/10，功率密度变成？',o:['100 倍','10 倍'],a:0,e:['对。面积和直径的平方成正比。','面积缩小 100 倍，所以是 100 倍。']}
+]);
+</script>
