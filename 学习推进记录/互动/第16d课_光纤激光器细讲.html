@@ -1,0 +1,339 @@
+<meta charset="utf-8">
+<title>光纤激光器细讲</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@700;900&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* 第 16d 课：光纤激光器细讲——单泵浦拉直画、光栅怎么挑波长、功率怎么调 */
+:root{
+  --bg:#f4f6f9; --surface:#ffffff; --fg:#151a23; --muted:#5d6676; --line:#d8dee7;
+  --beam:#e5383b; --beam-soft:#f6b3b4; --glass:#2b7bb9; --glass-fill:#dcecf8;
+  --ok:#17914f; --bad:#d23c3c; --proj2:#e0701c; --card:#2c5fd6; --card-fill:#e2eafc;
+  --metal:#7b8697; --band:#17914f22; --wave:#0ea5c6;
+  --f-body:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --f-display:"Noto Serif SC","Songti SC",serif;
+  --f-num:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1218; --surface:#171c25; --fg:#e7ebf1; --muted:#9aa4b4; --line:#2b3240;
+  --beam:#ff5c60; --beam-soft:#7a2a2d; --glass:#6db5ee; --glass-fill:#1c3448;
+  --ok:#3fd082; --bad:#ff6b6b; --proj2:#ff9a4a; --card:#82a6ff; --card-fill:#1d2a4a;
+  --metal:#8c97a8; --band:#3fd08226; --wave:#4fd1e6; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1218; --surface:#171c25; --fg:#e7ebf1; --muted:#9aa4b4; --line:#2b3240;
+  --beam:#ff5c60; --beam-soft:#7a2a2d; --glass:#6db5ee; --glass-fill:#1c3448;
+  --ok:#3fd082; --bad:#ff6b6b; --proj2:#ff9a4a; --card:#82a6ff; --card-fill:#1d2a4a;
+  --metal:#8c97a8; --band:#3fd08226; --wave:#4fd1e6; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:15px;line-height:1.65}
+.wrap{max-width:900px;margin:0 auto;padding-block:28px 56px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:flex;flex-direction:column;gap:28px}
+header{display:flex;flex-direction:column;gap:6px}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--muted)}
+h1{font-family:var(--f-display);font-weight:900;font-size:clamp(28px,5vw,40px);margin:0;line-height:1.2;text-wrap:balance}
+.lede{color:var(--muted);margin:0;max-width:62ch}
+section{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:14px;min-width:0}
+h2{font-family:var(--f-display);font-size:21px;margin:0;display:flex;gap:10px;align-items:baseline;text-wrap:balance}
+h2 .n{font-family:var(--f-num);font-size:13px;color:var(--beam)}
+.stage{overflow-x:auto;border-radius:10px;background:var(--bg)}
+.stage svg{display:block;width:100%;height:auto}
+.ctl{display:flex;flex-direction:column;gap:4px;min-width:0}
+.ctl label{font-size:13px;display:flex;justify-content:space-between;gap:8px}
+.ctl label span{font-family:var(--f-num);color:var(--muted);font-size:12px}
+input[type=range]{width:100%;accent-color:var(--beam)}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+button{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--surface);color:var(--fg);
+  border-radius:999px;padding:6px 14px;cursor:pointer}
+button:hover{border-color:var(--muted)}
+button:disabled{opacity:.45;cursor:default}
+button:focus-visible,input:focus-visible{outline:2px solid var(--card);outline-offset:2px}
+button[aria-pressed=true]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.note{font-size:12px;color:var(--muted);margin:0}
+.quiz{display:flex;flex-direction:column;gap:16px}
+.q p{margin:0 0 6px;font-weight:500}
+.q .fb{font-size:14px;margin-top:6px;min-height:1.6em}
+.q button.right{border-color:var(--ok);color:var(--ok)}
+.q button.wrong{border-color:var(--bad);color:var(--bad)}
+footer{font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+footer b{color:var(--fg)}
+svg text{font-family:var(--f-body)}
+.q-big{font-family:var(--f-display);font-size:clamp(20px,3.6vw,26px);font-weight:900;margin:0;text-wrap:balance}
+.cap-box{display:flex;gap:12px;align-items:flex-start;background:var(--card-fill);border-radius:10px;padding:12px 14px;min-height:72px}
+.cap-box .no{font-family:var(--f-num);font-size:13px;color:var(--card);white-space:nowrap;padding-top:3px}
+.cap-box p{margin:0;font-size:16px;line-height:1.6}
+.cap-box b{color:var(--beam)}
+.stepbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.dots{display:flex;gap:6px;margin-left:4px}
+.dots i{width:9px;height:9px;border-radius:50%;background:var(--line);display:block}
+.dots i.on{background:var(--card)}
+.free{border-top:1px dashed var(--line);padding-top:12px;display:flex;flex-direction:column;gap:10px}
+.free .t{font-size:13px;color:var(--muted)}
+.big-next{background:var(--card);color:#fff;border-color:var(--card);font-weight:700}
+.concl{font-size:15px;font-weight:700;color:var(--ok);margin:0}
+.check{display:grid;grid-template-columns:2.2em 1fr;gap:10px 12px;margin:0;align-items:start}
+.check .k{font-family:var(--f-num);font-size:13px;color:#fff;background:var(--card);border-radius:999px;width:1.9em;height:1.9em;display:grid;place-items:center}
+.check p{margin:0}
+.check b{color:var(--beam)}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+<div class="wrap">
+<header>
+  <div class="eyebrow">激光扫描系统入门 · 第 16 课补课（激光器基础 3b/5）</div>
+  <h1>光纤激光器细讲：一个泵浦，从头走到尾</h1>
+  <p class="lede">去掉合束器，只留最简单的一台：<b>一个泵浦模块 + 一根光纤</b>。把盘起来的光纤拉直画，跟着光从左走到右。颜色同前：<b style="color:#e8590c">① 泵浦</b>、<b style="color:#c2255c">② 发光材料</b>、<b style="color:#1971c2">③ 两面镜子</b>。</p>
+</header>
+
+<section aria-labelledby="s1">
+  <p class="q-big" id="s1">问题 1：光从泵浦走到输出头，一路上发生了什么？</p>
+  <div class="stage"><svg id="svg1" data-export="16d-1_从泵浦走到输出头" viewBox="0 0 840 310" role="img" aria-label="光从泵浦走到输出头，一路上发生了什么"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n1"></span><p id="c1"></p></div>
+  <div class="stepbar"><button id="p1">← 上一步</button><button id="x1" class="big-next">下一步 →</button><span class="dots" id="d1"></span></div>
+  <div class="free"><span class="t">自己点零件：</span><div class="row" id="parts1"></div></div>
+  <p class="concl">记住一句：泵浦光从包层进去、一路被镱离子吃掉；镱离子放出的 1064 nm 光被两个光栅关在纤芯里来回放大；从半透的光栅漏出来的就是激光，没吃完的泵浦光在出口前被剥掉。</p>
+</section>
+
+<section aria-labelledby="s2">
+  <p class="q-big" id="s2">问题 2：光栅只是一段光纤，凭什么只反射 1064、放 915 过去？</p>
+  <div class="stage"><svg id="svg2" data-export="16d-2_光栅怎么挑波长" viewBox="0 0 840 300" role="img" aria-label="光栅凭什么只反射 1064、放 915 过去"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n2"></span><p id="c2"></p></div>
+  <div class="stepbar"><button id="p2">← 上一步</button><button id="x2" class="big-next">下一步 →</button><span class="dots" id="d2"></span></div>
+  <div class="free"><span class="t">自己点：</span><div class="row"><button id="w915">照 915 nm</button><button id="w1064">照 1064 nm</button><button id="w1070">照 1070 nm</button><button id="gHR">高反光栅</button><button id="gOC">低反光栅</button></div></div>
+  <p class="concl">记住一句：光栅是刻在纤芯里的一排“很淡的镜子”，间距正好对上 1064 nm，每片反射回来的光步调一致、越叠越强；别的波长步调对不上，互相抵消，就直接穿过去了。</p>
+</section>
+
+<section aria-labelledby="s3">
+  <p class="q-big" id="s3">问题 3：激光功率是怎么调的？电都去哪了？</p>
+  <div class="stage"><svg id="svg3" data-export="16d-3_功率怎么调" viewBox="0 0 840 320" role="img" aria-label="激光功率是怎么调的，电都去哪了"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n3"></span><p id="c3"></p></div>
+  <div class="stepbar"><button id="p3">← 上一步</button><button id="x3" class="big-next">下一步 →</button><span class="dots" id="d3"></span></div>
+  <div class="free"><span class="t">自己玩：</span><div class="ctl"><label for="f3">泵浦驱动电流<span id="f3V"></span></label><input id="f3" type="range" min="0" max="100" step="1" value="80"></div></div>
+  <p class="concl">记住一句：激光功率是靠调泵浦电流来调的；过了门槛以后几乎是一条直线；墙上的电大约三分之一变成激光，其余都是热。</p>
+</section>
+
+<section aria-labelledby="s7"><h2 id="s7"><span class="n">✓</span>小测</h2><div class="quiz" id="quiz"></div></section>
+<footer>
+  <div><b>本课对项目的推进：</b></div>
+  <div>· 控制卡给激光器的“功率”（DB25 功率位或模拟量），在激光器里面最后就是变成泵浦电流（图 3）。所以功率和设定值基本成正比，但有门槛，标定要从门槛以上开始</div>
+  <div>· 包层光剥离器、水冷板：说明光纤激光器的热是实打实的，机箱要散热；我们的调焦头接在输出头后面，拿到的只有干净的 1064 nm 激光</div>
+  <div>· 图中百分比、光栅反射率、门槛位置都是【典型值 / 示意】，不同厂家不同，以规格书为准</div>
+</footer>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const T=(x,y,t,s=14,c='var(--fg)',a='middle',w=400)=>`<text x="${x}" y="${y}" font-size="${s}" fill="${c}" text-anchor="${a}" font-weight="${w}">${t}</text>`;
+function stepper(k,steps,state,draw){
+  let i=0,anim=0;
+  const dots=$('d'+k);dots.innerHTML=steps.map(()=>'<i></i>').join('');
+  function go(n,instant){i=Math.max(0,Math.min(steps.length-1,n));const to={...state,...steps[i].s},from={...state},t0=performance.now(),dur=(reduce||instant)?0:700;
+    cancelAnimationFrame(anim);
+    const tick=now=>{const p=dur?Math.min(1,(now-t0)/dur):1,e=p<.5?2*p*p:1-(-2*p+2)**2/2;
+      for(const key in to){if(typeof to[key]==='number')state[key]=from[key]+(to[key]-from[key])*e;else state[key]=to[key];}
+      draw();if(p<1)anim=requestAnimationFrame(tick);};
+    if(!dur){for(const key in to)state[key]=to[key];draw();}else anim=requestAnimationFrame(tick);
+    $('c'+k).innerHTML=steps[i].t;$('n'+k).textContent=`第 ${i+1} / ${steps.length} 步`;
+    dots.querySelectorAll('i').forEach((d,j)=>d.classList.toggle('on',j<=i));
+    $('p'+k).disabled=i===0;$('x'+k).textContent=i===steps.length-1?'从头再看 ↺':'下一步 →';}
+  $('p'+k).onclick=()=>go(i-1);$('x'+k).onclick=()=>go(i===steps.length-1?0:i+1);
+  go(0,true);return {go,n:steps.length};
+}
+let TT=0;const ANIM=[];(function loop(){if(!reduce)TT+=0.016;ANIM.forEach(f=>f(TT));requestAnimationFrame(loop);})();
+const DEFS=`<defs>
+<linearGradient id="gCu" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7c89a"/><stop offset=".45" stop-color="#c9803f"/><stop offset="1" stop-color="#7a4216"/></linearGradient>
+<linearGradient id="gCuS" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#a65f27"/><stop offset="1" stop-color="#6e3a12"/></linearGradient>
+<linearGradient id="gAu" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff2bf"/><stop offset=".5" stop-color="#e2b440"/><stop offset="1" stop-color="#9a7414"/></linearGradient>
+<linearGradient id="gAuS" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#c79a26"/><stop offset="1" stop-color="#8a6610"/></linearGradient>
+<linearGradient id="gSteel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f5f7fa"/><stop offset=".5" stop-color="#c2c9d2"/><stop offset="1" stop-color="#7b8592"/></linearGradient>
+<linearGradient id="gSteelH" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8a94a1"/><stop offset=".35" stop-color="#eef1f5"/><stop offset=".7" stop-color="#b9c1cb"/><stop offset="1" stop-color="#6f7986"/></linearGradient>
+<linearGradient id="gAlu" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0f3f6"/><stop offset="1" stop-color="#a9b2bc"/></linearGradient>
+<linearGradient id="gPlate" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9dee4"/><stop offset="1" stop-color="#aeb6c0"/></linearGradient>
+<linearGradient id="gRod" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffc2c6"/><stop offset=".3" stop-color="#e8414f"/><stop offset=".75" stop-color="#a3121f"/><stop offset="1" stop-color="#5e0a12"/></linearGradient>
+<linearGradient id="gGlass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eaf6ff" stop-opacity=".95"/><stop offset=".25" stop-color="#bfe0f7" stop-opacity=".45"/><stop offset=".7" stop-color="#9cc7e6" stop-opacity=".35"/><stop offset="1" stop-color="#6fa3c9" stop-opacity=".7"/></linearGradient>
+<linearGradient id="gLens" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d7ecfb" stop-opacity=".9"/><stop offset=".5" stop-color="#f4fbff" stop-opacity=".6"/><stop offset="1" stop-color="#9cc7e6" stop-opacity=".9"/></linearGradient>
+<linearGradient id="gJacket" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd08a"/><stop offset=".5" stop-color="#f08a1c"/><stop offset="1" stop-color="#a85508"/></linearGradient>
+<linearGradient id="gYb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff59a"/><stop offset=".5" stop-color="#e3c22a"/><stop offset="1" stop-color="#9c8210"/></linearGradient>
+<linearGradient id="gPlasma" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6c6ff"/><stop offset=".5" stop-color="#c25bd9"/><stop offset="1" stop-color="#7b2a92"/></linearGradient>
+<linearGradient id="gLamp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#fff7d1"/><stop offset="1" stop-color="#f3d27a"/></linearGradient>
+<radialGradient id="gOn" cx=".35" cy=".32" r=".75"><stop offset="0" stop-color="#fff6dc"/><stop offset=".45" stop-color="#ffa346"/><stop offset="1" stop-color="#b8420a"/></radialGradient>
+<radialGradient id="gOff" cx=".35" cy=".32" r=".75"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#b9c3cf"/><stop offset="1" stop-color="#5f6b7b"/></radialGradient>
+<radialGradient id="gHalo"><stop offset="0" stop-color="#ffb347" stop-opacity=".7"/><stop offset="1" stop-color="#ffb347" stop-opacity="0"/></radialGradient>
+<radialGradient id="gSpot"><stop offset="0" stop-color="#ffffff"/><stop offset=".3" stop-color="#ff5a5f"/><stop offset="1" stop-color="#ff2d2d" stop-opacity="0"/></radialGradient>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="blur6" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+<filter id="shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000" flood-opacity=".22"/></filter>
+</defs>`;
+function beam(x1,y1,x2,y2,w=6,a=1,col='#ff2d2d'){if(a<=0.01)return '';return `<g opacity="${a}"><line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${col}" stroke-width="${w*3.2}" opacity=".28" filter="url(#blur6)" stroke-linecap="round"/><line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${col}" stroke-width="${w}" opacity=".85" stroke-linecap="round"/><line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#fff3f3" stroke-width="${Math.max(1,w/3)}" stroke-linecap="round"/></g>`;}
+function packet(x,y,ph=0,col='#ff4a2a',len=54,amp=7){let d='';for(let i=0;i<=len;i+=2){const e=Math.sin(Math.PI*i/len);d+=(i?'L':'M')+(x-len/2+i).toFixed(1)+','+(y-amp*e*Math.sin(i/len*5*Math.PI*2/2.2+ph)).toFixed(1);}return `<path d="${d}" fill="none" stroke="${col}" stroke-width="2.6" filter="url(#glow)" stroke-linecap="round"/>`;}
+function tag(n,x,y,lx,ly,text,col){return `<line x1="${x}" y1="${y}" x2="${lx}" y2="${ly}" stroke="${col}" stroke-width="1.5"/><circle cx="${x}" cy="${y}" r="3.5" fill="${col}"/><circle cx="${lx}" cy="${ly}" r="11" fill="${col}"/>`+T(lx,ly+4.5,n,12,'#fff','middle',700)+(text?T(lx+(lx>x?16:-16),ly+5,text,12.5,'var(--fg)',lx>x?'start':'end',700):'');}
+function quiz(QS){$('quiz').innerHTML=QS.map((q,i)=>`<div class="q" data-i="${i}"><p>Q${i+1}. ${q.q}</p><div class="row">${q.o.map((o,j)=>`<button data-j="${j}">${o}</button>`).join('')}</div><div class="fb" aria-live="polite"></div></div>`).join('');
+document.querySelectorAll('.q button').forEach(b=>b.onclick=()=>{const qd=b.closest('.q'),q=QS[+qd.dataset.i],j=+b.dataset.j;
+  qd.querySelectorAll('button').forEach(x=>x.classList.remove('right','wrong'));b.classList.add(j===q.a?'right':'wrong');
+  qd.querySelector('.fb').textContent=(j===q.a?'✓ ':'✗ ')+q.e[j];});}
+const C1='#e8590c',C2='#c2255c',C3='#1971c2';   // 三要素配色：① 泵浦 ② 发光材料 ③ 谐振腔
+
+/* ===== 1 拉直画的单泵浦光纤激光器 ===== */
+const Y=150,XS=172,XH=232,XY0=270,XY1=598,XO=606,XST=660,XQ=748;
+const s1={pump:0,eat:0,seed:0,las:0,strip:0,hl:''};
+const PARTS={pump:['泵浦模块',[18,112,98,76],'第 15 课那个金色盒子：一排半导体芯片，送出 915 nm 泵浦光，从尾纤出来。它是 ①。'],
+  splice:['熔接点',[160,134,26,32],'用电弧把两根光纤的端面熔在一起，光几乎不损失地过去。泵浦光从这里进入双包层光纤的“内包层”。'],
+  hr:['高反光栅',[XH-4,128,40,44],'刻在纤芯里的镜子（③），对 1064 nm 几乎全反射；915 nm 的泵浦光走包层，直接穿过它。'],
+  yb:['掺镱光纤',[XY0,126,XY1-XY0,48],'发光材料（②）。实物十几米，盘在水冷板上，这里拉直画。泵浦光在这里被镱离子吃掉，变成 1064 nm 光。'],
+  oc:['低反光栅',[XO-4,128,40,44],'另一面镜子（③），只反射一小部分 1064 nm（如 10%），其余漏出去 = 激光。'],
+  strip:['包层光剥离器',[XST-6,118,62,64],'把包层里没吃完的泵浦光“剥”出去变成热，只让纤芯里的激光往后走。'],
+  qbh:['输出头',[XQ-6,132,92,36],'激光从这里出来（QBH 接头），后面接准直头，再接我们的调焦头。']};
+function fiberSeg(x0,x1,core){return `<rect x="${x0}" y="${Y-15}" width="${x1-x0}" height="30" fill="#5c636a"/><rect x="${x0}" y="${Y-11}" width="${x1-x0}" height="22" fill="url(#gGlass)"/><rect x="${x0}" y="${Y-2.5}" width="${x1-x0}" height="5" fill="${core}"/>`;}
+function grating(x,strong){let g='';for(let i=0;i<9;i++)g+=`<rect x="${x+2+i*3.6}" y="${Y-3}" width="1.6" height="6" fill="${C3}" opacity="${strong?1:.45}"/>`;return g;}
+function draw1(){
+  const P=s1;let g=DEFS;
+  // 泵浦模块 + 尾纤
+  g+=`<rect x="22" y="116" width="90" height="68" rx="6" fill="url(#gAu)" stroke="#8a6610" filter="url(#shadow)"/><rect x="22" y="170" width="90" height="14" rx="3" fill="url(#gAuS)"/>`+T(67,144,'泵浦模块',12,'#5c4304','middle',700)+T(67,161,'915 nm',11,'#5c4304','middle',700);
+  g+=`<rect x="112" y="${Y-5}" width="${XS-112}" height="10" rx="5" fill="url(#gJacket)"/>`;
+  // 光纤各段
+  g+=fiberSeg(XS+10,XY0,'#ced4da')+fiberSeg(XY0,XY1,'url(#gYb)')+fiberSeg(XY1,XST+50,'#ced4da')+grating(XH,true)+grating(XO,false);
+  g+=`<rect x="${XS-4}" y="${Y-9}" width="18" height="18" rx="4" fill="url(#gGlass)" stroke="#868e96"/>`;
+  // 断开号（拉直画）
+  g+=`<rect x="420" y="${Y-20}" width="16" height="40" fill="var(--bg)"/><path d="M414,${Y-20} l8,40 M430,${Y-20} l8,40" stroke="var(--muted)" stroke-width="1.6"/>`+T(428,Y+40,'实际十几米，盘起来；这里拉直画',11,'var(--muted)','middle');
+  // 剥离器
+  g+=`<rect x="${XST}" y="122" width="50" height="56" rx="5" fill="url(#gSteel)" stroke="#6b7280"/>`;for(let i=0;i<5;i++)g+=`<rect x="${XST+4+i*9}" y="114" width="5" height="8" fill="url(#gSteelH)"/><rect x="${XST+4+i*9}" y="178" width="5" height="8" fill="url(#gSteelH)"/>`;
+  // 输出光缆 + QBH
+  g+=`<rect x="${XST+50}" y="${Y-6}" width="${XQ-XST-50}" height="12" fill="#343a40"/><rect x="${XQ}" y="136" width="80" height="28" rx="5" fill="url(#gSteelH)" stroke="#6b7280"/>`;for(let i=0;i<6;i++)g+=`<line x1="${XQ+12+i*8}" y1="137" x2="${XQ+12+i*8}" y2="163" stroke="#6b7280"/>`;
+  // 泵浦光（包层里，橙色）
+  if(P.pump>0.02){const N=60;for(let i=0;i<N;i++){const x0=XS+10+(XST-XS-10)*i/N,x1=x0+(XST-XS-10)/N+0.5;let I=1;if(P.eat>0.02&&x0>XY0)I=Math.exp(-2.6*P.eat*Math.min(1,(x0-XY0)/(XY1-XY0)));if(P.strip>0.5&&x0>XST)I=0;
+      g+=`<rect x="${x0}" y="${Y-11}" width="${x1-x0}" height="22" fill="#ff922b" opacity="${.5*I*P.pump}"/>`;}
+    g+=`<rect x="112" y="${Y-3}" width="${XS-112}" height="6" fill="#ffd8a8" opacity="${P.pump}"/>`;
+    const f=(TT*0.5)%1;g+=`<circle cx="${112+f*(XST-112)}" cy="${Y-6}" r="3" fill="#fff4e6" opacity="${P.pump*(P.eat>0.5&&112+f*(XST-112)>XY0?Math.exp(-2.6*Math.min(1,(f*(XST-112)+112-XY0)/(XY1-XY0))):1)}"/>`;}
+  // 镱离子充电
+  if(P.eat>0.02)for(let i=0;i<16;i++){const x=XY0+10+i*20.5;if(x>412&&x<444)continue;const I=Math.exp(-2.6*(x-XY0)/(XY1-XY0));g+=`<circle cx="${x}" cy="${Y}" r="7" fill="url(#gHalo)" opacity="${P.eat*I}"/>`;}
+  // 种子光（两个方向）
+  if(P.seed>0.02&&P.las<0.5)for(let i=0;i<6;i++){const f=((TT*0.4+i/6)%1),dir=i%2?1:-1,x0=XY0+40+i*45,x=x0+dir*f*60;if(x>XH+30&&x<XO)g+=`<circle cx="${x}" cy="${Y}" r="2.6" fill="#ff6b6b" opacity="${P.seed*(1-f)}"/>`;}
+  // 腔内激光（纤芯里，红）
+  if(P.las>0.02){g+=beam(XH+16,Y,XO+16,Y,1.5+2.5*P.las,P.las);const bt=Math.abs(((TT*0.6)%2)-1),x=XH+16+bt*(XO-XH);g+=`<circle cx="${x}" cy="${Y}" r="${3+3*P.las}" fill="#fff3f3" filter="url(#glow)" opacity="${P.las}"/>`;}
+  if(P.strip>0.02){g+=beam(XO+20,Y,XQ,Y,2.5,P.strip)+beam(XQ+80,Y,838,Y,3.2,P.strip);
+    for(let i=0;i<4;i++){const f=(TT*0.8+i/4)%1;g+=`<path d="M${XST+8+i*11},${Y-24-f*22} q4,-6 0,-12" stroke="#c92a2a" stroke-width="2" fill="none" opacity="${(1-f)*P.strip}"/>`;}}
+  // 标签
+  g+=tag('①',67,116,67,40,'',C1)+T(84,44,'泵浦',12,C1,'start',700);
+  g+=tag('③',XH+16,Y-15,XH+16,58,'',C3)+T(XH+32,62,'高反光栅',12,C3,'start',700);
+  g+=tag('②',340,Y-15,340,92,'',C2)+T(356,96,'掺镱光纤',12,C2,'start',700);
+  g+=tag('③',XO+16,Y-15,XO+16,58,'',C3)+T(XO+32,62,'低反光栅',12,C3,'start',700);
+  g+=T(XS+6,Y+38,'熔接点',11,'var(--fg)','middle')+T(XST+25,Y+56,'包层光剥离器',11,'var(--fg)','middle')+T(XQ+40,Y+36,'输出头',11,'var(--fg)','middle');
+  if(P.hl){const [n,[x,y,w,h]]=PARTS[P.hl];g+=`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="8" fill="none" stroke="#f08c00" stroke-width="2.5" stroke-dasharray="7 5" stroke-dashoffset="${-TT*20}"/>`;}
+  // 截面小图
+  g+=`<g transform="translate(${760},${248})"><circle r="30" fill="#5c636a"/><circle r="24" fill="url(#gGlass)" stroke="#5b9bd5"/><circle r="5" fill="url(#gYb)"/>`+(P.pump>0.5?`<circle r="24" fill="#ff922b" opacity=".3"/>`:'')+(P.las>0.5?`<circle r="5" fill="#ff3b3b" opacity=".8"/>`:'')+`</g>`+T(720,252,'截面：',11,'var(--muted)','end')+T(720,268,'泵浦走包层（橙）',11,'#e8590c','end')+T(720,284,'激光走纤芯（红）',11,'#e03131','end');
+  const tops=['一台最简单的光纤激光器（单泵浦，拉直画）','泵浦模块通电：915 nm 光进入光纤的内包层','泵浦光一路被镱离子吃掉，镱离子充上电','充电的镱离子偶尔自己放光：顺着纤芯走的成了“种子”','种子被两个光栅关住，来回放大：纤芯里 1064 nm 光越来越强','低反光栅漏出激光；剩下的泵浦光被剥掉变成热'];
+  const st=P.strip>0.5?5:P.las>0.5?4:P.seed>0.5?3:P.eat>0.5?2:P.pump>0.5?1:0;
+  g+=T(420,24,P.hl?PARTS[P.hl][0]:tops[st],14,st>=4&&!P.hl?'var(--ok)':'var(--fg)','middle',700);
+  $('svg1').innerHTML=g;
+}
+ANIM.push(draw1);
+const st1=stepper(1,[
+ {t:'这是一台<b>最简单</b>的光纤激光器：左边<b>一个泵浦模块</b>（①），尾纤熔接到一根光纤上；光纤里依次是<b>高反光栅</b>（③）、十几米<b>掺镱光纤</b>（②，实际盘起来，这里拉直画）、<b>低反光栅</b>（③）、<b>包层光剥离器</b>、<b>输出头</b>。没有合束器。',s:{pump:0,eat:0,seed:0,las:0,strip:0,hl:''}},
+ {t:'泵浦模块通电，<b>915 nm 泵浦光</b>（橙）从尾纤出来，经<b>熔接点</b>进入双包层光纤的<b>内包层</b>（右下角截面：橙色那圈）。高反光栅刻在纤芯里，只管 1064，泵浦光走包层，<b>直接穿过</b>它。',s:{pump:1,eat:0,seed:0,las:0,strip:0,hl:''}},
+ {t:'进入<b>掺镱光纤</b>：泵浦光一路走、一路被镱离子<b>吃掉</b>（橙色越来越淡），镱离子<b>充上电</b>（纤芯发亮）。这就是第 16 课图 2 的实验。',s:{pump:1,eat:1,seed:0,las:0,strip:0,hl:''}},
+ {t:'充了电的镱离子，有的会<b>自己掉下来</b>，放出一个光子，方向是随便的。大部分跑出纤芯丢掉了，正好<b>顺着纤芯</b>走的那一点点，就是激光的“<b>种子</b>”（红点）。',s:{pump:1,eat:1,seed:1,las:0,strip:0,hl:''}},
+ {t:'种子走到光栅被<b>反射回来</b>，来回穿过充了电的镱离子，每过一次就“逼”出一样的光子（第 14 课的放大）。纤芯里的 <b>1064 nm 光</b>越攒越强。两个光栅就是那两面镜子。',s:{pump:1,eat:1,seed:1,las:1,strip:0,hl:''}},
+ {t:'<b>低反光栅</b>只反射一小部分，<b>漏出去的就是激光</b>。包层里还剩一点没吃完的泵浦光，在出口前被<b>包层光剥离器</b>剥掉、变成热（冒热气），只让纤芯里干净的激光走到<b>输出头</b>。',s:{pump:1,eat:1,seed:1,las:1,strip:1,hl:''}}
+],s1,draw1);
+$('parts1').innerHTML=Object.entries(PARTS).map(([k,v])=>`<button data-k="${k}">${v[0]}</button>`).join('');
+$('parts1').querySelectorAll('button').forEach(b=>b.onclick=()=>{const k=b.dataset.k;Object.assign(s1,{pump:1,eat:1,seed:1,las:1,strip:1,hl:k});$('n1').textContent='自己点';$('c1').innerHTML=PARTS[k][2];$('parts1').querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));draw1();});
+
+/* ===== 2 光栅怎么挑波长 ===== */
+const s2={lam:0,oc:0,show:0};   // lam: 0 = 1064, 1 = 915, 2 = 1070
+const GX0=280,GX1=560,GY=150;
+function draw2(){
+  const lamName=['1064','915','1070'][Math.round(s2.lam)],lam=+lamName,oc=s2.oc>0.5,show=s2.show>0.5;
+  const match=lam===1064,R=match?(oc?0.1:0.99):0.002;let g=DEFS;
+  // 放大的一段光纤
+  g+=`<rect x="40" y="${GY-70}" width="760" height="140" rx="16" fill="#5c636a"/><rect x="40" y="${GY-56}" width="760" height="112" fill="url(#gGlass)"/><rect x="40" y="${GY-14}" width="760" height="28" fill="#fff9db" stroke="#d4b106" stroke-opacity=".6"/>`;
+  g+=T(48,GY-78,'纤芯放大几万倍看（长度、条纹间距都是示意）',12,'var(--muted)','start');
+  // 光栅条纹
+  const n=oc?10:22,gap=(GX1-GX0)/n;
+  for(let i=0;i<n;i++)g+=`<rect x="${GX0+i*gap}" y="${GY-14}" width="${gap*0.45}" height="28" fill="${C3}" opacity="${oc?.28:.5}"/>`;
+  g+=`<path d="M${GX0},${GY+24} v8 h${gap} v-8" fill="none" stroke="var(--fg)" stroke-width="1.4"/>`+T(GX0+gap/2,GY+48,'间距 ≈ 0.37 μm',11,'var(--fg)','middle',700);
+  g+=T((GX0+GX1)/2,GY-24,oc?'低反光栅：条纹少、浅':'高反光栅：条纹多、深',12,C3,'middle',700);
+  if(show){
+    const col=match?'#ff3b3b':lam===915?'#fd7e14':'#e64980';
+    // 入射波
+    const ph=TT*6;let d='';for(let x=50;x<=GX1;x+=3){d+=(d?'L':'M')+x+','+(GY-4-6*Math.sin(x/9-ph)).toFixed(1);}
+    const tAmp=Math.sqrt(1-R);
+    g+=`<path d="${d}" fill="none" stroke="${col}" stroke-width="2.4" filter="url(#glow)" opacity="${x=>1}"/>`;
+    // 透过
+    let d2='';for(let x=GX1;x<=790;x+=3){d2+=(d2?'L':'M')+x+','+(GY-4-6*tAmp*Math.sin(x/9-ph)).toFixed(1);}
+    g+=`<path d="${d2}" fill="none" stroke="${col}" stroke-width="2.4" opacity="${Math.max(.08,tAmp)}" filter="url(#glow)"/>`;
+    // 反射（每片一点点）
+    if(match){for(let i=0;i<n;i++){const x=GX0+i*gap;g+=`<path d="M${x},${GY+8} q-6,4 -12,0" stroke="${col}" stroke-width="1.6" fill="none" opacity=".8"/>`;}
+      let d3='';for(let x=50;x<=GX0+40;x+=3){d3+=(d3?'L':'M')+x+','+(GY+8-6*Math.sqrt(R)*Math.sin(-x/9-ph)).toFixed(1);}
+      g+=`<path d="${d3}" fill="none" stroke="${col}" stroke-width="2.4" opacity="${Math.max(.15,Math.sqrt(R))}" filter="url(#glow)"/>`+T(110,GY+36,'← 反射回去',12,col,'middle',700);}
+    else{for(let i=0;i<n;i+=2){const x=GX0+i*gap;g+=`<path d="M${x},${GY+8} q-6,4 -12,0" stroke="${col}" stroke-width="1.2" fill="none" opacity=".35"/>`;}g+=T(150,GY+36,'各片反射步调对不上，互相抵消',12,'var(--muted)','middle',700);}
+    g+=T(70,GY-30,`${lamName} nm 照进来 →`,13,col,'start',700);
+    // 读数
+    g+=`<rect x="250" y="236" width="340" height="52" rx="10" fill="var(--surface)" stroke="var(--line)"/>`+T(270,258,`反射回去：${R>=0.05?Math.round(R*100):'≈0'}%`,13,match?'var(--ok)':'var(--muted)','start',700)+T(430,258,`穿过去：${Math.round((1-R)*100)}%`,13,'var(--fg)','start',700);
+    g+=T(270,278,match?(oc?'低反光栅：漏出 90% → 这就是激光':'高反光栅：几乎全反射 → 当全反射镜'):(lam===915?'泵浦光：直接穿过，不受影响':'差一点点（6 nm）也不反射：光栅只认很窄一段'),11.5,'var(--muted)','start');
+  }
+  const top=!show?'光栅：纤芯里一排“很淡的镜子”':match?(oc?'低反光栅：只反射一小部分 1064':'1064 nm：每片反射一点，步调一致，叠成强反射'):lam===915?'915 nm：步调对不上，直接穿过':'1070 nm：也穿过——光栅只认它自己那个波长';
+  g+=T(420,24,top,14,match&&show?'var(--ok)':'var(--fg)','middle',700);
+  $('svg2').innerHTML=g;
+  [['w915',1],['w1064',0],['w1070',2]].forEach(([id,v])=>$(id).setAttribute('aria-pressed',String(show&&Math.round(s2.lam)===v)));$('gHR').setAttribute('aria-pressed',String(!oc));$('gOC').setAttribute('aria-pressed',String(oc));
+}
+ANIM.push(draw2);
+const st2=stepper(2,[
+ {t:'把纤芯放大看：光栅那一段，每隔一小段（约 0.37 μm）玻璃就稍微“硬”一点（折射率高一点），是用紫外光照出来的。每一条都像一面<b>极淡的镜子</b>，单独一条只反射一丁点光。',s:{show:0,lam:0,oc:0}},
+ {t:'照进 <b>1064 nm</b>：每条都反射回一丁点。因为<b>间距正好对上这个波长</b>，所有反射回来的光<b>步调一致</b>，越叠越强。几十万条叠起来，几乎<b>全部反射</b>。这就是高反光栅。',s:{show:1,lam:0,oc:0}},
+ {t:'照进 <b>915 nm</b>（泵浦光）：间距对不上它的波长，各条反射回来的光<b>步调乱</b>、互相抵消，所以它<b>直接穿过去</b>，好像光栅不存在。（何况泵浦光大多在包层里走）',s:{show:1,lam:1,oc:0}},
+ {t:'差一点点也不行：<b>1070 nm</b> 同样穿过去。光栅只认很窄一段（零点几 nm 到一两 nm，【典型值】），所以激光器出什么波长，<b>光栅说了算</b>（第 16c 课）。',s:{show:1,lam:2,oc:0}},
+ {t:'<b>低反光栅</b>：条纹少、浅，对 1064 nm 只反射一小部分（如 10%，【典型值】），其余 90% 穿过去——<b>穿过去的就是激光</b>。它就是第 14 课那面“半透镜”。',s:{show:1,lam:0,oc:1}}
+],s2,draw2);
+const fr2=(o)=>{Object.assign(s2,o,{show:1});$('n2').textContent='自己点';draw2();const lam=['1064','915','1070'][Math.round(s2.lam)];$('c2').innerHTML=`${s2.oc>0.5?'低反':'高反'}光栅 + ${lam} nm：${lam==='1064'?(s2.oc>0.5?'反射约 10%，其余漏出 = 激光。':'几乎全反射。'):'对不上，直接穿过。'}`;};
+$('w915').onclick=()=>fr2({lam:1});$('w1064').onclick=()=>fr2({lam:0});$('w1070').onclick=()=>fr2({lam:2});$('gHR').onclick=()=>fr2({oc:0});$('gOC').onclick=()=>fr2({oc:1});
+
+/* ===== 3 功率怎么调、电去哪了 ===== */
+const s3={I:0};
+const pumpP=I=>I<5?0:(I-5)/95;              // 泵浦光（相对满功率）
+const laserP=I=>{const p=pumpP(I);return p<0.06?0:(p-0.06)/0.94*0.75;}   // 门槛 + 斜率约 75%【典型】
+function draw3(){
+  const I=s3.I,pp=pumpP(I),lp=laserP(I);let g=DEFS;
+  // 驱动电源
+  g+=`<rect x="28" y="70" width="120" height="90" rx="10" fill="#343a40" filter="url(#shadow)"/>`+T(88,96,'恒流驱动电源',12,'#fff','middle',700)+`<circle cx="88" cy="128" r="18" fill="url(#gSteel)" stroke="#adb5bd"/><line x1="88" y1="128" x2="${88+14*Math.cos(Math.PI*(0.75+1.5*I/100))}" y2="${128+14*Math.sin(Math.PI*(0.75+1.5*I/100))}" stroke="#212529" stroke-width="3"/>`;
+  g+=`<path d="M148,${115} H196" stroke="#e03131" stroke-width="3"/>`+T(172,106,`${Math.round(I)}%`,11,'var(--fg)','middle',700);
+  // 泵浦模块
+  g+=`<rect x="196" y="88" width="96" height="56" rx="6" fill="url(#gAu)" stroke="#8a6610" filter="url(#shadow)"/>`+T(244,121,'泵浦模块',12,'#5c4304','middle',700);
+  g+=`<rect x="292" y="111" width="50" height="8" rx="4" fill="url(#gJacket)"/>`+(pp>0?`<rect x="292" y="112" width="50" height="6" fill="#ffd8a8" opacity="${pp}"/>`:'');
+  // 光纤激光器（盘纤）
+  g+=`<rect x="342" y="64" width="160" height="104" rx="10" fill="url(#gPlate)" stroke="#8a94a1" filter="url(#shadow)"/>`;
+  for(let i=0;i<4;i++)g+=`<ellipse cx="422" cy="116" rx="${30+i*10}" ry="${18+i*6}" fill="none" stroke="url(#gYb)" stroke-width="3"/>`;
+  if(pp>0)g+=`<ellipse cx="422" cy="116" rx="60" ry="36" fill="#ff922b" opacity="${.15*pp}" filter="url(#blur6)"/>`;
+  g+=T(422,184,'掺镱光纤 + 两个光栅',11,'var(--muted)','middle');
+  g+=`<rect x="502" y="110" width="60" height="10" fill="#343a40"/><rect x="562" y="102" width="56" height="26" rx="5" fill="url(#gSteelH)" stroke="#6b7280"/>`;
+  g+=beam(618,115,700,115,1.5+4*lp,lp>0?1:0);
+  // 功率计
+  const MX=752,MY=118;g+=`<circle cx="${MX}" cy="${MY}" r="54" fill="url(#gSteel)" stroke="#6b7280" filter="url(#shadow)"/><circle cx="${MX}" cy="${MY}" r="44" fill="#f8f9fa"/>`;
+  for(let i=0;i<=10;i++){const a=Math.PI*(0.8+1.4*i/10);g+=`<line x1="${MX+36*Math.cos(a)}" y1="${MY+36*Math.sin(a)}" x2="${MX+42*Math.cos(a)}" y2="${MY+42*Math.sin(a)}" stroke="#495057" stroke-width="${i%5?1:2}"/>`;}
+  const na=Math.PI*(0.8+1.4*lp);g+=`<line x1="${MX}" y1="${MY}" x2="${MX+34*Math.cos(na)}" y2="${MY+34*Math.sin(na)}" stroke="#e03131" stroke-width="3" stroke-linecap="round"/><circle cx="${MX}" cy="${MY}" r="4" fill="#212529"/>`+T(MX,MY+26,'激光功率计',10,'#495057','middle',700);
+  // 能量去向条
+  const BX=150,BW=560,elec=I/100;
+  const row=(y,label,segs)=>{let s=T(BX-12,y+14,label,12,'var(--fg)','end',700)+`<rect x="${BX}" y="${y}" width="${BW}" height="20" rx="5" fill="var(--bg)" stroke="var(--line)"/>`;let x=BX;segs.forEach(([v,c,t])=>{const w=BW*v;if(w>0.5){s+=`<rect x="${x}" y="${y}" width="${w}" height="20" rx="4" fill="${c}"/>`;if(w>60&&t)s+=T(x+w/2,y+14,t,11,'#fff','middle',700);}x+=w;});return s;};
+  const pumpOpt=0.5*pp,las=0.5*lp*1.0;   // 电→泵浦光约 50%【典型】
+  g+=row(212,'墙上的电',[[elec,'#495057','电 100%']]);
+  g+=row(240,'变成泵浦光',[[pumpOpt*elec/Math.max(elec,1e-6)*(elec>0?1:0)*1,'#fd7e14','泵浦光'],[elec-pumpOpt,'#c92a2a','芯片发热']]);
+  g+=row(268,'变成激光',[[las,'#e03131','激光'],[pumpOpt-las,'#c92a2a','光纤发热']]);
+  g+=T(BX+BW+10,226,'',1)+T(BX,300,`激光 ≈ 墙上电的 ${elec>0?Math.round(las/elec*100):0}%（电→泵浦约 50%，泵浦→激光约 75%，【典型值】）`,11.5,'var(--muted)','start');
+  const top=I<1?'电流为 0：什么都没有':lp<=0?'电流太小：有泵浦光，但没过门槛，没有激光':I>95?'满功率：大约三分之一的电变成激光，其余是热':'过了门槛：激光功率跟着电流几乎直线上升';
+  g+=T(420,30,top,14,lp>0?'var(--ok)':'var(--fg)','middle',700);
+  $('svg3').innerHTML=g;$('f3V').textContent=Math.round(I)+'%';
+}
+ANIM.push(draw3);
+const st3=stepper(3,[
+ {t:'整条能量链：<b>恒流驱动电源</b> → 泵浦模块 → 掺镱光纤 → 激光。驱动电流为 0，什么都没有。',s:{I:0}},
+ {t:'电流开一点：泵浦模块发出了泵浦光，但还<b>没过门槛</b>（光栅之间的放大还补不上损耗），功率计不动，<b>没有激光</b>。（第 14 课“漏太多不起振”的同一个道理）',s:{I:9}},
+ {t:'过了门槛以后，激光功率跟着电流<b>几乎直线上升</b>。所以光纤激光器调功率，就是<b>调泵浦电流</b>。',s:{I:55}},
+ {t:'开满：墙上的电大约一半变成泵浦光（另一半是芯片发热），泵浦光大约 3/4 变成激光（其余在光纤里发热），合起来<b>大约三分之一的电变成激光</b>，剩下全是热，所以机箱要水冷或风冷。（【典型值】）',s:{I:100}}
+],s3,draw3);
+$('f3').addEventListener('input',()=>{s3.I=+$('f3').value;$('n3').textContent='自己玩';draw3();$('c3').innerHTML=laserP(s3.I)<=0?`电流 ${s3.I}%：没过门槛，没有激光。`:`电流 ${s3.I}%：激光约满功率的 ${Math.round(laserP(s3.I)/0.75*100)}%。`;});
+
+window.__beforeExport=()=>{st1.go(5,true);st2.go(1,true);st3.go(3,true);};
+quiz([
+ {q:'泵浦光在光纤里走哪一层？',o:['粗的内包层','细的纤芯'],a:0,e:['对。泵浦光束差，塞不进细纤芯。','纤芯里走的是激光。']},
+ {q:'激光的“种子”是从哪来的？',o:['充了电的镱离子自己掉下来放的光，顺着纤芯走的那一点','泵浦光直接变的'],a:0,e:['对。然后被光栅关住来回放大。','泵浦光只负责充电。']},
+ {q:'为什么 915 nm 泵浦光能穿过高反光栅？',o:['光栅间距只对上 1064 nm，915 的反射步调对不上、互相抵消','因为 915 nm 能量大，冲过去了'],a:0,e:['对。光栅只认一个波长。','和能量无关，是步调（间距）对不上。']},
+ {q:'光纤激光器的功率是怎么调的？',o:['调泵浦模块的驱动电流','调光栅'],a:0,e:['对。控制卡给的功率设定最后变成泵浦电流。','光栅是固定的，调的是泵浦电流。']}
+]);
+</script>
