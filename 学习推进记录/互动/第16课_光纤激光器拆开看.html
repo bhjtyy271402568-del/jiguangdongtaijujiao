@@ -1,0 +1,337 @@
+<meta charset="utf-8">
+<title>光纤激光器拆开看</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@700;900&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* 第 16 课：光纤激光器拆开看——机箱零件、为什么 915/976、双包层光纤 */
+:root{
+  --bg:#f4f6f9; --surface:#ffffff; --fg:#151a23; --muted:#5d6676; --line:#d8dee7;
+  --beam:#e5383b; --beam-soft:#f6b3b4; --glass:#2b7bb9; --glass-fill:#dcecf8;
+  --ok:#17914f; --bad:#d23c3c; --proj2:#e0701c; --card:#2c5fd6; --card-fill:#e2eafc;
+  --metal:#7b8697; --band:#17914f22; --wave:#0ea5c6;
+  --f-body:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --f-display:"Noto Serif SC","Songti SC",serif;
+  --f-num:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1218; --surface:#171c25; --fg:#e7ebf1; --muted:#9aa4b4; --line:#2b3240;
+  --beam:#ff5c60; --beam-soft:#7a2a2d; --glass:#6db5ee; --glass-fill:#1c3448;
+  --ok:#3fd082; --bad:#ff6b6b; --proj2:#ff9a4a; --card:#82a6ff; --card-fill:#1d2a4a;
+  --metal:#8c97a8; --band:#3fd08226; --wave:#4fd1e6; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1218; --surface:#171c25; --fg:#e7ebf1; --muted:#9aa4b4; --line:#2b3240;
+  --beam:#ff5c60; --beam-soft:#7a2a2d; --glass:#6db5ee; --glass-fill:#1c3448;
+  --ok:#3fd082; --bad:#ff6b6b; --proj2:#ff9a4a; --card:#82a6ff; --card-fill:#1d2a4a;
+  --metal:#8c97a8; --band:#3fd08226; --wave:#4fd1e6; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:15px;line-height:1.65}
+.wrap{max-width:900px;margin:0 auto;padding-block:28px 56px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:flex;flex-direction:column;gap:28px}
+header{display:flex;flex-direction:column;gap:6px}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--muted)}
+h1{font-family:var(--f-display);font-weight:900;font-size:clamp(28px,5vw,40px);margin:0;line-height:1.2;text-wrap:balance}
+.lede{color:var(--muted);margin:0;max-width:62ch}
+section{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:14px;min-width:0}
+h2{font-family:var(--f-display);font-size:21px;margin:0;display:flex;gap:10px;align-items:baseline;text-wrap:balance}
+h2 .n{font-family:var(--f-num);font-size:13px;color:var(--beam)}
+.stage{overflow-x:auto;border-radius:10px;background:var(--bg)}
+.stage svg{display:block;width:100%;height:auto}
+.ctl{display:flex;flex-direction:column;gap:4px;min-width:0}
+.ctl label{font-size:13px;display:flex;justify-content:space-between;gap:8px}
+.ctl label span{font-family:var(--f-num);color:var(--muted);font-size:12px}
+input[type=range]{width:100%;accent-color:var(--beam)}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+button{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--surface);color:var(--fg);
+  border-radius:999px;padding:6px 14px;cursor:pointer}
+button:hover{border-color:var(--muted)}
+button:disabled{opacity:.45;cursor:default}
+button:focus-visible,input:focus-visible{outline:2px solid var(--card);outline-offset:2px}
+button[aria-pressed=true]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.note{font-size:12px;color:var(--muted);margin:0}
+.quiz{display:flex;flex-direction:column;gap:16px}
+.q p{margin:0 0 6px;font-weight:500}
+.q .fb{font-size:14px;margin-top:6px;min-height:1.6em}
+.q button.right{border-color:var(--ok);color:var(--ok)}
+.q button.wrong{border-color:var(--bad);color:var(--bad)}
+footer{font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+footer b{color:var(--fg)}
+svg text{font-family:var(--f-body)}
+.q-big{font-family:var(--f-display);font-size:clamp(20px,3.6vw,26px);font-weight:900;margin:0;text-wrap:balance}
+.cap-box{display:flex;gap:12px;align-items:flex-start;background:var(--card-fill);border-radius:10px;padding:12px 14px;min-height:72px}
+.cap-box .no{font-family:var(--f-num);font-size:13px;color:var(--card);white-space:nowrap;padding-top:3px}
+.cap-box p{margin:0;font-size:16px;line-height:1.6}
+.cap-box b{color:var(--beam)}
+.stepbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.dots{display:flex;gap:6px;margin-left:4px}
+.dots i{width:9px;height:9px;border-radius:50%;background:var(--line);display:block}
+.dots i.on{background:var(--card)}
+.free{border-top:1px dashed var(--line);padding-top:12px;display:flex;flex-direction:column;gap:10px}
+.free .t{font-size:13px;color:var(--muted)}
+.big-next{background:var(--card);color:#fff;border-color:var(--card);font-weight:700}
+.concl{font-size:15px;font-weight:700;color:var(--ok);margin:0}
+.check{display:grid;grid-template-columns:2.2em 1fr;gap:10px 12px;margin:0;align-items:start}
+.check .k{font-family:var(--f-num);font-size:13px;color:#fff;background:var(--card);border-radius:999px;width:1.9em;height:1.9em;display:grid;place-items:center}
+.check p{margin:0}
+.check b{color:var(--beam)}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+<div class="wrap">
+<header>
+  <div class="eyebrow">激光扫描系统入门 · 第 16 课（激光器基础 3/5）</div>
+  <h1>光纤激光器拆开看</h1>
+  <p class="lede">三张图，一张只回答一个问题：机箱里每个零件干什么、泵浦为什么偏偏用 915 / 976 nm、光纤为什么要十几米长还出好光。颜色沿用前两课：<b style="color:#e8590c">① 泵浦</b>、<b style="color:#c2255c">② 发光材料</b>、<b style="color:#1971c2">③ 两面镜子</b>。</p>
+</header>
+
+<section aria-labelledby="s1">
+  <p class="q-big" id="s1">问题 1：打开光纤激光器的机箱，每个零件是干什么的？</p>
+  <div class="stage"><svg id="svg1" data-export="16-1_光纤激光器拆开看" viewBox="0 0 840 340" role="img" aria-label="打开光纤激光器的机箱，每个零件是干什么的"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n1"></span><p id="c1"></p></div>
+  <div class="stepbar"><button id="p1">← 上一步</button><button id="x1" class="big-next">下一步 →</button><span class="dots" id="d1"></span></div>
+  <div class="free"><span class="t">自己点：</span><div class="row"><button id="h1a">泵浦模块</button><button id="h1b">合束器</button><button id="h1c">光栅</button><button id="h1d">掺镱光纤</button><button id="h1e">输出头</button></div></div>
+  <p class="concl">记住一句：泵浦模块的光经合束器并进一根光纤，在两个光栅之间那段盘起来的掺镱光纤里变成 1064 nm 激光，从半透的光栅漏出，经输出头出来。</p>
+</section>
+
+<section aria-labelledby="s2">
+  <p class="q-big" id="s2">问题 2：为什么泵浦偏偏用 915 / 976 nm？做个实验</p>
+  <div class="stage"><svg id="svg2" data-export="16-2_为什么用915和976" viewBox="0 0 840 330" role="img" aria-label="为什么泵浦偏偏用 915 或 976 nm"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n2"></span><p id="c2"></p></div>
+  <div class="stepbar"><button id="p2">← 上一步</button><button id="x2" class="big-next">下一步 →</button><span class="dots" id="d2"></span></div>
+  <div class="free"><span class="t">自己玩：</span><div class="ctl"><label for="f2">照进去的光是什么波长<span id="f2V"></span></label><input id="f2" type="range" min="780" max="1100" step="1" value="915"></div></div>
+  <p class="concl">记住一句：泵浦光要同时满足两条：镱离子“吃得下”（只吃 915、976 nm 附近），而且每个光子的能量比 1064 nm 激光大（波长更短）。两条都满足的就是 915 和 976 nm。</p>
+</section>
+
+<section aria-labelledby="s3">
+  <p class="q-big" id="s3">问题 3：光纤为什么要十几米长、盘起来？出来的光为什么这么好？</p>
+  <div class="stage"><svg id="svg3" data-export="16-3_双包层光纤" viewBox="0 0 840 340" role="img" aria-label="光纤为什么要十几米长盘起来，出来的光为什么好"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n3"></span><p id="c3"></p></div>
+  <div class="stepbar"><button id="p3">← 上一步</button><button id="x3" class="big-next">下一步 →</button><span class="dots" id="d3"></span></div>
+  <div class="free"><span class="t">自己玩：</span><div class="ctl"><label for="f3">掺镱光纤长度<span id="f3V"></span></label><input id="f3" type="range" min="1" max="30" step="1" value="15"></div></div>
+  <p class="concl">记住一句：泵浦光在粗的“内包层”里乱跑，只有穿过细纤芯时才被吃掉一点，所以光纤要很长、盘起来放；激光只在细纤芯里走，所以出来的光又细又好——差的泵浦光被“洗”成了好激光。</p>
+</section>
+
+<section aria-labelledby="s7"><h2 id="s7"><span class="n">✓</span>小测</h2><div class="quiz" id="quiz"></div></section>
+<footer>
+  <div><b>本课对项目的推进：</b></div>
+  <div>· 光纤激光器 = 把一堆 M² ≈ 40 的半导体泵浦光，“洗”成 M² ≈ 1.1 的好激光。这就是第 13g 课说的“1064 比 915 好做”的原因：远处要小光斑，就选光纤激光器</div>
+  <div>· 老师的 915 nm：如果是想做光纤激光器，915 是泵浦，不直接打东西；如果就是直接用 915 打东西，那是半导体激光器，光束差。要问老师是哪一种</div>
+  <div>· 我们的调焦头接在输出头后面：输出头 → 准直头 → 动镜 / 物镜 → 振镜（第 18 课细讲）</div>
+  <div>· 图里的长度、纤芯尺寸、吸收快慢都是【典型值 / 示意】，不同光纤型号不同，看规格书</div>
+</footer>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const T=(x,y,t,s=14,c='var(--fg)',a='middle',w=400)=>`<text x="${x}" y="${y}" font-size="${s}" fill="${c}" text-anchor="${a}" font-weight="${w}">${t}</text>`;
+function stepper(k,steps,state,draw){
+  let i=0,anim=0;
+  const dots=$('d'+k);dots.innerHTML=steps.map(()=>'<i></i>').join('');
+  function go(n,instant){i=Math.max(0,Math.min(steps.length-1,n));const to={...state,...steps[i].s},from={...state},t0=performance.now(),dur=(reduce||instant)?0:700;
+    cancelAnimationFrame(anim);
+    const tick=now=>{const p=dur?Math.min(1,(now-t0)/dur):1,e=p<.5?2*p*p:1-(-2*p+2)**2/2;
+      for(const key in to){if(typeof to[key]==='number')state[key]=from[key]+(to[key]-from[key])*e;else state[key]=to[key];}
+      draw();if(p<1)anim=requestAnimationFrame(tick);};
+    if(!dur){for(const key in to)state[key]=to[key];draw();}else anim=requestAnimationFrame(tick);
+    $('c'+k).innerHTML=steps[i].t;$('n'+k).textContent=`第 ${i+1} / ${steps.length} 步`;
+    dots.querySelectorAll('i').forEach((d,j)=>d.classList.toggle('on',j<=i));
+    $('p'+k).disabled=i===0;$('x'+k).textContent=i===steps.length-1?'从头再看 ↺':'下一步 →';}
+  $('p'+k).onclick=()=>go(i-1);$('x'+k).onclick=()=>go(i===steps.length-1?0:i+1);
+  go(0,true);return {go,n:steps.length};
+}
+let TT=0;const ANIM=[];(function loop(){if(!reduce)TT+=0.016;ANIM.forEach(f=>f(TT));requestAnimationFrame(loop);})();
+const DEFS=`<defs>
+<linearGradient id="gCu" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7c89a"/><stop offset=".45" stop-color="#c9803f"/><stop offset="1" stop-color="#7a4216"/></linearGradient>
+<linearGradient id="gCuS" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#a65f27"/><stop offset="1" stop-color="#6e3a12"/></linearGradient>
+<linearGradient id="gAu" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff2bf"/><stop offset=".5" stop-color="#e2b440"/><stop offset="1" stop-color="#9a7414"/></linearGradient>
+<linearGradient id="gAuS" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#c79a26"/><stop offset="1" stop-color="#8a6610"/></linearGradient>
+<linearGradient id="gSteel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f5f7fa"/><stop offset=".5" stop-color="#c2c9d2"/><stop offset="1" stop-color="#7b8592"/></linearGradient>
+<linearGradient id="gSteelH" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8a94a1"/><stop offset=".35" stop-color="#eef1f5"/><stop offset=".7" stop-color="#b9c1cb"/><stop offset="1" stop-color="#6f7986"/></linearGradient>
+<linearGradient id="gAlu" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0f3f6"/><stop offset="1" stop-color="#a9b2bc"/></linearGradient>
+<linearGradient id="gPlate" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9dee4"/><stop offset="1" stop-color="#aeb6c0"/></linearGradient>
+<linearGradient id="gRod" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffc2c6"/><stop offset=".3" stop-color="#e8414f"/><stop offset=".75" stop-color="#a3121f"/><stop offset="1" stop-color="#5e0a12"/></linearGradient>
+<linearGradient id="gGlass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eaf6ff" stop-opacity=".95"/><stop offset=".25" stop-color="#bfe0f7" stop-opacity=".45"/><stop offset=".7" stop-color="#9cc7e6" stop-opacity=".35"/><stop offset="1" stop-color="#6fa3c9" stop-opacity=".7"/></linearGradient>
+<linearGradient id="gLens" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d7ecfb" stop-opacity=".9"/><stop offset=".5" stop-color="#f4fbff" stop-opacity=".6"/><stop offset="1" stop-color="#9cc7e6" stop-opacity=".9"/></linearGradient>
+<linearGradient id="gJacket" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd08a"/><stop offset=".5" stop-color="#f08a1c"/><stop offset="1" stop-color="#a85508"/></linearGradient>
+<linearGradient id="gYb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff59a"/><stop offset=".5" stop-color="#e3c22a"/><stop offset="1" stop-color="#9c8210"/></linearGradient>
+<linearGradient id="gPlasma" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6c6ff"/><stop offset=".5" stop-color="#c25bd9"/><stop offset="1" stop-color="#7b2a92"/></linearGradient>
+<linearGradient id="gLamp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#fff7d1"/><stop offset="1" stop-color="#f3d27a"/></linearGradient>
+<radialGradient id="gOn" cx=".35" cy=".32" r=".75"><stop offset="0" stop-color="#fff6dc"/><stop offset=".45" stop-color="#ffa346"/><stop offset="1" stop-color="#b8420a"/></radialGradient>
+<radialGradient id="gOff" cx=".35" cy=".32" r=".75"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#b9c3cf"/><stop offset="1" stop-color="#5f6b7b"/></radialGradient>
+<radialGradient id="gHalo"><stop offset="0" stop-color="#ffb347" stop-opacity=".7"/><stop offset="1" stop-color="#ffb347" stop-opacity="0"/></radialGradient>
+<radialGradient id="gSpot"><stop offset="0" stop-color="#ffffff"/><stop offset=".3" stop-color="#ff5a5f"/><stop offset="1" stop-color="#ff2d2d" stop-opacity="0"/></radialGradient>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="blur6" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+<filter id="shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000" flood-opacity=".22"/></filter>
+</defs>`;
+function beam(x1,y1,x2,y2,w=6,a=1,col='#ff2d2d'){if(a<=0.01)return '';return `<g opacity="${a}"><line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${col}" stroke-width="${w*3.2}" opacity=".28" filter="url(#blur6)" stroke-linecap="round"/><line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${col}" stroke-width="${w}" opacity=".85" stroke-linecap="round"/><line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#fff3f3" stroke-width="${Math.max(1,w/3)}" stroke-linecap="round"/></g>`;}
+function packet(x,y,ph=0,col='#ff4a2a',len=54,amp=7){let d='';for(let i=0;i<=len;i+=2){const e=Math.sin(Math.PI*i/len);d+=(i?'L':'M')+(x-len/2+i).toFixed(1)+','+(y-amp*e*Math.sin(i/len*5*Math.PI*2/2.2+ph)).toFixed(1);}return `<path d="${d}" fill="none" stroke="${col}" stroke-width="2.6" filter="url(#glow)" stroke-linecap="round"/>`;}
+function tag(n,x,y,lx,ly,text,col){return `<line x1="${x}" y1="${y}" x2="${lx}" y2="${ly}" stroke="${col}" stroke-width="1.5"/><circle cx="${x}" cy="${y}" r="3.5" fill="${col}"/><circle cx="${lx}" cy="${ly}" r="11" fill="${col}"/>`+T(lx,ly+4.5,n,12,'#fff','middle',700)+(text?T(lx+(lx>x?16:-16),ly+5,text,12.5,'var(--fg)',lx>x?'start':'end',700):'');}
+function quiz(QS){$('quiz').innerHTML=QS.map((q,i)=>`<div class="q" data-i="${i}"><p>Q${i+1}. ${q.q}</p><div class="row">${q.o.map((o,j)=>`<button data-j="${j}">${o}</button>`).join('')}</div><div class="fb" aria-live="polite"></div></div>`).join('');
+document.querySelectorAll('.q button').forEach(b=>b.onclick=()=>{const qd=b.closest('.q'),q=QS[+qd.dataset.i],j=+b.dataset.j;
+  qd.querySelectorAll('button').forEach(x=>x.classList.remove('right','wrong'));b.classList.add(j===q.a?'right':'wrong');
+  qd.querySelector('.fb').textContent=(j===q.a?'✓ ':'✗ ')+q.e[j];});}
+const C1='#e8590c',C2='#c2255c',C3='#1971c2';   // 三要素配色：① 泵浦 ② 发光材料 ③ 谐振腔
+
+/* ===== 1 机箱拆开看 ===== */
+const s1={hl:'all'};
+const PART={pump:[52,48,96,168],comb:[200,236,70,30],fbg:[268,232,36,22],fbg2:[608,232,36,22],coil:[300,52,300,176],out:[640,140,190,70]};
+function flow(d,col,w,speed,op=1){return `<path d="${d}" fill="none" stroke="${col}" stroke-width="${w}" stroke-dasharray="6 10" stroke-dashoffset="${-TT*speed}" opacity="${op}" stroke-linecap="round"/>`;}
+function draw1(){
+  const hl=s1.hl;let g=DEFS;
+  const dim=k=>hl==='all'||hl===k||(hl==='fbg'&&k==='fbg2')?1:0.35;
+  g+=`<rect x="30" y="34" width="620" height="268" rx="14" fill="url(#gPlate)" stroke="#8a94a1" filter="url(#shadow)"/><rect x="42" y="46" width="596" height="244" rx="9" fill="#e4e8ed" stroke="#b4bcc6"/>`;
+  g+=T(48,326,'光纤激光器机箱（拆掉盖子，从上往下看）',12,'var(--muted)','start');
+  // 水冷板
+  g+=`<rect x="300" y="52" width="300" height="176" rx="10" fill="#cfd6de" stroke="#9aa3ad" opacity="${dim('coil')}"/>`+T(590,222,'水冷板',10.5,'#6b7280','end');
+  // 泵浦模块
+  const PY=[60,112,164];
+  PY.forEach((y,i)=>{g+=`<g opacity="${dim('pump')}"><rect x="58" y="${y}" width="84" height="40" rx="5" fill="url(#gAu)" stroke="#8a6610" filter="url(#shadow)"/><rect x="58" y="${y+30}" width="84" height="10" rx="3" fill="url(#gAuS)"/>`+T(100,y+23,'泵浦模块',11,'#5c4304','middle',700)+
+    `<path d="M142,${y+20} C190,${y+20} 170,250 204,250" fill="none" stroke="url(#gJacket)" stroke-width="4"/>`+flow(`M142,${y+20} C190,${y+20} 170,250 204,250`,'#fff4e6',2,30,.9)+'</g>';});
+  // 合束器
+  g+=`<g opacity="${dim('comb')}"><rect x="204" y="243" width="62" height="14" rx="7" fill="url(#gSteelH)" stroke="#6b7280"/></g>`+T(235,276,'合束器',11,'var(--fg)','middle',700);
+  // 光纤路径：合束器 → 光栅1 → 盘纤 → 光栅2 → 输出
+  const coilIn='M266,250 H300 C330,250 330,140 360,140',coilOut='M540,140 C570,140 575,250 608,250 H644';
+  g+=`<path d="${coilIn}" fill="none" stroke="#d4b106" stroke-width="3.2" opacity="${dim('coil')}"/><path d="${coilOut}" fill="none" stroke="#d4b106" stroke-width="3.2" opacity="${dim('coil')}"/>`;
+  for(let i=0;i<6;i++){const rx=40+i*12,ry=rx*0.62;g+=`<ellipse cx="450" cy="140" rx="${rx+50}" ry="${ry+10}" fill="none" stroke="url(#gYb)" stroke-width="3.4" opacity="${dim('coil')}"/>`;}
+  g+=flow(coilIn,'#ffa94d',2.4,30,.95);
+  for(let i=0;i<6;i++){const rx=90+i*12,ry=(40+i*12)*0.62+10;g+=`<ellipse cx="450" cy="140" rx="${rx}" ry="${ry}" fill="none" stroke="${i<3?'#ffa94d':'#ff4d4f'}" stroke-width="1.6" stroke-dasharray="5 12" stroke-dashoffset="${-TT*(20+i*3)}" opacity="${.7*dim('coil')}"/>`;}
+  g+=flow(coilOut,'#ff3b3b',2.6,40,1);
+  // 光栅
+  g+=`<g opacity="${dim('fbg')}"><rect x="276" y="243" width="20" height="14" rx="3" fill="#7c8fa6" stroke="${C3}" stroke-width="1.5"/></g><g opacity="${dim('fbg2')}"><rect x="612" y="243" width="20" height="14" rx="3" fill="#a8b8cc" stroke="${C3}" stroke-width="1.5"/></g>`;
+  // 输出光缆 + QBH
+  g+=`<g opacity="${dim('out')}"><path d="M644,250 C690,250 690,175 720,175" fill="none" stroke="#343a40" stroke-width="9"/><rect x="720" y="160" width="84" height="30" rx="5" fill="url(#gSteelH)" stroke="#6b7280"/>`;
+  for(let i=0;i<6;i++)g+=`<line x1="${734+i*8}" y1="161" x2="${734+i*8}" y2="189" stroke="#6b7280"/>`;
+  g+=`</g>`+beam(804,175,838,175,3,dim('out'));
+  g+=T(762,150,'输出头（QBH）',11.5,'var(--fg)','middle',700);
+  // 标签 / 高亮
+  const box=(k,c)=>{const [x,y,w,h]=PART[k];return `<rect x="${x-5}" y="${y-5}" width="${w+10}" height="${h+10}" rx="8" fill="none" stroke="${c}" stroke-width="2.5" stroke-dasharray="7 5" stroke-dashoffset="${-TT*20}"/>`;};
+  if(hl==='all'||hl==='pump')g+=tag('①',100,58,190,22,'泵浦模块 × 3',C1);
+  if(hl==='all'||hl==='coil')g+=tag('②',450,72,520,22,'掺镱光纤（盘在水冷板上）',C2);
+  if(hl==='all'||hl==='fbg')g+=tag('③',286,243,330,300,'高反光栅',C3)+tag('③',622,243,560,300,'低反光栅',C3);
+  if(hl!=='all')g+=box(hl,hl==='pump'?C1:hl==='coil'?C2:hl==='fbg'?C3:'#495057')+(hl==='fbg'?box('fbg2',C3):'');
+  if(hl==='comb')g+=T(235,226,'几根泵浦尾纤熔成一根',12,'var(--fg)','middle',700);
+  if(hl==='out')g+=T(740,230,'接准直头 → 我们的调焦头',12,'var(--fg)','middle',700);
+  g+=`<g opacity=".9">`+`<line x1="660" y1="60" x2="690" y2="60" stroke="#ffa94d" stroke-width="3"/>`+T(696,64,'泵浦光 915/976 nm',11,'var(--fg)','start')+`<line x1="660" y1="80" x2="690" y2="80" stroke="#ff3b3b" stroke-width="3"/>`+T(696,84,'激光 1064 nm',11,'var(--fg)','start')+`</g>`;
+  $('svg1').innerHTML=g;['a','b','c','d','e'].forEach((t,i)=>$('h1'+t).setAttribute('aria-pressed',String(hl===['pump','comb','fbg','coil','out'][i])));
+}
+ANIM.push(draw1);
+const st1=stepper(1,[
+ {t:'这就是一台光纤激光器拆掉盖子的样子。橙色虚线是<b>泵浦光</b>，红色虚线是<b>激光</b>。下面一个个看。',s:{hl:'all'}},
+ {t:'左边几个金色盒子就是第 15 课的<b>泵浦模块</b>（①）：里面是一排半导体芯片，每个盒子拖出一根尾纤，送出 915 / 976 nm 的泵浦光。',s:{hl:'pump'}},
+ {t:'<b>合束器</b>：把几根泵浦尾纤和一根光纤熔在一起，所有泵浦光都并进同一根光纤里。',s:{hl:'comb'}},
+ {t:'<b>光栅</b>（③）：刻在光纤芯里的一段“镜子”，只反射 1064 nm，泵浦光照样通过。左边的<b>高反光栅</b>几乎全反射；右边的<b>低反光栅</b>只反射一部分，漏出来的就是激光。',s:{hl:'fbg'}},
+ {t:'两个光栅之间是十几米长的<b>掺镱光纤</b>（②），盘在<b>水冷板</b>上：泵浦光在这里被镱离子吃掉，变成 1064 nm 的光，在两个光栅之间来回放大（第 14 课）。',s:{hl:'coil'}},
+ {t:'激光从低反光栅漏出，经一根粗的<b>输出光缆</b>送到<b>输出头</b>（QBH）。后面接准直头，再接我们的调焦头。',s:{hl:'out'}}
+],s1,draw1);
+const fr1=(k,t)=>{s1.hl=k;$('n1').textContent='自己点';$('c1').innerHTML=t;draw1();};
+$('h1a').onclick=()=>fr1('pump','泵浦模块（①）：一排半导体芯片，送出 915 / 976 nm 泵浦光。');
+$('h1b').onclick=()=>fr1('comb','合束器：几根泵浦尾纤熔成一根。');
+$('h1c').onclick=()=>fr1('fbg','光栅（③）：刻在光纤里的镜子，只反射 1064 nm。高反 + 低反一对。');
+$('h1d').onclick=()=>fr1('coil','掺镱光纤（②）：十几米，盘在水冷板上，把泵浦光变成 1064 nm。');
+$('h1e').onclick=()=>fr1('out','输出光缆 + 输出头（QBH）：激光从这里出来，接准直头。');
+
+/* ===== 2 为什么 915 / 976：照光实验 ===== */
+const s2={lam:808};
+const absorbYb=l=>l>=1040?0:Math.min(1,0.03+0.38*Math.exp(-0.5*((l-915)/12)**2)+1.0*Math.exp(-0.5*((l-976)/3.5)**2));
+const lamCol=l=>l<850?'#d9480f':l<950?'#f76707':l<1000?'#fd7e14':'#e8590c';
+function draw2(){
+  const lam=s2.lam,a=absorbYb(lam),tooLong=lam>=1040;let g=DEFS;
+  const FX0=150,FX1=720,FY=120;
+  // 泵浦光源
+  g+=`<rect x="34" y="${FY-26}" width="100" height="52" rx="6" fill="url(#gAu)" stroke="#8a6610" filter="url(#shadow)"/>`+T(84,FY-4,'光源',12,'#5c4304','middle',700)+T(84,FY+14,`${Math.round(lam)} nm`,13,'#5c4304','middle',700);
+  // 一段掺镱光纤（放大画）：包层 + 纤芯
+  g+=`<rect x="${FX0}" y="${FY-30}" width="${FX1-FX0}" height="60" rx="10" fill="url(#gGlass)" stroke="#7fb3d5"/><rect x="${FX0}" y="${FY-8}" width="${FX1-FX0}" height="16" fill="url(#gYb)" opacity=".5"/>`;
+  // 光在光纤里越走越弱（被吃掉）
+  const k=a*4.2,N=60;
+  for(let i=0;i<N;i++){const x=FX0+(FX1-FX0)*i/N,I=Math.exp(-k*i/N);g+=`<rect x="${x}" y="${FY-28}" width="${(FX1-FX0)/N+0.5}" height="56" fill="${lamCol(lam)}" opacity="${.55*I}"/>`;}
+  // 镱离子：吃到光就亮
+  for(let i=0;i<28;i++){const x=FX0+12+i*20,I=Math.exp(-k*(x-FX0)/(FX1-FX0)),lit=a>0.1?I*Math.min(1,a*2):0;
+    if(lit>0.15)g+=`<circle cx="${x}" cy="${FY}" r="9" fill="url(#gHalo)" opacity="${lit}"/>`;
+    g+=`<circle cx="${x}" cy="${FY}" r="4" fill="${lit>0.15?'url(#gOn)':'url(#gOff)'}"/>`;}
+  const left=Math.exp(-k);
+  g+=`<rect x="${FX1+6}" y="${FY-26}" width="${Math.max(4,90*left)}" height="52" fill="${lamCol(lam)}" opacity="${.6*left}" filter="url(#blur6)"/>`;
+  g+=T(FX0,FY-40,'一段掺镱光纤（放大画，纤芯里的小球 = 镱离子，亮 = 吃到了光、充上了电）',12,'var(--fg)','start',700);
+  g+=T(FX1,FY+50,`从另一头穿出去（没被吃掉）：${Math.round(left*100)}%`,12,left>0.6?'var(--bad)':'var(--fg)','end',700);
+  // 两个条件
+  const ok1=a>0.25,ok2=!tooLong;
+  g+=`<rect x="34" y="186" width="380" height="132" rx="12" fill="var(--surface)" stroke="var(--line)"/>`+T(52,210,'条件一：镱离子吃不吃得下？',13,'var(--fg)','start',700);
+  g+=`<rect x="52" y="222" width="340" height="16" rx="8" fill="var(--bg)" stroke="var(--line)"/><rect x="52" y="222" width="${340*a}" height="16" rx="8" fill="${ok1?'var(--ok)':'var(--bad)'}"/>`;
+  g+=T(52,262,tooLong?'不吃：波长太长':a>0.8?'吃得很猛（976 附近，但只有很窄一点）':a>0.25?'吃得下（915 附近，范围宽、好用）':'几乎不吃：光直接穿过去，浪费',12,ok1?'var(--ok)':'var(--bad)','start',700);
+  g+=T(52,284,'镱离子只认 915、976 nm 附近的光（离子本身的性质）',11.5,'var(--muted)','start');
+  g+=T(52,304,'↔ 拖滑块找找看',11.5,'var(--muted)','start');
+  // 条件二：能量比较
+  const EX=436,EW=380,eP=1064/lam;
+  g+=`<rect x="${EX-10}" y="186" width="${EW+20}" height="132" rx="12" fill="var(--surface)" stroke="var(--line)"/>`+T(EX+6,210,'条件二：每个光子的能量够不够？',13,'var(--fg)','start',700);
+  const bw=v=>Math.min(EW-190,(EW-200)*v/1.25);
+  g+=T(EX+6,238,'泵浦光子',11.5,'var(--fg)','start',700)+`<rect x="${EX+70}" y="227" width="${bw(eP)}" height="16" rx="4" fill="${lamCol(lam)}"/>`;
+  g+=T(EX+6,264,'激光光子',11.5,'var(--fg)','start',700)+`<rect x="${EX+70}" y="253" width="${bw(1)}" height="16" rx="4" fill="#ff4d4f"/>`+T(EX+76+bw(1),266,'1064 nm',11,'var(--fg)','start');
+  if(!tooLong)g+=`<rect x="${EX+70+bw(1)}" y="227" width="${bw(eP)-bw(1)}" height="16" rx="4" fill="#c92a2a" opacity=".85"/>`+T(EX+76+bw(eP),240,`多出 ${Math.round((1-lam/1064)*100)}% → 变成热`,11,'#c92a2a','start',700);
+  g+=T(EX+6,292,tooLong?'泵浦光子能量比激光光子还小：没法用':'波长越短，每个光子能量越大；泵浦必须比 1064 nm 短',12,ok2?'var(--ok)':'var(--bad)','start',700);
+  g+=T(EX+6,310,'（能量 ∝ 1 / 波长，就像蓝光比红光“猛”）',11.5,'var(--muted)','start');
+  const both=ok1&&ok2;
+  g+=T(420,24,both?`${Math.round(lam)} nm：两个条件都满足 → 能当泵浦`:`${Math.round(lam)} nm：${!ok2?'能量不够':'镱离子吃不下'} → 不能当泵浦`,14,both?'var(--ok)':'var(--bad)','middle',700);
+  $('svg2').innerHTML=g;$('f2V').textContent=Math.round(lam)+' nm';
+}
+ANIM.push(draw2);
+const st2=stepper(2,[
+ {t:'做个实验：拿一段<b>掺镱光纤</b>，从左边照进不同波长的光，看光走到右边还剩多少。先用 <b>808 nm</b>（另一种很常见的半导体激光）：几乎全部穿过去了，镱离子<b>不吃</b>，没充上电。',s:{lam:808}},
+ {t:'换成 <b>915 nm</b>：光一路走一路被吃掉，镱离子一个个<b>亮起来</b>（充上了电）。而且 915 附近一段波长都吃得下，泵浦芯片的波长稍微漂一点也没关系。',s:{lam:915}},
+ {t:'换成 <b>976 nm</b>：吃得<b>更猛</b>，光很快就被吃光，光纤可以短一些。但这个“胃口”很窄，差几 nm 就吃不下了，而半导体芯片的波长会随温度漂，所以 976 要把芯片温度控得很稳。',s:{lam:976}},
+ {t:'那用 <b>1080 nm</b> 行不行？不行：它比激光的 1064 nm 还长，<b>每个光子的能量比激光光子还小</b>，镱离子不可能吃进小的、吐出大的。（看右边两根能量条）',s:{lam:1080}},
+ {t:'所以泵浦光要同时满足<b>两条</b>：镱离子吃得下，而且能量比 1064 nm 大。两条都满足的就是 <b>915</b> 和 <b>976 nm</b>。多出来的那点能量（915 时约 14%）变成热，所以光纤要盘在水冷板上。',s:{lam:915}}
+],s2,draw2);
+$('f2').addEventListener('input',()=>{s2.lam=+$('f2').value;$('n2').textContent='自己玩';draw2();const a=absorbYb(s2.lam);$('c2').innerHTML=`${s2.lam} nm：${s2.lam>=1040?'比 1064 还长，能量不够，不能当泵浦。':a>0.8?'吃得很猛（976 附近）。':a>0.25?'吃得下（915 附近）。':'镱离子几乎不吃，光穿过去浪费了。'}`;});
+
+/* ===== 3 双包层光纤 ===== */
+const s3={st:0,L:15};
+function draw3(){
+  const st=s3.st,L=s3.L;let g=DEFS;
+  // 左：截面
+  const cx=140,cy=168;
+  g+=`<circle cx="${cx}" cy="${cy}" r="104" fill="#495057" filter="url(#shadow)"/><circle cx="${cx}" cy="${cy}" r="86" fill="#dee2e6"/>`;
+  const oct=r=>Array.from({length:8},(_,i)=>{const a=Math.PI/8+i*Math.PI/4;return [cx+r*Math.cos(a),cy+r*Math.sin(a)];});
+  g+=`<polygon points="${oct(66).map(p=>p.join(',')).join(' ')}" fill="url(#gGlass)" stroke="#5b9bd5" stroke-width="1.5"/>`;
+  if(st>=1)g+=`<polygon points="${oct(66).map(p=>p.join(',')).join(' ')}" fill="#ffa94d" opacity="${.25+.1*Math.sin(TT*4)}"/>`;
+  g+=`<circle cx="${cx}" cy="${cy}" r="12" fill="url(#gYb)" stroke="#9c8210"/>`;
+  if(st>=3)g+=`<circle cx="${cx}" cy="${cy}" r="12" fill="#ff3b3b" opacity=".7" filter="url(#glow)"/>`;
+  g+=tag('',cx,cy,cx+20,28,'',C2).replace(/<circle cx="\d+(\.\d+)?" cy="28" r="11"[^>]*>/,'')+T(cx+26,32,'纤芯（掺镱，细）',12,C2,'start',700);
+  g+=T(cx,cy+122,'光纤截面（放大几百倍）',12,'var(--muted)','middle');
+  g+=`<line x1="${cx+46}" y1="${cy+46}" x2="${cx+78}" y2="${cy+96}" stroke="#5b9bd5"/>`+T(cx+80,cy+108,'内包层（粗）',11.5,'#1971c2','start',700);
+  g+=`<line x1="${cx-70}" y1="${cy-40}" x2="${cx-120}" y2="${cy-84}" stroke="#868e96"/>`+T(cx-124,cy-88,'外包层',11,'var(--muted)','start')+`<line x1="${cx-90}" y1="${cy+40}" x2="${cx-124}" y2="${cy+80}" stroke="#868e96"/>`+T(cx-128,cy+94,'涂覆层',11,'var(--muted)','start');
+  // 右：纵剖
+  const X0=300,X1=820,YT=110,YB=226,YC=168;
+  g+=`<rect x="${X0}" y="${YT-22}" width="${X1-X0}" height="${YB-YT+44}" fill="#495057" rx="6"/><rect x="${X0}" y="${YT-12}" width="${X1-X0}" height="${YB-YT+24}" fill="#dee2e6"/><rect x="${X0}" y="${YT}" width="${X1-X0}" height="${YB-YT}" fill="url(#gGlass)" stroke="#5b9bd5"/>`;
+  g+=`<rect x="${X0}" y="${YC-7}" width="${X1-X0}" height="14" fill="url(#gYb)" opacity=".8"/>`;
+  g+=T(X0,YT-30,'纵向切开看（长度压短画）',12,'var(--fg)','start',700);
+  // 泵浦光之字形
+  let I=1,absorbed=[];const segW=46;
+  if(st>=1){let x=X0,y=YT+4,dir=1,pts=[[x,y]];
+    while(x<X1){const nx=Math.min(X1,x+segW),ny=dir>0?YB-4:YT+4;pts.push([nx,ny]);if(st>=2)absorbed.push([x+segW/2,I]);x=nx;dir=-dir;if(st>=2)I*=0.86;}
+    let segs='';for(let i=1;i<pts.length;i++){const op=st>=2?Math.pow(0.86,i-1):1;segs+=`<line x1="${pts[i-1][0]}" y1="${pts[i-1][1]}" x2="${pts[i][0]}" y2="${pts[i][1]}" stroke="#fd7e14" stroke-width="3" opacity="${.9*op}" stroke-linecap="round"/>`;}
+    g+=segs;}
+  if(st>=2)absorbed.forEach(([x,i])=>{g+=`<circle cx="${x}" cy="${YC}" r="10" fill="url(#gHalo)" opacity="${i}"/><circle cx="${x}" cy="${YC}" r="4" fill="url(#gOn)" opacity="${.4+.6*i}"/>`;});
+  if(st>=3){g+=beam(X0,YC,X1,YC,3.5,1);}
+  // 读数
+  if(st>=2){const left=Math.exp(-L/6);g+=`<rect x="${X0}" y="262" width="520" height="66" rx="10" fill="var(--surface)" stroke="var(--line)"/>`+T(X0+16,286,`光纤 ${L} m：泵浦光被吃掉 ${Math.round((1-left)*100)}%，从另一头漏掉 ${Math.round(left*100)}%`,12.5,left<0.1?'var(--ok)':'var(--bad)','start',700)+
+    `<rect x="${X0+16}" y="298" width="488" height="14" rx="7" fill="var(--bg)" stroke="var(--line)"/><rect x="${X0+16}" y="298" width="${488*(1-left)}" height="14" rx="7" fill="#fd7e14"/>`;}
+  const top=['光纤激光器用的光纤，截面有好几层','泵浦光走粗的内包层，在里面来回反射','泵浦光只有穿过纤芯时，才被镱离子吃掉一点','激光只在细纤芯里走：又细又好'][Math.round(st)];
+  g+=T(560,28,top,14,st>=3?'var(--ok)':'var(--fg)','middle',700);
+  $('svg3').innerHTML=g;$('f3V').textContent=L+' m';
+}
+ANIM.push(draw3);
+const st3=stepper(3,[
+ {t:'光纤激光器用的光纤叫<b>双包层光纤</b>，截面像几层套着的圆：中间很细的<b>纤芯</b>里掺了镱（如 20 μm，【典型值】），外面是粗得多的<b>内包层</b>（如 400 μm，常做成八角形），再外面是外包层和涂覆层。整根比头发粗不了多少。',s:{st:0}},
+ {t:'泵浦光的光束差（第 15 课：M² ≈ 40），塞不进细纤芯，所以让它走<b>粗的内包层</b>，在里面来回反射着往前跑（橙色之字线）。',s:{st:1}},
+ {t:'问题来了：镱离子只在<b>纤芯</b>里。泵浦光只有<b>穿过纤芯</b>的那一下才被吃掉一点，所以要走很长才能吃干净：光纤要<b>十几米</b>，只好<b>盘起来</b>放，顺便贴在水冷板上散热。拖滑块看长度和吃掉多少的关系。',s:{st:2}},
+ {t:'而激光只在<b>细纤芯</b>里来回放大、从纤芯出来，所以输出光又细又好（单模 M² ≈ 1.1）。等于把一堆光束很差的泵浦光，<b>“洗”成了一束光束很好的激光</b>，这就是光纤激光器最大的本事。',s:{st:3}}
+],s3,draw3);
+$('f3').addEventListener('input',()=>{s3.L=+$('f3').value;if(s3.st<2)s3.st=3;$('n3').textContent='自己玩';draw3();const left=Math.exp(-s3.L/6);$('c3').innerHTML=`光纤 ${s3.L} m：泵浦光被吃掉约 ${Math.round((1-left)*100)}%。太短浪费泵浦，太长又增加损耗和成本，厂家按吸收系数选长度。（示意）`;});
+
+window.__beforeExport=()=>{st1.go(0,true);st2.go(4,true);st3.go(3,true);};
+quiz([
+ {q:'光纤激光器里的“光栅”是什么？',o:['刻在光纤芯里的镜子，只反射 1064 nm','把光变粗的透镜'],a:0,e:['对。高反 + 低反一对，当谐振腔的两面镜子。','不是透镜，是光纤里的镜子。']},
+ {q:'为什么泵浦用 915 / 976 nm，不用 1080 nm？',o:['1080 比 1064 长，光子能量不够；而且镱离子不吃','1080 太贵'],a:0,e:['对。泵浦光子能量必须比激光光子大。','和价格无关，是能量不够。']},
+ {q:'为什么掺镱光纤要十几米长？',o:['泵浦光走内包层，只有穿过纤芯时才被吃掉一点，要走很长才吃完','为了让激光走得远'],a:0,e:['对。所以要盘起来放。','不是，是为了把泵浦光吃干净。']},
+ {q:'光纤激光器出来的光为什么这么好？',o:['激光只在细细的纤芯里走、从纤芯出来','因为泵浦光本来就好'],a:0,e:['对。差的泵浦光被“洗”成了好激光。','泵浦光恰恰很差（M² ≈ 40）。']}
+]);
+</script>

@@ -80,7 +80,7 @@ svg text{font-family:var(--f-body)}
 <header>
   <div class="eyebrow">激光扫描系统入门 · 第 15 课（激光器基础 2/5）</div>
   <h1>半导体激光器和泵浦</h1>
-  <p class="lede">三张图，一张只回答一个问题，画成实物的样子：焊在铜块上的芯片、切开的泵浦模块。颜色沿用第 14 课：<b style="color:#e8590c">① 泵浦</b>、<b style="color:#c2255c">② 发光材料</b>、<b style="color:#1971c2">③ 两面镜子</b>。</p>
+  <p class="lede">两张图，一张只回答一个问题，画成实物的样子：焊在铜块上的芯片、切开的泵浦模块。颜色沿用第 14 课：<b style="color:#e8590c">① 泵浦</b>、<b style="color:#c2255c">② 发光材料</b>、<b style="color:#1971c2">③ 两面镜子</b>。</p>
 </header>
 
 <section aria-labelledby="s1">
@@ -101,22 +101,13 @@ svg text{font-family:var(--f-body)}
   <p class="concl">记住一句：每颗芯片先用小透镜“捋直”，再把一排芯片的光用大透镜一起聚进一根光纤；光纤纤芯越粗越好耦合，但出来的光束就越差（M² ≈ 40）。</p>
 </section>
 
-<section aria-labelledby="s3">
-  <p class="q-big" id="s3">问题 3：为什么光纤激光器的泵浦要用 915 / 976 nm？</p>
-  <div class="stage"><svg id="svg3" data-export="15-3_为什么是915" viewBox="0 0 840 340" role="img" aria-label="为什么光纤激光器的泵浦要用 915 或 976 nm"></svg></div>
-  <div class="cap-box" aria-live="polite"><span class="no" id="n3"></span><p id="c3"></p></div>
-  <div class="stepbar"><button id="p3">← 上一步</button><button id="x3" class="big-next">下一步 →</button><span class="dots" id="d3"></span></div>
-  <div class="free"><span class="t">自己玩：</span><div class="ctl"><label for="f3">泵浦光的波长<span id="f3V"></span></label><input id="f3" type="range" min="880" max="1000" step="1" value="915"></div></div>
-  <p class="concl">记住一句：光纤里的镱离子只“爱吃” 915 和 976 nm 左右的光，吃进去再吐出 1064 nm 的激光；两者的能量差（约 14%）变成热。</p>
-</section>
-
 <section aria-labelledby="s7"><h2 id="s7"><span class="n">✓</span>小测</h2><div class="quiz" id="quiz"></div></section>
 <footer>
   <div><b>本课对项目的推进：</b></div>
-  <div>· 老师要的 915 nm：它既是常见的半导体激光器波长，也是光纤激光器的泵浦波长。如果是直接拿来打东西，就是“光纤耦合半导体激光器”，光束差（M² 约 40）正来自纤芯粗；如果是光纤激光器里的泵浦，就不会单独出来用</div>
+  <div>· 老师要的 915 nm：常见的就是这种“光纤耦合半导体激光器”，M² 约 40 正来自纤芯粗；915 nm 也常被拿来给光纤激光器当泵浦，为什么是这个波长，下一课讲</div>
   <div>· 这也解释了公司里说的“泵浦出来加准直扩束”：泵浦模块出光口就是一根光纤，后面接准直头、扩束镜，正是我们调焦头要做的一段</div>
   <div>· 图里的芯片尺寸、功率是典型值，不同厂家不同型号会有差别（【典型值】，选型时看规格书）</div>
-  <div>· 下一课（第 16 课）：光纤激光器拆开看，用实物样子的图</div>
+  <div>· 下一课（第 16 课）：光纤激光器拆开看，并讲清楚“为什么泵浦要用 915 / 976 nm”</div>
 </footer>
 </div>
 <script>
@@ -267,53 +258,11 @@ const st2=stepper(2,[
 ],s2,draw2);
 $('f2').addEventListener('input',()=>{s2.n=+$('f2').value;s2.col=1;s2.foc=1;$('n2').textContent='自己玩';$('c2').innerHTML=`${s2.n} 颗芯片，约 ${s2.n*10} W（每颗按 10 W 估）。芯片越多功率越大，但纤芯得越粗才聚得进去，光束更差。`;draw2();});
 
-/* ===== 3 为什么是 915 / 976 ===== */
-const s3={stage:0,lam:915};
-const absorb=l=>Math.min(1,0.02+0.35*Math.exp(-0.5*((l-915)/10)**2)+1.0*Math.exp(-0.5*((l-976)/3)**2));
-function arrowV(x,y1,y2,col,w=6,lab){const d=y2<y1?1:-1;return `<g filter="url(#glow)"><line x1="${x}" y1="${y1}" x2="${x}" y2="${y2+d*12}" stroke="${col}" stroke-width="${w}" stroke-linecap="round"/><polygon points="${x},${y2} ${x-9},${y2+d*16} ${x+9},${y2+d*16}" fill="${col}"/></g>`;}
-function draw3(){
-  const st=s3.stage,lam=s3.lam;let g=DEFS;
-  const YB=296,LP=230,LL=LP*915/1064,top=YB-LP,up=top+14,low=up+LL;
-  const lvl=(y,t,c='#868e96')=>`<line x1="80" y1="${y}" x2="360" y2="${y}" stroke="${c}" stroke-width="3" stroke-linecap="round"/>`+(t?T(368,y+4,t,12,'var(--muted)','start',700):'');
-  g+=T(80,26,'镱离子的能量阶梯（越高能量越大）',13,'var(--fg)','start',700);
-  g+=lvl(YB,'休息（基态）')+lvl(top,'充了电（高能态）')+lvl(up,'')+lvl(low,'');
-  g+=arrowV(140,YB,top,'#ff922b',7);g+=T(140,YB+22,'泵浦光 915 nm',12,C1,'middle',700);
-  if(st>=1)g+=`<line x1="190" y1="${top}" x2="190" y2="${up}" stroke="#c92a2a" stroke-width="3" stroke-dasharray="3 3"/>`+T(200,(top+up)/2+5,'热',12,'#c92a2a','start',700);
-  if(st>=2)g+=arrowV(250,up,low,'#ff2d2d',7)+T(264,(up+low)/2,'激光 1064 nm',12.5,'#e03131','start',700);
-  if(st>=3)g+=`<line x1="310" y1="${low}" x2="310" y2="${YB}" stroke="#c92a2a" stroke-width="3" stroke-dasharray="3 3"/>`+T(320,(low+YB)/2+5,'热',12,'#c92a2a','start',700);
-  const ionY=[YB,up,low,YB][Math.round(st)],ionX=[140,190,250,310][Math.round(st)];
-  g+=`<circle cx="${ionX}" cy="${ionY}" r="22" fill="url(#gHalo)"/><circle cx="${ionX}" cy="${ionY}" r="10" fill="url(#gOn)" stroke="#9a3412"/>`;
-  // 右上：光纤截面（镱离子在纤芯里）
-  g+=`<circle cx="560" cy="80" r="44" fill="#e9ecef" stroke="#868e96"/><circle cx="560" cy="80" r="24" fill="url(#gYb)" opacity=".55" stroke="#9c8210"/>`;
-  for(let i=0;i<14;i++){const a=i*2.4,r=6+(i*7)%16;g+=`<circle cx="${560+r*Math.cos(a)}" cy="${80+r*Math.sin(a)}" r="2.4" fill="#e8590c"/>`;}
-  g+=T(616,74,'光纤截面：纤芯里掺着',12,'var(--fg)','start',700)+T(616,92,'镱离子（橙点）',12,'#e8590c','start',700);
-  // 右中：能量去向
-  const BX=500,BW=300,eff=915/1064;
-  g+=`<rect x="${BX}" y="140" width="${BW}" height="24" rx="5" fill="#ffa94d" opacity=".55"/>`+T(BX+BW/2,157,'泵浦光 100%',12,'var(--fg)','middle',700);
-  if(st>=2)g+=`<rect x="${BX}" y="172" width="${BW*eff}" height="24" rx="5" fill="#ff4d4f"/>`+T(BX+BW*eff/2,189,`激光 ≈ ${Math.round(eff*100)}%`,12,'#fff','middle',700);
-  if(st>=3)g+=`<rect x="${BX+BW*eff+2}" y="172" width="${BW*(1-eff)-2}" height="24" rx="5" fill="#c92a2a"/>`+T(BX+BW*eff+BW*(1-eff)/2,189,'热',12,'#fff','middle',700)+T(BX,214,'这约 14% 变成热（量子亏损），光纤要散热',11.5,'var(--muted)','start');
-  // 右下：吸收
-  const a=absorb(lam);
-  g+=T(BX,248,`泵浦波长 ${Math.round(lam)} nm：镱离子吸收得好不好`,12.5,'var(--fg)','start',700);
-  g+=`<rect x="${BX}" y="258" width="${BW}" height="18" rx="9" fill="var(--bg)" stroke="var(--line)"/><rect x="${BX}" y="258" width="${BW*a}" height="18" rx="9" fill="${a>0.25?'var(--ok)':'var(--bad)'}"/>`;
-  g+=T(BX,298,a>0.8?'吸收很强：976 nm 附近，但这个峰很窄':a>0.25?'吸收不错：915 nm 附近，峰宽、好用':'几乎不吸收：光穿过去浪费了',12,a>0.25?'var(--ok)':'var(--bad)','start',700)+T(BX,318,'（吸收峰位置为常识值，具体看光纤规格书）',11,'var(--muted)','start');
-  $('svg3').innerHTML=g;$('f3V').textContent=Math.round(lam)+' nm';
-}
-ANIM.push(draw3);
-const st3=stepper(3,[
- {t:'光纤激光器的纤芯里掺着<b>镱离子</b>（右上角橙点）。每个镱离子只会爬一种台阶：<b>泵浦光</b>把它从“休息”抬到“充了电”。光子能量要刚好对上台阶高度才被吸收，所以泵浦波长不能乱选。',s:{stage:0}},
- {t:'刚上去先“滑”下一小段，多余能量变成<b>热</b>（红虚线）。',s:{stage:1}},
- {t:'它再回落时放出<b>激光光子</b>。落差比上去的小一点，所以激光波长比泵浦长：<b>1064 nm</b>。',s:{stage:2}},
- {t:'最后再滑回休息位置，又丢一点热。泵浦能量的 <b>86%</b>（915 ÷ 1064）变成激光，<b>14%</b> 变成热。拖下面的滑块：只有 <b>915</b>、<b>976 nm</b> 附近吸收得好，所以泵浦都用这两个波长。',s:{stage:3}}
-],s3,draw3);
-$('f3').addEventListener('input',()=>{s3.lam=+$('f3').value;s3.stage=3;$('n3').textContent='自己玩';draw3();$('c3').innerHTML=`泵浦波长 ${s3.lam} nm：${absorb(s3.lam)>0.8?'吸收很强（976 附近）。':absorb(s3.lam)>0.25?'吸收不错（915 附近）。':'几乎不吸收。'}`;});
-
-window.__beforeExport=()=>{st1.go(4,true);st2.go(3,true);st3.go(3,true);};
+window.__beforeExport=()=>{st1.go(4,true);st2.go(3,true);};
 quiz([
  {q:'半导体芯片里，光是在哪一层产生的？',o:['夹在 P 型层和 N 型层之间的发光层','最上面的金属电极'],a:0,e:['对。电子和空穴在这一层相遇变成光。','电极只是接电源，发光在中间那层。']},
  {q:'电流太小的时候，芯片发出的是什么？',o:['普通光，像 LED，不是激光','激光，只是弱一点'],a:0,e:['对。要超过门槛才成激光。','没过门槛就没有激光。']},
- {q:'为什么要把很多芯片的光聚进一根光纤？',o:['单颗功率有限；光纤输出方便后面接准直、扩束','为了让光束变好'],a:0,e:['对。代价是纤芯较粗，光束质量会差（M² 大）。','恰恰相反，光束会变差。']},
- {q:'光纤激光器的泵浦为什么选 915 / 976 nm？',o:['镱离子在这两个波长附近吸收得好','因为这两个波长最便宜'],a:0,e:['对。吸收得好，能量才送得进去。','主要是吸收好。']}
+ {q:'为什么要把很多芯片的光聚进一根光纤？',o:['单颗功率有限；光纤输出方便后面接准直、扩束','为了让光束变好'],a:0,e:['对。代价是纤芯较粗，光束质量会差（M² 大）。','恰恰相反，光束会变差。']}
 ]);
 
 </script>
