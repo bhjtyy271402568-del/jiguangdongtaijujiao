@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 640" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, WenQuanYi Zen Hei, sans-serif">
-<rect width="940" height="640" rx="16" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 770" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, WenQuanYi Zen Hei, sans-serif">
+<rect width="940" height="770" rx="16" fill="#ffffff"/>
 <text x="24" y="34" font-size="20" font-weight="700" fill="#111">课程路线图</text>
 <text x="150" y="34" font-size="13" fill="#666">先懂原理 → 定结构 → 搭样机验证 → 再做产品</text>
-<path d="M110,110 L350,110 L590,110 L830,110 C920,110 920,240 830,240 L590,240 L350,240 L110,240 C20,240 20,370 110,370 L350,370 L590,370 L830,370 C920,370 920,500 830,500" fill="none" stroke="#cbd5e1" stroke-width="6" stroke-linecap="round"/>
+<path d="M110,110 L350,110 L590,110 L830,110 C920,110 920,240 830,240 L590,240 L350,240 L110,240 C20,240 20,370 110,370 L350,370 L590,370 L830,370 C920,370 920,500 830,500 L590,500 L350,500 L110,500 C20,500 20,630 110,630 L350,630" fill="none" stroke="#cbd5e1" stroke-width="6" stroke-linecap="round"/>
 <circle cx="110" cy="110" r="22" fill="#16a34a" stroke="#15803d" stroke-width="3"/>
 <text x="110" y="116" font-size="17" text-anchor="middle" fill="#fff" font-weight="700">✓</text>
 <text x="110" y="158" font-size="15" text-anchor="middle" fill="#111" font-weight="700">光的旅程</text>
@@ -51,11 +51,31 @@
 <text x="830" y="376" font-size="17" text-anchor="middle" fill="#fff" font-weight="700">✓</text>
 <text x="830" y="418" font-size="15" text-anchor="middle" fill="#111" font-weight="700">看懂Zemax</text>
 <text x="830" y="436" font-size="12" text-anchor="middle" fill="#666">光线·点列·波前</text>
-<circle cx="830" cy="500" r="22" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
-<text x="830" y="506" font-size="17" text-anchor="middle" fill="#ea580c" font-weight="700">⑬</text>
-<text x="830" y="548" font-size="15" text-anchor="middle" fill="#111" font-weight="700">零件选型</text>
-<text x="830" y="566" font-size="12" text-anchor="middle" fill="#666">真实型号·再校核</text>
-<text x="830" y="468" font-size="12" text-anchor="middle" fill="#ea580c" font-weight="700">下一课 ▼</text>
-<rect x="20" y="594" width="900" height="28" rx="6" fill="#f1f5f9"/>
-<text x="470" y="613" font-size="13" text-anchor="middle" fill="#334155">终点：《5–50 m 前聚焦系统规格》＝ 控制卡（项目①）+ 调焦望远镜（项目②，丝杠步进）+ 激光器（M²≤1.2）</text>
+<circle cx="830" cy="500" r="22" fill="#16a34a" stroke="#15803d" stroke-width="3"/>
+<text x="830" y="506" font-size="17" text-anchor="middle" fill="#fff" font-weight="700">✓</text>
+<text x="830" y="548" font-size="15" text-anchor="middle" fill="#111" font-weight="700">激光怎么出光</text>
+<text x="830" y="566" font-size="12" text-anchor="middle" fill="#666">泵浦·镜子·三种</text>
+<circle cx="590" cy="500" r="22" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+<text x="590" y="506" font-size="17" text-anchor="middle" fill="#ea580c" font-weight="700">⑭</text>
+<text x="590" y="548" font-size="15" text-anchor="middle" fill="#111" font-weight="700">半导体与泵浦</text>
+<text x="590" y="566" font-size="12" text-anchor="middle" fill="#666">芯片·915nm</text>
+<circle cx="350" cy="500" r="22" fill="#fff" stroke="#94a3b8" stroke-width="3"/>
+<text x="350" y="506" font-size="17" text-anchor="middle" fill="#64748b" font-weight="700">⑮</text>
+<text x="350" y="548" font-size="15" text-anchor="middle" fill="#111" font-weight="700">光纤激光器</text>
+<text x="350" y="566" font-size="12" text-anchor="middle" fill="#666">光栅·盘纤</text>
+<circle cx="110" cy="500" r="22" fill="#fff" stroke="#94a3b8" stroke-width="3"/>
+<text x="110" y="506" font-size="17" text-anchor="middle" fill="#64748b" font-weight="700">⑯</text>
+<text x="110" y="548" font-size="15" text-anchor="middle" fill="#111" font-weight="700">CO₂ 等</text>
+<text x="110" y="566" font-size="12" text-anchor="middle" fill="#666">波长怎么选</text>
+<circle cx="110" cy="630" r="22" fill="#fff" stroke="#94a3b8" stroke-width="3"/>
+<text x="110" y="636" font-size="17" text-anchor="middle" fill="#64748b" font-weight="700">⑰</text>
+<text x="110" y="678" font-size="15" text-anchor="middle" fill="#111" font-weight="700">到工件</text>
+<text x="110" y="696" font-size="12" text-anchor="middle" fill="#666">准直·扩束·调光</text>
+<circle cx="350" cy="630" r="22" fill="#fff" stroke="#94a3b8" stroke-width="3"/>
+<text x="350" y="636" font-size="17" text-anchor="middle" fill="#64748b" font-weight="700">⑱</text>
+<text x="350" y="678" font-size="15" text-anchor="middle" fill="#111" font-weight="700">零件选型</text>
+<text x="350" y="696" font-size="12" text-anchor="middle" fill="#666">真实型号·再校核</text>
+<text x="590" y="468" font-size="12" text-anchor="middle" fill="#ea580c" font-weight="700">下一课 ▼</text>
+<rect x="20" y="724" width="900" height="28" rx="6" fill="#f1f5f9"/>
+<text x="470" y="743" font-size="13" text-anchor="middle" fill="#334155">终点：《5–50 m 前聚焦系统规格》＝ 控制卡（项目①）+ 调焦望远镜（项目②，丝杠步进）+ 激光器（M²≤1.2）</text>
 </svg>
