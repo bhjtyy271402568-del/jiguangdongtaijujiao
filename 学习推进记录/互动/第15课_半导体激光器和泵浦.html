@@ -192,7 +192,7 @@ function draw1(){
   rows.forEach(([n,y,h,c])=>{g+=`<rect x="${X0}" y="${y}" width="${W}" height="${h}" fill="${c}" stroke="#00000030" stroke-width=".8"/>`;});
   g+=`<rect x="${X0}" y="${Y0}" width="${W}" height="120" fill="none" stroke="#374151" stroke-width="1.3"/>`;
   for(let i=0;i<4;i++){const ax=X0+40+i*45+DX*0.5,ay=Y0+DY*0.5;g+=`<path d="M${ax},${ay} Q${(ax+pad[0])/2},${ay-70} ${pad[0]-12+i*8},${pad[1]-10}" fill="none" stroke="#d4a72c" stroke-width="2"/><circle cx="${ax}" cy="${ay}" r="2.5" fill="#8a6610"/>`;}
-  g+=T(pad[0]+40,pad[1]-30,'金线（接电源正极）',11.5,'var(--fg)','start',700);
+  g+=(s1.cur>0.5?'':T(pad[0]+40,pad[1]-30,'金线（接电源正极）',11.5,'var(--fg)','start',700));
   const ya=rows[2][1],yc=ya+4,xc=X0+W/2;
   // 发光窄缝
   g+=`<rect x="${xc-16}" y="${ya-1}" width="32" height="10" fill="${las>0?'#fff6d6':'#ffb36b'}" stroke="#b5500f" opacity="${.5+.5*glow}" ${las>0?'filter="url(#glow)"':''}/>`;
@@ -202,7 +202,8 @@ function draw1(){
     for(let i=0;i<5;i++){const x=X0+28+i*44,f=((TT*0.8+i*0.21)%1);
       g+=`<circle cx="${x}" cy="${rows[1][1]+f*(ya-rows[1][1]+4)}" r="3.4" fill="#e03131" opacity="${s1.cur*k}"/><circle cx="${x}" cy="${rows[3][1]+rows[3][2]-f*(rows[3][1]+rows[3][2]-ya-4)}" r="3.4" fill="#1971c2" opacity="${s1.cur*k}"/>`;
       if(f>0.8)g+=`<circle cx="${x}" cy="${yc}" r="${5+(f-0.8)*40}" fill="#ffd43b" opacity="${(1-f)*4*s1.cur*k}" filter="url(#glow)"/>`;}
-    g+=T(X0-14,rows[1][1]+18,'空穴',11.5,'#e03131','end',700)+T(X0-14,rows[3][1]+18,'电子',11.5,'#1971c2','end',700);}
+    g+=T(X0-14,rows[1][1]+18,'空穴',11.5,'#e03131','end',700)+T(X0-14,rows[3][1]+18,'电子',11.5,'#1971c2','end',700);
+    g+=tag('①',pad[0]-4,pad[1]-12,690,104,'电流 = 泵浦',C1)+tag('②',X0+40,yc,150,74,'发光层 = 发光材料',C2);}
   // 端面镜子 + 腔内往返
   if(s1.mir>0.02){const bt=Math.abs(((TT*0.7)%2)-1),x=xc+DX*bt,y=yc+DY*bt;
     g+=`<g opacity="${s1.mir}">`+beam(xc,yc,xc+DX,yc+DY,1.5+3*las,.5+.5*las)+`<circle cx="${x}" cy="${y}" r="${4+4*las}" fill="#fff3bf" filter="url(#glow)"/>`+
@@ -223,7 +224,7 @@ ANIM.push(draw1);
 const st1=stepper(1,[
  {t:'先看实物：一颗半导体激光芯片<b>焊在铜热沉上</b>，上面用细金线接电源。芯片只有约 <b>3–4 mm 长</b>（大功率单管，【典型值】），比一粒米还小。',s:{I:0,lab:0,cur:0,mir:0}},
  {t:'<b>切开</b>看：一层层叠起来。上面是 <b>P 型层</b>（缺电子），下面是 <b>N 型层</b>（多电子），夹在中间的<b>发光层</b>只有约 0.1 μm 薄（图里画粗了）。上下各一层金属接电源。',s:{I:0,lab:1,cur:0,mir:0}},
- {t:'<b>通电</b>：空穴（红点）从上面、电子（蓝点）从下面挤进发光层，<b>相遇就放出一个光子</b>（黄闪）。这一步和 LED 一样，只是普通发光，观察屏上一片淡淡的光。',s:{I:15,lab:0.35,cur:1,mir:0}},
+ {t:'<b>通电</b>：电流从金线进、穿过芯片、从铜块出，这股电流就是半导体激光器的<b>泵浦</b>（①）。它把空穴（红点）从上面、电子（蓝点）从下面挤进<b>发光层</b>（②），<b>相遇就放出一个光子</b>（黄闪）。这一步和 LED 一样，只是普通发光，观察屏上一片淡淡的光。',s:{I:15,lab:0,cur:1,mir:0}},
  {t:'电流再加大，超过<b>门槛</b>（右下角红线），光多到能互相“逼着”放出一样的光子（第 14 课的放大）。芯片<b>两个切开的端面就是两面镜子</b>（③）：后端面反射很强、前端面反射很弱，光在两面之间来回，越来越强。',s:{I:50,lab:0,cur:1,mir:1}},
  {t:'光从前端面那条<b>窄缝</b>射出（缝约 1 μm × 100 μm，【典型值】）。缝太小，光一出来就<b>快速张开</b>，而且上下快、左右慢，观察屏上是个<b>竖着的扁光斑</b>。这就是半导体激光器光束差的根源。',s:{I:100,lab:0,cur:1,mir:1}}
 ],s1,draw1);
