@@ -1,0 +1,292 @@
+<meta charset="utf-8">
+<title>半导体激光器和泵浦</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@700;900&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* 第 15 课：半导体激光器和泵浦——芯片切开、泵浦模块、915 为什么是泵浦波长 */
+:root{
+  --bg:#f4f6f9; --surface:#ffffff; --fg:#151a23; --muted:#5d6676; --line:#d8dee7;
+  --beam:#e5383b; --beam-soft:#f6b3b4; --glass:#2b7bb9; --glass-fill:#dcecf8;
+  --ok:#17914f; --bad:#d23c3c; --proj2:#e0701c; --card:#2c5fd6; --card-fill:#e2eafc;
+  --metal:#7b8697; --band:#17914f22; --wave:#0ea5c6;
+  --f-body:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --f-display:"Noto Serif SC","Songti SC",serif;
+  --f-num:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1218; --surface:#171c25; --fg:#e7ebf1; --muted:#9aa4b4; --line:#2b3240;
+  --beam:#ff5c60; --beam-soft:#7a2a2d; --glass:#6db5ee; --glass-fill:#1c3448;
+  --ok:#3fd082; --bad:#ff6b6b; --proj2:#ff9a4a; --card:#82a6ff; --card-fill:#1d2a4a;
+  --metal:#8c97a8; --band:#3fd08226; --wave:#4fd1e6; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1218; --surface:#171c25; --fg:#e7ebf1; --muted:#9aa4b4; --line:#2b3240;
+  --beam:#ff5c60; --beam-soft:#7a2a2d; --glass:#6db5ee; --glass-fill:#1c3448;
+  --ok:#3fd082; --bad:#ff6b6b; --proj2:#ff9a4a; --card:#82a6ff; --card-fill:#1d2a4a;
+  --metal:#8c97a8; --band:#3fd08226; --wave:#4fd1e6; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:15px;line-height:1.65}
+.wrap{max-width:900px;margin:0 auto;padding-block:28px 56px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:flex;flex-direction:column;gap:28px}
+header{display:flex;flex-direction:column;gap:6px}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--muted)}
+h1{font-family:var(--f-display);font-weight:900;font-size:clamp(28px,5vw,40px);margin:0;line-height:1.2;text-wrap:balance}
+.lede{color:var(--muted);margin:0;max-width:62ch}
+section{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:14px;min-width:0}
+h2{font-family:var(--f-display);font-size:21px;margin:0;display:flex;gap:10px;align-items:baseline;text-wrap:balance}
+h2 .n{font-family:var(--f-num);font-size:13px;color:var(--beam)}
+.stage{overflow-x:auto;border-radius:10px;background:var(--bg)}
+.stage svg{display:block;width:100%;height:auto}
+.ctl{display:flex;flex-direction:column;gap:4px;min-width:0}
+.ctl label{font-size:13px;display:flex;justify-content:space-between;gap:8px}
+.ctl label span{font-family:var(--f-num);color:var(--muted);font-size:12px}
+input[type=range]{width:100%;accent-color:var(--beam)}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+button{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--surface);color:var(--fg);
+  border-radius:999px;padding:6px 14px;cursor:pointer}
+button:hover{border-color:var(--muted)}
+button:disabled{opacity:.45;cursor:default}
+button:focus-visible,input:focus-visible{outline:2px solid var(--card);outline-offset:2px}
+button[aria-pressed=true]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.note{font-size:12px;color:var(--muted);margin:0}
+.quiz{display:flex;flex-direction:column;gap:16px}
+.q p{margin:0 0 6px;font-weight:500}
+.q .fb{font-size:14px;margin-top:6px;min-height:1.6em}
+.q button.right{border-color:var(--ok);color:var(--ok)}
+.q button.wrong{border-color:var(--bad);color:var(--bad)}
+footer{font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+footer b{color:var(--fg)}
+svg text{font-family:var(--f-body)}
+.q-big{font-family:var(--f-display);font-size:clamp(20px,3.6vw,26px);font-weight:900;margin:0;text-wrap:balance}
+.cap-box{display:flex;gap:12px;align-items:flex-start;background:var(--card-fill);border-radius:10px;padding:12px 14px;min-height:72px}
+.cap-box .no{font-family:var(--f-num);font-size:13px;color:var(--card);white-space:nowrap;padding-top:3px}
+.cap-box p{margin:0;font-size:16px;line-height:1.6}
+.cap-box b{color:var(--beam)}
+.stepbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.dots{display:flex;gap:6px;margin-left:4px}
+.dots i{width:9px;height:9px;border-radius:50%;background:var(--line);display:block}
+.dots i.on{background:var(--card)}
+.free{border-top:1px dashed var(--line);padding-top:12px;display:flex;flex-direction:column;gap:10px}
+.free .t{font-size:13px;color:var(--muted)}
+.big-next{background:var(--card);color:#fff;border-color:var(--card);font-weight:700}
+.concl{font-size:15px;font-weight:700;color:var(--ok);margin:0}
+.check{display:grid;grid-template-columns:2.2em 1fr;gap:10px 12px;margin:0;align-items:start}
+.check .k{font-family:var(--f-num);font-size:13px;color:#fff;background:var(--card);border-radius:999px;width:1.9em;height:1.9em;display:grid;place-items:center}
+.check p{margin:0}
+.check b{color:var(--beam)}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+<div class="wrap">
+<header>
+  <div class="eyebrow">激光扫描系统入门 · 第 15 课（激光器基础 2/5）</div>
+  <h1>半导体激光器和泵浦</h1>
+  <p class="lede">这一课的图尽量画成实物的样子：切开的芯片、带台阶的泵浦模块。三张图，一张只回答一个问题。</p>
+</header>
+
+<section aria-labelledby="s1">
+  <p class="q-big" id="s1">问题 1：一块小芯片，怎么把电直接变成光？</p>
+  <div class="stage"><svg id="svg1" data-export="15-1_芯片怎么发光" viewBox="0 0 840 380" role="img" aria-label="一块小芯片怎么把电直接变成光"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n1"></span><p id="c1"></p></div>
+  <div class="stepbar"><button id="p1">← 上一步</button><button id="x1" class="big-next">下一步 →</button><span class="dots" id="d1"></span></div>
+  <div class="free"><span class="t">自己玩：</span><div class="ctl"><label for="f1">电流（上调试试：有个“门槛”）<span id="f1V"></span></label><input id="f1" type="range" min="0" max="100" step="1" value="60"></div></div>
+  <p class="concl">记住一句：芯片是几层材料叠起来的“三明治”，电流穿过中间那层极薄的发光层，电子和空穴相遇变成光；电流超过门槛，端面当镜子，才成激光。</p>
+</section>
+
+<section aria-labelledby="s2">
+  <p class="q-big" id="s2">问题 2：一颗芯片光不够，怎么凑成一个“泵浦模块”？</p>
+  <div class="stage"><svg id="svg2" data-export="15-2_泵浦模块怎么凑" viewBox="0 0 840 340" role="img" aria-label="一颗芯片光不够，怎么凑成一个泵浦模块"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n2"></span><p id="c2"></p></div>
+  <div class="stepbar"><button id="p2">← 上一步</button><button id="x2" class="big-next">下一步 →</button><span class="dots" id="d2"></span></div>
+  <div class="free"><span class="t">自己玩：</span><div class="ctl"><label for="f2">芯片数量<span id="f2V"></span></label><input id="f2" type="range" min="1" max="8" step="1" value="6"></div></div>
+  <p class="concl">记住一句：每颗芯片先用小透镜“捋直”，再把一排芯片的光用大透镜一起聚进一根光纤；光纤纤芯越粗越好耦合，但出来的光束就越差（M² ≈ 40）。</p>
+</section>
+
+<section aria-labelledby="s3">
+  <p class="q-big" id="s3">问题 3：为什么光纤激光器的泵浦要用 915 / 976 nm？</p>
+  <div class="stage"><svg id="svg3" data-export="15-3_为什么是915" viewBox="0 0 840 340" role="img" aria-label="为什么光纤激光器的泵浦要用 915 或 976 nm"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n3"></span><p id="c3"></p></div>
+  <div class="stepbar"><button id="p3">← 上一步</button><button id="x3" class="big-next">下一步 →</button><span class="dots" id="d3"></span></div>
+  <div class="free"><span class="t">自己玩：</span><div class="ctl"><label for="f3">泵浦光的波长<span id="f3V"></span></label><input id="f3" type="range" min="880" max="1000" step="1" value="915"></div></div>
+  <p class="concl">记住一句：光纤里的镱离子只“爱吃” 915 和 976 nm 左右的光，吃进去再吐出 1064 nm 的激光；两者的能量差（约 14%）变成热。</p>
+</section>
+
+<section aria-labelledby="s7"><h2 id="s7"><span class="n">✓</span>小测</h2><div class="quiz" id="quiz"></div></section>
+<footer>
+  <div><b>本课对项目的推进：</b></div>
+  <div>· 老师要的 915 nm：它既是常见的半导体激光器波长，也是光纤激光器的泵浦波长。如果是直接拿来打东西，就是“光纤耦合半导体激光器”，光束差（M² 约 40）正来自纤芯粗；如果是光纤激光器里的泵浦，就不会单独出来用</div>
+  <div>· 这也解释了公司里说的“泵浦出来加准直扩束”：泵浦模块出光口就是一根光纤，后面接准直头、扩束镜，正是我们调焦头要做的一段</div>
+  <div>· 图里的芯片尺寸、功率是典型值，不同厂家不同型号会有差别（【典型值】，选型时看规格书）</div>
+  <div>· 下一课（第 16 课）：光纤激光器拆开看，用实物样子的图</div>
+</footer>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const T=(x,y,t,s=14,c='var(--fg)',a='middle',w=400)=>`<text x="${x}" y="${y}" font-size="${s}" fill="${c}" text-anchor="${a}" font-weight="${w}">${t}</text>`;
+function stepper(k,steps,state,draw){
+  let i=0,anim=0;
+  const dots=$('d'+k);dots.innerHTML=steps.map(()=>'<i></i>').join('');
+  function go(n,instant){i=Math.max(0,Math.min(steps.length-1,n));const to={...state,...steps[i].s},from={...state},t0=performance.now(),dur=(reduce||instant)?0:700;
+    cancelAnimationFrame(anim);
+    const tick=now=>{const p=dur?Math.min(1,(now-t0)/dur):1,e=p<.5?2*p*p:1-(-2*p+2)**2/2;
+      for(const key in to){if(typeof to[key]==='number')state[key]=from[key]+(to[key]-from[key])*e;else state[key]=to[key];}
+      draw();if(p<1)anim=requestAnimationFrame(tick);};
+    if(!dur){for(const key in to)state[key]=to[key];draw();}else anim=requestAnimationFrame(tick);
+    $('c'+k).innerHTML=steps[i].t;$('n'+k).textContent=`第 ${i+1} / ${steps.length} 步`;
+    dots.querySelectorAll('i').forEach((d,j)=>d.classList.toggle('on',j<=i));
+    $('p'+k).disabled=i===0;$('x'+k).textContent=i===steps.length-1?'从头再看 ↺':'下一步 →';}
+  $('p'+k).onclick=()=>go(i-1);$('x'+k).onclick=()=>go(i===steps.length-1?0:i+1);
+  go(0,true);return {go,n:steps.length};
+}
+let TT=0;const ANIM=[];(function loop(){if(!reduce)TT+=0.016;ANIM.forEach(f=>f(TT));requestAnimationFrame(loop);})();
+const PH='#e8b04a',PHs='#8a6d00',PUMP='#ff8a3d';
+const poly=(pts,f,s='none',w=1,o=1)=>`<polygon points="${pts.map(p=>p[0].toFixed(1)+','+p[1].toFixed(1)).join(' ')}" fill="${f}" stroke="${s}" stroke-width="${w}" opacity="${o}"/>`;
+
+/* ===== 1 芯片切开 ===== */
+const X0=210,Y0=105,W=250,DX=150,DY=-60;
+const LAY=[['上电极（金属）',12,'#d4a72c'],['P 型层（缺电子的一侧）',30,'#f2b5b5'],['发光层',8,'#ff8a3d'],['N 型层（多电子的一侧）',30,'#9ec5f0'],['衬底（托着）',28,'#b8c0cc'],['下电极（接散热块）',12,'#b8860b']];
+const s1={I:0,lab:0,cur:0,mir:0};
+function draw1(){
+  const I=s1.I,thr=20,las=I>thr?Math.min(1,(I-thr)/80):0,glow=Math.min(1,I/thr);let g='';
+  // 底座
+  g+=poly([[X0-20,Y0+120+6],[X0+W+DX+10,Y0+120+6+DY],[X0+W+DX+10,Y0+120+16+DY],[X0-20,Y0+120+16]],'#8a929e','#6b7280',1);
+  // 顶面
+  g+=poly([[X0,Y0],[X0+W,Y0],[X0+W+DX,Y0+DY],[X0+DX,Y0+DY]],'#e5bf4a','#8a6d00',1);
+  g+=T(X0+W/2+DX/2,Y0+DY+16>20?Y0+DY+8:20,'',1);
+  // 右侧面分层
+  let ly=Y0;const rows=[];
+  LAY.forEach(([n,h,c])=>{rows.push([n,ly,h,c]);g+=poly([[X0+W,ly],[X0+W+DX,ly+DY],[X0+W+DX,ly+h+DY],[X0+W,ly+h]],c,'#00000033',0.8);ly+=h;});
+  // 前端面分层
+  rows.forEach(([n,y,h,c])=>{g+=`<rect x="${X0}" y="${y}" width="${W}" height="${h}" fill="${c}" stroke="#00000033" stroke-width="0.8"/>`;});
+  g+=`<rect x="${X0}" y="${Y0}" width="${W}" height="120" fill="none" stroke="#4b5563" stroke-width="1.4"/>`;
+  const ya=rows[2][1],yc=ya+4,xc=X0+W/2;
+  // 发光窄缝
+  g+=`<rect x="${xc-16}" y="${ya-1}" width="32" height="10" fill="${las>0?'#fff3c4':'#ffb36b'}" stroke="#b5500f" stroke-width="1" opacity="${0.5+0.5*glow}"/>`;
+  // 分层标签
+  if(s1.lab>0.02)rows.forEach(([n,y,h,c],i)=>{const yy=y+h/2,ty=Y0-30+i*34;g+=`<g opacity="${s1.lab}"><path d="M${X0+W+DX/2+10},${yy+DY/2} L690,${ty+22-(i===2?0:0)}" stroke="var(--muted)" stroke-width="1"/>`+T(694,ty+26,n+(i===2?' ≈ 0.1 μm 厚':''),12,i===2?'#b5500f':'var(--fg)','start',i===2?700:400)+'</g>';});
+  // 电流：电子（蓝）从下往上，空穴（红）从上往下
+  if(s1.cur>0.02&&I>0.5){const k=Math.min(1,I/60);
+    for(let i=0;i<5;i++){const x=X0+30+i*47;g+=`<path d="M${x},${Y0-34} V${Y0-4}" stroke="#374151" stroke-width="2" opacity="${s1.cur}"/><polygon points="${x},${Y0-2} ${x-5},${Y0-12} ${x+5},${Y0-12}" fill="#374151" opacity="${s1.cur}"/>`;
+      const f=((TT*0.8+i*0.2)%1);g+=`<circle cx="${x}" cy="${rows[1][1]+f*(ya-rows[1][1]+4)}" r="3.2" fill="#d23c3c" opacity="${s1.cur*k}"/>`+`<circle cx="${x}" cy="${rows[3][1]+rows[3][2]-f*(rows[3][1]+rows[3][2]-ya-4)}" r="3.2" fill="#2b7bb9" opacity="${s1.cur*k}"/>`;
+      if(f>0.82)g+=`<circle cx="${x}" cy="${yc}" r="${6+(f-0.82)*50}" fill="${PH}" opacity="${(1-f)*4*s1.cur*k}"/>`;}
+    g+=T(X0+W/2,Y0-44,'电流（电源接在上、下电极）',12,'#374151','middle',700);
+    g+=T(X0-16,rows[1][1]+16,'空穴',11,'#d23c3c','end',700)+T(X0-16,rows[3][1]+16,'电子',11,'#2b7bb9','end',700);}
+  // 两个端面当镜子，光在腔里来回
+  if(s1.mir>0.02){const bt=(Math.abs(((TT*0.7)%2)-1));const x=xc+DX*bt,y=yc+DY*bt;
+    g+=`<line x1="${xc}" y1="${yc}" x2="${xc+DX}" y2="${yc+DY}" stroke="${PH}" stroke-width="2" stroke-dasharray="3 4" opacity="${s1.mir}"/>`;
+    g+=`<circle cx="${x}" cy="${y}" r="${4+5*las}" fill="${PH}" stroke="${PHs}" opacity="${s1.mir}"/>`;
+    g+=`<g opacity="${s1.mir}">`+T(X0+DX+W+14,Y0+DY-16,'后端面：反射很强',12,'var(--fg)','start',700)+T(X0-6,Y0+142,'前端面：反射很弱（光从这里出）',12,'var(--fg)','start',700)+`</g>`;}
+  // 出光：向观察者方向张开，竖直方向快
+  const ex=xc-205,ey=yc+110,ry=14+46*las,rx=12+10*las;
+  if(las>0||glow>0.2){const a=las>0?0.25+0.55*las:0.1*glow;
+    g+=poly([[xc,yc],[ex,ey-(las>0?ry:ry*1.6)],[ex,ey+(las>0?ry:ry*1.6)]],'var(--beam)','none',0,a);
+    g+=`<ellipse cx="${ex}" cy="${ey}" rx="${rx}" ry="${las>0?ry:ry*1.6}" fill="var(--beam)" opacity="${Math.min(.9,a+.25)}"/>`;
+    if(las>0&&s1.mir>0.5){g+=T(ex+8,ey+ry+22,'光斑：上下张得快（竖直约 30–40°）、左右张得慢（约 8–10°）',12,'var(--fg)','start',700);}
+    if(las<=0&&glow>0.2)g+=T(ex+20,ey+ry*1.6+22,'只是普通发光（像 LED），不是激光',12,'var(--muted)','start',700);}
+  g+=T(420,24,I<=0.5?(s1.lab>0.5?'切开看：一层层叠起来，像三明治':'一块小芯片（实物约 3–4 mm 长，比一粒米还小）'):I<=thr?'通电：电子和空穴在发光层相遇，变成光（普通发光）':las<0.35?'电流刚过门槛：激光开始起振':'电流足够：光在两端面之间来回放大，从前端面射出',14,las>0?'var(--ok)':'var(--fg)','middle',700);
+  // 电流条
+  g+=T(600,318,`电流 ${Math.round(I)}%`,12,'var(--fg)','start',700)+`<rect x="600" y="326" width="200" height="10" rx="5" fill="var(--bg)"/><rect x="600" y="326" width="${2*Math.min(100,I)}" height="10" rx="5" fill="#374151"/><line x1="${600+2*thr}" y1="322" x2="${600+2*thr}" y2="340" stroke="var(--bad)" stroke-width="2"/>`+T(600+2*thr,356,'门槛',11,'var(--bad)','middle',700);
+  $('svg1').innerHTML=g;$('f1V').textContent=Math.round(I)+'%';
+}
+ANIM.push(draw1);
+const st1=stepper(1,[
+ {t:'先看实物：这就是一颗半导体激光芯片，只有 <b>3–4 mm 长</b>（大功率单管，【典型值】），比一粒米还小。下面垫着铜块散热。',s:{I:0,lab:0,cur:0,mir:0}},
+ {t:'<b>切开</b>看：一层层叠起来。上面是 <b>P 型层</b>（缺电子），下面是 <b>N 型层</b>（多电子），夹在中间的<b>发光层</b>只有约 0.1 μm 薄（图里画粗了）。上下各一层金属接电源。',s:{I:0,lab:1,cur:0,mir:0}},
+ {t:'<b>通电</b>：电流从上往下穿过，空穴（红点）从上面、电子（蓝点）从下面挤进发光层，<b>相遇就放出一个光子</b>（黄闪）。这一步和 LED 一样，只是普通发光。',s:{I:15,lab:0.4,cur:1,mir:0}},
+ {t:'电流再加大，超过<b>门槛</b>（电流条上的红线），发光层里的光多到能互相“逼着”放出一样的光子（第 14 课的放大）。芯片<b>两个切开的端面当镜子</b>：后端面反射很强、前端面反射很弱，光在两面之间来回，越来越强。',s:{I:50,lab:0,cur:1,mir:1}},
+ {t:'光从前端面那条<b>窄缝</b>射出来。缝很小（约 1 μm × 100 μm，【典型值】），光一出来就<b>快速张开</b>，而且上下张得快、左右张得慢，光斑是扁的。这就是半导体激光器光束差的根源，后面要用透镜把它捋直。',s:{I:100,lab:0,cur:1,mir:1}}
+],s1,draw1);
+$('f1').addEventListener('input',()=>{s1.I=+$('f1').value;s1.cur=1;s1.mir=1;s1.lab=0;$('n1').textContent='自己玩';$('c1').innerHTML=s1.I<=20?`电流 ${s1.I}%：没到门槛，只是普通发光，没有激光。`:`电流 ${s1.I}%：超过门槛，开始出激光；电流越大，激光越强。`;});
+
+/* ===== 2 泵浦模块 ===== */
+const s2={n:1,col:0,foc:0};
+function draw2(){
+  const n=Math.max(1,Math.round(s2.n)),col=s2.col,foc=s2.foc,FX=770,sp=Math.min(30,200/Math.max(1,n-1)||30),Y1=170-(n-1)*sp/2;let g='';
+  const yc=i=>Y1+i*sp,xc=i=>90+i*26;
+  // 台阶散热块
+  let pts=[[60,330]];for(let i=0;i<n;i++){pts.push([xc(i)-10,yc(i)+14],[xc(i)+24,yc(i)+14]);}pts.push([xc(n-1)+24,330]);
+  g+=poly(pts,'#c8864a','#8a5524',1.2)+T(150,326,'铜台阶散热块',12,'#fff','start',700);
+  const LX=520;
+  for(let i=0;i<n;i++){const y=yc(i),x=xc(i);
+    g+=`<rect x="${x-4}" y="${y-8}" width="16" height="16" rx="2" fill="#ffb36b" stroke="#b5500f" stroke-width="1.2"/>`;
+    // 光
+    if(col<0.5){const sx=x+12,len=Math.min(LX-sx,150),spread=Math.min(1,s2.foc+0)*0;g+=poly([[sx,y-2],[sx+len,y-34],[sx+len,y+34],[sx,y+2]],'var(--beam)','none',0,0.25);
+      if(n===1)g+=T(sx+len/2,y-48,'一出来就张开',12,'var(--bad)','middle',700);}
+    else{const sx=x+12,lx=x+34;
+      g+=poly([[sx,y-2],[lx,y-8],[lx,y+8],[sx,y+2]],'var(--beam)','none',0,0.3);
+      g+=`<rect x="${lx}" y="${y-12}" width="5" height="24" rx="2" fill="var(--glass-fill)" stroke="var(--glass)" stroke-width="1.5"/>`;
+      if(foc<0.5)g+=`<rect x="${lx+5}" y="${y-7}" width="${LX+60-lx-5}" height="14" fill="var(--beam)" opacity=".4"/>`;
+      else g+=`<rect x="${lx+5}" y="${y-7}" width="${LX-lx-5}" height="14" fill="var(--beam)" opacity=".4"/>`+poly([[LX,y-7],[FX,170-3],[FX,170+3],[LX,y+7]],'var(--beam)','none',0,0.4);}
+  }
+  if(col>0.5)g+=T(150,Y1-30,'每颗芯片一片小透镜（竖直方向“捋直”）',12,'var(--glass)','start',700);
+  if(foc>0.5){const h=Math.max(40,(n-1)*sp+50);g+=`<ellipse cx="${LX}" cy="170" rx="9" ry="${h/2+10}" fill="var(--glass-fill)" stroke="var(--glass)" stroke-width="2"/>`+T(LX,170-h/2-22,'大透镜：把一排光一起聚进光纤',12,'var(--glass)','middle',700);
+    // 光纤端
+    g+=`<rect x="${FX}" y="${170-14}" width="60" height="28" rx="3" fill="#e5e7eb" stroke="#6b7280" stroke-width="1.2"/><rect x="${FX}" y="${170-5}" width="60" height="10" fill="#ffd9a8"/>`+T(FX+30,170-24,'光纤',12,'var(--fg)','middle',700);
+    g+=`<circle cx="${FX+30}" cy="${170+70}" r="38" fill="#e5e7eb" stroke="#6b7280" stroke-width="1.2"/><circle cx="${FX+30}" cy="${170+70}" r="22" fill="#ffd9a8" stroke="#b5500f"/>`+T(FX+30,170+70+4,'纤芯',11,'#7a3300','middle',700)+T(FX+60,170+122,'截面：纤芯 105 μm',12,'var(--fg)','end',700);
+    g+=`<line x1="${FX}" y1="${170+14}" x2="${FX+30}" y2="${170+34}" stroke="var(--muted)" stroke-dasharray="3 3"/>`;}
+  const P=n*10;
+  g+=T(420,24,s2.foc>0.5?`${n} 颗芯片合成一根光纤输出，约 ${P} W（按每颗 10 W 估计，【假设】）`:s2.col>0.5?(n>1?`${n} 颗芯片叠成台阶，每束光各走各的高度`:'加了小透镜：光变成一束平行的细光'):'一颗芯片：光一出来就快速张开，没法直接用',14,s2.foc>0.5?'var(--ok)':'var(--fg)','middle',700);
+  $('svg2').innerHTML=g;$('f2V').textContent=n+' 颗 ≈ '+n*10+' W';
+}
+ANIM.push(draw2);
+const st2=stepper(2,[
+ {t:'一颗芯片的光一出窄缝就<b>快速张开</b>（上一张图的结论），而且一颗芯片只有约 10 W（大功率单管，【典型值】）。直接用既发散又不够强。',s:{n:1,col:0,foc:0}},
+ {t:'第一步：在芯片前面放一片<b>小透镜</b>，把快速张开的光“捋直”成一束细细的平行光。',s:{n:1,col:1,foc:0}},
+ {t:'第二步：光不够，就<b>多放几颗</b>。芯片安在<b>台阶</b>上，一级比一级低，这样每颗芯片的光束在上下方向上各占一个高度，叠成一排，互相不挡。',s:{n:6,col:1,foc:0}},
+ {t:'第三步：用一片<b>大透镜</b>把这一排光一起<b>聚到一根光纤的端面</b>里。光纤另一头出来的，就是我们看到的“泵浦光”（总功率 ≈ 芯片数 × 单颗功率）。这就是<b>泵浦模块</b>。',s:{n:6,col:1,foc:1}}
+],s2,draw2);
+$('f2').addEventListener('input',()=>{s2.n=+$('f2').value;s2.col=1;s2.foc=1;$('n2').textContent='自己玩';$('c2').innerHTML=`${s2.n} 颗芯片，约 ${s2.n*10} W（每颗按 10 W 估计）。芯片越多功率越大，但纤芯就得越粗才聚得进去，光束质量更差。`;draw2();});
+
+/* ===== 3 为什么是 915 / 976 ===== */
+const s3={stage:0,lam:915};
+const absorb=l=>Math.min(1,0.02+0.35*Math.exp(-0.5*((l-915)/10)**2)+1.0*Math.exp(-0.5*((l-976)/3)**2));
+function draw3(){
+  const st=s3.stage,lam=s3.lam;let g='';
+  const Y0E=300,LP=240,LL=LP*915/1064,top=Y0E-LP,up=top+14,low=up+LL;
+  // 能级
+  const L=(y,t)=>`<line x1="90" y1="${y}" x2="340" y2="${y}" stroke="var(--muted)" stroke-width="2"/>`+T(346,y+4,t,12,'var(--muted)','start',700);
+  g+=L(Y0E,'基态（休息）')+L(top,'高能态（充了电）')+L(up,'')+L(low,'')+T(346,low+4+0,'',1);
+  g+=T(90,24,'镱离子的能量阶梯（越高能量越大）',13,'var(--fg)','start',700);
+  // 泵浦箭头
+  if(st>=0)g+=`<path d="M150,${Y0E} V${top+8}" stroke="${PUMP}" stroke-width="5" fill="none"/><polygon points="150,${top} 140,${top+14} 160,${top+14}" fill="${PUMP}"/>`+T(150,Y0E+22,'泵浦光 915 nm',12,PUMP,'middle',700);
+  if(st>=1){g+=`<path d="M190,${top} V${up}" stroke="#b91c1c" stroke-width="4" fill="none" stroke-dasharray="3 3"/>`+T(200,(top+up)/2+4,'热',12,'#b91c1c','start',700);
+    g+=`<circle cx="190" cy="${up}" r="9" fill="#ff8a3d" stroke="#b5500f" stroke-width="2"/>`;}
+  if(st>=2){g+=`<path d="M240,${up} V${low-8}" stroke="var(--beam)" stroke-width="5" fill="none"/><polygon points="240,${low} 230,${low-14} 250,${low-14}" fill="var(--beam)"/>`+T(254,(up+low)/2,'激光 1064 nm',12,'var(--beam)','start',700);}
+  if(st>=3){g+=`<path d="M290,${low} V${Y0E}" stroke="#b91c1c" stroke-width="4" fill="none" stroke-dasharray="3 3"/>`+T(300,(low+Y0E)/2+4,'热',12,'#b91c1c','start',700);}
+  // 右：能量去向
+  const BX=520,BW=280;
+  g+=`<rect x="${BX-20}" y="40" width="${BW+40}" height="140" rx="10" fill="var(--surface)" stroke="var(--line)"/>`+T(BX+BW/2,64,'一个泵浦光子的能量去哪了',13,'var(--fg)','middle',700);
+  const eff=915/1064;
+  g+=`<rect x="${BX}" y="84" width="${BW}" height="26" rx="4" fill="${PUMP}" opacity=".35"/>`+T(BX+BW/2,102,'泵浦光 100%',12,'var(--fg)','middle',700);
+  if(st>=2)g+=`<rect x="${BX}" y="122" width="${BW*eff}" height="26" rx="4" fill="var(--beam)" opacity=".7"/>`+T(BX+BW*eff/2,140,`激光 ≈ ${Math.round(eff*100)}%`,12,'#fff','middle',700);
+  if(st>=3)g+=`<rect x="${BX+BW*eff}" y="122" width="${BW*(1-eff)}" height="26" rx="4" fill="#b91c1c" opacity=".7"/>`+T(BX+BW*eff+BW*(1-eff)/2,140,'热',12,'#fff','middle',700);
+  if(st>=3)g+=T(BX+BW/2,168,'这 14% 就是“量子亏损”，变成热，光纤要散热',11,'var(--muted)','middle');
+  // 右下：吸收
+  const a=absorb(lam);
+  g+=`<rect x="${BX-20}" y="196" width="${BW+40}" height="120" rx="10" fill="var(--surface)" stroke="var(--line)"/>`+T(BX+BW/2,220,`泵浦波长 ${Math.round(lam)} nm：镱离子吸收得好不好`,13,'var(--fg)','middle',700);
+  g+=`<rect x="${BX}" y="238" width="${BW}" height="22" rx="11" fill="var(--bg)"/><rect x="${BX}" y="238" width="${BW*a}" height="22" rx="11" fill="${a>0.3?'var(--ok)':'var(--bad)'}"/>`;
+  g+=T(BX+BW/2,284,a>0.8?'吸收很强：976 nm 附近，但这个峰很窄':a>0.25?'吸收不错：915 nm 附近，峰宽、好用':'几乎不吸收：光穿过去，浪费了',12,a>0.25?'var(--ok)':'var(--bad)','middle',700);
+  g+=T(BX+BW/2,304,'（吸收峰位置为常识值，具体看光纤规格书）',11,'var(--muted)','middle');
+  $('svg3').innerHTML=g;$('f3V').textContent=Math.round(lam)+' nm';
+}
+ANIM.push(draw3);
+const st3=stepper(3,[
+ {t:'光纤里掺的<b>镱离子</b>像一个只会爬一种台阶的小人：<b>泵浦光</b>（橙）把它从“休息”抬到“高能态”。光子能量刚好等于台阶高度时，才被吸收，所以泵浦波长不能乱选。',s:{stage:0}},
+ {t:'刚上去先“滑”下一小段，多余能量变成<b>热</b>（红虚线）。',s:{stage:1}},
+ {t:'它再回落时放出<b>激光光子</b>（红）。落差比上去的小一点，所以激光波长比泵浦长：<b>1064 nm</b>。',s:{stage:2}},
+ {t:'最后再滑回休息位置，又丢一点热。算下来泵浦能量的 <b>86%</b>（915÷1064）变成激光，<b>14%</b> 变成热。右边拖滑块：只有 <b>915</b>、<b>976 nm</b> 附近吸收得好，所以大家选这两个波长当泵浦。',s:{stage:3}}
+],s3,draw3);
+$('f3').addEventListener('input',()=>{s3.lam=+$('f3').value;s3.stage=3;$('n3').textContent='自己玩';draw3();$('c3').innerHTML=`泵浦波长 ${s3.lam} nm：${absorb(s3.lam)>0.8?'吸收很强（976 附近）。':absorb(s3.lam)>0.25?'吸收不错（915 附近）。':'几乎不吸收。'}`;});
+
+window.__beforeExport=()=>{s1.I=100;st1.go(4,true);st2.go(3,true);st3.go(3,true);};
+const QS=[
+ {q:'半导体芯片里，光是在哪一层产生的？',o:['夹在 P 型层和 N 型层之间的发光层','最上面的金属电极'],a:0,e:['对。电子和空穴在这一层相遇变成光。','电极只是接电源，发光在中间那层。']},
+ {q:'电流太小的时候，半导体芯片发出的是什么？',o:['普通光，像 LED，不是激光','激光，只是弱一点'],a:0,e:['对。要超过门槛才起振成激光。','没过门槛就没有激光。']},
+ {q:'为什么要把很多芯片的光聚进一根光纤？',o:['单颗功率有限；光纤输出方便后面接准直、扩束','为了让光束变好'],a:0,e:['对。代价是纤芯较粗，光束质量会差（M² 大）。','恰恰相反，光束会变差。']},
+ {q:'光纤激光器的泵浦为什么选 915 / 976 nm？',o:['镱离子在这两个波长附近吸收得好','因为这两个波长最便宜'],a:0,e:['对。吸收得好，能量才传得进去。','主要是吸收好，便宜是顺带的。']}
+];
+$('quiz').innerHTML=QS.map((q,i)=>`<div class="q" data-i="${i}"><p>Q${i+1}. ${q.q}</p><div class="row">${q.o.map((o,j)=>`<button data-j="${j}">${o}</button>`).join('')}</div><div class="fb" aria-live="polite"></div></div>`).join('');
+document.querySelectorAll('.q button').forEach(b=>b.onclick=()=>{const qd=b.closest('.q'),q=QS[+qd.dataset.i],j=+b.dataset.j;
+  qd.querySelectorAll('button').forEach(x=>x.classList.remove('right','wrong'));b.classList.add(j===q.a?'right':'wrong');
+  qd.querySelector('.fb').textContent=(j===q.a?'✓ ':'✗ ')+q.e[j];});
+</script>
