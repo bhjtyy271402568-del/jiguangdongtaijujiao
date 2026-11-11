@@ -1,0 +1,300 @@
+<meta charset="utf-8">
+<title>透镜和光纤</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@700;900&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* 激光快速入门 02：透镜和光纤怎么管住光 */
+:root{
+  --bg:#f4f6f9; --surface:#ffffff; --fg:#151a23; --muted:#5d6676; --line:#d8dee7;
+  --beam:#e5383b; --beam-soft:#f6b3b4; --glass:#2b7bb9; --glass-fill:#dcecf8;
+  --ok:#17914f; --bad:#d23c3c; --proj2:#e0701c; --card:#2c5fd6; --card-fill:#e2eafc;
+  --metal:#7b8697; --band:#17914f22; --wave:#0ea5c6;
+  --f-body:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --f-display:"Noto Serif SC","Songti SC",serif;
+  --f-num:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1218; --surface:#171c25; --fg:#e7ebf1; --muted:#9aa4b4; --line:#2b3240;
+  --beam:#ff5c60; --beam-soft:#7a2a2d; --glass:#6db5ee; --glass-fill:#1c3448;
+  --ok:#3fd082; --bad:#ff6b6b; --proj2:#ff9a4a; --card:#82a6ff; --card-fill:#1d2a4a;
+  --metal:#8c97a8; --band:#3fd08226; --wave:#4fd1e6; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1218; --surface:#171c25; --fg:#e7ebf1; --muted:#9aa4b4; --line:#2b3240;
+  --beam:#ff5c60; --beam-soft:#7a2a2d; --glass:#6db5ee; --glass-fill:#1c3448;
+  --ok:#3fd082; --bad:#ff6b6b; --proj2:#ff9a4a; --card:#82a6ff; --card-fill:#1d2a4a;
+  --metal:#8c97a8; --band:#3fd08226; --wave:#4fd1e6; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:15px;line-height:1.65}
+.wrap{max-width:900px;margin:0 auto;padding-block:28px 56px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:flex;flex-direction:column;gap:28px}
+header{display:flex;flex-direction:column;gap:6px}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--muted)}
+h1{font-family:var(--f-display);font-weight:900;font-size:clamp(28px,5vw,40px);margin:0;line-height:1.2;text-wrap:balance}
+.lede{color:var(--muted);margin:0;max-width:62ch}
+section{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:14px;min-width:0}
+h2{font-family:var(--f-display);font-size:21px;margin:0;display:flex;gap:10px;align-items:baseline;text-wrap:balance}
+h2 .n{font-family:var(--f-num);font-size:13px;color:var(--beam)}
+.stage{overflow-x:auto;border-radius:10px;background:var(--bg)}
+.stage svg{display:block;width:100%;height:auto}
+.ctl{display:flex;flex-direction:column;gap:4px;min-width:0}
+.ctl label{font-size:13px;display:flex;justify-content:space-between;gap:8px}
+.ctl label span{font-family:var(--f-num);color:var(--muted);font-size:12px}
+input[type=range]{width:100%;accent-color:var(--beam)}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+button{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--surface);color:var(--fg);
+  border-radius:999px;padding:6px 14px;cursor:pointer}
+button:hover{border-color:var(--muted)}
+button:disabled{opacity:.45;cursor:default}
+button:focus-visible,input:focus-visible{outline:2px solid var(--card);outline-offset:2px}
+button[aria-pressed=true]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.note{font-size:12px;color:var(--muted);margin:0}
+.quiz{display:flex;flex-direction:column;gap:16px}
+.q p{margin:0 0 6px;font-weight:500}
+.q .fb{font-size:14px;margin-top:6px;min-height:1.6em}
+.q button.right{border-color:var(--ok);color:var(--ok)}
+.q button.wrong{border-color:var(--bad);color:var(--bad)}
+footer{font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+footer b{color:var(--fg)}
+svg text{font-family:var(--f-body)}
+.q-big{font-family:var(--f-display);font-size:clamp(20px,3.6vw,26px);font-weight:900;margin:0;text-wrap:balance}
+.cap-box{display:flex;gap:12px;align-items:flex-start;background:var(--card-fill);border-radius:10px;padding:12px 14px;min-height:72px}
+.cap-box .no{font-family:var(--f-num);font-size:13px;color:var(--card);white-space:nowrap;padding-top:3px}
+.cap-box p{margin:0;font-size:16px;line-height:1.6}
+.cap-box b{color:var(--beam)}
+.stepbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.dots{display:flex;gap:6px;margin-left:4px}
+.dots i{width:9px;height:9px;border-radius:50%;background:var(--line);display:block}
+.dots i.on{background:var(--card)}
+.free{border-top:1px dashed var(--line);padding-top:12px;display:flex;flex-direction:column;gap:10px}
+.free .t{font-size:13px;color:var(--muted)}
+.big-next{background:var(--card);color:#fff;border-color:var(--card);font-weight:700}
+.concl{font-size:15px;font-weight:700;color:var(--ok);margin:0}
+.check{display:grid;grid-template-columns:2.2em 1fr;gap:10px 12px;margin:0;align-items:start}
+.check .k{font-family:var(--f-num);font-size:13px;color:#fff;background:var(--card);border-radius:999px;width:1.9em;height:1.9em;display:grid;place-items:center}
+.check p{margin:0}
+.check b{color:var(--beam)}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+<div class="wrap">
+<header>
+  <div class="eyebrow">激光快速入门 · 第 2 课（共 6 课）</div>
+  <h1>透镜和光纤：怎么“管住”光</h1>
+  <p class="lede">激光器里、激光器外，全靠两样东西管光：<b>透镜</b>让光聚拢或散开，<b>光纤</b>把光关在里面带着走。这一课把它们的原理和三个常用数（焦距、NA、芯径）讲清楚。</p>
+</header>
+
+<section aria-labelledby="s1">
+  <p class="q-big" id="s1">问题 1：透镜怎么让光聚拢、散开？焦距是什么？</p>
+  <div class="stage"><svg id="svg1" data-export="Q02-1_透镜和焦距" viewBox="0 0 840 300" role="img" aria-label="透镜怎么让光聚拢、散开，焦距是什么"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n1"></span><p id="c1"></p></div>
+  <div class="stepbar"><button id="p1">← 上一步</button><button id="x1" class="big-next">下一步 →</button><span class="dots" id="d1"></span></div>
+  <div class="free"><span class="t">自己玩：</span><div class="row"><button id="t1a">凸透镜</button><button id="t1b">凹透镜</button></div><div class="ctl"><label for="f1">焦距（绝对值）<span id="f1V"></span></label><input id="f1" type="range" min="40" max="250" step="1" value="150"></div></div>
+  <p class="concl">记住一句：凸透镜把平行光聚到一点，这段距离叫焦距；凹透镜把平行光散开，好像从镜前一个点发出来，焦距记成负数。镜面越弯，焦距越短。一凹一凸配起来就能把光变粗——我们的调焦头就是这么做的。</p>
+</section>
+
+<section aria-labelledby="s2">
+  <p class="q-big" id="s2">问题 2：光纤又细又软，光为什么不会从侧面漏出去？</p>
+  <div class="stage"><svg id="svg2" data-export="Q02-2_全反射和光纤" viewBox="0 0 840 300" role="img" aria-label="光纤为什么能把光关在里面"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n2"></span><p id="c2"></p></div>
+  <div class="stepbar"><button id="p2">← 上一步</button><button id="x2" class="big-next">下一步 →</button><span class="dots" id="d2"></span></div>
+  <div class="free"><span class="t">自己玩：</span><div class="ctl"><label for="f2">光打到界面上的倾斜角（从垂直方向量）<span id="f2V"></span></label><input id="f2" type="range" min="0" max="85" step="1" value="30"></div></div>
+  <p class="concl">记住一句：光从“密”的玻璃往“疏”的那边走，斜到一定程度就一点都出不去，全部反射回来，叫全反射。光纤 = 折射率高的纤芯 + 稍低的包层，光在界面上一路全反射，弯着也能走；弯得太急就会漏。</p>
+</section>
+
+<section aria-labelledby="s3">
+  <p class="q-big" id="s3">问题 3：光从光纤头出来什么样？芯径、NA 为什么决定光束好坏？</p>
+  <div class="stage"><svg id="svg3" data-export="Q02-3_芯径NA和准直" viewBox="0 0 840 320" role="img" aria-label="光从光纤头出来什么样，芯径和 NA 为什么决定光束好坏"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n3"></span><p id="c3"></p></div>
+  <div class="stepbar"><button id="p3">← 上一步</button><button id="x3" class="big-next">下一步 →</button><span class="dots" id="d3"></span></div>
+  <div class="free"><span class="t">自己玩：</span><div class="ctl"><label for="f3">纤芯直径<span id="f3V"></span></label><input id="f3" type="range" min="10" max="200" step="1" value="105"></div></div>
+  <p class="concl">记住一句：光从光纤头出来是一个锥，张多大由 NA 决定；在一个焦距处放凸透镜就“准直”成平行光，粗细 ≈ 2 × 焦距 × NA。但纤芯越粗，准直后的光越会慢慢散开，远处光斑越大——光束好坏的根子在纤芯粗细。</p>
+</section>
+
+<section aria-labelledby="s7"><h2 id="s7"><span class="n">✓</span>小测（只考这一课讲过的）</h2><div class="quiz" id="quiz"></div></section>
+<footer>
+  <div><b>本课对项目的推进：</b></div>
+  <div>· 我们调焦头里的“动镜 −30 + 物镜 +150”，就是图 1 第 4 步那种一凹一凸，把 4 mm 光变成 20 mm；动镜一挪，焦点就前后移</div>
+  <div>· 老师常见的 915 nm 光源是 105 μm / NA 0.22 光纤输出：准直后的光“散得快”，远处光斑大（第 6 课用 M² 定量讲）</div>
+  <div>· 光纤输出线不能弯得太急（图 2 第 4 步），装机时要按厂家给的最小弯曲半径走线</div>
+</footer>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const T=(x,y,t,s=14,c='var(--fg)',a='middle',w=400)=>`<text x="${x}" y="${y}" font-size="${s}" fill="${c}" text-anchor="${a}" font-weight="${w}">${t}</text>`;
+function stepper(k,steps,state,draw){
+  let i=0,anim=0;
+  const dots=$('d'+k);dots.innerHTML=steps.map(()=>'<i></i>').join('');
+  function go(n,instant){i=Math.max(0,Math.min(steps.length-1,n));const to={...state,...steps[i].s},from={...state},t0=performance.now(),dur=(reduce||instant)?0:700;
+    cancelAnimationFrame(anim);
+    const tick=now=>{const p=dur?Math.min(1,(now-t0)/dur):1,e=p<.5?2*p*p:1-(-2*p+2)**2/2;
+      for(const key in to){if(typeof to[key]==='number')state[key]=from[key]+(to[key]-from[key])*e;else state[key]=to[key];}
+      draw();if(p<1)anim=requestAnimationFrame(tick);};
+    if(!dur){for(const key in to)state[key]=to[key];draw();}else anim=requestAnimationFrame(tick);
+    $('c'+k).innerHTML=steps[i].t;$('n'+k).textContent=`第 ${i+1} / ${steps.length} 步`;
+    dots.querySelectorAll('i').forEach((d,j)=>d.classList.toggle('on',j<=i));
+    $('p'+k).disabled=i===0;$('x'+k).textContent=i===steps.length-1?'从头再看 ↺':'下一步 →';}
+  $('p'+k).onclick=()=>go(i-1);$('x'+k).onclick=()=>go(i===steps.length-1?0:i+1);
+  go(0,true);return {go,n:steps.length};
+}
+let TT=0;const ANIM=[];(function loop(){if(!reduce)TT+=0.016;ANIM.forEach(f=>f(TT));requestAnimationFrame(loop);})();
+const DEFS=`<defs>
+<linearGradient id="gCu" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7c89a"/><stop offset=".45" stop-color="#c9803f"/><stop offset="1" stop-color="#7a4216"/></linearGradient>
+<linearGradient id="gCuS" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#a65f27"/><stop offset="1" stop-color="#6e3a12"/></linearGradient>
+<linearGradient id="gAu" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff2bf"/><stop offset=".5" stop-color="#e2b440"/><stop offset="1" stop-color="#9a7414"/></linearGradient>
+<linearGradient id="gAuS" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#c79a26"/><stop offset="1" stop-color="#8a6610"/></linearGradient>
+<linearGradient id="gSteel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f5f7fa"/><stop offset=".5" stop-color="#c2c9d2"/><stop offset="1" stop-color="#7b8592"/></linearGradient>
+<linearGradient id="gSteelH" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8a94a1"/><stop offset=".35" stop-color="#eef1f5"/><stop offset=".7" stop-color="#b9c1cb"/><stop offset="1" stop-color="#6f7986"/></linearGradient>
+<linearGradient id="gAlu" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0f3f6"/><stop offset="1" stop-color="#a9b2bc"/></linearGradient>
+<linearGradient id="gPlate" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9dee4"/><stop offset="1" stop-color="#aeb6c0"/></linearGradient>
+<linearGradient id="gRod" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffc2c6"/><stop offset=".3" stop-color="#e8414f"/><stop offset=".75" stop-color="#a3121f"/><stop offset="1" stop-color="#5e0a12"/></linearGradient>
+<linearGradient id="gGlass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eaf6ff" stop-opacity=".95"/><stop offset=".25" stop-color="#bfe0f7" stop-opacity=".45"/><stop offset=".7" stop-color="#9cc7e6" stop-opacity=".35"/><stop offset="1" stop-color="#6fa3c9" stop-opacity=".7"/></linearGradient>
+<linearGradient id="gLens" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d7ecfb" stop-opacity=".9"/><stop offset=".5" stop-color="#f4fbff" stop-opacity=".6"/><stop offset="1" stop-color="#9cc7e6" stop-opacity=".9"/></linearGradient>
+<linearGradient id="gJacket" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd08a"/><stop offset=".5" stop-color="#f08a1c"/><stop offset="1" stop-color="#a85508"/></linearGradient>
+<linearGradient id="gYb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff59a"/><stop offset=".5" stop-color="#e3c22a"/><stop offset="1" stop-color="#9c8210"/></linearGradient>
+<linearGradient id="gPlasma" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6c6ff"/><stop offset=".5" stop-color="#c25bd9"/><stop offset="1" stop-color="#7b2a92"/></linearGradient>
+<linearGradient id="gLamp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#fff7d1"/><stop offset="1" stop-color="#f3d27a"/></linearGradient>
+<radialGradient id="gOn" cx=".35" cy=".32" r=".75"><stop offset="0" stop-color="#fff6dc"/><stop offset=".45" stop-color="#ffa346"/><stop offset="1" stop-color="#b8420a"/></radialGradient>
+<radialGradient id="gOff" cx=".35" cy=".32" r=".75"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#b9c3cf"/><stop offset="1" stop-color="#5f6b7b"/></radialGradient>
+<radialGradient id="gHalo"><stop offset="0" stop-color="#ffb347" stop-opacity=".7"/><stop offset="1" stop-color="#ffb347" stop-opacity="0"/></radialGradient>
+<radialGradient id="gSpot"><stop offset="0" stop-color="#ffffff"/><stop offset=".3" stop-color="#ff5a5f"/><stop offset="1" stop-color="#ff2d2d" stop-opacity="0"/></radialGradient>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="blur6" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+<filter id="shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000" flood-opacity=".22"/></filter>
+</defs>`;
+function beam(x1,y1,x2,y2,w=6,a=1,col='#ff2d2d'){if(a<=0.01)return '';return `<g opacity="${a}"><line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${col}" stroke-width="${w*3.2}" opacity=".28" filter="url(#blur6)" stroke-linecap="round"/><line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${col}" stroke-width="${w}" opacity=".85" stroke-linecap="round"/><line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#fff3f3" stroke-width="${Math.max(1,w/3)}" stroke-linecap="round"/></g>`;}
+function packet(x,y,ph=0,col='#ff4a2a',len=54,amp=7){let d='';for(let i=0;i<=len;i+=2){const e=Math.sin(Math.PI*i/len);d+=(i?'L':'M')+(x-len/2+i).toFixed(1)+','+(y-amp*e*Math.sin(i/len*5*Math.PI*2/2.2+ph)).toFixed(1);}return `<path d="${d}" fill="none" stroke="${col}" stroke-width="2.6" filter="url(#glow)" stroke-linecap="round"/>`;}
+function tag(n,x,y,lx,ly,text,col){return `<line x1="${x}" y1="${y}" x2="${lx}" y2="${ly}" stroke="${col}" stroke-width="1.5"/><circle cx="${x}" cy="${y}" r="3.5" fill="${col}"/><circle cx="${lx}" cy="${ly}" r="11" fill="${col}"/>`+T(lx,ly+4.5,n,12,'#fff','middle',700)+(text?T(lx+(lx>x?16:-16),ly+5,text,12.5,'var(--fg)',lx>x?'start':'end',700):'');}
+function quiz(QS){$('quiz').innerHTML=QS.map((q,i)=>`<div class="q" data-i="${i}"><p>Q${i+1}. ${q.q}</p><div class="row">${q.o.map((o,j)=>`<button data-j="${j}">${o}</button>`).join('')}</div><div class="fb" aria-live="polite"></div></div>`).join('');
+document.querySelectorAll('.q button').forEach(b=>b.onclick=()=>{const qd=b.closest('.q'),q=QS[+qd.dataset.i],j=+b.dataset.j;
+  qd.querySelectorAll('button').forEach(x=>x.classList.remove('right','wrong'));b.classList.add(j===q.a?'right':'wrong');
+  qd.querySelector('.fb').textContent=(j===q.a?'✓ ':'✗ ')+q.e[j];});}
+const C1='#e8590c',C2='#c2255c',C3='#1971c2';   // 三要素配色：① 泵浦 ② 发光材料 ③ 谐振腔
+
+/* ===== 1 透镜 ===== */
+const s1={k:'v',f:150,two:0,strong:0};
+const CY=150,LX=330;
+function lensShape(x,h,conv,sag){if(conv)return `<path d="M${x},${CY-h} Q${x-sag},${CY} ${x},${CY+h} Q${x+sag},${CY} ${x},${CY-h} Z" fill="url(#gLens)" stroke="#5b9bd5" stroke-width="1.6"/>`;
+  return `<path d="M${x-5-sag/2},${CY-h} Q${x-5+sag/3},${CY} ${x-5-sag/2},${CY+h} L${x+5+sag/2},${CY+h} Q${x+5-sag/3},${CY} ${x+5+sag/2},${CY-h} Z" fill="url(#gLens)" stroke="#5b9bd5" stroke-width="1.6"/>`;}
+function draw1(){
+  const f=s1.f,conv=s1.k==='v';let g=DEFS;
+  g+=`<line x1="20" y1="${CY}" x2="820" y2="${CY}" stroke="var(--muted)" stroke-dasharray="4 5"/>`;
+  if(s1.two<0.5){
+    const H=[-54,-36,-18,0,18,36,54],sag=Math.max(6,1600/f);
+    g+=`<rect x="20" y="${CY-62}" width="60" height="124" rx="6" fill="url(#gSteelH)" opacity=".6"/>`+T(50,CY+80,'平行光',11,'var(--muted)','middle');
+    H.forEach(h=>{g+=`<line x1="80" y1="${CY+h}" x2="${LX}" y2="${CY+h}" stroke="#ff4d4f" stroke-width="1.8"/>`;
+      if(conv){const fx=LX+f*1.6,ex=820,ey=CY+h+(ex-LX)*(-h)/(fx-LX);g+=`<line x1="${LX}" y1="${CY+h}" x2="${ex}" y2="${ey}" stroke="#ff4d4f" stroke-width="1.8"/>`;}
+      else{const vx=LX-f*1.6,ex=820,ey=CY+h+(ex-LX)*h/(LX-vx);g+=`<line x1="${LX}" y1="${CY+h}" x2="${ex}" y2="${ey}" stroke="#ff4d4f" stroke-width="1.8"/>`+`<line x1="${vx}" y1="${CY}" x2="${LX}" y2="${CY+h}" stroke="#ff4d4f" stroke-width="1" stroke-dasharray="3 4" opacity=".7"/>`;}});
+    g+=lensShape(LX,64,conv,sag);
+    if(conv){const fx=LX+f*1.6;g+=`<circle cx="${fx}" cy="${CY}" r="5" fill="#ffd43b" filter="url(#glow)"/>`+`<path d="M${LX},${CY+80} v8 H${fx} v-8" fill="none" stroke="var(--fg)" stroke-width="1.4"/>`+T((LX+fx)/2,CY+106,`焦距 f = +${Math.round(f)} mm`,13,'var(--fg)','middle',700)+T(fx,CY-14,'焦点',11.5,'#e8590c','middle',700);}
+    else{const vx=LX-f*1.6;g+=`<circle cx="${vx}" cy="${CY}" r="5" fill="none" stroke="#e8590c" stroke-width="2"/>`+`<path d="M${vx},${CY+80} v8 H${LX} v-8" fill="none" stroke="var(--fg)" stroke-width="1.4"/>`+T((LX+vx)/2,CY+106,`焦距 f = −${Math.round(f)} mm`,13,'var(--fg)','middle',700)+T(vx,CY-14,'虚焦点（光好像从这里发出）',11,'#e8590c','middle',700);}
+  }else{
+    // 一凹一凸：扩束
+    const x1=180,x2=x1+120*1.6*0.9;g+=`<rect x="20" y="${CY-10}" width="60" height="20" rx="4" fill="url(#gSteelH)" stroke="#6b7280"/>`+T(50,CY+30,'4 mm 细光',11,'var(--muted)','middle');
+    [-6,0,6].forEach(h=>{const H2=h*5;g+=`<line x1="80" y1="${CY+h}" x2="${x1}" y2="${CY+h}" stroke="#ff4d4f" stroke-width="1.8"/><line x1="${x1}" y1="${CY+h}" x2="${x2}" y2="${CY+H2}" stroke="#ff4d4f" stroke-width="1.8"/><line x1="${x2}" y1="${CY+H2}" x2="820" y2="${CY+H2}" stroke="#ff4d4f" stroke-width="1.8"/>`;});
+    g+=lensShape(x1,20,false,8)+lensShape(x2,48,true,10);
+    g+=T(x1,CY-34,'凹（动镜 −30）',12,'var(--fg)','middle',700)+T(x2,CY-60,'凸（物镜 +150）',12,'var(--fg)','middle',700)+T(720,CY-40,'20 mm 粗光',12,'var(--fg)','middle',700);
+    g+=`<path d="M${x1},${CY+70} v8 H${x2} v-8" fill="none" stroke="var(--fg)" stroke-width="1.4"/>`+T((x1+x2)/2,CY+96,'两镜相隔 ≈ 150 − 30 = 120 mm（两个焦距相减）',12,'var(--fg)','middle',700)+T(420,CY+122,'放大倍数 = 150 ÷ 30 = 5 倍',12.5,'var(--ok)','middle',700);
+  }
+  const tops={v:'凸透镜（中间厚）：把平行光聚到一点',c:'凹透镜（中间薄）：把平行光散开'};
+  g+=T(420,24,s1.two>0.5?'一凹一凸：细光变粗光（扩束）——调焦头就是这个':s1.strong>0.5?(conv?'镜面越弯，焦距越短（聚得越快）':''):tops[s1.k],14,s1.two>0.5?'var(--ok)':'var(--fg)','middle',700);
+  $('svg1').innerHTML=g;$('f1V').textContent=Math.round(f)+' mm';['v','c'].forEach((k,i)=>$(['t1a','t1b'][i]).setAttribute('aria-pressed',String(s1.k===k&&s1.two<0.5)));
+}
+ANIM.push(draw1);
+const st1=stepper(1,[
+ {t:'<b>凸透镜</b>（中间厚、边上薄）：平行光穿过以后被拐向中间，聚到一个点，叫<b>焦点</b>。从透镜到焦点的距离叫<b>焦距</b> f，比如 +150 mm。',s:{k:'v',f:150,two:0,strong:0}},
+ {t:'镜面<b>越弯</b>，光拐得越猛，<b>焦距越短</b>：这片 f = +60 mm，聚得快多了。焦距短 = “劲大”。',s:{k:'v',f:60,two:0,strong:1}},
+ {t:'<b>凹透镜</b>（中间薄、边上厚）：把平行光往外散开，出来的光好像是从镜前一个点发出来的（虚线），这个点叫<b>虚焦点</b>。它的焦距记成<b>负数</b>，比如 −30 mm。',s:{k:'c',f:60,two:0,strong:0}},
+ {t:'<b>一凹一凸</b>配起来：凹镜先把 4 mm 细光散开，凸镜再把它收成平行，就变成 20 mm 粗光。粗细放大倍数 = 两个焦距之比（150 ÷ 30 = 5）。这正是我们<b>调焦头</b>的结构：动镜 −30，物镜 +150。',s:{k:'v',f:150,two:1,strong:0}}
+],s1,draw1);
+const fr1=k=>{s1.k=k;s1.two=0;s1.strong=0;$('n1').textContent='自己玩';draw1();$('c1').innerHTML=k==='v'?'凸透镜：拖滑块改焦距，焦点跟着前后移。':'凹透镜：光散开，好像从虚焦点发出。';};
+$('t1a').onclick=()=>fr1('v');$('t1b').onclick=()=>fr1('c');
+$('f1').addEventListener('input',()=>{s1.f=+$('f1').value;s1.two=0;s1.strong=0;$('n1').textContent='自己玩';draw1();$('c1').innerHTML=`焦距 ${s1.k==='v'?'+':'−'}${s1.f} mm。`;});
+
+/* ===== 2 全反射与光纤 ===== */
+const s2={a:30,fiber:0,bend:0};
+const NC=1.46;   // 玻璃（纤芯）折射率【典型】
+function draw2(){
+  let g=DEFS;
+  if(s2.fiber<0.5){
+    const a=s2.a,rad=a*Math.PI/180,IX=420,IY=160,crit=Math.asin(1/NC)*180/Math.PI;
+    g+=`<rect x="40" y="${IY}" width="760" height="120" fill="url(#gGlass)" stroke="#5b9bd5"/>`+T(60,IY+100,'玻璃（密，n ≈ 1.46）',12,'#1971c2','start',700)+T(60,IY-100,'空气（疏，n = 1）',12,'var(--muted)','start',700);
+    g+=`<line x1="${IX}" y1="${IY-110}" x2="${IX}" y2="${IY+110}" stroke="var(--muted)" stroke-dasharray="3 4"/>`;
+    const L=150,sx=IX-L*Math.sin(rad),sy=IY+L*Math.cos(rad);
+    g+=`<line x1="${sx}" y1="${sy}" x2="${IX}" y2="${IY}" stroke="#ff4d4f" stroke-width="3"/>`;
+    const sinT=NC*Math.sin(rad),total=sinT>=1;
+    const Rfrac=total?1:Math.min(1,0.04+0.96*Math.pow(Math.sin(rad)/Math.sin(crit*Math.PI/180),8));
+    g+=`<line x1="${IX}" y1="${IY}" x2="${IX+L*Math.sin(rad)}" y2="${IY+L*Math.cos(rad)}" stroke="#ff4d4f" stroke-width="${1+2.5*Rfrac}" opacity="${.3+.7*Rfrac}"/>`;
+    if(!total){const t=Math.asin(sinT);g+=`<line x1="${IX}" y1="${IY}" x2="${IX+L*Math.sin(t)}" y2="${IY-L*Math.cos(t)}" stroke="#ff4d4f" stroke-width="${1+2.5*(1-Rfrac)}" opacity="${.3+.7*(1-Rfrac)}"/>`+T(IX+L*Math.sin(t)+8,IY-L*Math.cos(t),'折出去',12,'#e03131','start',700);}
+    g+=T(IX+L*Math.sin(rad)+8,IY+L*Math.cos(rad),total?'全部反射回来':'反射回来一部分',12,total?'var(--ok)':'#e03131','start',700);
+    g+=`<path d="M${IX},${IY+40} A40,40 0 0 0 ${IX-40*Math.sin(rad)},${IY+40*Math.cos(rad)}" fill="none" stroke="var(--fg)"/>`+T(IX-14,IY+62,`${a}°`,12,'var(--fg)','end',700);
+    g+=T(620,90,`临界角 ≈ ${crit.toFixed(0)}°`,13,'var(--fg)','middle',700)+T(620,112,total?'超过了 → 全反射':'没超过 → 有光折出去',12,total?'var(--ok)':'var(--bad)','middle',700);
+    g+=T(420,24,total?'斜过临界角：一点都出不去 = 全反射':'光从玻璃往空气走：一部分折出去，一部分反射',14,total?'var(--ok)':'var(--fg)','middle',700);
+  }else{
+    // 光纤：纤芯 + 包层，光一路全反射；可弯
+    const b=s2.bend;let g2='';
+    const path=t=>{const x=60+t*720,y=150+b*80*Math.sin(t*Math.PI*1.0)*Math.sin(t*Math.PI);return [x,y];};
+    let top='',bot='',ct='',cb='';
+    for(let i=0;i<=60;i++){const t=i/60,[x,y]=path(t),[x2,y2]=path(Math.min(1,t+0.01));const ang=Math.atan2(y2-y,x2-x),nx=-Math.sin(ang),ny=Math.cos(ang);
+      top+=(i?'L':'M')+(x+nx*-40).toFixed(1)+','+(y+ny*-40).toFixed(1);bot+=(i?'L':'M')+(x+nx*40).toFixed(1)+','+(y+ny*40).toFixed(1);ct+=(i?'L':'M')+(x+nx*-16).toFixed(1)+','+(y+ny*-16).toFixed(1);cb+=(i?'L':'M')+(x+nx*16).toFixed(1)+','+(y+ny*16).toFixed(1);}
+    g+=`<path d="${top}" fill="none" stroke="#495057" stroke-width="8"/><path d="${bot}" fill="none" stroke="#495057" stroke-width="8"/>`;
+    g+=`<path d="${top}" fill="none" stroke="#a5d8ff" stroke-width="3"/><path d="${bot}" fill="none" stroke="#a5d8ff" stroke-width="3"/>`;
+    // 纤芯带
+    let band='';for(let i=0;i<=60;i++){const t=i/60,[x,y]=path(t);band+=(i?'L':'M')+x.toFixed(1)+','+y.toFixed(1);}
+    g+=`<path d="${band}" fill="none" stroke="#d0ebff" stroke-width="64" opacity=".55"/><path d="${band}" fill="none" stroke="#fff3bf" stroke-width="32" opacity=".9"/>`;
+    // 之字光线
+    let zz='',leak=false;const N=14;for(let i=0;i<=N;i++){const t=i/N,[x,y]=path(t),[x2,y2]=path(Math.min(1,t+0.01));const ang=Math.atan2(y2-y,x2-x),nx=-Math.sin(ang),ny=Math.cos(ang),s=i%2?1:-1;zz+=(i?'L':'M')+(x+nx*15*s).toFixed(1)+','+(y+ny*15*s).toFixed(1);}
+    g+=`<path d="${zz}" fill="none" stroke="#ff4d4f" stroke-width="2.5" filter="url(#glow)"/>`;
+    if(b>0.6){const [x,y]=path(0.5);g+=`<line x1="${x}" y1="${y+20}" x2="${x+20}" y2="${y+90}" stroke="#ff4d4f" stroke-width="2.5" stroke-dasharray="5 4"/>`+T(x+26,y+96,'弯太急：角度不够 → 漏光',12,'var(--bad)','start',700);}
+    g+=T(70,50,'纤芯（n 稍高）',12,'#d4b106','start',700)+T(70,70,'包层（n 稍低）',12,'#1971c2','start',700)+T(70,90,'外面一层保护套',12,'var(--muted)','start',700);
+    g+=T(420,24,b>0.6?'弯得太急：有的光斜不过临界角，从侧面漏掉':'光纤：光在纤芯和包层的界面上一路全反射',14,b>0.6?'var(--bad)':'var(--ok)','middle',700);
+  }
+  $('svg2').innerHTML=g;$('f2V').textContent=Math.round(s2.a)+'°';
+}
+ANIM.push(draw2);
+const st2=stepper(2,[
+ {t:'光从玻璃射向空气（从“密”到“疏”）：一部分<b>折出去</b>（方向会拐），一部分<b>反射</b>回来。斜得越厉害，折出去的越少、反射的越多。',s:{a:25,fiber:0,bend:0}},
+ {t:'斜过一个角度（玻璃对空气约 43°，叫<b>临界角</b>）以后，<b>一点都出不去</b>，全部反射回来，这叫<b>全反射</b>。反射率接近 100%，比镀银的镜子还好。',s:{a:60,fiber:0,bend:0}},
+ {t:'光纤就是用这个：中间是折射率稍高的<b>纤芯</b>，外面包一层折射率稍低的<b>包层</b>。只要光够“斜”，就在两者界面上一路全反射往前走，<b>光纤弯着也没关系</b>。',s:{a:60,fiber:1,bend:0.35}},
+ {t:'但<b>弯得太急</b>，有的光打到界面上不够斜，就从侧面<b>漏掉</b>了（弯曲损耗），大功率时还会烧坏光纤。所以光纤线都有“最小弯曲半径”。',s:{a:60,fiber:1,bend:1}}
+],s2,draw2);
+$('f2').addEventListener('input',()=>{s2.a=+$('f2').value;s2.fiber=0;$('n2').textContent='自己玩';draw2();const c=Math.asin(1/NC)*180/Math.PI;$('c2').innerHTML=s2.a>=c?`${s2.a}°：超过临界角（约 ${c.toFixed(0)}°），全反射。`:`${s2.a}°：没到临界角，有光折出去。`;});
+
+/* ===== 3 芯径、NA、准直 ===== */
+const s3={st:0,core:105};
+const NA=0.22;
+function draw3(){
+  const st=Math.round(s3.st),core=s3.core;let g=DEFS;const Y=140;
+  // 光纤头（SMA 接头）
+  g+=`<rect x="20" y="${Y-6}" width="60" height="12" rx="6" fill="url(#gJacket)"/><rect x="80" y="${Y-16}" width="50" height="32" rx="4" fill="url(#gSteelH)" stroke="#6b7280"/><rect x="130" y="${Y-8}" width="18" height="16" rx="2" fill="url(#gSteel)" stroke="#6b7280"/>`+T(105,Y-24,'光纤头',11.5,'var(--fg)','middle',700);
+  const FX=148,f=9.1,half=Math.atan(NA),h=36,LX=FX+h/Math.tan(half);   // 光束 4 mm 画成 72 px 高
+  if(st===0){const len=200;g+=`<polygon points="${FX},${Y-2} ${FX+len},${Y-len*Math.tan(half)} ${FX+len},${Y+len*Math.tan(half)} ${FX},${Y+2}" fill="#ff4d4f" opacity=".28"/>`+`<path d="M${FX+70},${Y} A70,70 0 0 0 ${FX+70*Math.cos(half)},${Y-70*Math.sin(half)}" fill="none" stroke="var(--fg)"/>`+T(FX+80,Y-22,'半角 ≈ 12.7°（NA 0.22）',12,'var(--fg)','start',700);}
+  if(st>=1){
+    g+=`<polygon points="${FX},${Y-2} ${LX},${Y-h} ${LX},${Y+h} ${FX},${Y+2}" fill="#ff4d4f" opacity=".25"/>`;
+    const th=(core/2/1000)/f,k=st>=2?th*31.2:0,X1=820;
+    g+=`<polygon points="${LX},${Y-h} ${X1},${Y-h-k*(X1-LX)} ${X1},${Y+h+k*(X1-LX)} ${LX},${Y+h}" fill="#ff4d4f" opacity=".3"/>`;
+    g+=`<rect x="${LX-22}" y="${Y-h-14}" width="44" height="${2*h+28}" rx="6" fill="url(#gSteelH)" opacity=".45" stroke="#6b7280"/><ellipse cx="${LX}" cy="${Y}" rx="7" ry="${h+6}" fill="url(#gLens)" stroke="#5b9bd5" stroke-width="1.5"/>`;
+    g+=T(LX,Y-h-22,'准直镜（f ≈ 9 mm）',12,'#1971c2','middle',700)+`<path d="M${LX+30},${Y-h} h8 V${Y+h} h-8" fill="none" stroke="var(--fg)"/>`+T(LX+44,Y+4,'≈ 2 × 9 × 0.22 ≈ 4 mm',12,'var(--fg)','start',700);
+    if(st>=2){const L10=10000,Dm=2*f*NA+2*th*L10;g+=`<rect x="590" y="236" width="230" height="74" rx="10" fill="var(--surface)" stroke="var(--line)"/>`+T(705,258,`纤芯 ${Math.round(core)} μm`,12.5,'var(--fg)','middle',700)+T(705,280,`准直后每米多散 ${(2*th*1000).toFixed(1)} mm`,12,'var(--fg)','middle')+T(705,300,`不聚焦打到 10 m 外 ≈ ${Math.round(Dm)} mm 粗`,12,Dm>50?'var(--bad)':'var(--ok)','middle',700);
+      g+=`<circle cx="120" cy="250" r="40" fill="#e9ecef" stroke="#868e96"/><circle cx="120" cy="250" r="${Math.max(2,core/200*36)}" fill="#ffd8a8" stroke="#e8590c"/>`+T(120,306,'纤芯截面（放大）',11,'var(--muted)','middle')+T(540,Y+h+k*(540-LX)+18>300?300:Y+h+k*(540-LX)+18,'（纵向压缩画，示意）',11,'var(--muted)','middle');}
+  }
+  const tops=['光从光纤头出来：是一个张开的锥','在离光纤头一个焦距的地方放凸透镜：变成平行光（准直）','纤芯越粗，准直后的光越会慢慢散开'];
+  g+=T(420,24,tops[Math.min(st,2)],14,st>=1?'var(--ok)':'var(--fg)','middle',700);
+  $('svg3').innerHTML=g;$('f3V').textContent=Math.round(core)+' μm';
+}
+ANIM.push(draw3);
+const st3=stepper(3,[
+ {t:'光从光纤头出来，是一个<b>张开的锥</b>。张多大由光纤的 <b>NA</b>（数值孔径）决定：NA 0.22 大约张开 12.7°（半角）。NA 就是“这根光纤能接受、也会放出多斜的光”。',s:{st:0,core:105}},
+ {t:'在离光纤头<b>一个焦距</b>的地方放一片凸透镜，锥形的光就变成<b>平行光</b>，这叫<b>准直</b>，那片透镜叫准直镜。准直后的粗细 ≈ 2 × 焦距 × NA：9 mm 焦距配 NA 0.22，约 4 mm。',s:{st:1,core:105}},
+ {t:'但不是绝对平行：光是从<b>有粗细的纤芯</b>里出来的，纤芯边上出来的光会斜一点，所以准直后的光仍会<b>慢慢散开</b>。纤芯越粗，散得越快：105 μm 的芯，不聚焦打到 10 m 外有一百多 mm 粗。拖滑块换成细芯试试。这就是“光束质量”的根子，第 6 课定量讲。',s:{st:2,core:105}}
+],s3,draw3);
+$('f3').addEventListener('input',()=>{s3.core=+$('f3').value;s3.st=2;$('n3').textContent='自己玩';draw3();const th=(s3.core/2/1000)/9.1;$('c3').innerHTML=`纤芯 ${s3.core} μm：准直后每米多散约 ${(2*th*1000).toFixed(1)} mm。芯越细越好，但越难把大功率塞进去（第 15 课的泵浦模块就是芯粗）。`;});
+
+window.__beforeExport=()=>{st1.go(3,true);st2.go(2,true);st3.go(2,true);};
+quiz([
+ {q:'凸透镜把平行光聚到一点，透镜到这个点的距离叫什么？',o:['焦距','光程'],a:0,e:['对。','这叫焦距。']},
+ {q:'镜面越弯，焦距会？',o:['越短','越长'],a:0,e:['对。弯得越厉害，光拐得越猛。','反了。']},
+ {q:'光纤为什么能把光关在里面？',o:['纤芯折射率比包层高，光在界面上全反射','外面涂了一层银'],a:0,e:['对。','靠的是全反射，不是镀银。']},
+ {q:'同样的准直镜，纤芯越粗，准直后的光会？',o:['散得越快，远处越粗','越平行'],a:0,e:['对。所以光束好坏的根子在纤芯粗细。','反了：芯越粗散得越快。']}
+]);
+</script>
