@@ -4,7 +4,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@700;900&family=JetBrains+Mono:wght@500&display=swap">
 <style>
-/* 第 14 课：激光器怎么出光——受激放大、两面镜子、三种激光器的三件套 */
+/* 第 14 课（重做）：激光器怎么出光——实物样子的图 */
 :root{
   --bg:#f4f6f9; --surface:#ffffff; --fg:#151a23; --muted:#5d6676; --line:#d8dee7;
   --beam:#e5383b; --beam-soft:#f6b3b4; --glass:#2b7bb9; --glass-fill:#dcecf8;
@@ -80,7 +80,7 @@ svg text{font-family:var(--f-body)}
 <header>
   <div class="eyebrow">激光扫描系统入门 · 第 14 课（激光器基础 1/5）</div>
   <h1>激光器是怎么把光“变出来”的</h1>
-  <p class="lede">三张图，一张只回答一个问题：光怎么被放大、为什么要两面镜子、半导体 / 光纤 / CO₂ 到底差在哪。每张点“下一步”，一步只变一样东西。</p>
+  <p class="lede">三张图，一张只回答一个问题。全课统一颜色：<b style="color:#e8590c">① 泵浦</b>、<b style="color:#c2255c">② 发光材料</b>、<b style="color:#1971c2">③ 谐振腔（两面镜子）</b>。</p>
 </header>
 
 <section aria-labelledby="s1">
@@ -88,34 +88,34 @@ svg text{font-family:var(--f-body)}
   <div class="stage"><svg id="svg1" data-export="14-1_光怎么被放大" viewBox="0 0 840 320" role="img" aria-label="光是怎么被放大的"></svg></div>
   <div class="cap-box" aria-live="polite"><span class="no" id="n1"></span><p id="c1"></p></div>
   <div class="stepbar"><button id="p1">← 上一步</button><button id="x1" class="big-next">下一步 →</button><span class="dots" id="d1"></span></div>
-  <div class="free"><span class="t">自己玩：</span><div class="ctl"><label for="f1">泵浦强度（充了电的原子有几个）<span id="f1V"></span></label><input id="f1" type="range" min="0" max="6" step="1" value="6"></div></div>
+  <div class="free"><span class="t">自己玩：</span><div class="ctl"><label for="f1">泵浦强度（被充上电的原子有几个）<span id="f1V"></span></label><input id="f1" type="range" min="0" max="6" step="1" value="6"></div></div>
   <p class="concl">记住一句：原子先被“泵浦”充上电；一个光子路过，逼它把电放出来，放出的光子和原来的一模一样；一路连锁下去，光就越来越强。</p>
 </section>
 
 <section aria-labelledby="s2">
-  <p class="q-big" id="s2">问题 2：为什么激光器里要放两面镜子？</p>
-  <div class="stage"><svg id="svg2" data-export="14-2_为什么要两面镜子" viewBox="0 0 840 320" role="img" aria-label="为什么激光器里要放两面镜子"></svg></div>
+  <p class="q-big" id="s2">问题 2：为什么激光器两头要各放一面镜子？</p>
+  <div class="stage"><svg id="svg2" data-export="14-2_为什么要两面镜子" viewBox="0 0 840 320" role="img" aria-label="为什么激光器两头要各放一面镜子"></svg></div>
   <div class="cap-box" aria-live="polite"><span class="no" id="n2"></span><p id="c2"></p></div>
   <div class="stepbar"><button id="p2">← 上一步</button><button id="x2" class="big-next">下一步 →</button><span class="dots" id="d2"></span></div>
-  <div class="free"><span class="t">自己玩：</span><div class="ctl"><label for="f2">右边镜子反射多少（其余漏出去当激光）<span id="f2V"></span></label><input id="f2" type="range" min="20" max="100" step="1" value="70"></div></div>
+  <div class="free"><span class="t">自己玩：</span><div class="ctl"><label for="f2">右边镜子反射多少（其余漏出去当激光）<span id="f2V"></span></label><input id="f2" type="range" min="20" max="100" step="1" value="85"></div></div>
   <p class="concl">记住一句：一次穿过只放大一点点，所以用两面镜子让光来回穿很多次；右边镜子故意漏一点出来，就是激光。漏太多不起振，漏太少出得少。</p>
 </section>
 
 <section aria-labelledby="s3">
-  <p class="q-big" id="s3">问题 3：半导体、光纤、CO₂ 激光器，三件套各是什么？</p>
-  <div class="stage"><svg id="svg3" data-export="14-3_三种激光器的三件套" viewBox="0 0 840 340" role="img" aria-label="半导体、光纤、CO₂ 激光器，三件套各是什么"></svg></div>
+  <p class="q-big" id="s3">问题 3：半导体、光纤、CO₂ 激光器，实物里三件套各在哪？</p>
+  <div class="stage"><svg id="svg3" data-export="14-3_三种激光器的三件套" viewBox="0 0 840 360" role="img" aria-label="半导体、光纤、CO₂ 激光器实物里三件套各在哪"></svg></div>
   <div class="cap-box" aria-live="polite"><span class="no" id="n3"></span><p id="c3"></p></div>
   <div class="stepbar"><button id="p3">← 上一步</button><button id="x3" class="big-next">下一步 →</button><span class="dots" id="d3"></span></div>
   <div class="free"><span class="t">自己点：</span><div class="row"><button id="t3a">半导体</button><button id="t3b">光纤</button><button id="t3c">CO₂</button></div></div>
-  <p class="concl">记住一句：三种激光器都是“泵浦 + 增益介质 + 两面镜子”，只是材料不同：半导体是一块芯片，光纤是一根特殊光纤，CO₂ 是一管气体。</p>
+  <p class="concl">记住一句：三种激光器都是“泵浦 + 发光材料 + 两面镜子”，只是材料不同：半导体是一块芯片，光纤是一根盘起来的特殊光纤，CO₂ 是一管气体。</p>
 </section>
 
 <section aria-labelledby="s7"><h2 id="s7"><span class="n">✓</span>小测</h2><div class="quiz" id="quiz"></div></section>
 <footer>
   <div><b>本课对项目的推进：</b></div>
-  <div>· 你在公司听到的“泵浦”，就是图里那个给原子充电的东西；老师要的 915 nm，常见的就是半导体激光器（有时是给光纤激光器供能的泵浦源）</div>
-  <div>· 图 2 的“漏出一点”解释了为什么出光口是一束很细的光：它是从那面半透镜里漏出来的</div>
-  <div>· 下一课（第 15 课）：半导体激光器和泵浦——芯片怎么直接把电变成光，为什么光束差</div>
+  <div>· 你在公司听到的“泵浦”“光栅”“盘光纤”都对上了：泵浦 = 充电的那部分；光栅 = 光纤激光器里的两面镜子；盘光纤 = 发光材料那根十几米长的光纤</div>
+  <div>· 出光口是一束细光，因为激光是从那面半透明镜子里漏出来的</div>
+  <div>· 下一课（第 15 课）：半导体激光器和泵浦——把芯片切开看，再看几颗芯片怎么拼成一个泵浦模块</div>
 </footer>
 </div>
 <script>
@@ -138,152 +138,191 @@ function stepper(k,steps,state,draw){
   go(0,true);return {go,n:steps.length};
 }
 let TT=0;const ANIM=[];(function loop(){if(!reduce)TT+=0.016;ANIM.forEach(f=>f(TT));requestAnimationFrame(loop);})();
-const PH='#e8b04a',PHs='#8a6d00';
+const DEFS=`<defs>
+<linearGradient id="gCu" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7c89a"/><stop offset=".45" stop-color="#c9803f"/><stop offset="1" stop-color="#7a4216"/></linearGradient>
+<linearGradient id="gCuS" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#a65f27"/><stop offset="1" stop-color="#6e3a12"/></linearGradient>
+<linearGradient id="gAu" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff2bf"/><stop offset=".5" stop-color="#e2b440"/><stop offset="1" stop-color="#9a7414"/></linearGradient>
+<linearGradient id="gAuS" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#c79a26"/><stop offset="1" stop-color="#8a6610"/></linearGradient>
+<linearGradient id="gSteel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f5f7fa"/><stop offset=".5" stop-color="#c2c9d2"/><stop offset="1" stop-color="#7b8592"/></linearGradient>
+<linearGradient id="gSteelH" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8a94a1"/><stop offset=".35" stop-color="#eef1f5"/><stop offset=".7" stop-color="#b9c1cb"/><stop offset="1" stop-color="#6f7986"/></linearGradient>
+<linearGradient id="gAlu" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0f3f6"/><stop offset="1" stop-color="#a9b2bc"/></linearGradient>
+<linearGradient id="gPlate" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9dee4"/><stop offset="1" stop-color="#aeb6c0"/></linearGradient>
+<linearGradient id="gRod" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffc2c6"/><stop offset=".3" stop-color="#e8414f"/><stop offset=".75" stop-color="#a3121f"/><stop offset="1" stop-color="#5e0a12"/></linearGradient>
+<linearGradient id="gGlass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eaf6ff" stop-opacity=".95"/><stop offset=".25" stop-color="#bfe0f7" stop-opacity=".45"/><stop offset=".7" stop-color="#9cc7e6" stop-opacity=".35"/><stop offset="1" stop-color="#6fa3c9" stop-opacity=".7"/></linearGradient>
+<linearGradient id="gLens" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d7ecfb" stop-opacity=".9"/><stop offset=".5" stop-color="#f4fbff" stop-opacity=".6"/><stop offset="1" stop-color="#9cc7e6" stop-opacity=".9"/></linearGradient>
+<linearGradient id="gJacket" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd08a"/><stop offset=".5" stop-color="#f08a1c"/><stop offset="1" stop-color="#a85508"/></linearGradient>
+<linearGradient id="gYb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff59a"/><stop offset=".5" stop-color="#e3c22a"/><stop offset="1" stop-color="#9c8210"/></linearGradient>
+<linearGradient id="gPlasma" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6c6ff"/><stop offset=".5" stop-color="#c25bd9"/><stop offset="1" stop-color="#7b2a92"/></linearGradient>
+<linearGradient id="gLamp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#fff7d1"/><stop offset="1" stop-color="#f3d27a"/></linearGradient>
+<radialGradient id="gOn" cx=".35" cy=".32" r=".75"><stop offset="0" stop-color="#fff6dc"/><stop offset=".45" stop-color="#ffa346"/><stop offset="1" stop-color="#b8420a"/></radialGradient>
+<radialGradient id="gOff" cx=".35" cy=".32" r=".75"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#b9c3cf"/><stop offset="1" stop-color="#5f6b7b"/></radialGradient>
+<radialGradient id="gHalo"><stop offset="0" stop-color="#ffb347" stop-opacity=".7"/><stop offset="1" stop-color="#ffb347" stop-opacity="0"/></radialGradient>
+<radialGradient id="gSpot"><stop offset="0" stop-color="#ffffff"/><stop offset=".3" stop-color="#ff5a5f"/><stop offset="1" stop-color="#ff2d2d" stop-opacity="0"/></radialGradient>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="blur6" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+<filter id="shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000" flood-opacity=".22"/></filter>
+</defs>`;
+function beam(x1,y1,x2,y2,w=6,a=1,col='#ff2d2d'){if(a<=0.01)return '';return `<g opacity="${a}"><line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${col}" stroke-width="${w*3.2}" opacity=".28" filter="url(#blur6)" stroke-linecap="round"/><line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${col}" stroke-width="${w}" opacity=".85" stroke-linecap="round"/><line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#fff3f3" stroke-width="${Math.max(1,w/3)}" stroke-linecap="round"/></g>`;}
+function packet(x,y,ph=0,col='#ff4a2a',len=54,amp=7){let d='';for(let i=0;i<=len;i+=2){const e=Math.sin(Math.PI*i/len);d+=(i?'L':'M')+(x-len/2+i).toFixed(1)+','+(y-amp*e*Math.sin(i/len*5*Math.PI*2/2.2+ph)).toFixed(1);}return `<path d="${d}" fill="none" stroke="${col}" stroke-width="2.6" filter="url(#glow)" stroke-linecap="round"/>`;}
+function tag(n,x,y,lx,ly,text,col){return `<line x1="${x}" y1="${y}" x2="${lx}" y2="${ly}" stroke="${col}" stroke-width="1.5"/><circle cx="${x}" cy="${y}" r="3.5" fill="${col}"/><circle cx="${lx}" cy="${ly}" r="11" fill="${col}"/>`+T(lx,ly+4.5,n,12,'#fff','middle',700)+(text?T(lx+(lx>x?16:-16),ly+5,text,12.5,'var(--fg)',lx>x?'start':'end',700):'');}
+function quiz(QS){$('quiz').innerHTML=QS.map((q,i)=>`<div class="q" data-i="${i}"><p>Q${i+1}. ${q.q}</p><div class="row">${q.o.map((o,j)=>`<button data-j="${j}">${o}</button>`).join('')}</div><div class="fb" aria-live="polite"></div></div>`).join('');
+document.querySelectorAll('.q button').forEach(b=>b.onclick=()=>{const qd=b.closest('.q'),q=QS[+qd.dataset.i],j=+b.dataset.j;
+  qd.querySelectorAll('button').forEach(x=>x.classList.remove('right','wrong'));b.classList.add(j===q.a?'right':'wrong');
+  qd.querySelector('.fb').textContent=(j===q.a?'✓ ':'✗ ')+q.e[j];});}
+const C1='#e8590c',C2='#c2255c',C3='#1971c2';   // 三要素配色：① 泵浦 ② 发光材料 ③ 谐振腔
 
-/* ===== 1 光怎么被放大 ===== */
-const AX=[170,270,370,470,570,670],YU=105,YD=225;
-const s1={pump:6,play:0,maxA:0};
-function photon(x,y,k=1){return `<circle cx="${x}" cy="${y}" r="6.5" fill="${PH}" stroke="${PHs}" stroke-width="1.2"/>`;}
+/* ===== 1 光怎么被放大（放大看材料内部） ===== */
+const AX=[175,265,355,445,535,625],AY=178;
+const s1={pump:0,play:0,maxA:0};
 function draw1(){
-  const pump=Math.round(s1.pump),play=s1.play>0.5;let g='';
-  // 能量台阶
-  g+=`<line x1="90" y1="${YU+18}" x2="760" y2="${YU+18}" stroke="var(--line)" stroke-width="2"/><line x1="90" y1="${YD+18}" x2="760" y2="${YD+18}" stroke="var(--line)" stroke-width="2"/>`;
-  g+=T(96,YU-14,'高处 = 充了电（高能）',12,'var(--muted)','start',700)+T(96,YD+42,'低处 = 没电（低能）',12,'var(--muted)','start',700);
-  const per=7,ph=(TT%per)/per,X=40+ph*760;
-  let passed=0,cnt=1;
-  const dropped=AX.map((x,i)=>{const ex=i<pump;const d=play&&ex&&i<Math.round(s1.maxA)&&X>x;if(d){passed++;}return ex&&!d?'up':ex?'dn':'low';});
-  cnt=Math.pow(2,passed);
-  AX.forEach((x,i)=>{const st=dropped[i],y=st==='up'?YU:YD;
-    g+=`<circle cx="${x}" cy="${y}" r="15" fill="${st==='up'?'#ff8a3d':'var(--surface)'}" stroke="${st==='up'?'#b5500f':'var(--muted)'}" stroke-width="2"/>`;
-    if(st==='up')g+=T(x,y+5,'⚡',14,'#fff');
-    if(play&&X>x&&X<x+40&&i<pump&&i<Math.round(s1.maxA))g+=`<circle cx="${x}" cy="${YD}" r="${24+(X-x)}" fill="none" stroke="#ff8a3d" stroke-width="2" opacity="${1-(X-x)/40}"/>`;});
-  // 泵浦箭头
-  if(pump>0)AX.forEach((x,i)=>{if(i<pump)g+=`<g opacity="${.5+.5*Math.sin(TT*4+i)}">`+`<path d="M${x},${YD+4} V${YU+22}" stroke="#ff8a3d" stroke-width="2.5" stroke-dasharray="4 4" fill="none"/><polygon points="${x},${YU+18} ${x-5},${YU+28} ${x+5},${YU+28}" fill="#ff8a3d"/></g>`;});
-  if(pump>0)g+=T(130,YU+78,'泵浦：把原子一个个抬上高处',13,'#ff8a3d','start',700);
-  // 光子
-  if(play){const dots=[];const nShow=Math.min(cnt,16),cols=nShow<=4?1:nShow<=8?2:4;for(let j=0;j<nShow;j++){const col=j%cols,row=Math.floor(j/cols),rows=Math.ceil(nShow/cols);dots.push(`<circle cx="${X+(col-(cols-1)/2)*13}" cy="${YD-62+(row-(rows-1)/2)*13}" r="5.5" fill="${PH}" stroke="${PHs}" stroke-width="1"/>`);}
-    g+=dots.join('')+T(X,YD-62+Math.ceil(nShow/cols)*6.5+26,cnt>1?`×${cnt}`:'1 个光子',14,'#b5500f','middle',700);
-    if(passed>=1&&s1.maxA<=1.5)g+=T(420,40,'吐出来的新光子：方向相同、颜色相同、步调一致 = 完全一样',14,'var(--ok)','middle',700);}
-  else g+=T(420,40,pump>0?'原子已经充好电，在高处等着':'原子都在低处，没有充电',14,'var(--fg)','middle',700);
-  if(play&&s1.maxA>1.5&&pump>=6)g+=T(420,40,'一路碰过去：1 → 2 → 4 → 8 → …… 光越来越强 = 放大',14,'var(--ok)','middle',700);
-  if(play&&pump===0)g+=T(420,40,'没有充电的原子：光子穿过去，什么也没发生',14,'var(--bad)','middle',700);
-  g+=`<line x1="40" y1="${YD-62}" x2="800" y2="${YD-62}" stroke="var(--muted)" stroke-width="1" stroke-dasharray="3 6" opacity=".5"/>`;
-  $('svg1').innerHTML=g;$('f1V').textContent=pump+' / 6 个';
+  const pump=Math.round(s1.pump),play=s1.play>0.5;let g=DEFS;
+  g+=`<rect x="40" y="76" width="760" height="204" rx="22" fill="url(#gRod)" opacity=".2" stroke="#c2255c" stroke-opacity=".35" stroke-width="1.5"/>`;
+  for(let r=0;r<4;r++)for(let c=0;c<17;c++){const y=98+r*56,x=70+c*44+(r%2)*22;if(Math.abs(y-AY)<20)continue;g+=`<circle cx="${x}" cy="${y}" r="5" fill="url(#gOff)" opacity=".35"/>`;}
+  // 闪光灯
+  const on=pump>0;
+  g+=`<rect x="60" y="28" width="720" height="22" rx="11" fill="${on?'url(#gLamp)':'#d5dae0'}" stroke="${on?'#e8b04a':'#9aa3ad'}" stroke-width="1.5" ${on?'filter="url(#glow)"':''}/>`;
+  g+=`<rect x="50" y="30" width="14" height="18" rx="3" fill="url(#gSteel)"/><rect x="776" y="30" width="14" height="18" rx="3" fill="url(#gSteel)"/>`;
+  g+=T(70,72,on?'① 泵浦：闪光灯一闪，把能量送进材料':'① 泵浦：闪光灯（还没打开）',12.5,C1,'start',700);
+  if(on)AX.forEach((x,i)=>{if(i<pump)g+=`<rect x="${x-12}" y="52" width="24" height="${AY-70}" fill="#ffe08a" opacity="${.25+.15*Math.sin(TT*5+i)}" filter="url(#blur6)"/>`;});
+  // 光子位置
+  const per=7,ph=(TT%per)/per,X=30+ph*790;let passed=0;
+  AX.forEach((x,i)=>{const ex=i<pump,d=play&&ex&&i<Math.round(s1.maxA)&&X>x;if(d)passed++;
+    const lit=ex&&!d;
+    if(lit)g+=`<circle cx="${x}" cy="${AY}" r="34" fill="url(#gHalo)"/>`;
+    g+=`<circle cx="${x}" cy="${AY}" r="${lit?17:15}" fill="url(#${lit?'gOn':'gOff'})" stroke="${lit?'#9a3412':'#475569'}" stroke-width="1"/>`;
+    if(d&&X<x+60)g+=`<circle cx="${x}" cy="${AY}" r="${18+(X-x)*0.6}" fill="none" stroke="#ffb347" stroke-width="2.5" opacity="${1-(X-x)/60}"/>`;});
+  const cnt=Math.pow(2,passed);
+  if(play){const n=Math.min(cnt,8);for(let j=0;j<n;j++){const dy=(j-(n-1)/2)*13;g+=packet(X,AY+dy,TT*9);}
+    g+=T(X,AY-Math.max(30,n*6.5+22),cnt>1?`×${cnt}`:'1 个光子',14,'#c2410c','middle',700);}
+  // 图例
+  g+=`<circle cx="70" cy="302" r="8" fill="url(#gOn)"/>`+T(84,307,'亮 = 充了电的原子',12,'var(--fg)','start')+`<circle cx="230" cy="302" r="8" fill="url(#gOff)"/>`+T(244,307,'灰 = 没电',12,'var(--fg)','start')+packet(360,302,0,'#ff4a2a',36,5)+T(384,307,'光子',12,'var(--fg)','start')+T(800,307,'② 发光材料内部（放大看）',12,C2,'end',700);
+  let top=!on?'原子都没电（灰色）':!play?'泵浦把原子充上电（发亮）':pump===0?'':(s1.maxA<=1.5?'一个变两个：新光子方向、颜色、步调都一样':'一路碰过去：1 → 2 → 4 → 8 …… 光越来越强 = 放大');
+  if(play&&!on)top='没有泵浦：光子穿过去，什么也不会多';
+  g+=T(560,72,top,13.5,play&&on?'var(--ok)':'var(--fg)','middle',700);
+  $('svg1').innerHTML=g;
+  $('f1V').textContent=pump+' / 6 个';
 }
 ANIM.push(draw1);
 const st1=stepper(1,[
- {t:'一块能发光的材料里有很多<b>原子</b>。每个原子像一节小电池：没电时待在<b>低处</b>。',s:{pump:0,play:0,maxA:0}},
- {t:'<b>泵浦</b>就是充电：外面送能量进来，把原子一个个抬到<b>高处</b>（橙色，带闪电）。激光器里的“泵浦”，指的就是这个。',s:{pump:6,play:0,maxA:0}},
- {t:'这时飞来<b>一个光子</b>（黄点），碰到第一个充满电的原子：原子被逼着掉回低处，同时<b>多吐出一个光子</b>。一个变两个，而且和原来的<b>一模一样</b>（方向、颜色、步调都相同）。这叫<b>受激发射</b>。',s:{pump:6,play:1,maxA:1}},
- {t:'光子继续往前，碰到下一个充电的原子，又翻一倍：1 → 2 → 4 → 8……<b>光越来越强</b>，而且全是一样的光。这就是激光里的“<b>放大</b>”（Light Amplification）。',s:{pump:6,play:1,maxA:6}},
- {t:'如果<b>没有泵浦</b>，原子全在低处：光子穿过去什么也不会多。所以激光器一定要有泵浦，而且泵浦越强，放大得越多。',s:{pump:0,play:1,maxA:6}}
+ {t:'把发光材料（比如一根红宝石棒）<b>放大看</b>：里面有很多原子。灰色的原子没电，像一节节没充电的小电池。',s:{pump:0,play:0,maxA:0}},
+ {t:'上方的<b>闪光灯</b>一闪，把能量送进材料，原子被<b>充上电</b>（发亮）。这就是激光器里说的“<b>泵浦</b>”。',s:{pump:6,play:0,maxA:0}},
+ {t:'这时飞来<b>一个光子</b>，碰到第一个充了电的原子：原子被逼着把电放掉，同时<b>多吐出一个光子</b>。一个变两个，而且两个<b>一模一样</b>（方向、颜色、步调都相同）。这叫<b>受激发射</b>。',s:{pump:6,play:1,maxA:1}},
+ {t:'光子继续往前，碰到下一个充了电的原子，又翻一倍：1 → 2 → 4 → 8……<b>光越来越强</b>，而且全是一样的光。这就是激光的“<b>放大</b>”。',s:{pump:6,play:1,maxA:6}},
+ {t:'如果<b>没有泵浦</b>，原子都没电，光子穿过去什么也不会多。所以激光器一定要有泵浦；泵浦越强，充上电的原子越多，放大得越多。',s:{pump:0,play:1,maxA:6}}
 ],s1,draw1);
-$('f1').addEventListener('input',()=>{s1.pump=+$('f1').value;s1.play=1;s1.maxA=6;$('n1').textContent='自己玩';$('c1').innerHTML=`泵浦让 ${s1.pump} 个原子充了电：光子最多能翻 ${s1.pump} 次，最后是 ${Math.pow(2,s1.pump)} 倍。`;});
+$('f1').addEventListener('input',()=>{s1.pump=+$('f1').value;s1.play=1;s1.maxA=6;$('n1').textContent='自己玩';$('c1').innerHTML=`泵浦让 ${s1.pump} 个原子充了电：光子最多翻 ${s1.pump} 次，变成 ${Math.pow(2,s1.pump)} 个。`;});
 
-/* ===== 2 两面镜子 ===== */
-const s2={mirrors:0,R:1,gap:0};
-const MX1=150,MX2=690,MY=170;
-function ss(R,Lm=1){ if(R>=0.999)return 120; const x=0.8*R/(1-R)-1;return x<=0?0:Math.min(120,20*x);}
-function seq(R,n,mir){let I=1;if(!mir)return n>=1?1.8:1;for(let k=0;k<n;k++){I=I*(1+0.8/(1+I/20))*R;I=Math.min(I,Math.max(ss(R),1));if(I<1)I=Math.max(I,0.2);}return I;}
+/* ===== 2 两面镜子（整台激光器，侧面看） ===== */
+const s2={mir:0,R:1};
+const XL=140,XR=700,CY=160;
+function ssI(R){if(R>=0.999)return 120;const x=0.8*R/(1-R)-1;return x<=0?0:Math.min(120,20*x);}
+function seq(R,n){let I=1;for(let k=0;k<n;k++){I=I*(1+0.8/(1+I/20))*R;I=Math.min(I,Math.max(ssI(R),1));I=Math.max(I,0.15);}return I;}
+function mount(x,oc,op){return `<g opacity="${op}"><rect x="${x-7}" y="${CY+44}" width="14" height="${262-CY-44}" fill="url(#gSteelH)"/><rect x="${x-18}" y="${CY-60}" width="36" height="120" rx="9" fill="url(#gSteel)" stroke="#6b7280" filter="url(#shadow)"/>`+
+  `<rect x="${x-5}" y="${CY-46}" width="10" height="92" rx="3" fill="${oc?'#ffd6dd':'#e9eef4'}" stroke="${oc?'#e8909f':'#94a3b8'}"/><rect x="${x+(x<420?3:-5)}" y="${CY-46}" width="2.5" height="92" fill="${oc?'#ff8fa3':C3}" opacity=".9"/></g>`;}
 function draw2(){
-  const mir=s2.mirrors>0.5,R=s2.R;let g='';
-  const out=(1-R)*ss(R);
-  // 增益介质
-  g+=`<rect x="300" y="${MY-48}" width="240" height="96" rx="8" fill="#ff8a3d" opacity=".25" stroke="#b5500f" stroke-width="1.5"/>`+T(420,MY+70,'发光材料（充了电的原子）',13,'var(--fg)','middle',700);
-  for(let i=0;i<5;i++)g+=`<path d="M${330+i*45},${MY-70} V${MY-52}" stroke="#ff8a3d" stroke-width="2.5"/><polygon points="${330+i*45},${MY-48} ${325+i*45},${MY-58} ${335+i*45},${MY-58}" fill="#ff8a3d"/>`;
-  g+=T(420,MY-82,'泵浦（一直在充电）',13,'#ff8a3d','middle',700);
-  if(mir){
-    g+=`<rect x="${MX1-6}" y="${MY-70}" width="12" height="140" rx="3" fill="var(--metal)"/>`+T(MX1,MY-82,'镜子（全反射）',12,'var(--fg)','middle',700);
-    const op=0.25+0.75*R;g+=`<rect x="${MX2-6}" y="${MY-70}" width="12" height="140" rx="3" fill="var(--metal)" opacity="${op}"/>`+T(MX2,MY-82,`镜子（反射 ${Math.round(R*100)}%）`,12,'var(--fg)','middle',700);
-  }
-  // 往返光子
+  const mir=s2.mir>0.5,R=s2.R;let g=DEFS;
+  g+=`<rect x="40" y="262" width="760" height="16" rx="4" fill="url(#gAlu)" filter="url(#shadow)"/>`;
+  // 泵浦腔
+  g+=`<rect x="282" y="96" width="276" height="134" rx="10" fill="url(#gAu)" opacity=".9" filter="url(#shadow)"/><rect x="282" y="96" width="276" height="10" rx="4" fill="url(#gSteel)"/><rect x="282" y="220" width="276" height="10" rx="4" fill="url(#gSteel)"/>`;
+  g+=`<rect x="300" y="230" width="20" height="32" fill="url(#gSteelH)"/><rect x="520" y="230" width="20" height="32" fill="url(#gSteelH)"/>`;
+  // 闪光灯
+  g+=`<rect x="300" y="${CY-52}" width="240" height="16" rx="8" fill="url(#gLamp)" filter="url(#glow)"/><rect x="292" y="${CY-50}" width="10" height="12" rx="2" fill="#6b7280"/><rect x="538" y="${CY-50}" width="10" height="12" rx="2" fill="#6b7280"/>`;
+  g+=`<rect x="310" y="${CY-36}" width="220" height="22" fill="#fff1b8" opacity="${.35+.2*Math.sin(TT*6)}" filter="url(#blur6)"/>`;
+  // 红宝石棒
+  g+=`<rect x="250" y="${CY-16}" width="340" height="32" rx="6" fill="url(#gRod)" stroke="#7f1d1d" stroke-width="1"/><ellipse cx="590" cy="${CY}" rx="5" ry="16" fill="#ff9aa5" stroke="#7f1d1d"/>`;
+  // 镜子
+  g+=mount(XL,false,mir?1:0)+mount(XR,true,mir?1:0);
+  const out=(1-R)*ssI(R),lasing=mir&&out>0.3&&R<0.999;
   const per=2.0,tt=TT/per,k=Math.floor(tt)%10,fr=tt-Math.floor(tt);
-  const I=mir?seq(R,k,true)*(1-fr)+seq(R,k+1,true)*fr:1+0.8*Math.min(1,fr*1);
-  let x;
-  if(mir){const u=(fr*2)%1,dir=fr<0.5?1:-1;x=dir>0?MX1+u*(MX2-MX1):MX2-u*(MX2-MX1);}else x=60+((TT/4)%1)*720;
-  const r=Math.min(24,4+3.2*Math.sqrt(I));
-  g+=`<circle cx="${x}" cy="${MY}" r="${r}" fill="${PH}" stroke="${PHs}" stroke-width="1.4" opacity=".92"/>`;
-  g+=`<line x1="${mir?MX1:30}" y1="${MY}" x2="${mir?MX2:810}" y2="${MY}" stroke="${PH}" stroke-width="1" stroke-dasharray="2 6" opacity=".5"/>`;
-  // 输出
-  const lasing=mir&&out>0.3;
-  if(!mir){g+=T(420,34,'没有镜子：光只穿过一次，只放大一点点就走了',14,'var(--bad)','middle',700);g+=`<rect x="540" y="${MY-3}" width="270" height="6" fill="${PH}" opacity=".4"/>`+T(740,MY-14,'微弱的光',12,'var(--muted)');}
-  else{const hh=Math.min(20,1+out*1.3);if(lasing)g+=`<rect x="${MX2+6}" y="${MY-hh/2}" width="${810-MX2}" height="${hh}" fill="var(--beam)" opacity=".75"/>`+T(770,MY-hh/2-8,'激光',14,'var(--beam)','middle',700);
-    g+=T(420,34,R>=0.999?'镜子全反射：光越攒越多，可是出不来':lasing?'右边镜子漏出一点 = 激光':'漏得太多：每一圈放大的比漏掉的少，光攒不起来',14,R>=0.999?'var(--proj2)':lasing?'var(--ok)':'var(--bad)','middle',700);
-    // 读数
-    g+=T(420,262,`腔里的光（攒了多少）`,12,'var(--fg)','middle',700);g+=`<rect x="300" y="270" width="240" height="12" rx="6" fill="var(--bg)"/><rect x="300" y="270" width="${240*Math.min(1,I/60)}" height="12" rx="6" fill="${PH}"/>`;
-    g+=T(420,306,`每秒漏出来的激光：${out.toFixed(1)}（相对值）`,13,lasing?'var(--ok)':'var(--muted)','middle',700);}
+  let I,x;
+  if(mir){I=seq(R,k)*(1-fr)+seq(R,k+1)*fr;const u=(fr*2)%1;x=fr<0.5?XL+8+u*(XR-XL-16):XR-8-u*(XR-XL-16);
+    g+=beam(XL+6,CY,XR-6,CY,2+Math.min(8,I/14),Math.min(.55,I/60));}
+  else{I=1+0.8*Math.max(0,Math.min(1,(((TT/4)%1)*790+30-250)/340));x=30+((TT/4)%1)*790;}
+  const r=Math.min(20,5+2.6*Math.sqrt(I));
+  g+=`<ellipse cx="${x}" cy="${CY}" rx="${r*1.6}" ry="${r}" fill="#ff3b3b" opacity=".45" filter="url(#blur6)"/><ellipse cx="${x}" cy="${CY}" rx="${r*0.9}" ry="${r*0.55}" fill="#fff0f0"/>`;
+  if(lasing)g+=beam(XR+6,CY,836,CY,2+out*0.8,1);
+  if(!mir&&x>590)g+=beam(590,CY,836,CY,2,.25);
+  // 标签
+  g+=tag('①',420,CY-44,250,70,'闪光灯（泵浦）',C1)+tag('②',330,CY+8,200,232,'红宝石棒（发光材料）',C2);
+  if(mir)g+=tag('③',XL,CY-60,XL,40,'',C3)+tag('③',XR,CY-60,XR,40,'',C3)+T(XL+22,44,'全反射镜',12,'var(--fg)','start',700)+T(XR-22,44,`半透镜（反射 ${Math.round(R*100)}%）`,12,'var(--fg)','end',700);
+  if(lasing)g+=T(790,CY-24,'激光',14,'#e03131','middle',700);
+  // 读数
+  if(mir){g+=T(300,304,'腔里攒的光',12,'var(--fg)','end',700)+`<rect x="310" y="294" width="200" height="12" rx="6" fill="var(--bg)" stroke="var(--line)"/><rect x="310" y="294" width="${200*Math.min(1,I/60)}" height="12" rx="6" fill="#ff6b6b"/>`;
+    g+=T(530,304,R>=0.999?'出不来':lasing?`漏出的激光：${out.toFixed(1)}（相对值）`:'光攒不起来，没有激光',12.5,lasing?'var(--ok)':'var(--bad)','start',700);}
+  else g+=T(420,304,'没有镜子：光穿过一次就走了，只放大一点点',13,'var(--bad)','middle',700);
   $('svg2').innerHTML=g;$('f2V').textContent=Math.round(R*100)+'%';
 }
 ANIM.push(draw2);
 const st2=stepper(2,[
- {t:'光在发光材料里<b>只走一次</b>，只被放大一点点（第 1 题里每个原子只翻一倍，材料不会太长）。这样出来的光很弱，也不是激光。',s:{mirrors:0,R:1}},
- {t:'两头各放一面<b>镜子</b>，光被反射回来，<b>来回穿过材料很多次</b>，每穿一次就放大一点。看底下的条：腔里的光一圈比一圈多。',s:{mirrors:1,R:1}},
- {t:'可是两面都全反射，光只攒不出。所以把右边镜子做成<b>半透明</b>：大部分反射回去继续放大，漏出一小部分，这一小部分就是我们看到的<b>激光</b>。',s:{mirrors:1,R:0.7}},
- {t:'漏多少要拿捏：右边镜子只反射 40% 时，每一圈放大的还不够补漏掉的，光攒不起来，<b>根本起不了振</b>，没有激光。用滑块试试：中间有个最合适的位置。',s:{mirrors:1,R:0.4}}
+ {t:'这是历史上第一台激光器的样子：一根<b>红宝石棒</b>（发光材料），旁边一支<b>闪光灯</b>（泵浦），外面包着镀金的反射罩。光在棒里<b>只走一次</b>，只被放大一点点，出来很弱。',s:{mir:0,R:1}},
+ {t:'两头各放一面<b>镜子</b>：光被反射回来，<b>来回穿过红宝石棒很多次</b>，每穿一次放大一点。看底下的条：腔里的光一圈比一圈多。',s:{mir:1,R:1}},
+ {t:'可是两面都全反射，光只攒不出。所以把右边镜子做成<b>半透镜</b>：大部分反射回去继续放大，漏出一小部分，这一小部分就是<b>激光</b>。',s:{mir:1,R:0.85}},
+ {t:'漏多少要拿捏：右边只反射 40% 时，每一圈放大的补不上漏掉的，<b>起不了振</b>，没有激光。用滑块试试，中间有个出光最多的位置。（图里数值是简化示意）',s:{mir:1,R:0.4}}
 ],s2,draw2);
-$('f2').addEventListener('input',()=>{s2.R=+$('f2').value/100;s2.mirrors=1;$('n2').textContent='自己玩';const o=(1-s2.R)*ss(s2.R);$('c2').innerHTML=s2.R<0.56?`反射 ${Math.round(s2.R*100)}%：漏得太多，起不了振，没有激光。`:s2.R>=0.999?'全反射：攒得很多，但一点也出不来。':`反射 ${Math.round(s2.R*100)}%：能出激光，相对输出 ${o.toFixed(1)}。大约 85%–90% 时出得最多。`;});
+$('f2').addEventListener('input',()=>{s2.R=+$('f2').value/100;s2.mir=1;$('n2').textContent='自己玩';const o=(1-s2.R)*ssI(s2.R);$('c2').innerHTML=s2.R<0.56?`反射 ${Math.round(s2.R*100)}%：漏得太多，起不了振。`:s2.R>=0.999?'全反射：攒得多，但一点也出不来。':`反射 ${Math.round(s2.R*100)}%：出激光，相对输出 ${o.toFixed(1)}。大约 85%–90% 时最多。`;});
 
-/* ===== 3 三种激光器 ===== */
+/* ===== 3 三种实物 ===== */
 const s3={k:'a'};
-const C=(x,y,w,h,f,s,r=6)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${r}" fill="${f}" stroke="${s}" stroke-width="1.6"/>`;
-const mirrorBar=(x,y,full)=>`<rect x="${x-5}" y="${y-48}" width="10" height="96" rx="3" fill="var(--metal)" opacity="${full?1:.55}"/>`;
-const PUMP='#ff8a3d';
+function laserTO(){let g='';const cx=330;
+  [300,330,360].forEach(x=>g+=`<rect x="${x-2}" y="204" width="4" height="46" fill="url(#gSteelH)"/>`);
+  g+=`<rect x="250" y="190" width="160" height="16" rx="4" fill="url(#gSteel)" stroke="#6b7280" filter="url(#shadow)"/>`;
+  g+=`<rect x="272" y="96" width="116" height="96" rx="6" fill="url(#gSteelH)" opacity=".35" stroke="#6b7280"/>`;
+  g+=`<rect x="272" y="96" width="12" height="96" fill="url(#gSteelH)"/><rect x="376" y="96" width="12" height="96" fill="url(#gSteelH)"/><rect x="272" y="92" width="38" height="14" rx="3" fill="url(#gSteel)"/><rect x="350" y="92" width="38" height="14" rx="3" fill="url(#gSteel)"/><rect x="310" y="94" width="40" height="10" fill="url(#gGlass)" stroke="#7fb3d5"/>`;
+  g+=`<rect x="298" y="118" width="26" height="74" fill="url(#gCu)" stroke="#7a4216"/><rect x="324" y="124" width="9" height="26" fill="#ffb36b" stroke="#b5500f"/>`;
+  g+=`<polygon points="328,124 300,30 358,30" fill="#ff3b3b" opacity=".18"/>`+beam(328,124,328,22,3,1);
+  g+=`<path d="M333,140 q14,-4 18,10" fill="none" stroke="#e2b440" stroke-width="1.5"/>`;
+  g+=tag('①',360,236,470,236,'管脚通电（泵浦）',C1)+tag('②',328,140,190,150,'芯片（发光材料）',C2)+tag('③',333,126,470,120,'芯片两个端面（镜子）',C3);
+  g+=T(470,70,'激光笔里的激光二极管：直径约 5.6 mm',12,'var(--muted)','start')+T(470,88,'外壳切开一半看里面',12,'var(--muted)','start')+T(352,90,'光窗',11,'var(--fg)','start');
+  return g;}
+function laserFiber(){let g='';
+  g+=`<rect x="36" y="40" width="568" height="212" rx="12" fill="url(#gPlate)" stroke="#8a94a1" filter="url(#shadow)"/><rect x="48" y="52" width="544" height="188" rx="8" fill="#e3e7ec" stroke="#b4bcc6"/>`;
+  [62,108,154].forEach((y,i)=>{g+=`<rect x="62" y="${y}" width="72" height="32" rx="4" fill="url(#gAu)" stroke="#8a6610"/>`+T(98,y+21,'泵浦',11,'#5c4304','middle',700)+`<path d="M134,${y+16} C175,${y+16} 180,190 214,190" fill="none" stroke="url(#gJacket)" stroke-width="3.5"/>`;});
+  g+=`<rect x="212" y="184" width="54" height="12" rx="6" fill="url(#gSteelH)" stroke="#6b7280"/>`+T(239,212,'合束器',11,'var(--fg)','middle');
+  g+=`<path d="M266,190 H296" stroke="#d4b106" stroke-width="3"/><rect x="282" y="185" width="18" height="10" rx="2" fill="#7c8fa6"/>`;
+  for(let i=0;i<6;i++){const rx=50+i*13,ry=rx*0.52;g+=`<ellipse cx="420" cy="140" rx="${rx}" ry="${ry}" fill="none" stroke="url(#gYb)" stroke-width="3.2"/>`;}
+  g+=`<path d="M300,190 C330,190 335,140 355,140" fill="none" stroke="#d4b106" stroke-width="3"/><path d="M535,140 C555,140 556,190 560,190" fill="none" stroke="#d4b106" stroke-width="3"/>`;
+  g+=`<rect x="552" y="185" width="18" height="10" rx="2" fill="#7c8fa6"/><path d="M570,190 H604" stroke="#374151" stroke-width="7"/>`;
+  g+=`<path d="M604,190 C640,190 640,145 676,145" fill="none" stroke="#374151" stroke-width="8"/><rect x="676" y="130" width="80" height="30" rx="5" fill="url(#gSteelH)" stroke="#6b7280"/>`;
+  for(let i=0;i<6;i++)g+=`<line x1="${690+i*8}" y1="131" x2="${690+i*8}" y2="159" stroke="#6b7280" stroke-width="1"/>`;
+  g+=`<line x1="756" y1="145" x2="836" y2="145" stroke="#ff2d2d" stroke-width="3" stroke-dasharray="7 5" opacity=".8"/>`+T(716,122,'输出头（QBH）',11.5,'var(--fg)','middle',700)+T(836,170,'1064 nm，看不见',11,'var(--muted)','end');
+  g+=tag('①',98,62,180,30,'泵浦模块（半导体）',C1)+tag('②',420,96,470,30,'掺镱光纤，盘在散热板上',C2)+tag('③',291,190,300,238,'光栅',C3)+tag('③',561,190,560,238,'光栅',C3);
+  return g;}
+function laserCO2(){let g='';const y=145;
+  g+=`<rect x="96" y="${y-36}" width="16" height="72" rx="3" fill="url(#gAu)" stroke="#8a6610"/><rect x="688" y="${y-36}" width="16" height="72" rx="3" fill="url(#gAu)" stroke="#8a6610" opacity=".85"/>`;
+  g+=`<rect x="120" y="${y-22}" width="22" height="44" rx="4" fill="url(#gSteelH)"/><rect x="658" y="${y-22}" width="22" height="44" rx="4" fill="url(#gSteelH)"/>`;
+  g+=`<rect x="130" y="${y-42}" width="540" height="84" rx="40" fill="url(#gGlass)" stroke="#7fb3d5" stroke-width="1.5"/>`;
+  g+=`<rect x="140" y="${y-15}" width="520" height="30" rx="15" fill="url(#gPlasma)" opacity="${.7+.25*Math.sin(TT*7)}" filter="url(#glow)"/>`;
+  g+=`<rect x="172" y="${y-62}" width="12" height="22" fill="url(#gGlass)" stroke="#7fb3d5"/><rect x="616" y="${y-62}" width="12" height="22" fill="url(#gGlass)" stroke="#7fb3d5"/>`+T(178,y-68,'冷却水进',11,'#1971c2','middle')+T(622,y-68,'冷却水出',11,'#1971c2','middle');
+  g+=`<rect x="360" y="214" width="120" height="34" rx="6" fill="#343a40" filter="url(#shadow)"/>`+T(420,236,'高压电源',12,'#fff','middle',700);
+  g+=`<path d="M131,${y+22} C131,230 300,231 360,231" fill="none" stroke="#e03131" stroke-width="2.5"/><path d="M669,${y+22} C669,230 540,231 480,231" fill="none" stroke="#212529" stroke-width="2.5"/>`;
+  g+=`<line x1="704" y1="${y}" x2="836" y2="${y}" stroke="#ff2d2d" stroke-width="3" stroke-dasharray="7 5" opacity=".8"/>`+T(770,y-12,'10.6 μm，看不见',11,'var(--muted)','middle');
+  g+=tag('①',420,214,560,236,'高压放电（泵浦）',C1)+tag('②',400,y,450,50,'管里的 CO₂ 气体（发光材料）',C2)+tag('③',104,y-36,104,48,'',C3)+tag('③',696,y-36,696,48,'',C3)+T(124,38,'管外两面镜子',12,'var(--fg)','start',700);
+  return g;}
+const INFO={a:['半导体激光器','电流从管脚进来','一块小芯片','芯片自己的两个端面','约 0.8–1 μm（915 / 976 nm 在这里）','光束一般较差'],
+            b:['光纤激光器','半导体激光（泵浦模块）','一根掺镱光纤，十几米，盘起来','刻在光纤里的两个“光栅”','约 1.06 μm（1064 nm）','光束很好（单模 M² ≈ 1.1）'],
+            c:['CO₂ 激光器','高压放电','一管 CO₂ 气体','管外两面镜子','10.6 μm','光束好；玻璃不透这个波长，不能走普通光纤']};
 function draw3(){
-  const k=s3.k;let g='';const Y=130;
-  // 三件套标题
-  g+=T(110,36,'① 泵浦',14,PUMP,'middle',700)+T(420,36,'② 发光材料',14,'#b5500f','middle',700)+T(730,36,'③ 两面镜子',14,'var(--muted)','middle',700);
-  if(k==='a'){
-    g+=C(60,Y-20,100,40,'var(--card-fill)','var(--card)')+T(110,Y+5,'电源',13,'var(--card)','middle',700)+`<path d="M160,${Y} H340" stroke="${PUMP}" stroke-width="3"/><polygon points="344,${Y} 332,${Y-6} 332,${Y+6}" fill="${PUMP}"/>`+T(250,Y-12,'直接通电',12,PUMP,'middle',700);
-    g+=C(340,Y-22,160,44,'#ffb36b','#b5500f',4)+T(420,Y+5,'一小块半导体芯片',13,'#7a3300','middle',700);
-    g+=mirrorBar(340,Y,false)+mirrorBar(500,Y,false)+T(420,Y+54,'芯片两个切开的端面就是镜子',12,'var(--fg)','middle');
-    g+=`<rect x="504" y="${Y-4}" width="296" height="8" fill="var(--beam)" opacity=".7"/>`;
-  }
-  if(k==='b'){
-    g+=C(60,Y-20,100,40,'#ffb36b','#b5500f')+T(110,Y+5,'半导体激光',12,'#7a3300','middle',700)+`<path d="M160,${Y} H260" stroke="${PUMP}" stroke-width="3"/><polygon points="264,${Y} 252,${Y-6} 252,${Y+6}" fill="${PUMP}"/>`+T(210,Y-12,'激光照射',12,PUMP,'middle',700);
-    // 盘光纤
-    for(let i=0;i<4;i++)g+=`<ellipse cx="420" cy="${Y}" rx="${60+i*10}" ry="${28+i*8}" fill="none" stroke="#ffb36b" stroke-width="5" opacity="${.9-i*.1}"/>`;
-    g+=T(420,Y+6,'掺镱光纤（盘起来）',12,'#7a3300','middle',700);
-    g+=`<path d="M260,${Y} H300" stroke="#ffb36b" stroke-width="5"/><path d="M540,${Y} H690" stroke="#ffb36b" stroke-width="5"/>`;
-    g+=`<rect x="283" y="${Y-26}" width="8" height="52" rx="2" fill="var(--metal)"/>`+`<rect x="690" y="${Y-26}" width="8" height="52" rx="2" fill="var(--metal)" opacity=".55"/>`+T(287,Y-34,'光栅',11,'var(--fg)','middle',700)+T(694,Y-34,'光栅',11,'var(--fg)','middle',700);
-    g+=T(490,Y+74,'光纤里刻的“光栅”当镜子，不是真的镜子',12,'var(--fg)','middle');
-    g+=`<rect x="698" y="${Y-3}" width="102" height="6" fill="var(--beam)" opacity=".7"/>`;
-  }
-  if(k==='c'){
-    g+=`<g>`+[0,1,2].map(i=>`<path d="M${70+i*28},${Y-30} l8,${14} l-8,${6} l8,${14}" stroke="#ffd34a" stroke-width="3" fill="none" opacity="${.4+.6*Math.abs(Math.sin(TT*8+i*2))}"/>`).join('')+`</g>`+T(110,Y+50,'高压放电',12,PUMP,'middle',700);
-    g+=C(260,Y-34,320,68,'#cfe8ff','#2b7bb9',30);
-    for(let i=0;i<40;i++){const px=280+((i*53)%280),py=Y-24+((i*37)%48);g+=`<circle cx="${px}" cy="${py+Math.sin(TT*2+i)*3}" r="2.3" fill="#2b7bb9" opacity=".7"/>`;}
-    g+=T(420,Y+54,'玻璃管里的 CO₂ 气体',13,'#7a3300','middle',700);
-    g+=`<rect x="236" y="${Y-40}" width="10" height="80" rx="3" fill="var(--metal)"/><rect x="594" y="${Y-40}" width="10" height="80" rx="3" fill="var(--metal)" opacity=".55"/>`+T(420,Y-52,'两面镜子在管外',12,'var(--fg)','middle');
-    g+=`<rect x="604" y="${Y-4}" width="196" height="8" fill="#9b2fb5" opacity=".7"/>`;
-  }
-  // 下方三个事实卡
-  const info={a:['半导体','电流（直接把电变成光）','一块芯片','芯片的两个端面','约 0.8–1 μm（915 / 976 nm 就在这里）','光束一般较差，光纤耦合输出后 M² 常 ~10–40'],
-              b:['光纤','半导体激光（泵浦源）','一根掺了镱的光纤，盘起来','光纤里刻的两个光栅','约 1.06 μm（1064 nm）','光束很好，M² ≈ 1.1（单模）'],
-              c:['CO₂','高压放电','一管 CO₂ 气体','管外两面镜子','10.6 μm（远红外，肉眼看不见）','光束好，但玻璃不透这个波长，不能走普通光纤']}[k];
-  g+=`<rect x="40" y="226" width="760" height="100" rx="10" fill="var(--surface)" stroke="var(--line)"/>`;
-  g+=T(60,252,`${info[0]}激光器`,15,'var(--fg)','start',700);
-  g+=T(60,276,'泵浦：'+info[1],13,PUMP,'start',700)+T(60,298,'材料：'+info[2]+'　镜子：'+info[3],13,'var(--fg)','start');
-  g+=T(430,252,'波长：'+info[4],13,'var(--fg)','start',700)+T(430,276,'光束质量：'+info[5],13,'var(--fg)','start');
+  const k=s3.k;let g=DEFS+(k==='a'?laserTO():k==='b'?laserFiber():laserCO2());
+  const f=INFO[k];
+  g+=`<rect x="30" y="266" width="780" height="84" rx="12" fill="var(--surface)" stroke="var(--line)"/>`;
+  g+=T(50,292,f[0],15,'var(--fg)','start',700)+T(50,318,'① '+f[1],13,C1,'start',700)+T(50,340,'② '+f[2],13,C2,'start',700);
+  g+=T(430,292,'波长：'+f[4],13,'var(--fg)','start',700)+T(430,318,'③ '+f[3],13,C3,'start',700)+T(430,340,'光束：'+f[5],13,'var(--fg)','start');
   $('svg3').innerHTML=g;['a','b','c'].forEach(t=>$('t3'+t).setAttribute('aria-pressed',String(k===t)));
 }
 ANIM.push(draw3);
 const st3=stepper(3,[
- {t:'<b>半导体激光器</b>最简单：直接给一块小芯片<b>通电</b>，电就是泵浦；芯片本身发光；芯片两个切开的端面就是两面镜子。整个激光器可以小到指甲盖。',s:{k:'a'}},
- {t:'<b>光纤激光器</b>：发光材料是一根掺了稀土（镱）的特殊光纤，长十几米，所以要<b>盘起来</b>；泵浦是别的<b>半导体激光</b>照进去；两面镜子是光纤里刻出来的<b>光栅</b>。光被关在细细的纤芯里，所以光束特别好。',s:{k:'b'}},
- {t:'<b>CO₂ 激光器</b>：发光材料是一管气体，用<b>高压放电</b>当泵浦，两面镜子放在管外。波长是 10.6 μm，普通玻璃光纤不透这个波长，只能用镜子传光。',s:{k:'c'}}
+ {t:'<b>半导体激光器</b>：激光笔里那颗小金属壳就是。切开看，里面一块铜散热块上贴着一颗小芯片。<b>电流</b>从管脚进来就是泵浦，<b>芯片</b>本身发光，芯片<b>两个切开的端面</b>就是两面镜子。',s:{k:'a'}},
+ {t:'<b>光纤激光器</b>：打开机箱，左边几个金色小盒是<b>泵浦模块</b>（其实就是半导体激光器），它们的光经<b>合束器</b>并进一根光纤；中间盘起来的是十几米长的<b>掺镱光纤</b>（发光材料）；光纤两头刻着<b>光栅</b>，当两面镜子用；激光最后从右边的<b>输出头</b>出来。',s:{k:'b'}},
+ {t:'<b>CO₂ 激光器</b>：一根玻璃管，里面充着 CO₂ 气体（发光材料），两端电极接<b>高压电源</b>放电（泵浦），放电时管子发紫光；外层套着冷却水；两面镜子装在管子两头。',s:{k:'c'}}
 ],s3,draw3);
-const fr3=k=>{s3.k=k;$('n3').textContent='自己点';$('c3').innerHTML={a:'半导体：电流是泵浦，芯片是材料，端面是镜子。',b:'光纤：半导体激光是泵浦，盘起来的光纤是材料，光栅是镜子。',c:'CO₂：放电是泵浦，气体是材料，管外镜子。'}[k];draw3();};
+const fr3=k=>{s3.k=k;$('n3').textContent='自己点';$('c3').innerHTML={a:'半导体：电流是泵浦，芯片是发光材料，芯片端面是镜子。',b:'光纤：泵浦模块是泵浦，盘起来的光纤是发光材料，光栅是镜子。',c:'CO₂：高压放电是泵浦，气体是发光材料，管外两面镜子。'}[k];draw3();};
 $('t3a').onclick=()=>fr3('a');$('t3b').onclick=()=>fr3('b');$('t3c').onclick=()=>fr3('c');
 
 window.__beforeExport=()=>{st1.go(3,true);st2.go(2,true);st3.go(1,true);};
-const QS=[
- {q:'激光器里的“泵浦”是干什么的？',o:['给发光材料里的原子充电（供能）','把光变粗'],a:0,e:['对。没有泵浦就没有放大。','不是，变粗是后面扩束镜的事。']},
- {q:'为什么激光器里要放两面镜子？',o:['让光来回穿过发光材料很多次，一圈圈放大','为了把光挡住'],a:0,e:['对。一次只放大一点点，来回穿才够。','镜子是让光来回跑，不是挡光。']},
- {q:'激光是从哪里出来的？',o:['从那面半透明的镜子漏出来的','从泵浦那头'],a:0,e:['对。所以出光口是一束细光。','泵浦只供能，光从半透明镜漏出。']},
- {q:'光纤激光器里的“光栅”相当于激光器的什么？',o:['那两面镜子','泵浦'],a:0,e:['对。刻在光纤里，不是真镜子。','泵浦是半导体激光。光栅是镜子。']}
-];
-$('quiz').innerHTML=QS.map((q,i)=>`<div class="q" data-i="${i}"><p>Q${i+1}. ${q.q}</p><div class="row">${q.o.map((o,j)=>`<button data-j="${j}">${o}</button>`).join('')}</div><div class="fb" aria-live="polite"></div></div>`).join('');
-document.querySelectorAll('.q button').forEach(b=>b.onclick=()=>{const qd=b.closest('.q'),q=QS[+qd.dataset.i],j=+b.dataset.j;
-  qd.querySelectorAll('button').forEach(x=>x.classList.remove('right','wrong'));b.classList.add(j===q.a?'right':'wrong');
-  qd.querySelector('.fb').textContent=(j===q.a?'✓ ':'✗ ')+q.e[j];});
+quiz([
+ {q:'激光器里的“泵浦”是干什么的？',o:['给发光材料里的原子充电（送能量）','把光变粗'],a:0,e:['对。没有泵浦就没有放大。','不是，变粗是后面扩束镜的事。']},
+ {q:'为什么激光器两头要放镜子？',o:['让光来回穿过发光材料很多次，一圈圈放大','为了把光挡住'],a:0,e:['对。一次只放大一点点，来回穿才够。','镜子是让光来回跑，不是挡光。']},
+ {q:'激光是从哪里出来的？',o:['从那面半透镜漏出来的','从泵浦那头'],a:0,e:['对。所以出光口是一束细光。','泵浦只送能量，光从半透镜漏出。']},
+ {q:'光纤激光器里的“光栅”相当于什么？',o:['那两面镜子','泵浦'],a:0,e:['对。刻在光纤里，不是真镜子。','泵浦是半导体泵浦模块，光栅是镜子。']}
+]);
 </script>
