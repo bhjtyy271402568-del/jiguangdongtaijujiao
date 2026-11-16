@@ -1,0 +1,211 @@
+<meta charset="utf-8">
+<title>Zemax 设计流程</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@700;900&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* 问答配图：Zemax 设计流程（按 1064 动态聚焦真实条件演示） */
+:root{
+  --bg:#f4f6f9; --surface:#ffffff; --fg:#151a23; --muted:#5d6676; --line:#d8dee7;
+  --beam:#e5383b; --beam-soft:#f6b3b4; --glass:#2b7bb9; --glass-fill:#dcecf8;
+  --ok:#17914f; --bad:#d23c3c; --proj2:#e0701c; --card:#2c5fd6; --card-fill:#e2eafc;
+  --metal:#7b8697; --band:#17914f22; --wave:#0ea5c6;
+  --f-body:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --f-display:"Noto Serif SC","Songti SC",serif;
+  --f-num:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1218; --surface:#171c25; --fg:#e7ebf1; --muted:#9aa4b4; --line:#2b3240;
+  --beam:#ff5c60; --beam-soft:#7a2a2d; --glass:#6db5ee; --glass-fill:#1c3448;
+  --ok:#3fd082; --bad:#ff6b6b; --proj2:#ff9a4a; --card:#82a6ff; --card-fill:#1d2a4a;
+  --metal:#8c97a8; --band:#3fd08226; --wave:#4fd1e6; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1218; --surface:#171c25; --fg:#e7ebf1; --muted:#9aa4b4; --line:#2b3240;
+  --beam:#ff5c60; --beam-soft:#7a2a2d; --glass:#6db5ee; --glass-fill:#1c3448;
+  --ok:#3fd082; --bad:#ff6b6b; --proj2:#ff9a4a; --card:#82a6ff; --card-fill:#1d2a4a;
+  --metal:#8c97a8; --band:#3fd08226; --wave:#4fd1e6; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:15px;line-height:1.65}
+.wrap{max-width:900px;margin:0 auto;padding-block:28px 56px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:flex;flex-direction:column;gap:28px}
+header{display:flex;flex-direction:column;gap:6px}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--muted)}
+h1{font-family:var(--f-display);font-weight:900;font-size:clamp(28px,5vw,40px);margin:0;line-height:1.2;text-wrap:balance}
+.lede{color:var(--muted);margin:0;max-width:62ch}
+section{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:14px;min-width:0}
+h2{font-family:var(--f-display);font-size:21px;margin:0;display:flex;gap:10px;align-items:baseline;text-wrap:balance}
+h2 .n{font-family:var(--f-num);font-size:13px;color:var(--beam)}
+.stage{overflow-x:auto;border-radius:10px;background:var(--bg)}
+.stage svg{display:block;width:100%;height:auto}
+.ctl{display:flex;flex-direction:column;gap:4px;min-width:0}
+.ctl label{font-size:13px;display:flex;justify-content:space-between;gap:8px}
+.ctl label span{font-family:var(--f-num);color:var(--muted);font-size:12px}
+input[type=range]{width:100%;accent-color:var(--beam)}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+button{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--surface);color:var(--fg);
+  border-radius:999px;padding:6px 14px;cursor:pointer}
+button:hover{border-color:var(--muted)}
+button:disabled{opacity:.45;cursor:default}
+button:focus-visible,input:focus-visible{outline:2px solid var(--card);outline-offset:2px}
+button[aria-pressed=true]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.note{font-size:12px;color:var(--muted);margin:0}
+.quiz{display:flex;flex-direction:column;gap:16px}
+.q p{margin:0 0 6px;font-weight:500}
+.q .fb{font-size:14px;margin-top:6px;min-height:1.6em}
+.q button.right{border-color:var(--ok);color:var(--ok)}
+.q button.wrong{border-color:var(--bad);color:var(--bad)}
+footer{font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+footer b{color:var(--fg)}
+svg text{font-family:var(--f-body)}
+.q-big{font-family:var(--f-display);font-size:clamp(20px,3.6vw,26px);font-weight:900;margin:0;text-wrap:balance}
+.cap-box{display:flex;gap:12px;align-items:flex-start;background:var(--card-fill);border-radius:10px;padding:12px 14px;min-height:72px}
+.cap-box .no{font-family:var(--f-num);font-size:13px;color:var(--card);white-space:nowrap;padding-top:3px}
+.cap-box p{margin:0;font-size:16px;line-height:1.6}
+.cap-box b{color:var(--beam)}
+.stepbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.dots{display:flex;gap:6px;margin-left:4px}
+.dots i{width:9px;height:9px;border-radius:50%;background:var(--line);display:block}
+.dots i.on{background:var(--card)}
+.free{border-top:1px dashed var(--line);padding-top:12px;display:flex;flex-direction:column;gap:10px}
+.free .t{font-size:13px;color:var(--muted)}
+.big-next{background:var(--card);color:#fff;border-color:var(--card);font-weight:700}
+.concl{font-size:15px;font-weight:700;color:var(--ok);margin:0}
+.check{display:grid;grid-template-columns:2.2em 1fr;gap:10px 12px;margin:0;align-items:start}
+.check .k{font-family:var(--f-num);font-size:13px;color:#fff;background:var(--card);border-radius:999px;width:1.9em;height:1.9em;display:grid;place-items:center}
+.check p{margin:0}
+.check b{color:var(--beam)}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+<div class="wrap">
+<header>
+  <div class="eyebrow">激光快速入门 · 问答配图</div>
+  <h1>Zemax 设计流程，一步步走一遍</h1>
+  <p class="lede">用你这次的真实条件演示：1064 nm、入口 4 mm、动镜 −20、物镜 +100、1–10 m。界面画成 Zemax 的样子：上面是菜单，左边是系统设置，中间是表格，下面 / 右边是分析图。<b>第 4–7 步的数字是示意</b>，真实结果看 Codex 跑出来的。</p>
+</header>
+<section aria-labelledby="s1">
+  <p class="q-big" id="s1">问题：用 Zemax 设计一组镜片，是按什么顺序做的？</p>
+  <div class="stage"><svg id="svg1" data-export="Q06i-1_Zemax设计流程" viewBox="0 0 840 430" role="img" aria-label="用 Zemax 设计一组镜片的流程"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n1"></span><p id="c1"></p></div>
+  <div class="stepbar"><button id="p1">← 上一步</button><button id="x1" class="big-next">下一步 →</button><span class="dots" id="d1"></span></div>
+  <div class="free"><span class="t">自己点（第 3 步以后可用）：切换配置 = 目标距离</span><div class="row" id="cfg"></div></div>
+  <p class="concl">记住一句：设系统 → 用理想透镜搭骨架核对 → 多重结构放进各个距离 → 换成真实镜片 → 设变量和评价函数去优化 → 看结果是否合格 → 做公差、出图。Codex 跑的就是这个顺序。</p>
+</section>
+<footer>
+  <div><b>和第 2 轮的关系：</b>Codex 任务单的第 1–6 条，就是这里的第 1–6 步；第 7 步（公差、出图）等方案定了再做。界面位置按 OpticStudio 常见布局画，不同版本略有差别。</div>
+</footer>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const T=(x,y,t,s=14,c='var(--fg)',a='middle',w=400)=>`<text x="${x}" y="${y}" font-size="${s}" fill="${c}" text-anchor="${a}" font-weight="${w}">${t}</text>`;
+function stepper(k,steps,state,draw){
+  let i=0,anim=0;
+  const dots=$('d'+k);dots.innerHTML=steps.map(()=>'<i></i>').join('');
+  function go(n,instant){i=Math.max(0,Math.min(steps.length-1,n));const to={...state,...steps[i].s},from={...state},t0=performance.now(),dur=(reduce||instant)?0:700;
+    cancelAnimationFrame(anim);
+    const tick=now=>{const p=dur?Math.min(1,(now-t0)/dur):1,e=p<.5?2*p*p:1-(-2*p+2)**2/2;
+      for(const key in to){if(typeof to[key]==='number')state[key]=from[key]+(to[key]-from[key])*e;else state[key]=to[key];}
+      draw();if(p<1)anim=requestAnimationFrame(tick);};
+    if(!dur){for(const key in to)state[key]=to[key];draw();}else anim=requestAnimationFrame(tick);
+    $('c'+k).innerHTML=steps[i].t;$('n'+k).textContent=`第 ${i+1} / ${steps.length} 步`;
+    dots.querySelectorAll('i').forEach((d,j)=>d.classList.toggle('on',j<=i));
+    $('p'+k).disabled=i===0;$('x'+k).textContent=i===steps.length-1?'从头再看 ↺':'下一步 →';}
+  $('p'+k).onclick=()=>go(i-1);$('x'+k).onclick=()=>go(i===steps.length-1?0:i+1);
+  go(0,true);return {go,n:steps.length};
+}
+let TT=0;const ANIM=[];(function loop(){if(!reduce)TT+=0.016;ANIM.forEach(f=>f(TT));requestAnimationFrame(loop);})();
+const DEFS=`<defs>
+<linearGradient id="gCu" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7c89a"/><stop offset=".45" stop-color="#c9803f"/><stop offset="1" stop-color="#7a4216"/></linearGradient>
+<linearGradient id="gCuS" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#a65f27"/><stop offset="1" stop-color="#6e3a12"/></linearGradient>
+<linearGradient id="gAu" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff2bf"/><stop offset=".5" stop-color="#e2b440"/><stop offset="1" stop-color="#9a7414"/></linearGradient>
+<linearGradient id="gAuS" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#c79a26"/><stop offset="1" stop-color="#8a6610"/></linearGradient>
+<linearGradient id="gSteel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f5f7fa"/><stop offset=".5" stop-color="#c2c9d2"/><stop offset="1" stop-color="#7b8592"/></linearGradient>
+<linearGradient id="gSteelH" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8a94a1"/><stop offset=".35" stop-color="#eef1f5"/><stop offset=".7" stop-color="#b9c1cb"/><stop offset="1" stop-color="#6f7986"/></linearGradient>
+<linearGradient id="gAlu" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0f3f6"/><stop offset="1" stop-color="#a9b2bc"/></linearGradient>
+<linearGradient id="gPlate" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9dee4"/><stop offset="1" stop-color="#aeb6c0"/></linearGradient>
+<linearGradient id="gRod" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffc2c6"/><stop offset=".3" stop-color="#e8414f"/><stop offset=".75" stop-color="#a3121f"/><stop offset="1" stop-color="#5e0a12"/></linearGradient>
+<linearGradient id="gGlass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eaf6ff" stop-opacity=".95"/><stop offset=".25" stop-color="#bfe0f7" stop-opacity=".45"/><stop offset=".7" stop-color="#9cc7e6" stop-opacity=".35"/><stop offset="1" stop-color="#6fa3c9" stop-opacity=".7"/></linearGradient>
+<linearGradient id="gLens" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d7ecfb" stop-opacity=".9"/><stop offset=".5" stop-color="#f4fbff" stop-opacity=".6"/><stop offset="1" stop-color="#9cc7e6" stop-opacity=".9"/></linearGradient>
+<linearGradient id="gJacket" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd08a"/><stop offset=".5" stop-color="#f08a1c"/><stop offset="1" stop-color="#a85508"/></linearGradient>
+<linearGradient id="gYb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff59a"/><stop offset=".5" stop-color="#e3c22a"/><stop offset="1" stop-color="#9c8210"/></linearGradient>
+<linearGradient id="gPlasma" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6c6ff"/><stop offset=".5" stop-color="#c25bd9"/><stop offset="1" stop-color="#7b2a92"/></linearGradient>
+<linearGradient id="gLamp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#fff7d1"/><stop offset="1" stop-color="#f3d27a"/></linearGradient>
+<radialGradient id="gOn" cx=".35" cy=".32" r=".75"><stop offset="0" stop-color="#fff6dc"/><stop offset=".45" stop-color="#ffa346"/><stop offset="1" stop-color="#b8420a"/></radialGradient>
+<radialGradient id="gOff" cx=".35" cy=".32" r=".75"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#b9c3cf"/><stop offset="1" stop-color="#5f6b7b"/></radialGradient>
+<radialGradient id="gHalo"><stop offset="0" stop-color="#ffb347" stop-opacity=".7"/><stop offset="1" stop-color="#ffb347" stop-opacity="0"/></radialGradient>
+<radialGradient id="gSpot"><stop offset="0" stop-color="#ffffff"/><stop offset=".3" stop-color="#ff5a5f"/><stop offset="1" stop-color="#ff2d2d" stop-opacity="0"/></radialGradient>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="blur6" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+<filter id="shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000" flood-opacity=".22"/></filter>
+</defs>`;
+function beam(x1,y1,x2,y2,w=6,a=1,col='#ff2d2d'){if(a<=0.01)return '';return `<g opacity="${a}"><line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${col}" stroke-width="${w*3.2}" opacity=".28" filter="url(#blur6)" stroke-linecap="round"/><line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${col}" stroke-width="${w}" opacity=".85" stroke-linecap="round"/><line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#fff3f3" stroke-width="${Math.max(1,w/3)}" stroke-linecap="round"/></g>`;}
+function packet(x,y,ph=0,col='#ff4a2a',len=54,amp=7){let d='';for(let i=0;i<=len;i+=2){const e=Math.sin(Math.PI*i/len);d+=(i?'L':'M')+(x-len/2+i).toFixed(1)+','+(y-amp*e*Math.sin(i/len*5*Math.PI*2/2.2+ph)).toFixed(1);}return `<path d="${d}" fill="none" stroke="${col}" stroke-width="2.6" filter="url(#glow)" stroke-linecap="round"/>`;}
+function tag(n,x,y,lx,ly,text,col){return `<line x1="${x}" y1="${y}" x2="${lx}" y2="${ly}" stroke="${col}" stroke-width="1.5"/><circle cx="${x}" cy="${y}" r="3.5" fill="${col}"/><circle cx="${lx}" cy="${ly}" r="11" fill="${col}"/>`+T(lx,ly+4.5,n,12,'#fff','middle',700)+(text?T(lx+(lx>x?16:-16),ly+5,text,12.5,'var(--fg)',lx>x?'start':'end',700):'');}
+function quiz(QS){$('quiz').innerHTML=QS.map((q,i)=>`<div class="q" data-i="${i}"><p>Q${i+1}. ${q.q}</p><div class="row">${q.o.map((o,j)=>`<button data-j="${j}">${o}</button>`).join('')}</div><div class="fb" aria-live="polite"></div></div>`).join('');
+document.querySelectorAll('.q button').forEach(b=>b.onclick=()=>{const qd=b.closest('.q'),q=QS[+qd.dataset.i],j=+b.dataset.j;
+  qd.querySelectorAll('button').forEach(x=>x.classList.remove('right','wrong'));b.classList.add(j===q.a?'right':'wrong');
+  qd.querySelector('.fb').textContent=(j===q.a?'✓ ':'✗ ')+q.e[j];});}
+const C1='#e8590c',C2='#c2255c',C3='#1971c2';   // 三要素配色：① 泵浦 ② 发光材料 ③ 谐振腔
+
+const CFG=[[1,91.11],[1.5,87.14],[2,85.26],[3,83.45],[5,82.04],[10,81.01]];
+const s1={st:0,cfg:0,opt:0};
+function tbl(x,y,w,cols,rows,hlRow=-1,hlCol=-1,title=''){let g=`<rect x="${x}" y="${y}" width="${w}" height="${46+rows.length*20}" rx="4" fill="#ffffff" stroke="#adb5bd"/><rect x="${x}" y="${y}" width="${w}" height="20" rx="4" fill="#dee2e6"/>`+T(x+6,y+14,title,11,'#212529','start',700);
+  const cw=w/cols.length;cols.forEach((c,i)=>g+=T(x+cw*i+cw/2,y+36,c,10,'#495057','middle',700));
+  rows.forEach((r,j)=>{const yy=y+42+j*20;if(j===hlRow)g+=`<rect x="${x+2}" y="${yy-4}" width="${w-4}" height="19" fill="#fff3bf"/>`;r.forEach((v,i)=>{const hc=i===hlCol&&j===hlRow;g+=T(x+cw*i+cw/2,yy+10,v,10.5,hc?'#c92a2a':'#212529','middle',hc?700:400);});});
+  return g;}
+function draw(){
+  const st=Math.round(s1.st),ci=Math.round(s1.cfg),[L,dg]=CFG[ci];let g=DEFS;
+  // 窗口外框
+  g+=`<rect x="4" y="4" width="832" height="422" rx="8" fill="#f1f3f5" stroke="#868e96"/>`;
+  // 菜单栏
+  const tabs=['Setup','Analyze','Optimize','Tolerance','Libraries','Reports'];const act={0:'Setup',1:'Setup',2:'Setup',3:'Libraries',4:'Optimize',5:'Analyze',6:'Tolerance'}[st];
+  tabs.forEach((t,i)=>{const x=16+i*92,on=t===act;g+=`<rect x="${x}" y="12" width="86" height="24" rx="4" fill="${on?'#1971c2':'#e9ecef'}" stroke="#adb5bd"/>`+T(x+43,28,t,11,on?'#fff':'#495057','middle',700);});
+  // 左：System Explorer
+  g+=`<rect x="12" y="46" width="160" height="372" rx="4" fill="#fff" stroke="#adb5bd"/>`+T(20,62,'System Explorer',11,'#212529','start',700);
+  [['Aperture','入瞳直径 4 mm'],['Fields','轴上一个视场'],['Wavelengths','1.064 μm'],['Units','mm']].forEach(([a,b],i)=>{const y=86+i*40,on=st===0;g+=`<rect x="18" y="${y-14}" width="148" height="34" rx="3" fill="${on?'#fff3bf':'#f8f9fa'}" stroke="${on?'#f08c00':'#dee2e6'}"/>`+T(24,y,a,10.5,'#495057','start',700)+T(24,y+14,b,10.5,on?'#c92a2a':'#212529','start',on?700:400);});
+  // 中上：编辑表
+  const EX=180,EY=46,EW=400;
+  if(st<=1)g+=tbl(EX,EY,EW,['面','类型','焦距/半径','厚度','材料'],[['OBJ','标准','—','无穷',''],['STO','标准','—','10',''],['2 动镜','Paraxial','f = −20',st>=1?dg.toFixed(2):'',''],['3 物镜','Paraxial','f = +100',st>=1?(L*1000)+'':'',''],['IMA','','','','']],st===1?2:-1,3,'Lens Data（镜头数据，一行一个面）');
+  if(st===2||st===4||st===5){const vals=CFG.map(([l,d])=>(st>=4&&s1.opt>0.5?(d+(l<2?1.6:1.2)).toFixed(2):d.toFixed(2))+(st===4?' V':''));
+    g+=tbl(EX,EY,EW,['','C1','C2','C3','C4','C5','C6'],[['THIC 2 间距',...vals],['THIC 3 距离',...CFG.map(c=>c[0]+' m')]],0,ci+1,'Multi-Configuration（多重结构，一列一个距离）');}
+  if(st===3)g+=tbl(EX,EY,EW,['面','类型','半径','厚度','材料'],[['2','标准','−8.99','2.0','F_SILICA'],['3','标准','无穷','≈83','（空气）'],['4','偶次非球面','+46.0','8.0','F_SILICA'],['5','标准','无穷',(L*1000)+'',''],['IMA','','','','']],0,4,'Lens Data（换成真实镜片：熔石英）');
+  if(st===6)g+=tbl(EX,EY,EW,['公差项','范围'],[['动镜偏心','± 0.02 mm'],['物镜倾斜','± 0.05°'],['镜间距','± 0.05 mm'],['表面面形','± 0.5 圈']],-1,-1,'Tolerance（公差：加工装配会差多少）');
+  // 右上：评价 / 分析小窗
+  const RX=590,RW=238;g+=`<rect x="${RX}" y="46" width="${RW}" height="168" rx="4" fill="#fff" stroke="#adb5bd"/>`;
+  if(st<=2){g+=T(RX+8,62,'Spot Diagram（点列图）',11,'#212529','start',700)+`<circle cx="${RX+RW/2}" cy="134" r="30" fill="none" stroke="#212529" stroke-width="1.5"/><circle cx="${RX+RW/2}" cy="134" r="2.5" fill="#1971c2"/>`+T(RX+RW/2,196,st===0?'（还没有镜片）':'理想透镜：缩成一个点 ✓',11,st===0?'#868e96':'#2f9e44','middle',700);}
+  if(st===3){g+=T(RX+8,62,'Libraries → Lens Catalogs',11,'#212529','start',700);['Thorlabs','Edmund','…'].forEach((v,i)=>g+=T(RX+16,90+i*20,'▸ '+v,11,'#495057','start'));g+=T(RX+16,160,'搜：熔石英、f ≈ −20 / +100',11,'#c92a2a','start',700)+T(RX+16,180,'正放 / 反放都试一遍',11,'#495057','start');}
+  if(st===4){const it=s1.opt;g+=T(RX+8,62,'Merit Function（评价函数）',11,'#212529','start',700)+T(RX+12,84,'目标：RMS 波前（全部 6 个配置）',10.5,'#495057','start');
+    const mv=it>0.5?0.028:0.21;g+=T(RX+12,112,`评价值：${mv.toFixed(3)}`,15,it>0.5?'#2f9e44':'#c92a2a','start',700);
+    g+=`<rect x="${RX+12}" y="128" width="100" height="26" rx="4" fill="#1971c2"/>`+T(RX+62,145,'Optimize!',11.5,'#fff','middle',700)+T(RX+12,178,it>0.5?'优化完：间距被自动调好':'按下去，Zemax 自动改带 V 的格子',10.5,'#495057','start');}
+  if(st===5){g+=T(RX+8,62,`Spot Diagram（${L} m）`,11,'#212529','start',700)+`<circle cx="${RX+70}" cy="136" r="34" fill="none" stroke="#212529" stroke-width="1.5"/>`;for(let k=0;k<26;k++){const a=k*2.4,r=(k%7)*3.2;g+=`<circle cx="${RX+70+r*Math.cos(a)}" cy="${136+r*Math.sin(a)}" r="1.6" fill="#1971c2"/>`;}
+    g+=T(RX+70,186,'点都在黑圈（艾里斑）里',10,'#2f9e44','middle',700);const rows=[['1 m','0.031'],['3 m','0.012'],['10 m','0.018']];rows.forEach(([a,b],i)=>g+=T(RX+132,98+i*22,a+'：'+b+' λ ✓',11,'#2f9e44','start',700));g+=T(RX+132,174,'行程 10.4 mm ✓',11,'#2f9e44','start',700);}
+  if(st===6){g+=T(RX+8,62,'蒙特卡洛：随机做 500 套',11,'#212529','start',700);const H=[2,6,14,24,30,22,12,6,3,1];H.forEach((h,i)=>g+=`<rect x="${RX+20+i*20}" y="${180-h*3.4}" width="16" height="${h*3.4}" fill="${i<7?'#74c0fc':'#ff8787'}"/>`);g+=`<line x1="${RX+160}" y1="76" x2="${RX+160}" y2="182" stroke="#c92a2a" stroke-dasharray="4 3"/>`+T(RX+164,90,'0.07 λ',10,'#c92a2a','start',700)+T(RX+RW/2,204,'约 9 成成品合格 → 再出图纸',10.5,'#495057','middle',700);}
+  // 下：Layout（2D 光路）
+  const LY=226,LX0=180,LX1=828;g+=`<rect x="${LX0}" y="${LY}" width="${LX1-LX0}" height="192" rx="4" fill="#fff" stroke="#adb5bd"/>`+T(LX0+8,LY+16,`Layout（2D 光路图）${st>=2?'— 当前配置 '+(ci+1)+'：'+L+' m':''}`,11,'#212529','start',700);
+  const CY=LY+106,xs=LX0+20,xNeg=LX0+150,K=2.2,xObj=xNeg+(st>=2?dg:81)*K*0.9;
+  if(st>=0){g+=`<line x1="${xs}" y1="${CY}" x2="${LX1-10}" y2="${CY}" stroke="#ced4da" stroke-dasharray="4 4"/>`;
+    const hin=[-8,-4,0,4,8];hin.forEach(h=>{g+=`<line x1="${xs}" y1="${CY+h}" x2="${xNeg}" y2="${CY+h}" stroke="#1971c2" stroke-width="1.2"/>`;
+      if(st>=1){const ho=h*5.2,fx=Math.min(LX1-14,xObj+40+L*38);g+=`<line x1="${xNeg}" y1="${CY+h}" x2="${xObj}" y2="${CY+ho}" stroke="#1971c2" stroke-width="1.2"/><line x1="${xObj}" y1="${CY+ho}" x2="${fx}" y2="${CY}" stroke="#1971c2" stroke-width="1.2"/>`;}});
+    if(st>=1){if(st<3){g+=`<line x1="${xNeg}" y1="${CY-14}" x2="${xNeg}" y2="${CY+14}" stroke="#212529" stroke-width="2"/><line x1="${xObj}" y1="${CY-48}" x2="${xObj}" y2="${CY+48}" stroke="#212529" stroke-width="2"/>`;}
+      else{g+=`<path d="M${xNeg-4},${CY-14} Q${xNeg+3},${CY} ${xNeg-4},${CY+14} L${xNeg+3},${CY+14} L${xNeg+3},${CY-14} Z" fill="url(#gLens)" stroke="#495057"/><path d="M${xObj},${CY-50} Q${xObj+12},${CY} ${xObj},${CY+50} L${xObj-6},${CY+50} L${xObj-6},${CY-50} Z" fill="url(#gLens)" stroke="#495057"/>`;}
+      const fx=Math.min(LX1-14,xObj+40+L*38);g+=`<circle cx="${fx}" cy="${CY}" r="3" fill="#e03131"/>`+T(fx,CY+20,`焦点 ${L} m`,10,'#e03131','middle',700)+T(xNeg,CY-20,'动镜',10,'#495057','middle',700)+T(xObj,CY-56,'物镜',10,'#495057','middle',700);
+      g+=`<path d="M${xNeg},${CY+60} v6 H${xObj} v-6" fill="none" stroke="#868e96"/>`+T((xNeg+xObj)/2,CY+80,`间距 ${(st>=4&&s1.opt>0.5?dg+(L<2?1.6:1.2):dg).toFixed(2)} mm`,10.5,'#495057','middle',700);}
+    else g+=T(xNeg+80,CY+40,'（入口：4 mm 平行光）',10.5,'#868e96','start');
+  }
+  g+=T(LX1-8,LY+186,'距离压缩画',9.5,'#adb5bd','end');
+  $('svg1').innerHTML=g;document.querySelectorAll('#cfg button').forEach((b,i)=>b.setAttribute('aria-pressed',String(i===ci)));
+}
+ANIM.push(draw);
+const st=stepper(1,[
+ {t:'<b>第 1 步 设系统</b>（Setup → 左边 System Explorer）：告诉 Zemax 光有多粗（入瞳直径 4 mm）、什么波长（1.064 μm）、单位 mm。相当于先定“输入条件”。',s:{st:0,cfg:5,opt:0}},
+ {t:'<b>第 2 步 理想透镜搭骨架</b>（中间 Lens Data 表，一行一个面）：动镜、物镜先用 Paraxial（理想透镜），只填焦距 −20 / +100 和间距。下面光路图看光走得对不对，右上点列图应缩成一个点——用来核对表填对了。',s:{st:1,cfg:5,opt:0}},
+ {t:'<b>第 3 步 多重结构</b>（Setup → Multi-Configuration）：一列一个“配置”，对应一个目标距离（1、1.5、2、3、5、10 m），每列改两格：两镜间距（THIC 2）和目标距离（THIC 3）。下面按钮可以切换配置，看动镜位置和焦点怎么变。',s:{st:2,cfg:0,opt:0}},
+ {t:'<b>第 4 步 换成真实镜片</b>（Libraries → Lens Catalogs）：从厂家目录挑熔石英镜片（动镜 f ≈ −20 平凹、物镜 f ≈ +100 非球面等），表里就有了真实的半径、厚度、材料。每片正放、反放都试，挑像差小的。',s:{st:3,cfg:0,opt:0}},
+ {t:'<b>第 5 步 设变量、评价函数、优化</b>（Optimize）：把每个配置的“间距”设成变量（格子后面出现 V），评价函数选“RMS 波前、全部配置”，按 Optimize!，Zemax 自动调间距，让评价值最小。（数值示意）',s:{st:4,cfg:0,opt:1}},
+ {t:'<b>第 6 步 看结果</b>（Analyze）：每个配置看点列图（点在黑圈里）和 RMS 波前（≤ 0.035 λ 打勾），再算 1–10 m 的间距差 = 动镜行程，跟 11.6 mm 比。这就是第 13 课教的三步读法。（数值示意）',s:{st:5,cfg:0,opt:1}},
+ {t:'<b>第 7 步 公差 + 出图</b>（Tolerance）：给每个零件设“加工装配会差多少”，Zemax 随机做几百套虚拟成品，看有多少还合格；合格率够了，再出镜片图纸给厂家、出间距给结构设计。',s:{st:6,cfg:0,opt:1}}
+],s1,draw);
+$('cfg').innerHTML=CFG.map(([l],i)=>`<button data-i="${i}">${l} m</button>`).join('');
+document.querySelectorAll('#cfg button').forEach(b=>b.onclick=()=>{s1.cfg=+b.dataset.i;if(s1.st<2)s1.st=2;$('n1').textContent='自己点';$('c1').innerHTML=`配置 ${s1.cfg+1}：目标 ${CFG[s1.cfg][0]} m，理想间距 ${CFG[s1.cfg][1]} mm。目标越近，间距越大（动镜往后退）。`;draw();});
+window.__beforeExport=()=>{st.go(5,true);};
+</script>
