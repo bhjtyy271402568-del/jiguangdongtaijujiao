@@ -1,0 +1,74 @@
+[
+  {
+    "pupil_mm": 6.0,
+    "factor": 2.25,
+    "configuration": 1,
+    "wavefront_20rings": 0.042411008296608675,
+    "wavefront_28rings": 0.042411008296608675,
+    "gap_mm": 68.20280435548409,
+    "input_1e2_diameter_mm": 4.0
+  },
+  {
+    "pupil_mm": 6.0,
+    "factor": 2.25,
+    "configuration": 6,
+    "wavefront_20rings": 0.01723866825731664,
+    "wavefront_28rings": 0.01723866825731664,
+    "gap_mm": 60.26218674147561,
+    "input_1e2_diameter_mm": 4.0
+  },
+  {
+    "pupil_mm": 7.6,
+    "factor": 3.61,
+    "configuration": 1,
+    "wavefront_20rings": 0.112510447722646,
+    "wavefront_28rings": 0.112510447722646,
+    "gap_mm": 68.17599416717756,
+    "input_1e2_diameter_mm": 4.0
+  },
+  {
+    "pupil_mm": 7.6,
+    "factor": 3.61,
+    "configuration": 6,
+    "wavefront_20rings": 0.0322545068919713,
+    "wavefront_28rings": 0.0322545068919713,
+    "gap_mm": 60.269650195851995,
+    "input_1e2_diameter_mm": 4.0
+  },
+  {
+    "pupil_mm": 8.0,
+    "factor": 4.0,
+    "configuration": 1,
+    "wavefront_20rings": 0.13791988286504742,
+    "wavefront_28rings": 0.13791988286504742,
+    "gap_mm": 68.16864644923538,
+    "input_1e2_diameter_mm": 4.0
+  },
+  {
+    "pupil_mm": 8.0,
+    "factor": 4.0,
+    "configuration": 6,
+    "wavefront_20rings": 0.0356519644173214,
+    "wavefront_28rings": 0.0356519644173214,
+    "gap_mm": 60.27105286147712,
+    "input_1e2_diameter_mm": 4.0
+  },
+  {
+    "pupil_mm": 8.8,
+    "factor": 4.840000000000001,
+    "configuration": 1,
+    "wavefront_20rings": 0.19877421914089205,
+    "wavefront_28rings": 0.19877421914089205,
+    "gap_mm": 68.15353353056808,
+    "input_1e2_diameter_mm": 4.0
+  },
+  {
+    "pupil_mm": 8.8,
+    "factor": 4.840000000000001,
+    "configuration": 6,
+    "wavefront_20rings": 0.040911600325817934,
+    "wavefront_28rings": 0.040911600325817934,
+    "gap_mm": 60.27316736093945,
+    "input_1e2_diameter_mm": 4.0
+  }
+]

@@ -1,0 +1,239 @@
+{
+  "all_pass": true,
+  "checks": [
+    {
+      "model": "A_熔石英非球面_1064nm",
+      "configuration": 1,
+      "wavefront_16rings": 0.06191505954925069,
+      "neighboring_wavefronts": {
+        "-0.1": 0.39483110191549775,
+        "-0.01": 0.07403891393877401,
+        "0.01": 0.07424649045600192,
+        "0.1": 0.4317217898461913
+      },
+      "fixed_objective_pickup_verified": true,
+      "verified": true
+    },
+    {
+      "model": "A_熔石英非球面_1064nm",
+      "configuration": 2,
+      "wavefront_16rings": 0.16640929473193966,
+      "neighboring_wavefronts": {
+        "-0.1": 0.35672297939653547,
+        "-0.01": 0.16964492826208288,
+        "0.01": 0.16970973262578493,
+        "0.1": 0.3863886525502961
+      },
+      "fixed_objective_pickup_verified": true,
+      "verified": true
+    },
+    {
+      "model": "A_熔石英非球面_1064nm",
+      "configuration": 3,
+      "wavefront_16rings": 0.20361471578469326,
+      "neighboring_wavefronts": {
+        "-0.1": 0.34751449567979614,
+        "-0.01": 0.20573614847847066,
+        "0.01": 0.20577972966975655,
+        "0.1": 0.3726908996658181
+      },
+      "fixed_objective_pickup_verified": true,
+      "verified": true
+    },
+    {
+      "model": "A_熔石英非球面_1064nm",
+      "configuration": 4,
+      "wavefront_16rings": 0.20435201829396218,
+      "neighboring_wavefronts": {
+        "-0.1": 0.3238974107712216,
+        "-0.01": 0.20603946696399333,
+        "0.01": 0.2060753681005584,
+        "0.1": 0.345906165331661
+      },
+      "fixed_objective_pickup_verified": true,
+      "verified": true
+    },
+    {
+      "model": "A_熔石英非球面_1064nm",
+      "configuration": 5,
+      "wavefront_16rings": 0.18979838252910625,
+      "neighboring_wavefronts": {
+        "-0.1": 0.2983041462694088,
+        "-0.01": 0.19132251834153266,
+        "0.01": 0.19135713506784474,
+        "0.1": 0.31854352749265463
+      },
+      "fixed_objective_pickup_verified": true,
+      "verified": true
+    },
+    {
+      "model": "A_熔石英非球面_1064nm",
+      "configuration": 6,
+      "wavefront_16rings": 0.17799749662746836,
+      "neighboring_wavefronts": {
+        "-0.1": 0.2800597054575697,
+        "-0.01": 0.17943363039162996,
+        "0.01": 0.17946349371075104,
+        "0.1": 0.2991293138416488
+      },
+      "fixed_objective_pickup_verified": true,
+      "verified": true
+    },
+    {
+      "model": "B_熔石英空气双片_1064nm",
+      "configuration": 1,
+      "wavefront_16rings": 0.11251044781843077,
+      "neighboring_wavefronts": {
+        "-0.1": 0.40662938306238766,
+        "-0.01": 0.11961185323108388,
+        "0.01": 0.11973173630501888,
+        "0.1": 0.44081859945243856
+      },
+      "fixed_objective_pickup_verified": true,
+      "verified": true
+    },
+    {
+      "model": "B_熔石英空气双片_1064nm",
+      "configuration": 2,
+      "wavefront_16rings": 0.04539264713259563,
+      "neighboring_wavefronts": {
+        "-0.1": 0.3797746134375486,
+        "-0.01": 0.059988993065394014,
+        "0.01": 0.06022346359314827,
+        "0.1": 0.4149055571635831
+      },
+      "fixed_objective_pickup_verified": true,
+      "verified": true
+    },
+    {
+      "model": "B_熔石英空气双片_1064nm",
+      "configuration": 3,
+      "wavefront_16rings": 0.019010245349065254,
+      "neighboring_wavefronts": {
+        "-0.1": 0.3714411963167807,
+        "-0.01": 0.04303435953782572,
+        "0.01": 0.04335162995967274,
+        "0.1": 0.4066982205120467
+      },
+      "fixed_objective_pickup_verified": true,
+      "verified": true
+    },
+    {
+      "model": "B_熔石英空气双片_1064nm",
+      "configuration": 4,
+      "wavefront_16rings": 0.006814562635022616,
+      "neighboring_wavefronts": {
+        "-0.1": 0.3653720097429964,
+        "-0.01": 0.03864700246127922,
+        "0.01": 0.03899004842736864,
+        "0.1": 0.40060154010457116
+      },
+      "fixed_objective_pickup_verified": true,
+      "verified": true
+    },
+    {
+      "model": "B_熔石英空气双片_1064nm",
+      "configuration": 5,
+      "wavefront_16rings": 0.021474675204310314,
+      "neighboring_wavefronts": {
+        "-0.1": 0.36173266789085984,
+        "-0.01": 0.04331856631199518,
+        "0.01": 0.043613856094102,
+        "0.1": 0.3968562669210845
+      },
+      "fixed_objective_pickup_verified": true,
+      "verified": true
+    },
+    {
+      "model": "B_熔石英空气双片_1064nm",
+      "configuration": 6,
+      "wavefront_16rings": 0.03225450642308189,
+      "neighboring_wavefronts": {
+        "-0.1": 0.3595359850809104,
+        "-0.01": 0.049318846099491866,
+        "0.01": 0.049590520976534366,
+        "0.1": 0.39457250195546706
+      },
+      "fixed_objective_pickup_verified": true,
+      "verified": true
+    },
+    {
+      "model": "C_胶合像差对照_1064nm",
+      "configuration": 1,
+      "wavefront_16rings": 0.4662346684408064,
+      "neighboring_wavefronts": {
+        "-0.1": 0.6322471195225104,
+        "-0.01": 0.4683392915543943,
+        "0.01": 0.4683727875044445,
+        "0.1": 0.6583263850193318
+      },
+      "fixed_objective_pickup_verified": true,
+      "verified": true
+    },
+    {
+      "model": "C_胶合像差对照_1064nm",
+      "configuration": 2,
+      "wavefront_16rings": 0.13991515459416184,
+      "neighboring_wavefronts": {
+        "-0.1": 0.37681848820044006,
+        "-0.01": 0.14459927291049005,
+        "0.01": 0.144686430169084,
+        "0.1": 0.4096928320483837
+      },
+      "fixed_objective_pickup_verified": true,
+      "verified": true
+    },
+    {
+      "model": "C_胶合像差对照_1064nm",
+      "configuration": 3,
+      "wavefront_16rings": 0.08402119579921816,
+      "neighboring_wavefronts": {
+        "-0.1": 0.3233375868375803,
+        "-0.01": 0.09014005323259927,
+        "0.01": 0.09025660754213083,
+        "0.1": 0.3553121701522098
+      },
+      "fixed_objective_pickup_verified": true,
+      "verified": true
+    },
+    {
+      "model": "C_胶合像差对照_1064nm",
+      "configuration": 4,
+      "wavefront_16rings": 0.1331801941375398,
+      "neighboring_wavefronts": {
+        "-0.1": 0.30739639702627347,
+        "-0.01": 0.13630270920788898,
+        "0.01": 0.13636815045551728,
+        "0.1": 0.3350964690219688
+      },
+      "fixed_objective_pickup_verified": true,
+      "verified": true
+    },
+    {
+      "model": "C_胶合像差对照_1064nm",
+      "configuration": 5,
+      "wavefront_16rings": 0.20649201136046294,
+      "neighboring_wavefronts": {
+        "-0.1": 0.32559706524894955,
+        "-0.01": 0.2081700618844286,
+        "0.01": 0.20820745756281508,
+        "0.1": 0.34793011399138585
+      },
+      "fixed_objective_pickup_verified": true,
+      "verified": true
+    },
+    {
+      "model": "C_胶合像差对照_1064nm",
+      "configuration": 6,
+      "wavefront_16rings": 0.2732490907968646,
+      "neighboring_wavefronts": {
+        "-0.1": 0.3603448020360813,
+        "-0.01": 0.27435681442711646,
+        "0.01": 0.27438121857852193,
+        "0.1": 0.3782833134619836
+      },
+      "fixed_objective_pickup_verified": true,
+      "verified": true
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "file": "F:\\激光动态聚焦系统\\仓库_jiguangdongtaijujiao\\设计\\Zemax\\结果_v0.2_Codex\\模型\\B_熔石英空气双片_1064nm.zmx",
+  "configuration": 1,
+  "wavefront_waves": 0.11251044764150839,
+  "gaussian_pupil_mm": 7.6,
+  "apodization_factor": 3.61,
+  "airy_enabled": true,
+  "ray_density": 35
+}

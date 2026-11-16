@@ -1,0 +1,30 @@
+[
+  {
+    "MFD_um": 14.0,
+    "M2": 1.1,
+    "focal_length_mm": 37.57862932148291,
+    "physical_source_diameter_um": 14.0,
+    "native_GBPS_output_diameter_mm": 4.000000000000141
+  },
+  {
+    "MFD_um": 14.0,
+    "M2": 1.3,
+    "focal_length_mm": 31.797301733562023,
+    "physical_source_diameter_um": 14.0,
+    "native_GBPS_output_diameter_mm": 4.0000000000000835
+  },
+  {
+    "MFD_um": 20.0,
+    "M2": 1.1,
+    "focal_length_mm": 53.6834139343143,
+    "physical_source_diameter_um": 20.0,
+    "native_GBPS_output_diameter_mm": 3.9999999999998592
+  },
+  {
+    "MFD_um": 20.0,
+    "M2": 1.3,
+    "focal_length_mm": 45.42442717519205,
+    "physical_source_diameter_um": 20.0,
+    "native_GBPS_output_diameter_mm": 4.000000000000131
+  }
+]

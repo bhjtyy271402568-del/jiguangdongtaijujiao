@@ -1,0 +1,80 @@
+[
+  {
+    "model": "A_熔石英非球面_1064nm",
+    "configuration": 1,
+    "distance_m": 1.0,
+    "native_spot_rms_radius_um": 14.26917084516979,
+    "airy_disk_enabled": true,
+    "spot_image": "图\\A_熔石英非球面_1064nm_1m_原生点列图.png",
+    "layouts": [
+      "图\\A_熔石英非球面_1064nm_1m_全光路.png",
+      "图\\A_熔石英非球面_1064nm_1m_镜组放大.png"
+    ],
+    "image_source": "OpticStudio EXPORTBMP, losslessly converted to PNG"
+  },
+  {
+    "model": "A_熔石英非球面_1064nm",
+    "configuration": 6,
+    "distance_m": 10.0,
+    "native_spot_rms_radius_um": 3582.691997828102,
+    "airy_disk_enabled": true,
+    "spot_image": "图\\A_熔石英非球面_1064nm_10m_原生点列图.png",
+    "layouts": [
+      "图\\A_熔石英非球面_1064nm_10m_全光路.png",
+      "图\\A_熔石英非球面_1064nm_10m_镜组放大.png"
+    ],
+    "image_source": "OpticStudio EXPORTBMP, losslessly converted to PNG"
+  },
+  {
+    "model": "B_熔石英空气双片_1064nm",
+    "configuration": 1,
+    "distance_m": 1.0,
+    "native_spot_rms_radius_um": 71.89196512361902,
+    "airy_disk_enabled": true,
+    "spot_image": "图\\B_熔石英空气双片_1064nm_1m_原生点列图.png",
+    "layouts": [
+      "图\\B_熔石英空气双片_1064nm_1m_全光路.png",
+      "图\\B_熔石英空气双片_1064nm_1m_镜组放大.png"
+    ],
+    "image_source": "OpticStudio EXPORTBMP, losslessly converted to PNG"
+  },
+  {
+    "model": "B_熔石英空气双片_1064nm",
+    "configuration": 6,
+    "distance_m": 10.0,
+    "native_spot_rms_radius_um": 161.03404938289484,
+    "airy_disk_enabled": true,
+    "spot_image": "图\\B_熔石英空气双片_1064nm_10m_原生点列图.png",
+    "layouts": [
+      "图\\B_熔石英空气双片_1064nm_10m_全光路.png",
+      "图\\B_熔石英空气双片_1064nm_10m_镜组放大.png"
+    ],
+    "image_source": "OpticStudio EXPORTBMP, losslessly converted to PNG"
+  },
+  {
+    "model": "C_胶合像差对照_1064nm",
+    "configuration": 1,
+    "distance_m": 1.0,
+    "native_spot_rms_radius_um": 152.0789942344534,
+    "airy_disk_enabled": true,
+    "spot_image": "图\\C_胶合像差对照_1064nm_1m_原生点列图.png",
+    "layouts": [
+      "图\\C_胶合像差对照_1064nm_1m_全光路.png",
+      "图\\C_胶合像差对照_1064nm_1m_镜组放大.png"
+    ],
+    "image_source": "OpticStudio EXPORTBMP, losslessly converted to PNG"
+  },
+  {
+    "model": "C_胶合像差对照_1064nm",
+    "configuration": 6,
+    "distance_m": 10.0,
+    "native_spot_rms_radius_um": 4651.5888435657125,
+    "airy_disk_enabled": true,
+    "spot_image": "图\\C_胶合像差对照_1064nm_10m_原生点列图.png",
+    "layouts": [
+      "图\\C_胶合像差对照_1064nm_10m_全光路.png",
+      "图\\C_胶合像差对照_1064nm_10m_镜组放大.png"
+    ],
+    "image_source": "OpticStudio EXPORTBMP, losslessly converted to PNG"
+  }
+]

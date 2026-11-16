@@ -1,0 +1,1154 @@
+[
+  {
+    "positive": [
+      "LA4904",
+      "LA4904"
+    ],
+    "reverse_positive": [
+      false,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      39.81517268063723,
+      87.40415122786462
+    ],
+    "power_at_half": 0.012780081400002552,
+    "power_slope_per_mm": -4.2451048160177876e-05
+  },
+  {
+    "positive": [
+      "LA4904",
+      "LA4904"
+    ],
+    "reverse_positive": [
+      false,
+      true
+    ],
+    "internal_gap_bounds_mm": [
+      34.40689977863049,
+      81.99587832585203
+    ],
+    "power_at_half": 0.012550494546576255,
+    "power_slope_per_mm": -4.245104816018308e-05
+  },
+  {
+    "positive": [
+      "LA4904",
+      "LA4904"
+    ],
+    "reverse_positive": [
+      true,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      45.22344558263625,
+      92.81242412985974
+    ],
+    "power_at_half": 0.013009668253428853,
+    "power_slope_per_mm": -4.2451048160181346e-05
+  },
+  {
+    "positive": [
+      "LA4904",
+      "LA4904"
+    ],
+    "reverse_positive": [
+      true,
+      true
+    ],
+    "internal_gap_bounds_mm": [
+      39.81517268063723,
+      87.40415122786462
+    ],
+    "power_at_half": 0.012780081400002552,
+    "power_slope_per_mm": -4.2451048160177876e-05
+  },
+  {
+    "positive": [
+      "LA4904",
+      "LA4984"
+    ],
+    "reverse_positive": [
+      false,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      3.734412371815294,
+      67.18408511677647
+    ],
+    "power_at_half": 0.011214092988322237,
+    "power_slope_per_mm": -3.1839439555855775e-05
+  },
+  {
+    "positive": [
+      "LA4904",
+      "LA4984"
+    ],
+    "reverse_positive": [
+      false,
+      true
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      62.65189723844407
+    ],
+    "power_at_half": 0.011069790666314182,
+    "power_slope_per_mm": -3.183943955585404e-05
+  },
+  {
+    "positive": [
+      "LA4904",
+      "LA4984"
+    ],
+    "reverse_positive": [
+      true,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      9.142685273818012,
+      72.5923580187861
+    ],
+    "power_at_half": 0.011386289366487095,
+    "power_slope_per_mm": -3.1839439555852306e-05
+  },
+  {
+    "positive": [
+      "LA4904",
+      "LA4984"
+    ],
+    "reverse_positive": [
+      true,
+      true
+    ],
+    "internal_gap_bounds_mm": [
+      4.610497395481785,
+      68.06017014044988
+    ],
+    "power_at_half": 0.011241987044479042,
+    "power_slope_per_mm": -3.1839439555852306e-05
+  },
+  {
+    "positive": [
+      "LA4904",
+      "LA4538"
+    ],
+    "reverse_positive": [
+      false,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      46.95522767260993
+    ],
+    "power_at_half": 0.01027411866428248,
+    "power_slope_per_mm": -2.5469890745385623e-05
+  },
+  {
+    "positive": [
+      "LA4904",
+      "LA4538"
+    ],
+    "reverse_positive": [
+      false,
+      true
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      42.93351453247617
+    ],
+    "power_at_half": 0.010171686069993918,
+    "power_slope_per_mm": -2.546989074538389e-05
+  },
+  {
+    "positive": [
+      "LA4904",
+      "LA4538"
+    ],
+    "reverse_positive": [
+      true,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      52.36350057461183
+    ],
+    "power_at_half": 0.010411866784217698,
+    "power_slope_per_mm": -2.5469890745385623e-05
+  },
+  {
+    "positive": [
+      "LA4904",
+      "LA4538"
+    ],
+    "reverse_positive": [
+      true,
+      true
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      48.34178743447517
+    ],
+    "power_at_half": 0.010309434189929136,
+    "power_slope_per_mm": -2.5469890745385623e-05
+  },
+  {
+    "positive": [
+      "LA4904",
+      "LA4855"
+    ],
+    "reverse_positive": [
+      false,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      26.73516156153714
+    ],
+    "power_at_half": 0.009647764144378543,
+    "power_slope_per_mm": -2.1225524080089805e-05
+  },
+  {
+    "positive": [
+      "LA4904",
+      "LA4855"
+    ],
+    "reverse_positive": [
+      false,
+      true
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      23.044567170502344
+    ],
+    "power_at_half": 0.00956942934426179,
+    "power_slope_per_mm": -2.1225524080089805e-05
+  },
+  {
+    "positive": [
+      "LA4904",
+      "LA4855"
+    ],
+    "reverse_positive": [
+      true,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      32.14343446354222
+    ],
+    "power_at_half": 0.009762557571091695,
+    "power_slope_per_mm": -2.122552408008807e-05
+  },
+  {
+    "positive": [
+      "LA4904",
+      "LA4855"
+    ],
+    "reverse_positive": [
+      true,
+      true
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      28.452840072502553
+    ],
+    "power_at_half": 0.009684222770974941,
+    "power_slope_per_mm": -2.122552408009154e-05
+  },
+  {
+    "positive": [
+      "LA4904",
+      "LB4140"
+    ],
+    "reverse_positive": [
+      false,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      37.12731378090157,
+      84.71082334602625
+    ],
+    "power_at_half": 0.012666157680206205,
+    "power_slope_per_mm": -4.245592724591053e-05
+  },
+  {
+    "positive": [
+      "LA4904",
+      "LB4140"
+    ],
+    "reverse_positive": [
+      true,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      42.535586682905475,
+      90.1190962480321
+    ],
+    "power_at_half": 0.012895770921059639,
+    "power_slope_per_mm": -4.24559272459088e-05
+  },
+  {
+    "positive": [
+      "LA4904",
+      "LB4842"
+    ],
+    "reverse_positive": [
+      false,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      1.4740103044503812,
+      64.92020284381157
+    ],
+    "power_at_half": 0.011142124754420401,
+    "power_slope_per_mm": -3.184118604041865e-05
+  },
+  {
+    "positive": [
+      "LA4904",
+      "LB4842"
+    ],
+    "reverse_positive": [
+      true,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      6.882283206452796,
+      70.32847574581743
+    ],
+    "power_at_half": 0.011314330578050404,
+    "power_slope_per_mm": -3.184118604041691e-05
+  },
+  {
+    "positive": [
+      "LA4904",
+      "LB4972"
+    ],
+    "reverse_positive": [
+      false,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      44.95035886138167
+    ],
+    "power_at_half": 0.01022317220369492,
+    "power_slope_per_mm": -2.547253029647721e-05
+  },
+  {
+    "positive": [
+      "LA4904",
+      "LB4972"
+    ],
+    "reverse_positive": [
+      true,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      50.358631763381126
+    ],
+    "power_at_half": 0.010360934599042804,
+    "power_slope_per_mm": -2.5472530296478946e-05
+  },
+  {
+    "positive": [
+      "LA4904",
+      "LB4710"
+    ],
+    "reverse_positive": [
+      false,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      24.887707552402826
+    ],
+    "power_at_half": 0.00960856556990653,
+    "power_slope_per_mm": -2.1226122950881304e-05
+  },
+  {
+    "positive": [
+      "LA4904",
+      "LB4710"
+    ],
+    "reverse_positive": [
+      true,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      30.295980454404944
+    ],
+    "power_at_half": 0.009723362235476346,
+    "power_slope_per_mm": -2.1226122950881304e-05
+  },
+  {
+    "positive": [
+      "LA4984",
+      "LA4904"
+    ],
+    "reverse_positive": [
+      false,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      4.6104973954819535,
+      68.06017014045351
+    ],
+    "power_at_half": 0.01124198704447904,
+    "power_slope_per_mm": -3.183943955585057e-05
+  },
+  {
+    "positive": [
+      "LA4984",
+      "LA4904"
+    ],
+    "reverse_positive": [
+      false,
+      true
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      62.65189723844407
+    ],
+    "power_at_half": 0.011069790666314182,
+    "power_slope_per_mm": -3.183943955585404e-05
+  },
+  {
+    "positive": [
+      "LA4984",
+      "LA4904"
+    ],
+    "reverse_positive": [
+      true,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      9.14268527381843,
+      72.59235801878998
+    ],
+    "power_at_half": 0.011386289366487093,
+    "power_slope_per_mm": -3.183943955585057e-05
+  },
+  {
+    "positive": [
+      "LA4984",
+      "LA4904"
+    ],
+    "reverse_positive": [
+      true,
+      true
+    ],
+    "internal_gap_bounds_mm": [
+      3.734412371815294,
+      67.18408511677647
+    ],
+    "power_at_half": 0.011214092988322237,
+    "power_slope_per_mm": -3.1839439555855775e-05
+  },
+  {
+    "positive": [
+      "LA4984",
+      "LA4984"
+    ],
+    "reverse_positive": [
+      false,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      24.05251021012509
+    ],
+    "power_at_half": 0.00965335351029498,
+    "power_slope_per_mm": -2.3880444775015858e-05
+  },
+  {
+    "positive": [
+      "LA4984",
+      "LA4984"
+    ],
+    "reverse_positive": [
+      false,
+      true
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      19.520322331785867
+    ],
+    "power_at_half": 0.00954512284795637,
+    "power_slope_per_mm": -2.3880444775019327e-05
+  },
+  {
+    "positive": [
+      "LA4984",
+      "LA4984"
+    ],
+    "reverse_positive": [
+      true,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      28.584698088459657
+    ],
+    "power_at_half": 0.009761584172633593,
+    "power_slope_per_mm": -2.3880444775017592e-05
+  },
+  {
+    "positive": [
+      "LA4984",
+      "LA4984"
+    ],
+    "reverse_positive": [
+      true,
+      true
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      24.05251021012509
+    ],
+    "power_at_half": 0.00965335351029498,
+    "power_slope_per_mm": -2.3880444775015858e-05
+  },
+  {
+    "positive": [
+      "LA4984",
+      "LB4140"
+    ],
+    "reverse_positive": [
+      false,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      1.9326635100304714,
+      65.37504454302565
+    ],
+    "power_at_half": 0.011156731557098598,
+    "power_slope_per_mm": -3.18430990027211e-05
+  },
+  {
+    "positive": [
+      "LA4984",
+      "LB4140"
+    ],
+    "reverse_positive": [
+      true,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      6.46485138836703,
+      69.90723242136913
+    ],
+    "power_at_half": 0.01130105046440738,
+    "power_slope_per_mm": -3.184309900271763e-05
+  },
+  {
+    "positive": [
+      "LA4984",
+      "LB4842"
+    ],
+    "reverse_positive": [
+      false,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      21.793847489102248
+    ],
+    "power_at_half": 0.009599443532962697,
+    "power_slope_per_mm": -2.3881754685895276e-05
+  },
+  {
+    "positive": [
+      "LA4984",
+      "LB4842"
+    ],
+    "reverse_positive": [
+      true,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      26.326035367440113
+    ],
+    "power_at_half": 0.009707680132063506,
+    "power_slope_per_mm": -2.388175468589354e-05
+  },
+  {
+    "positive": [
+      "LA4538",
+      "LA4904"
+    ],
+    "reverse_positive": [
+      false,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      48.34178743447517
+    ],
+    "power_at_half": 0.010309434189929136,
+    "power_slope_per_mm": -2.5469890745385623e-05
+  },
+  {
+    "positive": [
+      "LA4538",
+      "LA4904"
+    ],
+    "reverse_positive": [
+      false,
+      true
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      42.93351453247038
+    ],
+    "power_at_half": 0.010171686069993918,
+    "power_slope_per_mm": -2.5469890745387358e-05
+  },
+  {
+    "positive": [
+      "LA4538",
+      "LA4904"
+    ],
+    "reverse_positive": [
+      true,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      52.363500574615294
+    ],
+    "power_at_half": 0.010411866784217697,
+    "power_slope_per_mm": -2.546989074538389e-05
+  },
+  {
+    "positive": [
+      "LA4538",
+      "LA4904"
+    ],
+    "reverse_positive": [
+      true,
+      true
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      46.95522767261303
+    ],
+    "power_at_half": 0.010274118664282478,
+    "power_slope_per_mm": -2.546989074538389e-05
+  },
+  {
+    "positive": [
+      "LA4538",
+      "LB4140"
+    ],
+    "reverse_positive": [
+      false,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      45.66486768768105
+    ],
+    "power_at_half": 0.010241385550569169,
+    "power_slope_per_mm": -2.5472818111983014e-05
+  },
+  {
+    "positive": [
+      "LA4538",
+      "LB4140"
+    ],
+    "reverse_positive": [
+      true,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      49.686580827821295
+    ],
+    "power_at_half": 0.010343829917886448,
+    "power_slope_per_mm": -2.547281811198128e-05
+  },
+  {
+    "positive": [
+      "LA4855",
+      "LA4904"
+    ],
+    "reverse_positive": [
+      false,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      28.452840072504838
+    ],
+    "power_at_half": 0.009684222770974941,
+    "power_slope_per_mm": -2.1225524080089805e-05
+  },
+  {
+    "positive": [
+      "LA4855",
+      "LA4904"
+    ],
+    "reverse_positive": [
+      false,
+      true
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      23.044567170502344
+    ],
+    "power_at_half": 0.00956942934426179,
+    "power_slope_per_mm": -2.1225524080089805e-05
+  },
+  {
+    "positive": [
+      "LA4855",
+      "LA4904"
+    ],
+    "reverse_positive": [
+      true,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      32.14343446354222
+    ],
+    "power_at_half": 0.009762557571091695,
+    "power_slope_per_mm": -2.122552408008807e-05
+  },
+  {
+    "positive": [
+      "LA4855",
+      "LA4904"
+    ],
+    "reverse_positive": [
+      true,
+      true
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      26.73516156153714
+    ],
+    "power_at_half": 0.009647764144378543,
+    "power_slope_per_mm": -2.1225524080089805e-05
+  },
+  {
+    "positive": [
+      "LA4855",
+      "LB4140"
+    ],
+    "reverse_positive": [
+      false,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      25.784122610122598
+    ],
+    "power_at_half": 0.009627639525915048,
+    "power_slope_per_mm": -2.1227963622952664e-05
+  },
+  {
+    "positive": [
+      "LA4855",
+      "LB4140"
+    ],
+    "reverse_positive": [
+      true,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      29.47471700115542
+    ],
+    "power_at_half": 0.009705983329395016,
+    "power_slope_per_mm": -2.12279636229544e-05
+  },
+  {
+    "positive": [
+      "LB4140",
+      "LA4904"
+    ],
+    "reverse_positive": [
+      false,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      42.53558668290212,
+      90.11909624802485
+    ],
+    "power_at_half": 0.012895770921059643,
+    "power_slope_per_mm": -4.245592724591227e-05
+  },
+  {
+    "positive": [
+      "LB4140",
+      "LA4904"
+    ],
+    "reverse_positive": [
+      false,
+      true
+    ],
+    "internal_gap_bounds_mm": [
+      37.12731378090157,
+      84.71082334602625
+    ],
+    "power_at_half": 0.012666157680206205,
+    "power_slope_per_mm": -4.245592724591053e-05
+  },
+  {
+    "positive": [
+      "LB4140",
+      "LA4984"
+    ],
+    "reverse_positive": [
+      false,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      6.46485138836703,
+      69.90723242136913
+    ],
+    "power_at_half": 0.01130105046440738,
+    "power_slope_per_mm": -3.184309900271763e-05
+  },
+  {
+    "positive": [
+      "LB4140",
+      "LA4984"
+    ],
+    "reverse_positive": [
+      false,
+      true
+    ],
+    "internal_gap_bounds_mm": [
+      1.9326635100306275,
+      65.37504454303273
+    ],
+    "power_at_half": 0.011156731557098598,
+    "power_slope_per_mm": -3.184309900271763e-05
+  },
+  {
+    "positive": [
+      "LB4140",
+      "LA4538"
+    ],
+    "reverse_positive": [
+      false,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      49.68658082782465
+    ],
+    "power_at_half": 0.010343829917886448,
+    "power_slope_per_mm": -2.5472818111979545e-05
+  },
+  {
+    "positive": [
+      "LB4140",
+      "LA4538"
+    ],
+    "reverse_positive": [
+      false,
+      true
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      45.66486768768105
+    ],
+    "power_at_half": 0.010241385550569169,
+    "power_slope_per_mm": -2.5472818111983014e-05
+  },
+  {
+    "positive": [
+      "LB4140",
+      "LA4855"
+    ],
+    "reverse_positive": [
+      false,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      29.474717001157707
+    ],
+    "power_at_half": 0.009705983329395014,
+    "power_slope_per_mm": -2.1227963622952664e-05
+  },
+  {
+    "positive": [
+      "LB4140",
+      "LA4855"
+    ],
+    "reverse_positive": [
+      false,
+      true
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      25.784122610122598
+    ],
+    "power_at_half": 0.009627639525915048,
+    "power_slope_per_mm": -2.1227963622952664e-05
+  },
+  {
+    "positive": [
+      "LB4140",
+      "LB4140"
+    ],
+    "reverse_positive": [
+      false,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      39.847724326411694,
+      87.42576553794076
+    ],
+    "power_at_half": 0.012781847235390794,
+    "power_slope_per_mm": -4.246080689241337e-05
+  },
+  {
+    "positive": [
+      "LB4140",
+      "LB4842"
+    ],
+    "reverse_positive": [
+      false,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      4.204447121280097,
+      67.64334834862684
+    ],
+    "power_at_half": 0.011229078658047684,
+    "power_slope_per_mm": -3.184484568801403e-05
+  },
+  {
+    "positive": [
+      "LB4140",
+      "LB4972"
+    ],
+    "reverse_positive": [
+      false,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      47.68170776609995
+    ],
+    "power_at_half": 0.01029288470388986,
+    "power_slope_per_mm": -2.5475457966453452e-05
+  },
+  {
+    "positive": [
+      "LB4140",
+      "LB4710"
+    ],
+    "reverse_positive": [
+      false,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      27.627261603313947
+    ],
+    "power_at_half": 0.009666781861006366,
+    "power_slope_per_mm": -2.122856256257452e-05
+  },
+  {
+    "positive": [
+      "LB4842",
+      "LA4904"
+    ],
+    "reverse_positive": [
+      false,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      6.882283206452741,
+      70.32847574581739
+    ],
+    "power_at_half": 0.011314330578050402,
+    "power_slope_per_mm": -3.184118604041691e-05
+  },
+  {
+    "positive": [
+      "LB4842",
+      "LA4904"
+    ],
+    "reverse_positive": [
+      false,
+      true
+    ],
+    "internal_gap_bounds_mm": [
+      1.4740103044503812,
+      64.92020284381157
+    ],
+    "power_at_half": 0.011142124754420401,
+    "power_slope_per_mm": -3.184118604041865e-05
+  },
+  {
+    "positive": [
+      "LB4842",
+      "LA4984"
+    ],
+    "reverse_positive": [
+      false,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      26.32603536744199
+    ],
+    "power_at_half": 0.009707680132063506,
+    "power_slope_per_mm": -2.3881754685891807e-05
+  },
+  {
+    "positive": [
+      "LB4842",
+      "LA4984"
+    ],
+    "reverse_positive": [
+      false,
+      true
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      21.793847489102177
+    ],
+    "power_at_half": 0.009599443532962696,
+    "power_slope_per_mm": -2.3881754685895276e-05
+  },
+  {
+    "positive": [
+      "LB4842",
+      "LB4140"
+    ],
+    "reverse_positive": [
+      false,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      4.204447121280042,
+      67.64334834862679
+    ],
+    "power_at_half": 0.011229078658047682,
+    "power_slope_per_mm": -3.184484568801403e-05
+  },
+  {
+    "positive": [
+      "LB4842",
+      "LB4842"
+    ],
+    "reverse_positive": [
+      false,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      24.067371501127695
+    ],
+    "power_at_half": 0.009653770148539997,
+    "power_slope_per_mm": -2.388306466862347e-05
+  },
+  {
+    "positive": [
+      "LB4972",
+      "LA4904"
+    ],
+    "reverse_positive": [
+      false,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      50.358631763381126
+    ],
+    "power_at_half": 0.010360934599042804,
+    "power_slope_per_mm": -2.5472530296478946e-05
+  },
+  {
+    "positive": [
+      "LB4972",
+      "LA4904"
+    ],
+    "reverse_positive": [
+      false,
+      true
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      44.95035886138167
+    ],
+    "power_at_half": 0.01022317220369492,
+    "power_slope_per_mm": -2.547253029647721e-05
+  },
+  {
+    "positive": [
+      "LB4972",
+      "LB4140"
+    ],
+    "reverse_positive": [
+      false,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      47.68170776610309
+    ],
+    "power_at_half": 0.010292884703889858,
+    "power_slope_per_mm": -2.5475457966451717e-05
+  },
+  {
+    "positive": [
+      "LB4710",
+      "LA4904"
+    ],
+    "reverse_positive": [
+      false,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      30.295980454404944
+    ],
+    "power_at_half": 0.009723362235476346,
+    "power_slope_per_mm": -2.1226122950881304e-05
+  },
+  {
+    "positive": [
+      "LB4710",
+      "LA4904"
+    ],
+    "reverse_positive": [
+      false,
+      true
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      24.887707552402826
+    ],
+    "power_at_half": 0.00960856556990653,
+    "power_slope_per_mm": -2.1226122950881304e-05
+  },
+  {
+    "positive": [
+      "LB4710",
+      "LB4140"
+    ],
+    "reverse_positive": [
+      false,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      0.5,
+      27.62726160331173
+    ],
+    "power_at_half": 0.009666781861006366,
+    "power_slope_per_mm": -2.1228562562576256e-05
+  }
+]

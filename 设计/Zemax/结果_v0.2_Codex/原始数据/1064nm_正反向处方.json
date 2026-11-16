@@ -1,0 +1,638 @@
+{
+  "LC4924": [
+    {
+      "reverse": false,
+      "efl_1064_mm": -20.461223111504275,
+      "faces": [
+        {
+          "radius": -9.199999999999996,
+          "thickness": 2.0,
+          "material": "F_SILICA",
+          "semi_diameter": 6.35,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        },
+        {
+          "radius": Infinity,
+          "thickness": 0.0,
+          "material": "",
+          "semi_diameter": 6.35,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        }
+      ]
+    },
+    {
+      "reverse": true,
+      "efl_1064_mm": -20.46122311150427,
+      "faces": [
+        {
+          "radius": Infinity,
+          "thickness": 2.0,
+          "material": "F_SILICA",
+          "semi_diameter": 6.35,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        },
+        {
+          "radius": 9.199999999999996,
+          "thickness": 0.0,
+          "material": "",
+          "semi_diameter": 6.35,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        }
+      ]
+    }
+  ],
+  "BICV-FS04": [
+    {
+      "reverse": false,
+      "efl_1064_mm": -20.46665954489225,
+      "faces": [
+        {
+          "radius": -18.71,
+          "thickness": 2.0,
+          "material": "F_SILICA",
+          "semi_diameter": 6.35,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        },
+        {
+          "radius": 18.71,
+          "thickness": 0.0,
+          "material": "",
+          "semi_diameter": 6.35,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        }
+      ]
+    },
+    {
+      "reverse": true,
+      "efl_1064_mm": -20.46665954489225,
+      "faces": [
+        {
+          "radius": -18.71,
+          "thickness": 2.0,
+          "material": "F_SILICA",
+          "semi_diameter": 6.35,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        },
+        {
+          "radius": 18.71,
+          "thickness": 0.0,
+          "material": "",
+          "semi_diameter": 6.35,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        }
+      ]
+    }
+  ],
+  "AFL50-100": [
+    {
+      "reverse": false,
+      "efl_1064_mm": 105.88693450906678,
+      "faces": [
+        {
+          "radius": 47.61000000000001,
+          "thickness": 12.5,
+          "material": "C79-80",
+          "semi_diameter": 25.0,
+          "conic": -1.0,
+          "type": "EvenAspheric",
+          "parameters": [
+            0.0,
+            4.954e-07,
+            4.021e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "radius": Infinity,
+          "thickness": 0.0,
+          "material": "",
+          "semi_diameter": 25.0,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        }
+      ]
+    },
+    {
+      "reverse": true,
+      "efl_1064_mm": 105.88693450906678,
+      "faces": [
+        {
+          "radius": Infinity,
+          "thickness": 12.5,
+          "material": "C79-80",
+          "semi_diameter": 25.0,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        },
+        {
+          "radius": -47.61000000000001,
+          "thickness": 0.0,
+          "material": "",
+          "semi_diameter": 25.0,
+          "conic": -1.0,
+          "type": "EvenAspheric",
+          "parameters": [
+            0.0,
+            -4.954e-07,
+            -4.021e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    }
+  ],
+  "AC508-100-C": [
+    {
+      "reverse": false,
+      "efl_1064_mm": 99.38372536308262,
+      "faces": [
+        {
+          "radius": 44.67000000000006,
+          "thickness": 17.0,
+          "material": "N-BAF10",
+          "semi_diameter": 25.4,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        },
+        {
+          "radius": -48.309999999999995,
+          "thickness": 2.5,
+          "material": "N-SF6HT",
+          "semi_diameter": 25.4,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        },
+        {
+          "radius": 259.4000000000002,
+          "thickness": 0.0,
+          "material": "",
+          "semi_diameter": 25.4,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        }
+      ]
+    },
+    {
+      "reverse": true,
+      "efl_1064_mm": 99.38372536308265,
+      "faces": [
+        {
+          "radius": -259.4000000000002,
+          "thickness": 2.5,
+          "material": "N-SF6HT",
+          "semi_diameter": 25.4,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        },
+        {
+          "radius": 48.309999999999995,
+          "thickness": 17.0,
+          "material": "N-BAF10",
+          "semi_diameter": 25.4,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        },
+        {
+          "radius": -44.67000000000006,
+          "thickness": 0.0,
+          "material": "",
+          "semi_diameter": 25.4,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        }
+      ]
+    }
+  ],
+  "LA4904": [
+    {
+      "reverse": false,
+      "efl_1064_mm": 153.4814137961863,
+      "faces": [
+        {
+          "radius": 69.01000000000016,
+          "thickness": 7.84,
+          "material": "F_SILICA",
+          "semi_diameter": 25.4,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        },
+        {
+          "radius": Infinity,
+          "thickness": 0.0,
+          "material": "",
+          "semi_diameter": 25.4,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        }
+      ]
+    },
+    {
+      "reverse": true,
+      "efl_1064_mm": 153.48141379618627,
+      "faces": [
+        {
+          "radius": Infinity,
+          "thickness": 7.84,
+          "material": "F_SILICA",
+          "semi_diameter": 25.4,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        },
+        {
+          "radius": -69.01000000000016,
+          "thickness": 0.0,
+          "material": "",
+          "semi_diameter": 25.4,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        }
+      ]
+    }
+  ],
+  "LA4984": [
+    {
+      "reverse": false,
+      "efl_1064_mm": 204.63447157494733,
+      "faces": [
+        {
+          "radius": 92.0100000000003,
+          "thickness": 6.57,
+          "material": "F_SILICA",
+          "semi_diameter": 25.4,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        },
+        {
+          "radius": Infinity,
+          "thickness": 0.0,
+          "material": "",
+          "semi_diameter": 25.4,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        }
+      ]
+    },
+    {
+      "reverse": true,
+      "efl_1064_mm": 204.63447157494733,
+      "faces": [
+        {
+          "radius": Infinity,
+          "thickness": 6.57,
+          "material": "F_SILICA",
+          "semi_diameter": 25.4,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        },
+        {
+          "radius": -92.0100000000003,
+          "thickness": 0.0,
+          "material": "",
+          "semi_diameter": 25.4,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        }
+      ]
+    }
+  ],
+  "LA4538": [
+    {
+      "reverse": false,
+      "efl_1064_mm": 255.80976981361147,
+      "faces": [
+        {
+          "radius": 115.02000000000014,
+          "thickness": 5.83,
+          "material": "F_SILICA",
+          "semi_diameter": 25.4,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        },
+        {
+          "radius": Infinity,
+          "thickness": 0.0,
+          "material": "",
+          "semi_diameter": 25.4,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        }
+      ]
+    },
+    {
+      "reverse": true,
+      "efl_1064_mm": 255.80976981361147,
+      "faces": [
+        {
+          "radius": Infinity,
+          "thickness": 5.83,
+          "material": "F_SILICA",
+          "semi_diameter": 25.4,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        },
+        {
+          "radius": -115.02000000000014,
+          "thickness": 0.0,
+          "material": "",
+          "semi_diameter": 25.4,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        }
+      ]
+    }
+  ],
+  "LA4855": [
+    {
+      "reverse": false,
+      "efl_1064_mm": 306.9628275923705,
+      "faces": [
+        {
+          "radius": 138.01999999999938,
+          "thickness": 5.35,
+          "material": "F_SILICA",
+          "semi_diameter": 25.4,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        },
+        {
+          "radius": Infinity,
+          "thickness": 0.0,
+          "material": "",
+          "semi_diameter": 25.4,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        }
+      ]
+    },
+    {
+      "reverse": true,
+      "efl_1064_mm": 306.9628275923705,
+      "faces": [
+        {
+          "radius": Infinity,
+          "thickness": 5.35,
+          "material": "F_SILICA",
+          "semi_diameter": 25.4,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        },
+        {
+          "radius": -138.01999999999938,
+          "thickness": 0.0,
+          "material": "",
+          "semi_diameter": 25.4,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        }
+      ]
+    }
+  ],
+  "LB4140": [
+    {
+      "reverse": false,
+      "efl_1064_mm": 153.46377552929616,
+      "faces": [
+        {
+          "radius": 136.78999999999945,
+          "thickness": 7.76,
+          "material": "F_SILICA",
+          "semi_diameter": 25.4,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        },
+        {
+          "radius": -136.78999999999945,
+          "thickness": 0.0,
+          "material": "",
+          "semi_diameter": 25.4,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        }
+      ]
+    },
+    {
+      "reverse": true,
+      "efl_1064_mm": 153.46377552929616,
+      "faces": [
+        {
+          "radius": 136.78999999999945,
+          "thickness": 7.76,
+          "material": "F_SILICA",
+          "semi_diameter": 25.4,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        },
+        {
+          "radius": -136.78999999999945,
+          "thickness": 0.0,
+          "material": "",
+          "semi_diameter": 25.4,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        }
+      ]
+    }
+  ],
+  "LB4842": [
+    {
+      "reverse": false,
+      "efl_1064_mm": 204.6232474030372,
+      "faces": [
+        {
+          "radius": 182.99000000000103,
+          "thickness": 6.54,
+          "material": "F_SILICA",
+          "semi_diameter": 25.4,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        },
+        {
+          "radius": -182.99000000000103,
+          "thickness": 0.0,
+          "material": "",
+          "semi_diameter": 25.4,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        }
+      ]
+    },
+    {
+      "reverse": true,
+      "efl_1064_mm": 204.6232474030372,
+      "faces": [
+        {
+          "radius": 182.99000000000103,
+          "thickness": 6.54,
+          "material": "F_SILICA",
+          "semi_diameter": 25.4,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        },
+        {
+          "radius": -182.99000000000103,
+          "thickness": 0.0,
+          "material": "",
+          "semi_diameter": 25.4,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        }
+      ]
+    }
+  ],
+  "LB4972": [
+    {
+      "reverse": false,
+      "efl_1064_mm": 255.78326192647398,
+      "faces": [
+        {
+          "radius": 229.11000000000178,
+          "thickness": 5.82,
+          "material": "F_SILICA",
+          "semi_diameter": 25.4,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        },
+        {
+          "radius": -229.11000000000178,
+          "thickness": 0.0,
+          "material": "",
+          "semi_diameter": 25.4,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        }
+      ]
+    },
+    {
+      "reverse": true,
+      "efl_1064_mm": 255.78326192647398,
+      "faces": [
+        {
+          "radius": 229.11000000000178,
+          "thickness": 5.82,
+          "material": "F_SILICA",
+          "semi_diameter": 25.4,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        },
+        {
+          "radius": -229.11000000000178,
+          "thickness": 0.0,
+          "material": "",
+          "semi_diameter": 25.4,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        }
+      ]
+    }
+  ],
+  "LB4710": [
+    {
+      "reverse": false,
+      "efl_1064_mm": 306.95416698715275,
+      "faces": [
+        {
+          "radius": 275.1999999999968,
+          "thickness": 5.35,
+          "material": "F_SILICA",
+          "semi_diameter": 25.4,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        },
+        {
+          "radius": -275.1999999999968,
+          "thickness": 0.0,
+          "material": "",
+          "semi_diameter": 25.4,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        }
+      ]
+    },
+    {
+      "reverse": true,
+      "efl_1064_mm": 306.95416698715275,
+      "faces": [
+        {
+          "radius": 275.1999999999968,
+          "thickness": 5.35,
+          "material": "F_SILICA",
+          "semi_diameter": 25.4,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        },
+        {
+          "radius": -275.1999999999968,
+          "thickness": 0.0,
+          "material": "",
+          "semi_diameter": 25.4,
+          "conic": 0.0,
+          "type": "Standard",
+          "parameters": []
+        }
+      ]
+    }
+  ]
+}

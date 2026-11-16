@@ -1,0 +1,40 @@
+{
+  "finished_groups": 72,
+  "total_groups": 72,
+  "best": {
+    "positive": [
+      "LA4904",
+      "LB4842"
+    ],
+    "reverse_positive": [
+      true,
+      false
+    ],
+    "internal_gap_bounds_mm": [
+      6.882283206452796,
+      70.32847574581743
+    ],
+    "power_at_half": 0.011314330578050404,
+    "power_slope_per_mm": -3.184118604041691e-05,
+    "group_index": 19,
+    "negative": "BICV-FS04",
+    "reverse_negative": false,
+    "gap_search_version": 2,
+    "internal_gap_mm": 6.882293206452796,
+    "objective_efl_1064_mm": 90.00000257913615,
+    "endpoint_rows": [
+      {
+        "configuration": 1,
+        "gap_mm": 68.17599184760604,
+        "wavefront_waves": 0.11251037241720264
+      },
+      {
+        "configuration": 6,
+        "gap_mm": 60.26964894232715,
+        "wavefront_waves": 0.032253916152691284
+      }
+    ],
+    "worst_endpoint_wavefront": 0.11251037241720264,
+    "endpoint_travel_mm": 7.9063429052788905
+  }
+}

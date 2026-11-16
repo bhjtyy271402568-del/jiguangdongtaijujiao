@@ -1,0 +1,939 @@
+{
+  "LC4924": {
+    "ok": true,
+    "units": "Millimeters",
+    "surfaces": [
+      {
+        "surf": 0,
+        "type": "标准面",
+        "comment": "",
+        "radius": "Infinity",
+        "thickness": "Infinity",
+        "material": "",
+        "semi_dia": 0.0,
+        "conic": 0.0,
+        "stop": false
+      },
+      {
+        "surf": 1,
+        "type": "标准面",
+        "comment": "LC4924",
+        "radius": -9.199999999999996,
+        "thickness": 2.0,
+        "material": "F_SILICA",
+        "semi_dia": 6.35,
+        "conic": 0.0,
+        "stop": true
+      },
+      {
+        "surf": 2,
+        "type": "标准面",
+        "comment": "",
+        "radius": "Infinity",
+        "thickness": -20.10452167518,
+        "material": "",
+        "semi_dia": 6.35,
+        "conic": 0.0,
+        "stop": false
+      },
+      {
+        "surf": 3,
+        "type": "标准面",
+        "comment": "",
+        "radius": "Infinity",
+        "thickness": "Infinity",
+        "material": "",
+        "semi_dia": 0.23663454548328655,
+        "conic": 0.0,
+        "stop": false
+      }
+    ],
+    "count": 4,
+    "efl_1064_mm": {
+      "ok": true,
+      "operand": "EFFL",
+      "params": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "value": -20.461223111504275
+    },
+    "surface_details": [
+      {
+        "surf": 0,
+        "mechanical_sd": 0.0,
+        "aperture": "None",
+        "coating": ""
+      },
+      {
+        "surf": 1,
+        "mechanical_sd": 6.35,
+        "aperture": "FloatingAperture",
+        "coating": ""
+      },
+      {
+        "surf": 2,
+        "mechanical_sd": 6.35,
+        "aperture": "FloatingAperture",
+        "coating": ""
+      },
+      {
+        "surf": 3,
+        "mechanical_sd": 0.06940029527288427,
+        "aperture": "None",
+        "coating": ""
+      }
+    ]
+  },
+  "AC508-100-C": {
+    "ok": true,
+    "units": "Millimeters",
+    "surfaces": [
+      {
+        "surf": 0,
+        "type": "标准面",
+        "comment": "",
+        "radius": "Infinity",
+        "thickness": "Infinity",
+        "material": "",
+        "semi_dia": 0.0,
+        "conic": 0.0,
+        "stop": false
+      },
+      {
+        "surf": 1,
+        "type": "标准面",
+        "comment": "AC508-100-C",
+        "radius": 44.67000000000006,
+        "thickness": 17.0,
+        "material": "N-BAF10",
+        "semi_dia": 25.4,
+        "conic": 0.0,
+        "stop": true
+      },
+      {
+        "surf": 2,
+        "type": "标准面",
+        "comment": "",
+        "radius": -48.309999999999995,
+        "thickness": 2.5,
+        "material": "N-SF6HT",
+        "semi_dia": 25.4,
+        "conic": 0.0,
+        "stop": false
+      },
+      {
+        "surf": 3,
+        "type": "标准面",
+        "comment": "",
+        "radius": 259.4000000000002,
+        "thickness": 82.77805160857,
+        "material": "",
+        "semi_dia": 25.4,
+        "conic": 0.0,
+        "stop": false
+      },
+      {
+        "surf": 4,
+        "type": "标准面",
+        "comment": "",
+        "radius": "Infinity",
+        "thickness": "Infinity",
+        "material": "",
+        "semi_dia": 0.2392725946650458,
+        "conic": 0.0,
+        "stop": false
+      }
+    ],
+    "count": 5,
+    "efl_1064_mm": {
+      "ok": true,
+      "operand": "EFFL",
+      "params": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "value": 99.38372536308262
+    },
+    "surface_details": [
+      {
+        "surf": 0,
+        "mechanical_sd": 0.0,
+        "aperture": "None",
+        "coating": ""
+      },
+      {
+        "surf": 1,
+        "mechanical_sd": 25.4,
+        "aperture": "FloatingAperture",
+        "coating": "THORC"
+      },
+      {
+        "surf": 2,
+        "mechanical_sd": 25.4,
+        "aperture": "FloatingAperture",
+        "coating": ""
+      },
+      {
+        "surf": 3,
+        "mechanical_sd": 25.4,
+        "aperture": "FloatingAperture",
+        "coating": "THORCSLAH64"
+      },
+      {
+        "surf": 4,
+        "mechanical_sd": 0.13608634665322938,
+        "aperture": "None",
+        "coating": ""
+      }
+    ]
+  },
+  "LA4904": {
+    "ok": true,
+    "units": "Millimeters",
+    "surfaces": [
+      {
+        "surf": 0,
+        "type": "标准面",
+        "comment": "",
+        "radius": "Infinity",
+        "thickness": "Infinity",
+        "material": "",
+        "semi_dia": 0.0,
+        "conic": 0.0,
+        "stop": false
+      },
+      {
+        "surf": 1,
+        "type": "标准面",
+        "comment": "LA4904",
+        "radius": 69.01000000000016,
+        "thickness": 7.84,
+        "material": "F_SILICA",
+        "semi_dia": 25.4,
+        "conic": 0.0,
+        "stop": true
+      },
+      {
+        "surf": 2,
+        "type": "标准面",
+        "comment": "",
+        "radius": "Infinity",
+        "thickness": 141.5910541973,
+        "material": "",
+        "semi_dia": 25.4,
+        "conic": 0.0,
+        "stop": false
+      },
+      {
+        "surf": 3,
+        "type": "标准面",
+        "comment": "",
+        "radius": "Infinity",
+        "thickness": "Infinity",
+        "material": "",
+        "semi_dia": 0.453881868179959,
+        "conic": 0.0,
+        "stop": false
+      }
+    ],
+    "count": 4,
+    "efl_1064_mm": {
+      "ok": true,
+      "operand": "EFFL",
+      "params": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "value": 153.4814137961863
+    },
+    "surface_details": [
+      {
+        "surf": 0,
+        "mechanical_sd": 0.0,
+        "aperture": "None",
+        "coating": ""
+      },
+      {
+        "surf": 1,
+        "mechanical_sd": 25.4,
+        "aperture": "FloatingAperture",
+        "coating": ""
+      },
+      {
+        "surf": 2,
+        "mechanical_sd": 25.4,
+        "aperture": "FloatingAperture",
+        "coating": ""
+      },
+      {
+        "surf": 3,
+        "mechanical_sd": 0.2297452672679512,
+        "aperture": "None",
+        "coating": ""
+      }
+    ]
+  },
+  "LA4984": {
+    "ok": true,
+    "units": "Millimeters",
+    "surfaces": [
+      {
+        "surf": 0,
+        "type": "标准面",
+        "comment": "",
+        "radius": "Infinity",
+        "thickness": "Infinity",
+        "material": "",
+        "semi_dia": 0.0,
+        "conic": 0.0,
+        "stop": false
+      },
+      {
+        "surf": 1,
+        "type": "标准面",
+        "comment": "LA4984",
+        "radius": 92.0100000000003,
+        "thickness": 6.57,
+        "material": "F_SILICA",
+        "semi_dia": 25.4,
+        "conic": 0.0,
+        "stop": true
+      },
+      {
+        "surf": 2,
+        "type": "标准面",
+        "comment": "",
+        "radius": "Infinity",
+        "thickness": 193.3804262775,
+        "material": "",
+        "semi_dia": 25.4,
+        "conic": 0.0,
+        "stop": false
+      },
+      {
+        "surf": 3,
+        "type": "标准面",
+        "comment": "",
+        "radius": "Infinity",
+        "thickness": "Infinity",
+        "material": "",
+        "semi_dia": 0.3327635808061338,
+        "conic": 0.0,
+        "stop": false
+      }
+    ],
+    "count": 4,
+    "efl_1064_mm": {
+      "ok": true,
+      "operand": "EFFL",
+      "params": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "value": 204.63447157494733
+    },
+    "surface_details": [
+      {
+        "surf": 0,
+        "mechanical_sd": 0.0,
+        "aperture": "None",
+        "coating": ""
+      },
+      {
+        "surf": 1,
+        "mechanical_sd": 25.4,
+        "aperture": "FloatingAperture",
+        "coating": ""
+      },
+      {
+        "surf": 2,
+        "mechanical_sd": 25.4,
+        "aperture": "FloatingAperture",
+        "coating": ""
+      },
+      {
+        "surf": 3,
+        "mechanical_sd": 0.34481068690748984,
+        "aperture": "None",
+        "coating": ""
+      }
+    ]
+  },
+  "LA4538": {
+    "ok": true,
+    "units": "Millimeters",
+    "surfaces": [
+      {
+        "surf": 0,
+        "type": "标准面",
+        "comment": "",
+        "radius": "Infinity",
+        "thickness": "Infinity",
+        "material": "",
+        "semi_dia": 0.0,
+        "conic": 0.0,
+        "stop": false
+      },
+      {
+        "surf": 1,
+        "type": "标准面",
+        "comment": "LA4538",
+        "radius": 115.02000000000014,
+        "thickness": 5.83,
+        "material": "F_SILICA",
+        "semi_dia": 25.4,
+        "conic": 0.0,
+        "stop": true
+      },
+      {
+        "surf": 2,
+        "type": "标准面",
+        "comment": "",
+        "radius": "Infinity",
+        "thickness": 244.4775013695,
+        "material": "",
+        "semi_dia": 25.4,
+        "conic": 0.0,
+        "stop": false
+      },
+      {
+        "surf": 3,
+        "type": "标准面",
+        "comment": "",
+        "radius": "Infinity",
+        "thickness": "Infinity",
+        "material": "",
+        "semi_dia": 0.2794473192282645,
+        "conic": 0.0,
+        "stop": false
+      }
+    ],
+    "count": 4,
+    "efl_1064_mm": {
+      "ok": true,
+      "operand": "EFFL",
+      "params": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "value": 255.80976981361147
+    },
+    "surface_details": [
+      {
+        "surf": 0,
+        "mechanical_sd": 0.0,
+        "aperture": "None",
+        "coating": ""
+      },
+      {
+        "surf": 1,
+        "mechanical_sd": 25.4,
+        "aperture": "FloatingAperture",
+        "coating": ""
+      },
+      {
+        "surf": 2,
+        "mechanical_sd": 25.4,
+        "aperture": "FloatingAperture",
+        "coating": ""
+      },
+      {
+        "surf": 3,
+        "mechanical_sd": 0.39560041399640156,
+        "aperture": "None",
+        "coating": ""
+      }
+    ]
+  },
+  "LA4855": {
+    "ok": true,
+    "units": "Millimeters",
+    "surfaces": [
+      {
+        "surf": 0,
+        "type": "标准面",
+        "comment": "",
+        "radius": "Infinity",
+        "thickness": "Infinity",
+        "material": "",
+        "semi_dia": 0.0,
+        "conic": 0.0,
+        "stop": false
+      },
+      {
+        "surf": 1,
+        "type": "标准面",
+        "comment": "LA4855",
+        "radius": 138.01999999999938,
+        "thickness": 5.35,
+        "material": "F_SILICA",
+        "semi_dia": 25.4,
+        "conic": 0.0,
+        "stop": true
+      },
+      {
+        "surf": 2,
+        "type": "标准面",
+        "comment": "",
+        "radius": "Infinity",
+        "thickness": 295.20489205,
+        "material": "",
+        "semi_dia": 25.4,
+        "conic": 0.0,
+        "stop": false
+      },
+      {
+        "surf": 3,
+        "type": "标准面",
+        "comment": "",
+        "radius": "Infinity",
+        "thickness": "Infinity",
+        "material": "",
+        "semi_dia": 0.2511502303740407,
+        "conic": 0.0,
+        "stop": false
+      }
+    ],
+    "count": 4,
+    "efl_1064_mm": {
+      "ok": true,
+      "operand": "EFFL",
+      "params": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "value": 306.9628275923705
+    },
+    "surface_details": [
+      {
+        "surf": 0,
+        "mechanical_sd": 0.0,
+        "aperture": "None",
+        "coating": ""
+      },
+      {
+        "surf": 1,
+        "mechanical_sd": 25.4,
+        "aperture": "FloatingAperture",
+        "coating": ""
+      },
+      {
+        "surf": 2,
+        "mechanical_sd": 25.4,
+        "aperture": "FloatingAperture",
+        "coating": ""
+      },
+      {
+        "surf": 3,
+        "mechanical_sd": 0.4226165412703011,
+        "aperture": "None",
+        "coating": ""
+      }
+    ]
+  },
+  "LB4140": {
+    "ok": true,
+    "units": "Millimeters",
+    "surfaces": [
+      {
+        "surf": 0,
+        "type": "标准面",
+        "comment": "",
+        "radius": "Infinity",
+        "thickness": "Infinity",
+        "material": "",
+        "semi_dia": 0.0,
+        "conic": 0.0,
+        "stop": false
+      },
+      {
+        "surf": 1,
+        "type": "标准面",
+        "comment": "LB4140",
+        "radius": 136.78999999999945,
+        "thickness": 7.76,
+        "material": "F_SILICA",
+        "semi_dia": 25.4,
+        "conic": 0.0,
+        "stop": true
+      },
+      {
+        "surf": 2,
+        "type": "标准面",
+        "comment": "",
+        "radius": -136.78999999999945,
+        "thickness": 143.3288704861,
+        "material": "",
+        "semi_dia": 25.4,
+        "conic": 0.0,
+        "stop": false
+      },
+      {
+        "surf": 3,
+        "type": "标准面",
+        "comment": "",
+        "radius": "Infinity",
+        "thickness": "Infinity",
+        "material": "",
+        "semi_dia": 0.5346522544542331,
+        "conic": 0.0,
+        "stop": false
+      }
+    ],
+    "count": 4,
+    "efl_1064_mm": {
+      "ok": true,
+      "operand": "EFFL",
+      "params": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "value": 153.46377552929616
+    },
+    "surface_details": [
+      {
+        "surf": 0,
+        "mechanical_sd": 0.0,
+        "aperture": "None",
+        "coating": ""
+      },
+      {
+        "surf": 1,
+        "mechanical_sd": 25.4,
+        "aperture": "FloatingAperture",
+        "coating": ""
+      },
+      {
+        "surf": 2,
+        "mechanical_sd": 25.4,
+        "aperture": "FloatingAperture",
+        "coating": ""
+      },
+      {
+        "surf": 3,
+        "mechanical_sd": 0.1664975680411196,
+        "aperture": "None",
+        "coating": ""
+      }
+    ]
+  },
+  "LB4842": {
+    "ok": true,
+    "units": "Millimeters",
+    "surfaces": [
+      {
+        "surf": 0,
+        "type": "标准面",
+        "comment": "",
+        "radius": "Infinity",
+        "thickness": "Infinity",
+        "material": "",
+        "semi_dia": 0.0,
+        "conic": 0.0,
+        "stop": false
+      },
+      {
+        "surf": 1,
+        "type": "标准面",
+        "comment": "LB4842",
+        "radius": 182.99000000000103,
+        "thickness": 6.54,
+        "material": "F_SILICA",
+        "semi_dia": 25.4,
+        "conic": 0.0,
+        "stop": true
+      },
+      {
+        "surf": 2,
+        "type": "标准面",
+        "comment": "",
+        "radius": -182.99000000000103,
+        "thickness": 194.9089696535,
+        "material": "",
+        "semi_dia": 25.4,
+        "conic": 0.0,
+        "stop": false
+      },
+      {
+        "surf": 3,
+        "type": "标准面",
+        "comment": "",
+        "radius": "Infinity",
+        "thickness": "Infinity",
+        "material": "",
+        "semi_dia": 0.37788073615976714,
+        "conic": 0.0,
+        "stop": false
+      }
+    ],
+    "count": 4,
+    "efl_1064_mm": {
+      "ok": true,
+      "operand": "EFFL",
+      "params": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "value": 204.6232474030372
+    },
+    "surface_details": [
+      {
+        "surf": 0,
+        "mechanical_sd": 0.0,
+        "aperture": "None",
+        "coating": ""
+      },
+      {
+        "surf": 1,
+        "mechanical_sd": 25.4,
+        "aperture": "FloatingAperture",
+        "coating": ""
+      },
+      {
+        "surf": 2,
+        "mechanical_sd": 25.4,
+        "aperture": "FloatingAperture",
+        "coating": ""
+      },
+      {
+        "surf": 3,
+        "mechanical_sd": 0.30918420596257334,
+        "aperture": "None",
+        "coating": ""
+      }
+    ]
+  },
+  "LB4972": {
+    "ok": true,
+    "units": "Millimeters",
+    "surfaces": [
+      {
+        "surf": 0,
+        "type": "标准面",
+        "comment": "",
+        "radius": "Infinity",
+        "thickness": "Infinity",
+        "material": "",
+        "semi_dia": 0.0,
+        "conic": 0.0,
+        "stop": false
+      },
+      {
+        "surf": 1,
+        "type": "标准面",
+        "comment": "LB4972",
+        "radius": 229.11000000000178,
+        "thickness": 5.82,
+        "material": "F_SILICA",
+        "semi_dia": 25.4,
+        "conic": 0.0,
+        "stop": true
+      },
+      {
+        "surf": 2,
+        "type": "标准面",
+        "comment": "",
+        "radius": -229.11000000000178,
+        "thickness": 245.8739820179,
+        "material": "",
+        "semi_dia": 25.4,
+        "conic": 0.0,
+        "stop": false
+      },
+      {
+        "surf": 3,
+        "type": "标准面",
+        "comment": "",
+        "radius": "Infinity",
+        "thickness": "Infinity",
+        "material": "",
+        "semi_dia": 0.3082342970030538,
+        "conic": 0.0,
+        "stop": false
+      }
+    ],
+    "count": 4,
+    "efl_1064_mm": {
+      "ok": true,
+      "operand": "EFFL",
+      "params": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "value": 255.78326192647398
+    },
+    "surface_details": [
+      {
+        "surf": 0,
+        "mechanical_sd": 0.0,
+        "aperture": "None",
+        "coating": ""
+      },
+      {
+        "surf": 1,
+        "mechanical_sd": 25.4,
+        "aperture": "FloatingAperture",
+        "coating": ""
+      },
+      {
+        "surf": 2,
+        "mechanical_sd": 25.4,
+        "aperture": "FloatingAperture",
+        "coating": ""
+      },
+      {
+        "surf": 3,
+        "mechanical_sd": 0.37277785165597876,
+        "aperture": "None",
+        "coating": ""
+      }
+    ]
+  },
+  "LB4710": {
+    "ok": true,
+    "units": "Millimeters",
+    "surfaces": [
+      {
+        "surf": 0,
+        "type": "标准面",
+        "comment": "",
+        "radius": "Infinity",
+        "thickness": "Infinity",
+        "material": "",
+        "semi_dia": 0.0,
+        "conic": 0.0,
+        "stop": false
+      },
+      {
+        "surf": 1,
+        "type": "标准面",
+        "comment": "LB4710",
+        "radius": 275.1999999999968,
+        "thickness": 5.35,
+        "material": "F_SILICA",
+        "semi_dia": 25.4,
+        "conic": 0.0,
+        "stop": true
+      },
+      {
+        "surf": 2,
+        "type": "标准面",
+        "comment": "",
+        "radius": -275.1999999999968,
+        "thickness": 296.5477288786,
+        "material": "",
+        "semi_dia": 25.4,
+        "conic": 0.0,
+        "stop": false
+      },
+      {
+        "surf": 3,
+        "type": "标准面",
+        "comment": "",
+        "radius": "Infinity",
+        "thickness": "Infinity",
+        "material": "",
+        "semi_dia": 0.2711201044921978,
+        "conic": 0.0,
+        "stop": false
+      }
+    ],
+    "count": 4,
+    "efl_1064_mm": {
+      "ok": true,
+      "operand": "EFFL",
+      "params": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "value": 306.95416698715275
+    },
+    "surface_details": [
+      {
+        "surf": 0,
+        "mechanical_sd": 0.0,
+        "aperture": "None",
+        "coating": ""
+      },
+      {
+        "surf": 1,
+        "mechanical_sd": 25.4,
+        "aperture": "FloatingAperture",
+        "coating": ""
+      },
+      {
+        "surf": 2,
+        "mechanical_sd": 25.4,
+        "aperture": "FloatingAperture",
+        "coating": ""
+      },
+      {
+        "surf": 3,
+        "mechanical_sd": 0.40674297570835094,
+        "aperture": "None",
+        "coating": ""
+      }
+    ]
+  }
+}

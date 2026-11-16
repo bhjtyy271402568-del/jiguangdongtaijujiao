@@ -1,0 +1,126 @@
+[
+  {
+    "negative": "LC4924",
+    "positive": [
+      "AFL50-100"
+    ],
+    "worst_wavefront": 0.20435201801263952,
+    "travel_mm": 11.120739226974365,
+    "six_configurations_verified": true,
+    "rows": [
+      {
+        "configuration": 1,
+        "gap_mm": 87.91590767764869,
+        "rms_wavefront_waves": 0.0619150595508221
+      },
+      {
+        "configuration": 2,
+        "gap_mm": 83.60450448529747,
+        "rms_wavefront_waves": 0.16640929455048026
+      },
+      {
+        "configuration": 3,
+        "gap_mm": 81.53315485904182,
+        "rms_wavefront_waves": 0.20361471549713892
+      },
+      {
+        "configuration": 4,
+        "gap_mm": 79.51834599430876,
+        "rms_wavefront_waves": 0.20435201801263952
+      },
+      {
+        "configuration": 5,
+        "gap_mm": 77.94806652755243,
+        "rms_wavefront_waves": 0.18979838430017548
+      },
+      {
+        "configuration": 6,
+        "gap_mm": 76.79516845067432,
+        "rms_wavefront_waves": 0.17799749574924736
+      }
+    ]
+  },
+  {
+    "negative": "BICV-FS04",
+    "positive": [
+      "LA4904",
+      "LB4842"
+    ],
+    "worst_wavefront": 0.11251044755294656,
+    "travel_mm": 7.90634133038418,
+    "six_configurations_verified": true,
+    "rows": [
+      {
+        "configuration": 1,
+        "gap_mm": 68.17599316354435,
+        "rms_wavefront_waves": 0.11251044755294656
+      },
+      {
+        "configuration": 2,
+        "gap_mm": 65.11008799885244,
+        "rms_wavefront_waves": 0.04539264693116441
+      },
+      {
+        "configuration": 3,
+        "gap_mm": 63.63961606839744,
+        "rms_wavefront_waves": 0.01901024483003734
+      },
+      {
+        "configuration": 4,
+        "gap_mm": 62.20881788753033,
+        "rms_wavefront_waves": 0.006814562583011516
+      },
+      {
+        "configuration": 5,
+        "gap_mm": 61.091784882166664,
+        "rms_wavefront_waves": 0.021474674681026023
+      },
+      {
+        "configuration": 6,
+        "gap_mm": 60.26965183316017,
+        "rms_wavefront_waves": 0.03225450705983909
+      }
+    ]
+  },
+  {
+    "negative": "BICV-FS04",
+    "positive": [
+      "AC508-100-C"
+    ],
+    "worst_wavefront": 0.466234668232631,
+    "travel_mm": 9.439529219271925,
+    "six_configurations_verified": true,
+    "rows": [
+      {
+        "configuration": 1,
+        "gap_mm": 72.01865532434827,
+        "rms_wavefront_waves": 0.466234668232631
+      },
+      {
+        "configuration": 2,
+        "gap_mm": 68.38367758560712,
+        "rms_wavefront_waves": 0.1399151540661748
+      },
+      {
+        "configuration": 3,
+        "gap_mm": 66.62665318374347,
+        "rms_wavefront_waves": 0.08402119561581382
+      },
+      {
+        "configuration": 4,
+        "gap_mm": 64.91012380722466,
+        "rms_wavefront_waves": 0.13318019390835456
+      },
+      {
+        "configuration": 5,
+        "gap_mm": 63.567327633261705,
+        "rms_wavefront_waves": 0.20649201003693088
+      },
+      {
+        "configuration": 6,
+        "gap_mm": 62.57912610507635,
+        "rms_wavefront_waves": 0.27324908936676745
+      }
+    ]
+  }
+]

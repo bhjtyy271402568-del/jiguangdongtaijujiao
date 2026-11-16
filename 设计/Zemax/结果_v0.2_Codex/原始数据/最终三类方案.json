@@ -1,0 +1,2126 @@
+[
+  {
+    "gap_surface": 3,
+    "last_surface": 5,
+    "inner_surface": null,
+    "pre_offset": 235.5,
+    "negative": "LC4924",
+    "reverse_negative": false,
+    "positive": [
+      "AFL50-100"
+    ],
+    "reverse_positive": [
+      true
+    ],
+    "internal_gap_mm": 0.0,
+    "name": "A_熔石英非球面_1064nm",
+    "category": "A_熔石英非球面",
+    "objective_efl_1064_mm": 105.88693450906678,
+    "native_multiconfig_dls": {
+      "ok": true,
+      "method": "local",
+      "merit_before": 0.17435274019054228,
+      "merit_after": 0.1743523544289662,
+      "improved": true,
+      "snapshot": "C:\\Users\\Administrator\\Documents\\Zemax\\MCP\\snapshots\\LENS_20261116-142438-254_pre-optimize.zmx"
+    },
+    "rows": [
+      {
+        "configuration": 1,
+        "distance_m": 1.0,
+        "gap_mm": 87.91590767764869,
+        "rms_wavefront_waves": 0.0619150595508221,
+        "rms_wavefront_16rings": 0.06191505955589917,
+        "geometric_rms_radius_mm": 0.01563839895629499,
+        "working_fno": 21.885654460516,
+        "gaussian_target_diameter_mm": {
+          "1.1": 0.10172282029784935,
+          "1.3": 0.10978997982068124
+        },
+        "apertures": [
+          {
+            "surface": 2,
+            "comment": "LC4924 forward",
+            "clear_diameter_mm": 11.43,
+            "gaussian_diameter_mm": {
+              "1.1": 4.000377865706052,
+              "1.3": 4.00052775295818
+            },
+            "min_clear_to_beam": 2.857123036216438
+          },
+          {
+            "surface": 3,
+            "comment": "LC4924 forward",
+            "clear_diameter_mm": 11.43,
+            "gaussian_diameter_mm": {
+              "1.1": 4.27012285092502,
+              "1.3": 4.270285659121555
+            },
+            "min_clear_to_beam": 2.676635923778288
+          },
+          {
+            "surface": 4,
+            "comment": "AFL50-100 reverse",
+            "clear_diameter_mm": 45.0,
+            "gaussian_diameter_mm": {
+              "1.1": 21.459055647354283,
+              "1.3": 21.460051243648444
+            },
+            "min_clear_to_beam": 2.0969195035505193
+          },
+          {
+            "surface": 5,
+            "comment": "AFL50-100 reverse",
+            "clear_diameter_mm": 45.0,
+            "gaussian_diameter_mm": {
+              "1.1": 23.14496509119753,
+              "1.3": 23.14604254105082
+            },
+            "min_clear_to_beam": 1.9441768466548848
+          }
+        ],
+        "edge_ray_errors": 0,
+        "edge_vignetted": 2,
+        "fixed_objective_last_z_mm": 249.99999999999972,
+        "reported_wavefront_waves": 0.05929817642729279,
+        "reported_geometric_rms_radius_mm": 0.015577426921120182,
+        "reported_integration_method": "RA128",
+        "rectangular_wavefront_64": 0.05933026253003773,
+        "rectangular_wavefront_128": 0.05929817642729279
+      },
+      {
+        "configuration": 2,
+        "distance_m": 1.5,
+        "gap_mm": 83.60450448529747,
+        "rms_wavefront_waves": 0.16640929455048026,
+        "rms_wavefront_16rings": 0.16640929476857091,
+        "geometric_rms_radius_mm": 0.07678405279320089,
+        "working_fno": 35.38681765734309,
+        "gaussian_target_diameter_mm": {
+          "1.1": 0.36987125985713176,
+          "1.3": 0.3746418657208447
+        },
+        "apertures": [
+          {
+            "surface": 2,
+            "comment": "LC4924 forward",
+            "clear_diameter_mm": 11.43,
+            "gaussian_diameter_mm": {
+              "1.1": 4.00040026439091,
+              "1.3": 4.0005590358648915
+            },
+            "min_clear_to_beam": 2.8571006945605335
+          },
+          {
+            "surface": 3,
+            "comment": "LC4924 forward",
+            "clear_diameter_mm": 11.43,
+            "gaussian_diameter_mm": {
+              "1.1": 4.270146966245397,
+              "1.3": 4.270319339528155
+            },
+            "min_clear_to_beam": 2.6766148129013105
+          },
+          {
+            "surface": 4,
+            "comment": "AFL50-100 reverse",
+            "clear_diameter_mm": 45.0,
+            "gaussian_diameter_mm": {
+              "1.1": 20.616236926272116,
+              "1.3": 20.61724242219054
+            },
+            "min_clear_to_beam": 2.182639126926405
+          },
+          {
+            "surface": 5,
+            "comment": "AFL50-100 reverse",
+            "clear_diameter_mm": 45.0,
+            "gaussian_diameter_mm": {
+              "1.1": 22.302157091131736,
+              "1.3": 22.303248692830355
+            },
+            "min_clear_to_beam": 2.0176432868484215
+          }
+        ],
+        "edge_ray_errors": 0,
+        "edge_vignetted": 0,
+        "fixed_objective_last_z_mm": 250.00000000000048,
+        "reported_wavefront_waves": 0.16640929455048026,
+        "reported_geometric_rms_radius_mm": 0.07678405279320089,
+        "reported_integration_method": "GQ12"
+      },
+      {
+        "configuration": 3,
+        "distance_m": 2.0,
+        "gap_mm": 81.53315485904182,
+        "rms_wavefront_waves": 0.20361471549713892,
+        "rms_wavefront_16rings": 0.20361471571062986,
+        "geometric_rms_radius_mm": 0.15032271323630653,
+        "working_fno": 50.09004937942896,
+        "gaussian_target_diameter_mm": {
+          "1.1": 0.678157419246173,
+          "1.3": 0.6827507531736595
+        },
+        "apertures": [
+          {
+            "surface": 2,
+            "comment": "LC4924 forward",
+            "clear_diameter_mm": 11.43,
+            "gaussian_diameter_mm": {
+              "1.1": 4.00041125481015,
+              "1.3": 4.000574385502291
+            },
+            "min_clear_to_beam": 2.85708973226976
+          },
+          {
+            "surface": 3,
+            "comment": "LC4924 forward",
+            "clear_diameter_mm": 11.43,
+            "gaussian_diameter_mm": {
+              "1.1": 4.270158796856945,
+              "1.3": 4.270335862598796
+            },
+            "min_clear_to_beam": 2.6766044563633105
+          },
+          {
+            "surface": 4,
+            "comment": "AFL50-100 reverse",
+            "clear_diameter_mm": 45.0,
+            "gaussian_diameter_mm": {
+              "1.1": 20.211314534755363,
+              "1.3": 20.21232373344752
+            },
+            "min_clear_to_beam": 2.226364498879148
+          },
+          {
+            "surface": 5,
+            "comment": "AFL50-100 reverse",
+            "clear_diameter_mm": 45.0,
+            "gaussian_diameter_mm": {
+              "1.1": 21.89723994665143,
+              "1.3": 21.89833733221491
+            },
+            "min_clear_to_beam": 2.0549505342490066
+          }
+        ],
+        "edge_ray_errors": 0,
+        "edge_vignetted": 0,
+        "fixed_objective_last_z_mm": 249.99999999999977,
+        "reported_wavefront_waves": 0.20361471549713892,
+        "reported_geometric_rms_radius_mm": 0.15032271323630653,
+        "reported_integration_method": "GQ12"
+      },
+      {
+        "configuration": 4,
+        "distance_m": 3.0,
+        "gap_mm": 79.51834599430876,
+        "rms_wavefront_waves": 0.20435201801263952,
+        "rms_wavefront_16rings": 0.2043520183321118,
+        "geometric_rms_radius_mm": 0.28914267218579404,
+        "working_fno": 83.7336848969564,
+        "gaussian_target_diameter_mm": {
+          "1.1": 1.1963772294105923,
+          "1.3": 1.2022807065457435
+        },
+        "apertures": [
+          {
+            "surface": 2,
+            "comment": "LC4924 forward",
+            "clear_diameter_mm": 11.43,
+            "gaussian_diameter_mm": {
+              "1.1": 4.0004220880172925,
+              "1.3": 4.000589515554929
+            },
+            "min_clear_to_beam": 2.8570789268827355
+          },
+          {
+            "surface": 3,
+            "comment": "LC4924 forward",
+            "clear_diameter_mm": 11.43,
+            "gaussian_diameter_mm": {
+              "1.1": 4.270170456949201,
+              "1.3": 4.270352147498111
+            },
+            "min_clear_to_beam": 2.6765942491877492
+          },
+          {
+            "surface": 4,
+            "comment": "AFL50-100 reverse",
+            "clear_diameter_mm": 45.0,
+            "gaussian_diameter_mm": {
+              "1.1": 19.817443427760814,
+              "1.3": 19.81845554900927
+            },
+            "min_clear_to_beam": 2.2706108399173197
+          },
+          {
+            "surface": 5,
+            "comment": "AFL50-100 reverse",
+            "clear_diameter_mm": 45.0,
+            "gaussian_diameter_mm": {
+              "1.1": 21.503374003400335,
+              "1.3": 21.50447635956662
+            },
+            "min_clear_to_beam": 2.0925875732835975
+          }
+        ],
+        "edge_ray_errors": 0,
+        "edge_vignetted": 0,
+        "fixed_objective_last_z_mm": 249.99999999999983,
+        "reported_wavefront_waves": 0.20435201801263952,
+        "reported_geometric_rms_radius_mm": 0.28914267218579404,
+        "reported_integration_method": "GQ12"
+      },
+      {
+        "configuration": 5,
+        "distance_m": 5.0,
+        "gap_mm": 77.94806652755243,
+        "rms_wavefront_waves": 0.18979838430017548,
+        "rms_wavefront_16rings": 0.1897983856075439,
+        "geometric_rms_radius_mm": 0.5639722886560627,
+        "working_fno": 174.76347063547368,
+        "gaussian_target_diameter_mm": {
+          "1.1": 2.1378296279703113,
+          "1.3": 2.1471489138646813
+        },
+        "apertures": [
+          {
+            "surface": 2,
+            "comment": "LC4924 forward",
+            "clear_diameter_mm": 11.43,
+            "gaussian_diameter_mm": {
+              "1.1": 4.000430628720467,
+              "1.3": 4.000601443801369
+            },
+            "min_clear_to_beam": 2.857070408178232
+          },
+          {
+            "surface": 3,
+            "comment": "LC4924 forward",
+            "clear_diameter_mm": 11.43,
+            "gaussian_diameter_mm": {
+              "1.1": 4.27017964868395,
+              "1.3": 4.270364984989159
+            },
+            "min_clear_to_beam": 2.676586202860366
+          },
+          {
+            "surface": 4,
+            "comment": "AFL50-100 reverse",
+            "clear_diameter_mm": 45.0,
+            "gaussian_diameter_mm": {
+              "1.1": 19.51047131951064,
+              "1.3": 19.511485243423767
+            },
+            "min_clear_to_beam": 2.3063339073670464
+          },
+          {
+            "surface": 5,
+            "comment": "AFL50-100 reverse",
+            "clear_diameter_mm": 45.0,
+            "gaussian_diameter_mm": {
+              "1.1": 21.196405960581433,
+              "1.3": 21.197511731839654
+            },
+            "min_clear_to_beam": 2.1228906755318784
+          }
+        ],
+        "edge_ray_errors": 0,
+        "edge_vignetted": 0,
+        "fixed_objective_last_z_mm": 250.0000000000004,
+        "reported_wavefront_waves": 0.18979838430017548,
+        "reported_geometric_rms_radius_mm": 0.5639722886560627,
+        "reported_integration_method": "GQ12"
+      },
+      {
+        "configuration": 6,
+        "distance_m": 10.0,
+        "gap_mm": 76.79516845067432,
+        "rms_wavefront_waves": 0.17799749574924736,
+        "rms_wavefront_16rings": 0.177997496580424,
+        "geometric_rms_radius_mm": 1.251346204117938,
+        "working_fno": 853.5369309422289,
+        "gaussian_target_diameter_mm": {
+          "1.1": 4.408774299445946,
+          "1.3": 4.427134170590082
+        },
+        "apertures": [
+          {
+            "surface": 2,
+            "comment": "LC4924 forward",
+            "clear_diameter_mm": 11.43,
+            "gaussian_diameter_mm": {
+              "1.1": 4.000436953749701,
+              "1.3": 4.000610277553144
+            },
+            "min_clear_to_beam": 2.8570640994780487
+          },
+          {
+            "surface": 3,
+            "comment": "LC4924 forward",
+            "clear_diameter_mm": 11.43,
+            "gaussian_diameter_mm": {
+              "1.1": 4.270186455371323,
+              "1.3": 4.270374491434428
+            },
+            "min_clear_to_beam": 2.676580244408644
+          },
+          {
+            "surface": 4,
+            "comment": "AFL50-100 reverse",
+            "clear_diameter_mm": 45.0,
+            "gaussian_diameter_mm": {
+              "1.1": 19.285091933650083,
+              "1.3": 19.286106911138084
+            },
+            "min_clear_to_beam": 2.333285831471341
+          },
+          {
+            "surface": 5,
+            "comment": "AFL50-100 reverse",
+            "clear_diameter_mm": 45.0,
+            "gaussian_diameter_mm": {
+              "1.1": 20.971029582399886,
+              "1.3": 20.97213760013213
+            },
+            "min_clear_to_beam": 2.1457040220695713
+          }
+        ],
+        "edge_ray_errors": 0,
+        "edge_vignetted": 0,
+        "fixed_objective_last_z_mm": 250.00000000000028,
+        "reported_wavefront_waves": 0.17799749574924736,
+        "reported_geometric_rms_radius_mm": 1.251346204117938,
+        "reported_integration_method": "GQ12"
+      }
+    ],
+    "travel_mm": 11.120739226974365,
+    "worst_wavefront_waves": 0.20435201801263952,
+    "minimum_aperture_ratio": 1.9441768466548848,
+    "maximum_exit_diameter_mm": 23.14604254105082,
+    "exit_30mm_aperture_ratio": 1.296117897769923,
+    "computational_pupil_mm": 7.6,
+    "physical_gaussian_1e2_mm": 4.0,
+    "wavefront_pupil_profile": "Gaussian",
+    "gap_search_version": 2,
+    "optical_pass": false,
+    "model_relative": "模型\\A_熔石英非球面_1064nm.zmx",
+    "candidate_name": "高斯_A_熔石英非球面_LC4924_N0P1",
+    "prescription": {
+      "ok": true,
+      "units": "Millimeters",
+      "surfaces": [
+        {
+          "surf": 0,
+          "type": "标准面",
+          "comment": "",
+          "radius": "Infinity",
+          "thickness": "Infinity",
+          "material": "",
+          "semi_dia": 0.0,
+          "conic": 0.0,
+          "stop": false
+        },
+        {
+          "surf": 1,
+          "type": "标准面",
+          "comment": "Input reference; Gaussian waist",
+          "radius": "Infinity",
+          "thickness": 158.7048315,
+          "material": "",
+          "semi_dia": 3.8,
+          "conic": 0.0,
+          "stop": true
+        },
+        {
+          "surf": 2,
+          "type": "标准面",
+          "comment": "LC4924 forward",
+          "radius": -9.2,
+          "thickness": 2.0,
+          "material": "F_SILICA",
+          "semi_dia": 6.35,
+          "conic": 0.0,
+          "stop": false
+        },
+        {
+          "surf": 3,
+          "type": "标准面",
+          "comment": "LC4924 forward",
+          "radius": "Infinity",
+          "thickness": 76.7951685,
+          "material": "",
+          "semi_dia": 6.35,
+          "conic": 0.0,
+          "stop": false
+        },
+        {
+          "surf": 4,
+          "type": "标准面",
+          "comment": "AFL50-100 reverse",
+          "radius": "Infinity",
+          "thickness": 12.5,
+          "material": "C79-80",
+          "semi_dia": 25.0,
+          "conic": 0.0,
+          "stop": false
+        },
+        {
+          "surf": 5,
+          "type": "偶次非球面",
+          "comment": "AFL50-100 reverse",
+          "radius": -47.61000000000001,
+          "thickness": 10000.0,
+          "material": "",
+          "semi_dia": 25.0,
+          "conic": -1.0,
+          "stop": false,
+          "par2": -4.954e-07,
+          "par3": -4.021e-11
+        },
+        {
+          "surf": 6,
+          "type": "标准面",
+          "comment": "",
+          "radius": "Infinity",
+          "thickness": "Infinity",
+          "material": "",
+          "semi_dia": 14.906891582993154,
+          "conic": 0.0,
+          "stop": false
+        }
+      ],
+      "count": 7
+    },
+    "evaluated_worst_wavefront_waves": 0.20435201801263952,
+    "gaussian_diameter_pass_5mm": true,
+    "nominal_30mm_exit_margin_pass": false,
+    "is_cemented_reference": false,
+    "all_requested_optical_checks_pass": false,
+    "source_objective_efl_difference_mm": 0.0,
+    "objective_efl_rechecked_mm": 105.88693450906678
+  },
+  {
+    "gap_surface": 3,
+    "last_surface": 7,
+    "inner_surface": 5,
+    "pre_offset": 226.73771579354727,
+    "negative": "BICV-FS04",
+    "reverse_negative": false,
+    "positive": [
+      "LA4904",
+      "LB4842"
+    ],
+    "reverse_positive": [
+      true,
+      false
+    ],
+    "internal_gap_mm": 6.8822842064527965,
+    "name": "B_熔石英空气双片_1064nm",
+    "category": "B_熔石英空气双片",
+    "objective_efl_1064_mm": 90.0000002579136,
+    "common_gap_optimization": [
+      {
+        "internal_gap_mm": 6.8822842064527965,
+        "mean_square_wavefront": 0.0027714059575890877,
+        "wavefronts": [
+          0.11251044753651737,
+          0.045392646815349276,
+          0.019010245077581547,
+          0.00681456253781908,
+          0.02147467396740202,
+          0.03225450748757894
+        ]
+      },
+      {
+        "internal_gap_mm": 14.813058023873376,
+        "mean_square_wavefront": 0.003259022304972393,
+        "wavefronts": [
+          0.12223783960640419,
+          0.055640194333481836,
+          0.029309567603174838,
+          0.007846894533847999,
+          0.011322249216378965,
+          0.021619327891901085
+        ]
+      },
+      {
+        "internal_gap_mm": 22.743831841293954,
+        "mean_square_wavefront": 0.00429645752976185,
+        "wavefronts": [
+          0.13577835454928128,
+          0.06978459043849024,
+          0.043623302762711834,
+          0.02129743460234799,
+          0.007116377309956975,
+          0.008116554762136373
+        ]
+      },
+      {
+        "internal_gap_mm": 30.674605658714533,
+        "mean_square_wavefront": 0.006305703397444794,
+        "wavefronts": [
+          0.15369425421527125,
+          0.08846825546117373,
+          0.0625974471561238,
+          0.04036383722371774,
+          0.024914717377810643,
+          0.014739114411462088
+        ]
+      },
+      {
+        "internal_gap_mm": 38.60537947613511,
+        "mean_square_wavefront": 0.009954760829030941,
+        "wavefronts": [
+          0.17665768075717894,
+          0.11246271446135055,
+          0.08703467643914808,
+          0.06516518368017665,
+          0.049874044672029265,
+          0.03954504091259856
+        ]
+      },
+      {
+        "internal_gap_mm": 46.53615329355569,
+        "mean_square_wavefront": 0.01627656792191223,
+        "wavefronts": [
+          0.20546941235478083,
+          0.14269280386137542,
+          0.1179133926119935,
+          0.09664468130533907,
+          0.08178831270960132,
+          0.07174539125594931
+        ]
+      },
+      {
+        "internal_gap_mm": 54.46692711097627,
+        "mean_square_wavefront": 0.02684241265832209,
+        "wavefronts": [
+          0.2410811345302515,
+          0.18026535040007183,
+          0.15641477261448666,
+          0.13603835742296397,
+          0.12186659087942699,
+          0.11231778226854976
+        ]
+      },
+      {
+        "internal_gap_mm": 62.39770092839685,
+        "mean_square_wavefront": 0.04401469797127256,
+        "wavefronts": [
+          0.2846222505032701,
+          0.22650407344063433,
+          0.20395960864088597,
+          0.18485927275839303,
+          0.17168467869310997,
+          0.16286855276948684
+        ]
+      },
+      {
+        "internal_gap_mm": 70.32847474581743,
+        "mean_square_wavefront": 0.07131627845627399,
+        "wavefronts": [
+          0.33743262742893404,
+          0.28299313536255255,
+          0.26225681303395637,
+          0.24494131276519607,
+          0.23317516563002372,
+          0.22540239012323723
+        ]
+      },
+      {
+        "internal_gap_mm": 9.911570247619704,
+        "mean_square_wavefront": 0.002912029308292845,
+        "wavefronts": [
+          0.11580761732069918,
+          0.04888306370665134,
+          0.02250550111481661,
+          0.005094739417856423,
+          0.017917593327242604,
+          0.028595866871030724
+        ]
+      },
+      {
+        "internal_gap_mm": 11.783771982706469,
+        "mean_square_wavefront": 0.0030248064896232552,
+        "wavefronts": [
+          0.1180996070469784,
+          0.05129724033268623,
+          0.024932149774035482,
+          0.005229706771523313,
+          0.015505041472520091,
+          0.026087289069656693
+        ]
+      },
+      {
+        "internal_gap_mm": 8.75448594153956,
+        "mean_square_wavefront": 0.002852706653028073,
+        "wavefronts": [
+          0.11448918355286729,
+          0.04749030338530712,
+          0.02110858647219036,
+          0.005560895002702178,
+          0.01932820502842056,
+          0.03005099609384206
+        ]
+      },
+      {
+        "internal_gap_mm": 8.039368512532942,
+        "mean_square_wavefront": 0.0028196200482797184,
+        "wavefronts": [
+          0.11371105542445285,
+          0.04666658775952866,
+          0.02028371135759218,
+          0.005988344331804284,
+          0.02016807081090926,
+          0.030914486188667514
+        ]
+      },
+      {
+        "internal_gap_mm": 7.597401635459414,
+        "mean_square_wavefront": 0.0028004525226924004,
+        "wavefronts": [
+          0.11324399235431118,
+          0.046171458688497306,
+          0.019788416532047666,
+          0.006288542021731683,
+          0.02067480324322613,
+          0.03143461556368212
+        ]
+      },
+      {
+        "internal_gap_mm": 7.324251083526326,
+        "mean_square_wavefront": 0.0027890764665535815,
+        "wavefronts": [
+          0.11296057964212057,
+          0.045870736136943466,
+          0.019487805223594824,
+          0.006484456307470541,
+          0.0209832526312462,
+          0.03175094007221785
+        ]
+      },
+      {
+        "internal_gap_mm": 7.155434758385884,
+        "mean_square_wavefront": 0.0027822208337325454,
+        "wavefronts": [
+          0.11278741613585476,
+          0.045686887042598955,
+          0.01930410691278505,
+          0.006608819184863909,
+          0.02117207714259971,
+          0.03194448670583004
+        ]
+      },
+      {
+        "internal_gap_mm": 7.051100531593238,
+        "mean_square_wavefront": 0.0027780497137138657,
+        "wavefronts": [
+          0.11268115513082744,
+          0.04557402621369372,
+          0.01919137083933278,
+          0.00668678885575351,
+          0.021288085689516383,
+          0.03206336294153721
+        ]
+      },
+      {
+        "internal_gap_mm": 6.986618433245443,
+        "mean_square_wavefront": 0.002775496736495071,
+        "wavefronts": [
+          0.1126157717823521,
+          0.04550456559068757,
+          0.019121999754689357,
+          0.00673536706939259,
+          0.021359519307458115,
+          0.032136548757060894
+        ]
+      },
+      {
+        "internal_gap_mm": 6.946766304800592,
+        "mean_square_wavefront": 0.0027739283891534488,
+        "wavefronts": [
+          0.11257547330134568,
+          0.04546174785203616,
+          0.019079241755877534,
+          0.00676553296879213,
+          0.021403567035945807,
+          0.032181672485178954
+        ]
+      },
+      {
+        "internal_gap_mm": 6.9221363348976475,
+        "mean_square_wavefront": 0.0027729626927322716,
+        "wavefronts": [
+          0.11255060963249403,
+          0.04543532755780192,
+          0.019052860049286868,
+          0.006784229337958217,
+          0.021430751373107477,
+          0.032209518612968224
+        ]
+      },
+      {
+        "internal_gap_mm": 6.906914176355741,
+        "mean_square_wavefront": 0.0027723672199901094,
+        "wavefronts": [
+          0.11253525905040977,
+          0.04541901504092134,
+          0.019036572114261175,
+          0.006795803373976056,
+          0.02144753751668085,
+          0.03222671215345648
+        ]
+      },
+      {
+        "internal_gap_mm": 6.897506364994703,
+        "mean_square_wavefront": 0.002771999735670078,
+        "wavefronts": [
+          0.11252577813100066,
+          0.04540893945440704,
+          0.01902651198570803,
+          0.006802964313371875,
+          0.021457906465402892,
+          0.03223733326424498
+        ]
+      },
+      {
+        "internal_gap_mm": 6.891692017813835,
+        "mean_square_wavefront": 0.0027717728021727415,
+        "wavefronts": [
+          0.11251992091766574,
+          0.045402714754997846,
+          0.01902029699239054,
+          0.006807392902886314,
+          0.021464312558224112,
+          0.032243893889926684
+        ]
+      },
+      {
+        "internal_gap_mm": 6.888098553633665,
+        "mean_square_wavefront": 0.0027716326496931803,
+        "wavefronts": [
+          0.11251630189895588,
+          0.04539886862609831,
+          0.01901645686256676,
+          0.006810130656473181,
+          0.021468271407826367,
+          0.032247949457417775
+        ]
+      },
+      {
+        "internal_gap_mm": 6.885877670632966,
+        "mean_square_wavefront": 0.002771546042477415,
+        "wavefronts": [
+          0.11251406551997606,
+          0.045396492005248916,
+          0.019014083671623112,
+          0.006811823518235665,
+          0.021470716987326333,
+          0.03225045461979503
+        ]
+      },
+      {
+        "internal_gap_mm": 6.884505089453496,
+        "mean_square_wavefront": 0.0027714925328482212,
+        "wavefronts": [
+          0.11251268346023664,
+          0.045395023171874306,
+          0.01901261732717896,
+          0.006812869381662267,
+          0.021472228929601676,
+          0.03225200314467854
+        ]
+      },
+      {
+        "internal_gap_mm": 6.883656787632266,
+        "mean_square_wavefront": 0.0027714594421197856,
+        "wavefronts": [
+          0.11251182938829593,
+          0.045394115475946385,
+          0.019011711084622,
+          0.006813516615615612,
+          0.021473162222007253,
+          0.03225295827866178
+        ]
+      },
+      {
+        "internal_gap_mm": 6.883132508274027,
+        "mean_square_wavefront": 0.002771439047883838,
+        "wavefronts": [
+          0.11251130157865545,
+          0.04539355448179184,
+          0.019011151196783333,
+          0.006813915687409205,
+          0.021473740645329326,
+          0.03225355269987355
+        ]
+      },
+      {
+        "internal_gap_mm": 6.882808485811036,
+        "mean_square_wavefront": 0.002771426400685562,
+        "wavefronts": [
+          0.11251097550434105,
+          0.04539320790463282,
+          0.01901080514195093,
+          0.0068141634630267825,
+          0.02147409653390442,
+          0.032253916250715935
+        ]
+      },
+      {
+        "internal_gap_mm": 6.882608228915788,
+        "mean_square_wavefront": 0.0027714185832251816,
+        "wavefronts": [
+          0.11251077371072132,
+          0.04539299355601195,
+          0.019010591004761643,
+          0.006814315555567653,
+          0.02147431707843441,
+          0.03225414195980869
+        ]
+      },
+      {
+        "internal_gap_mm": 6.882484463348044,
+        "mean_square_wavefront": 0.002771413765074209,
+        "wavefronts": [
+          0.11251064922730165,
+          0.045392861100946175,
+          0.01901045884358711,
+          0.006814409122405158,
+          0.02147445320990702,
+          0.0322542819509414
+        ]
+      },
+      {
+        "internal_gap_mm": 6.882407972020541,
+        "mean_square_wavefront": 0.0027714107814009546,
+        "wavefronts": [
+          0.11251057223397666,
+          0.04539277933910879,
+          0.019010377107348327,
+          0.006814467745480007,
+          0.021474537811936582,
+          0.032254367536905
+        ]
+      },
+      {
+        "internal_gap_mm": 6.8823606977803,
+        "mean_square_wavefront": 0.002771408947271006,
+        "wavefronts": [
+          0.11251052458888922,
+          0.045392728725397596,
+          0.01901032649341647,
+          0.00681450448934802,
+          0.021474590321924544,
+          0.032254421478385295
+        ]
+      },
+      {
+        "internal_gap_mm": 6.8822842064527965,
+        "mean_square_wavefront": 0.0027714059575890877,
+        "wavefronts": [
+          0.11251044753651737,
+          0.045392646815349276,
+          0.019010245077581547,
+          0.00681456253781908,
+          0.02147467396740202,
+          0.03225450748757894
+        ]
+      }
+    ],
+    "internal_gap_bounds_mm": [
+      6.882283206452796,
+      70.32847574581743
+    ],
+    "native_multiconfig_dls": {
+      "ok": true,
+      "method": "local",
+      "merit_before": 0.05257082761196044,
+      "merit_after": 0.052568242125876664,
+      "improved": true,
+      "snapshot": "C:\\Users\\Administrator\\Documents\\Zemax\\MCP\\snapshots\\LENS_20261116-143600-138_pre-optimize.zmx"
+    },
+    "rows": [
+      {
+        "configuration": 1,
+        "distance_m": 1.0,
+        "gap_mm": 68.17599316354435,
+        "rms_wavefront_waves": 0.11251044755294656,
+        "rms_wavefront_16rings": 0.11251044779521015,
+        "geometric_rms_radius_mm": 0.0316922874737156,
+        "working_fno": 26.00468991457554,
+        "gaussian_target_diameter_mm": {
+          "1.1": 0.1657572281937908,
+          "1.3": 0.1732776711617563
+        },
+        "apertures": [
+          {
+            "surface": 2,
+            "comment": "BICV-FS04 forward",
+            "clear_diameter_mm": 10.795,
+            "gaussian_diameter_mm": {
+              "1.1": 4.000436166119262,
+              "1.3": 4.000609177521885
+            },
+            "min_clear_to_beam": 2.6983390581248416
+          },
+          {
+            "surface": 3,
+            "comment": "BICV-FS04 forward",
+            "clear_diameter_mm": 10.795,
+            "gaussian_diameter_mm": {
+              "1.1": 4.133080065423038,
+              "1.3": 4.1332618361529345
+            },
+            "min_clear_to_beam": 2.6117387254729376
+          },
+          {
+            "surface": 4,
+            "comment": "LA4904 reverse",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 17.459243893035158,
+              "1.3": 17.460163782130174
+            },
+            "min_clear_to_beam": 2.618532138100143
+          },
+          {
+            "surface": 5,
+            "comment": "LA4904 reverse",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 18.516383656149518,
+              "1.3": 18.5173622299035
+            },
+            "min_clear_to_beam": 2.4690341654691634
+          },
+          {
+            "surface": 6,
+            "comment": "LB4842 forward",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 19.031348172067194,
+              "1.3": 19.032357550391108
+            },
+            "min_clear_to_beam": 2.40222473116897
+          },
+          {
+            "surface": 7,
+            "comment": "LB4842 forward",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 19.157950032250252,
+              "1.3": 19.158968417690243
+            },
+            "min_clear_to_beam": 2.3863497764203676
+          }
+        ],
+        "edge_ray_errors": 0,
+        "edge_vignetted": 0,
+        "fixed_objective_last_z_mm": 250.0000000000001,
+        "reported_wavefront_waves": 0.11251044755294656,
+        "reported_geometric_rms_radius_mm": 0.0316922874737156,
+        "reported_integration_method": "GQ12"
+      },
+      {
+        "configuration": 2,
+        "distance_m": 1.5,
+        "gap_mm": 65.11008799885244,
+        "rms_wavefront_waves": 0.04539264693116441,
+        "rms_wavefront_16rings": 0.045392647075707004,
+        "geometric_rms_radius_mm": 0.019327809675328114,
+        "working_fno": 40.26075099966249,
+        "gaussian_target_diameter_mm": {
+          "1.1": 0.1444460064211294,
+          "1.3": 0.1634454590991086
+        },
+        "apertures": [
+          {
+            "surface": 2,
+            "comment": "BICV-FS04 forward",
+            "clear_diameter_mm": 10.795,
+            "gaussian_diameter_mm": {
+              "1.1": 4.000453195396506,
+              "1.3": 4.000632961166221
+            },
+            "min_clear_to_beam": 2.6983230165791463
+          },
+          {
+            "surface": 3,
+            "comment": "BICV-FS04 forward",
+            "clear_diameter_mm": 10.795,
+            "gaussian_diameter_mm": {
+              "1.1": 4.133097806035318,
+              "1.3": 4.133286613252702
+            },
+            "min_clear_to_beam": 2.611723069333642
+          },
+          {
+            "surface": 4,
+            "comment": "LA4904 reverse",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 16.86003918147688,
+              "1.3": 16.86095716512077
+            },
+            "min_clear_to_beam": 2.711589831600911
+          },
+          {
+            "surface": 5,
+            "comment": "LA4904 reverse",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 17.91718403206739,
+              "1.3": 17.918162718142874
+            },
+            "min_clear_to_beam": 2.551600893416747
+          },
+          {
+            "surface": 6,
+            "comment": "LB4842 forward",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 18.459023828136665,
+              "1.3": 18.46003588207005
+            },
+            "min_clear_to_beam": 2.4767015780509474
+          },
+          {
+            "surface": 7,
+            "comment": "LB4842 forward",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 18.609587455180673,
+              "1.3": 18.610610167185808
+            },
+            "min_clear_to_beam": 2.4566631394285725
+          }
+        ],
+        "edge_ray_errors": 0,
+        "edge_vignetted": 0,
+        "fixed_objective_last_z_mm": 250.0000000000002,
+        "reported_wavefront_waves": 0.04539264693116441,
+        "reported_geometric_rms_radius_mm": 0.019327809675328114,
+        "reported_integration_method": "GQ12"
+      },
+      {
+        "configuration": 3,
+        "distance_m": 2.0,
+        "gap_mm": 63.63961606839744,
+        "rms_wavefront_waves": 0.01901024483003734,
+        "rms_wavefront_16rings": 0.019010245396606288,
+        "geometric_rms_radius_mm": 0.010220969810014536,
+        "working_fno": 54.585368084918606,
+        "gaussian_target_diameter_mm": {
+          "1.1": 0.16486082009133063,
+          "1.3": 0.19417957719472453
+        },
+        "apertures": [
+          {
+            "surface": 2,
+            "comment": "BICV-FS04 forward",
+            "clear_diameter_mm": 10.795,
+            "gaussian_diameter_mm": {
+              "1.1": 4.0004614786829364,
+              "1.3": 4.000644529859853
+            },
+            "min_clear_to_beam": 2.6983152138183493
+          },
+          {
+            "surface": 3,
+            "comment": "BICV-FS04 forward",
+            "clear_diameter_mm": 10.795,
+            "gaussian_diameter_mm": {
+              "1.1": 4.133106434327939,
+              "1.3": 4.133298663783612
+            },
+            "min_clear_to_beam": 2.6117154549190698
+          },
+          {
+            "surface": 4,
+            "comment": "LA4904 reverse",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 16.57264656139596,
+              "1.3": 16.573563008933565
+            },
+            "min_clear_to_beam": 2.758610202003985
+          },
+          {
+            "surface": 5,
+            "comment": "LA4904 reverse",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 17.629793882362197,
+              "1.3": 17.63077201211622
+            },
+            "min_clear_to_beam": 2.5931933081875425
+          },
+          {
+            "surface": 6,
+            "comment": "LB4842 forward",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 18.18452372980632,
+              "1.3": 18.18553649951126
+            },
+            "min_clear_to_beam": 2.5140858506554773
+          },
+          {
+            "surface": 7,
+            "comment": "LB4842 forward",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 18.346580005428734,
+              "1.3": 18.347604259326125
+            },
+            "min_clear_to_beam": 2.4918784683706283
+          }
+        ],
+        "edge_ray_errors": 0,
+        "edge_vignetted": 0,
+        "fixed_objective_last_z_mm": 250.0000000000002,
+        "reported_wavefront_waves": 0.01901024483003734,
+        "reported_geometric_rms_radius_mm": 0.010220969810014536,
+        "reported_integration_method": "GQ12"
+      },
+      {
+        "configuration": 4,
+        "distance_m": 3.0,
+        "gap_mm": 62.20881788753033,
+        "rms_wavefront_waves": 0.006814562583011516,
+        "rms_wavefront_16rings": 0.006814562531044181,
+        "geometric_rms_radius_mm": 0.009495037713865609,
+        "working_fno": 83.43697285255101,
+        "gaussian_target_diameter_mm": {
+          "1.1": 0.255410270418814,
+          "1.3": 0.2987304322455008
+        },
+        "apertures": [
+          {
+            "surface": 2,
+            "comment": "BICV-FS04 forward",
+            "clear_diameter_mm": 10.795,
+            "gaussian_diameter_mm": {
+              "1.1": 4.000469610477759,
+              "1.3": 4.000655886966388
+            },
+            "min_clear_to_beam": 2.698307553811037
+          },
+          {
+            "surface": 3,
+            "comment": "BICV-FS04 forward",
+            "clear_diameter_mm": 10.795,
+            "gaussian_diameter_mm": {
+              "1.1": 4.133114904207153,
+              "1.3": 4.133310493059928
+            },
+            "min_clear_to_beam": 2.6117079803526595
+          },
+          {
+            "surface": 4,
+            "comment": "LA4904 reverse",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 16.29300687860441,
+              "1.3": 16.29392143598012
+            },
+            "min_clear_to_beam": 2.805954366457262
+          },
+          {
+            "surface": 5,
+            "comment": "LA4904 reverse",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 17.350156622145956,
+              "1.3": 17.351133822561547
+            },
+            "min_clear_to_beam": 2.6349863050765383
+          },
+          {
+            "surface": 6,
+            "comment": "LB4842 forward",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 17.917428811630796,
+              "1.3": 17.91844191669974
+            },
+            "min_clear_to_beam": 2.551561135312194
+          },
+          {
+            "surface": 7,
+            "comment": "LB4842 forward",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 18.090667715545926,
+              "1.3": 18.09169313030594
+            },
+            "min_clear_to_beam": 2.5271266581132226
+          }
+        ],
+        "edge_ray_errors": 0,
+        "edge_vignetted": 0,
+        "fixed_objective_last_z_mm": 250.00000000000009,
+        "reported_wavefront_waves": 0.006814562583011516,
+        "reported_geometric_rms_radius_mm": 0.009495037713865609,
+        "reported_integration_method": "GQ12"
+      },
+      {
+        "configuration": 5,
+        "distance_m": 5.0,
+        "gap_mm": 61.091784882166664,
+        "rms_wavefront_waves": 0.021474674681026023,
+        "rms_wavefront_16rings": 0.021474674643829416,
+        "geometric_rms_radius_mm": 0.04009459559415761,
+        "working_fno": 141.9568598433838,
+        "gaussian_target_diameter_mm": {
+          "1.1": 0.47942767843286127,
+          "1.3": 0.545260023059884
+        },
+        "apertures": [
+          {
+            "surface": 2,
+            "comment": "BICV-FS04 forward",
+            "clear_diameter_mm": 10.795,
+            "gaussian_diameter_mm": {
+              "1.1": 4.000476008378959,
+              "1.3": 4.000664822459078
+            },
+            "min_clear_to_beam": 2.6983015271358486
+          },
+          {
+            "surface": 3,
+            "comment": "BICV-FS04 forward",
+            "clear_diameter_mm": 10.795,
+            "gaussian_diameter_mm": {
+              "1.1": 4.1331215676891455,
+              "1.3": 4.133319799463302
+            },
+            "min_clear_to_beam": 2.6117020999443827
+          },
+          {
+            "surface": 4,
+            "comment": "LA4904 reverse",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 16.07468975228105,
+              "1.3": 16.075602559011866
+            },
+            "min_clear_to_beam": 2.8440613552224017
+          },
+          {
+            "surface": 5,
+            "comment": "LA4904 reverse",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 17.13184140005883,
+              "1.3": 17.13281760507113
+            },
+            "min_clear_to_beam": 2.668562816338357
+          },
+          {
+            "surface": 6,
+            "comment": "LB4842 forward",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 17.70890552067333,
+              "1.3": 17.709918636332862
+            },
+            "min_clear_to_beam": 2.5816041811848267
+          },
+          {
+            "surface": 7,
+            "comment": "LB4842 forward",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 17.890874809625256,
+              "1.3": 17.89190089445448
+            },
+            "min_clear_to_beam": 2.555346146265024
+          }
+        ],
+        "edge_ray_errors": 0,
+        "edge_vignetted": 0,
+        "fixed_objective_last_z_mm": 250.00000000000048,
+        "reported_wavefront_waves": 0.021474674681026023,
+        "reported_geometric_rms_radius_mm": 0.04009459559415761,
+        "reported_integration_method": "GQ12"
+      },
+      {
+        "configuration": 6,
+        "distance_m": 10.0,
+        "gap_mm": 60.26965183316017,
+        "rms_wavefront_waves": 0.03225450705983909,
+        "rms_wavefront_16rings": 0.03225450727240461,
+        "geometric_rms_radius_mm": 0.11648331446132361,
+        "working_fno": 293.1915152669558,
+        "gaussian_target_diameter_mm": {
+          "1.1": 1.0663663660273754,
+          "1.3": 1.1871944221140278
+        },
+        "apertures": [
+          {
+            "surface": 2,
+            "comment": "BICV-FS04 forward",
+            "clear_diameter_mm": 10.795,
+            "gaussian_diameter_mm": {
+              "1.1": 4.0004807448647774,
+              "1.3": 4.000671437567647
+            },
+            "min_clear_to_beam": 2.698297065495389
+          },
+          {
+            "surface": 3,
+            "comment": "BICV-FS04 forward",
+            "clear_diameter_mm": 10.795,
+            "gaussian_diameter_mm": {
+              "1.1": 4.133126500558211,
+              "1.3": 4.13332668884093
+            },
+            "min_clear_to_beam": 2.611697746791735
+          },
+          {
+            "surface": 4,
+            "comment": "LA4904 reverse",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 15.91400858824256,
+              "1.3": 15.914919950667352
+            },
+            "min_clear_to_beam": 2.872775995212143
+          },
+          {
+            "surface": 5,
+            "comment": "LA4904 reverse",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 16.97116164476441,
+              "1.3": 16.972136964193304
+            },
+            "min_clear_to_beam": 2.693826952755392
+          },
+          {
+            "surface": 6,
+            "comment": "LB4842 forward",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 17.55543262478141,
+              "1.3": 17.556445605783022
+            },
+            "min_clear_to_beam": 2.6041717683982695
+          },
+          {
+            "surface": 7,
+            "comment": "LB4842 forward",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 17.74382747315056,
+              "1.3": 17.7448539171739
+            },
+            "min_clear_to_beam": 2.5765216334495196
+          }
+        ],
+        "edge_ray_errors": 0,
+        "edge_vignetted": 0,
+        "fixed_objective_last_z_mm": 250.0,
+        "reported_wavefront_waves": 0.03225450705983909,
+        "reported_geometric_rms_radius_mm": 0.11648331446132361,
+        "reported_integration_method": "GQ12"
+      }
+    ],
+    "travel_mm": 7.90634133038418,
+    "worst_wavefront_waves": 0.11251044755294656,
+    "minimum_aperture_ratio": 2.3863497764203676,
+    "maximum_exit_diameter_mm": 19.158968417690243,
+    "exit_30mm_aperture_ratio": 1.565846309987118,
+    "computational_pupil_mm": 7.6,
+    "physical_gaussian_1e2_mm": 4.0,
+    "wavefront_pupil_profile": "Gaussian",
+    "gap_search_version": 2,
+    "optical_pass": false,
+    "model_relative": "模型\\B_熔石英空气双片_1064nm.zmx",
+    "candidate_name": "高斯_B_空气双片_候选1",
+    "prescription": {
+      "ok": true,
+      "units": "Millimeters",
+      "surfaces": [
+        {
+          "surf": 0,
+          "type": "标准面",
+          "comment": "",
+          "radius": "Infinity",
+          "thickness": "Infinity",
+          "material": "",
+          "semi_dia": 0.0,
+          "conic": 0.0,
+          "stop": false
+        },
+        {
+          "surf": 1,
+          "type": "标准面",
+          "comment": "Input reference; Gaussian waist",
+          "radius": "Infinity",
+          "thickness": 166.4680639935,
+          "material": "",
+          "semi_dia": 3.8,
+          "conic": 0.0,
+          "stop": true
+        },
+        {
+          "surf": 2,
+          "type": "标准面",
+          "comment": "BICV-FS04 forward",
+          "radius": -18.71,
+          "thickness": 2.0,
+          "material": "F_SILICA",
+          "semi_dia": 6.35,
+          "conic": 0.0,
+          "stop": false
+        },
+        {
+          "surf": 3,
+          "type": "标准面",
+          "comment": "BICV-FS04 forward",
+          "radius": 18.71,
+          "thickness": 60.2696518,
+          "material": "",
+          "semi_dia": 6.35,
+          "conic": 0.0,
+          "stop": false
+        },
+        {
+          "surf": 4,
+          "type": "标准面",
+          "comment": "LA4904 reverse",
+          "radius": "Infinity",
+          "thickness": 7.84,
+          "material": "F_SILICA",
+          "semi_dia": 25.4,
+          "conic": 0.0,
+          "stop": false
+        },
+        {
+          "surf": 5,
+          "type": "标准面",
+          "comment": "LA4904 reverse",
+          "radius": -69.0100000000002,
+          "thickness": 6.8822842064528,
+          "material": "",
+          "semi_dia": 25.4,
+          "conic": 0.0,
+          "stop": false
+        },
+        {
+          "surf": 6,
+          "type": "标准面",
+          "comment": "LB4842 forward",
+          "radius": 182.990000000001,
+          "thickness": 6.54,
+          "material": "F_SILICA",
+          "semi_dia": 25.4,
+          "conic": 0.0,
+          "stop": false
+        },
+        {
+          "surf": 7,
+          "type": "标准面",
+          "comment": "LB4842 forward",
+          "radius": -182.990000000001,
+          "thickness": 10000.0,
+          "material": "",
+          "semi_dia": 25.4,
+          "conic": 0.0,
+          "stop": false
+        },
+        {
+          "surf": 8,
+          "type": "标准面",
+          "comment": "",
+          "radius": "Infinity",
+          "thickness": "Infinity",
+          "material": "",
+          "semi_dia": 0.5171547446458113,
+          "conic": 0.0,
+          "stop": false
+        }
+      ],
+      "count": 9
+    },
+    "evaluated_worst_wavefront_waves": 0.11251044755294656,
+    "gaussian_diameter_pass_5mm": true,
+    "nominal_30mm_exit_margin_pass": true,
+    "is_cemented_reference": false,
+    "all_requested_optical_checks_pass": false,
+    "source_objective_efl_difference_mm": 2.842170943040401e-14,
+    "objective_efl_rechecked_mm": 90.00000025791363
+  },
+  {
+    "gap_surface": 3,
+    "last_surface": 6,
+    "inner_surface": null,
+    "pre_offset": 228.5,
+    "negative": "BICV-FS04",
+    "reverse_negative": false,
+    "positive": [
+      "AC508-100-C"
+    ],
+    "reverse_positive": [
+      true
+    ],
+    "internal_gap_mm": 0.0,
+    "name": "C_胶合像差对照_1064nm",
+    "category": "C_胶合像差对照",
+    "objective_efl_1064_mm": 99.38372536308262,
+    "native_multiconfig_dls": {
+      "ok": true,
+      "method": "local",
+      "merit_before": 0.2423173316564923,
+      "merit_after": 0.24231663467210257,
+      "improved": true,
+      "snapshot": "C:\\Users\\Administrator\\Documents\\Zemax\\MCP\\snapshots\\LENS_20261116-142546-304_pre-optimize.zmx"
+    },
+    "rows": [
+      {
+        "configuration": 1,
+        "distance_m": 1.0,
+        "gap_mm": 72.01865532434827,
+        "rms_wavefront_waves": 0.466234668232631,
+        "rms_wavefront_16rings": 0.4662346681939771,
+        "geometric_rms_radius_mm": 0.15425364249275328,
+        "working_fno": 24.73438279766171,
+        "gaussian_target_diameter_mm": {
+          "1.1": 0.9684914933678107,
+          "1.3": 0.9699560896521516
+        },
+        "apertures": [
+          {
+            "surface": 2,
+            "comment": "BICV-FS04 forward",
+            "clear_diameter_mm": 10.795,
+            "gaussian_diameter_mm": {
+              "1.1": 4.000424796541731,
+              "1.3": 4.000593298376516
+            },
+            "min_clear_to_beam": 2.698349768365789
+          },
+          {
+            "surface": 3,
+            "comment": "BICV-FS04 forward",
+            "clear_diameter_mm": 10.795,
+            "gaussian_diameter_mm": {
+              "1.1": 4.1330682193226025,
+              "1.3": 4.13324529149121
+            },
+            "min_clear_to_beam": 2.611749179808618
+          },
+          {
+            "surface": 4,
+            "comment": "AC508-100-C reverse",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 18.210300941580492,
+              "1.3": 18.211239830789104
+            },
+            "min_clear_to_beam": 2.510537471627978
+          },
+          {
+            "surface": 5,
+            "comment": "AC508-100-C reverse",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 18.562404071122902,
+              "1.3": 18.563361851997502
+            },
+            "min_clear_to_beam": 2.4629159504898794
+          },
+          {
+            "surface": 6,
+            "comment": "AC508-100-C reverse",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 21.600675776231547,
+              "1.3": 21.60179561033352
+            },
+            "min_clear_to_beam": 2.116490722564248
+          }
+        ],
+        "edge_ray_errors": 0,
+        "edge_vignetted": 0,
+        "fixed_objective_last_z_mm": 250.00000000000028,
+        "reported_wavefront_waves": 0.466234668232631,
+        "reported_geometric_rms_radius_mm": 0.15425364249275328,
+        "reported_integration_method": "GQ12"
+      },
+      {
+        "configuration": 2,
+        "distance_m": 1.5,
+        "gap_mm": 68.38367758560712,
+        "rms_wavefront_waves": 0.1399151540661748,
+        "rms_wavefront_16rings": 0.1399151545750025,
+        "geometric_rms_radius_mm": 0.08995639066488187,
+        "working_fno": 40.6098118457297,
+        "gaussian_target_diameter_mm": {
+          "1.1": 0.6284113402639894,
+          "1.3": 0.6327480903622668
+        },
+        "apertures": [
+          {
+            "surface": 2,
+            "comment": "BICV-FS04 forward",
+            "clear_diameter_mm": 10.795,
+            "gaussian_diameter_mm": {
+              "1.1": 4.000444760247332,
+              "1.3": 4.000621180366627
+            },
+            "min_clear_to_beam": 2.6983309624458665
+          },
+          {
+            "surface": 3,
+            "comment": "BICV-FS04 forward",
+            "clear_diameter_mm": 10.795,
+            "gaussian_diameter_mm": {
+              "1.1": 4.133089018890315,
+              "1.3": 4.133274340853562
+            },
+            "min_clear_to_beam": 2.611730823986565
+          },
+          {
+            "surface": 4,
+            "comment": "AC508-100-C reverse",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 17.499880855718963,
+              "1.3": 17.500819449308885
+            },
+            "min_clear_to_beam": 2.61244909887951
+          },
+          {
+            "surface": 5,
+            "comment": "AC508-100-C reverse",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 17.848999819014537,
+              "1.3": 17.849957920500497
+            },
+            "min_clear_to_beam": 2.561350575929988
+          },
+          {
+            "surface": 6,
+            "comment": "AC508-100-C reverse",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 20.847404263603003,
+              "1.3": 20.848528920006466
+            },
+            "min_clear_to_beam": 2.1929604805894294
+          }
+        ],
+        "edge_ray_errors": 0,
+        "edge_vignetted": 0,
+        "fixed_objective_last_z_mm": 250.0000000000001,
+        "reported_wavefront_waves": 0.1399151540661748,
+        "reported_geometric_rms_radius_mm": 0.08995639066488187,
+        "reported_integration_method": "GQ12"
+      },
+      {
+        "configuration": 3,
+        "distance_m": 2.0,
+        "gap_mm": 66.62665318374347,
+        "rms_wavefront_waves": 0.08402119561581382,
+        "rms_wavefront_16rings": 0.08402119570281891,
+        "geometric_rms_radius_mm": 0.09241531647419216,
+        "working_fno": 58.618036912963355,
+        "gaussian_target_diameter_mm": {
+          "1.1": 0.4480281157625167,
+          "1.3": 0.45821335059736096
+        },
+        "apertures": [
+          {
+            "surface": 2,
+            "comment": "BICV-FS04 forward",
+            "clear_diameter_mm": 10.795,
+            "gaussian_diameter_mm": {
+              "1.1": 4.000454574332117,
+              "1.3": 4.000634887030938
+            },
+            "min_clear_to_beam": 2.6983217176340437
+          },
+          {
+            "surface": 3,
+            "comment": "BICV-FS04 forward",
+            "clear_diameter_mm": 10.795,
+            "gaussian_diameter_mm": {
+              "1.1": 4.133099242449186,
+              "1.3": 4.133288619391859
+            },
+            "min_clear_to_beam": 2.61172180170382
+          },
+          {
+            "surface": 4,
+            "comment": "AC508-100-C reverse",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 17.15648581368345,
+              "1.3": 17.157423401540015
+            },
+            "min_clear_to_beam": 2.664735778211096
+          },
+          {
+            "surface": 5,
+            "comment": "AC508-100-C reverse",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 17.504162334767912,
+              "1.3": 17.50511972921087
+            },
+            "min_clear_to_beam": 2.6118073287843235
+          },
+          {
+            "surface": 6,
+            "comment": "AC508-100-C reverse",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 20.483296264005222,
+              "1.3": 20.484422373517226
+            },
+            "min_clear_to_beam": 2.23193991836001
+          }
+        ],
+        "edge_ray_errors": 0,
+        "edge_vignetted": 0,
+        "fixed_objective_last_z_mm": 250.0000000000005,
+        "reported_wavefront_waves": 0.08402119561581382,
+        "reported_geometric_rms_radius_mm": 0.09241531647419216,
+        "reported_integration_method": "GQ12"
+      },
+      {
+        "configuration": 4,
+        "distance_m": 3.0,
+        "gap_mm": 64.91012380722466,
+        "rms_wavefront_waves": 0.13318019390835456,
+        "rms_wavefront_16rings": 0.13318019412254486,
+        "geometric_rms_radius_mm": 0.18699567722948718,
+        "working_fno": 102.93448177076172,
+        "gaussian_target_diameter_mm": {
+          "1.1": 0.27756217842032554,
+          "1.3": 0.31161147239535125
+        },
+        "apertures": [
+          {
+            "surface": 2,
+            "comment": "BICV-FS04 forward",
+            "clear_diameter_mm": 10.795,
+            "gaussian_diameter_mm": {
+              "1.1": 4.000464265635228,
+              "1.3": 4.000648422201354
+            },
+            "min_clear_to_beam": 2.6983125885528474
+          },
+          {
+            "surface": 3,
+            "comment": "BICV-FS04 forward",
+            "clear_diameter_mm": 10.795,
+            "gaussian_diameter_mm": {
+              "1.1": 4.133109337216976,
+              "1.3": 4.13330271804281
+            },
+            "min_clear_to_beam": 2.611712893148949
+          },
+          {
+            "surface": 4,
+            "comment": "AC508-100-C reverse",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 16.821003765119542,
+              "1.3": 16.82193981318374
+            },
+            "min_clear_to_beam": 2.7178791808640397
+          },
+          {
+            "surface": 5,
+            "comment": "AC508-100-C reverse",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 17.16727108984131,
+              "1.3": 17.1682272367557
+            },
+            "min_clear_to_beam": 2.663058880192208
+          },
+          {
+            "surface": 6,
+            "comment": "AC508-100-C reverse",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 20.12757861388377,
+              "1.3": 20.128705575470054
+            },
+            "min_clear_to_beam": 2.271383017083667
+          }
+        ],
+        "edge_ray_errors": 0,
+        "edge_vignetted": 0,
+        "fixed_objective_last_z_mm": 249.99999999999972,
+        "reported_wavefront_waves": 0.13318019390835456,
+        "reported_geometric_rms_radius_mm": 0.18699567722948718,
+        "reported_integration_method": "GQ12"
+      },
+      {
+        "configuration": 5,
+        "distance_m": 5.0,
+        "gap_mm": 63.567327633261705,
+        "rms_wavefront_waves": 0.20649201003693088,
+        "rms_wavefront_16rings": 0.20649201151024388,
+        "geometric_rms_radius_mm": 0.41862980473825173,
+        "working_fno": 249.96876241024174,
+        "gaussian_target_diameter_mm": {
+          "1.1": 0.43215265276024195,
+          "1.3": 0.491491540204113
+        },
+        "apertures": [
+          {
+            "surface": 2,
+            "comment": "BICV-FS04 forward",
+            "clear_diameter_mm": 10.795,
+            "gaussian_diameter_mm": {
+              "1.1": 4.000471918135484,
+              "1.3": 4.000659109908141
+            },
+            "min_clear_to_beam": 2.698305380047205
+          },
+          {
+            "surface": 3,
+            "comment": "BICV-FS04 forward",
+            "clear_diameter_mm": 10.795,
+            "gaussian_diameter_mm": {
+              "1.1": 4.133117307698924,
+              "1.3": 4.1333138498437405
+            },
+            "min_clear_to_beam": 2.611705859309015
+          },
+          {
+            "surface": 4,
+            "comment": "AC508-100-C reverse",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 16.55856392136521,
+              "1.3": 16.55949837433206
+            },
+            "min_clear_to_beam": 2.7609531983690996
+          },
+          {
+            "surface": 5,
+            "comment": "AC508-100-C reverse",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 16.903728869239966,
+              "1.3": 16.90468364997343
+            },
+            "min_clear_to_beam": 2.704575900186802
+          },
+          {
+            "surface": 6,
+            "comment": "AC508-100-C reverse",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 19.84930896775195,
+              "1.3": 19.850436197827324
+            },
+            "min_clear_to_beam": 2.303223946534946
+          }
+        ],
+        "edge_ray_errors": 0,
+        "edge_vignetted": 0,
+        "fixed_objective_last_z_mm": 249.9999999999997,
+        "reported_wavefront_waves": 0.20649201003693088,
+        "reported_geometric_rms_radius_mm": 0.41862980473825173,
+        "reported_integration_method": "GQ12"
+      },
+      {
+        "configuration": 6,
+        "distance_m": 10.0,
+        "gap_mm": 62.57912610507635,
+        "rms_wavefront_waves": 0.27324908936676745,
+        "rms_wavefront_16rings": 0.273249090780549,
+        "geometric_rms_radius_mm": 1.009231025996568,
+        "working_fno": 5327.122890338437,
+        "gaussian_target_diameter_mm": {
+          "1.1": 1.2923028105739898,
+          "1.3": 1.373926669843621
+        },
+        "apertures": [
+          {
+            "surface": 2,
+            "comment": "BICV-FS04 forward",
+            "clear_diameter_mm": 10.795,
+            "gaussian_diameter_mm": {
+              "1.1": 4.000477589775609,
+              "1.3": 4.000667031082215
+            },
+            "min_clear_to_beam": 2.698300037501461
+          },
+          {
+            "surface": 3,
+            "comment": "BICV-FS04 forward",
+            "clear_diameter_mm": 10.795,
+            "gaussian_diameter_mm": {
+              "1.1": 4.1331232146750425,
+              "1.3": 4.1333220996884705
+            },
+            "min_clear_to_beam": 2.6117006465123107
+          },
+          {
+            "surface": 4,
+            "comment": "AC508-100-C reverse",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 16.365426487985758,
+              "1.3": 16.366359544956516
+            },
+            "min_clear_to_beam": 2.7935351092839182
+          },
+          {
+            "surface": 5,
+            "comment": "AC508-100-C reverse",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 16.709780166058213,
+              "1.3": 16.71073371940823
+            },
+            "min_clear_to_beam": 2.735966042406609
+          },
+          {
+            "surface": 6,
+            "comment": "AC508-100-C reverse",
+            "clear_diameter_mm": 45.72,
+            "gaussian_diameter_mm": {
+              "1.1": 19.64452192582233,
+              "1.3": 19.645649126964425
+            },
+            "min_clear_to_beam": 2.327232849600653
+          }
+        ],
+        "edge_ray_errors": 0,
+        "edge_vignetted": 0,
+        "fixed_objective_last_z_mm": 250.00000000000028,
+        "reported_wavefront_waves": 0.27324908936676745,
+        "reported_geometric_rms_radius_mm": 1.009231025996568,
+        "reported_integration_method": "GQ12"
+      }
+    ],
+    "travel_mm": 9.439529219271925,
+    "worst_wavefront_waves": 0.466234668232631,
+    "minimum_aperture_ratio": 2.116490722564248,
+    "maximum_exit_diameter_mm": 21.60179561033352,
+    "exit_30mm_aperture_ratio": 1.3887734400027876,
+    "computational_pupil_mm": 7.6,
+    "physical_gaussian_1e2_mm": 4.0,
+    "wavefront_pupil_profile": "Gaussian",
+    "gap_search_version": 2,
+    "optical_pass": false,
+    "model_relative": "模型\\C_胶合像差对照_1064nm.zmx",
+    "candidate_name": "高斯_C_胶合像差对照_BICV-FS04_N0P1",
+    "prescription": {
+      "ok": true,
+      "units": "Millimeters",
+      "surfaces": [
+        {
+          "surf": 0,
+          "type": "标准面",
+          "comment": "",
+          "radius": "Infinity",
+          "thickness": "Infinity",
+          "material": "",
+          "semi_dia": 0.0,
+          "conic": 0.0,
+          "stop": false
+        },
+        {
+          "surf": 1,
+          "type": "标准面",
+          "comment": "Input reference; Gaussian waist",
+          "radius": "Infinity",
+          "thickness": 165.9208739,
+          "material": "",
+          "semi_dia": 3.8,
+          "conic": 0.0,
+          "stop": true
+        },
+        {
+          "surf": 2,
+          "type": "标准面",
+          "comment": "BICV-FS04 forward",
+          "radius": -18.71,
+          "thickness": 2.0,
+          "material": "F_SILICA",
+          "semi_dia": 6.35,
+          "conic": 0.0,
+          "stop": false
+        },
+        {
+          "surf": 3,
+          "type": "标准面",
+          "comment": "BICV-FS04 forward",
+          "radius": 18.71,
+          "thickness": 62.5791261,
+          "material": "",
+          "semi_dia": 6.35,
+          "conic": 0.0,
+          "stop": false
+        },
+        {
+          "surf": 4,
+          "type": "标准面",
+          "comment": "AC508-100-C reverse",
+          "radius": -259.4,
+          "thickness": 2.5,
+          "material": "N-SF6HT",
+          "semi_dia": 25.4,
+          "conic": 0.0,
+          "stop": false
+        },
+        {
+          "surf": 5,
+          "type": "标准面",
+          "comment": "AC508-100-C reverse",
+          "radius": 48.31,
+          "thickness": 17.0,
+          "material": "N-BAF10",
+          "semi_dia": 25.4,
+          "conic": 0.0,
+          "stop": false
+        },
+        {
+          "surf": 6,
+          "type": "标准面",
+          "comment": "AC508-100-C reverse",
+          "radius": -44.6700000000001,
+          "thickness": 10000.0,
+          "material": "",
+          "semi_dia": 25.4,
+          "conic": 0.0,
+          "stop": false
+        },
+        {
+          "surf": 7,
+          "type": "标准面",
+          "comment": "",
+          "radius": "Infinity",
+          "thickness": "Infinity",
+          "material": "",
+          "semi_dia": 19.7009227377172,
+          "conic": 0.0,
+          "stop": false
+        }
+      ],
+      "count": 8
+    },
+    "evaluated_worst_wavefront_waves": 0.466234668232631,
+    "gaussian_diameter_pass_5mm": true,
+    "nominal_30mm_exit_margin_pass": false,
+    "is_cemented_reference": true,
+    "all_requested_optical_checks_pass": false,
+    "source_objective_efl_difference_mm": 1.8474111129762605e-13,
+    "objective_efl_rechecked_mm": 99.3837253630828
+  }
+]

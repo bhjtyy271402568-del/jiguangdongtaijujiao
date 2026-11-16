@@ -1,0 +1,110 @@
+[
+  {
+    "configuration": 1,
+    "method": "RWCE",
+    "sampling": 3,
+    "wavefront_waves": 0.10208859602320179
+  },
+  {
+    "configuration": 1,
+    "method": "RWCE",
+    "sampling": 6,
+    "wavefront_waves": 0.11251036340310373
+  },
+  {
+    "configuration": 1,
+    "method": "RWCE",
+    "sampling": 8,
+    "wavefront_waves": 0.11251044763186668
+  },
+  {
+    "configuration": 1,
+    "method": "RWCE",
+    "sampling": 12,
+    "wavefront_waves": 0.11251044764150839
+  },
+  {
+    "configuration": 1,
+    "method": "RWCE",
+    "sampling": 16,
+    "wavefront_waves": 0.11251044782121108
+  },
+  {
+    "configuration": 1,
+    "method": "RWRE",
+    "sampling": 8,
+    "wavefront_waves": 0.1192536972500562
+  },
+  {
+    "configuration": 1,
+    "method": "RWRE",
+    "sampling": 16,
+    "wavefront_waves": 0.11447299946359904
+  },
+  {
+    "configuration": 1,
+    "method": "RWRE",
+    "sampling": 32,
+    "wavefront_waves": 0.1132754938790154
+  },
+  {
+    "configuration": 1,
+    "method": "RWRE",
+    "sampling": 64,
+    "wavefront_waves": 0.1129242883767224
+  },
+  {
+    "configuration": 6,
+    "method": "RWCE",
+    "sampling": 3,
+    "wavefront_waves": 0.024129595040492002
+  },
+  {
+    "configuration": 6,
+    "method": "RWCE",
+    "sampling": 6,
+    "wavefront_waves": 0.03225392895334499
+  },
+  {
+    "configuration": 6,
+    "method": "RWCE",
+    "sampling": 8,
+    "wavefront_waves": 0.032254510161563554
+  },
+  {
+    "configuration": 6,
+    "method": "RWCE",
+    "sampling": 12,
+    "wavefront_waves": 0.03225450814848401
+  },
+  {
+    "configuration": 6,
+    "method": "RWCE",
+    "sampling": 16,
+    "wavefront_waves": 0.03225450656811056
+  },
+  {
+    "configuration": 6,
+    "method": "RWRE",
+    "sampling": 8,
+    "wavefront_waves": 0.03336697890150474
+  },
+  {
+    "configuration": 6,
+    "method": "RWRE",
+    "sampling": 16,
+    "wavefront_waves": 0.03256855948660268
+  },
+  {
+    "configuration": 6,
+    "method": "RWRE",
+    "sampling": 32,
+    "wavefront_waves": 0.03237040930518759
+  },
+  {
+    "configuration": 6,
+    "method": "RWRE",
+    "sampling": 64,
+    "wavefront_waves": 0.032317487782476284
+  }
+]
