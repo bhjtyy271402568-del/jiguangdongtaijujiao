@@ -1,6 +1,6 @@
 # 第 17e 课 用滑块拖着看不同距离的光斑（2026-11-18）
 
-**交互课件：** 见进度.md 链接 · [源文件](互动/第17e课_Zemax滑块.html)
+**交互课件：** [在线打开](https://claude.ai/artifact/PvH11BGF8ZGKgdQZtHijyA) · [源文件](互动/第17e课_Zemax滑块.html)
 
 ![](图/17e_用户Zemax截图.jpg)
 
