@@ -1,0 +1,353 @@
+<meta charset="utf-8">
+<title>准直镜实操</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@700;900&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* 第 13 课：看懂 Zemax 结果——光线怎么算、点列图是什么、RMS 波前是什么（真实光线追迹，镜片尺寸放大画） */
+:root{
+  --bg:#f4f6f9; --surface:#ffffff; --fg:#151a23; --muted:#5d6676; --line:#d8dee7;
+  --beam:#e5383b; --beam-soft:#f6b3b4; --glass:#2b7bb9; --glass-fill:#dcecf8;
+  --ok:#17914f; --bad:#d23c3c; --proj2:#e0701c; --card:#2c5fd6; --card-fill:#e2eafc;
+  --metal:#7b8697; --band:#17914f22; --wave:#0ea5c6;
+  --f-body:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --f-display:"Noto Serif SC","Songti SC",serif;
+  --f-num:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1218; --surface:#171c25; --fg:#e7ebf1; --muted:#9aa4b4; --line:#2b3240;
+  --beam:#ff5c60; --beam-soft:#7a2a2d; --glass:#6db5ee; --glass-fill:#1c3448;
+  --ok:#3fd082; --bad:#ff6b6b; --proj2:#ff9a4a; --card:#82a6ff; --card-fill:#1d2a4a;
+  --metal:#8c97a8; --band:#3fd08226; --wave:#4fd1e6; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1218; --surface:#171c25; --fg:#e7ebf1; --muted:#9aa4b4; --line:#2b3240;
+  --beam:#ff5c60; --beam-soft:#7a2a2d; --glass:#6db5ee; --glass-fill:#1c3448;
+  --ok:#3fd082; --bad:#ff6b6b; --proj2:#ff9a4a; --card:#82a6ff; --card-fill:#1d2a4a;
+  --metal:#8c97a8; --band:#3fd08226; --wave:#4fd1e6; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:15px;line-height:1.65}
+.wrap{max-width:900px;margin:0 auto;padding-block:28px 56px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:flex;flex-direction:column;gap:28px}
+header{display:flex;flex-direction:column;gap:6px}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--muted)}
+h1{font-family:var(--f-display);font-weight:900;font-size:clamp(28px,5vw,40px);margin:0;line-height:1.2;text-wrap:balance}
+.lede{color:var(--muted);margin:0;max-width:62ch}
+section{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:14px;min-width:0}
+h2{font-family:var(--f-display);font-size:21px;margin:0;display:flex;gap:10px;align-items:baseline;text-wrap:balance}
+h2 .n{font-family:var(--f-num);font-size:13px;color:var(--beam)}
+.stage{overflow-x:auto;border-radius:10px;background:var(--bg)}
+.stage svg{display:block;width:100%;height:auto}
+.ctl{display:flex;flex-direction:column;gap:4px;min-width:0}
+.ctl label{font-size:13px;display:flex;justify-content:space-between;gap:8px}
+.ctl label span{font-family:var(--f-num);color:var(--muted);font-size:12px}
+input[type=range]{width:100%;accent-color:var(--beam)}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+button{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--surface);color:var(--fg);
+  border-radius:999px;padding:6px 14px;cursor:pointer}
+button:hover{border-color:var(--muted)}
+button:disabled{opacity:.45;cursor:default}
+button:focus-visible,input:focus-visible{outline:2px solid var(--card);outline-offset:2px}
+button[aria-pressed=true]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.note{font-size:12px;color:var(--muted);margin:0}
+.quiz{display:flex;flex-direction:column;gap:16px}
+.q p{margin:0 0 6px;font-weight:500}
+.q .fb{font-size:14px;margin-top:6px;min-height:1.6em}
+.q button.right{border-color:var(--ok);color:var(--ok)}
+.q button.wrong{border-color:var(--bad);color:var(--bad)}
+footer{font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+footer b{color:var(--fg)}
+svg text{font-family:var(--f-body)}
+.q-big{font-family:var(--f-display);font-size:clamp(20px,3.6vw,26px);font-weight:900;margin:0;text-wrap:balance}
+.cap-box{display:flex;gap:12px;align-items:flex-start;background:var(--card-fill);border-radius:10px;padding:12px 14px;min-height:72px}
+.cap-box .no{font-family:var(--f-num);font-size:13px;color:var(--card);white-space:nowrap;padding-top:3px}
+.cap-box p{margin:0;font-size:16px;line-height:1.6}
+.cap-box b{color:var(--beam)}
+.stepbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.dots{display:flex;gap:6px;margin-left:4px}
+.dots i{width:9px;height:9px;border-radius:50%;background:var(--line);display:block}
+.dots i.on{background:var(--card)}
+.free{border-top:1px dashed var(--line);padding-top:12px;display:flex;flex-direction:column;gap:10px}
+.free .t{font-size:13px;color:var(--muted)}
+.big-next{background:var(--card);color:#fff;border-color:var(--card);font-weight:700}
+.concl{font-size:15px;font-weight:700;color:var(--ok);margin:0}
+.check{display:grid;grid-template-columns:2.2em 1fr;gap:10px 12px;margin:0;align-items:start}
+.check .k{font-family:var(--f-num);font-size:13px;color:#fff;background:var(--card);border-radius:999px;width:1.9em;height:1.9em;display:grid;place-items:center}
+.check p{margin:0}
+.check b{color:var(--beam)}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+<div class="wrap">
+<header>
+  <div class="eyebrow">第 17 课 · 准直镜 + Zemax 实操</div>
+  <h1>准直镜：从光纤口到 4 mm 平行光</h1>
+  <p class="lede">真实条件：1064 nm 单模光纤（MFD 14 μm），QBH 输出，熔石英等凸镜 f ≈ 40 mm，要 4 mm 平行光。先看光怎么走，再看 Zemax 里一格一格怎么填，最后看为什么别人用双凸。图中<b>上下方向放大画</b>，前后方向按比例。</p>
+</header>
+
+<section aria-labelledby="s1">
+  <p class="q-big" id="s1">问题 1：4 mm 是谁“扩”出来的？镜子为什么正好放在一个焦距处？</p>
+  <div class="stage"><svg id="svg1" data-export="17-1_准直镜放在哪" viewBox="0 0 840 380" role="img" aria-label="QBH 出来的光锥和准直镜的位置"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n1"></span><p id="c1"></p></div>
+  <div class="stepbar"><button id="p1">← 上一步</button><button id="x1" class="big-next">下一步 →</button><span class="dots" id="d1"></span></div>
+  <div class="free"><span class="t">自己玩：拖动镜子的位置，看 1 m 外的光斑</span>
+    <div class="ctl"><label>光纤端面到镜面 <span id="v1"></span></label><input id="r1" type="range" min="30" max="48" step="0.05" value="38.95"></div></div>
+  <p class="concl">记住一句：4 mm 是光在空气里自己散出来的；准直镜放在一个焦距处，只负责把它“掰直、定住”。真正的扩束（4 → 20 mm）是后面的动镜 + 物镜。</p>
+</section>
+
+<section aria-labelledby="s2">
+  <p class="q-big" id="s2">问题 2：这一套在 Zemax 里怎么填？</p>
+  <div class="stage"><svg id="svg2" data-export="17-2_Zemax怎么填" viewBox="0 0 840 470" role="img" aria-label="Zemax 界面与实物对照"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n2"></span><p id="c2"></p></div>
+  <div class="stepbar"><button id="p2">← 上一步</button><button id="x2" class="big-next">下一步 →</button><span class="dots" id="d2"></span></div>
+  <p class="note">表里的半径、距离是我们的估算值（R ≈ ±35.5、38.95 mm），Codex 优化后以 Zemax 结果为准。</p>
+  <p class="concl">记住一句：表格一行 = 一个面；“厚度”格填的是到下一个面的距离。光纤到镜子的距离填在第一行（OBJ）的厚度里。</p>
+</section>
+
+<section aria-labelledby="s3">
+  <p class="q-big" id="s3">问题 3：别人为什么用双凸，不用平凸？</p>
+  <div class="stage"><svg id="svg3" data-export="17-3_为什么用双凸" viewBox="0 0 840 400" role="img" aria-label="三种镜子的误差和装反的后果"></svg></div>
+  <div class="cap-box" aria-live="polite"><span class="no" id="n3"></span><p id="c3"></p></div>
+  <div class="stepbar"><button id="p3">← 上一步</button><button id="x3" class="big-next">下一步 →</button><span class="dots" id="d3"></span></div>
+  <div class="free"><span class="t">自己点：选镜子，再让装配工把它翻过来装</span><div class="row" id="lensBtns"></div></div>
+  <p class="concl">记住一句：双凸不是为了扩束，而是“怎么装都对”——误差只比放对的平凸多一点，却不会因为装反变差 4 倍。</p>
+</section>
+
+<section aria-labelledby="sq"><h2 id="sq"><span class="n">小测</span>点选即判</h2><div class="quiz" id="quiz"></div></section>
+
+<section aria-labelledby="sp"><h2 id="sp"><span class="n">项目</span>本课对项目的推进</h2>
+  <div class="check">
+    <span class="k">1</span><p>准直镜定为<b>熔石英等凸 f ≈ 40 mm</b>（MFD 14 μm 时），光纤到镜面约 39 mm，误差约 0.03 λ，小于 B 方案自身。</p>
+    <span class="k">2</span><p>Codex 任务单已写好：<b>设计/工具/zemax/给Codex的任务说明_准直镜.md</b>，按本课第 2 图的顺序填表。</p>
+    <span class="k">3</span><p>光纤前后差 0.1 mm，只要动镜多走 26 μm → 控制卡 / 上位机留一个<b>Z 光学零点偏置</b>参数。</p>
+  </div>
+</section>
+<footer><div><b>数字来源：</b>出光角 = λ / (π × 7 μm) = 48.4 mrad；镜子半径、距离、误差由 设计/工具/准直镜核算.py 估算；光束传播按高斯光束计算。</div></footer>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const T=(x,y,t,s=14,c='var(--fg)',a='middle',w=400)=>`<text x="${x}" y="${y}" font-size="${s}" fill="${c}" text-anchor="${a}" font-weight="${w}">${t}</text>`;
+function stepper(k,steps,state,draw){
+  let i=0,anim=0;
+  const dots=$('d'+k);dots.innerHTML=steps.map(()=>'<i></i>').join('');
+  function go(n,instant){i=Math.max(0,Math.min(steps.length-1,n));const to={...state,...steps[i].s},from={...state},t0=performance.now(),dur=(reduce||instant)?0:700;
+    cancelAnimationFrame(anim);
+    const tick=now=>{const p=dur?Math.min(1,(now-t0)/dur):1,e=p<.5?2*p*p:1-(-2*p+2)**2/2;
+      for(const key in to){if(typeof to[key]==='number')state[key]=from[key]+(to[key]-from[key])*e;else state[key]=to[key];}
+      draw();if(p<1)anim=requestAnimationFrame(tick);};
+    if(!dur){for(const key in to)state[key]=to[key];draw();}else anim=requestAnimationFrame(tick);
+    $('c'+k).innerHTML=steps[i].t;$('n'+k).textContent=`第 ${i+1} / ${steps.length} 步`;
+    dots.querySelectorAll('i').forEach((d,j)=>d.classList.toggle('on',j<=i));
+    $('p'+k).disabled=i===0;$('x'+k).textContent=i===steps.length-1?'从头再看 ↺':'下一步 →';}
+  $('p'+k).onclick=()=>go(i-1);$('x'+k).onclick=()=>go(i===steps.length-1?0:i+1);
+  go(0,true);return {go,n:steps.length};
+}
+let TT=0;const ANIM=[];(function loop(){if(!reduce)TT+=0.016;ANIM.forEach(f=>f(TT));requestAnimationFrame(loop);})();
+const DEFS=`<defs>
+<linearGradient id="gCu" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7c89a"/><stop offset=".45" stop-color="#c9803f"/><stop offset="1" stop-color="#7a4216"/></linearGradient>
+<linearGradient id="gCuS" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#a65f27"/><stop offset="1" stop-color="#6e3a12"/></linearGradient>
+<linearGradient id="gAu" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff2bf"/><stop offset=".5" stop-color="#e2b440"/><stop offset="1" stop-color="#9a7414"/></linearGradient>
+<linearGradient id="gAuS" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#c79a26"/><stop offset="1" stop-color="#8a6610"/></linearGradient>
+<linearGradient id="gSteel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f5f7fa"/><stop offset=".5" stop-color="#c2c9d2"/><stop offset="1" stop-color="#7b8592"/></linearGradient>
+<linearGradient id="gSteelH" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8a94a1"/><stop offset=".35" stop-color="#eef1f5"/><stop offset=".7" stop-color="#b9c1cb"/><stop offset="1" stop-color="#6f7986"/></linearGradient>
+<linearGradient id="gAlu" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0f3f6"/><stop offset="1" stop-color="#a9b2bc"/></linearGradient>
+<linearGradient id="gPlate" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9dee4"/><stop offset="1" stop-color="#aeb6c0"/></linearGradient>
+<linearGradient id="gRod" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffc2c6"/><stop offset=".3" stop-color="#e8414f"/><stop offset=".75" stop-color="#a3121f"/><stop offset="1" stop-color="#5e0a12"/></linearGradient>
+<linearGradient id="gGlass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eaf6ff" stop-opacity=".95"/><stop offset=".25" stop-color="#bfe0f7" stop-opacity=".45"/><stop offset=".7" stop-color="#9cc7e6" stop-opacity=".35"/><stop offset="1" stop-color="#6fa3c9" stop-opacity=".7"/></linearGradient>
+<linearGradient id="gLens" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d7ecfb" stop-opacity=".9"/><stop offset=".5" stop-color="#f4fbff" stop-opacity=".6"/><stop offset="1" stop-color="#9cc7e6" stop-opacity=".9"/></linearGradient>
+<linearGradient id="gJacket" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd08a"/><stop offset=".5" stop-color="#f08a1c"/><stop offset="1" stop-color="#a85508"/></linearGradient>
+<linearGradient id="gYb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff59a"/><stop offset=".5" stop-color="#e3c22a"/><stop offset="1" stop-color="#9c8210"/></linearGradient>
+<linearGradient id="gPlasma" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6c6ff"/><stop offset=".5" stop-color="#c25bd9"/><stop offset="1" stop-color="#7b2a92"/></linearGradient>
+<linearGradient id="gLamp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#fff7d1"/><stop offset="1" stop-color="#f3d27a"/></linearGradient>
+<radialGradient id="gOn" cx=".35" cy=".32" r=".75"><stop offset="0" stop-color="#fff6dc"/><stop offset=".45" stop-color="#ffa346"/><stop offset="1" stop-color="#b8420a"/></radialGradient>
+<radialGradient id="gOff" cx=".35" cy=".32" r=".75"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#b9c3cf"/><stop offset="1" stop-color="#5f6b7b"/></radialGradient>
+<radialGradient id="gHalo"><stop offset="0" stop-color="#ffb347" stop-opacity=".7"/><stop offset="1" stop-color="#ffb347" stop-opacity="0"/></radialGradient>
+<radialGradient id="gSpot"><stop offset="0" stop-color="#ffffff"/><stop offset=".3" stop-color="#ff5a5f"/><stop offset="1" stop-color="#ff2d2d" stop-opacity="0"/></radialGradient>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="blur6" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+<filter id="shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000" flood-opacity=".22"/></filter>
+</defs>`;
+function beam(x1,y1,x2,y2,w=6,a=1,col='#ff2d2d'){if(a<=0.01)return '';return `<g opacity="${a}"><line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${col}" stroke-width="${w*3.2}" opacity=".28" filter="url(#blur6)" stroke-linecap="round"/><line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${col}" stroke-width="${w}" opacity=".85" stroke-linecap="round"/><line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#fff3f3" stroke-width="${Math.max(1,w/3)}" stroke-linecap="round"/></g>`;}
+function packet(x,y,ph=0,col='#ff4a2a',len=54,amp=7){let d='';for(let i=0;i<=len;i+=2){const e=Math.sin(Math.PI*i/len);d+=(i?'L':'M')+(x-len/2+i).toFixed(1)+','+(y-amp*e*Math.sin(i/len*5*Math.PI*2/2.2+ph)).toFixed(1);}return `<path d="${d}" fill="none" stroke="${col}" stroke-width="2.6" filter="url(#glow)" stroke-linecap="round"/>`;}
+function tag(n,x,y,lx,ly,text,col){return `<line x1="${x}" y1="${y}" x2="${lx}" y2="${ly}" stroke="${col}" stroke-width="1.5"/><circle cx="${x}" cy="${y}" r="3.5" fill="${col}"/><circle cx="${lx}" cy="${ly}" r="11" fill="${col}"/>`+T(lx,ly+4.5,n,12,'#fff','middle',700)+(text?T(lx+(lx>x?16:-16),ly+5,text,12.5,'var(--fg)',lx>x?'start':'end',700):'');}
+function quiz(QS){$('quiz').innerHTML=QS.map((q,i)=>`<div class="q" data-i="${i}"><p>Q${i+1}. ${q.q}</p><div class="row">${q.o.map((o,j)=>`<button data-j="${j}">${o}</button>`).join('')}</div><div class="fb" aria-live="polite"></div></div>`).join('');
+document.querySelectorAll('.q button').forEach(b=>b.onclick=()=>{const qd=b.closest('.q'),q=QS[+qd.dataset.i],j=+b.dataset.j;
+  qd.querySelectorAll('button').forEach(x=>x.classList.remove('right','wrong'));b.classList.add(j===q.a?'right':'wrong');
+  qd.querySelector('.fb').textContent=(j===q.a?'✓ ':'✗ ')+q.e[j];});}
+const C1='#e8590c',C2='#c2255c',C3='#1971c2';   // 三要素配色：① 泵浦 ② 发光材料 ③ 谐振腔
+
+const LAM=1.064e-3, W0=0.007, ZR=Math.PI*W0*W0/LAM, F=40, PP=1.05; // 主面到前表面 ≈ 1.05 mm
+// 高斯光束：光纤端面（腰）→ 距离 s 的薄透镜（主面）→ 再走 d，返回 1/e² 半径 mm
+function wAt(s,d){ // q = z + i zR
+  let qr=s, qi=ZR; // q 到透镜
+  // 1/q' = 1/q - 1/F
+  const den=qr*qr+qi*qi; let ir=qr/den-1/F, ii=-qi/den; const d2=ir*ir+ii*ii; qr=ir/d2; qi=-ii/d2; // q'
+  qr+=d; const ii2=-qi/(qr*qr+qi*qi); return Math.sqrt(-LAM/(Math.PI*ii2));}
+const wFree=z=>W0*Math.sqrt(1+(z/ZR)**2);
+// ---------- 图 1 ----------
+const s1={lens:0,dist:38.95,mark:0};
+function qbh(x,cy){ // 铠装光缆 + QBH 头，端面在 x
+  let g='';for(let i=0;i<9;i++)g+=`<rect x="${x-210+i*9}" y="${cy-9}" width="8" height="18" rx="2" fill="url(#gSteel)" stroke="#6b7480" stroke-width=".6"/>`;
+  g+=`<rect x="${x-130}" y="${cy-24}" width="34" height="48" rx="4" fill="url(#gSteel)" stroke="#5f6874"/>`;
+  for(let i=0;i<7;i++)g+=`<line x1="${x-127+i*4.6}" y1="${cy-24}" x2="${x-127+i*4.6}" y2="${cy+24}" stroke="#7b8592" stroke-width="1"/>`;
+  g+=`<rect x="${x-96}" y="${cy-17}" width="86" height="34" rx="3" fill="url(#gSteel)" stroke="#5f6874"/><rect x="${x-10}" y="${cy-11}" width="10" height="22" rx="2" fill="url(#gAlu)" stroke="#5f6874"/>`;
+  g+=`<rect x="${x-60}" y="${cy-17}" width="5" height="34" fill="#c92a2a" opacity=".75"/>`; // 定位销标记
+  return g;}
+function cone(pts,col='#ff2d2d'){ // pts: [[x,halfPx],...] 画高斯光：三层叠加
+  let g='';[[1.5,.10],[1,.22],[.55,.38]].forEach(([k,o])=>{const up=pts.map(([x,h])=>`${x.toFixed(1)},${(0-h*k).toFixed(1)}`),dn=pts.slice().reverse().map(([x,h])=>`${x.toFixed(1)},${(h*k).toFixed(1)}`);g+=`<polygon points="${up.concat(dn).join(' ')}" fill="${col}" opacity="${o}"/>`;});
+  return g;}
+function biconvex(x,cy,half,ct,sag,stroke='#4a6a85'){ // x = 中心
+  const a=x-ct/2,b=x+ct/2;
+  return `<path d="M${a+sag},${cy-half} Q${a-sag},${cy} ${a+sag},${cy+half} L${b-sag},${cy+half} Q${b+sag},${cy} ${b-sag},${cy-half} Z" fill="url(#gLens)" stroke="${stroke}" stroke-width="1.4"/>`;}
+function draw1(){
+  const CY=176,X0=230,K=6.2,V=22; let g=DEFS;
+  g+=`<rect x="0" y="0" width="840" height="380" fill="var(--bg)"/>`;
+  g+=`<line x1="${X0}" y1="${CY}" x2="830" y2="${CY}" stroke="var(--line)" stroke-dasharray="5 5"/>`;
+  const dist=s1.dist, s=dist+PP, xL=X0+s*K, la=s1.lens;
+  // 光锥（光纤 → 镜子）
+  const pts=[];for(let z=0;z<=s;z+=s/30)pts.push([X0+z*K,Math.max(1.2,wFree(z)*V)]);
+  const xEnd=la>0.5?xL:Math.min(xL,X0+40*K)+(1-la)*0;
+  if(la>0.5)g+=`<g transform="translate(0,${CY})">${cone(pts)}</g>`;
+  if(la<=0.5){const p2=[];for(let z=0;z<=46;z+=1.5)p2.push([X0+z*K,wFree(z)*V]);g+=`<g transform="translate(0,${CY})">${cone(p2)}</g>`;}
+  // 镜子后：0–1 m 压缩画到 xL+30 … 690
+  const XA=xL+14, XB=700;
+  if(la>0.01){const p3=[];for(let i=0;i<=40;i++){const d=1000*i/40;p3.push([XA+(XB-XA)*i/40,Math.min(150,wAt(s,d)*V)]);}
+    g+=`<g opacity="${la}" transform="translate(0,${CY})">${cone(p3)}</g>`;
+    g+=`<g opacity="${la}"><rect x="${xL-9}" y="${CY-150}" width="18" height="8" rx="2" fill="url(#gAlu)" stroke="#6b7480"/><rect x="${xL-9}" y="${CY+142}" width="18" height="8" rx="2" fill="url(#gAlu)" stroke="#6b7480"/>${biconvex(xL,CY,140,18,4)}</g>`;
+    g+=`<path d="M${XA+20},${CY+165} H${XB}" stroke="var(--muted)" stroke-width="1" fill="none"/>`+T((XA+XB)/2+10,CY+180+0,'后面 1 m 压缩画',11,'var(--muted)','middle');
+    // 1 m 处卡片 + 光斑
+    const w1=wAt(s,1000),Dmm=2*w1;
+    g+=`<g opacity="${la}"><rect x="742" y="${CY-120}" width="78" height="240" rx="6" fill="#f3ead8" stroke="#b9a37a"/>`;
+    const rr=Math.min(34,w1*V*0.38);g+=`<circle cx="781" cy="${CY}" r="${rr*1.5}" fill="url(#gSpot)" opacity=".55"/><circle cx="781" cy="${CY}" r="${rr}" fill="url(#gSpot)"/>`;
+    g+=T(781,CY-128,'1 m 外',12,'var(--fg)','middle',700)+T(781,CY+140,`光斑 ${Dmm<100?Dmm.toFixed(1):'>100'} mm`,13,Math.abs(Dmm-3.9)<0.4?'var(--ok)':'var(--bad)','middle',700)+`</g>`;
+  }
+  g+=qbh(X0,CY);
+  g+=tag('1',X0-150,CY-12,X0-150,CY-60,'单模光缆',C3)+tag('2',X0-60,CY-17,X0-40,CY-70,'QBH 输出头',C3);
+  g+=T(X0+4,CY+42,'端面（光从 14 μm 的点出来）',11,'var(--muted)','start');
+  // 距离标注
+  if(s1.mark>0.01||la>0.01){const xm=X0+dist*K,hm=wFree(s)*V;g+=`<g opacity="${Math.max(s1.mark,la)}"><path d="M${X0},${CY+112} v8 H${xm} v-8" fill="none" stroke="var(--fg)"/>`+T((X0+xm)/2,CY+136,`${dist.toFixed(2)} mm`,13,'var(--fg)','middle',700)+
+    `<path d="M${xm-26},${CY-hm} h-10 V${CY+hm} h10" fill="none" stroke="var(--card)" stroke-width="1.6"/>`+T(xm-42,CY-hm-8,`这里光已 ${(2*wFree(s)).toFixed(1)} mm 粗`,12.5,'var(--card)','end',700)+`</g>`;}
+  if(la>0.5){const u=Math.abs(dist-38.95);const txt=u<0.3?'出来是平行光':(dist<38.95?'还在发散（没掰够）':'先会聚再发散（掰过头）');g+=T(xL+18,CY-150,txt,13,u<0.3?'var(--ok)':'var(--bad)','start',700);}
+  g+=T(12,22,'上下方向放大约 22 倍画；光纤到镜子按比例',11,'var(--muted)','start');
+  $('svg1').innerHTML=g;$('v1').textContent=dist.toFixed(2)+' mm';$('r1').value=dist;
+}
+const st1=stepper(1,[
+ {t:'QBH 端面出来的<b>不是一根线，而是一个光锥</b>：光从 14 μm 的小点出来，每走 1 mm 半径约胀 0.048 mm（单模光纤的出光角）。<b>芯越细，散得越快。</b>',s:{lens:0,dist:38.95,mark:0}},
+ {t:'走到 <b>约 39 mm</b> 时，光锥已经 <b>4 mm 粗</b>——这段<b>没有任何镜子</b>，是光在空气里自己散出来的。所以“出多粗”由<b>出光角 × 距离</b>决定。',s:{lens:0,dist:38.95,mark:1}},
+ {t:'就在这里放一片焦距 40 mm 的双凸镜：光纤正好在它的<b>焦点</b>上，出来就是<b>平行光</b>，1 m 外还是约 4 mm。镜子<b>只负责掰直、定住</b>。',s:{lens:1,dist:38.95,mark:1}},
+ {t:'镜子<b>放近了</b>（34 mm）：光纤在焦点里面，<b>掰不够</b>，出来继续发散，1 m 外光斑变得很大。',s:{lens:1,dist:34,mark:1}},
+ {t:'镜子<b>放远了</b>（44 mm）：光纤在焦点外面，<b>掰过头</b>，光先会聚、再交叉散开。所以 Zemax 要求出“正好平行”的那个距离。',s:{lens:1,dist:44,mark:1}}
+],s1,draw1);
+$('r1').oninput=e=>{s1.dist=+e.target.value;s1.lens=1;s1.mark=1;$('n1').textContent='自己玩';
+  const D=2*wAt(s1.dist+PP,1000);$('c1').innerHTML=`镜面离光纤 <b>${s1.dist.toFixed(2)} mm</b>，1 m 外光斑 <b>${D.toFixed(1)} mm</b>。${Math.abs(s1.dist-38.95)<0.3?'正好平行。':'差 1 mm，1 m 外就差很多 → 装配时要能前后微调。'}`;draw1();};
+
+// ---------- 图 2：Zemax ----------
+const s2={st:0};
+function tbl(x,y,w,cols,rows,hl=-1,hc=[],title=''){let g=`<rect x="${x}" y="${y}" width="${w}" height="${26+rows.length*22+8}" rx="4" fill="#ffffff" stroke="#adb5bd"/><rect x="${x}" y="${y}" width="${w}" height="20" rx="4" fill="#dee2e6"/>`+T(x+6,y+14,title,11,'#212529','start',700);
+  const cw=w/cols.length;cols.forEach((c,i)=>g+=T(x+cw*i+cw/2,y+36,c,10.5,'#495057','middle',700));
+  rows.forEach((r,j)=>{const yy=y+44+j*22;if(j===hl)g+=`<rect x="${x+2}" y="${yy-4}" width="${w-4}" height="21" fill="#fff3bf"/>`;r.forEach((v,i)=>{const on=j===hl&&hc.includes(i);g+=T(x+cw*i+cw/2,yy+11,v,11,on?'#c92a2a':'#212529','middle',on?700:400);});});return g;}
+function draw2(){
+  const st=Math.round(s2.st);let g=DEFS;
+  g+=`<rect x="4" y="4" width="832" height="462" rx="8" fill="#f1f3f5" stroke="#868e96"/>`;
+  const tabs=['Setup','Analyze','Optimize','Tolerance','Libraries'];const act=['Setup','Setup','Setup','Setup','Optimize','Analyze'][st];
+  tabs.forEach((t,i)=>{const x=16+i*96,on=t===act;g+=`<rect x="${x}" y="12" width="90" height="24" rx="4" fill="${on?'#1971c2':'#e9ecef'}" stroke="#adb5bd"/>`+T(x+45,28,t,11.5,on?'#fff':'#495057','middle',700);});
+  // System Explorer
+  g+=`<rect x="12" y="46" width="168" height="196" rx="4" fill="#fff" stroke="#adb5bd"/>`+T(20,62,'System Explorer',11,'#212529','start',700);
+  [['Aperture','Object Space NA 0.073'],['Apodization','Gaussian 2.25'],['Wavelengths','1.064 μm'],['Afocal Image Space',st>=4?'✓ 勾上':'（第 5 步再勾）']].forEach(([a,b],i)=>{const y=86+i*38,on=(st===0&&i<3)||(st===4&&i===3);
+    g+=`<rect x="18" y="${y-14}" width="156" height="33" rx="3" fill="${on?'#fff3bf':'#f8f9fa'}" stroke="${on?'#f08c00':'#dee2e6'}"/>`+T(24,y,a,10.5,'#495057','start',700)+T(24,y+14,b,10.5,on?'#c92a2a':'#212529','start',on?700:400);});
+  // Lens Data
+  const R1=st>=4?'35.5 V':'35.5', D0=st>=4?'38.95 V':'38.95';
+  const rows=[['OBJ','光纤端面','∞',D0,''],['1 STO','镜子前面',R1,'3','F_SILICA'],['2','镜子后面','−35.5 P','1000',''],['IMA','1 m 外','∞','','']];
+  const hl=[-1,0,1,2,-1,-1][st],hc=[[],[3],[2,3,4],[2,3],[],[]][st];
+  g+=tbl(190,46,400,['面','是什么','半径','厚度','材料'],rows,hl,hc,'Lens Data（一行 = 一个面）');
+  // 右上小窗
+  const RX=600,RW=228;g+=`<rect x="${RX}" y="46" width="${RW}" height="196" rx="4" fill="#fff" stroke="#adb5bd"/>`;
+  if(st===0){g+=T(RX+8,62,'光源设成“高斯光锥”',11,'#212529','start',700);const cx=RX+30,cy=150;
+    g+=`<g transform="translate(0,${cy})">${cone([[cx,1],[RX+200,70/1.5]])}</g>`;
+    g+=`<line x1="${cx}" y1="${cy}" x2="${RX+200}" y2="${cy-70}" stroke="#495057" stroke-dasharray="3 3"/><line x1="${cx}" y1="${cy}" x2="${RX+200}" y2="${cy-46.7}" stroke="#1971c2" stroke-width="1.5"/>`;
+    g+=T(RX+204,cy-72,'0.073',10.5,'#495057','start',700)+T(RX+204,cy-44,'0.048',10.5,'#1971c2','start',700)+T(RX+12,226,'外框 0.073；亮度在 0.048 处降到 1/e²',10,'#495057','start');}
+  if(st>=1&&st<=3){g+=T(RX+8,62,'“厚度”= 到下一个面的距离',11,'#212529','start',700);g+=T(RX+12,96,['','OBJ 厚度 = 光纤到镜面','STO = 光阑，光从这里进镜子','P = Pickup：跟着第 1 面取反'][st],11,'#c92a2a','start',700);
+    g+=T(RX+12,124,['','约 39 mm，后面让优化器调','F_SILICA = 熔石英，耐 300 W','后表面自动 = −前表面 → 等凸'][st],10.5,'#495057','start');
+    g+=T(RX+12,152,['','','厚 3 mm 是镜片中心厚','1000 = 后面走 1 m 看光斑'][st],10.5,'#495057','start');}
+  if(st===4){g+=T(RX+8,62,'Merit Function（评价函数）',11,'#212529','start',700);
+    [['EFFL','目标 40','焦距 = 40 mm'],['RMS 波前','目标 0','出来要平']].forEach(([a,b,c],i)=>{const y=88+i*30;g+=`<rect x="${RX+8}" y="${y-14}" width="${RW-16}" height="24" rx="3" fill="#f8f9fa" stroke="#dee2e6"/>`+T(RX+14,y+2,a,10.5,'#212529','start',700)+T(RX+84,y+2,b,10.5,'#c92a2a','start',700)+T(RX+150,y+2,c,10,'#495057','start');});
+    g+=`<rect x="${RX+12}" y="160" width="96" height="26" rx="4" fill="#1971c2"/>`+T(RX+60,177,'Optimize!',11.5,'#fff','middle',700)+T(RX+12,212,'改带 V 的两格：半径、距离',10.5,'#495057','start');}
+  if(st===5){g+=T(RX+8,62,'POP：1 m 外光强',11,'#212529','start',700);const cx=RX+80,cy=150;
+    g+=`<rect x="${cx-60}" y="${cy-60}" width="120" height="120" fill="#111"/>`;for(let r=56;r>0;r-=4)g+=`<circle cx="${cx}" cy="${cy}" r="${r}" fill="hsl(${(1-Math.exp(-2*(r/28)**2))*240},90%,${40+20*Math.exp(-2*(r/28)**2)}%)"/>`;
+    g+=T(RX+150,120,'直径',10.5,'#495057','start')+T(RX+150,138,'≈ 3.9 mm',12,'#2f9e44','start',700)+T(RX+150,166,'中间亮',10.5,'#495057','start')+T(RX+150,182,'边上暗',10.5,'#495057','start');}
+  // 下：实物对照
+  const LY=252;g+=`<rect x="12" y="${LY}" width="816" height="206" rx="4" fill="#fff" stroke="#adb5bd"/>`+T(20,LY+18,['实物：光源 = 光纤端面的高斯光锥','实物：OBJ 厚度 = 光纤到镜面','实物：第 1 面 = 镜子前表面','实物：第 2 面 = 镜子后表面，再走 1 m','优化：Zemax 自己调半径和距离','结果：Layout 光路图 + POP 光斑'][st],11.5,'#212529','start',700);
+  const CY=LY+112,X0=170,K=6.2,V=12,s=38.95+PP,xL=X0+s*K;
+  const pts=[];for(let z=0;z<=s;z+=s/20)pts.push([X0+z*K,wFree(z)*V]);g+=`<g transform="translate(0,${CY})">${cone(pts)}</g>`;
+  const p3=[];for(let i=0;i<=20;i++)p3.push([xL+10+(690-xL)*i/20,wAt(s,1000*i/20)*V]);g+=`<g transform="translate(0,${CY})">${cone(p3)}</g>`;
+  g+=`<g transform="translate(${X0},${CY}) scale(.6) translate(${-X0},${-CY})">${qbh(X0,CY)}</g>`;
+  g+=biconvex(xL,CY,76,14,3);g+=`<rect x="700" y="${CY-60}" width="40" height="120" rx="4" fill="#f3ead8" stroke="#b9a37a"/>`+T(720,CY+80,'IMA（1 m）',10.5,'#495057','middle',700);
+  const hi=(on)=>on?'#e03131':'#adb5bd';
+  g+=`<path d="M${X0},${CY+64} v8 H${xL-7} v-8" fill="none" stroke="${hi(st===1||st===4)}" stroke-width="${st===1||st===4?2:1}"/>`+T((X0+xL)/2,CY+88,'OBJ 厚度 38.95',11,hi(st===1||st===4),'middle',700);
+  g+=`<circle cx="${X0}" cy="${CY}" r="7" fill="none" stroke="${hi(st===0)}" stroke-width="2"/>`+T(X0,CY-34,'OBJ',11,hi(st===0),'middle',700);
+  g+=`<path d="M${xL-7+3},${CY-76} Q${xL-7-3},${CY} ${xL-7+3},${CY+76}" fill="none" stroke="${hi(st===2||st===4)}" stroke-width="${st===2||st===4?3:1.2}"/>`+T(xL-24,CY-82,'面 1',11,hi(st===2),'middle',700);
+  g+=`<path d="M${xL+7-3},${CY-76} Q${xL+7+3},${CY} ${xL+7-3},${CY+76}" fill="none" stroke="${hi(st===3)}" stroke-width="${st===3?3:1.2}"/>`+T(xL+24,CY-82,'面 2',11,hi(st===3),'middle',700);
+  g+=`<path d="M${xL+8},${CY+64} v8 H700 v-8" fill="none" stroke="${hi(st===3)}" stroke-width="${st===3?2:1}"/>`+T((xL+700)/2,CY+88,'面 2 厚度 1000（压缩画）',11,hi(st===3),'middle',700);
+  if(st===5)g+=T(560,CY-60,'出来平行 ✓',12,'#2f9e44','middle',700);
+  $('svg2').innerHTML=g;
+}
+stepper(2,[
+ {t:'<b>第 1 步 设光源</b>（Setup → System Explorer）：光纤不是“一束平行光”，所以入口不用“入瞳直径”，而用 <b>Object Space NA</b>（光锥张角）= 0.073；再把 <b>Apodization 设成 Gaussian 2.25</b>，让光锥中间亮、边上暗，亮度在 0.048 处降到 1/e²——这就是单模光纤的样子。',s:{st:0}},
+ {t:'<b>第 2 步 OBJ 行</b>：物面就是光纤端面。它的<b>厚度格 = 光纤到镜面的距离</b>，先填 38.95，后面让优化器自己调。',s:{st:1}},
+ {t:'<b>第 3 步 第 1 面</b>（STO，镜子前表面）：半径 +35.5，厚度 3（镜片中心厚），材料 <b>F_SILICA</b>（熔石英）。从这一面到下一面之间是玻璃。',s:{st:2}},
+ {t:'<b>第 4 步 第 2 面</b>（镜子后表面）：半径用 <b>Pickup ×(−1)</b> 跟着第 1 面取反 → 永远是<b>等凸</b>；厚度 1000 = 往后走 1 m 去看光斑。',s:{st:3}},
+ {t:'<b>第 5 步 优化</b>：勾上 <b>Afocal Image Space</b>（告诉 Zemax 出来应该是平行光）；评价函数放两条：<b>EFFL = 40</b>（焦距）和 <b>RMS 波前</b>；半径、距离两格设成变量（出现 V），按 Optimize!',s:{st:4}},
+ {t:'<b>第 6 步 看结果</b>：Layout 看光是不是平着出去；<b>POP</b>（物理光学传播）看 1 m 外真实光斑——中间亮、边上暗，直径约 3.9 mm。这张图最适合给老师看。',s:{st:5}}
+],s2,draw2);
+
+// ---------- 图 3：三种镜子 ----------
+const LENSES={bi:{n:'等凸（别人用的）',rms:0.028},pf:{n:'平凸 · 平面朝光纤',rms:0.022},pc:{n:'平凸 · 凸面朝光纤',rms:0.082}};
+const s3={k:'bi',flip:0};
+function lensShape(k,x,cy,S){ // 真实比例：S px/mm，Ø12.7、中心厚 3 mm
+  const h=6.35*S,ct=3*S;
+  if(k==='bi'){const sag=(35.5-Math.sqrt(35.5**2-6.35**2))*S;return biconvex(x,cy,h,ct,sag);}
+  const sag=(17.98-Math.sqrt(17.98**2-6.35**2))*S; const a=x-ct/2,b=x+ct/2;
+  if(k==='pf') return `<path d="M${a},${cy-h} L${a},${cy+h} L${b-sag},${cy+h} Q${b+sag},${cy} ${b-sag},${cy-h} Z" fill="url(#gLens)" stroke="#4a6a85" stroke-width="1.4"/>`;
+  return `<path d="M${a+sag},${cy-h} Q${a-sag},${cy} ${a+sag},${cy+h} L${b},${cy+h} L${b},${cy-h} Z" fill="url(#gLens)" stroke="#4a6a85" stroke-width="1.4"/>`;}
+function draw3(){
+  let k=s3.k; if(s3.flip>0.5&&k!=='bi')k=k==='pf'?'pc':'pf';
+  const L=LENSES[k];let g=DEFS+`<rect width="840" height="400" fill="var(--bg)"/>`;
+  const CY=170,X0=150,xL=330,S=12;
+  g+=`<line x1="${X0}" y1="${CY}" x2="560" y2="${CY}" stroke="var(--line)" stroke-dasharray="5 5"/>`;
+  g+=`<g transform="translate(0,${CY})">${cone([[X0,1],[xL-14,2.0*S*1.0]])}${cone([[xL+14,2.0*S],[540,2.0*S]])}</g>`;
+  g+=`<g transform="translate(${X0},${CY}) scale(.55) translate(${-X0},${-CY})">${qbh(X0,CY)}</g>`;
+  // 镜子（翻转动画：水平缩放）
+  const sc=Math.cos(s3.flip*Math.PI);g+=`<g transform="translate(${xL},0) scale(${Math.abs(sc)<0.05?0.05:Math.abs(sc)},1) translate(${-xL},0)">${lensShape(Math.abs(s3.flip-Math.round(s3.flip))>0.25?s3.k:k,xL,CY,S)}</g>`;
+  g+=`<rect x="${xL-14}" y="${CY-6.35*S-14}" width="28" height="10" rx="2" fill="url(#gAlu)" stroke="#6b7480"/><rect x="${xL-14}" y="${CY+6.35*S+4}" width="28" height="10" rx="2" fill="url(#gAlu)" stroke="#6b7480"/>`;
+  g+=T(xL,CY+6.35*S+36,L.n,14,'var(--fg)','middle',700)+T(xL,CY-6.35*S-24,'镜子按真实比例画（Ø12.7）',11,'var(--muted)','middle');
+  // 出射波前（放大画）
+  const A=L.rms/0.082*22, xw=470;let d='';for(let i=0;i<=40;i++){const y=-1+2*i/40,r=Math.abs(y);const w=(r**4-r**2+1/6);d+=(i?'L':'M')+(xw+A*w*6).toFixed(1)+','+(CY+y*2.0*S*1.3).toFixed(1);}
+  g+=`<path d="${d}" fill="none" stroke="var(--wave)" stroke-width="3"/>`+T(xw,CY-2*S*1.3-12,'出来的波前',12,'var(--wave)','middle',700)+T(xw,CY+2*S*1.3+22,'弯曲放大画（真实只有几十纳米）',10.5,'var(--muted)','middle');
+  // 右：误差条
+  const BX=600,BW=210;g+=`<rect x="${BX-10}" y="40" width="${BW+20}" height="300" rx="10" fill="var(--surface)" stroke="var(--line)"/>`+T(BX+BW/2,64,'误差（RMS 波前）',13,'var(--fg)','middle',700);
+  const keys=['bi','pf','pc'],mx=0.11;keys.forEach((kk,i)=>{const y=96+i*62,on=kk===k,w=LENSES[kk].rms/mx*BW;
+    g+=T(BX,y,LENSES[kk].n,11.5,on?'var(--fg)':'var(--muted)','start',on?700:400)+`<rect x="${BX}" y="${y+8}" width="${w}" height="18" rx="4" fill="${LENSES[kk].rms>0.042?'var(--bad)':'var(--ok)'}" opacity="${on?1:.35}"/>`+T(BX+w+6,y+22,LENSES[kk].rms.toFixed(3)+' λ',11.5,on?'var(--fg)':'var(--muted)','start',700);});
+  const xr=BX+0.042/mx*BW;g+=`<line x1="${xr}" y1="80" x2="${xr}" y2="290" stroke="var(--card)" stroke-dasharray="4 3" stroke-width="1.5"/>`+T(xr,306,'B 方案自身 0.042 λ',11,'var(--card)','middle',700)+T(BX+BW/2,326,'超过这条线：准直镜成了主要误差',10.5,'var(--muted)','middle');
+  if(s3.flip>0.5)g+=T(xL,30,s3.k==='bi'?'翻过来：还是等凸，一样 ✓':'翻过来：变成另一种朝向！',14,s3.k==='bi'?'var(--ok)':'var(--bad)','middle',700);
+  $('svg3').innerHTML=g;
+  document.querySelectorAll('#lensBtns button[data-k]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.k===s3.k)));
+}
+stepper(3,[
+ {t:'<b>等凸</b>（两面一样弯）：误差 <b>0.028 λ</b>，比 B 方案自身的 0.042 λ 小，不拖后腿。',s:{k:'bi',flip:0}},
+ {t:'<b>平凸、平面朝光纤</b>（弯面朝平行光）：<b>0.022 λ</b>，最好，但只比等凸好一点点。规律和第 12 课一样：<b>弯面朝平行光一侧</b>。',s:{k:'pf',flip:0}},
+ {t:'同一片平凸<b>装反</b>（凸面朝光纤）：<b>0.082 λ</b>，变差约 4 倍，已经超过 B 方案自身 → 准直镜成了最大误差。',s:{k:'pc',flip:0}},
+ {t:'让装配工把<b>等凸镜翻过来</b>装：两面一样，<b>装反了也是对的</b>。这就是别人用双凸的主要原因——<b>防呆</b>。',s:{k:'bi',flip:1}},
+ {t:'把<b>平凸</b>翻过来装：从最好（0.022）一下变成最差（0.082）。性能差一点点，换来不会装错——工程上常这样取舍。',s:{k:'pf',flip:1}}
+],s3,draw3);
+$('lensBtns').innerHTML=Object.entries(LENSES).filter(([k])=>k!=='pc').map(([k,v])=>`<button data-k="${k}">${k==='bi'?'等凸':'平凸'}</button>`).join('')+'<button id="flipB">翻过来装 ↻</button>';
+document.querySelectorAll('#lensBtns button[data-k]').forEach(b=>b.onclick=()=>{s3.k=b.dataset.k;s3.flip=0;$('n3').textContent='自己点';$('c3').innerHTML='选好了，点“翻过来装”看看会怎样。';draw3();});
+$('flipB').onclick=()=>{const from=s3.flip,to=from>0.5?0:1,t0=performance.now();const tick=n=>{const p=Math.min(1,(n-t0)/(reduce?1:800));s3.flip=from+(to-from)*p;draw3();if(p<1)requestAnimationFrame(tick);};requestAnimationFrame(tick);
+  $('n3').textContent='自己点';$('c3').innerHTML=s3.k==='bi'?'等凸：正反都一样，<b>装不错</b>。':'平凸：一翻就换了朝向，误差 <b>0.022 ↔ 0.082</b>。';};
+window.__beforeExport=()=>{st1.go(2,true);};
+
+quiz([
+ {q:'准直后光有多粗，主要由什么决定？',o:['镜子的直径','光纤出光角 × 镜子离光纤的距离（≈ 焦距）','镜子是双凸还是平凸'],a:1,e:['镜子 Ø12.7，光只用了中间 4 mm，直径不决定光束粗细。','对：光在空气里自己散开，散到焦距那么远时多粗，出来就多粗。','形状影响误差，不影响粗细。']},
+ {q:'镜子比正确位置离光纤近了 3 mm，出来的光会怎样？',o:['继续发散，远处光斑很大','变成会聚','还是平行'],a:0,e:['对：光纤在焦点里面，掰不够。','那是放远了的情况。','差 3 mm，1 m 外就差很多。']},
+ {q:'Zemax 里“光纤到镜子的距离”填在哪一格？',o:['第 1 面的半径','OBJ 行的厚度','System Explorer 的 Aperture'],a:1,e:['半径是镜面弯多少。','对：厚度 = 到下一个面的距离，OBJ 就是光纤端面。','Aperture 填的是光锥张角 NA。']},
+ {q:'别人的准直镜用双凸，主要好处是？',o:['双凸能把光扩得更粗','两面一样，怎么装都对，误差也只比最好的平凸多一点','双凸误差最小'],a:1,e:['粗细由焦距定；扩束是后面动镜 + 物镜的事。','对：防呆，0.028 λ 也小于 B 方案自身。','最小的是平面朝光纤的平凸（0.022 λ）。']}
+]);
+</script>
