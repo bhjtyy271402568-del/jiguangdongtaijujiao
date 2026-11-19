@@ -1,0 +1,86 @@
+<meta charset="utf-8"><body style="margin:0;background:#ffffff;font-family:'Noto Sans SC','Microsoft YaHei',sans-serif">
+<div id="box" style="position:relative;width:1920px;height:1080px;overflow:hidden;background:#ffffff"></div>
+<script src="three.min.js"></script><script src="GLTFLoader.js"></script>
+<script>
+const W=1920,H=1080,box=document.getElementById('box');
+const r=new THREE.WebGLRenderer({antialias:true,alpha:true,preserveDrawingBuffer:true});r.setPixelRatio(1);r.setSize(W,H);r.outputEncoding=THREE.sRGBEncoding;r.toneMapping=THREE.ACESFilmicToneMapping;r.toneMappingExposure=1.05;r.domElement.style.position='absolute';box.appendChild(r.domElement);
+const s=new THREE.Scene();s.add(new THREE.HemisphereLight(0xf4f7ff,0x5a6270,0.85));
+const d1=new THREE.DirectionalLight(0xffffff,1.25);d1.position.set(-120,320,260);s.add(d1);const d2=new THREE.DirectionalLight(0xdfe8ff,.45);d2.position.set(300,120,-200);s.add(d2);const d3=new THREE.DirectionalLight(0xffffff,.35);d3.position.set(250,60,300);s.add(d3);
+const c=new THREE.PerspectiveCamera(26,W/H,1,5000);
+const MOV=new Set(['Z03_Carriage','Z03b_EndSeals','Z04_LensHolder','Z04b_HolderScrews','Z05_L1','Z06_L1Ring','Z07_CarriageTab','Z07b_NutBracket','Z07c_BracketScrews','Z21_FloatBall','Z21b_PreloadSpring','Z08_NutHousing','Z08a_HalfNutA','Z08b_HalfNutB','Z08c_NutSpring','Z17_Flag']);
+const ROT=new Set(['Z09_Screw','Z12_Coupling','Z12b_ClampScrews','Z13b_MotorShaft','Z10b_LockNut']);
+let root,mov=[],rot=[];
+const PAL={base:[0xa7aeb8,.35,.55],blk:[0x1c1f24,.25,.42],stl:[0xd3d8df,.75,.28],fst:[0x34373d,.4,.4],brs:[0xc99a3c,.7,.32],pom:[0xf1efe8,0,.6],alu:[0xdfe3e8,.55,.35],mot:[0x1d1f23,.3,.5],seal:[0x9c1f24,.1,.5],bump:[0x55585e,0,.7],glass:[0xa8d8f5,.05,.08]};
+const KIND=id=>{const k=id.split('_')[0];
+  if(k==='Z01')return 'base';if(['Z05','O03'].includes(k))return 'glass';if(k==='Z08')return 'brs';if(['Z08a','Z08b'].includes(k))return 'pom';
+  if(['Z02','Z03','Z09','Z10d','Z11b','Z13b','Z21','Z21b','Z08c','O05'].includes(k))return 'stl';if(['Z02b','Z04b','Z07c','Z12b','Z14b','Z10b','Z10f'].includes(k))return 'fst';
+  if(k==='Z12')return 'alu';if(k==='Z13')return 'mot';if(k==='Z03b')return 'seal';if(k==='Z23b')return 'bump';return 'blk';};
+
+const LAM=1.064e-3*1.1,F1=-20.47,F2=90,WIN=2.0;
+function wAfter(d,z){let q={r:0,i:Math.PI*WIN*WIN/LAM};const lens=(q,f)=>{const den=q.r*q.r+q.i*q.i;let ir=q.r/den-1/f,ii=-q.i/den;const d2=ir*ir+ii*ii;return {r:ir/d2,i:-ii/d2};};
+  q=lens(q,F1);q.r+=d;q=lens(q,F2);q.r+=z;const den=q.r*q.r+q.i*q.i;return Math.sqrt(-LAM/(Math.PI*(-q.i/den)));}
+function best(L){let a=60,b=90;for(let k=0;k<80;k++){const m1=a+(b-a)*0.382,m2=a+(b-a)*0.618;if(wAfter(m1,L)<wAfter(m2,L))b=m2;else a=m1;}return (a+b)/2;}
+const D3=best(3000),D10=best(10000);
+const XL=96,XO=222,BZ=45,XT1=XO+120,XT10=XO+760;            // 目标 1 m → XT1，10 m → XT10（距离压缩）
+const xOfL=L=>XT1+(L-1)/9*(XT10-XT1), zOfX=x=>x<=XT1?(x-XO)/(XT1-XO)*1000:1000+(x-XT1)/(XT10-XT1)*9000;
+const LABS=[[[32,-20,48],'步进电机'],[[58,-20,22],'联轴器',0,1],[[103,-20,19],'消隙螺母',1,1],[[96,0,62],'动镜',1],[[216,0,74],'物镜（固定）']];
+let G={};
+function spotTex(){const cv=document.createElement('canvas');cv.width=cv.height=128;const x=cv.getContext('2d');const g=x.createRadialGradient(64,64,0,64,64,64);
+  g.addColorStop(0,'rgba(255,255,255,1)');g.addColorStop(.18,'rgba(255,220,200,1)');g.addColorStop(.45,'rgba(255,60,40,.85)');g.addColorStop(1,'rgba(255,40,30,0)');x.fillStyle=g;x.fillRect(0,0,128,128);return new THREE.CanvasTexture(cv);}
+function plateTex(){const cv=document.createElement('canvas');cv.width=cv.height=256;const x=cv.getContext('2d');x.fillStyle='#5b6068';x.fillRect(0,0,256,256);x.strokeStyle='rgba(255,255,255,.12)';for(let i=0;i<=256;i+=16){x.beginPath();x.moveTo(i,0);x.lineTo(i,256);x.stroke();x.beginPath();x.moveTo(0,i);x.lineTo(256,i);x.stroke();}return new THREE.CanvasTexture(cv);}
+const redA=new THREE.MeshBasicMaterial({color:0xe5383b,transparent:true,opacity:.28,depthWrite:false,side:THREE.DoubleSide});
+const redB=new THREE.MeshBasicMaterial({color:0xff4b3e,transparent:true,opacity:.55,depthWrite:false,side:THREE.DoubleSide});
+function lathe(prof,mat){ // prof: [[x,r],...] → 绕光轴的回转体（PAR 坐标）
+  const pts=prof.map(([x,r])=>new THREE.Vector2(Math.max(0.15,r),x));const g=new THREE.LatheGeometry(pts,40);g.rotateZ(-Math.PI/2);g.translate(0,0,BZ);return new THREE.Mesh(g,mat);}
+function setupExtra(){
+  const P=window.PAR;
+  const gm=new THREE.MeshStandardMaterial({color:0x6b7078,roughness:.6}),tm=new THREE.MeshBasicMaterial({map:plateTex()});const plate=new THREE.Mesh(new THREE.BoxGeometry(5,170,170),[tm,tm,gm,gm,gm,gm]);
+  plate.geometry.rotateX(0);const pg=new THREE.Group();plate.position.set(2.5,0,BZ);pg.add(plate);
+  const foot=new THREE.Mesh(new THREE.BoxGeometry(60,120,6),new THREE.MeshStandardMaterial({color:0x8a9099,roughness:.5}));foot.position.set(10,0,BZ-85-3);pg.add(foot);
+  const sp=new THREE.Mesh(new THREE.PlaneGeometry(1,1),new THREE.MeshBasicMaterial({map:spotTex(),transparent:true,depthWrite:false}));sp.geometry.rotateY(-Math.PI/2);sp.position.set(-0.3,0,BZ);pg.add(sp);
+  P.add(pg);G.pg=pg;G.sp=sp;G.beams=[];}
+function beams(dx,d,L){const P=window.PAR;G.beams.forEach(m=>{P.remove(m);m.geometry.dispose();});G.beams=[];
+  const xl=XL+dx,xt=xOfL(L);const rO=9.0;
+  const pre=[[10,2],[xl,2]],cone=[[xl,2],[XO,rO]];const post=[];for(let i=0;i<=90;i++){const x=XO+(xt-XO)*i/90;post.push([x,Math.min(60,wAfter(d,zOfX(x)))*1.0]);}
+  post[0][1]=rO;
+  for(const pr of [pre,cone,post]){const a=lathe(pr,redA),b=lathe(pr.map(([x,r])=>[x,r*0.5]),redB);P.add(a);P.add(b);G.beams.push(a,b);}
+  G.pg.position.set(xt,0,0);const w=wAfter(d,L*1000);const s=Math.max(9,w*2*2.4);G.sp.scale.set(s,s,1);return w;}
+const ease=p=>p<.5?2*p*p:1-(-2*p+2)**2/2;
+window.TL=t=>{ // 返回 {L, dyn}
+  if(t<1)return {L:1,dyn:0,ph:'A'}; if(t<7)return {L:1+9*ease((t-1)/6),dyn:0,ph:'A'}; if(t<8.5)return {L:10,dyn:0,ph:'A2'};
+  if(t<9.5)return {L:10,dyn:1,ph:'B'}; if(t<14.5)return {L:10-9*ease((t-9.5)/5),dyn:1,ph:'B'}; if(t<15.3)return {L:1,dyn:1,ph:'B'};
+  if(t<20.3)return {L:1+9*ease((t-15.3)/5),dyn:1,ph:'B'}; return {L:10,dyn:1,ph:'E'};};
+new THREE.GLTFLoader().load('v09.json.gltf',g=>{root=g.scene;s.add(root);root.updateMatrixWorld(true);
+  root.traverse(o=>{if(!o.isMesh)return;let p=o,id=null;while(p){const m=/^([A-Z]\d\d[a-z]?_[A-Za-z0-9]+)_\d+$/.exec(p.name);if(m){id=m[1];}p=p.parent;}
+    const kd=KIND(id||'X');const [col,met,rou]=PAL[kd];const mat=new THREE.MeshStandardMaterial({color:col,metalness:met,roughness:rou});
+    if(kd==='glass'){mat.transparent=true;mat.opacity=.55;}o.material=mat;
+    if(kd!=='glass')o.add(new THREE.LineSegments(new THREE.EdgesGeometry(o.geometry,40),new THREE.LineBasicMaterial({color:kd==='blk'||kd==='mot'||kd==='fst'?0x6a7280:0x2a3040,transparent:true,opacity:.22})));});
+  root.traverse(o=>{const m=/^([A-Z]\d\d[a-z]?_[A-Za-z0-9]+)_\d+$/.exec(o.name);if(!m)return;if(o.parent&&/^[A-Z]\d\d[a-z]?_/.test(o.parent.name))return;
+    if(MOV.has(m[1]))mov.push(o);if(ROT.has(m[1]))rot.push(o);});
+  window.PAR=(mov[0]||root).parent;
+  setupExtra();
+  window.info=[mov.length,rot.length,PAR.name,PAR.rotation.x.toFixed(2)];window.ready=true;});
+window.setT=function(t,cam){const st=TL(t),L=st.L,d=st.dyn?best(L*1000):D3;const retreat=d-D10;const dx=3.2-retreat;const th=2*Math.PI*dx/1.0;
+  mov.forEach(o=>o.position.set(dx,0,0));
+  const q=new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(1,0,0),th),C=new THREE.Vector3(0,-20,30);
+  rot.forEach(o=>{o.quaternion.copy(q);o.position.copy(C).sub(C.clone().applyQuaternion(q));});
+  const w=beams(dx,d,L);
+  c.position.set(...cam[0]);c.lookAt(...cam[1]);s.updateMatrixWorld(true);r.render(s,c);
+  box.querySelectorAll('.l').forEach(e=>e.remove());const add=(css,html)=>{const e=document.createElement('div');e.className='l';e.style.cssText='position:absolute;'+css;e.innerHTML=html;box.appendChild(e);return e;};
+  LABS.forEach(([p,tx,mv,below])=>{const v=new THREE.Vector3(p[0]+(mv?dx:0),p[1],p[2]);PAR.localToWorld(v);v.project(c);
+    add(`left:${(v.x+1)/2*W}px;top:${(1-v.y)/2*H}px;transform:${below?'translate(-50%,0)':'translate(-50%,-100%)'};color:#2b2f38;font-size:24px;font-weight:600;white-space:nowrap;text-align:center`,below?`<div style="width:1.5px;height:34px;background:#8c96a6;margin:0 auto 4px"></div>${tx}`:`${tx}<div style="width:1.5px;height:34px;background:#8c96a6;margin:4px auto 0"></div>`);});
+  {const v=new THREE.Vector3(xOfL(L),0,BZ+85);PAR.localToWorld(v);v.project(c);add(`left:${(v.x+1)/2*W}px;top:${(1-v.y)/2*H}px;transform:translate(-50%,-100%);color:#2b2f38;font-size:24px;font-weight:600;white-space:nowrap;text-align:center`,`目标 ${L.toFixed(1)} m<div style="width:1.5px;height:30px;background:#8c96a6;margin:4px auto 0"></div>`);}
+  const dyn=st.dyn,col=dyn?'#2f9e44':'#e03131',D=2*w;
+  add('left:40px;top:30px;font-size:40px;font-weight:700;color:#1f2430',dyn?'② 动态聚焦：电机带动镜跟着目标走':'① 不调焦：动镜不动，焦点停在 3 m');
+  add('left:40px;top:86px;font-size:22px;color:#6b7482','1064 nm 单模 · 动镜 f −20 + 物镜 f 90 · 出光约 18 mm · 目标距离 1–10 m（物镜后的距离压缩画）');
+  add('left:40px;bottom:36px;width:560px;background:#ffffff;border:1.5px solid #d8dee7;border-radius:14px;padding:18px 22px;font-size:25px;line-height:1.75;color:#2b2f38;box-shadow:0 6px 18px rgba(0,0,0,.08)',
+   `目标距离　<b>${L.toFixed(1)} m</b><br>${dyn?`电机转　　<b>${retreat.toFixed(1)} 圈</b>（丝杆导程 1 mm）<br>动镜后退　<b>${retreat.toFixed(1)} mm</b>（以 10 m 为零点）`:`电机　　　<b>不转</b><br>动镜　　　<b>停在 3 m 的对焦位置</b>`}<br>光斑直径　<b style="color:${col};font-size:30px">${D<1?D.toFixed(2):D.toFixed(1)} mm</b>`);
+  const S=6,rr=Math.max(3,w*S);
+  add('right:40px;bottom:36px;width:340px;background:#ffffff;border:1.5px solid #d8dee7;border-radius:14px;padding:14px;text-align:center;box-shadow:0 6px 18px rgba(0,0,0,.08)',
+   `<div style="font-size:21px;color:#6b7482">目标上的光斑（正面看）</div><svg width="300" height="260" viewBox="0 0 300 260"><rect width="300" height="260" rx="10" fill="#5b6068"/><defs><radialGradient id="sg"><stop offset="0" stop-color="#fff"/><stop offset=".25" stop-color="#ffd2c8"/><stop offset=".55" stop-color="#ff3b30" stop-opacity=".9"/><stop offset="1" stop-color="#ff3b30" stop-opacity="0"/></radialGradient></defs><circle cx="150" cy="130" r="${Math.min(160,rr*1.9)}" fill="url(#sg)"/><line x1="20" y1="240" x2="80" y2="240" stroke="#fff" stroke-width="3"/><text x="50" y="230" fill="#fff" font-size="16" text-anchor="middle">10 mm</text></svg><div style="font-size:30px;font-weight:700;color:${col}">${D<1?D.toFixed(2):D.toFixed(1)} mm</div>`);
+  if(st.ph==='A2'||st.ph==='E'){const o=st.ph==='E'?Math.min(1,(t-20.3)/0.6):Math.min(1,(t-7)/0.5);
+    add(`left:0;top:0;width:${W}px;height:${H}px;background:rgba(255,255,255,${0.9*o});display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;opacity:${o}`,
+     st.ph==='A2'?`<div style="font-size:54px;font-weight:700;color:#e03131">不调焦：10 m 处光斑约 ${(2*wAfter(D3,10000)).toFixed(0)} mm</div><div style="font-size:36px;color:#2b2f38">打开动态聚焦 →</div>`
+     :`<div style="font-size:44px;font-weight:700;color:#1f2430">记住一句</div><div style="font-size:50px;font-weight:700;color:#2f9e44">动镜只走约 8 mm，1–10 m 光斑都 ≤ 1 mm</div><div style="font-size:34px;color:#e03131">不调焦：10 m 处约 ${(2*wAfter(D3,10000)).toFixed(0)} mm</div><div style="font-size:22px;color:#6b7482">光斑按高斯光束、M² = 1.1 计算；动镜行程 Zemax 第 2 轮为 7.9 mm</div>`);}
+};
+</script>
