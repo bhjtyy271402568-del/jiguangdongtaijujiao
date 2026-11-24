@@ -17,7 +17,7 @@ const K = { dk: '1F2430', body: '3A4150', mute: '7A8291', red: 'D63B3E', green: 
     objects: [{ placeholder: { options: { name: 'title', type: 'title', x: 0.8, y: 0.45, w: 11.7, h: 0.75, fontSize: 28, bold: true, color: K.dk, margin: 0, valign: 'middle', align: 'left' }, text: '' } }],
     slideNumber: { x: 12.3, y: 7.0, w: 0.4, h: 0.3, fontSize: 10, color: '9AA1AD', align: 'right' } });
   const s = pres.addSlide({ masterName: 'PLAIN' });
-  s.addText('光学设计能力已具备，具体设计等光源参数', { placeholder: 'title' });
+  s.addText('光学设计进展及所需激光器参数', { placeholder: 'title' });
 
   // 左：已经能做
   const LX = 0.8, LW = 5.5;
